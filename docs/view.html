@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D で見る — Train Bodies</title>
+<meta name="description" content="3D プリントで作った、おもちゃの車台に載せる列車とバスの車体の一覧と 3D ビューア。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/view.css">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<script src="assets/site.js" defer></script>
+<script src="assets/view.js" defer></script>
+</head>
+<body>
+<header class="site-header" data-current="view"></header>
+<div class="wrap view">
+  <div class="head">
+    <h1>3D で見る</h1>
+    <p>3D プリントで作る、おもちゃの車台に載せる車体です。</p>
+  </div>
+  <main>
+    <section class="stage" aria-label="ビューア">
+      <div class="mat">
+        <model-viewer id="mv" camera-controls touch-action="pan-y" shadow-intensity="0.8" exposure="1.05"
+          tone-mapping="neutral" interaction-prompt="none" camera-orbit="-55deg 70deg auto" alt="選んだ車体の3Dモデル"></model-viewer>
+        <span class="tag" id="tag"></span>
+        <span class="hint">ドラッグで回転・ホイールで拡大</span>
+      </div>
+      <div class="info">
+        <div>
+          <span class="grp" id="grp"></span>
+          <h2 id="name"></h2>
+          <p id="line"></p>
+          <p class="wd" id="wd"></p>
+        </div>
+        <div class="views" role="group" aria-label="向き">
+          <button type="button" data-orbit="-55deg 70deg auto" aria-pressed="true">斜め前</button>
+          <button type="button" data-orbit="0deg 90deg auto">横</button>
+          <button type="button" data-orbit="-90deg 85deg auto">正面</button>
+          <button type="button" data-orbit="0deg 0deg auto">上</button>
+          <button type="button" id="spin" aria-pressed="false">回す</button>
+        </div>
+      </div>
+    </section>
+    <nav class="shelf" id="shelf" aria-label="車体の一覧"></nav>
+  </main>
+  <div class="note">
+    <p>寸法は車体の外形（長さ × 幅 × 高さ、mm）。色は塗り分けの目安で、印刷は単色です。プラレール（タカラトミー）の車台に載る大きさで作っています。</p>
+    <p>塗装とロゴは Wikimedia Commons の写真を参考に再現しました。</p>
+  </div>
+</div>
+<footer class="site-footer"></footer>
+</body>
+</html>
