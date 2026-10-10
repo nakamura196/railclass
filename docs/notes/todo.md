@@ -77,7 +77,11 @@
       2026-10-09 23:40 試運転: Expo Line・Millennium Line・上海リニアの 3 路線とも札があり、線が取れた（点を減らして 1 路線 2〜3 KB）
 - [x] OSM の線を地図に出す方法を決める（表示のたびに Overpass か、事前に切り出すか。後者ならライセンスの扱いも）
       2026-10-10 本人の決定: 事前に切り出し、RDF とは別の表示用の層（例 `lines/<Q>.geojson`、ODbL と「© OpenStreetMap contributors」を明記）として公開する
-- [ ] 形式のページに地図を出す（上が決まってから）
+- [x] 形式のページに地図を出す（上が決まってから）
+      2026-10-10 7:50 コミット 1aa7372・push・公開済み（線は 2 本だけ: Gäubahn・Madrid–Seville）。点検 `npm test` も公開の手順に入った
+- [ ] 残りの線を足して公開し直す: 切り出しは会話から切り離して動いている（`pgrep -fl tools/osm_lines.py`、記録 data/osm_lines.log、2026-10-10 7:50 で 6/42）。
+      終わったら、失敗した路線を `--only Q… --api https://maps.mail.ru/osm/tools/overpass/api/interpreter` で取り直す → `_osm.tsv` を全件で作り直す（`--count` 以外の全体の流し直しは取れた分を飛ばす）→ docs/lines をコミット → push → `zsh scripts/deploy-pages.zsh`
+- [ ] 地図を MapLibre GL JS に替えるか、本人の返事待ち（推奨と理由は会話で伝えた: 暗い表示・地球儀表示。背景は OpenFreeMap）
       2026-10-10: ページ側は作った（未コミット: ClassPage.astro・lib/data.ts の classLines・scripts/line-map.ts・class.css・i18n・sync-public.mjs に lines/）。
       線の切り出しは Overpass の 504 で難航中（1 路線ずつやり直し、失敗は飛ばして続きから取れるようにした）。`python3 -u tools/osm_lines.py --api https://maps.mail.ru/osm/tools/overpass/api/interpreter`（記録は data/osm_lines.log）。出力は docs/lines/
 - [ ] 線の形は train-bodies のデータに入れない（ODbL に縛られないため）。これを崩す案が出たら本人に確かめる
