@@ -220,3 +220,12 @@ site と iiif が main に入る前なので、検索・形式の詳細・IIIF �
 - 幅 390px での検索と形式のページ。
 - `docs/` の古い `index.html`・`view.html`・`assets/`・`search/index.html` などは、配信元を切り替えたあとは使われない。
   別のセッションがまだ `docs/search/search.js` を触っている可能性があるので、今回は消さない。
+
+#### 2026-10-09 追記: gh-pages からの公開
+
+- main（188139e、写真の出典が全 10,402 枚に付いた索引）を push し、`scripts/deploy-pages.zsh` で gh-pages（e5b8504）に配った。
+  公開中の 12 の URL（日英のトップ・ビューア・検索・形式のページ、モデルの RDF、ttl、Manifest、GLB）がすべて 200。
+  公開中の `search/index.json` は main のものとバイト単位で同じ。ドイツで絞ると 503 件、出典の行が出る。
+- 落とし穴: **配信元を API で gh-pages に切り替えても、すぐには作り直されない。** 切り替えた直後の公開は、
+  前の main `/docs` のビルドのまま（英語のページが 404）だった。`gh api -X POST repos/<owner>/<repo>/pages/builds` で
+  ビルドを頼むと gh-pages の中身になった。2 回目以降は gh-pages への push で自動的に作り直される。
