@@ -5,7 +5,7 @@
 #
 # Prerequisites: run from the main checkout with main up to date and docs/ regenerated; npm ci done in web/.
 # Usage: zsh scripts/deploy-pages.zsh
-# What it does: npm run build in web/, drops downloads/ (not in git; where to host it is undecided),
+# What it does: npm run build in web/, checks the result (npm test; nothing is published when it fails), drops downloads/ (not in git; where to host it is undecided),
 # adds .nojekyll (so _astro/ is served), and force-pushes web/dist as one commit to origin/gh-pages.
 # The branch keeps no history: it is a build output, and the GLBs would otherwise pile up in the repository.
 set -euo pipefail
@@ -17,7 +17,7 @@ if [[ $branch != main ]]; then print -u2 "deploy-pages: run on main (now on $bra
 rev=$(git rev-parse --short HEAD)
 remote=$(git remote get-url origin)
 
-(cd web && npm run build)
+(cd web && npm run build && npm test)   # npm test: the built pages against the data (web/scripts/check-dist.mjs); stops here on a failure
 rm -rf web/dist/downloads
 touch web/dist/.nojekyll
 
