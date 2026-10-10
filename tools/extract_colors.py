@@ -6,6 +6,9 @@ Usage: python3 tools/extract_colors.py [--skytrain <path, default ~/git/3d/skytr
   Materials that are not paint (glass, lamps, door seams, tyres, bellows) are left out; the rest is the painted area.
   Each colour is put under one basic colour name (a Wikidata item) by hue and lightness; a basic colour is kept
   when it covers at least MIN_SHARE of the painted area (smaller ones are logos, lamps and numbers).
+  White, grey and black are kept only at MIN_SHARE_NEUTRAL or more: below it they are window surrounds, underframes
+  and roofs, which nearly every model has (measured 2026-10-09: 3-15% as trim, 69-87% as body colour, nothing between).
+  Their exact colours and shares stay in the samples.
 Writes tools/livery_colors.json, which tools/build_rdf.py reads (so the RDF build does not need the skytrain checkout).
 """
 import colorsys, glob, json, os, sys
@@ -14,6 +17,8 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(HERE, "tools", "livery_colors.json")
 NOT_PAINT = {"glass", "lamp", "groove", "tyre", "bellows"}
 MIN_SHARE = 0.015
+NEUTRAL = {"white", "grey", "black"}
+MIN_SHARE_NEUTRAL = 0.20
 
 # basic colour name -> Wikidata item (instances of colour Q1075; labels come from Wikidata in build_rdf.py)
 BASIC = {"red": "Q3142", "orange": "Q39338", "yellow": "Q943", "green": "Q3133", "blue": "Q1088", "purple": "Q3257809",
@@ -72,7 +77,8 @@ def main():
     sky = sys.argv[sys.argv.index("--skytrain") + 1] if "--skytrain" in sys.argv else os.path.expanduser("~/git/3d/skytrain")
     sys.path.insert(0, os.path.join(HERE, "tools"))
     from build_rdf import MODELS
-    out = {"note": __doc__.strip().splitlines()[0], "minShare": MIN_SHARE, "notPaint": sorted(NOT_PAINT),
+    out = {"note": __doc__.strip().splitlines()[0], "minShare": MIN_SHARE, "minShareNeutral": MIN_SHARE_NEUTRAL,
+           "neutral": sorted(NEUTRAL), "notPaint": sorted(NOT_PAINT),
            "basic": BASIC, "models": {}}
     for mid in MODELS:
         objs = glob.glob(os.path.join(sky, "out", mid, "*.obj"))
@@ -86,10 +92,11 @@ def main():
         by_basic = {}
         for s in samples:
             by_basic[s["basic"]] = by_basic.get(s["basic"], 0) + s["share"]
-        colors = [n for n, sh in sorted(by_basic.items(), key=lambda x: -x[1]) if sh >= MIN_SHARE]
+        seen = [n for n, sh in sorted(by_basic.items(), key=lambda x: -x[1]) if sh >= MIN_SHARE]
+        colors = [n for n in seen if n not in NEUTRAL or by_basic[n] >= MIN_SHARE_NEUTRAL]
         out["models"][mid] = {"source": os.path.relpath(objs[0], os.path.dirname(sky)), "colors": colors,
-                              "samples": [s for s in samples if s["basic"] in colors and s["share"] >= 0.005]}
-        print(f"{mid:12s} " + ", ".join(f"{n} {by_basic[n]:.1%}" for n in colors))
+                              "samples": [s for s in samples if s["basic"] in seen and s["share"] >= 0.005]}
+        print(f"{mid:12s} " + ", ".join(f"{n} {by_basic[n]:.1%}" + ("" if n in colors else " (trim)") for n in seen))
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("->", OUT)
 

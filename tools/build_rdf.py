@@ -260,7 +260,8 @@ def add_model(g, mid, item):
             g.add((n, TB.areaShare, Literal(f"{smp['share']:.4f}", datatype=XSD.decimal)))
             g.add((n, COLOR_URI, WD[COLORS["basic"][smp["basic"]]]))
         g.add((lv, DCTERMS.source, Literal(f"Colours taken automatically from the face materials of {c['source']} "
-                                          f"(area share of the painted surface, kept when >= {COLORS['minShare']:.1%}; tools/extract_colors.py)", lang="en")))
+                                          f"(area share of the painted surface, kept when >= {COLORS['minShare']:.1%}, white/grey/black when >= {COLORS['minShareNeutral']:.0%}; "
+                                          f"the colour samples keep them all; tools/extract_colors.py)", lang="en")))
     if part:
         for lang, l in part.items():
             g.add((s, TB.part, Literal(l, lang=lang)))

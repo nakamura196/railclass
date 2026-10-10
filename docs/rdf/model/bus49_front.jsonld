@@ -13,16 +13,16 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0668"
+        "@value": "0.0369"
       },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
+      "rdfs:label": "grey",
+      "schema:color": "#A9AEB3",
       "wdt:P462": {
-        "@id": "wd:Q23445"
+        "@id": "wd:Q42519"
       }
     },
     {
@@ -36,6 +36,57 @@
       "schema:color": "#3A3E42",
       "wdt:P462": {
         "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8458"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#006FD6",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color4"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/bus49_front/translink_bus49_front.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "TransLink livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "TransLink の塗装"
+        }
+      ],
+      "wdt:P462": {
+        "@id": "wd:Q1088"
       }
     },
     {
@@ -117,75 +168,16 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.8458"
+        "@value": "0.0668"
       },
-      "rdfs:label": "blue",
-      "schema:color": "#006FD6",
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
       "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color4"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/bus49_front/translink_bus49_front.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q1142140"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "TransLink livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q1088"
-        },
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q23445"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0369"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#A9AEB3",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
+        "@id": "wd:Q23445"
       }
     }
   ]
