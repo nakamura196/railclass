@@ -99,3 +99,24 @@
 
 .cls .ttl summary { cursor: pointer; font-size: .85rem; color: var(--muted); }
 .cls .ttl pre { font-family: var(--f-data); font-size: .75rem; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px; overflow-x: auto; }
+
+/* Lines: map of the OSM shapes (docs/lines, ODbL) and the list from tools/class_lines.tsv */
+.cls .lines .map { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); }
+.cls .lines #line-map { height: 340px; background: var(--bg); }
+.cls .lines .credit { margin: 0; padding: 4px 8px; font-size: .7rem; border-top: 1px solid var(--line); }
+.cls .lines .credit a { color: var(--muted); }
+.cls .lines ul { list-style: none; margin: 10px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.cls .lines li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.cls .lines li button, .cls .lines li .name { display: inline-flex; align-items: center; gap: 8px; font: inherit; color: var(--fg);
+  background: none; border: 0; padding: 0; text-align: left; }
+.cls .lines li button { cursor: pointer; }
+.cls .lines li button:hover { color: var(--accent); }
+.cls .lines li button[aria-current] { color: var(--accent); font-weight: 700; }
+.cls .lines .sw { flex: none; width: 18px; height: 0; border-top: 4px solid var(--accent); border-radius: 2px; }
+.cls .lines li.old .sw { border-top-style: dashed; opacity: .6; }
+.cls .lines .sw.none { border-top: 1px solid var(--muted); }
+.cls .lines .meta { display: inline-flex; gap: 10px; margin-left: auto; font-size: .75rem; color: var(--muted); }
+.cls .lines .meta a { color: var(--muted); }
+.cls .lines .all-lines { margin-top: 8px; font: inherit; font-size: .8rem; padding: 4px 10px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--panel); color: var(--fg); cursor: pointer; }
+.cls .lines .leaflet-container { font: inherit; font-size: .75rem; }

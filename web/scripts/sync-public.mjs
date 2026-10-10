@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 
 const docs = fileURLToPath(new URL("../../docs/", import.meta.url));
 const pub = fileURLToPath(new URL("../public/", import.meta.url));
-const DIRS = ["data", "models", "thumbs", "rdf", "search", "iiif", "downloads"];   // downloads/ is not in git: copied only when present
+const DIRS = ["data", "models", "thumbs", "rdf", "search", "iiif", "lines", "downloads"];   // downloads/ is not in git: copied only when present
 // Local copies of the Commons photos (tools/fetch_photos.py). Not in git (data/ is not), so they reach the site only
 // through a local build; without them the search page falls back to Wikimedia's thumbnails.
 const photos = fileURLToPath(new URL("../../data/photos/", import.meta.url));

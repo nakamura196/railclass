@@ -68,15 +68,18 @@
       「Expo Line」は英語版の記事名だと LA の路線（Q5421492）に当たる。SkyTrain は Q736619。
       ヴァンデ・バーラトと Milan–Paris は線路でなく列車の運行（サービス）の項目なので、OSM の線は無いはず。
       49 番バスは Wikidata に項目が無く、line は空（TransLink の GTFS から取るなら別の道）
-- [ ] 対応表を RDF に入れる（A の形式の RDF に、路線へのリンクとして）
+- [x] 対応表を RDF に入れる（A の形式の RDF に、路線へのリンクとして）
+      2026-10-10: `tb:usedOn` と `tb:LineUse`（状態・終わった年・出典）。49 件・42 路線。中身は data-model.md の 2026-10-10。未コミット
 - [x] 対象の路線のうち、OSM の route relation に `wikidata=` 札が付いている数を数えた（2026-10-10 0:35）: 42 路線中 31。
       札が無い 11: サービスの項目 4（ヴァンデ・バーラト 2・Milan–Paris・Kelana Jaya 延伸）、Line 3 Scarborough（廃止）、オーストリア・ドイツの在来線 6（Q669665 Q694717 Q5873973 Q477258 Q100940666 Q802606）。
       在来線は OSM 側で札が別の関係（route=tracks など）に付いているか、Wikidata 側が別項目の可能性。Overpass は 429/504 が多く、`--only` で 1 路線ずつ 15 秒おきに流すと通った
       道具は `tools/osm_lines.py`（未コミット）。`--count` で数えるだけ、無しで線も取り出して `data/lines/<Q>.geojson`（git の管理外）に書く。
       2026-10-09 23:40 試運転: Expo Line・Millennium Line・上海リニアの 3 路線とも札があり、線が取れた（点を減らして 1 路線 2〜3 KB）
-- [ ] OSM の線を地図に出す方法を決める（表示のたびに Overpass か、事前に切り出すか。後者ならライセンスの扱いも）
-      推奨して本人の返事待ち: 事前に切り出し、RDF とは別の表示用の層（例 `lines/<Q>.geojson`、ODbL と「© OpenStreetMap contributors」を明記）として公開する
+- [x] OSM の線を地図に出す方法を決める（表示のたびに Overpass か、事前に切り出すか。後者ならライセンスの扱いも）
+      2026-10-10 本人の決定: 事前に切り出し、RDF とは別の表示用の層（例 `lines/<Q>.geojson`、ODbL と「© OpenStreetMap contributors」を明記）として公開する
 - [ ] 形式のページに地図を出す（上が決まってから）
+      2026-10-10: ページ側は作った（未コミット: ClassPage.astro・lib/data.ts の classLines・scripts/line-map.ts・class.css・i18n・sync-public.mjs に lines/）。
+      線の切り出しは Overpass の 504 で難航中（1 路線ずつやり直し、失敗は飛ばして続きから取れるようにした）。`python3 -u tools/osm_lines.py --api https://maps.mail.ru/osm/tools/overpass/api/interpreter`（記録は data/osm_lines.log）。出力は docs/lines/
 - [ ] 線の形は train-bodies のデータに入れない（ODbL に縛られないため）。これを崩す案が出たら本人に確かめる
 
 ## 写真の保存と公開待ちの変更（2026-10-09 夜）
@@ -99,6 +102,7 @@
 - [x] skytrain 側も別にコミットした（299111d 台座なし、e37b7c3 印刷の道具とノート。skytrain は手元だけで push しない）: `lib.py`（`NO_MOUNT` でネジ受けの柱・屋根の切り欠き・後ろの爪穴を省く）・`build.py`（`--no-mount`、出力は `out/<モデル>/nomount/`）・
       `tools/gallery.py` と `tools/export_formats.py`（どちらも `--no-mount`。2 つとも未追跡のファイル）。旗なしは今までどおり穴あり（印刷用）
 - [ ] 本人に確かめる: フッターの「© 2026 中村 覚」と、IIIF の提供者（`tools/build_iiif.py` の PROVIDER）「中村 覚（東京大学）」を残すか
+      2026-10-10 本人の指示「このサイトでは東京大学をあまり出さない」: IIIF の提供者を「中村 覚」「Satoru Nakamura」にした（build_iiif.py と 14 件の Manifest、未コミット）。フッターの © は未確認
 - [ ] 新しい 4 モデル（allegra・frecciarossa・maglev・vandebharat）は注釈が無いので、IIIF マニフェストとダウンロードがまだ無い
 - [ ] `docs/downloads/`（git の管理外）は穴なし版から 14 件作り直した。公開の置き場所（git か Releases か）は未定のまま
 - [x] 2026-10-09 新しい 4 モデルを `tools/build_rdf.py` の MODELS・CLASSES・LIVERIES に足し、RDF と検索の索引を作り直した（3D のある形式 12 → 16）。

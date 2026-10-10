@@ -8,7 +8,7 @@ import Base from "../layouts/Base.astro";
 import { file, page, t, type Lang } from "../i18n";
 import { classPage } from "../lib/classes";
 import iiifLogo from "../assets/iiif-logo.svg";   // the IIIF logo, as on the IIIF Consortium's site
-import { models, modelParts, fmtSize, hasManifest } from "../lib/data";
+import { models, modelParts, fmtSize, hasManifest, classLines } from "../lib/data";
 
 const { lang, id } = Astro.props as { lang: Lang; id: string };
 const ui = t(lang);
@@ -37,9 +37,13 @@ const uri = `https://nakamura196.github.io/train-bodies/rdf/class/${id}`;
 const here = `rdf/class/${id}.html`;
 const cite = `${c.name}. ${ui.site.name}. ${uri}`;
 const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
+const lines = classLines(id);
+const mapped = lines.filter(l => l.map);
 ---
 <Base lang={lang} path={here} current="search" title={`${c.name} — ${ui.site.name}`} description={`${T.kicker}: ${c.name}${c.other ? ` (${c.other})` : ""}`}>
 {mods.length > 0 && <script slot="head" type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>}
+{mapped.length > 0 && <link slot="head" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">}
+{mapped.length > 0 && <script slot="head" is:inline src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>}
 <link slot="head" rel="alternate" type="text/turtle" href={file(`rdf/class/${id}.ttl`)}>
 <link slot="head" rel="alternate" type="application/ld+json" href={file(`rdf/class/${id}.jsonld`)}>
 <div class="wrap cls">
@@ -126,6 +130,34 @@ const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
         {c.broader.length > 0 && <div><dt>{T.broader}</dt><dd>{c.broader.map((b, k) => <>{k > 0 && ", "}<a href={cls(b.id)}>{b.name}</a></>)}</dd></div>}
         {c.narrower.length > 0 && <div><dt>{T.narrower}</dt><dd>{c.narrower.map((b, k) => <>{k > 0 && ", "}<a href={cls(b.id)}>{b.name}</a></>)}</dd></div>}
       </dl>
+
+      {lines.length > 0 && (
+        <section class="lines" aria-labelledby="h-lines">
+          <h2 id="h-lines">{T.lines}</h2>
+          {mapped.length > 0 && (
+            <div class="map">
+              <div id="line-map" role="img" aria-label={T.lines}></div>
+              <p class="credit"><a href="https://www.openstreetmap.org/copyright">{T.mapCredit}</a></p>
+            </div>
+          )}
+          <ul>
+            {lines.map(l => (
+              <li data-line={l.id} class:list={{ old: l.status !== "current" }}>
+                {l.map ? <button type="button" data-line={l.id}><span class="sw" aria-hidden="true"></span>{l.label}</button>
+                       : <span class="name"><span class="sw none" aria-hidden="true"></span>{l.label}</span>}
+                <span class="meta">
+                  {l.until && <span>{fmt(T.until, { y: l.until })}</span>}
+                  {!l.map && mapped.length > 0 && <span>{T.noMap}</span>}
+                  <a href={`https://www.wikidata.org/wiki/${l.id}`}>{l.id}</a>
+                  {l.source && !l.source.includes("wikidata.org") && <a href={l.source}>{T.lineSource}</a>}
+                </span>
+              </li>
+            ))}
+          </ul>
+          {mapped.length > 1 && <button type="button" class="all-lines">{T.linesAll}</button>}
+          {mapped.length > 0 && <p class="hint">{T.linesHint}</p>}
+        </section>
+      )}
     </section>
 
     <aside class="media">
@@ -167,10 +199,14 @@ const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
     <pre>{c.ttl}</pre>
   </details>
 </div>
+{mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify(mapped.map(l => ({ id: l.id, label: l.label, old: l.status !== "current", src: file(`lines/${l.id}.geojson`) })))} />}
 {mods.length > 0 && <script type="application/json" id="m3d-data" set:html={JSON.stringify({ models: mdata, orbit: ORBITS[0][1] })} />}
 </Base>
 
 <script>
+  import { lineMap } from "../scripts/line-map";
+  lineMap();
+
   // Copy the citation
   const cc = document.getElementById("cite-copy");
   cc?.addEventListener("click", async () => {

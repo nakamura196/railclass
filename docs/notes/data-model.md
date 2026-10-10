@@ -266,3 +266,35 @@ URI の取り決め（3 つのセッションで共有する。変えるとき�
 - 上の 2 か所で「白 7」と書いたが、正しくは **白 6**。公開した `search/index.json` で数え直した。
   ICE TD の形式には `icet_td` と `icet_dsb` の 2 モデルが付いており、形式としては 1 つに数える。
   数え直した結果（3D モデルのある 12 形式）: 白 6・青 6・赤 4・灰 3・緑 2・紫 1・茶 1。赤は ICE TD・ÖBB 4011・411・415 の 4 形式。
+
+## 2026-10-10
+
+### 路線の線: 事前に切り出して別の層で公開する（本人と決めた）
+
+- 10-09 の「却下した案: OSM の線を GeoJSON にして docs/ に置く」を改めた。**線は事前に切り出し、`docs/lines/<Q>.geojson` として公開する。**
+  ただしデータ（RDF・検索の索引・`tools/class_lines.tsv`）には座標を入れない。線は地図を描くための別の層とし、
+  `docs/lines/README.md` と地図の下に「© OpenStreetMap contributors（ODbL）」を書く。データ全体が ODbL に縛られない、という 10-09 の狙いはこれで保てる。
+- 表示のたびに Overpass を叩く案は、やめた。実際に 10-10 の昼、本家（overpass-api.de）は 504 が続き、1 本目の路線も取れなかった。
+  閲覧者のたびにこれが起きると地図が出ない。道具に `--api` を足し、公開ミラー（maps.mail.ru）で切り出した。
+- 形式のページの「走る路線」: 地図（Leaflet 1.9.4、背景は OSM のタイル）と一覧。線の無い路線は「地図なし」として一覧にだけ出す。
+  運用を外れた路線は点線で薄く描く。
+
+### 形式 → 路線を RDF に入れた
+
+- 形は 2 段にした。`cls:<形式> tb:usedOn wd:<路線>`（ふつうの問い合わせ用の直のリンク）と、
+  `tb:lineUse` → `tb:LineUse` の節点（`tb:line`・`tb:useStatus`（current / historical / unknown）・`tb:usedUntil`（xsd:gYear）・
+  `dcterms:source`・`tb:sourceSection`・`tb:inferred`・`skos:note`）。状態と出典は路線ごとに違うので、直のリンクだけでは持てない。
+- `tb:usedOn` は Wikidata の P3438（路線 → 使う車両）の逆向きだが、`owl:inverseOf wdt:P3438` とは書かなかった。
+  こちらの主語は train-bodies の形式（Wikidata の項目とは `skos:exactMatch`）で、主語が同じではないため。説明文で逆向きと書くにとどめた。
+- 却下した案: 1 本に行を潰して `tb:usedOn` だけにする（廃止の路線と今の路線が区別できない。INFERRED の 16 行も見えなくなる）。
+- 実数: 50 行のうち路線のある 49 件が入った（49 番バスの 1 行は路線の項目が無い）。42 路線、全体で 2,100 トリプル。
+  路線の英語名は表の lineLabel から `rdfs:label` として入れた（日本語名は無い）。
+
+### デグレ: 路線の節点で形式のページが空になった（同じ日、本人の指摘で）
+
+- 路線を RDF に入れたあと、形式のページから名前・Wikidata のリンク・3D のビューアが消えた（例: Allegra）。組み立ては通っていた。
+- 原因: 形式の JSON-LD が 1 つの節点から `@graph`（形式と LineUse の節点）に変わり、ページ側（`web/src/lib/classes.ts`）が
+  ファイル全体を形式の節点として読んでいた。形式の節点を `@graph` から `@id` で選ぶようにした（d816cc1）。
+- 再発を防ぐため、組み立てた結果を元データと突き合わせる点検 `web/scripts/check-dist.mjs`（`npm test`）を足し、公開の手順に入れた（1ecd679）。
+  正解はページと別の読み方で取る（3D モデルと名前は Turtle から、路線は `class_lines.tsv` と `docs/lines/` から）。
+  直す前の `classes.ts` で組み立てると 97 件の失敗を出すことを確かめた。

@@ -76,3 +76,21 @@ export function modelParts(id: string, lang: Lang): Part[] {
 }
 
 export const hasManifest = (id: string) => existsSync(docsPath(`iiif/${id}/manifest.json`));
+
+export type Line = { id: string; label: string; status: string; until: string; source: string; map: boolean };
+
+/** The lines a class runs (ran) on: tools/class_lines.tsv (hand-filled with sources). map = an OSM shape was cut out
+ *  for it (docs/lines/<Q>.geojson, tools/osm_lines.py; ODbL, kept apart from the dataset). */
+export function classLines(id: string): Line[] {
+  const p = resolve(process.cwd(), "../tools/class_lines.tsv");
+  if (!existsSync(p)) return [];
+  const [head, ...rows] = readFileSync(p, "utf8").trim().split("\n").map(r => r.split("\t"));
+  const seen = new Set<string>();
+  return rows.map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ""])))
+    .filter(r => r.class === id && r.line && !seen.has(r.line) && seen.add(r.line))
+    .map(r => {
+      const [status, until = ""] = r.status.split(" ");
+      return { id: r.line, label: r.lineLabel, status, until, source: r.source_url, map: existsSync(docsPath(`lines/${r.line}.geojson`)) };
+    })
+    .sort((a, b) => Number(b.status === "current") - Number(a.status === "current"));
+}
