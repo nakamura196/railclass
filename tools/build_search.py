@@ -8,7 +8,8 @@ Inputs:
   data/wikidata/class-labels-ja.tsv     Japanese labels (tools/queries/wd-class-labels-ja.rq)
   data/wikidata/facets/<id>.tsv         facet values per class (tools/fetch_facets.py)
   docs/rdf/all.jsonld                   the class and model RDF (made by the RDF work), if present. For the classes in it:
-                                        its values replace the Wikidata ones, facets marked "inherit" take the value of the
+                                        its values replace the Wikidata ones (facets with on=livery take the values of the
+                                        liveries of its models), facets marked "inherit" take the value of the
                                         skos:broader class when the class has none, the 3D models come from schema:subjectOf,
                                         and classes outside the Wikidata list (SkyTrain Mark I, Airo, XD60...) are added
 index.json is column-wise to stay small:
@@ -54,6 +55,14 @@ def load_rdf():
         return v if isinstance(v, list) else [v]
     def lang(v):
         return {x["@language"]: x["@value"] for x in many(v or []) if isinstance(x, dict) and "@language" in x}
+    def props(n):
+        return {expand(k): [short(x) for x in many(v)] for k, v in n.items()
+                if expand(k).startswith("http://www.wikidata.org/prop/direct/") or expand(k).startswith(ctx.get("@vocab", "-"))}
+    byid = {n["@id"]: n for n in d["@graph"]}
+    livery = {}                                      # model id -> {property uri: [values]} of its livery
+    for n in d["@graph"]:
+        if "livery" in n and "@id" in n["livery"] and n["livery"]["@id"] in byid:
+            livery[short(n["@id"])] = props(byid[n["livery"]["@id"]])
     for n in d["@graph"]:
         types = [expand(t) for t in many(n.get("@type", []))]
         nid = short(n["@id"])
@@ -63,11 +72,11 @@ def load_rdf():
             continue
         l = lang(n.get("skos:prefLabel") or n.get("rdfs:label"))
         c = dict(en=l.get("en", ""), ja=l.get("ja", ""), models=sorted(short(m) for m in many(n.get("schema:subjectOf", []))),
-                 broader=short(n["skos:broader"]) if "skos:broader" in n else None, values={})
-        for k, v in n.items():
-            u = expand(k)
-            if u.startswith("http://www.wikidata.org/prop/direct/") or u.startswith(ctx.get("@vocab", "-")):
-                c["values"][u] = [short(x) for x in many(v)]
+                 broader=short(n["skos:broader"]) if "skos:broader" in n else None, values=props(n), livery={})
+        for m in c["models"]:                        # a class has a livery value when any of its models has it
+            for u, vs in livery.get(m, {}).items():
+                c["livery"].setdefault(u, [])
+                c["livery"][u] += [v for v in vs if v not in c["livery"][u]]
         out["classes"][nid] = c
     return out
 
@@ -99,7 +108,7 @@ def main():
         elif f["datatype"] in ("decimal", "integer", "gYear") and os.path.exists(p):
             got = {r["item"]: int(float(r["value"])) for r in read(p) if r["value"]}
         for q, c in rdf["classes"].items():          # the RDF wins for its classes
-            v = c["values"].get(f["uri"])
+            v = c["livery" if f.get("on") == "livery" else "values"].get(f["uri"])
             if v is None and f.get("inherit"):
                 v = rdf["classes"].get(c.get("broader"), {}).get("values", {}).get(f["uri"])
             if v is not None:

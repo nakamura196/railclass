@@ -13,16 +13,564 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color1",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color8",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.8648"
+        "@value": "0.0128"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#313537",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "wd:Q3142",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "red"
+        },
+        {
+          "@language": "ja",
+          "@value": "赤"
+        }
+      ]
+    },
+    {
+      "@id": "tb:galleryGroup",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Group id used on the gallery page."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "ギャラリーの区分"
+        },
+        {
+          "@language": "en",
+          "@value": "gallery group"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color4"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_411/icet_411.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q9322"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn livery (red stripe)"
+        },
+        {
+          "@language": "ja",
+          "@value": "DB の塗装（赤い帯）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3142"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/mk5/skytrain_mk5.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "TransLink の塗装"
+        },
+        {
+          "@language": "en",
+          "@value": "TransLink livery"
+        }
+      ],
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1043"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#A4A9B0",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0705"
+      },
+      "rdfs:label": "cream",
+      "schema:color": "#E6E3DA",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411",
+      "@type": "schema:3DModel",
+      "galleryGroup": "icet",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q115612330"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/icet_411.glb"
+      },
+      "schema:depth": {
+        "@id": "_:icet_411-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "標準の塗装。赤い帯と「ICE」の文字、鼻に DB のマーク。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:icet_411-height"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "411（7両編成）"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/icet_411/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/icet_411.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#icet_411"
+      },
+      "schema:width": {
+        "@id": "_:icet_411-width"
+      }
+    },
+    {
+      "@id": "_:icet_411-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:icet_411-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:icet_411-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0111"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8663"
       },
       "rdfs:label": "body",
       "schema:color": "#ECEEEC",
       "wdt:P462": {
         "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "wd:Q391895",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Siemens Mobility"
+        },
+        {
+          "@language": "ja",
+          "@value": "シーメンス・モビリティ"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8558"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#F0F1F0",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0275"
+      },
+      "rdfs:label": "red",
+      "schema:color": "#CC1014",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "wd:Q3257809",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "purple"
+        },
+        {
+          "@language": "ja",
+          "@value": "紫"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/mk2/skytrain_mk2.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "TransLink の塗装"
+        },
+        {
+          "@language": "en",
+          "@value": "TransLink livery"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q183",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Germany"
+        },
+        {
+          "@language": "ja",
+          "@value": "ドイツ"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q59618126",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "New Flyer Xcelsior"
+        },
+        {
+          "@language": "ja",
+          "@value": "ニューフライヤー・エクセルシオール"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q83822",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Austrian Federal Railways"
+        },
+        {
+          "@language": "ja",
+          "@value": "オーストリア連邦鉄道"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0369"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#A9AEB3",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "wd:Q4102249",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "subway car"
+        },
+        {
+          "@language": "ja",
+          "@value": "地下鉄車両"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0410"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#C2C7CA",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "wd:Q40",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Austria"
+        },
+        {
+          "@language": "ja",
+          "@value": "オーストリア"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q8078904",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": true,
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q8078904"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "ÖBB 4011形"
+        },
+        {
+          "@language": "en",
+          "@value": "ÖBB 4011"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb"
+      },
+      "skos:broader": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q696668"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q8078904"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ÖBB 4011"
+        },
+        {
+          "@language": "ja",
+          "@value": "ÖBB 4011形"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q83822"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q40"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3959904"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0414"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#C2C7CA",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color3"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_415/icet_415.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q9322"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn livery (red stripe)"
+        },
+        {
+          "@language": "ja",
+          "@value": "DB の塗装（赤い帯）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3142"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0414"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
       }
     },
     {
@@ -39,11 +587,194 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5",
+      "@id": "wd:Q696668",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "ICE T"
+        },
+        {
+          "@language": "ja",
+          "@value": "ICE T"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q129172",
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "ICE"
+        },
+        {
+          "@language": "en",
+          "@value": "InterCityExpress"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0096"
+        "@value": "0.0858"
+      },
+      "rdfs:label": "navy",
+      "schema:color": "#1C2B4A",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8648"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#ECEEEC",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_oebb/icet_oebb.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q83822"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "DB の塗装に ÖBB の印"
+        },
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn livery with ÖBB marks"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3142"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0783"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#A9AEB3",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "wd:Q23239",
+      "rdfs:label": {
+        "@language": "ja",
+        "@value": "アムトラック"
+      }
+    },
+    {
+      "@id": "wd:Q23444",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "white"
+        },
+        {
+          "@language": "ja",
+          "@value": "白"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0410"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#C2C7CA",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0073"
+      },
+      "rdfs:label": "silver",
+      "schema:color": "#BCC1C8",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "wd:Q1100969",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Talgo"
+        },
+        {
+          "@language": "ja",
+          "@value": "タルゴ"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6468"
+      },
+      "rdfs:label": "dkgrey",
+      "schema:color": "#3A4048",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color10",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0065"
       },
       "rdfs:label": "grey",
       "schema:color": "#5A6066",
@@ -52,10 +783,538 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk3",
+      "@id": "wd:Q1415234",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "15 kV, 16.7 Hz AC railway electrification"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0271"
+      },
+      "rdfs:label": "red",
+      "schema:color": "#CC1014",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.2025"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#1D4FB4",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0500"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_dsb/icet_dsb.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q83824"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "DSB livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "DSB の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q1088"
+        },
+        {
+          "@id": "wd:Q23444"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color9"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color7"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color6"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color8"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color10"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color1"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/airo/amtrak_airo.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q697217"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "Amtrak Cascades の塗装"
+        },
+        {
+          "@language": "en",
+          "@value": "Amtrak Cascades livery"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q3133"
+        },
+        {
+          "@id": "wd:Q47071"
+        }
+      ]
+    },
+    {
+      "@id": "tb:ColorSample",
+      "@type": "rdfs:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "One colour of a livery as painted on the 3D model, with its share of the painted surface."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Colour sample"
+        },
+        {
+          "@language": "ja",
+          "@value": "色見本"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q3552199",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Urban Transportation Development Corporation"
+        },
+        {
+          "@language": "ja",
+          "@value": "都市交通開発公社"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710",
       "@type": [
         "skos:Concept",
         "VehicleClass"
+      ],
+      "has3DModel": true,
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1087710"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "レンフェ102系"
+        },
+        {
+          "@language": "en",
+          "@value": "AVE Class 102"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1087710"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "ja",
+          "@value": "レンフェ102系"
+        },
+        {
+          "@language": "en",
+          "@value": "AVE Class 102"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83910"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q29"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q1100969"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "330"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q313106"
+        },
+        {
+          "@id": "wd:Q13402959"
+        }
+      ]
+    },
+    {
+      "@id": "tb:liveryOf",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The operator whose livery this is."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "livery of"
+        },
+        {
+          "@language": "ja",
+          "@value": "塗装の持ち主"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0199"
+      },
+      "rdfs:label": "brown",
+      "schema:color": "#5C433A",
+      "wdt:P462": {
+        "@id": "wd:Q47071"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/bus49_front/translink_bus49_front.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "TransLink livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "TransLink の塗装"
+        }
+      ],
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0275"
+      },
+      "rdfs:label": "red",
+      "schema:color": "#CC1014",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0196"
+      },
+      "rdfs:label": "line",
+      "schema:color": "#8E949A",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/ave102.glb"
+      },
+      "schema:depth": {
+        "@id": "_:ave102-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "スペインの高速列車。カモのくちばしのような鼻。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:ave102-height"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "AVE 102「Pato」"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/ave102/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/ave102.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#ave102"
+      },
+      "schema:width": {
+        "@id": "_:ave102-width"
+      }
+    },
+    {
+      "@id": "_:ave102-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
+      "@id": "_:ave102-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:ave102-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "wd:Q1567915",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "diesel multiple unit"
+        },
+        {
+          "@language": "ja",
+          "@value": "気動車"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q81230",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Siemens"
+        },
+        {
+          "@language": "ja",
+          "@value": "シーメンス"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0501"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q115612330",
+      "@type": [
+        "skos:Concept",
+        "VehicleClass"
+      ],
+      "has3DModel": true,
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q115612330"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "ICE T 411形"
+        },
+        {
+          "@language": "en",
+          "@value": "DBAG Class 411"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411"
+      },
+      "skos:broader": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q696668"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q115612330"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "ja",
+          "@value": "ICE T 411形"
+        },
+        {
+          "@language": "en",
+          "@value": "DBAG Class 411"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q452140"
+        },
+        {
+          "@id": "wd:Q83822"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "230"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q696668"
+        },
+        {
+          "@id": "wd:Q129172"
+        }
+      ],
+      "wdt:P930": {
+        "@id": "wd:Q1415234"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk1",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
       ],
       "dcterms:source": {
         "@language": "en",
@@ -63,10 +1322,10 @@
       },
       "handEntered": [
         {
-          "@id": "wdt:P17"
+          "@id": "wdt:P729"
         },
         {
-          "@id": "wdt:P729"
+          "@id": "wdt:P17"
         },
         {
           "@id": "wdt:P176"
@@ -78,16 +1337,16 @@
       "has3DModel": true,
       "rdfs:label": [
         {
-          "@language": "ja",
-          "@value": "スカイトレイン Mark III"
+          "@language": "en",
+          "@value": "SkyTrain Mark I"
         },
         {
-          "@language": "en",
-          "@value": "SkyTrain Mark III"
+          "@language": "ja",
+          "@value": "スカイトレイン Mark I"
         }
       ],
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3"
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1"
       },
       "skos:broadMatch": {
         "@id": "wd:Q4940487"
@@ -100,12 +1359,232 @@
       },
       "skos:prefLabel": [
         {
+          "@language": "en",
+          "@value": "SkyTrain Mark I"
+        },
+        {
           "@language": "ja",
-          "@value": "スカイトレイン Mark III"
+          "@value": "スカイトレイン Mark I"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q141170526"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q16"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3552199"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1985"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0500"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "wd:Q2476154",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Renfe Operadora"
+        },
+        {
+          "@language": "ja",
+          "@value": "レンフェ"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q47071",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "brown"
+        },
+        {
+          "@language": "ja",
+          "@value": "茶色"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q137972762",
+      "@type": [
+        "skos:Concept",
+        "VehicleClass"
+      ],
+      "has3DModel": true,
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q137972762"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "DBAG Class 415"
+        },
+        {
+          "@language": "ja",
+          "@value": "ICE T 415形"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415"
+      },
+      "skos:broader": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q696668"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q137972762"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "ja",
+          "@value": "ICE T 415形"
         },
         {
           "@language": "en",
-          "@value": "SkyTrain Mark III"
+          "@value": "DBAG Class 415"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q452140"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "230"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q129172"
+        },
+        {
+          "@id": "wd:Q696668"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1999"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q1415234"
+      }
+    },
+    {
+      "@id": "wd:Q9322",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn"
+        },
+        {
+          "@language": "ja",
+          "@value": "ドイツ鉄道"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0109"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "wd:Q333498",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Bombardier"
+        },
+        {
+          "@language": "ja",
+          "@value": "ボンバルディア"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk2",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text."
+      },
+      "handEntered": [
+        {
+          "@id": "wdt:P729"
+        },
+        {
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P176"
+        },
+        {
+          "@id": "wdt:P137"
+        }
+      ],
+      "has3DModel": true,
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SkyTrain Mark II"
+        },
+        {
+          "@language": "ja",
+          "@value": "スカイトレイン Mark II"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2"
+      },
+      "skos:broadMatch": {
+        "@id": "wd:Q4940487"
+      },
+      "skos:broader": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4940487"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SkyTrain Mark II"
+        },
+        {
+          "@language": "ja",
+          "@value": "スカイトレイン Mark II"
         }
       ],
       "wdt:P137": {
@@ -119,228 +1598,99 @@
       },
       "wdt:P729": {
         "@type": "xsd:gYear",
-        "@value": "2016"
+        "@value": "2002"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color6"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color7"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color8"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color10"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color9"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color5"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/airo/amtrak_airo.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q697217"
-      },
+      "@id": "wd:Q313106",
       "rdfs:label": [
         {
-          "@language": "en",
-          "@value": "Amtrak Cascades livery"
-        },
-        {
           "@language": "ja",
-          "@value": "Amtrak Cascades の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q3133"
+          "@value": "タルゴ"
         },
         {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q47071"
-        },
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q42519"
+          "@language": "en",
+          "@value": "Talgo Train"
         }
       ]
     },
     {
-      "@id": "wd:Q4102249",
-      "rdfs:label": [
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front",
+      "@type": "schema:3DModel",
+      "galleryGroup": "bus",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery"
+      },
+      "part": [
         {
           "@language": "en",
-          "@value": "subway car"
+          "@value": "front half of the articulated bus"
         },
         {
           "@language": "ja",
-          "@value": "地下鉄車両"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q659660",
-      "@type": [
-        "skos:Concept",
-        "VehicleClass"
-      ],
-      "has3DModel": true,
-      "prov:wasDerivedFrom": {
-        "@id": "wd:Q659660"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "ICE TD"
-        },
-        {
-          "@language": "en",
-          "@value": "ICE TD"
+          "@value": "連節バスの前半分"
         }
       ],
-      "schema:subjectOf": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td"
-        }
-      ],
-      "skos:exactMatch": {
-        "@id": "wd:Q659660"
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q137921671"
       },
-      "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/bus49_front.glb"
       },
-      "skos:prefLabel": [
-        {
-          "@language": "ja",
-          "@value": "ICE TD"
-        },
-        {
-          "@language": "en",
-          "@value": "ICE TD"
-        }
-      ],
-      "wdt:P1064": {
-        "@id": "wd:Q1999572"
+      "schema:depth": {
+        "@id": "_:bus49_front-depth"
       },
-      "wdt:P137": {
-        "@id": "wd:Q9322"
+      "schema:description": {
+        "@language": "ja",
+        "@value": "TransLink の連節バス XD60 の前半分。"
       },
-      "wdt:P176": [
-        {
-          "@id": "wd:Q309084"
-        },
-        {
-          "@id": "wd:Q81230"
-        },
-        {
-          "@id": "wd:Q333498"
-        }
-      ],
-      "wdt:P2052": {
-        "@type": "xsd:decimal",
-        "@value": "200"
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:bus49_front-height"
       },
-      "wdt:P279": [
-        {
-          "@id": "wd:Q13402959"
-        },
-        {
-          "@id": "wd:Q671188"
-        },
-        {
-          "@id": "wd:Q1567915"
-        }
-      ]
-    },
-    {
-      "@id": "tb:areaShare",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Share (0-1) of the painted surface of the 3D model that has this colour (glass, lamps, seams left out)."
+      "schema:name": {
+        "@language": "ja",
+        "@value": "49番バス（前）"
       },
-      "rdfs:isDefinedBy": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab"
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/bus49_front/manifest.json"
       },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "area share"
-        },
-        {
-          "@language": "ja",
-          "@value": "面積の割合"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0409"
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/bus49_front.jpg"
       },
-      "rdfs:label": "skirt",
-      "schema:color": "#C2C7CA",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#bus49_front"
+      },
+      "schema:width": {
+        "@id": "_:bus49_front-width"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color5",
-      "@type": "ColorSample",
-      "areaShare": {
+      "@id": "_:bus49_front-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
         "@type": "xsd:decimal",
-        "@value": "0.0109"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
+        "@value": "46.0"
       }
     },
     {
-      "@id": "wd:Q83910",
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "レンフェ"
-        },
-        {
-          "@language": "en",
-          "@value": "Red Nacional de los Ferrocarriles Españoles"
-        }
-      ]
+      "@id": "_:bus49_front-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "145.1"
+      }
+    },
+    {
+      "@id": "_:bus49_front-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223",
@@ -392,92 +1742,70 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color3",
+      "@id": "wd:Q42519",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "grey"
+        },
+        {
+          "@language": "ja",
+          "@value": "灰色"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color5"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/mk3/skytrain_mk3.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "TransLink の塗装"
+        },
+        {
+          "@language": "en",
+          "@value": "TransLink livery"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0933"
-      },
-      "rdfs:label": "roof",
-      "schema:color": "#A6ABB2",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415",
-      "@type": "schema:3DModel",
-      "galleryGroup": "icet",
-      "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#livery"
-      },
-      "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q137972762"
-      },
-      "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/icet_415.glb"
-      },
-      "schema:depth": {
-        "@id": "_:icet_415-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "形は 411 と同じ。車番だけが違う。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:icet_415-height"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "415（5両編成）"
-      },
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/icet_415/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/icet_415.jpg"
-      },
-      "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#icet_415"
-      },
-      "schema:width": {
-        "@id": "_:icet_415-width"
-      }
-    },
-    {
-      "@id": "_:icet_415-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "38.0"
-      }
-    },
-    {
-      "@id": "_:icet_415-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "_:icet_415-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "149.9"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8458"
+        "@value": "0.8247"
       },
       "rdfs:label": "blue",
       "schema:color": "#006FD6",
@@ -486,30 +1814,214 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.6468"
+        "@value": "0.8171"
       },
-      "rdfs:label": "dkgrey",
-      "schema:color": "#3A4048",
+      "rdfs:label": "body",
+      "schema:color": "#ECEEEC",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8665"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#ECEEEC",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0969"
+      },
+      "rdfs:label": "silver",
+      "schema:color": "#A9AEB4",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear",
+      "@type": "schema:3DModel",
+      "galleryGroup": "bus",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery"
+      },
+      "part": [
+        {
+          "@language": "ja",
+          "@value": "連節バスの後ろ半分"
+        },
+        {
+          "@language": "en",
+          "@value": "rear half of the articulated bus"
+        }
+      ],
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q137921671"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/bus49_rear.glb"
+      },
+      "schema:depth": {
+        "@id": "_:bus49_rear-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "同じバスの後ろ半分。2 台をつないで走らせる。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:bus49_rear-height"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "49番バス（後ろ）"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/bus49_rear/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/bus49_rear.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#bus49_rear"
+      },
+      "schema:width": {
+        "@id": "_:bus49_rear-width"
+      }
+    },
+    {
+      "@id": "_:bus49_rear-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "143.5"
+      }
+    },
+    {
+      "@id": "_:bus49_rear-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "46.0"
+      }
+    },
+    {
+      "@id": "_:bus49_rear-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color5",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0111"
+        "@value": "0.0109"
       },
       "rdfs:label": "grey",
       "schema:color": "#5A6066",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color5"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_green/icet_green.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q9322"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn livery with green stripe (2019–2022)"
+        },
+        {
+          "@language": "ja",
+          "@value": "DB の塗装（緑の帯、2019〜2022年）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3133"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8665"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#ECEEEC",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "tb:handEntered",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A property whose values on this class were entered by hand (see dcterms:source), not copied from Wikidata."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "手入力の項目"
+        },
+        {
+          "@language": "en",
+          "@value": "hand-entered property"
+        }
+      ]
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color2",
@@ -525,54 +2037,455 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color1"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_415/icet_415.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0501"
       },
-      "liveryOf": {
-        "@id": "wd:Q9322"
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8669"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#ECEEEC",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.2188"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#1E4FA8",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "wd:Q29",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Spain"
+        },
+        {
+          "@language": "ja",
+          "@value": "スペイン王国"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q3959904",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "multiple unit"
+        },
+        {
+          "@language": "ja",
+          "@value": "動力分散方式の列車編成"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q1999572",
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "標準軌"
+        },
+        {
+          "@language": "en",
+          "@value": "standard-gauge railway"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0297"
+      },
+      "rdfs:label": "charcoal",
+      "schema:color": "#3A3E42",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q137921671",
+      "@type": [
+        "skos:Concept",
+        "VehicleClass"
+      ],
+      "has3DModel": true,
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q137921671"
       },
       "rdfs:label": [
         {
           "@language": "ja",
-          "@value": "DB の塗装（赤い帯）"
+          "@value": "New Flyer XD60"
         },
         {
           "@language": "en",
-          "@value": "Deutsche Bahn livery (red stripe)"
+          "@value": "New Flyer XD60"
+        }
+      ],
+      "schema:subjectOf": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q137921671"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "New Flyer XD60"
+        },
+        {
+          "@language": "ja",
+          "@value": "New Flyer XD60"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q1126054"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q59618126"
+        },
+        {
+          "@id": "wd:Q654749"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q671188",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "tilting train"
+        },
+        {
+          "@language": "ja",
+          "@value": "車体傾斜式車両"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk5",
+      "@type": [
+        "skos:Concept",
+        "VehicleClass"
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text."
+      },
+      "handEntered": [
+        {
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P176"
+        },
+        {
+          "@id": "wdt:P137"
+        }
+      ],
+      "has3DModel": true,
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SkyTrain Mark V"
+        },
+        {
+          "@language": "ja",
+          "@value": "スカイトレイン Mark V"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5"
+      },
+      "skos:broadMatch": {
+        "@id": "wd:Q4940487"
+      },
+      "skos:broader": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4940487"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "ja",
+          "@value": "スカイトレイン Mark V"
+        },
+        {
+          "@language": "en",
+          "@value": "SkyTrain Mark V"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q141170526"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q16"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0756"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0668"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#1E58C0",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "tb:areaShare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Share (0-1) of the painted surface of the 3D model that has this colour (glass, lamps, seams left out)."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "area share"
+        },
+        {
+          "@language": "ja",
+          "@value": "面積の割合"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color9",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0072"
+      },
+      "rdfs:label": "teal",
+      "schema:color": "#6FB5A5",
+      "wdt:P462": {
+        "@id": "wd:Q3133"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8553"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#0056B8",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/airo.glb"
+      },
+      "schema:depth": {
+        "@id": "_:airo-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "2026年9月に走り始めた、シアトル〜バンクーバーの新型客車。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:airo-height"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "Airo（Amtrak Cascades）"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/airo/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/airo.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#airo"
+      },
+      "schema:width": {
+        "@id": "_:airo-width"
+      }
+    },
+    {
+      "@id": "_:airo-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
+      "@id": "_:airo-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:airo-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0074"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "wd:Q1126054",
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "ニュー・フライヤー・インダストリーズ"
+        },
+        {
+          "@language": "en",
+          "@value": "NFI Group"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q943",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "yellow"
+        },
+        {
+          "@language": "ja",
+          "@value": "黄色"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/ave102/renfe_ave102.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q2476154"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Renfe AVE livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "Renfe AVE の塗装"
         }
       ],
       "wdt:P462": [
         {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q3142"
-        },
-        {
           "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3257809"
         }
       ]
     },
@@ -618,12 +2531,12 @@
       }
     },
     {
-      "@id": "_:icet_green-depth",
+      "@id": "_:icet_green-height",
       "@type": "schema:QuantitativeValue",
       "schema:unitCode": "MMT",
       "schema:value": {
         "@type": "xsd:decimal",
-        "@value": "149.9"
+        "@value": "38.0"
       }
     },
     {
@@ -636,319 +2549,60 @@
       }
     },
     {
-      "@id": "_:icet_green-height",
+      "@id": "_:icet_green-depth",
       "@type": "schema:QuantitativeValue",
       "schema:unitCode": "MMT",
       "schema:value": {
         "@type": "xsd:decimal",
-        "@value": "38.0"
+        "@value": "149.9"
       }
     },
     {
-      "@id": "wd:Q96106536",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Siemens Venture"
-        },
-        {
-          "@language": "ja",
-          "@value": "シーメンス・ベンチャー"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0668"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "wd:Q42519",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "grey"
-        },
-        {
-          "@language": "ja",
-          "@value": "灰色"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk5",
-      "@type": [
-        "skos:Concept",
-        "VehicleClass"
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text."
-      },
-      "handEntered": [
-        {
-          "@id": "wdt:P17"
-        },
-        {
-          "@id": "wdt:P176"
-        },
-        {
-          "@id": "wdt:P137"
-        }
-      ],
-      "has3DModel": true,
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "スカイトレイン Mark V"
-        },
-        {
-          "@language": "en",
-          "@value": "SkyTrain Mark V"
-        }
-      ],
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5"
-      },
-      "skos:broadMatch": {
-        "@id": "wd:Q4940487"
-      },
-      "skos:broader": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4940487"
-      },
-      "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "ja",
-          "@value": "スカイトレイン Mark V"
-        },
-        {
-          "@language": "en",
-          "@value": "SkyTrain Mark V"
-        }
-      ],
-      "wdt:P137": {
-        "@id": "wd:Q141170526"
-      },
-      "wdt:P17": {
-        "@id": "wd:Q16"
-      },
-      "wdt:P176": {
-        "@id": "wd:Q309084"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/bus49_front/translink_bus49_front.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q1142140"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        },
-        {
-          "@language": "en",
-          "@value": "TransLink livery"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q1088"
-        },
-        {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q42519"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8665"
-      },
-      "rdfs:label": "body",
-      "schema:color": "#ECEEEC",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "wd:Q29",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Spain"
-        },
-        {
-          "@language": "ja",
-          "@value": "スペイン王国"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q16",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Canada"
-        },
-        {
-          "@language": "ja",
-          "@value": "カナダ"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q137972762",
-      "@type": [
-        "VehicleClass",
-        "skos:Concept"
-      ],
-      "has3DModel": true,
-      "prov:wasDerivedFrom": {
-        "@id": "wd:Q137972762"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "ICE T 415形"
-        },
-        {
-          "@language": "en",
-          "@value": "DBAG Class 415"
-        }
-      ],
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415"
-      },
-      "skos:broader": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q696668"
-      },
-      "skos:exactMatch": {
-        "@id": "wd:Q137972762"
-      },
-      "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "ja",
-          "@value": "ICE T 415形"
-        },
-        {
-          "@language": "en",
-          "@value": "DBAG Class 415"
-        }
-      ],
-      "wdt:P1064": {
-        "@id": "wd:Q1999572"
-      },
-      "wdt:P137": {
-        "@id": "wd:Q452140"
-      },
-      "wdt:P17": {
-        "@id": "wd:Q183"
-      },
-      "wdt:P2052": {
-        "@type": "xsd:decimal",
-        "@value": "230"
-      },
-      "wdt:P279": [
-        {
-          "@id": "wd:Q696668"
-        },
-        {
-          "@id": "wd:Q129172"
-        }
-      ],
-      "wdt:P729": {
-        "@type": "xsd:gYear",
-        "@value": "1999"
-      },
-      "wdt:P930": {
-        "@id": "wd:Q1415234"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color9",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0072"
-      },
-      "rdfs:label": "teal",
-      "schema:color": "#6FB5A5",
-      "wdt:P462": {
-        "@id": "wd:Q3133"
-      }
-    },
-    {
-      "@id": "tb:livery",
+      "@id": "tb:part",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The livery a 3D model reproduces."
+        "@value": "Which part of the vehicle the model is, when one vehicle is split into several models."
       },
       "rdfs:isDefinedBy": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab"
       },
       "rdfs:label": [
         {
-          "@language": "ja",
-          "@value": "塗装"
+          "@language": "en",
+          "@value": "part"
         },
         {
-          "@language": "en",
-          "@value": "livery"
+          "@language": "ja",
+          "@value": "部分"
         }
       ]
     },
     {
-      "@id": "wd:Q23445",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "black"
-        },
-        {
-          "@language": "ja",
-          "@value": "黒"
-        }
-      ]
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0165"
+      },
+      "rdfs:label": "green",
+      "schema:color": "#3FB53A",
+      "wdt:P462": {
+        "@id": "wd:Q3133"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0206"
+      },
+      "rdfs:label": "brown2",
+      "schema:color": "#4A2C24",
+      "wdt:P462": {
+        "@id": "wd:Q47071"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q696668",
@@ -981,11 +2635,11 @@
       },
       "skos:prefLabel": [
         {
-          "@language": "en",
+          "@language": "ja",
           "@value": "ICE T"
         },
         {
-          "@language": "ja",
+          "@language": "en",
           "@value": "ICE T"
         }
       ],
@@ -1000,10 +2654,10 @@
           "@id": "wd:Q688893"
         },
         {
-          "@id": "wd:Q81230"
+          "@id": "wd:Q2738829"
         },
         {
-          "@id": "wd:Q2738829"
+          "@id": "wd:Q81230"
         }
       ],
       "wdt:P2052": {
@@ -1015,10 +2669,10 @@
           "@id": "wd:Q13402959"
         },
         {
-          "@id": "wd:Q671188"
+          "@id": "wd:Q483373"
         },
         {
-          "@id": "wd:Q483373"
+          "@id": "wd:Q671188"
         }
       ],
       "wdt:P729": {
@@ -1027,571 +2681,10 @@
       }
     },
     {
-      "@id": "wd:Q83824",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "DSB"
-        },
-        {
-          "@language": "ja",
-          "@value": "デンマーク国鉄"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q1142140",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "TransLink"
-        },
-        {
-          "@language": "ja",
-          "@value": "トランスリンク"
-        }
-      ]
-    },
-    {
-      "@id": "tb:Livery",
-      "@type": "rdfs:Class",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A paint scheme that a 3D model reproduces."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "塗装"
-        },
-        {
-          "@language": "en",
-          "@value": "Livery"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0433"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.6940"
-      },
-      "rdfs:label": "charcoal",
-      "schema:color": "#30343A",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color8",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0128"
-      },
-      "rdfs:label": "skirt",
-      "schema:color": "#313537",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5",
-      "@type": "schema:3DModel",
-      "galleryGroup": "skytrain",
-      "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery"
-      },
-      "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk5"
-      },
-      "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/mk5.glb"
-      },
-      "schema:depth": {
-        "@id": "_:mk5-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "いちばん新しい車両。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:mk5-height"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "Mark V"
-      },
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/mk5/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/mk5.jpg"
-      },
-      "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#mk5"
-      },
-      "schema:width": {
-        "@id": "_:mk5-width"
-      }
-    },
-    {
-      "@id": "_:mk5-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "150.0"
-      }
-    },
-    {
-      "@id": "_:mk5-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "38.0"
-      }
-    },
-    {
-      "@id": "_:mk5-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "tb:liveryOf",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "The operator whose livery this is."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "livery of"
-        },
-        {
-          "@language": "ja",
-          "@value": "塗装の持ち主"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb",
-      "@type": "schema:3DModel",
-      "galleryGroup": "icet",
-      "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery"
-      },
-      "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q8078904"
-      },
-      "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/icet_oebb.glb"
-      },
-      "schema:depth": {
-        "@id": "_:icet_oebb-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "オーストリア国鉄が使った 3 編成。DB の塗装に ÖBB の印。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:icet_oebb-height"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "ÖBB 4011"
-      },
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/icet_oebb/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/icet_oebb.jpg"
-      },
-      "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#icet_oebb"
-      },
-      "schema:width": {
-        "@id": "_:icet_oebb-width"
-      }
-    },
-    {
-      "@id": "_:icet_oebb-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "38.0"
-      }
-    },
-    {
-      "@id": "_:icet_oebb-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "149.9"
-      }
-    },
-    {
-      "@id": "_:icet_oebb-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "wd:Q81230",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Siemens"
-        },
-        {
-          "@language": "ja",
-          "@value": "シーメンス"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q697217",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Amtrak Cascades"
-        },
-        {
-          "@language": "ja",
-          "@value": "アムトラック・カスケーズ"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0282"
-      },
-      "rdfs:label": "charcoal",
-      "schema:color": "#3A3E42",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "wd:Q309084",
-      "rdfs:label": {
-        "@language": "ja",
-        "@value": "アルストム"
-      }
-    },
-    {
-      "@id": "wd:Q83822",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Austrian Federal Railways"
-        },
-        {
-          "@language": "ja",
-          "@value": "オーストリア連邦鉄道"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0501"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8669"
-      },
-      "rdfs:label": "body",
-      "schema:color": "#ECEEEC",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q137921671",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk3",
       "@type": [
         "VehicleClass",
         "skos:Concept"
-      ],
-      "has3DModel": true,
-      "prov:wasDerivedFrom": {
-        "@id": "wd:Q137921671"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "New Flyer XD60"
-        },
-        {
-          "@language": "ja",
-          "@value": "New Flyer XD60"
-        }
-      ],
-      "schema:subjectOf": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear"
-        }
-      ],
-      "skos:exactMatch": {
-        "@id": "wd:Q137921671"
-      },
-      "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "ja",
-          "@value": "New Flyer XD60"
-        },
-        {
-          "@language": "en",
-          "@value": "New Flyer XD60"
-        }
-      ],
-      "wdt:P176": {
-        "@id": "wd:Q1126054"
-      },
-      "wdt:P279": [
-        {
-          "@id": "wd:Q654749"
-        },
-        {
-          "@id": "wd:Q59618126"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0668"
-      },
-      "rdfs:label": "blue",
-      "schema:color": "#1E58C0",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0196"
-      },
-      "rdfs:label": "line",
-      "schema:color": "#8E949A",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "wd:Q40",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Austria"
-        },
-        {
-          "@language": "ja",
-          "@value": "オーストリア"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color2"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/bus49_rear/translink_bus49_rear.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q1142140"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        },
-        {
-          "@language": "en",
-          "@value": "TransLink livery"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q1088"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q1415234",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "15 kV, 16.7 Hz AC railway electrification"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color2"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/mk1/skytrain_mk1.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q1142140"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        },
-        {
-          "@language": "en",
-          "@value": "TransLink livery"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q1088"
-        },
-        {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q42519"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q1088",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "blue"
-        },
-        {
-          "@language": "ja",
-          "@value": "青"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.6711"
-      },
-      "rdfs:label": "green",
-      "schema:color": "#2E504A",
-      "wdt:P462": {
-        "@id": "wd:Q3133"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0111"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk2",
-      "@type": [
-        "skos:Concept",
-        "VehicleClass"
       ],
       "dcterms:source": {
         "@language": "en",
@@ -1599,31 +2692,31 @@
       },
       "handEntered": [
         {
-          "@id": "wdt:P176"
-        },
-        {
-          "@id": "wdt:P17"
+          "@id": "wdt:P137"
         },
         {
           "@id": "wdt:P729"
         },
         {
-          "@id": "wdt:P137"
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P176"
         }
       ],
       "has3DModel": true,
       "rdfs:label": [
         {
           "@language": "ja",
-          "@value": "スカイトレイン Mark II"
+          "@value": "スカイトレイン Mark III"
         },
         {
           "@language": "en",
-          "@value": "SkyTrain Mark II"
+          "@value": "SkyTrain Mark III"
         }
       ],
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2"
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3"
       },
       "skos:broadMatch": {
         "@id": "wd:Q4940487"
@@ -1637,11 +2730,11 @@
       "skos:prefLabel": [
         {
           "@language": "ja",
-          "@value": "スカイトレイン Mark II"
+          "@value": "スカイトレイン Mark III"
         },
         {
           "@language": "en",
-          "@value": "SkyTrain Mark II"
+          "@value": "SkyTrain Mark III"
         }
       ],
       "wdt:P137": {
@@ -1655,7 +2748,101 @@
       },
       "wdt:P729": {
         "@type": "xsd:gYear",
-        "@value": "2002"
+        "@value": "2016"
+      }
+    },
+    {
+      "@id": "wd:Q452140",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "DB Fernverkehr"
+        },
+        {
+          "@language": "ja",
+          "@value": "DB長距離交通"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2",
+      "@type": "schema:3DModel",
+      "galleryGroup": "skytrain",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk2"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/mk2.glb"
+      },
+      "schema:depth": {
+        "@id": "_:mk2-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "丸い鼻と大きな前面ガラス。2002年から。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:mk2-height"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "Mark II"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/mk2/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/mk2.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#mk2"
+      },
+      "schema:width": {
+        "@id": "_:mk2-width"
+      }
+    },
+    {
+      "@id": "_:mk2-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:mk2-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.7"
+      }
+    },
+    {
+      "@id": "_:mk2-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "37.6"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1312"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#C8CCCE",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
       }
     },
     {
@@ -1672,517 +2859,71 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear",
-      "@type": "schema:3DModel",
-      "galleryGroup": "bus",
-      "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery"
-      },
-      "part": [
-        {
-          "@language": "en",
-          "@value": "rear half of the articulated bus"
-        },
-        {
-          "@language": "ja",
-          "@value": "連節バスの後ろ半分"
-        }
-      ],
-      "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q137921671"
-      },
-      "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/bus49_rear.glb"
-      },
-      "schema:depth": {
-        "@id": "_:bus49_rear-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "同じバスの後ろ半分。2 台をつないで走らせる。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:bus49_rear-height"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "49番バス（後ろ）"
-      },
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/bus49_rear/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/bus49_rear.jpg"
-      },
-      "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#bus49_rear"
-      },
-      "schema:width": {
-        "@id": "_:bus49_rear-width"
-      }
-    },
-    {
-      "@id": "_:bus49_rear-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "46.0"
-      }
-    },
-    {
-      "@id": "_:bus49_rear-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "_:bus49_rear-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "143.5"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color1"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_td/icet_td.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q9322"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "DB の塗装（赤い帯）"
-        },
-        {
-          "@language": "en",
-          "@value": "Deutsche Bahn livery (red stripe)"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q3142"
-        },
-        {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q42519"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q1100969",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Talgo"
-        },
-        {
-          "@language": "ja",
-          "@value": "タルゴ"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q452140",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "DB Fernverkehr"
-        },
-        {
-          "@language": "ja",
-          "@value": "DB長距離交通"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color4",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color5",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0297"
+        "@value": "0.0109"
       },
-      "rdfs:label": "charcoal",
-      "schema:color": "#3A3E42",
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0410"
-      },
-      "rdfs:label": "skirt",
-      "schema:color": "#C2C7CA",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q8078904",
-      "@type": [
-        "skos:Concept",
-        "VehicleClass"
-      ],
-      "has3DModel": true,
-      "prov:wasDerivedFrom": {
-        "@id": "wd:Q8078904"
-      },
+      "@id": "wd:Q39338",
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "ÖBB 4011"
+          "@value": "orange"
         },
         {
           "@language": "ja",
-          "@value": "ÖBB 4011形"
-        }
-      ],
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb"
-      },
-      "skos:broader": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q696668"
-      },
-      "skos:exactMatch": {
-        "@id": "wd:Q8078904"
-      },
-      "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "ÖBB 4011"
-        },
-        {
-          "@language": "ja",
-          "@value": "ÖBB 4011形"
-        }
-      ],
-      "wdt:P137": {
-        "@id": "wd:Q83822"
-      },
-      "wdt:P17": {
-        "@id": "wd:Q40"
-      },
-      "wdt:P176": {
-        "@id": "wd:Q391895"
-      },
-      "wdt:P279": {
-        "@id": "wd:Q3959904"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0414"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8663"
-      },
-      "rdfs:label": "body",
-      "schema:color": "#ECEEEC",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "wd:Q59618126",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "New Flyer Xcelsior"
-        },
-        {
-          "@language": "ja",
-          "@value": "ニューフライヤー・エクセルシオール"
+          "@value": "オレンジ色"
         }
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0275"
-      },
-      "rdfs:label": "red",
-      "schema:color": "#CC1014",
-      "wdt:P462": {
-        "@id": "wd:Q3142"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color5"
-        }
-      ],
-      "dcterms:source": {
+      "@id": "tb:VehicleClass",
+      "@type": "rdfs:Class",
+      "rdfs:comment": {
         "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/mk2/skytrain_mk2.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
+        "@value": "A class (type) of railway vehicle or road vehicle; one record per class."
       },
-      "liveryOf": {
-        "@id": "wd:Q1142140"
+      "rdfs:isDefinedBy": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab"
       },
       "rdfs:label": [
         {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        },
-        {
           "@language": "en",
-          "@value": "TransLink livery"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23445"
+          "@value": "Vehicle class"
         },
         {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q1088"
+          "@language": "ja",
+          "@value": "形式"
         }
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0500"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "wd:Q1126054",
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "ニュー・フライヤー・インダストリーズ"
-        },
-        {
-          "@language": "en",
-          "@value": "NFI Group"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8558"
-      },
-      "rdfs:label": "body",
-      "schema:color": "#F0F1F0",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "wd:Q47071",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "brown"
-        },
-        {
-          "@language": "ja",
-          "@value": "茶色"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q183",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Germany"
-        },
-        {
-          "@language": "ja",
-          "@value": "ドイツ"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q696668",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "ICE T"
-        },
-        {
-          "@language": "ja",
-          "@value": "ICE T"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q23239",
+      "@id": "wd:Q309084",
       "rdfs:label": {
         "@language": "ja",
-        "@value": "アムトラック"
+        "@value": "アルストム"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color3",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color4",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0409"
+        "@value": "0.0326"
       },
-      "rdfs:label": "skirt",
-      "schema:color": "#C2C7CA",
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
       "wdt:P462": {
-        "@id": "wd:Q42519"
+        "@id": "wd:Q23445"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0410"
-      },
-      "rdfs:label": "skirt",
-      "schema:color": "#C2C7CA",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710",
-      "@type": [
-        "skos:Concept",
-        "VehicleClass"
-      ],
-      "has3DModel": true,
-      "prov:wasDerivedFrom": {
-        "@id": "wd:Q1087710"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "AVE Class 102"
-        },
-        {
-          "@language": "ja",
-          "@value": "レンフェ102系"
-        }
-      ],
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102"
-      },
-      "skos:exactMatch": {
-        "@id": "wd:Q1087710"
-      },
-      "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "ja",
-          "@value": "レンフェ102系"
-        },
-        {
-          "@language": "en",
-          "@value": "AVE Class 102"
-        }
-      ],
-      "wdt:P1064": {
-        "@id": "wd:Q1999572"
-      },
-      "wdt:P137": {
-        "@id": "wd:Q83910"
-      },
-      "wdt:P17": {
-        "@id": "wd:Q29"
-      },
-      "wdt:P176": {
-        "@id": "wd:Q1100969"
-      },
-      "wdt:P2052": {
-        "@type": "xsd:decimal",
-        "@value": "330"
-      },
-      "wdt:P279": [
-        {
-          "@id": "wd:Q13402959"
-        },
-        {
-          "@id": "wd:Q313106"
-        }
-      ]
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb",
@@ -2226,6 +2967,15 @@
       }
     },
     {
+      "@id": "_:icet_dsb-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
       "@id": "_:icet_dsb-height",
       "@type": "schema:QuantitativeValue",
       "schema:unitCode": "MMT",
@@ -2244,117 +2994,24 @@
       }
     },
     {
-      "@id": "_:icet_dsb-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "149.9"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk1",
-      "@type": [
-        "VehicleClass",
-        "skos:Concept"
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text."
-      },
-      "handEntered": [
-        {
-          "@id": "wdt:P17"
-        },
-        {
-          "@id": "wdt:P729"
-        },
-        {
-          "@id": "wdt:P176"
-        },
-        {
-          "@id": "wdt:P137"
-        }
-      ],
-      "has3DModel": true,
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "SkyTrain Mark I"
-        },
-        {
-          "@language": "ja",
-          "@value": "スカイトレイン Mark I"
-        }
-      ],
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1"
-      },
-      "skos:broadMatch": {
-        "@id": "wd:Q4940487"
-      },
-      "skos:broader": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4940487"
-      },
-      "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "ja",
-          "@value": "スカイトレイン Mark I"
-        },
-        {
-          "@language": "en",
-          "@value": "SkyTrain Mark I"
-        }
-      ],
-      "wdt:P137": {
-        "@id": "wd:Q141170526"
-      },
-      "wdt:P17": {
-        "@id": "wd:Q16"
-      },
-      "wdt:P176": {
-        "@id": "wd:Q3552199"
-      },
-      "wdt:P729": {
-        "@type": "xsd:gYear",
-        "@value": "1985"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color5",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color7",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0073"
+        "@value": "0.0183"
       },
-      "rdfs:label": "silver",
-      "schema:color": "#BCC1C8",
+      "rdfs:label": "gold",
+      "schema:color": "#A8845A",
       "wdt:P462": {
-        "@id": "wd:Q42519"
+        "@id": "wd:Q47071"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0705"
-      },
-      "rdfs:label": "cream",
-      "schema:color": "#E6E3DA",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "tb:VehicleClass",
-      "@type": "rdfs:Class",
+      "@id": "tb:colorSample",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "A class (type) of railway vehicle or road vehicle; one record per class."
+        "@value": "A colour of this livery, taken from the 3D model's faces."
       },
       "rdfs:isDefinedBy": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab"
@@ -2362,206 +3019,29 @@
       "rdfs:label": [
         {
           "@language": "ja",
-          "@value": "形式"
+          "@value": "色見本"
         },
         {
           "@language": "en",
-          "@value": "Vehicle class"
+          "@value": "colour sample"
         }
       ]
     },
     {
-      "@id": "wd:Q1999572",
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "標準軌"
-        },
-        {
-          "@language": "en",
-          "@value": "standard-gauge railway"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color2"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_green/icet_green.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q9322"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "DB の塗装（緑の帯、2019〜2022年）"
-        },
-        {
-          "@language": "en",
-          "@value": "Deutsche Bahn livery with green stripe (2019–2022)"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q3133"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q141170526",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "British Columbia Rapid Transit Company"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo",
-      "@type": "schema:3DModel",
-      "galleryGroup": "world",
-      "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#livery"
-      },
-      "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223"
-      },
-      "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/airo.glb"
-      },
-      "schema:depth": {
-        "@id": "_:airo-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "2026年9月に走り始めた、シアトル〜バンクーバーの新型客車。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:airo-height"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "Airo（Amtrak Cascades）"
-      },
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/airo/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/airo.jpg"
-      },
-      "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#airo"
-      },
-      "schema:width": {
-        "@id": "_:airo-width"
-      }
-    },
-    {
-      "@id": "_:airo-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "149.9"
-      }
-    },
-    {
-      "@id": "_:airo-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "_:airo-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "38.0"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color2",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.2188"
+        "@value": "0.0395"
       },
-      "rdfs:label": "blue",
-      "schema:color": "#1E4FA8",
+      "rdfs:label": "panel",
+      "schema:color": "#8C949C",
       "wdt:P462": {
-        "@id": "wd:Q1088"
+        "@id": "wd:Q42519"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/mk5/skytrain_mk5.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q1142140"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        },
-        {
-          "@language": "en",
-          "@value": "TransLink livery"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q1088"
-        },
-        {
-          "@id": "wd:Q23445"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color3",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -2574,548 +3054,14 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1",
-      "@type": "schema:3DModel",
-      "galleryGroup": "skytrain",
-      "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery"
-      },
-      "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk1"
-      },
-      "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/mk1.glb"
-      },
-      "schema:depth": {
-        "@id": "_:mk1-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "1985年から走る、角ばった短い車体。今の TransLink 塗装。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:mk1-height"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "Mark I"
-      },
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/mk1/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/mk1.jpg"
-      },
-      "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#mk1"
-      },
-      "schema:width": {
-        "@id": "_:mk1-width"
-      }
-    },
-    {
-      "@id": "_:mk1-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "38.0"
-      }
-    },
-    {
-      "@id": "_:mk1-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "130.0"
-      }
-    },
-    {
-      "@id": "_:mk1-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color2",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0501"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "wd:Q333498",
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "ボンバルディア"
-        },
-        {
-          "@language": "en",
-          "@value": "Bombardier"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0275"
-      },
-      "rdfs:label": "red",
-      "schema:color": "#CC1014",
-      "wdt:P462": {
-        "@id": "wd:Q3142"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_dsb/icet_dsb.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q83824"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "DSB livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "DSB の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q1088"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_oebb/icet_oebb.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q83822"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "DB の塗装に ÖBB の印"
-        },
-        {
-          "@language": "en",
-          "@value": "Deutsche Bahn livery with ÖBB marks"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q3142"
-        },
-        {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q42519"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0858"
-      },
-      "rdfs:label": "navy",
-      "schema:color": "#1C2B4A",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "wd:Q13402959",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "high-speed train"
-        },
-        {
-          "@language": "ja",
-          "@value": "高速列車"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color3"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/ave102/renfe_ave102.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q2476154"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Renfe AVE livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "Renfe AVE の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q3257809"
-        },
-        {
-          "@id": "wd:Q42519"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.5895"
+        "@value": "0.6940"
       },
       "rdfs:label": "charcoal",
-      "schema:color": "#2E3339",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "wd:Q429220",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "pink"
-        },
-        {
-          "@language": "ja",
-          "@value": "ピンク"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q3142",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "red"
-        },
-        {
-          "@language": "ja",
-          "@value": "赤"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/",
-      "@type": "skos:ConceptScheme",
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "train-bodies: 車両の形式"
-        },
-        {
-          "@language": "en",
-          "@value": "train-bodies: vehicle classes"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q115612330",
-      "@type": [
-        "skos:Concept",
-        "VehicleClass"
-      ],
-      "has3DModel": true,
-      "prov:wasDerivedFrom": {
-        "@id": "wd:Q115612330"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "DBAG Class 411"
-        },
-        {
-          "@language": "ja",
-          "@value": "ICE T 411形"
-        }
-      ],
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411"
-      },
-      "skos:broader": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q696668"
-      },
-      "skos:exactMatch": {
-        "@id": "wd:Q115612330"
-      },
-      "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "ja",
-          "@value": "ICE T 411形"
-        },
-        {
-          "@language": "en",
-          "@value": "DBAG Class 411"
-        }
-      ],
-      "wdt:P1064": {
-        "@id": "wd:Q1999572"
-      },
-      "wdt:P137": [
-        {
-          "@id": "wd:Q83822"
-        },
-        {
-          "@id": "wd:Q452140"
-        }
-      ],
-      "wdt:P17": {
-        "@id": "wd:Q183"
-      },
-      "wdt:P2052": {
-        "@type": "xsd:decimal",
-        "@value": "230"
-      },
-      "wdt:P279": [
-        {
-          "@id": "wd:Q129172"
-        },
-        {
-          "@id": "wd:Q696668"
-        }
-      ],
-      "wdt:P930": {
-        "@id": "wd:Q1415234"
-      }
-    },
-    {
-      "@id": "wd:Q313106",
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "タルゴ"
-        },
-        {
-          "@language": "en",
-          "@value": "Talgo Train"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0199"
-      },
-      "rdfs:label": "brown",
-      "schema:color": "#5C433A",
-      "wdt:P462": {
-        "@id": "wd:Q47071"
-      }
-    },
-    {
-      "@id": "wd:Q671188",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "tilting train"
-        },
-        {
-          "@language": "ja",
-          "@value": "車体傾斜式車両"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0414"
-      },
-      "rdfs:label": "skirt",
-      "schema:color": "#C2C7CA",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1312"
-      },
-      "rdfs:label": "roof",
-      "schema:color": "#C8CCCE",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "wd:Q3959904",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "multiple unit"
-        },
-        {
-          "@language": "ja",
-          "@value": "動力分散方式の列車編成"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q2738829",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Fiat Ferroviaria"
-        },
-        {
-          "@language": "ja",
-          "@value": "フィアット"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0074"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0728"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0109"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
+      "schema:color": "#30343A",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
@@ -3202,176 +3148,189 @@
       ]
     },
     {
-      "@id": "tb:galleryGroup",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "rdfs:comment": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4"
+        }
+      ],
+      "dcterms:source": {
         "@language": "en",
-        "@value": "Group id used on the gallery page."
+        "@value": "Colours taken automatically from the face materials of skytrain/out/bus49_rear/translink_bus49_rear.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
       },
-      "rdfs:isDefinedBy": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab"
+      "liveryOf": {
+        "@id": "wd:Q1142140"
       },
       "rdfs:label": [
         {
           "@language": "ja",
-          "@value": "ギャラリーの区分"
+          "@value": "TransLink の塗装"
         },
         {
           "@language": "en",
-          "@value": "gallery group"
+          "@value": "TransLink livery"
         }
-      ]
-    },
-    {
-      "@id": "tb:handEntered",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A property whose values on this class were entered by hand (see dcterms:source), not copied from Wikidata."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "hand-entered property"
-        },
-        {
-          "@language": "ja",
-          "@value": "手入力の項目"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color7",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0183"
-      },
-      "rdfs:label": "gold",
-      "schema:color": "#A8845A",
+      ],
       "wdt:P462": {
-        "@id": "wd:Q47071"
+        "@id": "wd:Q1088"
       }
     },
     {
-      "@id": "wd:Q39338",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "orange"
-        },
-        {
-          "@language": "ja",
-          "@value": "オレンジ色"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color2",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0271"
+        "@value": "0.0501"
       },
-      "rdfs:label": "red",
-      "schema:color": "#CC1014",
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
       "wdt:P462": {
-        "@id": "wd:Q3142"
+        "@id": "wd:Q23445"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color2",
-      "@type": "ColorSample",
-      "areaShare": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q659660",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": true,
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q659660"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "ICE TD"
+        },
+        {
+          "@language": "ja",
+          "@value": "ICE TD"
+        }
+      ],
+      "schema:subjectOf": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q659660"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ICE TD"
+        },
+        {
+          "@language": "ja",
+          "@value": "ICE TD"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q9322"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q81230"
+        },
+        {
+          "@id": "wd:Q309084"
+        },
+        {
+          "@id": "wd:Q333498"
+        }
+      ],
+      "wdt:P2052": {
         "@type": "xsd:decimal",
-        "@value": "0.0783"
+        "@value": "200"
       },
-      "rdfs:label": "grey",
-      "schema:color": "#A9AEB3",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "tb:ColorSample",
-      "@type": "rdfs:Class",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "One colour of a livery as painted on the 3D model, with its share of the painted surface."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab"
-      },
-      "rdfs:label": [
+      "wdt:P279": [
         {
-          "@language": "en",
-          "@value": "Colour sample"
+          "@id": "wd:Q1567915"
         },
         {
-          "@language": "ja",
-          "@value": "色見本"
+          "@id": "wd:Q671188"
+        },
+        {
+          "@id": "wd:Q13402959"
         }
       ]
     },
     {
-      "@id": "wd:Q943",
+      "@id": "wd:Q96106536",
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "yellow"
+          "@value": "Siemens Venture"
         },
         {
           "@language": "ja",
-          "@value": "黄色"
+          "@value": "シーメンス・ベンチャー"
         }
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb",
       "@type": "schema:3DModel",
-      "galleryGroup": "skytrain",
+      "galleryGroup": "icet",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery"
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk2"
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q8078904"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/mk2.glb"
+        "@id": "https://nakamura196.github.io/train-bodies/models/icet_oebb.glb"
       },
       "schema:depth": {
-        "@id": "_:mk2-depth"
+        "@id": "_:icet_oebb-depth"
       },
       "schema:description": {
         "@language": "ja",
-        "@value": "丸い鼻と大きな前面ガラス。2002年から。"
+        "@value": "オーストリア国鉄が使った 3 編成。DB の塗装に ÖBB の印。"
       },
       "schema:encodingFormat": "model/gltf-binary",
       "schema:height": {
-        "@id": "_:mk2-height"
+        "@id": "_:icet_oebb-height"
       },
       "schema:name": {
         "@language": "ja",
-        "@value": "Mark II"
+        "@value": "ÖBB 4011"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/mk2/manifest.json"
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/icet_oebb/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/mk2.jpg"
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/icet_oebb.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#mk2"
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#icet_oebb"
       },
       "schema:width": {
-        "@id": "_:mk2-width"
+        "@id": "_:icet_oebb-width"
       }
     },
     {
-      "@id": "_:mk2-width",
+      "@id": "_:icet_oebb-width",
       "@type": "schema:QuantitativeValue",
       "schema:unitCode": "MMT",
       "schema:value": {
@@ -3380,34 +3339,266 @@
       }
     },
     {
-      "@id": "_:mk2-depth",
+      "@id": "_:icet_oebb-height",
       "@type": "schema:QuantitativeValue",
       "schema:unitCode": "MMT",
       "schema:value": {
         "@type": "xsd:decimal",
-        "@value": "149.7"
+        "@value": "38.0"
       }
     },
     {
-      "@id": "_:mk2-height",
+      "@id": "_:icet_oebb-depth",
       "@type": "schema:QuantitativeValue",
       "schema:unitCode": "MMT",
       "schema:value": {
         "@type": "xsd:decimal",
-        "@value": "37.6"
+        "@value": "149.9"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2",
+      "@id": "tb:Livery",
+      "@type": "rdfs:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A paint scheme that a 3D model reproduces."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "塗装"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.1043"
+        "@value": "0.0933"
       },
       "rdfs:label": "roof",
-      "schema:color": "#A4A9B0",
+      "schema:color": "#A6ABB2",
       "wdt:P462": {
         "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0668"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "wd:Q13402959",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "high-speed train"
+        },
+        {
+          "@language": "ja",
+          "@value": "高速列車"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q2738829",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Fiat Ferroviaria"
+        },
+        {
+          "@language": "ja",
+          "@value": "フィアット"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5",
+      "@type": "schema:3DModel",
+      "galleryGroup": "skytrain",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk5"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/mk5.glb"
+      },
+      "schema:depth": {
+        "@id": "_:mk5-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "いちばん新しい車両。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:mk5-height"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "Mark V"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/mk5/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/mk5.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#mk5"
+      },
+      "schema:width": {
+        "@id": "_:mk5-width"
+      }
+    },
+    {
+      "@id": "_:mk5-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
+      "@id": "_:mk5-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "150.0"
+      }
+    },
+    {
+      "@id": "_:mk5-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0096"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "wd:Q83910",
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "レンフェ"
+        },
+        {
+          "@language": "en",
+          "@value": "Red Nacional de los Ferrocarriles Españoles"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q3133",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "green"
+        },
+        {
+          "@language": "ja",
+          "@value": "緑"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0111"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8458"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#006FD6",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "wd:Q697217",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Amtrak Cascades"
+        },
+        {
+          "@language": "ja",
+          "@value": "アムトラック・カスケーズ"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q83824",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "DSB"
+        },
+        {
+          "@language": "ja",
+          "@value": "デンマーク国鉄"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1257"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
       }
     },
     {
@@ -3424,56 +3615,206 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.1257"
+        "@value": "0.0409"
       },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "wd:Q654749",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "articulated bus"
-        },
-        {
-          "@language": "ja",
-          "@value": "連節バス"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0395"
-      },
-      "rdfs:label": "panel",
-      "schema:color": "#8C949C",
+      "rdfs:label": "skirt",
+      "schema:color": "#C2C7CA",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color4",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415",
+      "@type": "schema:3DModel",
+      "galleryGroup": "icet",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q137972762"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/icet_415.glb"
+      },
+      "schema:depth": {
+        "@id": "_:icet_415-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "形は 411 と同じ。車番だけが違う。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:icet_415-height"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "415（5両編成）"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/icet_415/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/icet_415.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#icet_415"
+      },
+      "schema:width": {
+        "@id": "_:icet_415-width"
+      }
+    },
+    {
+      "@id": "_:icet_415-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:icet_415-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
+      "@id": "_:icet_415-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0756"
+        "@value": "0.6711"
       },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
+      "rdfs:label": "green",
+      "schema:color": "#2E504A",
       "wdt:P462": {
-        "@id": "wd:Q23445"
+        "@id": "wd:Q3133"
       }
+    },
+    {
+      "@id": "wd:Q429220",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "pink"
+        },
+        {
+          "@language": "ja",
+          "@value": "ピンク"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q1142140",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "TransLink"
+        },
+        {
+          "@language": "ja",
+          "@value": "トランスリンク"
+        }
+      ]
+    },
+    {
+      "@id": "tb:livery",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The livery a 3D model reproduces."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "塗装"
+        },
+        {
+          "@language": "en",
+          "@value": "livery"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0282"
+      },
+      "rdfs:label": "charcoal",
+      "schema:color": "#3A3E42",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "wd:Q23445",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "black"
+        },
+        {
+          "@language": "ja",
+          "@value": "黒"
+        }
+      ]
+    },
+    {
+      "@id": "tb:has3DModel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "True when at least one 3D model in train-bodies depicts this class."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab"
+      },
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "3D モデルあり"
+        },
+        {
+          "@language": "en",
+          "@value": "has 3D model"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/",
+      "@type": "skos:ConceptScheme",
+      "rdfs:label": [
+        {
+          "@language": "ja",
+          "@value": "train-bodies: 車両の形式"
+        },
+        {
+          "@language": "en",
+          "@value": "train-bodies: vehicle classes"
+        }
+      ]
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4940487",
@@ -3522,95 +3863,99 @@
       }
     },
     {
-      "@id": "wd:Q1567915",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "diesel multiple unit"
-        },
-        {
-          "@language": "ja",
-          "@value": "気動車"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.8171"
+        "@value": "0.0433"
       },
-      "rdfs:label": "body",
-      "schema:color": "#ECEEEC",
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
       "wdt:P462": {
-        "@id": "wd:Q23444"
+        "@id": "wd:Q23445"
       }
     },
     {
-      "@id": "wd:Q23444",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color2"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/mk1/skytrain_mk1.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "white"
+          "@value": "TransLink livery"
         },
         {
           "@language": "ja",
-          "@value": "白"
+          "@value": "TransLink の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q1088"
         }
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color4",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0275"
+        "@value": "0.0728"
       },
-      "rdfs:label": "red",
-      "schema:color": "#CC1014",
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
       "wdt:P462": {
-        "@id": "wd:Q3142"
+        "@id": "wd:Q23445"
       }
     },
     {
-      "@id": "wd:Q2476154",
+      "@id": "wd:Q1088",
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "Renfe Operadora"
+          "@value": "blue"
         },
         {
           "@language": "ja",
-          "@value": "レンフェ"
+          "@value": "青"
         }
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color1",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.8247"
+        "@value": "0.5895"
       },
-      "rdfs:label": "blue",
-      "schema:color": "#006FD6",
+      "rdfs:label": "charcoal",
+      "schema:color": "#2E3339",
       "wdt:P462": {
-        "@id": "wd:Q1088"
+        "@id": "wd:Q42519"
       }
-    },
-    {
-      "@id": "wd:Q129172",
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "ICE"
-        },
-        {
-          "@language": "en",
-          "@value": "InterCityExpress"
-        }
-      ]
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td",
@@ -3654,6 +3999,15 @@
       }
     },
     {
+      "@id": "_:icet_td-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
       "@id": "_:icet_td-width",
       "@type": "schema:QuantitativeValue",
       "schema:unitCode": "MMT",
@@ -3672,401 +4026,86 @@
       }
     },
     {
-      "@id": "_:icet_td-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "38.0"
-      }
-    },
-    {
-      "@id": "tb:colorSample",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "rdfs:comment": {
+      "@id": "wd:Q141170526",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "A colour of this livery, taken from the 3D model's faces."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab"
-      },
+        "@value": "British Columbia Rapid Transit Company"
+      }
+    },
+    {
+      "@id": "wd:Q16",
       "rdfs:label": [
         {
           "@language": "en",
-          "@value": "colour sample"
+          "@value": "Canada"
         },
         {
           "@language": "ja",
-          "@value": "色見本"
+          "@value": "カナダ"
         }
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color4",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color4",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0326"
+        "@value": "0.0275"
       },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
+      "rdfs:label": "red",
+      "schema:color": "#CC1014",
       "wdt:P462": {
-        "@id": "wd:Q23445"
+        "@id": "wd:Q3142"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front",
-      "@type": "schema:3DModel",
-      "galleryGroup": "bus",
-      "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery"
-      },
-      "part": [
-        {
-          "@language": "ja",
-          "@value": "連節バスの前半分"
-        },
-        {
-          "@language": "en",
-          "@value": "front half of the articulated bus"
-        }
-      ],
-      "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q137921671"
-      },
-      "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/bus49_front.glb"
-      },
-      "schema:depth": {
-        "@id": "_:bus49_front-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "TransLink の連節バス XD60 の前半分。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:bus49_front-height"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "49番バス（前）"
-      },
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/bus49_front/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/bus49_front.jpg"
-      },
-      "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#bus49_front"
-      },
-      "schema:width": {
-        "@id": "_:bus49_front-width"
-      }
-    },
-    {
-      "@id": "_:bus49_front-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "145.1"
-      }
-    },
-    {
-      "@id": "_:bus49_front-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "46.0"
-      }
-    },
-    {
-      "@id": "_:bus49_front-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "wd:Q3257809",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "purple"
-        },
-        {
-          "@language": "ja",
-          "@value": "紫"
-        }
-      ]
-    },
-    {
-      "@id": "wd:Q391895",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Siemens Mobility"
-        },
-        {
-          "@language": "ja",
-          "@value": "シーメンス・モビリティ"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color2",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.2025"
+        "@value": "0.0409"
       },
-      "rdfs:label": "blue",
-      "schema:color": "#1D4FB4",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "wd:Q9322",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Deutsche Bahn"
-        },
-        {
-          "@language": "ja",
-          "@value": "ドイツ鉄道"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0109"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
+      "rdfs:label": "skirt",
+      "schema:color": "#C2C7CA",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
     },
     {
-      "@id": "tb:has3DModel",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "True when at least one 3D model in train-bodies depicts this class."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "has 3D model"
-        },
-        {
-          "@language": "ja",
-          "@value": "3D モデルあり"
-        }
-      ]
-    },
-    {
-      "@id": "tb:part",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Which part of the vehicle the model is, when one vehicle is split into several models."
-      },
-      "rdfs:isDefinedBy": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "part"
-        },
-        {
-          "@language": "ja",
-          "@value": "部分"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0501"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411",
-      "@type": "schema:3DModel",
-      "galleryGroup": "icet",
-      "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery"
-      },
-      "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q115612330"
-      },
-      "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/icet_411.glb"
-      },
-      "schema:depth": {
-        "@id": "_:icet_411-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "標準の塗装。赤い帯と「ICE」の文字、鼻に DB のマーク。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:icet_411-height"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "411（7両編成）"
-      },
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/icet_411/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/icet_411.jpg"
-      },
-      "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#icet_411"
-      },
-      "schema:width": {
-        "@id": "_:icet_411-width"
-      }
-    },
-    {
-      "@id": "_:icet_411-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "38.0"
-      }
-    },
-    {
-      "@id": "_:icet_411-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "149.9"
-      }
-    },
-    {
-      "@id": "_:icet_411-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0969"
-      },
-      "rdfs:label": "silver",
-      "schema:color": "#A9AEB4",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0206"
-      },
-      "rdfs:label": "brown2",
-      "schema:color": "#4A2C24",
-      "wdt:P462": {
-        "@id": "wd:Q47071"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0500"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8665"
-      },
-      "rdfs:label": "body",
-      "schema:color": "#ECEEEC",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#livery",
       "@type": "Livery",
       "colorSample": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color4"
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color2"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color5"
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color3"
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color5"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color1"
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color3"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color2"
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color4"
         }
       ],
       "dcterms:source": {
         "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_411/icet_411.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
+        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_td/icet_td.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
       },
       "liveryOf": {
         "@id": "wd:Q9322"
       },
       "rdfs:label": [
         {
-          "@language": "ja",
-          "@value": "DB の塗装（赤い帯）"
-        },
-        {
           "@language": "en",
           "@value": "Deutsche Bahn livery (red stripe)"
+        },
+        {
+          "@language": "ja",
+          "@value": "DB の塗装（赤い帯）"
         }
       ],
       "wdt:P462": [
@@ -4075,207 +4114,6 @@
         },
         {
           "@id": "wd:Q3142"
-        },
-        {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q42519"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color10",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0065"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "wd:Q3552199",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Urban Transportation Development Corporation"
-        },
-        {
-          "@language": "ja",
-          "@value": "都市交通開発公社"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0165"
-      },
-      "rdfs:label": "green",
-      "schema:color": "#3FB53A",
-      "wdt:P462": {
-        "@id": "wd:Q3133"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102",
-      "@type": "schema:3DModel",
-      "galleryGroup": "world",
-      "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery"
-      },
-      "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710"
-      },
-      "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/ave102.glb"
-      },
-      "schema:depth": {
-        "@id": "_:ave102-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "スペインの高速列車。カモのくちばしのような鼻。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:ave102-height"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "AVE 102「Pato」"
-      },
-      "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/ave102/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/ave102.jpg"
-      },
-      "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#ave102"
-      },
-      "schema:width": {
-        "@id": "_:ave102-width"
-      }
-    },
-    {
-      "@id": "_:ave102-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "149.9"
-      }
-    },
-    {
-      "@id": "_:ave102-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "38.0"
-      }
-    },
-    {
-      "@id": "_:ave102-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8553"
-      },
-      "rdfs:label": "blue",
-      "schema:color": "#0056B8",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "wd:Q3133",
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "green"
-        },
-        {
-          "@language": "ja",
-          "@value": "緑"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0369"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#A9AEB3",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk3#color5"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/mk3/skytrain_mk3.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q1142140"
-      },
-      "rdfs:label": [
-        {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        },
-        {
-          "@language": "en",
-          "@value": "TransLink livery"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23445"
-        },
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q1088"
         }
       ]
     },
@@ -4291,6 +4129,87 @@
           "@value": "electric multiple unit"
         }
       ]
+    },
+    {
+      "@id": "wd:Q654749",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "articulated bus"
+        },
+        {
+          "@language": "ja",
+          "@value": "連節バス"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1",
+      "@type": "schema:3DModel",
+      "galleryGroup": "skytrain",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk1"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/mk1.glb"
+      },
+      "schema:depth": {
+        "@id": "_:mk1-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "1985年から走る、角ばった短い車体。今の TransLink 塗装。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:mk1-height"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "Mark I"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/mk1/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/mk1.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#mk1"
+      },
+      "schema:width": {
+        "@id": "_:mk1-width"
+      }
+    },
+    {
+      "@id": "_:mk1-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:mk1-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
+      "@id": "_:mk1-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "130.0"
+      }
     }
   ]
 }
