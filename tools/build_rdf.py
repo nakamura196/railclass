@@ -4,14 +4,14 @@ Usage: python3 tools/build_rdf.py [--refresh]
   Values come from Wikidata (CC0) for the classes listed in CLASSES, plus the hand-entered values in HAND.
   Wikidata answers are cached in data/wikidata/rdf-cache.json (data/ is git-ignored); --refresh fetches again.
 Writes:
-  docs/rdf/class/<cid>.ttl|.jsonld|.html   one class each (URI https://nakamura196.github.io/train-bodies/rdf/class/<cid>)
-  docs/rdf/model/<model-id>.ttl|.jsonld|.html   one 3D model each (URI .../rdf/model/<model-id>)
+  docs/rdf/class/<cid>.ttl|.jsonld        one class each (URI https://nakamura196.github.io/train-bodies/rdf/class/<cid>)
+  docs/rdf/model/<model-id>.ttl|.jsonld        one 3D model each (URI .../rdf/model/<model-id>)
   docs/rdf/all.ttl|.jsonld   everything, plus rdfs:label @ja/@en of every Wikidata item used as a value
   docs/rdf/vocab.ttl   the few terms of our own (tb:)
 The facet properties are the ones in docs/rdf/facets.json. Livery colours come from tools/livery_colors.json
 (made by tools/extract_colors.py from the skytrain builds). No ERATV-derived data goes in here (reuse licence unconfirmed).
 """
-import csv, html, json, os, sys, time, urllib.parse, urllib.request
+import csv, json, os, sys, time, urllib.parse, urllib.request
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, OWL, PROV, RDF, RDFS, SKOS, XSD
 
@@ -318,20 +318,9 @@ CONTEXT = {
 
 
 def write(g, path, title, uri):
+    """Turtle and JSON-LD. The human page for the URI (<path>.html) is made by the site (web/, Astro), not here."""
     g.serialize(path + ".ttl", format="turtle")
     g.serialize(path + ".jsonld", format="json-ld", context=CONTEXT, indent=1, auto_compact=True)
-    name = os.path.basename(path)
-    open(path + ".html", "w", encoding="utf-8").write(f"""<!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{html.escape(title)}</title>
-<link rel="alternate" type="text/turtle" href="{name}.ttl">
-<link rel="alternate" type="application/ld+json" href="{name}.jsonld">
-</head><body><h1>{html.escape(title)}</h1>
-<p><code>{html.escape(uri)}</code></p>
-<p><a href="{name}.ttl">Turtle</a> · <a href="{name}.jsonld">JSON-LD</a> · <a href="{BASE}">train-bodies</a></p>
-<pre>{html.escape(open(path + ".ttl", encoding="utf-8").read())}</pre>
-</body></html>
-""")
 
 
 def vocab():

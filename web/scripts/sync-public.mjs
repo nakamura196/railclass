@@ -1,6 +1,6 @@
 // Copies the generated data in docs/ into public/ so Astro serves it as is (same URLs as on the old Pages site).
-// The pages build_rdf.py still writes for classes (rdf/class/*.html) are left out so they cannot shadow the Astro pages;
-// rdf/model/*.html still comes along until it is moved. The notes are not copied.
+// The class and model pages (rdf/class/*.html, rdf/model/*.html) are made by Astro; an old .html left in docs/ is not
+// copied, so it cannot shadow them. The notes are not copied.
 import { cpSync, existsSync, rmSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
@@ -11,7 +11,7 @@ const DIRS = ["data", "models", "thumbs", "rdf", "search", "iiif", "lines", "dow
 // through a local build; without them the search page falls back to Wikimedia's thumbnails.
 const photos = fileURLToPath(new URL("../../data/photos/", import.meta.url));
 
-const BUILT = /^rdf\/class\/[^/]+\.html$/;   // made by Astro now
+const BUILT = /^rdf\/(class|model)\/[^/]+\.html$/;   // made by Astro
 
 rmSync(pub, { recursive: true, force: true });
 mkdirSync(pub);

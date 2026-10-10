@@ -20,7 +20,7 @@ index.json is column-wise to stay small:
    "img":[file name or ""], "photo":[local copy key (photos/<key>.webp) | ""],
    "thumb":[hash dir "f/f3" | full thumbnail URL | "" (use Special:FilePath)] (only used when there is no local copy),
    "credit":[[artist index, licence index] | 0], "artists":[text], "licenses":[[short name, url]],
-   a group facet {id:"<facet id>Group", of:"<facet id>", ...} just before each facet listed in GROUPS, "models":[[model id,...]], "page":[1 if docs/rdf/class/<id>.html exists else 0], "<facet id>":[[value index,...] | number | null]}
+   a group facet {id:"<facet id>Group", of:"<facet id>", ...} just before each facet listed in GROUPS, "models":[[model id,...]], "page":[1 if the class has an RDF file (and so a page) else 0], "<facet id>":[[value index,...] | number | null]}
 Usage: python3 tools/build_search.py [--data data] [--facets docs/rdf/facets.json] [--out docs/search]
 """
 import csv, collections, json, os, sys, urllib.parse

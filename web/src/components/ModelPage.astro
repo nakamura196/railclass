@@ -1,0 +1,53 @@
+---
+// One 3D model (rdf/model/<id>.html), the page for the model's URI: what it is, the class it was made for (whose page
+// shows it in 3D with the part notes), and its data (Turtle, JSON-LD, IIIF Manifest, GLB). Replaces the bare page
+// tools/build_rdf.py used to write.
+import "../styles/class.css";
+import Base from "../layouts/Base.astro";
+import { file, page, t, type Lang } from "../i18n";
+import { modelClasses, classPage } from "../lib/classes";
+import { models, fmtSize, hasManifest } from "../lib/data";
+
+const { lang, id } = Astro.props as { lang: Lang; id: string };
+const ui = t(lang);
+const T = ui.model;
+const M = models(lang);
+const m = M.items.find(x => x.id === id)!;
+const cid = modelClasses()[id];
+const cname = cid ? classPage(cid, lang, n => String(n), y => String(y)).name : null;
+const uri = `https://nakamura196.github.io/train-bodies/rdf/model/${id}`;
+const here = `rdf/model/${id}.html`;
+---
+<Base lang={lang} path={here} current="search" title={`${m.title} (${m.groupLabel}) — ${ui.site.name}`} description={`${T.kicker}: ${m.title}`}>
+<link slot="head" rel="alternate" type="text/turtle" href={file(`rdf/model/${id}.ttl`)}>
+<link slot="head" rel="alternate" type="application/ld+json" href={file(`rdf/model/${id}.jsonld`)}>
+<div class="wrap cls modelpage">
+  <p class="crumb"><a href={page(lang, "search/") + "?has3d=1"}>{T.back}</a> / {T.kicker}</p>
+  <div class="head">
+    <h1>{m.title}</h1>
+    <p class="other">{m.groupLabel}</p>
+    <p class="uri"><code>{uri}</code></p>
+  </div>
+  <div class="body">
+    <section class="props">
+      {cid && <p><a class="go" href={page(lang, `rdf/class/${cid}.html`) + `#${id}`}><img src={file(`thumbs/${id}.jpg`)} alt="" width="240"><span>{T.open}</span></a></p>}
+      <dl>
+        {cid && <div><dt>{T.cls}</dt><dd><a href={page(lang, `rdf/class/${cid}.html`)}>{cname}</a></dd></div>}
+        <div><dt>{T.size}</dt><dd>{fmtSize(m.size)} mm</dd></div>
+        {m.line && <div><dt>{T.line}</dt><dd>{m.line}</dd></div>}
+        <div><dt>{T.added}</dt><dd>{m.added}</dd></div>
+      </dl>
+    </section>
+    <aside class="media">
+      <section class="card">
+        <h2>{T.data}</h2>
+        <p class="links">
+          <a href={file(`rdf/model/${id}.ttl`)}>Turtle</a> · <a href={file(`rdf/model/${id}.jsonld`)}>JSON-LD</a>
+          {hasManifest(id) && <>{" · "}<a href={file(`iiif/${id}/manifest.json`)}>IIIF Manifest</a></>}
+          {" · "}<a href={file(`models/${id}.${M.ext}`)}>GLB</a>
+        </p>
+      </section>
+    </aside>
+  </div>
+</div>
+</Base>

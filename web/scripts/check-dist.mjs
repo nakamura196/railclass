@@ -73,6 +73,16 @@ for (const lang of ["ja", "en"]) {
 const models = readdirSync(docs + "rdf/model").filter(f => f.endsWith(".ttl")).map(f => f.slice(0, -4));
 const shown = new Set(classes.flatMap(modelsOf));
 for (const m of models) if (!shown.has(m)) fail(`model ${m}`, "on no class page");
+// Each model has its own page (rdf/model/<id>.html, Astro) linking its class page, its RDF and its GLB
+for (const pre of ["", "en/"]) for (const m of models) {
+  const p = `${pre}rdf/model/${m}.html`;
+  if (!existsSync(dist + p)) { fail(p, "page missing"); continue; }
+  const h = read(dist + p);
+  const c = classes.find(c => modelsOf(c).includes(m));
+  if (c && !h.includes(`rdf/class/${c}.html#${m}`)) fail(p, `no link to its class page ${c}`);
+  for (const f of [`rdf/model/${m}.ttl`, `rdf/model/${m}.jsonld`, `models/${m}.glb`]) if (!h.includes(`/${f}"`)) fail(p, `no link to ${f}`);
+  if (/<pre>/.test(h)) fail(p, "still the page build_rdf.py wrote");
+}
 const view = existsSync(dist + "view.html") ? read(dist + "view.html") : "";
 if (!view) fail("view.html", "missing");
 for (const m of models) if (view && !view.includes(`"${m}":"`)) fail("view.html", `no redirect for ${m}`);
