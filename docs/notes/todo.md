@@ -81,7 +81,10 @@
       2026-10-10 7:50 コミット 1aa7372・push・公開済み（線は 2 本だけ: Gäubahn・Madrid–Seville）。点検 `npm test` も公開の手順に入った
 - [ ] 残りの線を足して公開し直す: 切り出しは会話から切り離して動いている（`pgrep -fl tools/osm_lines.py`、記録 data/osm_lines.log、2026-10-10 7:50 で 6/42）。
       終わったら、失敗した路線を `--only Q… --api https://maps.mail.ru/osm/tools/overpass/api/interpreter` で取り直す → `_osm.tsv` を全件で作り直す（`--count` 以外の全体の流し直しは取れた分を飛ばす）→ docs/lines をコミット → push → `zsh scripts/deploy-pages.zsh`
-- [ ] 地図を MapLibre GL JS に替えるか、本人の返事待ち（推奨と理由は会話で伝えた: 暗い表示・地球儀表示。背景は OpenFreeMap）
+- [x] 地図を MapLibre GL JS に替える（2026-10-10 7:52 本人の決定。理由: 暗い表示・地球儀表示。背景は OpenFreeMap）。
+      2026-10-10 8:00 替えた（maplibre-gl 5.6.0 を CDN から。背景は OpenFreeMap の positron／dark で、サイトの明暗の切り替えに追従。地球儀表示。線の名前は重ねると出る）。
+      Leaflet だった 4 か所（`ClassPage.astro` の読み込み・`web/src/scripts/line-map.ts`・`class.css`・点検 `web/scripts/check-dist.mjs`）を替えた。
+      手元で ETR400（Q370895）のページを確かめた: 暗・明の切り替えで線が消えない、引くと地球儀、コンソールのエラーなし。`npm test` 通過。公開は線がそろってから一緒に
       2026-10-10: ページ側は作った（未コミット: ClassPage.astro・lib/data.ts の classLines・scripts/line-map.ts・class.css・i18n・sync-public.mjs に lines/）。
       線の切り出しは Overpass の 504 で難航中（1 路線ずつやり直し、失敗は飛ばして続きから取れるようにした）。`python3 -u tools/osm_lines.py --api https://maps.mail.ru/osm/tools/overpass/api/interpreter`（記録は data/osm_lines.log）。出力は docs/lines/
 - [ ] 線の形は train-bodies のデータに入れない（ODbL に縛られないため）。これを崩す案が出たら本人に確かめる

@@ -119,4 +119,10 @@
 .cls .lines .meta a { color: var(--muted); }
 .cls .lines .all-lines { margin-top: 8px; font: inherit; font-size: .8rem; padding: 4px 10px; border-radius: 999px;
   border: 1px solid var(--line); background: var(--panel); color: var(--fg); cursor: pointer; }
-.cls .lines .leaflet-container { font: inherit; font-size: .75rem; }
+.cls .lines .maplibregl-map { font: inherit; font-size: .75rem; }
+.cls .lines .line-tip .maplibregl-popup-content { padding: 4px 8px; background: var(--panel); color: var(--fg); box-shadow: 0 1px 4px rgb(0 0 0 / .3); }
+.cls .lines .line-tip .maplibregl-popup-tip { display: none; }
+.cls .lines .maplibregl-ctrl-group, .cls .lines .maplibregl-ctrl-attrib.maplibregl-compact { background: var(--panel); color: var(--fg); }
+.cls .lines .maplibregl-ctrl-attrib a { color: inherit; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cls .lines .maplibregl-ctrl button .maplibregl-ctrl-icon { filter: invert(1); } }
+:root[data-theme="dark"] .cls .lines .maplibregl-ctrl button .maplibregl-ctrl-icon { filter: invert(1); }

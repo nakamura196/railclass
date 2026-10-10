@@ -42,8 +42,8 @@ const mapped = lines.filter(l => l.map);
 ---
 <Base lang={lang} path={here} current="search" title={`${c.name} — ${ui.site.name}`} description={`${T.kicker}: ${c.name}${c.other ? ` (${c.other})` : ""}`}>
 {mods.length > 0 && <script slot="head" type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>}
-{mapped.length > 0 && <link slot="head" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">}
-{mapped.length > 0 && <script slot="head" is:inline src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>}
+{mapped.length > 0 && <link slot="head" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.css">}
+{mapped.length > 0 && <script slot="head" is:inline src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>}
 <link slot="head" rel="alternate" type="text/turtle" href={file(`rdf/class/${id}.ttl`)}>
 <link slot="head" rel="alternate" type="application/ld+json" href={file(`rdf/class/${id}.jsonld`)}>
 <div class="wrap cls">

@@ -64,7 +64,7 @@ for (const lang of ["ja", "en"]) {
     if (mapped.length && !map) fail(p, `no map (shapes: ${mapped.join(" ")})`);
     if (!mapped.length && map) fail(p, "map without a shape");
     for (const l of mapped) if (!h.includes(`/lines/${l}.geojson`)) fail(p, `shape ${l} not linked`);
-    if (map && !h.includes("leaflet.js")) fail(p, "map without Leaflet");
+    if (map && !h.includes("maplibre-gl.js")) fail(p, "map without MapLibre");
     if (map && !h.includes("OpenStreetMap contributors")) fail(p, "map without the OSM credit");
   }
 }
