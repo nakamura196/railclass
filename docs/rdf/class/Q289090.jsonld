@@ -11,49 +11,82 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q289090",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": true,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q289090"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Transrapid 08"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q289090",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": true,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q289090#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q289090"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Transrapid 08"
+        },
+        {
+          "@language": "ja",
+          "@value": "トランスラピッド 08"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q289090"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Transrapid 08"
+        },
+        {
+          "@language": "ja",
+          "@value": "トランスラピッド 08"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q769591"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "501"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "トランスラピッド 08"
-    }
-  ],
-  "schema:subjectOf": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q289090"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Transrapid 08"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q289090#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://en.wikipedia.org/wiki/Transrapid"
+      },
+      "line": {
+        "@id": "wd:Q769591"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "only commercial Transrapid line, since 2004"
+      },
+      "sourceSection": "Implementations > China",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "トランスラピッド 08"
+      "@id": "wd:Q769591",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Shanghai maglev train"
+      }
     }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "501"
-  }
+  ]
 }

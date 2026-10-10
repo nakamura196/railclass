@@ -17,6 +17,12 @@ tb:ColorSample a rdfs:Class ;
     rdfs:comment "One colour of a livery as painted on the 3D model, with its share of the painted surface."@en ;
     rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 
+tb:LineUse a rdfs:Class ;
+    rdfs:label "Line use"@en,
+        "路線での運用"@ja ;
+    rdfs:comment "One class on one line: tb:line, tb:useStatus, tb:usedUntil, dcterms:source."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
 tb:Livery a rdfs:Class ;
     rdfs:label "Livery"@en,
         "塗装"@ja ;
@@ -65,6 +71,24 @@ tb:has3DModel a rdf:Property ;
     rdfs:comment "True when at least one 3D model in train-bodies depicts this class."@en ;
     rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 
+tb:inferred a rdf:Property ;
+    rdfs:label "inferred"@en,
+        "推定"@ja ;
+    rdfs:comment "True when the source names a service (e.g. a city pair) and the line was inferred from it."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:line a rdf:Property ;
+    rdfs:label "line"@en,
+        "路線"@ja ;
+    rdfs:comment "The line (a Wikidata item)."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:lineUse a rdf:Property ;
+    rdfs:label "line use"@en,
+        "路線での運用"@ja ;
+    rdfs:comment "How this class is (was) used on one line, with the source: a tb:LineUse."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
 tb:livery a rdf:Property ;
     rdfs:label "livery"@en,
         "塗装"@ja ;
@@ -81,6 +105,30 @@ tb:part a rdf:Property ;
     rdfs:label "part"@en,
         "部分"@ja ;
     rdfs:comment "Which part of the vehicle the model is, when one vehicle is split into several models."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:sourceSection a rdf:Property ;
+    rdfs:label "source section"@en,
+        "出典の節"@ja ;
+    rdfs:comment "The section of the source (dcterms:source) that names the line."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:useStatus a rdf:Property ;
+    rdfs:label "status"@en,
+        "運用の状態"@ja ;
+    rdfs:comment "\"current\", \"historical\" or \"unknown\"."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:usedOn a rdf:Property ;
+    rdfs:label "used on line"@en,
+        "走る路線"@ja ;
+    rdfs:comment "A line (a Wikidata item) this class runs or ran on: the inverse direction of Wikidata P3438 (vehicle normally used), filled by hand with sources. See tb:lineUse for the status and the source."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:usedUntil a rdf:Property ;
+    rdfs:label "used until"@en,
+        "運用の終わり"@ja ;
+    rdfs:comment "The year the class stopped running on the line, when known (the last year the source mentions it, if no end is stated)."@en ;
     rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 
 wd:Q106530439 rdfs:label "25 kV, 50 Hz AC railway electrification"@en,
@@ -150,12 +198,6 @@ wd:Q666703 rdfs:label "Stadler Rail"@en,
 wd:Q668 rdfs:label "India"@en,
         "インド"@ja .
 
-wd:Q697217 rdfs:label "Amtrak Cascades"@en,
-        "アムトラック・カスケーズ"@ja .
-
-wd:Q769591 rdfs:label "Shanghai maglev train"@en,
-        "上海トランスラピッド"@ja .
-
 wd:Q83824 rdfs:label "DSB"@en,
         "デンマーク国鉄"@ja .
 
@@ -185,7 +227,34 @@ cls:Q1087710 a skos:Concept,
     wdt:P279 wd:Q13402959,
         wd:Q313106 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line3> ;
+    tb:usedOn wd:Q1161505,
+        wd:Q737791,
+        wd:Q949968 ;
     schema:subjectOf mdl:ave102 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Talgo_350> ;
+    skos:note "main route"@en ;
+    tb:line wd:Q1161505 ;
+    tb:sourceSection "Introduction, testing and operations" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Talgo_350> ;
+    skos:note "Talgo 350 export variant, since 2018; also Wikidata P3438"@en ;
+    tb:line wd:Q737791 ;
+    tb:sourceSection "Export" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q949968> ;
+    skos:note "from Wikidata only"@en ;
+    tb:line wd:Q949968 ;
+    tb:sourceSection "Wikidata P3438" ;
+    tb:useStatus "current" .
 
 cls:Q115612330 a skos:Concept,
         tb:VehicleClass ;
@@ -206,7 +275,66 @@ cls:Q115612330 a skos:Concept,
         wd:Q696668 ;
     wdt:P930 wd:Q1415234 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line6> ;
+    tb:usedOn wd:Q105237208,
+        wd:Q466879,
+        wd:Q540030,
+        wd:Q669665,
+        wd:Q819045,
+        wd:Q876774 ;
     schema:subjectOf mdl:icet_411 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line1> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "München–Berlin–Hamburg (ICE line 28)"@en ;
+    tb:line wd:Q540030 ;
+    tb:sourceSection "Baureihe 411 > Einsatz der zweiten Bauserie (seit 2004)" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line2> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED: article names only the München–Berlin service"@en ;
+    tb:inferred true ;
+    tb:line wd:Q466879 ;
+    tb:sourceSection "Baureihe 411 > Betriebshistorie der Anfangsjahre" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line3> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED, as above"@en ;
+    tb:inferred true ;
+    tb:line wd:Q876774 ;
+    tb:sourceSection "Baureihe 411 > Betriebshistorie der Anfangsjahre" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line4> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "timetable 2010/11; end year not stated"@en ;
+    tb:line wd:Q819045 ;
+    tb:sourceSection "Baureihe 411 > Einsatz der zweiten Bauserie (seit 2004)" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2011"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line5> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "Stuttgart–Zürich, Dec 2006 to Mar 2010"@en ;
+    tb:line wd:Q105237208 ;
+    tb:sourceSection "Baureihe 415 > Einsatz in der Schweiz" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2010"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line6> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED: line 28 extended to Innsbruck from 2009/10; current status unverified"@en ;
+    tb:inferred true ;
+    tb:line wd:Q669665 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "current" .
 
 cls:Q119775864 a skos:Concept,
         tb:VehicleClass ;
@@ -222,7 +350,25 @@ cls:Q119775864 a skos:Concept,
     wdt:P279 wd:Q483373,
         wd:Q870 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q119775864#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q119775864#line2> ;
+    tb:usedOn wd:Q115925943,
+        wd:Q115959833 ;
     schema:subjectOf mdl:vandebharat .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q119775864#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Vande_Bharat_Express> ;
+    skos:note "first service, Feb 2019; a service"@en ;
+    tb:line wd:Q115959833 ;
+    tb:sourceSection "History > Vande Bharat Trainset" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q119775864#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Vande_Bharat_Express> ;
+    skos:note "second service, Oct 2019; a service"@en ;
+    tb:line wd:Q115925943 ;
+    tb:sourceSection "History > Vande Bharat Trainset" ;
+    tb:useStatus "current" .
 
 cls:Q137972762 a skos:Concept,
         tb:VehicleClass ;
@@ -243,7 +389,49 @@ cls:Q137972762 a skos:Concept,
     wdt:P729 "1999"^^xsd:gYear ;
     wdt:P930 wd:Q1415234 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line4> ;
+    tb:usedOn wd:Q105237208,
+        wd:Q466879,
+        wd:Q819045,
+        wd:Q876774 ;
     schema:subjectOf mdl:icet_415 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line1> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "Stuttgart–Zürich from May 1999 to Dec 2006"@en ;
+    tb:line wd:Q105237208 ;
+    tb:sourceSection "Baureihe 415 > Einsatz in der Schweiz" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2006"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line2> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "Baureihen 411 und 415, timetable 2010/11"@en ;
+    tb:line wd:Q819045 ;
+    tb:sourceSection "Baureihe 411 > Einsatz der zweiten Bauserie (seit 2004)" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2011"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line3> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from München–Berlin second-unit use; class retired Apr 2026"@en ;
+    tb:inferred true ;
+    tb:line wd:Q466879 ;
+    tb:sourceSection "Baureihe 415 > Inbetriebnahme und Betriebshistorie" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2026"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line4> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Frankfurt–Dresden use"@en ;
+    tb:inferred true ;
+    tb:line wd:Q876774 ;
+    tb:sourceSection "Baureihe 415 > Inbetriebnahme und Betriebshistorie" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2026"^^xsd:gYear .
 
 cls:Q140611223 a skos:Concept,
         tb:VehicleClass ;
@@ -258,7 +446,16 @@ cls:Q140611223 a skos:Concept,
     wdt:P176 wd:Q391895 ;
     wdt:P279 wd:Q96106536 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q140611223#line1> ;
+    tb:usedOn wd:Q697217 ;
     schema:subjectOf mdl:airo .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q140611223#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Amtrak_Airo> ;
+    skos:note "service began 30 Sep 2026; only route so far"@en ;
+    tb:line wd:Q697217 ;
+    tb:sourceSection "Development" ;
+    tb:useStatus "current" .
 
 cls:Q289090 a skos:Concept,
         tb:VehicleClass ;
@@ -272,7 +469,16 @@ cls:Q289090 a skos:Concept,
     wdt:P17 wd:Q183 ;
     wdt:P2052 501.0 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q289090#line1> ;
+    tb:usedOn wd:Q769591 ;
     schema:subjectOf mdl:maglev .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q289090#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Transrapid> ;
+    skos:note "only commercial Transrapid line, since 2004"@en ;
+    tb:line wd:Q769591 ;
+    tb:sourceSection "Implementations > China" ;
+    tb:useStatus "current" .
 
 cls:Q370895 a skos:Concept,
         tb:VehicleClass ;
@@ -293,7 +499,214 @@ cls:Q370895 a skos:Concept,
         wd:Q21251675,
         wd:Q21253457 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line7>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line8> ;
+    tb:usedOn wd:Q1087587,
+        wd:Q1161505,
+        wd:Q125217063,
+        wd:Q338194,
+        wd:Q736027,
+        wd:Q909132,
+        wd:Q940957,
+        wd:Q958826 ;
     schema:subjectOf mdl:frecciarossa .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Frecciarossa_1000> ;
+    skos:note "Turin–Milan–Rome–Naples corridor"@en ;
+    tb:line wd:Q958826 ;
+    tb:sourceSection "Into service" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Frecciarossa_1000> ;
+    skos:note "Livraga derailment 2020 in service"@en ;
+    tb:line wd:Q338194 ;
+    tb:sourceSection "Accidents and incidents" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line3> a tb:LineUse ;
+    dcterms:source <https://it.wikipedia.org/wiki/ETR_1000> ;
+    skos:note "Milano–Roma debut 2015"@en ;
+    tb:line wd:Q940957 ;
+    tb:sourceSection "Storia" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line4> a tb:LineUse ;
+    dcterms:source <https://it.wikipedia.org/wiki/ETR_1000> ;
+    skos:note "INFERRED: Milan–Paris via Modane since Dec 2021"@en ;
+    tb:inferred true ;
+    tb:line wd:Q736027 ;
+    tb:sourceSection "Servizio internazionale Italia-Francia" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q125217063> ;
+    skos:note "a service, not a track"@en ;
+    tb:line wd:Q125217063 ;
+    tb:sourceSection "Wikidata P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line6> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Iryo> ;
+    skos:note "Iryo, from Nov 2022"@en ;
+    tb:line wd:Q1161505 ;
+    tb:sourceSection "History" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line7> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Iryo> ;
+    skos:note "INFERRED from Iryo Madrid–Seville, from Mar 2023"@en ;
+    tb:inferred true ;
+    tb:line wd:Q1087587 ;
+    tb:sourceSection "History" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line8> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Iryo> ;
+    skos:note "INFERRED from Iryo Madrid–Valencia / Alicante"@en ;
+    tb:inferred true ;
+    tb:line wd:Q909132 ;
+    tb:sourceSection "History" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro> ;
+    skos:note "Innovia ART 100 (Mark I); mixed fleet"@en ;
+    tb:line wd:Q736619 ;
+    tb:sourceSection "Vancouver" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro> ;
+    skos:note "ART 200 (Mark II) and 300 (Mark III)"@en ;
+    tb:line wd:Q1534900 ;
+    tb:sourceSection "Vancouver" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line3> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro> ;
+    skos:note "ART 200 since 1998/99; ART 300 added 2016; also Wikidata P3438"@en ;
+    tb:line wd:Q248445 ;
+    tb:sourceSection "Kuala Lumpur" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q59567049> ;
+    skos:note "from Wikidata only"@en ;
+    tb:line wd:Q59567049 ;
+    tb:sourceSection "Wikidata P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line5> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro> ;
+    skos:note "ART 100; closed after July 2023 derailment; also Wikidata P3438 (via S series)"@en ;
+    tb:line wd:Q54372 ;
+    tb:sourceSection "Toronto" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2023"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line6> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro> ;
+    skos:note "ART 200, non-articulated"@en ;
+    tb:line wd:Q406683 ;
+    tb:sourceSection "New York" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line7> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro> ;
+    skos:note "ART 200"@en ;
+    tb:line wd:Q847767 ;
+    tb:sourceSection "Beijing" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line8> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro> ;
+    skos:note "ART line (no sub-type stated)"@en ;
+    tb:line wd:Q489609 ;
+    tb:sourceSection "Yongin" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line9> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro> ;
+    skos:note "ART 100; automated people mover"@en ;
+    tb:line wd:Q1201543 ;
+    tb:sourceSection "Detroit" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "Hamburg–Copenhagen, Dec 2007 to Sep 2017"@en ;
+    tb:line wd:Q559660 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2017"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "same service"@en ;
+    tb:line wd:Q479904 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2017"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line3> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "same service"@en ;
+    tb:line wd:Q477258 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2017"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line4> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "(Berlin–)Hamburg–Aarhus, Dec 2007 to Dec 2016"@en ;
+    tb:line wd:Q540030 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2016"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line5> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "INFERRED for the Hamburg–Flensburg leg"@en ;
+    tb:inferred true ;
+    tb:line wd:Q321559 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2016"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line6> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "Munich–Lindau–Zürich, 2001–2003; INFERRED line"@en ;
+    tb:inferred true ;
+    tb:line wd:Q100940666 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2003"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line7> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "same service; INFERRED line"@en ;
+    tb:inferred true ;
+    tb:line wd:Q318895 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2003"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line8> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "Nuremberg–Dresden 2001–2003; INFERRED, weakest match"@en ;
+    tb:inferred true ;
+    tb:line wd:Q321761 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2003"^^xsd:gYear .
 
 cls:Q671805 a skos:Concept,
         tb:VehicleClass ;
@@ -310,7 +723,34 @@ cls:Q671805 a skos:Concept,
     wdt:P2052 100.0 ;
     wdt:P279 wd:Q483373 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line3> ;
+    tb:usedOn wd:Q277177,
+        wd:Q693867,
+        wd:Q802606 ;
     schema:subjectOf mdl:allegra .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Rhaetian_Railway_ABe_8/12> ;
+    skos:note "dual-voltage for 1000 V DC"@en ;
+    tb:line wd:Q277177 ;
+    tb:sourceSection "Technical details" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Rhaetian_Railway_ABe_8/12> ;
+    skos:note "Arosa line"@en ;
+    tb:line wd:Q693867 ;
+    tb:sourceSection "Technical details" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line3> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Rhaetian_Railway_ABe_8/12> ;
+    skos:note "Landquart to Davos"@en ;
+    tb:line wd:Q802606 ;
+    tb:sourceSection "Technical details" ;
+    tb:useStatus "current" .
 
 cls:Q8078904 a skos:Concept,
         tb:VehicleClass ;
@@ -327,7 +767,51 @@ cls:Q8078904 a skos:Concept,
     wdt:P176 wd:Q391895 ;
     wdt:P279 wd:Q3959904 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line4> ;
+    tb:usedOn wd:Q5873973,
+        wd:Q620564,
+        wd:Q669665,
+        wd:Q694717 ;
     schema:subjectOf mdl:icet_oebb .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line1> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Wien–Salzburg–München and Wien–Bregenz; sets handed back Dec 2020"@en ;
+    tb:inferred true ;
+    tb:line wd:Q694717 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line2> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Wien–Bregenz"@en ;
+    tb:inferred true ;
+    tb:line wd:Q620564 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line3> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Innsbruck services"@en ;
+    tb:inferred true ;
+    tb:line wd:Q669665 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line4> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Wien–München"@en ;
+    tb:inferred true ;
+    tb:line wd:Q5873973 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
 
 cls:tb-skytrain-mk1 a skos:Concept,
         tb:VehicleClass ;
@@ -1607,21 +2091,47 @@ mdl:vandebharat a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color7> ;
     tb:liveryOf wd:Q819425 .
 
+wd:Q100940666 rdfs:label "Munich–Buchloe railway"@en .
+
+wd:Q1087587 rdfs:label "Madrid–Seville high-speed rail line"@en .
+
+wd:Q115925943 rdfs:label "New Delhi–Katra Vande Bharat Express"@en .
+
+wd:Q115959833 rdfs:label "New Delhi–Varanasi Vande Bharat Express"@en .
+
+wd:Q1201543 rdfs:label "Detroit People Mover"@en .
+
+wd:Q125217063 rdfs:label "Milan–Paris Frecciarossa"@en .
+
 wd:Q129172 rdfs:label "InterCityExpress"@en,
         "ICE"@ja .
 
 wd:Q1415234 rdfs:label "15 kV, 16.7 Hz AC railway electrification"@en .
 
+wd:Q1534900 rdfs:label "Millennium Line"@en .
+
 wd:Q177598 rdfs:label "Rhaetian Railway"@en,
         "レーティッシュ鉄道"@ja .
+
+wd:Q248445 rdfs:label "Kelana Jaya line"@en .
+
+wd:Q277177 rdfs:label "Bernina railway"@en .
 
 wd:Q286650 rdfs:label "Trenitalia"@en,
         "トレニタリア"@ja .
 
 wd:Q309084 rdfs:label "アルストム"@ja .
 
+wd:Q318895 rdfs:label "Buchloe–Lindau railway"@en .
+
+wd:Q321559 rdfs:label "Neumünster–Flensburg railway"@en .
+
+wd:Q321761 rdfs:label "Nuremberg–Cheb railway"@en .
+
 wd:Q3257809 rdfs:label "purple"@en,
         "紫"@ja .
+
+wd:Q338194 rdfs:label "Milan–Bologna high-speed railway"@en .
 
 wd:Q391895 rdfs:label "Siemens Mobility"@en,
         "シーメンス・モビリティ"@ja .
@@ -1629,17 +2139,57 @@ wd:Q391895 rdfs:label "Siemens Mobility"@en,
 wd:Q39338 rdfs:label "orange"@en,
         "オレンジ色"@ja .
 
+wd:Q406683 rdfs:label "AirTrain JFK"@en .
+
 wd:Q452140 rdfs:label "DB Fernverkehr"@en,
         "DB長距離交通"@ja .
 
+wd:Q477258 rdfs:label "Lübeck–Hamburg railway"@en .
+
+wd:Q479904 rdfs:label "Lübeck–Puttgarden railway"@en .
+
+wd:Q489609 rdfs:label "Everline"@en .
+
+wd:Q54372 rdfs:label "Line 3 Scarborough"@en .
+
+wd:Q559660 rdfs:label "Vogelfluglinie"@en .
+
+wd:Q5873973 rdfs:label "Rosenheim–Salzburg railway"@en .
+
+wd:Q59567049 rdfs:label "Kelana Jaya line extension"@en .
+
+wd:Q620564 rdfs:label "Arlberg railway"@en .
+
 wd:Q671188 rdfs:label "tilting train"@en,
         "車体傾斜式車両"@ja .
+
+wd:Q693867 rdfs:label "Chur–Arosa railway"@en .
+
+wd:Q694717 rdfs:label "Western Railway (Wien–Salzburg)"@en .
+
+wd:Q736027 rdfs:label "Culoz–Modane railway"@en .
+
+wd:Q736619 rdfs:label "Expo Line (SkyTrain)"@en .
+
+wd:Q737791 rdfs:label "Haramain high-speed railway"@en .
+
+wd:Q802606 rdfs:label "Landquart–Davos Platz railway"@en .
 
 wd:Q81230 rdfs:label "Siemens"@en,
         "シーメンス"@ja .
 
 wd:Q819425 rdfs:label "Indian Railways"@en,
         "インド鉄道"@ja .
+
+wd:Q847767 rdfs:label "Capital Airport Express"@en .
+
+wd:Q909132 rdfs:label "Madrid–Levante high-speed rail line"@en .
+
+wd:Q940957 rdfs:label "Rome–Naples high-speed railway"@en .
+
+wd:Q949968 rdfs:label "Córdoba–Málaga high-speed rail line"@en .
+
+wd:Q958826 rdfs:label "Turin–Milan high-speed railway"@en .
 
 cls:Q137921671 a skos:Concept,
         tb:VehicleClass ;
@@ -1676,6 +2226,22 @@ cls:Q659660 a skos:Concept,
         wd:Q1567915,
         wd:Q671188 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line7>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line8> ;
+    tb:usedOn wd:Q100940666,
+        wd:Q318895,
+        wd:Q321559,
+        wd:Q321761,
+        wd:Q477258,
+        wd:Q479904,
+        wd:Q540030,
+        wd:Q559660 ;
     schema:subjectOf mdl:icet_dsb,
         mdl:icet_td .
 
@@ -1688,13 +2254,33 @@ wd:Q183 rdfs:label "Germany"@en,
 wd:Q483373 rdfs:label "electric multiple unit"@en,
         "電車"@ja .
 
+wd:Q697217 rdfs:label "Amtrak Cascades"@en,
+        "アムトラック・カスケーズ"@ja .
+
+wd:Q769591 rdfs:label "Shanghai maglev train"@en,
+        "上海トランスラピッド"@ja .
+
 wd:Q83822 rdfs:label "Austrian Federal Railways"@en,
         "オーストリア連邦鉄道"@ja .
 
+wd:Q105237208 rdfs:label "Gäubahn"@en .
+
+wd:Q1161505 rdfs:label "Madrid–Barcelona high-speed rail line"@en .
+
 wd:Q141170526 rdfs:label "British Columbia Rapid Transit Company"@en .
+
+wd:Q466879 rdfs:label "Nuremberg–Erfurt high-speed railway"@en .
+
+wd:Q540030 rdfs:label "Berlin–Hamburg railway line"@en .
+
+wd:Q669665 rdfs:label "Lower Inn Valley Railway"@en .
 
 wd:Q696668 rdfs:label "ICE T"@en,
         "ICE T"@ja .
+
+wd:Q819045 rdfs:label "Hanover–Würzburg high-speed railway"@en .
+
+wd:Q876774 rdfs:label "Erfurt–Leipzig/Halle high-speed railway"@en .
 
 cls:Q4940487 a skos:Concept,
         tb:VehicleClass ;
@@ -1708,7 +2294,25 @@ cls:Q4940487 a skos:Concept,
     wdt:P17 wd:Q16 ;
     wdt:P176 wd:Q688893 ;
     wdt:P279 wd:Q4102249 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line7>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line8>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line9> ;
+    tb:usedOn wd:Q1201543,
+        wd:Q1534900,
+        wd:Q248445,
+        wd:Q406683,
+        wd:Q489609,
+        wd:Q54372,
+        wd:Q59567049,
+        wd:Q736619,
+        wd:Q847767 .
 
 cls:Q696668 a skos:Concept,
         tb:VehicleClass ;

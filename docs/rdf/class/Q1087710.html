@@ -7,6 +7,7 @@
 <p><code>https://nakamura196.github.io/train-bodies/rdf/class/Q1087710</code></p>
 <p><a href="Q1087710.ttl">Turtle</a> · <a href="Q1087710.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
 <pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
 @prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
 @prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -34,7 +35,40 @@ cls:Q1087710 a skos:Concept,
     wdt:P279 wd:Q13402959,
         wd:Q313106 ;
     tb:has3DModel true ;
+    tb:lineUse &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line1&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line2&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line3&gt; ;
+    tb:usedOn wd:Q1161505,
+        wd:Q737791,
+        wd:Q949968 ;
     schema:subjectOf mdl:ave102 .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line1&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Talgo_350&gt; ;
+    skos:note &quot;main route&quot;@en ;
+    tb:line wd:Q1161505 ;
+    tb:sourceSection &quot;Introduction, testing and operations&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line2&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Talgo_350&gt; ;
+    skos:note &quot;Talgo 350 export variant, since 2018; also Wikidata P3438&quot;@en ;
+    tb:line wd:Q737791 ;
+    tb:sourceSection &quot;Export&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line3&gt; a tb:LineUse ;
+    dcterms:source &lt;https://www.wikidata.org/wiki/Q949968&gt; ;
+    skos:note &quot;from Wikidata only&quot;@en ;
+    tb:line wd:Q949968 ;
+    tb:sourceSection &quot;Wikidata P3438&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+wd:Q1161505 rdfs:label &quot;Madrid–Barcelona high-speed rail line&quot;@en .
+
+wd:Q737791 rdfs:label &quot;Haramain high-speed railway&quot;@en .
+
+wd:Q949968 rdfs:label &quot;Córdoba–Málaga high-speed rail line&quot;@en .
 
 </pre>
 </body></html>

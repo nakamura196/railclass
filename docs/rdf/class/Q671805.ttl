@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -24,5 +25,38 @@ cls:Q671805 a skos:Concept,
     wdt:P2052 100.0 ;
     wdt:P279 wd:Q483373 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line3> ;
+    tb:usedOn wd:Q277177,
+        wd:Q693867,
+        wd:Q802606 ;
     schema:subjectOf mdl:allegra .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Rhaetian_Railway_ABe_8/12> ;
+    skos:note "dual-voltage for 1000 V DC"@en ;
+    tb:line wd:Q277177 ;
+    tb:sourceSection "Technical details" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Rhaetian_Railway_ABe_8/12> ;
+    skos:note "Arosa line"@en ;
+    tb:line wd:Q693867 ;
+    tb:sourceSection "Technical details" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q671805#line3> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Rhaetian_Railway_ABe_8/12> ;
+    skos:note "Landquart to Davos"@en ;
+    tb:line wd:Q802606 ;
+    tb:sourceSection "Technical details" ;
+    tb:useStatus "current" .
+
+wd:Q277177 rdfs:label "Bernina railway"@en .
+
+wd:Q693867 rdfs:label "Chur–Arosa railway"@en .
+
+wd:Q802606 rdfs:label "Landquart–Davos Platz railway"@en .
 

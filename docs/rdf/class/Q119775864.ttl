@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -23,5 +24,27 @@ cls:Q119775864 a skos:Concept,
     wdt:P279 wd:Q483373,
         wd:Q870 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q119775864#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q119775864#line2> ;
+    tb:usedOn wd:Q115925943,
+        wd:Q115959833 ;
     schema:subjectOf mdl:vandebharat .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q119775864#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Vande_Bharat_Express> ;
+    skos:note "first service, Feb 2019; a service"@en ;
+    tb:line wd:Q115959833 ;
+    tb:sourceSection "History > Vande Bharat Trainset" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q119775864#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Vande_Bharat_Express> ;
+    skos:note "second service, Oct 2019; a service"@en ;
+    tb:line wd:Q115925943 ;
+    tb:sourceSection "History > Vande Bharat Trainset" ;
+    tb:useStatus "current" .
+
+wd:Q115925943 rdfs:label "New Delhi–Katra Vande Bharat Express"@en .
+
+wd:Q115959833 rdfs:label "New Delhi–Varanasi Vande Bharat Express"@en .
 

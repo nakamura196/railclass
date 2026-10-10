@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -26,5 +27,38 @@ cls:Q1087710 a skos:Concept,
     wdt:P279 wd:Q13402959,
         wd:Q313106 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line3> ;
+    tb:usedOn wd:Q1161505,
+        wd:Q737791,
+        wd:Q949968 ;
     schema:subjectOf mdl:ave102 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Talgo_350> ;
+    skos:note "main route"@en ;
+    tb:line wd:Q1161505 ;
+    tb:sourceSection "Introduction, testing and operations" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Talgo_350> ;
+    skos:note "Talgo 350 export variant, since 2018; also Wikidata P3438"@en ;
+    tb:line wd:Q737791 ;
+    tb:sourceSection "Export" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q949968> ;
+    skos:note "from Wikidata only"@en ;
+    tb:line wd:Q949968 ;
+    tb:sourceSection "Wikidata P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1161505 rdfs:label "Madrid–Barcelona high-speed rail line"@en .
+
+wd:Q737791 rdfs:label "Haramain high-speed railway"@en .
+
+wd:Q949968 rdfs:label "Córdoba–Málaga high-speed rail line"@en .
 

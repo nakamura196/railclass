@@ -7,6 +7,7 @@
 <p><code>https://nakamura196.github.io/train-bodies/rdf/class/Q289090</code></p>
 <p><a href="Q289090.ttl">Turtle</a> · <a href="Q289090.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
 <pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
 @prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
 @prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -29,7 +30,18 @@ cls:Q289090 a skos:Concept,
     wdt:P17 wd:Q183 ;
     wdt:P2052 501.0 ;
     tb:has3DModel true ;
+    tb:lineUse &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q289090#line1&gt; ;
+    tb:usedOn wd:Q769591 ;
     schema:subjectOf mdl:maglev .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q289090#line1&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Transrapid&gt; ;
+    skos:note &quot;only commercial Transrapid line, since 2004&quot;@en ;
+    tb:line wd:Q769591 ;
+    tb:sourceSection &quot;Implementations &gt; China&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+wd:Q769591 rdfs:label &quot;Shanghai maglev train&quot;@en .
 
 </pre>
 </body></html>

@@ -9,6 +9,12 @@ tb:ColorSample a rdfs:Class ;
     rdfs:comment "One colour of a livery as painted on the 3D model, with its share of the painted surface."@en ;
     rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 
+tb:LineUse a rdfs:Class ;
+    rdfs:label "Line use"@en,
+        "路線での運用"@ja ;
+    rdfs:comment "One class on one line: tb:line, tb:useStatus, tb:usedUntil, dcterms:source."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
 tb:Livery a rdfs:Class ;
     rdfs:label "Livery"@en,
         "塗装"@ja ;
@@ -55,6 +61,24 @@ tb:has3DModel a rdf:Property ;
     rdfs:comment "True when at least one 3D model in train-bodies depicts this class."@en ;
     rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 
+tb:inferred a rdf:Property ;
+    rdfs:label "inferred"@en,
+        "推定"@ja ;
+    rdfs:comment "True when the source names a service (e.g. a city pair) and the line was inferred from it."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:line a rdf:Property ;
+    rdfs:label "line"@en,
+        "路線"@ja ;
+    rdfs:comment "The line (a Wikidata item)."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:lineUse a rdf:Property ;
+    rdfs:label "line use"@en,
+        "路線での運用"@ja ;
+    rdfs:comment "How this class is (was) used on one line, with the source: a tb:LineUse."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
 tb:livery a rdf:Property ;
     rdfs:label "livery"@en,
         "塗装"@ja ;
@@ -71,5 +95,29 @@ tb:part a rdf:Property ;
     rdfs:label "part"@en,
         "部分"@ja ;
     rdfs:comment "Which part of the vehicle the model is, when one vehicle is split into several models."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:sourceSection a rdf:Property ;
+    rdfs:label "source section"@en,
+        "出典の節"@ja ;
+    rdfs:comment "The section of the source (dcterms:source) that names the line."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:useStatus a rdf:Property ;
+    rdfs:label "status"@en,
+        "運用の状態"@ja ;
+    rdfs:comment "\"current\", \"historical\" or \"unknown\"."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:usedOn a rdf:Property ;
+    rdfs:label "used on line"@en,
+        "走る路線"@ja ;
+    rdfs:comment "A line (a Wikidata item) this class runs or ran on: the inverse direction of Wikidata P3438 (vehicle normally used), filled by hand with sources. See tb:lineUse for the status and the source."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:usedUntil a rdf:Property ;
+    rdfs:label "used until"@en,
+        "運用の終わり"@ja ;
+    rdfs:comment "The year the class stopped running on the line, when known (the last year the source mentions it, if no end is stated)."@en ;
     rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 

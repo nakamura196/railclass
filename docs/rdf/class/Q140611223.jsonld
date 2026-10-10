@@ -11,51 +11,84 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": true,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q140611223"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Amtrak Airo"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://en.wikipedia.org/wiki/Amtrak_Airo"
+      },
+      "line": {
+        "@id": "wd:Q697217"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "service began 30 Sep 2026; only route so far"
+      },
+      "sourceSection": "Development",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "Amtrak Airo"
-    }
-  ],
-  "schema:subjectOf": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q140611223"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Amtrak Airo"
+      "@id": "wd:Q697217",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Amtrak Cascades"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "Amtrak Airo"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": true,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q140611223"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Amtrak Airo"
+        },
+        {
+          "@language": "ja",
+          "@value": "Amtrak Airo"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q140611223"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Amtrak Airo"
+        },
+        {
+          "@language": "ja",
+          "@value": "Amtrak Airo"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q697217"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q23239"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q96106536"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q23239"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q96106536"
-  }
+  ]
 }

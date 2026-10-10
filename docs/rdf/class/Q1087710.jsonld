@@ -11,66 +11,161 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": true,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1087710"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "AVE Class 102"
+      "@id": "wd:Q1161505",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Madrid–Barcelona high-speed rail line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "レンフェ102系"
-    }
-  ],
-  "schema:subjectOf": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1087710"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "AVE Class 102"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://en.wikipedia.org/wiki/Talgo_350"
+      },
+      "line": {
+        "@id": "wd:Q1161505"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "main route"
+      },
+      "sourceSection": "Introduction, testing and operations",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "レンフェ102系"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q83910"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q29"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q1100969"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "330"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q313106"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q949968"
+      },
+      "line": {
+        "@id": "wd:Q949968"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "from Wikidata only"
+      },
+      "sourceSection": "Wikidata P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q13402959"
+      "@id": "wd:Q737791",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Haramain high-speed railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://en.wikipedia.org/wiki/Talgo_350"
+      },
+      "line": {
+        "@id": "wd:Q737791"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "Talgo 350 export variant, since 2018; also Wikidata P3438"
+      },
+      "sourceSection": "Export",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q949968",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Córdoba–Málaga high-speed rail line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": true,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1087710"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "AVE Class 102"
+        },
+        {
+          "@language": "ja",
+          "@value": "レンフェ102系"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1087710"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "AVE Class 102"
+        },
+        {
+          "@language": "ja",
+          "@value": "レンフェ102系"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q1161505"
+        },
+        {
+          "@id": "wd:Q737791"
+        },
+        {
+          "@id": "wd:Q949968"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83910"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q29"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q1100969"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "330"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q313106"
+        },
+        {
+          "@id": "wd:Q13402959"
+        }
+      ]
     }
   ]
 }

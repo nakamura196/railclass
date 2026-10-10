@@ -7,6 +7,7 @@
 <p><code>https://nakamura196.github.io/train-bodies/rdf/class/Q140611223</code></p>
 <p><a href="Q140611223.ttl">Turtle</a> · <a href="Q140611223.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
 <pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
 @prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
 @prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -30,7 +31,18 @@ cls:Q140611223 a skos:Concept,
     wdt:P176 wd:Q391895 ;
     wdt:P279 wd:Q96106536 ;
     tb:has3DModel true ;
+    tb:lineUse &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q140611223#line1&gt; ;
+    tb:usedOn wd:Q697217 ;
     schema:subjectOf mdl:airo .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q140611223#line1&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Amtrak_Airo&gt; ;
+    skos:note &quot;service began 30 Sep 2026; only route so far&quot;@en ;
+    tb:line wd:Q697217 ;
+    tb:sourceSection &quot;Development&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+wd:Q697217 rdfs:label &quot;Amtrak Cascades&quot;@en .
 
 </pre>
 </body></html>

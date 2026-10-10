@@ -7,6 +7,7 @@
 <p><code>https://nakamura196.github.io/train-bodies/rdf/class/Q370895</code></p>
 <p><a href="Q370895.ttl">Turtle</a> · <a href="Q370895.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
 <pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
 @prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
 @prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -36,7 +37,98 @@ cls:Q370895 a skos:Concept,
         wd:Q21251675,
         wd:Q21253457 ;
     tb:has3DModel true ;
+    tb:lineUse &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line1&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line2&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line3&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line4&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line5&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line6&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line7&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line8&gt; ;
+    tb:usedOn wd:Q1087587,
+        wd:Q1161505,
+        wd:Q125217063,
+        wd:Q338194,
+        wd:Q736027,
+        wd:Q909132,
+        wd:Q940957,
+        wd:Q958826 ;
     schema:subjectOf mdl:frecciarossa .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line1&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Frecciarossa_1000&gt; ;
+    skos:note &quot;Turin–Milan–Rome–Naples corridor&quot;@en ;
+    tb:line wd:Q958826 ;
+    tb:sourceSection &quot;Into service&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line2&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Frecciarossa_1000&gt; ;
+    skos:note &quot;Livraga derailment 2020 in service&quot;@en ;
+    tb:line wd:Q338194 ;
+    tb:sourceSection &quot;Accidents and incidents&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line3&gt; a tb:LineUse ;
+    dcterms:source &lt;https://it.wikipedia.org/wiki/ETR_1000&gt; ;
+    skos:note &quot;Milano–Roma debut 2015&quot;@en ;
+    tb:line wd:Q940957 ;
+    tb:sourceSection &quot;Storia&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line4&gt; a tb:LineUse ;
+    dcterms:source &lt;https://it.wikipedia.org/wiki/ETR_1000&gt; ;
+    skos:note &quot;INFERRED: Milan–Paris via Modane since Dec 2021&quot;@en ;
+    tb:inferred true ;
+    tb:line wd:Q736027 ;
+    tb:sourceSection &quot;Servizio internazionale Italia-Francia&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line5&gt; a tb:LineUse ;
+    dcterms:source &lt;https://www.wikidata.org/wiki/Q125217063&gt; ;
+    skos:note &quot;a service, not a track&quot;@en ;
+    tb:line wd:Q125217063 ;
+    tb:sourceSection &quot;Wikidata P3438&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line6&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Iryo&gt; ;
+    skos:note &quot;Iryo, from Nov 2022&quot;@en ;
+    tb:line wd:Q1161505 ;
+    tb:sourceSection &quot;History&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line7&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Iryo&gt; ;
+    skos:note &quot;INFERRED from Iryo Madrid–Seville, from Mar 2023&quot;@en ;
+    tb:inferred true ;
+    tb:line wd:Q1087587 ;
+    tb:sourceSection &quot;History&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q370895#line8&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Iryo&gt; ;
+    skos:note &quot;INFERRED from Iryo Madrid–Valencia / Alicante&quot;@en ;
+    tb:inferred true ;
+    tb:line wd:Q909132 ;
+    tb:sourceSection &quot;History&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+wd:Q1087587 rdfs:label &quot;Madrid–Seville high-speed rail line&quot;@en .
+
+wd:Q1161505 rdfs:label &quot;Madrid–Barcelona high-speed rail line&quot;@en .
+
+wd:Q125217063 rdfs:label &quot;Milan–Paris Frecciarossa&quot;@en .
+
+wd:Q338194 rdfs:label &quot;Milan–Bologna high-speed railway&quot;@en .
+
+wd:Q736027 rdfs:label &quot;Culoz–Modane railway&quot;@en .
+
+wd:Q909132 rdfs:label &quot;Madrid–Levante high-speed rail line&quot;@en .
+
+wd:Q940957 rdfs:label &quot;Rome–Naples high-speed railway&quot;@en .
+
+wd:Q958826 rdfs:label &quot;Turin–Milan high-speed railway&quot;@en .
 
 </pre>
 </body></html>

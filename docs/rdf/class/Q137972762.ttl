@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -28,5 +29,55 @@ cls:Q137972762 a skos:Concept,
     wdt:P729 "1999"^^xsd:gYear ;
     wdt:P930 wd:Q1415234 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line4> ;
+    tb:usedOn wd:Q105237208,
+        wd:Q466879,
+        wd:Q819045,
+        wd:Q876774 ;
     schema:subjectOf mdl:icet_415 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line1> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "Stuttgart–Zürich from May 1999 to Dec 2006"@en ;
+    tb:line wd:Q105237208 ;
+    tb:sourceSection "Baureihe 415 > Einsatz in der Schweiz" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2006"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line2> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "Baureihen 411 und 415, timetable 2010/11"@en ;
+    tb:line wd:Q819045 ;
+    tb:sourceSection "Baureihe 411 > Einsatz der zweiten Bauserie (seit 2004)" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2011"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line3> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from München–Berlin second-unit use; class retired Apr 2026"@en ;
+    tb:inferred true ;
+    tb:line wd:Q466879 ;
+    tb:sourceSection "Baureihe 415 > Inbetriebnahme und Betriebshistorie" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2026"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q137972762#line4> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Frankfurt–Dresden use"@en ;
+    tb:inferred true ;
+    tb:line wd:Q876774 ;
+    tb:sourceSection "Baureihe 415 > Inbetriebnahme und Betriebshistorie" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2026"^^xsd:gYear .
+
+wd:Q105237208 rdfs:label "Gäubahn"@en .
+
+wd:Q466879 rdfs:label "Nuremberg–Erfurt high-speed railway"@en .
+
+wd:Q819045 rdfs:label "Hanover–Würzburg high-speed railway"@en .
+
+wd:Q876774 rdfs:label "Erfurt–Leipzig/Halle high-speed railway"@en .
 

@@ -7,6 +7,7 @@
 <p><code>https://nakamura196.github.io/train-bodies/rdf/class/Q4940487</code></p>
 <p><a href="Q4940487.ttl">Turtle</a> · <a href="Q4940487.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
 <pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
 @prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
@@ -27,7 +28,107 @@ cls:Q4940487 a skos:Concept,
     wdt:P17 wd:Q16 ;
     wdt:P176 wd:Q688893 ;
     wdt:P279 wd:Q4102249 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line1&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line2&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line3&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line4&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line5&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line6&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line7&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line8&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line9&gt; ;
+    tb:usedOn wd:Q1201543,
+        wd:Q1534900,
+        wd:Q248445,
+        wd:Q406683,
+        wd:Q489609,
+        wd:Q54372,
+        wd:Q59567049,
+        wd:Q736619,
+        wd:Q847767 .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line1&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro&gt; ;
+    skos:note &quot;Innovia ART 100 (Mark I); mixed fleet&quot;@en ;
+    tb:line wd:Q736619 ;
+    tb:sourceSection &quot;Vancouver&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line2&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro&gt; ;
+    skos:note &quot;ART 200 (Mark II) and 300 (Mark III)&quot;@en ;
+    tb:line wd:Q1534900 ;
+    tb:sourceSection &quot;Vancouver&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line3&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro&gt; ;
+    skos:note &quot;ART 200 since 1998/99; ART 300 added 2016; also Wikidata P3438&quot;@en ;
+    tb:line wd:Q248445 ;
+    tb:sourceSection &quot;Kuala Lumpur&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line4&gt; a tb:LineUse ;
+    dcterms:source &lt;https://www.wikidata.org/wiki/Q59567049&gt; ;
+    skos:note &quot;from Wikidata only&quot;@en ;
+    tb:line wd:Q59567049 ;
+    tb:sourceSection &quot;Wikidata P3438&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line5&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro&gt; ;
+    skos:note &quot;ART 100; closed after July 2023 derailment; also Wikidata P3438 (via S series)&quot;@en ;
+    tb:line wd:Q54372 ;
+    tb:sourceSection &quot;Toronto&quot; ;
+    tb:useStatus &quot;historical&quot; ;
+    tb:usedUntil &quot;2023&quot;^^xsd:gYear .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line6&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro&gt; ;
+    skos:note &quot;ART 200, non-articulated&quot;@en ;
+    tb:line wd:Q406683 ;
+    tb:sourceSection &quot;New York&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line7&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro&gt; ;
+    skos:note &quot;ART 200&quot;@en ;
+    tb:line wd:Q847767 ;
+    tb:sourceSection &quot;Beijing&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line8&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro&gt; ;
+    skos:note &quot;ART line (no sub-type stated)&quot;@en ;
+    tb:line wd:Q489609 ;
+    tb:sourceSection &quot;Yongin&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/class/Q4940487#line9&gt; a tb:LineUse ;
+    dcterms:source &lt;https://en.wikipedia.org/wiki/Bombardier_Innovia_Metro&gt; ;
+    skos:note &quot;ART 100; automated people mover&quot;@en ;
+    tb:line wd:Q1201543 ;
+    tb:sourceSection &quot;Detroit&quot; ;
+    tb:useStatus &quot;current&quot; .
+
+wd:Q1201543 rdfs:label &quot;Detroit People Mover&quot;@en .
+
+wd:Q1534900 rdfs:label &quot;Millennium Line&quot;@en .
+
+wd:Q248445 rdfs:label &quot;Kelana Jaya line&quot;@en .
+
+wd:Q406683 rdfs:label &quot;AirTrain JFK&quot;@en .
+
+wd:Q489609 rdfs:label &quot;Everline&quot;@en .
+
+wd:Q54372 rdfs:label &quot;Line 3 Scarborough&quot;@en .
+
+wd:Q59567049 rdfs:label &quot;Kelana Jaya line extension&quot;@en .
+
+wd:Q736619 rdfs:label &quot;Expo Line (SkyTrain)&quot;@en .
+
+wd:Q847767 rdfs:label &quot;Capital Airport Express&quot;@en .
 
 </pre>
 </body></html>

@@ -11,7 +11,7 @@ Writes:
 The facet properties are the ones in docs/rdf/facets.json. Livery colours come from tools/livery_colors.json
 (made by tools/extract_colors.py from the skytrain builds). No ERATV-derived data goes in here (reuse licence unconfirmed).
 """
-import html, json, os, sys, time, urllib.parse, urllib.request
+import csv, html, json, os, sys, time, urllib.parse, urllib.request
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, OWL, PROV, RDF, RDFS, SKOS, XSD
 
@@ -32,6 +32,9 @@ FACETS = json.load(open(os.path.join(DOCS, "facets.json"), encoding="utf-8"))["f
 WD_FACETS = [f for f in FACETS if f["uri"].startswith(str(WDT)) and f.get("on", "class") == "class"]
 COLOR_URI = URIRef(next(f["uri"] for f in FACETS if f["id"] == "color"))
 COLORS = json.load(open(os.path.join(HERE, "tools", "livery_colors.json"), encoding="utf-8"))
+# class -> line (Wikidata items), hand-filled with sources (docs/notes/todo.md, 路線). Only the IDs come into the RDF:
+# the line shapes are OSM data (ODbL) and stay in docs/lines, outside the dataset.
+LINES = [r for r in csv.DictReader(open(os.path.join(HERE, "tools", "class_lines.tsv"), encoding="utf-8"), delimiter="\t") if r["line"]]
 
 # cid: (Wikidata item or None, skos:broader cid in this dataset or None, labels for classes without a Wikidata item)
 # Classes without their own Wikidata item get skos:broadMatch to the nearest item (the family).
@@ -236,9 +239,35 @@ def add_class(g, cid, wd, models):
     for f in WD_FACETS:
         for v in vals.get(f["id"], []):
             g.add((s, URIRef(f["uri"]), value_node(f, v)))
+    for k, r in enumerate((r for r in LINES if r["class"] == cid), 1):
+        add_line(g, s, k, r)
     g.add((s, TB.has3DModel, Literal(bool(models))))
     for m in models:
         g.add((s, SDO.subjectOf, MDL[m]))
+
+
+def add_line(g, s, k, r):
+    """cls:<cid> tb:usedOn wd:<line> (the plain link, for simple queries), and a tb:LineUse node that carries how we know:
+    current or historical (with the year it ended when known), the source and its section, and whether the line was
+    inferred from a service (e.g. "München–Berlin") rather than named in the source."""
+    line = WD[r["line"]]
+    g.add((s, TB.usedOn, line))
+    if r["lineLabel"]:
+        g.add((line, RDFS.label, Literal(r["lineLabel"], lang="en")))
+    u = URIRef(f"{s}#line{k}")
+    g.add((s, TB.lineUse, u)); g.add((u, RDF.type, TB.LineUse)); g.add((u, TB.line, line))
+    status, _, until = r["status"].partition(" ")
+    g.add((u, TB.useStatus, Literal(status)))
+    if until.isdigit():
+        g.add((u, TB.usedUntil, Literal(until, datatype=XSD.gYear)))
+    if r["source_url"]:
+        g.add((u, DCTERMS.source, URIRef(r["source_url"])))
+    if r["source_section"]:
+        g.add((u, TB.sourceSection, Literal(r["source_section"])))
+    if "INFERRED" in r["note"]:
+        g.add((u, TB.inferred, Literal(True)))
+    if r["note"]:
+        g.add((u, SKOS.note, Literal(r["note"], lang="en")))
 
 
 def add_model(g, mid, item):
@@ -318,6 +347,14 @@ def vocab():
         (TB.colorSample, RDF.Property, "colour sample", "色見本", "A colour of this livery, taken from the 3D model's faces."),
         (TB.areaShare, RDF.Property, "area share", "面積の割合", "Share (0-1) of the painted surface of the 3D model that has this colour (glass, lamps, seams left out)."),
         (TB.part, RDF.Property, "part", "部分", "Which part of the vehicle the model is, when one vehicle is split into several models."),
+        (TB.usedOn, RDF.Property, "used on line", "走る路線", "A line (a Wikidata item) this class runs or ran on: the inverse direction of Wikidata P3438 (vehicle normally used), filled by hand with sources. See tb:lineUse for the status and the source."),
+        (TB.lineUse, RDF.Property, "line use", "路線での運用", "How this class is (was) used on one line, with the source: a tb:LineUse."),
+        (TB.LineUse, RDFS.Class, "Line use", "路線での運用", "One class on one line: tb:line, tb:useStatus, tb:usedUntil, dcterms:source."),
+        (TB.line, RDF.Property, "line", "路線", "The line (a Wikidata item)."),
+        (TB.useStatus, RDF.Property, "status", "運用の状態", "\"current\", \"historical\" or \"unknown\"."),
+        (TB.usedUntil, RDF.Property, "used until", "運用の終わり", "The year the class stopped running on the line, when known (the last year the source mentions it, if no end is stated)."),
+        (TB.sourceSection, RDF.Property, "source section", "出典の節", "The section of the source (dcterms:source) that names the line."),
+        (TB.inferred, RDF.Property, "inferred", "推定", "True when the source names a service (e.g. a city pair) and the line was inferred from it."),
         (TB.galleryGroup, RDF.Property, "gallery group", "ギャラリーの区分", "Group id used on the gallery page."),
     ]
     for t, typ, en, ja, c in terms:

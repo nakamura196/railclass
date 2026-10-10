@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -28,6 +29,106 @@ cls:Q659660 a skos:Concept,
         wd:Q1567915,
         wd:Q671188 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line7>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line8> ;
+    tb:usedOn wd:Q100940666,
+        wd:Q318895,
+        wd:Q321559,
+        wd:Q321761,
+        wd:Q477258,
+        wd:Q479904,
+        wd:Q540030,
+        wd:Q559660 ;
     schema:subjectOf mdl:icet_dsb,
         mdl:icet_td .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "Hamburg–Copenhagen, Dec 2007 to Sep 2017"@en ;
+    tb:line wd:Q559660 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2017"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "same service"@en ;
+    tb:line wd:Q479904 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2017"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line3> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "same service"@en ;
+    tb:line wd:Q477258 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2017"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line4> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "(Berlin–)Hamburg–Aarhus, Dec 2007 to Dec 2016"@en ;
+    tb:line wd:Q540030 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2016"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line5> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "INFERRED for the Hamburg–Flensburg leg"@en ;
+    tb:inferred true ;
+    tb:line wd:Q321559 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2016"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line6> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "Munich–Lindau–Zürich, 2001–2003; INFERRED line"@en ;
+    tb:inferred true ;
+    tb:line wd:Q100940666 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2003"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line7> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "same service; INFERRED line"@en ;
+    tb:inferred true ;
+    tb:line wd:Q318895 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2003"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q659660#line8> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/ICE_TD> ;
+    skos:note "Nuremberg–Dresden 2001–2003; INFERRED, weakest match"@en ;
+    tb:inferred true ;
+    tb:line wd:Q321761 ;
+    tb:sourceSection "Former routes" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2003"^^xsd:gYear .
+
+wd:Q100940666 rdfs:label "Munich–Buchloe railway"@en .
+
+wd:Q318895 rdfs:label "Buchloe–Lindau railway"@en .
+
+wd:Q321559 rdfs:label "Neumünster–Flensburg railway"@en .
+
+wd:Q321761 rdfs:label "Nuremberg–Cheb railway"@en .
+
+wd:Q477258 rdfs:label "Lübeck–Hamburg railway"@en .
+
+wd:Q479904 rdfs:label "Lübeck–Puttgarden railway"@en .
+
+wd:Q540030 rdfs:label "Berlin–Hamburg railway line"@en .
+
+wd:Q559660 rdfs:label "Vogelfluglinie"@en .
 

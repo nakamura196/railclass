@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -24,5 +25,57 @@ cls:Q8078904 a skos:Concept,
     wdt:P176 wd:Q391895 ;
     wdt:P279 wd:Q3959904 ;
     tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line4> ;
+    tb:usedOn wd:Q5873973,
+        wd:Q620564,
+        wd:Q669665,
+        wd:Q694717 ;
     schema:subjectOf mdl:icet_oebb .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line1> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Wien–Salzburg–München and Wien–Bregenz; sets handed back Dec 2020"@en ;
+    tb:inferred true ;
+    tb:line wd:Q694717 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line2> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Wien–Bregenz"@en ;
+    tb:inferred true ;
+    tb:line wd:Q620564 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line3> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Innsbruck services"@en ;
+    tb:inferred true ;
+    tb:line wd:Q669665 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8078904#line4> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Wien–München"@en ;
+    tb:inferred true ;
+    tb:line wd:Q5873973 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+wd:Q5873973 rdfs:label "Rosenheim–Salzburg railway"@en .
+
+wd:Q620564 rdfs:label "Arlberg railway"@en .
+
+wd:Q669665 rdfs:label "Lower Inn Valley Railway"@en .
+
+wd:Q694717 rdfs:label "Western Railway (Wien–Salzburg)"@en .
 
