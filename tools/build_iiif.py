@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://nakamura196.github.io/train-bodies/"
 CONTEXT = "http://iiif.io/api/presentation/4/context.json"
 PROVIDER = {"id": "https://github.com/nakamura196", "type": "Agent",
-            "label": {"ja": ["中村 覚（東京大学）"], "en": ["Satoru Nakamura (The University of Tokyo)"]}}
+            "label": {"ja": ["中村 覚"], "en": ["Satoru Nakamura"]}}
 KIND = {"real": {"ja": "実車の特徴", "en": "Real car"},
         "toy": {"ja": "模型の都合", "en": "Toy adaptation"},
         "guess": {"ja": "推測", "en": "Inferred"}}
