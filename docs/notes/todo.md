@@ -90,6 +90,7 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
       2026-10-10 7:50 コミット 1aa7372・push・公開済み（線は 2 本だけ: Gäubahn・Madrid–Seville）。点検 `npm test` も公開の手順に入った
 - [x] 残りの線を足して公開し直す: 切り出しは会話から切り離して動いている（`pgrep -fl tools/osm_lines.py`、記録 data/osm_lines.log、2026-10-10 7:50 で 6/42）。
       2026-10-10 10:50 取れなかった 12 本を 1 本ずつ取り直した（記録 data/osm_retry.log）: 9 本取れて、線は 29/42。Q802606 は OSM に wikidata= の付いた relation が無かった。Q1201543・Q489609 はまた 504。Q559660（Fugleflugtslinjen）は道路とフェリーの relation も入っている
+      2026-10-10 残りの 504 の 2 本を mail.ru のミラーで取り直した（記録 data/osm_retry.log）: Q1201543（Detroit People Mover）・Q489609（龍仁軽電鉄）とも取れて、線は 31/42。札の付いた路線 31 本はこれで全部
       終わったら、失敗した路線を `--only Q… --api https://maps.mail.ru/osm/tools/overpass/api/interpreter` で取り直す → `_osm.tsv` を全件で作り直す（`--count` 以外の全体の流し直しは取れた分を飛ばす）→ docs/lines をコミット → push → `zsh scripts/deploy-pages.zsh`
 - [x] 地図を MapLibre GL JS に替える（2026-10-10 7:52 本人の決定。理由: 暗い表示・地球儀表示。背景は OpenFreeMap）。
       2026-10-10 8:00 替えた（maplibre-gl 5.6.0 を CDN から。背景は OpenFreeMap の positron／dark で、サイトの明暗の切り替えに追従。地球儀表示。線の名前は重ねると出る）。
