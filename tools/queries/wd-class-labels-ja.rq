@@ -1,0 +1,5 @@
+# Wikidata: Japanese labels of every rolling stock class item (same population as wd-classes.rq), for the search page.
+SELECT ?item (SAMPLE(?ja) AS ?label_ja) WHERE {
+ ?item wdt:P31 ?t. ?t wdt:P279* wd:Q811704.
+ ?item rdfs:label ?ja FILTER(LANG(?ja)="ja")
+} GROUP BY ?item
