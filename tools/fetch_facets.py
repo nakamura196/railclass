@@ -65,7 +65,13 @@ def main():
         save(f["id"], ["item", "value", "label_en", "label_ja"][:len(rows[0]) if rows else 2], rows)
         time.sleep(2)
         if f["id"] in BROADER:
-            vals = " ".join(sorted({"wd:" + r[1] for r in rows if r[1].startswith("Q")}))
+            # also the values of the classes outside the population (Amtrak Airo -> Siemens Venture), which come from
+            # the RDF (data/wikidata/rdf-cache.json, tools/build_rdf.py): without them those classes fall into "other"
+            # (found 2026-10-10 when fetching again)
+            cache = os.path.join(opt("--data", "data"), "wikidata", "rdf-cache.json")
+            extra = {v for c in json.load(open(cache, encoding="utf-8"))["classes"].values() for v in c.get(f["id"], [])} \
+                if os.path.exists(cache) else set()
+            vals = " ".join(sorted({"wd:" + r[1] for r in rows if r[1].startswith("Q")} | {"wd:" + v for v in extra}))
             save(f["id"] + "_broader", ["value", "ancestor"],
                  list(run(f"SELECT ?v ?a WHERE {{ VALUES ?v {{ {vals} }} ?v wdt:P279* ?a. }}")))
             time.sleep(2)

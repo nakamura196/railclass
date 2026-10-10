@@ -200,6 +200,7 @@ def build(model):
         "id": mid, "type": "Manifest",
         "label": src["label"], "summary": src["summary"], "metadata": src["metadata"],
         "provider": [PROVIDER],
+        "rights": "http://creativecommons.org/licenses/by/4.0/",   # the 3D models: CC BY 4.0 (decided 2026-10-10); IIIF wants the http form
         "homepage": [{"id": f"{BASE}view.html#{model}", "type": "Text", "format": "text/html",    # view.html sends it to the class page
                       "label": {"ja": ["形式のページで見る"], "en": ["Open on the class page"]}}],
         "thumbnail": [{"id": f"{BASE}thumbs/{model}.jpg", "type": "Image", "format": "image/jpeg"}],

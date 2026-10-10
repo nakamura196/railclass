@@ -4,7 +4,9 @@ const { lang } = Astro.props as { lang: Lang };
 const ui = t(lang);
 const f = ui.footer;
 const siteLinks = [[ui.nav.search, page(lang, "search/")], [ui.nav.view, page(lang, "search/") + "?has3d=1"], [f.news, page(lang, "#news")], [ui.nav.about, page(lang, "#about")]];
-const dataLinks = [[f.modelsJson, file("data/models.json")], [f.newsJson, file("data/news.json")], [f.source, "https://github.com/nakamura196/train-bodies"]];
+const dataLinks = [[f.modelsJson, file("data/models.json")], [f.allTtl, file("rdf/all.ttl")], [f.eratvTsv, file("data/eratv-wikidata.tsv")],
+                   [f.newsJson, file("data/news.json")], [f.source, "https://github.com/nakamura196/train-bodies"]];
+const [licA, licB] = f.licence.split("{cc}");   // models and their images: CC BY 4.0 (decided 2026-10-10)
 ---
 <footer class="site-footer">
   <div class="wrap">
@@ -15,7 +17,7 @@ const dataLinks = [[f.modelsJson, file("data/models.json")], [f.newsJson, file("
     <div><h2>{f.data}</h2><ul>{dataLinks.map(([l, h]) => <li><a href={h}>{l}</a></li>)}</ul></div>
     <div class="legal">
       <p>{f.unofficial}</p>
-      <p>{f.licence}</p>
+      <p>{licA}<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>{licB}</p>
       <p>{f.copyright}</p>
     </div>
   </div>

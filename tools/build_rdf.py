@@ -3,13 +3,17 @@
 Usage: python3 tools/build_rdf.py [--refresh]
   Values come from Wikidata (CC0) for the classes listed in CLASSES, plus the hand-entered values in HAND.
   Wikidata answers are cached in data/wikidata/rdf-cache.json (data/ is git-ignored); --refresh fetches again.
+  Every other class of the search (data/classes.tsv, source=wikidata rows only) gets a file too, with its values from
+  the facet tables data/wikidata/facets/<id>.tsv (tools/fetch_facets.py) and the labels from data/classes.tsv and
+  data/wikidata/class-labels-ja.tsv, so every class URI resolves (decided 2026-10-10).
 Writes:
   docs/rdf/class/<cid>.ttl|.jsonld        one class each (URI https://nakamura196.github.io/train-bodies/rdf/class/<cid>)
   docs/rdf/model/<model-id>.ttl|.jsonld        one 3D model each (URI .../rdf/model/<model-id>)
   docs/rdf/all.ttl|.jsonld   everything, plus rdfs:label @ja/@en of every Wikidata item used as a value
   docs/rdf/vocab.ttl   the few terms of our own (tb:)
 The facet properties are the ones in docs/rdf/facets.json. Livery colours come from tools/livery_colors.json
-(made by tools/extract_colors.py from the skytrain builds). No ERATV-derived data goes in here (reuse licence unconfirmed).
+(made by tools/extract_colors.py from the skytrain builds). No ERATV-derived data goes in here (only the mapping table is published, by tools/build_eratv_map.py).
+Terms (decided 2026-10-10): the data CC0 (dcterms:license on the scheme), the 3D models CC BY 4.0 (schema:license on each).
 """
 import csv, json, os, sys, time, urllib.parse, urllib.request
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
@@ -26,6 +30,8 @@ SDO = Namespace("https://schema.org/")
 CLS = Namespace(BASE + "rdf/class/")
 MDL = Namespace(BASE + "rdf/model/")
 SCHEME = URIRef(BASE + "rdf/")
+CC0 = URIRef("https://creativecommons.org/publicdomain/zero/1.0/")
+CC_BY = URIRef("https://creativecommons.org/licenses/by/4.0/")
 UA = "train-bodies/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
 
 FACETS = json.load(open(os.path.join(DOCS, "facets.json"), encoding="utf-8"))["facets"]
@@ -192,6 +198,53 @@ def add_labels(wd, qs):
     json.dump(wd, open(CACHE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 
+def read_tsv(name):
+    p = os.path.join(HERE, "data", name)
+    return list(csv.DictReader(open(p, encoding="utf-8"), delimiter="\t")) if os.path.exists(p) else []
+
+
+def tsv_classes(wd):
+    """The classes of data/classes.tsv not in CLASSES: cid -> {"label": {lang: text}, <facet id>: [values]}.
+    The labels of the values (in the facet tables) go into wd["labels"] for all.ttl, without touching the cache."""
+    out = {}
+    for r in read_tsv("classes.tsv"):
+        if r["source"] == "wikidata" and r["wikidata"] and r["wikidata"] not in CLASSES:
+            out[r["wikidata"]] = {"label": {"en": r["label"]} if r["label"] else {}}
+    for r in read_tsv("wikidata/class-labels-ja.tsv"):
+        if r["item"] in out and r["label_ja"]:
+            out[r["item"]]["label"]["ja"] = r["label_ja"]
+    for f in WD_FACETS:
+        for r in read_tsv(f"wikidata/facets/{f['id']}.tsv"):
+            c = out.get(r["item"])
+            if c is None or not r["value"]:
+                continue
+            v = r["value"]
+            if f["datatype"] == "decimal":
+                v = float(v); v = int(v) if v.is_integer() else v
+            elif f["datatype"] == "gYear":
+                v = int(v)
+            lst = c.setdefault(f["id"], [])
+            if v not in lst:
+                lst.append(v)
+            if f["datatype"] == "iri" and v not in wd["labels"]:
+                ls = {k: r[f"label_{k}"] for k in ("ja", "en") if r.get(f"label_{k}")}
+                if ls:
+                    wd["labels"][v] = ls
+    return out
+
+
+def add_tsv_class(g, cid, rec):
+    s = CLS[cid]
+    g.add((s, RDF.type, TB.VehicleClass)); g.add((s, RDF.type, SKOS.Concept)); g.add((s, SKOS.inScheme, SCHEME))
+    for lang, l in rec["label"].items():
+        g.add((s, SKOS.prefLabel, Literal(l, lang=lang))); g.add((s, RDFS.label, Literal(l, lang=lang)))
+    g.add((s, SKOS.exactMatch, WD[cid])); g.add((s, PROV.wasDerivedFrom, WD[cid]))
+    for f in WD_FACETS:
+        for v in rec.get(f["id"], []):
+            g.add((s, URIRef(f["uri"]), value_node(f, v)))
+    g.add((s, TB.has3DModel, Literal(False)))
+
+
 def gallery_items():
     d = json.load(open(os.path.join(HERE, "docs", "data", "models.json"), encoding="utf-8"))   # written by skytrain/tools/gallery.py
     return {i["id"]: i for i in d["items"]}
@@ -309,6 +362,7 @@ def add_model(g, mid, item):
         for lang, l in part.items():
             g.add((s, TB.part, Literal(l, lang=lang)))
     g.add((s, TB.galleryGroup, Literal(item["group"])))
+    g.add((s, SDO.license, CC_BY))
 
 
 CONTEXT = {
@@ -350,6 +404,7 @@ def vocab():
         g.add((t, RDF.type, typ)); g.add((t, RDFS.label, Literal(en, lang="en"))); g.add((t, RDFS.label, Literal(ja, lang="ja")))
         g.add((t, RDFS.comment, Literal(c, lang="en"))); g.add((t, RDFS.isDefinedBy, URIRef(BASE + "vocab")))
     g.add((SCHEME, RDF.type, SKOS.ConceptScheme))
+    g.add((SCHEME, DCTERMS.license, CC0))
     g.add((SCHEME, RDFS.label, Literal("train-bodies: vehicle classes", lang="en")))
     g.add((SCHEME, RDFS.label, Literal("train-bodies: 車両の形式", lang="ja")))
     return g
@@ -376,6 +431,10 @@ def main():
             if l.language == "ja":
                 title = str(l)
         write(g, os.path.join(DOCS, "class", cid), title, str(CLS[cid])); allg += g
+    more = tsv_classes(wd)
+    for cid, rec in more.items():
+        g = new_graph(); add_tsv_class(g, cid, rec)
+        write(g, os.path.join(DOCS, "class", cid), rec["label"].get("ja") or rec["label"].get("en") or cid, str(CLS[cid])); allg += g
     for mid in MODELS:
         if mid not in items:
             print("skip (not in gallery):", mid); continue
@@ -387,7 +446,7 @@ def main():
     vocab().serialize(os.path.join(DOCS, "vocab.ttl"), format="turtle")
     allg.serialize(os.path.join(DOCS, "all.ttl"), format="turtle")
     allg.serialize(os.path.join(DOCS, "all.jsonld"), format="json-ld", context=CONTEXT, indent=1, auto_compact=True)
-    print(f"{len(CLASSES)} classes, {len(by_class and [m for ms in by_class.values() for m in ms])} models, {len(allg)} triples -> {DOCS}"
+    print(f"{len(CLASSES)} + {len(more)} classes, {len(by_class and [m for ms in by_class.values() for m in ms])} models, {len(allg)} triples -> {DOCS}"
           f" (Wikidata fetched {wd['fetched']})")
 
 

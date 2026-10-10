@@ -33,17 +33,43 @@ function index() {
   return INDEX;
 }
 
-/** The ids of the classes that have an RDF file (and so a page). */
+/** The ids of the classes that have an RDF file (and so a page). Since 2026-10-10 every class of the search has one
+ *  (~14,000), so the files are read once and kept: a page must not read them all again. */
+let IDS: string[];
 export function classIds(): string[] {
-  return existsSync(CLASS_DIR) ? readdirSync(CLASS_DIR).filter(f => f.endsWith(".jsonld")).map(f => f.slice(0, -7)).sort() : [];
+  if (!IDS) IDS = existsSync(CLASS_DIR) ? readdirSync(CLASS_DIR).filter(f => f.endsWith(".jsonld")).map(f => f.slice(0, -7)).sort() : [];
+  return IDS;
 }
 
 /** The class's own node in its JSON-LD: the file is one node, or an @graph when it also holds other nodes
  *  (the tb:LineUse nodes of its lines). */
+const NODES = new Map<string, any>();
 function readClass(c: string): any {
-  const d = JSON.parse(readFileSync(resolve(CLASS_DIR, c + ".jsonld"), "utf8"));
-  if (!d["@graph"]) return d;
-  return d["@graph"].find((n: any) => typeof n["@id"] === "string" && n["@id"].endsWith(`/rdf/class/${c}`)) ?? {};
+  let n = NODES.get(c);
+  if (n === undefined) {
+    const d = JSON.parse(readFileSync(resolve(CLASS_DIR, c + ".jsonld"), "utf8"));
+    n = !d["@graph"] ? d : d["@graph"].find((x: any) => typeof x["@id"] === "string" && x["@id"].endsWith(`/rdf/class/${c}`)) ?? {};
+    NODES.set(c, n);
+  }
+  return n;
+}
+
+/** class -> the classes whose skos:broader it is (only a few classes have one, so this is small). */
+let NARROWER: Map<string, string[]>;
+function narrowerOf(c: string): string[] {
+  if (!NARROWER) {
+    NARROWER = new Map();
+    for (const k of classIds()) for (const u of many(readClass(k)["skos:broader"]).map(iri)) {
+      const b = local(u, "class"); if (b) NARROWER.set(b, [...(NARROWER.get(b) ?? []), k]);
+    }
+  }
+  return NARROWER.get(c) ?? [];
+}
+
+let ROWS: Map<string, number>;
+function rowOf(D: any, id: string): number {
+  if (!ROWS) ROWS = new Map(D.id.map((c: string, i: number) => [c, i]));
+  return ROWS.get(id) ?? -1;
 }
 
 function labels(n: any) {
@@ -58,14 +84,13 @@ const FILEPAGE = "https://commons.wikimedia.org/wiki/File:";
 
 export function classPage(id: string, lang: Lang, fmtN: (n: number) => string, yearText: (y: number) => string): ClassPage {
   const node = readClass(id);
-  const all = classIds().map(c => [c, readClass(c)] as const);
-  const nameOf = (c: string) => pick(labels(all.find(([k]) => k === c)?.[1] ?? {}), lang) || c;
+  const nameOf = (c: string) => pick(labels(readClass(c)), lang) || c;
   const l = labels(node);
   const name = pick(l, lang) || id;
   const otherName = lang === "ja" ? l.en : l.ja;
 
   const D = index();
-  const row = D ? D.id.indexOf(id) : -1;
+  const row = D ? rowOf(D, id) : -1;
   const facets: FacetRow[] = [];
   let photo: ClassPage["photo"] = null;
   if (row >= 0) {
@@ -99,7 +124,7 @@ export function classPage(id: string, lang: Lang, fmtN: (n: number) => string, y
     id, name, other: otherName && otherName !== name ? otherName : null,
     wikidata: exact, derivedFrom: derived,
     broader: many(node["skos:broader"]).map(iri).map(u => local(u, "class")).filter(Boolean).map(c => ({ id: c!, name: nameOf(c!) })),
-    narrower: all.filter(([, n]) => many(n["skos:broader"]).map(iri).some(u => local(u, "class") === id)).map(([c]) => ({ id: c, name: nameOf(c) })),
+    narrower: narrowerOf(id).map(c => ({ id: c, name: nameOf(c) })),
     facets,
     models: many(node["schema:subjectOf"]).map(iri).map(u => local(u, "model")).filter(Boolean) as string[],
     photo,

@@ -4,7 +4,7 @@ The page docs/search/index.html (static, with search.js) loads index.json; nothi
 Inputs:
   docs/rdf/facets.json                  the facets (made by the RDF work; read, not listed here)
   data/classes.tsv                      the class list, Japan excluded (tools/build_classes.py); only source=wikidata
-                                        rows are used: ERATV data stays out of docs/ until its reuse terms are known
+                                        rows are used (of ERATV, only the mapping table is published: tools/build_eratv_map.py)
   data/wikidata/class-labels-ja.tsv     Japanese labels (tools/queries/wd-class-labels-ja.rq)
   data/wikidata/facets/<id>.tsv         facet values per class (tools/fetch_facets.py)
   data/wikidata/facets/_image_credit.tsv  author, licence and thumbnail of each photo (tools/fetch_image_credits.py), if present

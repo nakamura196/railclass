@@ -13,6 +13,75 @@
   },
   "@graph": [
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6468"
+      },
+      "rdfs:label": "dkgrey",
+      "schema:color": "#3A4048",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0406"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color4"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/mk1/skytrain_mk1.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "TransLink livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "TransLink の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1",
       "@type": "schema:3DModel",
       "galleryGroup": "skytrain",
@@ -35,6 +104,9 @@
       "schema:encodingFormat": "model/gltf-binary",
       "schema:height": {
         "@id": "_:mk1-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
       },
       "schema:name": {
         "@language": "ja",
@@ -105,75 +177,6 @@
       "wdt:P462": {
         "@id": "wd:Q1088"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0406"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.6468"
-      },
-      "rdfs:label": "dkgrey",
-      "schema:color": "#3A4048",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color4"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/mk1/skytrain_mk1.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q1142140"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "TransLink livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q1088"
-        }
-      ]
     }
   ]
 }

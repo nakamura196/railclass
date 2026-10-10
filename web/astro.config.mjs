@@ -6,7 +6,10 @@ export default defineConfig({
   site: "https://nakamura196.github.io",
   base: "/train-bodies",
   trailingSlash: "ignore",
-  build: { format: "preserve" },   // view.astro -> view.html, search/index.astro -> search/index.html (the URLs in use)
+  // format: view.astro -> view.html, search/index.astro -> search/index.html (the URLs in use).
+  // inlineStylesheets: since every class has a page (~28,000 with both languages, 2026-10-10), the CSS is one shared file,
+  // not 4 KB copied into each page (about 110 MB of the 1 GB GitHub Pages allows).
+  build: { format: "preserve", inlineStylesheets: "never" },
   i18n: {
     locales: ["ja", "en"],
     defaultLocale: "ja",
