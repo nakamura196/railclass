@@ -1,0 +1,34 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:allegra a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery> ;
+    schema:about cls:Q671805 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/allegra.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "スイスの山岳路線を走る 3 車体連接の電車。2010年から。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.7 ] ;
+    schema:name "Allegra（レーティッシュ鉄道）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/allegra/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/allegra.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#allegra> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery> a tb:Livery ;
+    rdfs:label "Rhaetian Railway livery"@en,
+        "レーティッシュ鉄道の塗装"@ja ;
+    tb:liveryOf wd:Q177598 .
+

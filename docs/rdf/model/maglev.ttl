@@ -1,0 +1,34 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:maglev a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/maglev#livery> ;
+    schema:about cls:Q289090 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/maglev.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "2004年から空港と市内を結ぶ、車輪の無いトランスラピッド。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "上海リニア"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/maglev/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/maglev.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#maglev> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#livery> a tb:Livery ;
+    rdfs:label "Shanghai Maglev livery"@en,
+        "上海リニアの塗装"@ja ;
+    tb:liveryOf wd:Q769591 .
+

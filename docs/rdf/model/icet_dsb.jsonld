@@ -13,52 +13,6 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_dsb/icet_dsb.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q83824"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "DSB livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "DSB の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q1088"
-        }
-      ]
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4",
       "@type": "ColorSample",
       "areaShare": {
@@ -82,6 +36,19 @@
       "schema:color": "#14161A",
       "wdt:P462": {
         "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0096"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
       }
     },
     {
@@ -166,19 +133,6 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0096"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2",
       "@type": "ColorSample",
       "areaShare": {
@@ -190,6 +144,52 @@
       "wdt:P462": {
         "@id": "wd:Q1088"
       }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_dsb/icet_dsb.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q83824"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "DSB livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "DSB の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
     }
   ]
 }

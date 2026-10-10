@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ヴァンデ・バーラト</title>
+<link rel="alternate" type="text/turtle" href="vandebharat.ttl">
+<link rel="alternate" type="application/ld+json" href="vandebharat.jsonld">
+</head><body><h1>ヴァンデ・バーラト</h1>
+<p><code>https://nakamura196.github.io/train-bodies/rdf/model/vandebharat</code></p>
+<p><a href="vandebharat.ttl">Turtle</a> · <a href="vandebharat.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
+<pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix schema: &lt;https://schema.org/&gt; .
+@prefix tb: &lt;https://nakamura196.github.io/train-bodies/vocab#&gt; .
+@prefix wd: &lt;http://www.wikidata.org/entity/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+mdl:vandebharat a schema:3DModel ;
+    tb:galleryGroup &quot;world&quot; ;
+    tb:livery &lt;https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#livery&gt; ;
+    schema:about cls:Q119775864 ;
+    schema:contentUrl &lt;https://nakamura196.github.io/train-bodies/models/vandebharat.glb&gt; ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 149.9 ] ;
+    schema:description &quot;インドの高速電車。2023年からのサフランと灰の塗装。&quot;@ja ;
+    schema:encodingFormat &quot;model/gltf-binary&quot; ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 38.0 ] ;
+    schema:name &quot;ヴァンデ・バーラト&quot;@ja ;
+    schema:subjectOf &lt;https://nakamura196.github.io/train-bodies/iiif/vandebharat/manifest.json&gt; ;
+    schema:thumbnailUrl &lt;https://nakamura196.github.io/train-bodies/thumbs/vandebharat.jpg&gt; ;
+    schema:url &lt;https://nakamura196.github.io/train-bodies/view.html#vandebharat&gt; ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 40.0 ] .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#livery&gt; a tb:Livery ;
+    rdfs:label &quot;Vande Bharat livery (saffron and grey, from 2023)&quot;@en,
+        &quot;ヴァンデ・バーラトの塗装（サフランと灰、2023年から）&quot;@ja ;
+    tb:liveryOf wd:Q819425 .
+
+</pre>
+</body></html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Allegra（レーティッシュ鉄道）</title>
+<link rel="alternate" type="text/turtle" href="allegra.ttl">
+<link rel="alternate" type="application/ld+json" href="allegra.jsonld">
+</head><body><h1>Allegra（レーティッシュ鉄道）</h1>
+<p><code>https://nakamura196.github.io/train-bodies/rdf/model/allegra</code></p>
+<p><a href="allegra.ttl">Turtle</a> · <a href="allegra.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
+<pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix schema: &lt;https://schema.org/&gt; .
+@prefix tb: &lt;https://nakamura196.github.io/train-bodies/vocab#&gt; .
+@prefix wd: &lt;http://www.wikidata.org/entity/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+mdl:allegra a schema:3DModel ;
+    tb:galleryGroup &quot;world&quot; ;
+    tb:livery &lt;https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery&gt; ;
+    schema:about cls:Q671805 ;
+    schema:contentUrl &lt;https://nakamura196.github.io/train-bodies/models/allegra.glb&gt; ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 149.9 ] ;
+    schema:description &quot;スイスの山岳路線を走る 3 車体連接の電車。2010年から。&quot;@ja ;
+    schema:encodingFormat &quot;model/gltf-binary&quot; ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 37.7 ] ;
+    schema:name &quot;Allegra（レーティッシュ鉄道）&quot;@ja ;
+    schema:subjectOf &lt;https://nakamura196.github.io/train-bodies/iiif/allegra/manifest.json&gt; ;
+    schema:thumbnailUrl &lt;https://nakamura196.github.io/train-bodies/thumbs/allegra.jpg&gt; ;
+    schema:url &lt;https://nakamura196.github.io/train-bodies/view.html#allegra&gt; ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 40.0 ] .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery&gt; a tb:Livery ;
+    rdfs:label &quot;Rhaetian Railway livery&quot;@en,
+        &quot;レーティッシュ鉄道の塗装&quot;@ja ;
+    tb:liveryOf wd:Q177598 .
+
+</pre>
+</body></html>

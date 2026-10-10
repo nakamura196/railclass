@@ -49,6 +49,10 @@ CLASSES = {
     "Q140611223": ("Q140611223", None, None),                   # Amtrak Airo
     "Q1087710": ("Q1087710", None, None),                       # AVE Class 102
     "Q137921671": ("Q137921671", None, None),                   # New Flyer XD60 (a bus model, not rolling stock)
+    "Q671805": ("Q671805", None, None),                         # Rhaetian Railway ABe 8/12 (Allegra)
+    "Q370895": ("Q370895", None, None),                         # FS ETR 400 (Frecciarossa 1000)
+    "Q289090": ("Q289090", None, None),                         # Transrapid 08 (Shanghai Maglev vehicles)
+    "Q119775864": ("Q119775864", None, None),                   # Vande Bharat
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -67,7 +71,8 @@ for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
 
 # Japanese labels for Wikidata classes that have none (hand-entered; Wikidata's own labels win when they exist)
 LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q8078904": "ÖBB 4011形",
-            "Q140611223": "Amtrak Airo", "Q137921671": "New Flyer XD60"}
+            "Q140611223": "Amtrak Airo", "Q137921671": "New Flyer XD60",
+            "Q289090": "トランスラピッド 08"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -78,6 +83,11 @@ LIVERIES = {
     "dsb": ({"en": "DSB livery", "ja": "DSB の塗装"}, "Q83824"),
     "amtrak-cascades": ({"en": "Amtrak Cascades livery", "ja": "Amtrak Cascades の塗装"}, "Q697217"),
     "renfe-ave": ({"en": "Renfe AVE livery", "ja": "Renfe AVE の塗装"}, "Q2476154"),
+    "rhb": ({"en": "Rhaetian Railway livery", "ja": "レーティッシュ鉄道の塗装"}, "Q177598"),
+    "trenitalia-fr": ({"en": "Trenitalia Frecciarossa livery (red to the bottom, from 2022)", "ja": "Trenitalia フレッチャロッサの塗装（下まで赤、2022年から）"}, "Q286650"),
+    # Wikidata has no item for the operating company, so the livery points to the line (Shanghai maglev train)
+    "shanghai-maglev": ({"en": "Shanghai Maglev livery", "ja": "上海リニアの塗装"}, "Q769591"),
+    "ir-vande-bharat": ({"en": "Vande Bharat livery (saffron and grey, from 2023)", "ja": "ヴァンデ・バーラトの塗装（サフランと灰、2023年から）"}, "Q819425"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -96,6 +106,10 @@ MODELS = {
     "ave102": ("Q1087710", "renfe-ave", None),
     "bus49_front": ("Q137921671", "translink", {"en": "front half of the articulated bus", "ja": "連節バスの前半分"}),
     "bus49_rear": ("Q137921671", "translink", {"en": "rear half of the articulated bus", "ja": "連節バスの後ろ半分"}),
+    "allegra": ("Q671805", "rhb", None),
+    "frecciarossa": ("Q370895", "trenitalia-fr", None),
+    "maglev": ("Q289090", "shanghai-maglev", None),
+    "vandebharat": ("Q119775864", "ir-vande-bharat", None),
 }
 
 

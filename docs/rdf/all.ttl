@@ -86,6 +86,9 @@ tb:part a rdf:Property ;
     rdfs:comment "Which part of the vehicle the model is, when one vehicle is split into several models."@en ;
     rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 
+wd:Q106530439 rdfs:label "25 kV, 50 Hz AC railway electrification"@en,
+        "交流25kV 50Hz鉄道電化"@ja .
+
 wd:Q1100969 rdfs:label "Talgo"@en,
         "タルゴ"@ja .
 
@@ -95,7 +98,19 @@ wd:Q1126054 rdfs:label "NFI Group"@en,
 wd:Q1567915 rdfs:label "diesel multiple unit"@en,
         "気動車"@ja .
 
+wd:Q1621110 rdfs:label "Hitachi Rail"@en,
+        "日立レール・リミテッド"@ja .
+
+wd:Q21251675 rdfs:label "3000 V DC railway electrification"@en,
+        "直流3000V鉄道電化"@ja .
+
+wd:Q21253457 rdfs:label "1500 V DC railway electrification"@en,
+        "直流1500V鉄道電化"@ja .
+
 wd:Q23239 rdfs:label "アムトラック"@ja .
+
+wd:Q24609 rdfs:label "1000 mm track gauge"@en,
+        "メートルゲージ"@ja .
 
 wd:Q2476154 rdfs:label "Renfe Operadora"@en,
         "レンフェ"@ja .
@@ -124,8 +139,7 @@ wd:Q40 rdfs:label "Austria"@en,
 wd:Q4102249 rdfs:label "subway car"@en,
         "地下鉄車両"@ja .
 
-wd:Q483373 rdfs:label "electric multiple unit"@en,
-        "電車"@ja .
+wd:Q43256588 rdfs:label "ETR"@en .
 
 wd:Q59618126 rdfs:label "New Flyer Xcelsior"@en,
         "ニューフライヤー・エクセルシオール"@ja .
@@ -133,14 +147,26 @@ wd:Q59618126 rdfs:label "New Flyer Xcelsior"@en,
 wd:Q654749 rdfs:label "articulated bus"@en,
         "連節バス"@ja .
 
+wd:Q666703 rdfs:label "Stadler Rail"@en,
+        "シュタッドラー・レール"@ja .
+
+wd:Q668 rdfs:label "India"@en,
+        "インド"@ja .
+
 wd:Q697217 rdfs:label "Amtrak Cascades"@en,
         "アムトラック・カスケーズ"@ja .
+
+wd:Q769591 rdfs:label "Shanghai maglev train"@en,
+        "上海トランスラピッド"@ja .
 
 wd:Q83824 rdfs:label "DSB"@en,
         "デンマーク国鉄"@ja .
 
 wd:Q83910 rdfs:label "Red Nacional de los Ferrocarriles Españoles"@en,
         "レンフェ"@ja .
+
+wd:Q870 rdfs:label "train"@en,
+        "列車"@ja .
 
 wd:Q96106536 rdfs:label "Siemens Venture"@en,
         "シーメンス・ベンチャー"@ja .
@@ -185,6 +211,22 @@ cls:Q115612330 a skos:Concept,
     tb:has3DModel true ;
     schema:subjectOf mdl:icet_411 .
 
+cls:Q119775864 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Vande Bharat"@en,
+        "ヴァンデ・バーラト (鉄道車両)"@ja ;
+    skos:exactMatch wd:Q119775864 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Vande Bharat"@en,
+        "ヴァンデ・バーラト (鉄道車両)"@ja ;
+    prov:wasDerivedFrom wd:Q119775864 ;
+    wdt:P137 wd:Q819425 ;
+    wdt:P17 wd:Q668 ;
+    wdt:P279 wd:Q483373,
+        wd:Q870 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:vandebharat .
+
 cls:Q137972762 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "DBAG Class 415"@en,
@@ -220,6 +262,58 @@ cls:Q140611223 a skos:Concept,
     wdt:P279 wd:Q96106536 ;
     tb:has3DModel true ;
     schema:subjectOf mdl:airo .
+
+cls:Q289090 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Transrapid 08"@en,
+        "トランスラピッド 08"@ja ;
+    skos:exactMatch wd:Q289090 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Transrapid 08"@en,
+        "トランスラピッド 08"@ja ;
+    prov:wasDerivedFrom wd:Q289090 ;
+    wdt:P17 wd:Q183 ;
+    wdt:P2052 501.0 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:maglev .
+
+cls:Q370895 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Elettrotreni FS ETR 400 e 410"@en,
+        "イタリア国鉄ETR400電車"@ja ;
+    skos:exactMatch wd:Q370895 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Elettrotreni FS ETR 400 e 410"@en,
+        "イタリア国鉄ETR400電車"@ja ;
+    prov:wasDerivedFrom wd:Q370895 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q286650 ;
+    wdt:P176 wd:Q1621110,
+        wd:Q688893 ;
+    wdt:P279 wd:Q43256588 ;
+    wdt:P729 "2015"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439,
+        wd:Q21251675,
+        wd:Q21253457 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:frecciarossa .
+
+cls:Q671805 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Rhaetian Railway ABe 8/12"@en,
+        "レーティッシュ鉄道ABe8/12 3501-3515形電車"@ja ;
+    skos:exactMatch wd:Q671805 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Rhaetian Railway ABe 8/12"@en,
+        "レーティッシュ鉄道ABe8/12 3501-3515形電車"@ja ;
+    prov:wasDerivedFrom wd:Q671805 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P137 wd:Q177598 ;
+    wdt:P176 wd:Q666703 ;
+    wdt:P2052 100.0 ;
+    wdt:P279 wd:Q483373 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:allegra .
 
 cls:Q8078904 a skos:Concept,
         tb:VehicleClass ;
@@ -419,6 +513,32 @@ mdl:airo a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/airo#color9> ;
     tb:liveryOf wd:Q697217 .
 
+mdl:allegra a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery> ;
+    schema:about cls:Q671805 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/allegra.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "スイスの山岳路線を走る 3 車体連接の電車。2010年から。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.7 ] ;
+    schema:name "Allegra（レーティッシュ鉄道）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/allegra/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/allegra.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#allegra> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery> a tb:Livery ;
+    rdfs:label "Rhaetian Railway livery"@en,
+        "レーティッシュ鉄道の塗装"@ja ;
+    tb:liveryOf wd:Q177598 .
+
 mdl:ave102 a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery> ;
@@ -605,6 +725,32 @@ mdl:bus49_rear a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color3>,
         <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4> ;
     tb:liveryOf wd:Q1142140 .
+
+mdl:frecciarossa a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> ;
+    schema:about cls:Q370895 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/frecciarossa.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "イタリアの高速列車 ETR 400。2022年からの、下まで赤い塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "フレッチャロッサ 1000"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/frecciarossa/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/frecciarossa.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#frecciarossa> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> a tb:Livery ;
+    rdfs:label "Trenitalia Frecciarossa livery (red to the bottom, from 2022)"@en,
+        "Trenitalia フレッチャロッサの塗装（下まで赤、2022年から）"@ja ;
+    tb:liveryOf wd:Q286650 .
 
 mdl:icet_411 a schema:3DModel ;
     tb:galleryGroup "icet" ;
@@ -990,6 +1136,32 @@ mdl:icet_td a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color5> ;
     tb:liveryOf wd:Q9322 .
 
+mdl:maglev a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/maglev#livery> ;
+    schema:about cls:Q289090 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/maglev.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "2004年から空港と市内を結ぶ、車輪の無いトランスラピッド。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "上海リニア"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/maglev/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/maglev.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#maglev> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#livery> a tb:Livery ;
+    rdfs:label "Shanghai Maglev livery"@en,
+        "上海リニアの塗装"@ja ;
+    tb:liveryOf wd:Q769591 .
+
 mdl:mk1 a schema:3DModel ;
     tb:galleryGroup "skytrain" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery> ;
@@ -1217,13 +1389,42 @@ mdl:mk5 a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2> ;
     tb:liveryOf wd:Q1142140 .
 
+mdl:vandebharat a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#livery> ;
+    schema:about cls:Q119775864 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/vandebharat.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "インドの高速電車。2023年からのサフランと灰の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "ヴァンデ・バーラト"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/vandebharat/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/vandebharat.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#vandebharat> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#livery> a tb:Livery ;
+    rdfs:label "Vande Bharat livery (saffron and grey, from 2023)"@en,
+        "ヴァンデ・バーラトの塗装（サフランと灰、2023年から）"@ja ;
+    tb:liveryOf wd:Q819425 .
+
 wd:Q129172 rdfs:label "InterCityExpress"@en,
         "ICE"@ja .
 
 wd:Q1415234 rdfs:label "15 kV, 16.7 Hz AC railway electrification"@en .
 
-wd:Q183 rdfs:label "Germany"@en,
-        "ドイツ"@ja .
+wd:Q177598 rdfs:label "Rhaetian Railway"@en,
+        "レーティッシュ鉄道"@ja .
+
+wd:Q286650 rdfs:label "Trenitalia"@en,
+        "トレニタリア"@ja .
 
 wd:Q309084 rdfs:label "アルストム"@ja .
 
@@ -1241,6 +1442,9 @@ wd:Q671188 rdfs:label "tilting train"@en,
 
 wd:Q81230 rdfs:label "Siemens"@en,
         "シーメンス"@ja .
+
+wd:Q819425 rdfs:label "Indian Railways"@en,
+        "インド鉄道"@ja .
 
 cls:Q137921671 a skos:Concept,
         tb:VehicleClass ;
@@ -1283,6 +1487,12 @@ cls:Q659660 a skos:Concept,
 wd:Q13402959 rdfs:label "high-speed train"@en,
         "高速列車"@ja .
 
+wd:Q183 rdfs:label "Germany"@en,
+        "ドイツ"@ja .
+
+wd:Q483373 rdfs:label "electric multiple unit"@en,
+        "電車"@ja .
+
 wd:Q83822 rdfs:label "Austrian Federal Railways"@en,
         "オーストリア連邦鉄道"@ja .
 
@@ -1290,9 +1500,6 @@ wd:Q141170526 rdfs:label "British Columbia Rapid Transit Company"@en .
 
 wd:Q47071 rdfs:label "brown"@en,
         "茶色"@ja .
-
-wd:Q688893 rdfs:label "ALSTOM Transportation Germany"@en,
-        "ボンバルディア・トランスポーテーション"@ja .
 
 wd:Q696668 rdfs:label "ICE T"@en,
         "ICE T"@ja .
@@ -1336,24 +1543,23 @@ cls:Q696668 a skos:Concept,
 wd:Q16 rdfs:label "Canada"@en,
         "カナダ"@ja .
 
-wd:Q1999572 rdfs:label "standard-gauge railway"@en,
-        "標準軌"@ja .
-
 wd:Q3133 rdfs:label "green"@en,
         "緑"@ja .
 
+wd:Q688893 rdfs:label "ALSTOM Transportation Germany"@en,
+        "ボンバルディア・トランスポーテーション"@ja .
+
 wd:Q1142140 rdfs:label "TransLink"@en,
         "トランスリンク"@ja .
+
+wd:Q1999572 rdfs:label "standard-gauge railway"@en,
+        "標準軌"@ja .
 
 wd:Q9322 rdfs:label "Deutsche Bahn"@en,
         "ドイツ鉄道"@ja .
 
 wd:Q3142 rdfs:label "red"@en,
         "赤"@ja .
-
-<https://nakamura196.github.io/train-bodies/rdf/> a skos:ConceptScheme ;
-    rdfs:label "train-bodies: vehicle classes"@en,
-        "train-bodies: 車両の形式"@ja .
 
 wd:Q1088 rdfs:label "blue"@en,
         "青"@ja .
@@ -1363,6 +1569,10 @@ wd:Q23445 rdfs:label "black"@en,
 
 wd:Q23444 rdfs:label "white"@en,
         "白"@ja .
+
+<https://nakamura196.github.io/train-bodies/rdf/> a skos:ConceptScheme ;
+    rdfs:label "train-bodies: vehicle classes"@en,
+        "train-bodies: 車両の形式"@ja .
 
 wd:Q42519 rdfs:label "grey"@en,
         "灰色"@ja .

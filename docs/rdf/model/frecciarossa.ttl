@@ -1,0 +1,34 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:frecciarossa a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> ;
+    schema:about cls:Q370895 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/frecciarossa.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "イタリアの高速列車 ETR 400。2022年からの、下まで赤い塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "フレッチャロッサ 1000"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/frecciarossa/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/frecciarossa.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#frecciarossa> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> a tb:Livery ;
+    rdfs:label "Trenitalia Frecciarossa livery (red to the bottom, from 2022)"@en,
+        "Trenitalia フレッチャロッサの塗装（下まで赤、2022年から）"@ja ;
+    tb:liveryOf wd:Q286650 .
+
