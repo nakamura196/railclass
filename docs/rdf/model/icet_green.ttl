@@ -1,0 +1,34 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:icet_green a schema:3DModel ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery> ;
+    schema:about cls:Q696668 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_green.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "2019〜2022年。帯の前半が緑で、ラベルとプラグの印が付く。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "緑の帯"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_green/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_green.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#icet_green> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery> a tb:Livery ;
+    rdfs:label "Deutsche Bahn livery with green stripe (2019–2022)"@en,
+        "DB の塗装（緑の帯、2019〜2022年）"@ja ;
+    tb:liveryOf wd:Q9322 .
+

@@ -1,0 +1,34 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:icet_411 a schema:3DModel ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery> ;
+    schema:about cls:Q115612330 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_411.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "標準の塗装。赤い帯と「ICE」の文字、鼻に DB のマーク。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "411（7両編成）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_411/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_411.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#icet_411> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery> a tb:Livery ;
+    rdfs:label "Deutsche Bahn livery (red stripe)"@en,
+        "DB の塗装（赤い帯）"@ja ;
+    tb:liveryOf wd:Q9322 .
+

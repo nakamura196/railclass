@@ -1,0 +1,57 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+
+tb:Livery a rdfs:Class ;
+    rdfs:label "Livery"@en,
+        "塗装"@ja ;
+    rdfs:comment "A paint scheme that a 3D model reproduces."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:VehicleClass a rdfs:Class ;
+    rdfs:label "Vehicle class"@en,
+        "形式"@ja ;
+    rdfs:comment "A class (type) of railway vehicle or road vehicle; one record per class."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+<https://nakamura196.github.io/train-bodies/rdf/> a skos:ConceptScheme ;
+    rdfs:label "train-bodies: vehicle classes"@en,
+        "train-bodies: 車両の形式"@ja .
+
+tb:galleryGroup a rdf:Property ;
+    rdfs:label "gallery group"@en,
+        "ギャラリーの区分"@ja ;
+    rdfs:comment "Group id used on the gallery page."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:handEntered a rdf:Property ;
+    rdfs:label "hand-entered property"@en,
+        "手入力の項目"@ja ;
+    rdfs:comment "A property whose values on this class were entered by hand (see dcterms:source), not copied from Wikidata."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:has3DModel a rdf:Property ;
+    rdfs:label "has 3D model"@en,
+        "3D モデルあり"@ja ;
+    rdfs:comment "True when at least one 3D model in train-bodies depicts this class."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:livery a rdf:Property ;
+    rdfs:label "livery"@en,
+        "塗装"@ja ;
+    rdfs:comment "The livery a 3D model reproduces."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:liveryOf a rdf:Property ;
+    rdfs:label "livery of"@en,
+        "塗装の持ち主"@ja ;
+    rdfs:comment "The operator whose livery this is."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:part a rdf:Property ;
+    rdfs:label "part"@en,
+        "部分"@ja ;
+    rdfs:comment "Which part of the vehicle the model is, when one vehicle is split into several models."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+

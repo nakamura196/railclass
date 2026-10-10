@@ -1,0 +1,34 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:icet_td a schema:3DModel ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_td#livery> ;
+    schema:about cls:Q659660 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_td.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "ディーゼル版の 605 形。外から見ると 411 と同じ。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "ICE TD（DB）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_td/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_td.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#icet_td> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_td#livery> a tb:Livery ;
+    rdfs:label "Deutsche Bahn livery (red stripe)"@en,
+        "DB の塗装（赤い帯）"@ja ;
+    tb:liveryOf wd:Q9322 .
+

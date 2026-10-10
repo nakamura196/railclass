@@ -1,0 +1,36 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:bus49_rear a schema:3DModel ;
+    tb:galleryGroup "bus" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery> ;
+    tb:part "rear half of the articulated bus"@en,
+        "連節バスの後ろ半分"@ja ;
+    schema:about cls:Q137921671 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/bus49_rear.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 143.5 ] ;
+    schema:description "同じバスの後ろ半分。2 台をつないで走らせる。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 46.0 ] ;
+    schema:name "49番バス（後ろ）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/bus49_rear/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/bus49_rear.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#bus49_rear> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery> a tb:Livery ;
+    rdfs:label "TransLink livery"@en,
+        "TransLink の塗装"@ja ;
+    tb:liveryOf wd:Q1142140 .
+

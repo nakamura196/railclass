@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Airo（Amtrak Cascades）</title>
+<link rel="alternate" type="text/turtle" href="airo.ttl">
+<link rel="alternate" type="application/ld+json" href="airo.jsonld">
+</head><body><h1>Airo（Amtrak Cascades）</h1>
+<p><code>https://nakamura196.github.io/train-bodies/rdf/model/airo</code></p>
+<p><a href="airo.ttl">Turtle</a> · <a href="airo.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
+<pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix schema: &lt;https://schema.org/&gt; .
+@prefix tb: &lt;https://nakamura196.github.io/train-bodies/vocab#&gt; .
+@prefix wd: &lt;http://www.wikidata.org/entity/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+mdl:airo a schema:3DModel ;
+    tb:galleryGroup &quot;world&quot; ;
+    tb:livery &lt;https://nakamura196.github.io/train-bodies/rdf/model/airo#livery&gt; ;
+    schema:about cls:Q140611223 ;
+    schema:contentUrl &lt;https://nakamura196.github.io/train-bodies/models/airo.glb&gt; ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 149.9 ] ;
+    schema:description &quot;2026年9月に走り始めた、シアトル〜バンクーバーの新型客車。&quot;@ja ;
+    schema:encodingFormat &quot;model/gltf-binary&quot; ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 38.0 ] ;
+    schema:name &quot;Airo（Amtrak Cascades）&quot;@ja ;
+    schema:subjectOf &lt;https://nakamura196.github.io/train-bodies/iiif/airo/manifest.json&gt; ;
+    schema:thumbnailUrl &lt;https://nakamura196.github.io/train-bodies/thumbs/airo.jpg&gt; ;
+    schema:url &lt;https://nakamura196.github.io/train-bodies/#airo&gt; ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 40.0 ] .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/airo#livery&gt; a tb:Livery ;
+    rdfs:label &quot;Amtrak Cascades livery&quot;@en,
+        &quot;Amtrak Cascades の塗装&quot;@ja ;
+    tb:liveryOf wd:Q697217 .
+
+</pre>
+</body></html>

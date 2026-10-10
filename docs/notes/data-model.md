@@ -146,3 +146,42 @@ URI の取り決め（3 つのセッションで共有する。変えるとき�
   （項目の URI・日本語と英語の名前・値の型。候補は種類・国・運行者・製造者・軌間・電化方式・最高速度・製造年・軸配置）。
   C はこれを読んで絞り込みの項目を作り、手で項目を書き並べない。A が出すまで、C は画面の作りと索引の仕組みを先に進める。
 - 追加の指示（同じ日）: 検索結果にページ送りと、格子表示（grid）・一覧表示（list）の切り替えを付ける。→ C の担当。
+
+### 担当 A: 絞り込みの項目と、形式・モデルの RDF（この日）
+
+- `docs/rdf/facets.json` を先に出した（C の提案した形をそのまま採用）。項目は 10: 種類 P279・国 P17・運行者 P137・製造者 P176・
+  軌間 P1064・電化方式 P930・軸配置 P2978・最高速度 P2052（km/h）・営業開始年 P729（gYear）・3D モデルあり（自前の語彙）。
+  - **述語は Wikidata の属性（wdt:）をそのまま使う。** 自前の属性を作って Wikidata に対応付ける案は却下。
+    C が Wikidata から全 1.4 万形式の値を取るとき、同じ URI のまま突き合わせられるため。
+  - 種類は P31 でなく P279。形式はどれも P31 が rolling stock class で、P31 では分かれない。
+  - **`inherit`（上位の形式から値を借りる）を項目ごとに付けた。** Wikidata は下位の形式に値が無いことが多い
+    （DBAG Class 411 に製造者が無く、ICE T にはある）。値は RDF に書き写さず、skos:broader をたどって索引側で補う。
+    書き写すと「Wikidata に書いてあること」と「こちらが推した値」の区別が消えるため。運行者と営業開始年は下位で違うので借りない。
+- 実測: Wikidata で P31 が rolling stock class とその下位クラスの項目のうち、各属性を持つ項目数（この日）。
+  P279 14,451・P176 12,289・P137 12,107・P1064 10,428・P2978 7,624・P17 7,436・P729 4,883・P2052 3,922・P930 1,901・P571 357。
+  → 製造年は P571（inception）ではなく P729（service entry）を使う。
+- `tools/build_rdf.py` → `docs/rdf/`。形式 13（Wikidata 9・自前 4）、モデル 14、全体 731 トリプル。
+  - 形式: `rdf/class/<cid>`（skos:Concept かつ tb:VehicleClass）。Wikidata の項目へは skos:exactMatch、
+    SkyTrain Mark I〜V のように項目の無いものは skos:broadMatch（Innovia Metro Q4940487）と、データ内の skos:broader。
+    Innovia Metro 自体もデータ内の形式として置いた（Mark I〜V が値を借りる先にするため）。
+  - モデル: `rdf/model/<model-id>`（schema:3DModel）。schema:about で形式、tb:livery で塗装（`#livery`、持ち主は tb:liveryOf）、
+    schema:subjectOf で IIIF Manifest（B の URI 取り決めどおり）、寸法は mm の QuantitativeValue。
+    名前と説明はギャラリー（docs/index.html の DATA）から読む。
+  - 各ファイルは .ttl・.jsonld・.html の 3 つ。GitHub Pages は拡張子なしの `/rdf/class/Q696668` に `.html` を返すので、
+    URI を開くと人が読める頁が出る（内容の交渉はできないので、機械向けには `<link rel="alternate">` で .ttl と .jsonld を指す）。
+  - `docs/rdf/all.ttl`・`all.jsonld` に全部と、値に使った Wikidata 項目の名前（ja・en）を入れた。C はここから値の名前を読む。
+  - Wikidata の答えは `data/wikidata/rdf-cache.json` に取っておく（data/ は git 管理外）。`--refresh` で取り直す。
+- 手入力した値（tb:handEntered でどの属性かを示し、dcterms:source に出典）: SkyTrain Mark I〜V の国・運行者（Wikidata Q876780 から）、
+  製造者（英語版 Wikipedia「SkyTrain (Vancouver)」の車両の節: Mark I は UTDC、II・III は Bombardier、V は Alstom）、
+  営業開始年（ギャラリーの説明文: 1985・2002・2016。Mark V は未確認なので入れていない）。
+  日本語名の無い形式 5 つ（411・415・ÖBB 4011・Airo・XD60）は日本語名を手で付けた（Wikidata に付いたらそちらを使う）。
+- 途中で分かったこと:
+  - Wikidata の Q688893 のラベルは今「ALSTOM Transportation Germany」（旧 Bombardier Transportation）。英語版 Wikipedia の
+    「Bombardier Transportation」もこの項目に結ばれている。Mark II・III の製造者はこの項目で表す。
+  - ICE TD（Q659660）の製造者に Alstom が入っている（Siemens・Bombardier と並んで）。Wikidata の値のまま載せた。
+  - Airo には国が無い（運行は米国とカナダ）。手で補っていない。
+  - 速度は Wikidata の正規化値（m/s）× 3.6 で km/h に揃えた。マイル毎時で入った項目もこれで揃う。
+  - rdflib で Turtle と JSON-LD を読み直すと 731 トリプルずつで、違いは小数の書き方（230.0 と 230）だけ。
+- 決めていないこと: モデルと RDF の利用条件（ライセンス）。LOD チャレンジでは明記が要る（無ければパブリックドメイン扱い）。本人の判断。
+- 主張の候補: 典拠（Wikidata）に無い値を写さず、skos:broader で上位の形式から借りる、と索引の側で明示すると、
+  典拠の不足を補いつつ出所の区別を保てる。根拠: 上の 411 の製造者の例（数を測るのは C の索引ができてから）。
