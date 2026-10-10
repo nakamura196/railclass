@@ -17,6 +17,7 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [ ] ERATV の再利用条件を確かめる（ERA の Copyright Notice）。結果で `docs/` に入れるか決める
       2026-10-10 10:00 確かめた（data-model.md の同じ日）: 出典を示せば複製してよい、という ERA の一般の許可だけ。ERATV に個別の定めは無い。`docs/` に入れるかは本人の判断待ち（推奨: 出典つきで入れる）
 - [ ] 「RDF にする利点」をノートで実測で示す（例: 典拠の更新がそのまま反映される、外部と結べる件数）
+      2026-10-10 10:10 外部と結べる件数は実測した（data-model.md の同じ日: 17 形式・Wikidata 111 項目・路線 42）。典拠の更新の反映はまだ。公開中の RDF が 17 形式だけで、索引の 14,325 形式には RDF が無い点も分かった
 
 ## B. IIIF v4・注釈・ダウンロード（worktree `train-bodies.worktrees/iiif`）
 
