@@ -8,6 +8,8 @@ Inputs:
   data/wikidata/class-labels-ja.tsv     Japanese labels (tools/queries/wd-class-labels-ja.rq)
   data/wikidata/facets/<id>.tsv         facet values per class (tools/fetch_facets.py)
   data/wikidata/facets/_image_credit.tsv  author, licence and thumbnail of each photo (tools/fetch_image_credits.py), if present
+  data/photos/_photos.tsv               the local copies of the photos (tools/fetch_photos.py), if present; the site
+                                        serves them from photos/<key>.webp instead of Wikimedia
   docs/rdf/all.jsonld                   the class and model RDF (made by the RDF work), if present. For the classes in it:
                                         its values replace the Wikidata ones (facets with on=livery take the values of the
                                         liveries of its models), facets marked "inherit" take the value of the
@@ -15,7 +17,8 @@ Inputs:
                                         and classes outside the Wikidata list (SkyTrain Mark I, Airo, XD60...) are added
 index.json is column-wise to stay small:
   {"facets":[{id,label,datatype,unit,values:[[id,en,ja],...]}], "n":N, "id":[...], "en":[...], "ja":[...],
-   "img":[file name or ""], "thumb":[hash dir "f/f3" | full thumbnail URL | "" (use Special:FilePath)],
+   "img":[file name or ""], "photo":[local copy key (photos/<key>.webp) | ""],
+   "thumb":[hash dir "f/f3" | full thumbnail URL | "" (use Special:FilePath)] (only used when there is no local copy),
    "credit":[[artist index, licence index] | 0], "artists":[text], "licenses":[[short name, url]],
    a group facet {id:"<facet id>Group", of:"<facet id>", ...} just before each facet listed in GROUPS, "models":[[model id,...]], "page":[1 if docs/rdf/class/<id>.html exists else 0], "<facet id>":[[value index,...] | number | null]}
 Usage: python3 tools/build_search.py [--data data] [--facets docs/rdf/facets.json] [--out docs/search]
@@ -110,26 +113,29 @@ def credits(idx, fdir):
     if not os.path.exists(p):
         print("no photo credits yet: run tools/fetch_image_credits.py"); return
     cr = {r["file"]: r for r in read(p)}
+    lp = os.path.join(DATA, "photos", "_photos.tsv")
+    local = {r["file"]: r["key"] for r in read(lp)} if os.path.exists(lp) else {}
     artists, apos, lics, lpos = [], {}, [], {}
-    idx["thumb"], idx["credit"] = [], []
+    idx["photo"], idx["thumb"], idx["credit"] = [], [], []
     for f in idx["img"]:
         r = cr.get(f)
         if not r or not r["thumb"]:
-            idx["thumb"].append(""); idx["credit"].append(0); continue
+            idx["photo"].append(""); idx["thumb"].append(""); idx["credit"].append(0); continue
+        idx["photo"].append(local.get(f, ""))
         u = f.replace(" ", "_")
         t = urllib.parse.unquote(r["thumb"])
         if t.startswith(THUMB) and t.endswith("/" + u + "/330px-" + u) and t[len(THUMB) + 4] == "/":
             t = t[len(THUMB):len(THUMB) + 4]
         else:
             t = r["thumb"]
-        idx["thumb"].append(t)
+        idx["thumb"].append("" if f in local else t)
         a, l = r["artist"][:200], (r["license"], r["license_url"])
         if a not in apos: apos[a] = len(artists); artists.append(a)
         if l not in lpos: lpos[l] = len(lics); lics.append(list(l))
         idx["credit"].append([apos[a], lpos[l]])
     idx["artists"], idx["licenses"] = artists, lics
     print("photos with credit:", sum(1 for c in idx["credit"] if c), "of", sum(1 for f in idx["img"] if f),
-          "| short thumb:", sum(1 for t in idx["thumb"] if len(t) == 4), "| other thumb:", sum(1 for t in idx["thumb"] if len(t) > 4))
+          "| local copy:", sum(1 for k in idx["photo"] if k), "| short thumb:", sum(1 for t in idx["thumb"] if len(t) == 4), "| other thumb:", sum(1 for t in idx["thumb"] if len(t) > 4))
 
 def group(fid, values, col, fdir):
     """The group facet of an iri facet: (facet, column). Each class gets the groups of its values."""

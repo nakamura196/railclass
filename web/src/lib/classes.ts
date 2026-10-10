@@ -77,8 +77,8 @@ export function classPage(id: string, lang: Lang, fmtN: (n: number) => string, y
     }
     const file = D.img[row];
     if (file) {
-      const u = encodeURIComponent(file.replace(/ /g, "_")), t = D.thumb?.[row] || "";
-      const src = t.length > 4 ? t : t ? `${THUMB}${t}/${u}/330px-${u}` : `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=330`;
+      const u = encodeURIComponent(file.replace(/ /g, "_")), t = D.thumb?.[row] || "", k = D.photo?.[row] || "";
+      const src = k ? `photos/${k}.webp` : t.length > 4 ? t : t ? `${THUMB}${t}/${u}/330px-${u}` : `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=330`;
       const c = D.credit?.[row];
       const [lic, licUrl] = c ? D.licenses[c[1]] : [null, null];
       photo = { src, page: FILEPAGE + u, who: c ? D.artists[c[0]] || null : null, lic: lic || null, licUrl: licUrl || null };

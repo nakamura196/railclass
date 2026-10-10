@@ -76,7 +76,7 @@ const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
       )}
       {c.photo && (
         <figure class="photo">
-          <a href={c.photo.page}><img src={c.photo.src} alt={c.name} loading="lazy" decoding="async"></a>
+          <a href={c.photo.page}><img src={c.photo.src.startsWith("http") ? c.photo.src : file(c.photo.src)} alt={c.name} loading="lazy" decoding="async"></a>
           <figcaption>
             <a href={c.photo.page}>{c.photo.who ? fmt(T.photoBy, { who: c.photo.who }) : T.photoCommons}</a>
             {c.photo.lic && <> / {c.photo.licUrl ? <a href={c.photo.licUrl} rel="license">{c.photo.lic}</a> : c.photo.lic}</>}

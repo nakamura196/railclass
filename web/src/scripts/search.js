@@ -218,10 +218,12 @@ function href(i) { return D.page[i] ? `${C.classPage}${D.id[i]}.html` : `https:/
 function vals(f, i, max = 2) { const x = D[f.id][i]; return x.slice(0, max).map(k => vlabel(f, k)).join(S.sep) + (x.length > max ? S.more : ""); }
 function numText(f, i) { const x = D[f.id][i]; return x == null ? "" : f.datatype === "gYear" ? fmt(S.year, { y: x }) : `${fmtN(x)}${f.unit ? " " + f.unit : ""}`; }
 
-// The photo's URL: the thumbnail address from the index when there is one (one request), else Special:FilePath (a redirect).
+// The photo's URL: this site's copy when there is one (tools/fetch_photos.py), else the thumbnail address from the index
+// (one request to Wikimedia), else Special:FilePath (a redirect).
 function photo(i) {
-  const f = D.img[i], t = D.thumb ? D.thumb[i] : "";
+  const f = D.img[i], t = D.thumb ? D.thumb[i] : "", k = D.photo ? D.photo[i] : "";
   if (!f) return null;
+  if (k) return `${C.photos}${k}.webp`;
   if (t.length > 4) return t;
   if (t) { const u = encodeURIComponent(f.replace(/ /g, "_")); return `${THUMB}${t}/${u}/330px-${u}`; }
   return COMMONS + encodeURIComponent(f) + "?width=330";
