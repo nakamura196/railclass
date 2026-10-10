@@ -1,0 +1,2 @@
+# Wikidata: rolling stock classes grouped by P17 (country)
+SELECT ?cLabel (COUNT(DISTINCT ?i) AS ?n) WHERE { ?i wdt:P31 wd:Q811704; wdt:P17 ?c. SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } } GROUP BY ?cLabel ORDER BY DESC(?n) LIMIT 20

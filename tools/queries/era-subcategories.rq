@@ -1,0 +1,8 @@
+# ERA ontology (run against https://graph.data.era.europa.eu/repositories/ERA-Onto):
+# vehicle type subcategory codes. The first two digits of an ERATV type ID are this code.
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?code ?label WHERE {
+ ?c skos:inScheme <http://data.europa.eu/949/concepts/vehicle-types/SubCategories>; skos:prefLabel ?label.
+ OPTIONAL { ?c skos:notation ?code }
+ FILTER(LANG(?label)="en" || LANG(?label)="")
+} ORDER BY ?code

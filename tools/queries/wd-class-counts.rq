@@ -1,0 +1,9 @@
+# Wikidata: rolling stock class (Q811704) items and how many carry image / Commons category / jawiki / country / operator
+SELECT (COUNT(DISTINCT ?i) AS ?n) (COUNT(DISTINCT ?img) AS ?withImg) (COUNT(DISTINCT ?cc) AS ?withCat) (COUNT(DISTINCT ?ja) AS ?ja) (COUNT(DISTINCT ?co) AS ?country) (COUNT(DISTINCT ?op) AS ?operator) WHERE {
+ ?i wdt:P31 wd:Q811704.
+ OPTIONAL { ?i wdt:P18 ?x. BIND(?i AS ?img) }
+ OPTIONAL { ?i wdt:P373 ?y. BIND(?i AS ?cc) }
+ OPTIONAL { ?s schema:about ?i; schema:isPartOf <https://ja.wikipedia.org/>. BIND(?i AS ?ja) }
+ OPTIONAL { ?i wdt:P17 ?z. BIND(?i AS ?co) }
+ OPTIONAL { ?i wdt:P137 ?w. BIND(?i AS ?op) }
+}

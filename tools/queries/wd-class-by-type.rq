@@ -1,0 +1,2 @@
+# Wikidata: rolling stock classes grouped by their P279 (subclass of)
+SELECT ?tLabel (COUNT(DISTINCT ?i) AS ?n) WHERE { ?i wdt:P31 wd:Q811704; wdt:P279 ?t. SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } } GROUP BY ?tLabel ORDER BY DESC(?n) LIMIT 25

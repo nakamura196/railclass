@@ -1,0 +1,7 @@
+# Wikidata: labels and aliases of the rolling stock class items in the European languages ERATV type names are written in
+# (used to match ERATV type names by exact, normalised string).
+SELECT DISTINCT ?item ?name WHERE {
+ ?item wdt:P31 ?t. ?t wdt:P279* wd:Q811704.
+ ?item rdfs:label|skos:altLabel ?name.
+ FILTER(LANG(?name) IN ("en","de","fr","it","es","nl","pl","cs","sk","sv","da","nb","fi","pt","hu","ro","sl","hr","bg","el","lt","lv","et","mul"))
+}

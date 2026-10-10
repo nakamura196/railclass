@@ -1,0 +1,12 @@
+# Wikidata: every rolling stock class item (P31 = Q811704 or any subclass of it, e.g. locomotive class, tram model),
+# with its type, English label, countries (P17), countries of its operators (P137/P17) and Wikipedia language editions.
+SELECT ?item (SAMPLE(?t) AS ?type) (SAMPLE(?en) AS ?label_en)
+  (GROUP_CONCAT(DISTINCT ?co; separator="|") AS ?country)
+  (GROUP_CONCAT(DISTINCT ?opco; separator="|") AS ?operator_country)
+  (GROUP_CONCAT(DISTINCT ?wiki; separator="|") AS ?wikis) WHERE {
+ ?item wdt:P31 ?t. ?t wdt:P279* wd:Q811704.
+ OPTIONAL { ?item rdfs:label ?en FILTER(LANG(?en)="en") }
+ OPTIONAL { ?item wdt:P17 ?co }
+ OPTIONAL { ?item wdt:P137/wdt:P17 ?opco }
+ OPTIONAL { ?s schema:about ?item; schema:isPartOf ?w. ?w wikibase:wikiGroup "wikipedia". BIND(REPLACE(STR(?w),"https://|\\.wikipedia\\.org/","") AS ?wiki) }
+} GROUP BY ?item

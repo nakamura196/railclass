@@ -1,0 +1,7 @@
+# Wikidata: rolling stock classes without P17; how many have only a Japanese Wikipedia article, and how many have no Wikipedia article at all
+SELECT (COUNT(DISTINCT ?i) AS ?noCountry) (COUNT(DISTINCT ?jaOnly) AS ?jaOnly) (COUNT(DISTINCT ?noWiki) AS ?noWiki) WHERE {
+ ?i wdt:P31 wd:Q811704. FILTER NOT EXISTS { ?i wdt:P17 [] }
+ OPTIONAL { ?s schema:about ?i; schema:isPartOf <https://ja.wikipedia.org/>.
+   FILTER NOT EXISTS { ?s2 schema:about ?i; schema:isPartOf ?w. ?w wikibase:wikiGroup "wikipedia". FILTER(?w != <https://ja.wikipedia.org/>) } BIND(?i AS ?jaOnly) }
+ OPTIONAL { FILTER NOT EXISTS { ?s3 schema:about ?i; schema:isPartOf ?w3. ?w3 wikibase:wikiGroup "wikipedia". } BIND(?i AS ?noWiki) }
+}
