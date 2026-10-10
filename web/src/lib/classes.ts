@@ -38,6 +38,14 @@ export function classIds(): string[] {
   return existsSync(CLASS_DIR) ? readdirSync(CLASS_DIR).filter(f => f.endsWith(".jsonld")).map(f => f.slice(0, -7)).sort() : [];
 }
 
+/** The class's own node in its JSON-LD: the file is one node, or an @graph when it also holds other nodes
+ *  (the tb:LineUse nodes of its lines). */
+function readClass(c: string): any {
+  const d = JSON.parse(readFileSync(resolve(CLASS_DIR, c + ".jsonld"), "utf8"));
+  if (!d["@graph"]) return d;
+  return d["@graph"].find((n: any) => typeof n["@id"] === "string" && n["@id"].endsWith(`/rdf/class/${c}`)) ?? {};
+}
+
 function labels(n: any) {
   const out: Record<string, string> = {};
   for (const x of many(n["skos:prefLabel"] ?? n["rdfs:label"])) if (x?.["@language"]) out[x["@language"]] = x["@value"];
@@ -49,8 +57,8 @@ const THUMB = "https://thumb.wikimedia.org/wikipedia/commons/thumb/";
 const FILEPAGE = "https://commons.wikimedia.org/wiki/File:";
 
 export function classPage(id: string, lang: Lang, fmtN: (n: number) => string, yearText: (y: number) => string): ClassPage {
-  const node = JSON.parse(readFileSync(resolve(CLASS_DIR, id + ".jsonld"), "utf8"));
-  const all = classIds().map(c => [c, JSON.parse(readFileSync(resolve(CLASS_DIR, c + ".jsonld"), "utf8"))] as const);
+  const node = readClass(id);
+  const all = classIds().map(c => [c, readClass(c)] as const);
   const nameOf = (c: string) => pick(labels(all.find(([k]) => k === c)?.[1] ?? {}), lang) || c;
   const l = labels(node);
   const name = pick(l, lang) || id;
@@ -103,7 +111,7 @@ export function classPage(id: string, lang: Lang, fmtN: (n: number) => string, y
 export function modelClasses(): Record<string, string> {
   const out: Record<string, string> = {};
   for (const c of classIds()) {
-    const node = JSON.parse(readFileSync(resolve(CLASS_DIR, c + ".jsonld"), "utf8"));
+    const node = readClass(c);
     for (const u of many(node["schema:subjectOf"]).map(iri)) { const m = local(u, "model"); if (m && !out[m]) out[m] = c; }
   }
   return out;
