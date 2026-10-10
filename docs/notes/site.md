@@ -155,3 +155,10 @@ site と iiif が main に入る前なので、検索・形式の詳細・IIIF �
 確かめていないこと:
 - Actions の実行（push していない）。
 - `docs/` の古い `index.html`・`view.html`・`assets/` は、配信元を切り替えるまで公開に使われるので残した。切り替えたら消す。
+
+#### 2026-10-09 追記: main の取り込みと push
+
+- 一段目をコミットし、main（iiif の取り込み cccfb8d と色の絞り込み 298ea8d を含む）をマージした。衝突なし。
+  `npm run build` で 4 ページが出て、`dist/iiif/` に 14 形式分の Manifest が写ることを確かめた。
+- ブランチ `astro` を push した。main には入れていない（Actions は main への push と PR でしか動かない）。
+- site の枝（写真の出典・形式のまとまり 47967bb）はまだ main に入っていないので、検索と形式の詳細ページの移行は待つ。
