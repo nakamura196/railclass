@@ -1,0 +1,162 @@
+<title>Train Bodies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+/* Layout: a cutting-mat stage on the left (the model on the bench), a parts shelf of cards on the right; stacks on phones. */
+:root {
+  --bg: #eef0ec; --panel: #ffffff; --fg: #1d2420; --muted: #5d6862; --line: #d5dbd6;
+  --mat: #2f5d4c; --mat-line: rgba(255,255,255,.13); --mat-major: rgba(255,255,255,.26);
+  --accent: #c8102e; --accent-fg: #ffffff; --sel: #e7efe9;
+  --f-display: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --f-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --f-data: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #151a17; --panel: #1d2420; --fg: #e8ece9; --muted: #9aa69f; --line: #2e3833;
+  --mat: #1f4236; --mat-line: rgba(255,255,255,.08); --mat-major: rgba(255,255,255,.17);
+  --accent: #ff5a6e; --accent-fg: #1a0b0e; --sel: #26332c; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #151a17; --panel: #1d2420; --fg: #e8ece9; --muted: #9aa69f; --line: #2e3833;
+  --mat: #1f4236; --mat-line: rgba(255,255,255,.08); --mat-major: rgba(255,255,255,.17);
+  --accent: #ff5a6e; --accent-fg: #1a0b0e; --sel: #26332c; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 15px; line-height: 1.6; }
+.wrap { max-width: 1280px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 40px; display: grid; gap: 18px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+h1 { font-family: var(--f-display); font-weight: 700; font-size: 1.5rem; margin: 0; text-wrap: balance; }
+header p { margin: 0; color: var(--muted); font-size: .85rem; }
+
+main { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 18px; align-items: start; }
+@media (max-width: 900px) { main { grid-template-columns: minmax(0, 1fr); } }
+
+.stage { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); display: grid; gap: 10px; min-width: 0; }
+@media (max-width: 900px) { .stage { position: static; } }
+.mat {
+  position: relative; border-radius: 10px; overflow: hidden; aspect-ratio: 16 / 10; max-width: 100%;
+  background-color: var(--mat);
+  background-image:
+    linear-gradient(var(--mat-major) 1px, transparent 1px), linear-gradient(90deg, var(--mat-major) 1px, transparent 1px),
+    linear-gradient(var(--mat-line) 1px, transparent 1px), linear-gradient(90deg, var(--mat-line) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+}
+model-viewer { width: 100%; height: 100%; --poster-color: transparent; background: transparent; }
+.mat .tag { position: absolute; left: 12px; bottom: 10px; font-family: var(--f-data); font-size: .72rem; color: rgba(255,255,255,.8); pointer-events: none; }
+.mat .hint { position: absolute; right: 12px; bottom: 10px; font-size: .72rem; color: rgba(255,255,255,.7); pointer-events: none; }
+
+.info { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; }
+.info h2 { font-family: var(--f-display); font-size: 1.25rem; margin: 0; }
+.info .grp { color: var(--muted); font-size: .8rem; display: block; }
+.info p { margin: 2px 0 0; color: var(--muted); font-size: .9rem; max-width: 60ch; }
+.views { display: flex; flex-wrap: wrap; gap: 6px; }
+.views button {
+  font: inherit; font-size: .82rem; padding: 5px 11px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--panel); color: var(--fg);
+}
+.views button[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+button:focus-visible, .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.shelf { display: grid; gap: 16px; min-width: 0; }
+.shelf h3 { font-size: .78rem; letter-spacing: .06em; color: var(--muted); margin: 0 0 6px; font-weight: 700; }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 900px) { .cards { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } }
+.card {
+  display: grid; gap: 2px; text-align: left; padding: 6px 6px 8px; cursor: pointer; font: inherit; color: inherit;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+}
+.card img { width: 100%; aspect-ratio: 14 / 9; object-fit: cover; border-radius: 5px; background: var(--sel); }
+.card b { font-size: .85rem; font-weight: 700; line-height: 1.35; }
+.card span { font-family: var(--f-data); font-size: .7rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.card[aria-current="true"] { border-color: var(--accent); background: var(--sel); }
+footer { color: var(--muted); font-size: .78rem; display: grid; gap: 4px; max-width: 75ch; }
+footer p { margin: 0; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>列車とバスの車体</h1>
+    <p>3Dプリントで作る、おもちゃの車台に載せる車体です。</p>
+  </header>
+  <main>
+    <section class="stage" aria-label="ビューア">
+      <div class="mat">
+        <model-viewer id="mv" camera-controls touch-action="pan-y" shadow-intensity="0.8" exposure="1.05"
+          tone-mapping="neutral" interaction-prompt="none" camera-orbit="-55deg 70deg auto" alt="選んだ車体の3Dモデル"></model-viewer>
+        <span class="tag" id="tag"></span>
+        <span class="hint">ドラッグで回転・ホイールで拡大</span>
+      </div>
+      <div class="info">
+        <div>
+          <span class="grp" id="grp"></span>
+          <h2 id="name"></h2>
+          <p id="line"></p>
+        </div>
+        <div class="views" role="group" aria-label="向き">
+          <button type="button" data-orbit="-55deg 70deg auto" aria-pressed="true">斜め前</button>
+          <button type="button" data-orbit="0deg 90deg auto">横</button>
+          <button type="button" data-orbit="-90deg 85deg auto">正面</button>
+          <button type="button" data-orbit="0deg 0deg auto">上</button>
+          <button type="button" id="spin" aria-pressed="false">回す</button>
+        </div>
+      </div>
+    </section>
+    <nav class="shelf" id="shelf" aria-label="車体の一覧"></nav>
+  </main>
+  <footer>
+    <p>寸法は車体の外形（長さ × 幅 × 高さ、mm）。色は塗り分けの目安で、印刷は単色です。プラレール（タカラトミー）の車台に載る大きさで作っています。</p>
+    <p>個人が趣味で作った非公式のモデルです。タカラトミー、各鉄道会社・バス会社とは関係ありません。塗装とロゴは Wikimedia Commons の写真を参考に再現しました。</p>
+  </footer>
+</div>
+
+<script>
+const DATA = {"groups": [{"id": "skytrain", "label": "SkyTrain（バンクーバー）"}, {"id": "icet", "label": "ICE T（ドイツ）"}, {"id": "world", "label": "世界の列車"}, {"id": "bus", "label": "バス"}], "items": [{"id": "mk1", "group": "skytrain", "title": "Mark I", "line": "1985年から走る、角ばった短い車体。今の TransLink 塗装。", "size": [130.0, 40.0, 38.0], "kb": 1230}, {"id": "mk2", "group": "skytrain", "title": "Mark II", "line": "丸い鼻と大きな前面ガラス。2002年から。", "size": [149.7, 40.0, 37.6], "kb": 950}, {"id": "mk3", "group": "skytrain", "title": "Mark III", "line": "Innovia Metro 300。2016年から。", "size": [152.0, 40.0, 37.6], "kb": 1095}, {"id": "mk5", "group": "skytrain", "title": "Mark V", "line": "いちばん新しい車両。", "size": [150.0, 40.0, 38.0], "kb": 656}, {"id": "icet_411", "group": "icet", "title": "411（7両編成）", "line": "標準の塗装。赤い帯と「ICE」の文字、鼻に DB のマーク。", "size": [149.9, 40.0, 38.0], "kb": 1911}, {"id": "icet_415", "group": "icet", "title": "415（5両編成）", "line": "形は 411 と同じ。車番だけが違う。", "size": [149.9, 40.0, 38.0], "kb": 1917}, {"id": "icet_green", "group": "icet", "title": "緑の帯", "line": "2019〜2022年。帯の前半が緑で、ラベルとプラグの印が付く。", "size": [149.9, 40.0, 38.0], "kb": 2517}, {"id": "icet_oebb", "group": "icet", "title": "ÖBB 4011", "line": "オーストリア国鉄が使った 3 編成。DB の塗装に ÖBB の印。", "size": [149.9, 40.0, 38.0], "kb": 2094}, {"id": "icet_td", "group": "icet", "title": "ICE TD（DB）", "line": "ディーゼル版の 605 形。外から見ると 411 と同じ。", "size": [149.9, 40.0, 38.0], "kb": 1829}, {"id": "icet_dsb", "group": "icet", "title": "ICE TD（DSB）", "line": "デンマーク国鉄に貸した時期の塗装。窓まわりが紺。", "size": [149.9, 40.0, 38.0], "kb": 1867}, {"id": "airo", "group": "world", "title": "Airo（Amtrak Cascades）", "line": "2026年9月に走り始めた、シアトル〜バンクーバーの新型客車。", "size": [149.9, 40.0, 38.0], "kb": 1824}, {"id": "ave102", "group": "world", "title": "AVE 102「Pato」", "line": "スペインの高速列車。カモのくちばしのような鼻。", "size": [149.9, 40.0, 38.0], "kb": 1641}, {"id": "bus49_front", "group": "bus", "title": "49番バス（前）", "line": "TransLink の連節バス XD60 の前半分。", "size": [145.1, 40.0, 46.0], "kb": 705}, {"id": "bus49_rear", "group": "bus", "title": "49番バス（後ろ）", "line": "同じバスの後ろ半分。2 台をつないで走らせる。", "size": [143.5, 40.0, 46.0], "kb": 339}], "ext": "glb"};
+const mv = document.getElementById("mv");
+const byId = Object.fromEntries(DATA.items.map(i => [i.id, i]));
+const groupLabel = Object.fromEntries(DATA.groups.map(g => [g.id, g.label]));
+const shelf = document.getElementById("shelf");
+const fmt = s => s.map(v => v.toFixed(v % 1 ? 1 : 0)).join(" × ");
+
+for (const g of DATA.groups) {
+  const sec = document.createElement("section");
+  const h = document.createElement("h3"); h.textContent = g.label; sec.append(h);
+  const cards = document.createElement("div"); cards.className = "cards";
+  for (const it of DATA.items.filter(i => i.group === g.id)) {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "card"; b.dataset.id = it.id;
+    const img = document.createElement("img"); img.src = `thumbs/${it.id}.jpg`; img.alt = ""; img.loading = "lazy";
+    const t = document.createElement("b"); t.textContent = it.title;
+    const s = document.createElement("span"); s.textContent = `${fmt(it.size)} mm`;
+    b.append(img, t, s);
+    b.addEventListener("click", () => { show(it.id); if (matchMedia("(max-width: 900px)").matches) document.querySelector(".stage").scrollIntoView({ behavior: "smooth" }); });
+    cards.append(b);
+  }
+  sec.append(cards); shelf.append(sec);
+}
+
+function show(id) {
+  const it = byId[id] || DATA.items[0];
+  mv.src = `models/${it.id}.${DATA.ext}`;
+  mv.poster = `thumbs/${it.id}.jpg`;
+  document.getElementById("grp").textContent = groupLabel[it.group];
+  document.getElementById("name").textContent = it.title;
+  document.getElementById("line").textContent = it.line;
+  document.getElementById("tag").textContent = `${it.id} · ${fmt(it.size)} mm · ${it.kb} KB`;
+  for (const c of shelf.querySelectorAll(".card")) c.setAttribute("aria-current", c.dataset.id === it.id);
+  try { history.replaceState(null, "", "#" + it.id); } catch (e) {}
+}
+
+for (const b of document.querySelectorAll(".views [data-orbit]")) {
+  b.addEventListener("click", () => {
+    mv.cameraOrbit = b.dataset.orbit; mv.fieldOfView = "auto"; mv.jumpCameraToGoal?.();
+    for (const o of document.querySelectorAll(".views [data-orbit]")) o.setAttribute("aria-pressed", o === b);
+  });
+}
+const spin = document.getElementById("spin");
+spin.addEventListener("click", () => {
+  const on = !mv.autoRotate; mv.autoRotate = on; spin.setAttribute("aria-pressed", on);
+});
+
+show(location.hash.slice(1));
+</script>
