@@ -78,6 +78,20 @@
 .m3d .parts .hint { margin: 0 0 8px; }
 .m3d .overview { margin-top: 10px; }
 
+/* Citation and export (as the share/export card of ArchiveBase): one place for the data of this page */
+.cls .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.cls .card h2 { margin: 0 0 10px; }
+.cls .card h3 { font-size: .75rem; font-weight: 500; color: var(--muted); margin: 12px 0 6px; }
+.cls .card h3:first-of-type { margin-top: 0; }
+.cls .cite { display: flex; gap: 8px; align-items: flex-start; }
+.cls .cite p { flex: 1; margin: 0; font-size: .75rem; line-height: 1.5; color: var(--muted); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; overflow-wrap: anywhere; }
+.cls .cite button, .cls .exports a {
+  display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: .82rem; padding: 6px 10px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--panel); color: var(--fg); text-decoration: none; cursor: pointer;
+}
+.cls .cite button.done { border-color: var(--accent); color: var(--accent); }
+.cls .exports { display: flex; flex-wrap: wrap; gap: 6px; }
+.cls .exports a:hover, .cls .cite button:hover { background: var(--sel); }
 .cls .photo { margin: 0; }
 .cls .photo img { display: block; width: 100%; border-radius: 8px; }
 .cls .photo figcaption { font-size: .7rem; color: var(--muted); margin-top: 4px; overflow-wrap: anywhere; }
