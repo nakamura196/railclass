@@ -6,7 +6,9 @@ uri is a Wikidata property (http://www.wikidata.org/prop/direct/P...) is fetched
   iri      -> data/wikidata/facets/<id>.tsv  item, value, value label en, value label ja
   decimal  -> item, value (normalised to SI by Wikidata; converted to the facet's unit: km/h)
   gYear    -> item, year
-Also data/wikidata/facets/_image.tsv (P18, for thumbnails). Other facets (has3d...) come from the RDF.
+Also data/wikidata/facets/_image.tsv (P18, for thumbnails), and for the type facet (kind) kind_broader.tsv:
+  value, ancestor (wdt:P279*, the value itself included), so that tools/build_search.py can fold the ~700 type values
+  into a few groups. Other facets (has3d...) come from the RDF.
 Usage: python3 tools/fetch_facets.py [--facets docs/rdf/facets.json] [--data data] [--only id,id]
 """
 import json, os, sys, time, urllib.request, urllib.parse
@@ -19,6 +21,7 @@ OUT = os.path.join(opt("--data", "data"), "wikidata", "facets")
 ONLY = set(opt("--only", "").split(",")) - {""}
 WDT = "http://www.wikidata.org/prop/direct/"
 POP = "?item wdt:P31/wdt:P279* wd:Q811704."
+BROADER = {"kind"}   # facets whose values tools/build_search.py folds into groups
 UNIT = {"km/h": 3.6}   # Wikidata normalises speed to m/s
 
 def run(q):
@@ -52,7 +55,8 @@ def save(name, header, rows):
 def main():
     facets = json.load(open(FACETS))["facets"]
     for f in facets:
-        if ONLY and f["id"] not in ONLY or not f["uri"].startswith(WDT):
+        # on="livery" (colour): the values are on the 3D models' liveries in the RDF, not on the classes in Wikidata
+        if ONLY and f["id"] not in ONLY or not f["uri"].startswith(WDT) or f.get("on", "class") != "class":
             continue
         rows = list(run(query(f)))
         if f["datatype"] in ("decimal", "integer"):
@@ -60,6 +64,11 @@ def main():
             rows = [[i, f"{float(v) * k:.0f}"] for i, v in rows]
         save(f["id"], ["item", "value", "label_en", "label_ja"][:len(rows[0]) if rows else 2], rows)
         time.sleep(2)
+        if f["id"] in BROADER:
+            vals = " ".join(sorted({"wd:" + r[1] for r in rows if r[1].startswith("Q")}))
+            save(f["id"] + "_broader", ["value", "ancestor"],
+                 list(run(f"SELECT ?v ?a WHERE {{ VALUES ?v {{ {vals} }} ?v wdt:P279* ?a. }}")))
+            time.sleep(2)
     if not ONLY or "_image" in ONLY:
         save("_image", ["item", "image"], list(run(f"SELECT ?item (SAMPLE(?i) AS ?img) WHERE {{ {POP} ?item wdt:P18 ?i. }} GROUP BY ?item")))
 
