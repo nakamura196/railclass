@@ -1,9 +1,11 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:mk5 a schema:3DModel ;
@@ -22,13 +24,30 @@ mdl:mk5 a schema:3DModel ;
     schema:name "Mark V"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/mk5/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/mk5.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#mk5> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#mk5> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.8553 ;
+    schema:color "#0056B8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.1257 ;
+    schema:color "#14161A" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery> a tb:Livery ;
     rdfs:label "TransLink livery"@en,
         "TransLink の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/mk5/skytrain_mk5.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23445 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2> ;
     tb:liveryOf wd:Q1142140 .
 

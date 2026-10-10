@@ -1,9 +1,11 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:bus49_front a schema:3DModel ;
@@ -24,13 +26,45 @@ mdl:bus49_front a schema:3DModel ;
     schema:name "49番バス（前）"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/bus49_front/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/bus49_front.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#bus49_front> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#bus49_front> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.8458 ;
+    schema:color "#006FD6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0668 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0369 ;
+    schema:color "#A9AEB3" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color4> a tb:ColorSample ;
+    rdfs:label "charcoal" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0297 ;
+    schema:color "#3A3E42" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery> a tb:Livery ;
     rdfs:label "TransLink livery"@en,
         "TransLink の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/bus49_front/translink_bus49_front.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23445,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color4> ;
     tb:liveryOf wd:Q1142140 .
 
