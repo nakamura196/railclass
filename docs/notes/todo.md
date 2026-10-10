@@ -42,6 +42,17 @@
 - [x] 画面の判断をノート `docs/notes/site.md` に（2026-10-09、続けて書き足す）
 - トップページの項目（ヘッダ〜フッタ）は 2026-10-09 から別セッション D（worktree `top`）が担当。main へ取り込み済み（16d0db2）
 
+## サイトを Astro に移す — 方針は `site.md` の「Astro に移す」
+
+- [ ] 前提: site（写真のクレジット・種類の大分類）と iiif の枝を main に入れる
+- [ ] Astro の雛形、レイアウト 1 つ（ヘッダ・フッタ）、GitHub Actions で Pages に出す
+- [ ] トップ・ビューア・検索・形式の詳細の 4 種類を移す。URL と見た目が今と同じことを確かめる
+- [ ] `build_rdf.py` から HTML を書く部分を外し、形式の詳細ページは Astro が JSON から作る
+- [ ] 多言語（日本語は今の URL、英語は `/en/`）
+- [ ] ライト・ダーク・OS に従う の切り替え（ヘッダのボタン、選択を覚える、開いた瞬間のちらつきなし）
+- [ ] `assets/site.js` のヘッダ・フッタ差し込みを消す
+- [ ] Dependabot（cooldown つき）、Actions の SHA 固定、`npm audit`
+
 ## 路線（地図の線）— 担当は未定。方針は `data-model.md` の「路線の線データ」
 
 - [ ] 形式 → 路線の Wikidata ID の対応表を作る（Wikidata の P3438 を逆にたどる。足りない分は GTFS・Wikipedia から手で、出典つき）
