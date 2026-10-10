@@ -10,7 +10,6 @@ const dataLinks = [[f.modelsJson, file("data/models.json")], [f.newsJson, file("
   <div class="wrap">
     <div>
       <p><b>{ui.site.name}</b>{f.lead}</p>
-      <p>{ui.site.author}</p>
     </div>
     <div><h2>{f.site}</h2><ul>{siteLinks.map(([l, h]) => <li><a href={h}>{l}</a></li>)}</ul></div>
     <div><h2>{f.data}</h2><ul>{dataLinks.map(([l, h]) => <li><a href={h}>{l}</a></li>)}</ul></div>

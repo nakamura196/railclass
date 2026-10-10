@@ -26,6 +26,13 @@ KIND = {"real": {"ja": "実車の特徴", "en": "Real car"},
         "toy": {"ja": "模型の都合", "en": "Toy adaptation"},
         "guess": {"ja": "推測", "en": "Inferred"}}
 CAM_DIST = 55.0   # mm from the surface point to a part's camera
+# Fixed views besides the hand-set oblique front (camera_default), as the gallery's view page orbits
+# (web/src/components/ViewPage.astro): (azimuth from +Z towards +X, polar from +Y), in degrees.
+# "Top" leans 1 degree off the pole so that a viewer's lookAt keeps a defined up direction.
+VIEWS = [("side", {"ja": ["横"], "en": ["Side"]}, 0, 90),
+         ("front", {"ja": ["正面"], "en": ["Front"]}, -90, 85),
+         ("top", {"ja": ["上"], "en": ["Top"]}, 0, 1)]
+VIEW_DIST = 2.9   # x the bounding-sphere radius; camera_default sits at about this distance on every model
 
 
 def load_glb(path):
@@ -121,8 +128,16 @@ def build(model):
     scene = f"{BASE}iiif/{model}/scene"
     cid = src["class"]
 
-    cams = [camera(f"{scene}/camera/default", scene, {"ja": ["全体"], "en": ["Overview"]},
+    # The viewer has its own "fit the whole model" button, so the manifest's cameras are named by direction
+    cams = [camera(f"{scene}/camera/default", scene, {"ja": ["斜め前"], "en": ["Oblique front"]},
                    src["camera_default"]["position"], src["camera_default"]["lookAt"], hidden=False)]
+    pts = tris.reshape(-1, 3)
+    lo, hi = pts.min(0), pts.max(0)
+    ctr, dist = (lo + hi) / 2, np.linalg.norm(hi - lo) / 2 * VIEW_DIST
+    for key, label, az, pol in VIEWS:
+        a, p = np.radians(az), np.radians(pol)
+        pos = ctr + dist * np.array([np.sin(p) * np.sin(a), np.cos(p), np.sin(p) * np.cos(a)])
+        cams.append(camera(f"{scene}/camera/{key}", scene, label, pos, ctr, hidden=False))
     notes, bad = [], []
     for part in src["parts"]:
         r = raycast(tris, *aim(part["face"], part["at"]))
