@@ -10,6 +10,10 @@
 - Amtrak Cascades Airo、Renfe AVE 102
 - TransLink 49番の連節バス（前・後ろ）
 
+Astro への移行中です（`docs/notes/site.md` の「Astro に移す」）。`web/` が Astro のサイトで、
+`cd web && npm ci && npm run dev` で手元に開けます（`docs/` の生成物を `web/public/` に写してから起動します）。
+Pages の配信元を GitHub Actions に切り替えるまでは、下の `docs/` がそのまま公開されます。
+
 `docs/` が公開されるページです。手で書くものと、スクリプトが書き出すものが混ざっています。
 
 - 手で書く: `index.html`（トップ）、`view.html`（一覧と 3D ビューア）、`assets/`（CSS・JS。`site.css` は全ページ共通の見た目）、

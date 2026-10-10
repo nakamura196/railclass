@@ -153,3 +153,70 @@ A・B・C の担当ファイルの分け方の見直し。
     ヘッダのボタンで「ライト・ダーク・OS に従う」を選べるようにする。選んだものはブラウザに覚えさせる。
     ページを開いた瞬間に色がちらつかないよう、色の決定は HTML の頭で行う
 - ノート `docs/notes/` の置き場所は変えない（Pages の配信元が `docs/` から Actions に移るので、配信からは外れる）
+
+#### 移行の一段目（2026-10-09、worktree `train-bodies.worktrees/astro`、ブランチ `astro`）
+
+site と iiif が main に入る前なので、検索・形式の詳細・IIIF には触れず、雛形・レイアウト・日英・ライトとダーク・Actions・トップとビューアまでを行った。
+
+- 置き場所は `web/`（Astro 7.3.5。公開から 2 週間たった版を選んだ。`package-lock.json` をコミット、`npm audit` 0 件）。
+  Python の出力は `docs/` のまま。`web/scripts/sync-public.mjs` がビルドの前に `docs/` の
+  `data`・`models`・`thumbs`・`rdf`・`search`・`iiif`・`downloads`（あるものだけ）を `web/public/` に写し、加工せず配る。
+  `public/` は git に入れない。手書きの `index.html`・`view.html`・`assets/`・`notes/` は写さない。
+- URL: `build.format: "preserve"` で `view.astro` → `view.html` になり、今の URL のまま出る。英語は `/en/`・`/en/view.html`。
+  まだ Astro で作っていない検索は、英語のページからも日本語の `search/` へ送る。
+- トップとビューアは、数字・新着・お知らせ・一覧をビルドの時に HTML に書き込むようにした。
+  JS が無くても中身が出る（移す理由の 1 つ）。JS はビューアのモデルの切り替えと色のボタンだけ。
+  トップの `top.js` に当たるものは無くなった。
+- 文言は `web/src/i18n/ja.json`・`en.json`。モデルの英語の名前と説明は `models.json` に無いので、
+  `web/src/i18n/models.en.json` に仮に置いた（無い項目は日本語のまま出る）。`models.json` を書く `skytrain/tools/gallery.py` は
+  別の作業が未コミットのまま動いていたので触らなかった。gallery.py が `en` を出すようになったら、この仮置きは消す。
+  お知らせは `news.json` の各件に `en: {title, body}` を足す形にした（無ければ日本語）。
+- 色: `<head>` の中の短いスクリプトが `localStorage` の選択を読んで `<html data-theme>` を付けてから描くので、開いた瞬間のちらつきは無い。
+  ボタンは 1 つで「OS に従う → ライト → ダーク」と巡る。`site.css` はもともと `data-theme` を受ける形だったので、変数はそのまま使えた。
+  ライトを選んだのに OS がダークのとき、入力欄などがダークの見た目にならないよう `:root` に `color-scheme: light` を足した。
+- Actions（`.github/workflows/pages.yml`）: main への push と PR で `npm ci`・`npm audit`・ビルドまで行う。配る段は、
+  リポジトリの変数 `PAGES_SOURCE=actions` が無い間は動かない。今は Pages の配信元が `docs/`（API で `legacy /docs` を確認）なので、
+  配ろうとすると失敗するため。切り替えは「Settings → Pages → Source を GitHub Actions」と「変数を足す」を同時に行う。
+  Actions はすべて SHA で固定。Dependabot（npm は `web/`、Actions も、cooldown つき）を足した。
+- 確かめたこと（手元の `astro preview`）: 4 ページが出る。色のボタンで 3 段が巡り、選択が再読み込み後も残る（ダークを覚えさせて
+  英語のビューアを開くとダークのまま）。`index.html#icet_oebb` で開くと `view.html#icet_oebb` に移り、ÖBB 4011 が選ばれる。
+  幅 390px で 4 ページとも横にはみ出さない。
+
+確かめていないこと:
+- Actions の実行（push していない）。
+- `docs/` の古い `index.html`・`view.html`・`assets/` は、配信元を切り替えるまで公開に使われるので残した。切り替えたら消す。
+
+#### 2026-10-09 追記: main の取り込みと push
+
+- 一段目をコミットし、main（iiif の取り込み cccfb8d と色の絞り込み 298ea8d を含む）をマージした。衝突なし。
+  `npm run build` で 4 ページが出て、`dist/iiif/` に 14 形式分の Manifest が写ることを確かめた。
+- ブランチ `astro` を push した。main には入れていない（Actions は main への push と PR でしか動かない）。
+- site の枝（写真の出典・形式のまとまり 47967bb）はまだ main に入っていないので、検索と形式の詳細ページの移行は待つ。
+
+#### 2026-10-09 移行の二段目: 検索と形式の詳細、手元でビルドして gh-pages から配る
+
+- site の枝は main に入る前だったが、本人の了承を得て、その時点の site（b6f8f3b）を astro に直接マージした。
+  `tools/build_search.py` が衝突した。色の絞り込みを main と site が別々に書いていたためで、main の書き方（形式ごとに `livery` を集める）を残し、
+  site 側の `liveries` を消した。索引を作り直し、色の値を持つ形式は 12 件。写真の出典は、別セッションの取得の途中の分まで入っている（10,402 枚中 8,633 枚）。
+- 検索: `web/src/components/SearchPage.astro` と `web/src/scripts/search.js`（`docs/search/search.js` を移したもの）。
+  日本語の文言は `ja.json`・`en.json` の `search.js` に出した。名前・値の名前・項目名は、ページの言語を先に、無ければもう一方を出す。
+  英語の検索は `/en/search/`。結果から開く形式のページも、その言語のもの（`/en/rdf/class/<id>.html`）。
+- 形式の詳細: `web/src/pages/rdf/class/[id].astro`。`docs/rdf/class/*.jsonld` 1 つにつき 1 ページ（今は 17）。
+  表示する値は検索の索引から取る。索引には両言語の値の名前、上位の形式から受け継いだ値、模型の塗装の色が既に入っているので、
+  検索とページで値が食い違わない。RDF からは、Wikidata・上位と下位の形式・3D モデルへのつながりと、Turtle の本文を取る。
+  値を押すと、その値で絞った検索に移る（ICE T の「高速列車」→ 60 件）。
+- `sync-public.mjs` は、Astro が作るようになった `search/index.html`・`search.js`・`search.css`・`rdf/class/*.html` を写さない。
+  `rdf/model/*.html` はまだ Python が書いたものを配る。
+- **配り方を変えた。** 本人から「Actions の残りが 0 なので、手元でビルドしてデプロイする」と指示があった。
+  ブランチから配る Pages（「pages build and deployment」）は今も成功しているので、`scripts/deploy-pages.zsh` で `web/dist` を
+  `gh-pages` ブランチに 1 コミットで強制 push し、Pages の配信元を `gh-pages` の `/` に切り替える。
+  履歴を残さないのは、ビルドの出力で、GLB が積み重なるとリポジトリが太るため。
+  `downloads/`（git に入れていない、置き場所は未定）は出さない。`_astro/` を配るため `.nojekyll` を置く。
+  `pages.yml` は手で動かすときだけにした（main への push で動くと、残りが 0 のため失敗する）。
+- 確かめたこと（手元の `astro preview`）: 32 ページが出る。英語の検索で「ice」が 14 件、結果が `/en/rdf/class/` に向く。
+  ICE T のページに 7 項目・下位の形式 3 つ・模型 1 つ・写真と出典が出る。
+
+確かめていないこと:
+- 幅 390px での検索と形式のページ。
+- `docs/` の古い `index.html`・`view.html`・`assets/`・`search/index.html` などは、配信元を切り替えたあとは使われない。
+  別のセッションがまだ `docs/search/search.js` を触っている可能性があるので、今回は消さない。

@@ -1,0 +1,117 @@
+---
+// Top page. Everything is written into the HTML at build time (counts, newest models, news), so it shows without JS.
+import "../styles/top.css";
+import Base from "../layouts/Base.astro";
+import { page, file, t, type Lang } from "../i18n";
+import { models, newest, news, stats } from "../lib/data";
+
+const { lang } = Astro.props as { lang: Lang };
+const ui = t(lang);
+const T = ui.top;
+const M = models(lang);
+const items = newest(M.items);
+const hero = items.find(it => it.group !== "bus") ?? items[0];   // the hero shows a train: this is a railway site first
+const S = stats();
+const num = (k: string) => (typeof S?.[k] === "number" ? S[k].toLocaleString(ui.numberLocale) : "—");
+const F = T.features;
+const D = T.dataItems;
+---
+<Base lang={lang} path="" current="top">
+<script slot="head" type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<main class="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="lead">
+        <h1>{T.title}</h1>
+        <p>{T.lead}</p>
+        <form class="find" action={page(lang, "search/")} role="search">
+          <label for="q">{T.findLabel}</label>
+          <div>
+            <input id="q" name="q" type="search" placeholder={T.findPlaceholder} autocomplete="off">
+            <button type="submit">{T.findButton}</button>
+          </div>
+        </form>
+      </div>
+      {hero && (
+        <figure class="mat" id="hero-mat">
+          <model-viewer id="hero-mv" src={file(`models/${hero.id}.${M.ext}`)} poster={file(`thumbs/${hero.id}.jpg`)}
+            auto-rotate rotation-per-second="18deg" auto-rotate-delay="0" camera-controls touch-action="pan-y"
+            shadow-intensity="0.8" exposure="1.05" tone-mapping="neutral" interaction-prompt="none" camera-orbit="-55deg 70deg auto"
+            alt={T.heroAlt}></model-viewer>
+          <figcaption><a href={page(lang, `view.html#${hero.id}`)}>{hero.groupLabel} · {hero.title} →</a></figcaption>
+        </figure>
+      )}
+    </div>
+  </section>
+
+  <section class="stats" aria-label={T.statsLabel}>
+    <div class="wrap">
+      <dl>
+        {(["classes", "models", "countries"] as const).map(k => <div><dt>{T.stats[k]}</dt><dd>{num(k)}</dd></div>)}
+      </dl>
+    </div>
+  </section>
+
+  <section class="block" id="features" aria-labelledby="features-h">
+    <div class="wrap">
+      <h2 id="features-h">{T.featuresTitle}</h2>
+      <ul class="features">
+        <li><a href={page(lang, "search/")}><b>{F.search[0]}</b><span>{F.search[1]}</span></a></li>
+        <li><div><b>{F.map[0]} <span class="soon">{ui.site.soon}</span></b><span>{F.map[1]}</span></div></li>
+        <li><a href={page(lang, "view.html")}><b>{F.view[0]}</b><span>{F.view[1]}</span></a></li>
+        <li><div><b>{F.download[0]} <span class="soon">{ui.site.soon}</span></b><span>{F.download[1]}</span></div></li>
+        <li><a href="#data"><b>{F.data[0]}</b><span>{F.data[1]}</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="new" aria-labelledby="new-h">
+    <div class="wrap">
+      <div class="h-row"><h2 id="new-h">{T.newTitle}</h2><a href={page(lang, "view.html")}>{T.seeAll}</a></div>
+      <ul class="models">
+        {items.slice(0, 6).map(it => (
+          <li><a href={page(lang, `view.html#${it.id}`)}>
+            <img src={file(`thumbs/${it.id}.jpg`)} alt="" loading="lazy">
+            <span class="grp">{it.groupLabel}</span><b>{it.title}</b><time datetime={it.added}>{it.added}</time>
+          </a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <div class="wrap pair">
+    <section class="block" id="news" aria-labelledby="news-h">
+      <h2 id="news-h">{T.newsTitle}</h2>
+      <ol class="news">
+        {news(lang).slice(0, 5).map((n: any) => (
+          <li>
+            <time datetime={n.date}>{n.date}</time>
+            <b>{n.url ? <a href={/^https?:/.test(n.url) ? n.url : page(lang, n.url)}>{n.title}</a> : n.title}</b>
+            {n.body && <p>{n.body}</p>}
+          </li>
+        ))}
+      </ol>
+    </section>
+    <section class="block" id="about" aria-labelledby="about-h">
+      <h2 id="about-h">{T.aboutTitle}</h2>
+      {T.about.map(p => <p>{p}</p>)}
+    </section>
+  </div>
+
+  <section class="block" id="data" aria-labelledby="data-h">
+    <div class="wrap">
+      <h2 id="data-h">{T.dataTitle}</h2>
+      <ul class="data">
+        <li><a href={file("data/models.json")}>{D.models[0]}</a><span>{D.models[1]}</span></li>
+        <li><span class="off">{D.rdf[0]} <span class="soon">{ui.site.soon}</span></span><span>{D.rdf[1]}</span></li>
+        <li><span class="off">{D.iiif[0]} <span class="soon">{ui.site.soon}</span></span><span>{D.iiif[1]}</span></li>
+        <li><span class="off">{D.download[0]} <span class="soon">{ui.site.soon}</span></span><span>{D.download[1]}</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+<script is:inline>
+// Old links to the viewer (index.html#mk1) go to view.html#mk1; hashes of sections on this page stay here.
+(() => { const h = location.hash.slice(1); if (h && !document.getElementById(h)) location.replace("view.html" + location.hash); })();
+</script>
+</Base>

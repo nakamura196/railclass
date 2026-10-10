@@ -1,0 +1,7 @@
+---
+// rdf/class/<id>.html — one page per class RDF file (the URL the search results and the RDF already use).
+import ClassPage from "../../../components/ClassPage.astro";
+import { classIds } from "../../../lib/classes";
+export const getStaticPaths = () => classIds().map(id => ({ params: { id } }));
+---
+<ClassPage lang="ja" id={Astro.params.id!} />

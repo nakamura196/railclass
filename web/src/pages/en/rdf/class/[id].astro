@@ -1,0 +1,6 @@
+---
+import ClassPage from "../../../../components/ClassPage.astro";
+import { classIds } from "../../../../lib/classes";
+export const getStaticPaths = () => classIds().map(id => ({ params: { id } }));
+---
+<ClassPage lang="en" id={Astro.params.id!} />

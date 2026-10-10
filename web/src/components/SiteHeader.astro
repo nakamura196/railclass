@@ -1,0 +1,33 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+import { page, t, type Lang } from "../i18n";
+
+interface Props { lang: Lang; path: string; current?: string }
+const { lang, path, current } = Astro.props;
+const ui = t(lang);
+const other: Lang = lang === "ja" ? "en" : "ja";
+const NAV = [
+  { key: "search", label: ui.nav.search, href: page(lang, "search/") },
+  { key: "view", label: ui.nav.view, href: page(lang, "view.html") },
+  { key: "map", label: ui.nav.map },                                    // after B's navPlace: the map in search/
+  { key: "data", label: ui.nav.data, href: page(lang, "#data") },
+  { key: "about", label: ui.nav.about, href: page(lang, "#about") },
+];
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href={page(lang)}><b>{ui.site.name}</b><span>{ui.site.tagline}</span></a>
+    <nav aria-label={ui.nav.label}>
+      <ul>
+        {NAV.map(n => (
+          <li>{n.href
+            ? <a href={n.href} aria-current={n.key === current ? "page" : undefined}>{n.label}</a>
+            : <span class="off">{n.label}<span class="soon">{ui.site.soon}</span></span>}
+          </li>
+        ))}
+        <li><a href={page(other, path)} hreflang={other} lang={other}>{ui.nav.otherLang}</a></li>
+        <li><ThemeToggle lang={lang} /></li>
+      </ul>
+    </nav>
+  </div>
+</header>
