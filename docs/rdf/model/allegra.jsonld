@@ -13,6 +13,32 @@
   },
   "@graph": [
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7200"
+      },
+      "rdfs:label": "rhbred",
+      "schema:color": "#C4121C",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0216"
+      },
+      "rdfs:label": "door",
+      "schema:color": "#B4B8BC",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color3",
       "@type": "ColorSample",
       "areaShare": {
@@ -23,6 +49,110 @@
       "schema:color": "#14161A",
       "wdt:P462": {
         "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0065"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0181"
+      },
+      "rdfs:label": "stripe",
+      "schema:color": "#DCDEE0",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1844"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#C0C4C8",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/allegra/rhb_allegra.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q177598"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Rhaetian Railway livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "レーティッシュ鉄道の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q3142"
+        },
+        {
+          "@id": "wd:Q42519"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0063"
+      },
+      "rdfs:label": "white",
+      "schema:color": "#F2F4F5",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
       }
     },
     {
@@ -92,136 +222,6 @@
         "@type": "xsd:decimal",
         "@value": "37.7"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0181"
-      },
-      "rdfs:label": "stripe",
-      "schema:color": "#DCDEE0",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0065"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.7200"
-      },
-      "rdfs:label": "rhbred",
-      "schema:color": "#C4121C",
-      "wdt:P462": {
-        "@id": "wd:Q3142"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0063"
-      },
-      "rdfs:label": "white",
-      "schema:color": "#F2F4F5",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1844"
-      },
-      "rdfs:label": "roof",
-      "schema:color": "#C0C4C8",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0216"
-      },
-      "rdfs:label": "door",
-      "schema:color": "#B4B8BC",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/allegra/rhb_allegra.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q177598"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Rhaetian Railway livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "レーティッシュ鉄道の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q3142"
-        },
-        {
-          "@id": "wd:Q42519"
-        }
-      ]
     }
   ]
 }

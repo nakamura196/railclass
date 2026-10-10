@@ -101,7 +101,7 @@ MODELS = {
     "mk5": ("tb-skytrain-mk5", "translink", None),
     "icet_411": ("Q115612330", "db", None),
     "icet_415": ("Q137972762", "db", None),
-    "icet_green": ("Q696668", "db-green", None),
+    "icet_green": ("Q115612330", "db-green", None),    # car 411 525 (skytrain models/icet_green.py)
     "icet_oebb": ("Q8078904", "db-oebb", None),
     "icet_td": ("Q659660", "db", None),
     "icet_dsb": ("Q659660", "dsb", None),

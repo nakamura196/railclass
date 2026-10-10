@@ -256,39 +256,6 @@ cls:Q1087710 a skos:Concept,
     tb:sourceSection "Wikidata P3438" ;
     tb:useStatus "current" .
 
-cls:Q115612330 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "DBAG Class 411"@en,
-        "ICE T 411形"@ja ;
-    skos:broader cls:Q696668 ;
-    skos:exactMatch wd:Q115612330 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "DBAG Class 411"@en,
-        "ICE T 411形"@ja ;
-    prov:wasDerivedFrom wd:Q115612330 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q452140,
-        wd:Q83822 ;
-    wdt:P17 wd:Q183 ;
-    wdt:P2052 230.0 ;
-    wdt:P279 wd:Q129172,
-        wd:Q696668 ;
-    wdt:P930 wd:Q1415234 ;
-    tb:has3DModel true ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line1>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line2>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line3>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line4>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line5>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line6> ;
-    tb:usedOn wd:Q105237208,
-        wd:Q466879,
-        wd:Q540030,
-        wd:Q669665,
-        wd:Q819045,
-        wd:Q876774 ;
-    schema:subjectOf mdl:icet_411 .
-
 <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line1> a tb:LineUse ;
     dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
     skos:note "München–Berlin–Hamburg (ICE line 28)"@en ;
@@ -1525,7 +1492,7 @@ mdl:icet_dsb a schema:3DModel ;
 mdl:icet_green a schema:3DModel ;
     tb:galleryGroup "icet" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery> ;
-    schema:about cls:Q696668 ;
+    schema:about cls:Q115612330 ;
     schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_green.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
@@ -2191,6 +2158,40 @@ wd:Q949968 rdfs:label "Córdoba–Málaga high-speed rail line"@en .
 
 wd:Q958826 rdfs:label "Turin–Milan high-speed railway"@en .
 
+cls:Q115612330 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "DBAG Class 411"@en,
+        "ICE T 411形"@ja ;
+    skos:broader cls:Q696668 ;
+    skos:exactMatch wd:Q115612330 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "DBAG Class 411"@en,
+        "ICE T 411形"@ja ;
+    prov:wasDerivedFrom wd:Q115612330 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q452140,
+        wd:Q83822 ;
+    wdt:P17 wd:Q183 ;
+    wdt:P2052 230.0 ;
+    wdt:P279 wd:Q129172,
+        wd:Q696668 ;
+    wdt:P930 wd:Q1415234 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q115612330#line6> ;
+    tb:usedOn wd:Q105237208,
+        wd:Q466879,
+        wd:Q540030,
+        wd:Q669665,
+        wd:Q819045,
+        wd:Q876774 ;
+    schema:subjectOf mdl:icet_411,
+        mdl:icet_green .
+
 cls:Q137921671 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "New Flyer XD60"@en,
@@ -2263,6 +2264,27 @@ wd:Q769591 rdfs:label "Shanghai maglev train"@en,
 wd:Q83822 rdfs:label "Austrian Federal Railways"@en,
         "オーストリア連邦鉄道"@ja .
 
+cls:Q696668 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ICE T"@en,
+        "ICE T"@ja ;
+    skos:exactMatch wd:Q696668 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "ICE T"@en,
+        "ICE T"@ja ;
+    prov:wasDerivedFrom wd:Q696668 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q9322 ;
+    wdt:P176 wd:Q2738829,
+        wd:Q688893,
+        wd:Q81230 ;
+    wdt:P2052 230.0 ;
+    wdt:P279 wd:Q13402959,
+        wd:Q483373,
+        wd:Q671188 ;
+    wdt:P729 "1999"^^xsd:gYear ;
+    tb:has3DModel false .
+
 wd:Q105237208 rdfs:label "Gäubahn"@en .
 
 wd:Q1161505 rdfs:label "Madrid–Barcelona high-speed rail line"@en .
@@ -2313,28 +2335,6 @@ cls:Q4940487 a skos:Concept,
         wd:Q59567049,
         wd:Q736619,
         wd:Q847767 .
-
-cls:Q696668 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "ICE T"@en,
-        "ICE T"@ja ;
-    skos:exactMatch wd:Q696668 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "ICE T"@en,
-        "ICE T"@ja ;
-    prov:wasDerivedFrom wd:Q696668 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q9322 ;
-    wdt:P176 wd:Q2738829,
-        wd:Q688893,
-        wd:Q81230 ;
-    wdt:P2052 230.0 ;
-    wdt:P279 wd:Q13402959,
-        wd:Q483373,
-        wd:Q671188 ;
-    wdt:P729 "1999"^^xsd:gYear ;
-    tb:has3DModel true ;
-    schema:subjectOf mdl:icet_green .
 
 wd:Q16 rdfs:label "Canada"@en,
         "カナダ"@ja .

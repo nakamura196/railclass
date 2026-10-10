@@ -298,3 +298,11 @@ URI の取り決め（3 つのセッションで共有する。変えるとき�
 - 再発を防ぐため、組み立てた結果を元データと突き合わせる点検 `web/scripts/check-dist.mjs`（`npm test`）を足し、公開の手順に入れた（1ecd679）。
   正解はページと別の読み方で取る（3D モデルと名前は Turtle から、路線は `class_lines.tsv` と `docs/lines/` から）。
   直す前の `classes.ts` で組み立てると 97 件の失敗を出すことを確かめた。
+
+### 訂正: 緑帯の ICE T の模型の形式（同じ日、9:50）
+
+- 緑帯の模型 icet_green を、RDF では ICE T 全体（Q696668）に結んでいた。正しくは 411 形（Q115612330）。
+- 根拠: 模型の車番は 411 525。skytrain の `models/icet_green.py` と、写真 `411_horb_green_stripe_side.jpg` も 411 形の先頭車。`docs/data/models.json` は初めから 411 形だった。
+- 塗装（緑帯）は 411 形と 415 形の両方に塗られたので、「塗装の範囲」と「模型にした車両の形式」を取り違えたとみられる。
+- `tools/build_rdf.py` の MODELS と `annotations/icet_green.json` を直した。Turtle の差分は icet_green の `schema:about` と、2 つの形式の `schema:subjectOf` だけ（all.jsonld などの差分は並び順）。
+

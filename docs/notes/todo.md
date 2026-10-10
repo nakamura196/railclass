@@ -138,6 +138,7 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - `view.html` は振り分けだけ（`lib/classes.ts` の `modelClasses`）。見出し・フッター・トップの「3D で見る」と新着は形式のページか `search/?has3d=1` へ。`styles/view.css` は消した
 - 手元の確かめ（astro preview）: ICE TD で部位 1 を押すと前面ガラスに寄る、DSB への切り替えと `#icet_dsb`、英語のページ、Mk1、Allegra、`view.html` → `search/?has3d=1`、`view.html#icet_dsb` → ICE TD の DSB
 - 気づいたこと: icet_green は models.json では Q115612330（411 形）だが、RDF では Q696668（ICE T）のページに載っている。どちらが正しいか未確認
+  → 2026-10-10 9:50 411 形が正しい（車番 411 525、skytrain の models/icet_green.py と写真 411_horb_green_stripe_side.jpg）。build_rdf.py の MODELS と annotations/icet_green.json を直し、RDF・Manifest・索引を作り直した
 - [x] 2026-10-10 0:35 印の手直し（Sketchfab にならう）: 小さく半透明に、裏側の印は薄く（向きは部位のカメラから逆算し、カメラが動くたびにページ側で判定。model-viewer の data-visible は付かなかった）、選んだ印は輪にして部位が見えるように、「部位の印」で全部隠せる、部位の一覧は箱の中で巻き取る（Mirador の注釈欄のように）、下の項目の見出しと文字を大きく
 - [x] 2026-10-10 0:45 形式のページの右に「データと引用」のカード（ArchiveBase の項目ページの共有・エクスポートのカードにならう）: 引用文とコピー、エクスポート（Turtle・JSON-LD・IIIF Manifest（ロゴ付き）・GLB）。「つながり」の「データ」の行と、3D の下のロゴは外した。SNS の共有は付けていない
 - [x] Sketchfab のような「前へ・次へ」で部位を順にたどるボタン（2026-10-10 9:50。部位の一覧の下に「‹ 前へ」「n / 全数」「次へ ›」。端で一周する。印を押しても番号が付いてくる）
