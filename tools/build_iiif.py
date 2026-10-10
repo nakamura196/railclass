@@ -176,7 +176,7 @@ def build(model):
                   "fileSize": os.path.getsize(os.path.join(ROOT, "docs", "models", model + ".glb"))}]
     for f in formats["files"]:
         rendering.append({"id": f"{BASE}downloads/{model}/{f['file']}",
-                          "type": "Model" if f["key"] != "obj" else "Dataset",
+                          "type": "Dataset" if f["key"] == "mtl" else "Model",   # the mtl holds only the colours of the obj
                           "format": f["format"], "label": f["label"], "fileSize": f["bytes"]})
 
     see_also = []

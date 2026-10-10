@@ -8,7 +8,7 @@ import Base from "../layouts/Base.astro";
 import { file, page, t, type Lang } from "../i18n";
 import { classPage } from "../lib/classes";
 import iiifLogo from "../assets/iiif-logo.svg";   // the IIIF logo, as on the IIIF Consortium's site
-import { models, modelParts, fmtSize, hasManifest, classLines } from "../lib/data";
+import { models, modelParts, fmtSize, hasManifest, classLines, downloads } from "../lib/data";
 
 const { lang, id } = Astro.props as { lang: Lang; id: string };
 const ui = t(lang);
@@ -185,7 +185,11 @@ const mapped = lines.filter(l => l.map);
           {mods.map(m => (
             <a href={file(`models/${m.id}.${M.ext}`)} download>{mods.length > 1 ? `${T.glb} (${m.title})` : T.glb}</a>
           ))}
+          {mods.flatMap(m => downloads(m.id, lang).map(d => (
+            <a href={file(d.href)} download title={d.label}>{mods.length > 1 ? `${d.key.toUpperCase()} (${m.title})` : d.key.toUpperCase()}</a>
+          )))}
         </div>
+        {mods.some(m => downloads(m.id, lang).length) && <p class="dlnote">{ui.model.objNote} {ui.model.meshNote}</p>}
       </section>
       {c.photo && (
         <figure class="photo">

@@ -1,5 +1,5 @@
 // Reads the JSON in docs/ at build time (written by the Python tools / by hand) and picks the text for a language.
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, statSync } from "node:fs";
 import type { Lang } from "../i18n";
 
 import { resolve } from "node:path";
@@ -76,6 +76,18 @@ export function modelParts(id: string, lang: Lang): Part[] {
 }
 
 export const hasManifest = (id: string) => existsSync(docsPath(`iiif/${id}/manifest.json`));
+
+// The download files of a model, one per format (docs/downloads/<id>/formats.json, by ~/git/3d/skytrain/tools/export_formats.py).
+// The GLB is not among them: it is docs/models/<id>.glb, linked on its own.
+export type Download = { key: string; label: string; href: string; bytes: number };
+export function downloads(id: string, lang: Lang): Download[] {
+  const p = docsPath(`downloads/${id}/formats.json`);
+  if (!existsSync(p)) return [];
+  return JSON.parse(readFileSync(p, "utf8")).files.map((f: any) => ({
+    key: f.key, label: (f.label[lang] ?? f.label.en)[0], href: `downloads/${id}/${f.file}`, bytes: f.bytes }));
+}
+export const docsBytes = (p: string) => statSync(docsPath(p)).size;
+export const fmtBytes = (n: number) => n >= 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(n / 1e3))} KB`;
 
 export type Line = { id: string; label: string; status: string; until: string; source: string; map: boolean };
 

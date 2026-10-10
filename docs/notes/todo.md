@@ -13,7 +13,8 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [x] 形式の RDF `docs/rdf/class/<cid>.ttl`・`.jsonld`（まずは 3D モデルのある形式、次に Wikidata の全形式）
 - [x] モデルの RDF `docs/rdf/model/<model-id>.ttl`・`.jsonld`（形式・塗装・作者・ライセンス・IIIF Manifest への逆リンク）
 - [x] 全件をまとめたファイル（`docs/rdf/all.ttl` など）を一括ダウンロード用に
-- [ ] ERATV と Wikidata の照合を改善（「ICE T BR 411 ETCS BL3」→ Q115612330 のように、版の付いた名前を形式に結ぶ。skos:narrowMatch）
+- [x] ERATV と Wikidata の照合を改善（「ICE T BR 411 ETCS BL3」→ Q115612330 のように、版の付いた名前を形式に結ぶ。skos:narrowMatch）
+      2026-10-10 10:30 名前を後ろから削る照合と「BR nnn」の引き当てを `tools/build_classes.py` に入れた。結べた型 134 → 629（data-model.md の同じ日）。RDF に入れるのは ERATV の公開の判断の後
 - [ ] ERATV の再利用条件を確かめる（ERA の Copyright Notice）。結果で `docs/` に入れるか決める
       2026-10-10 10:00 確かめた（data-model.md の同じ日）: 出典を示せば複製してよい、という ERA の一般の許可だけ。ERATV に個別の定めは無い。`docs/` に入れるかは本人の判断待ち（推奨: 出典つきで入れる）
 - [ ] 「RDF にする利点」をノートで実測で示す（例: 典拠の更新がそのまま反映される、外部と結べる件数）
@@ -25,8 +26,9 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [x] ICE T 411 の Manifest 1 つで試す: Scene に GLB、`seeAlso` で RDF、`rendering` でダウンロード、`navPlace` で運行地域
 - [x] 部位と特徴の注釈の元データ `annotations/<model-id>.yaml`（部位の名前・説明・3D 上の位置）。ICE T 411 から
 - [x] 14 モデル全部の Manifest と、全体の Collection `docs/iiif/collection.json`（2026-10-10 9:45 Collection を足した: `build_iiif.py --collection`。トップの「データ」の RDF と IIIF の「準備中」を外してリンクした。Manifest の homepage を `view.html#<模型>`（形式のページへ）に直した）
-- [ ] ダウンロード形式 `docs/downloads/<model-id>/`（GLB・STL・OBJ・3MF・STEP など）と `~/git/3d/skytrain/tools/export_formats.py`。
+- [x] ダウンロード形式 `docs/downloads/<model-id>/`（GLB・STL・OBJ・3MF・STEP など）と `~/git/3d/skytrain/tools/export_formats.py`。
       STEP は面を貼っただけで、CAD で寸法を直せる立体ではないことを画面とノートに書く
+      2026-10-10 10:45 本人の案で、形式ごとに別のファイル（GLB・STL・OBJ・MTL・USDZ）を形式のページとモデルのページから落とせるようにした。OBJ の zip はやめ、MTL を並べた。18 モデル 92 MB。STEP・3MF は作らない（面を貼っただけの立体になるため）。画面に「CAD で寸法を直せる立体ではない」と書いた
 - [x] 「IIIF v4 の実例」としての位置付けをノート `docs/notes/iiif.md` に（先行例の有無も）（2026-10-10 10:05。先行例は MorphoSource・Smithsonian Voyager・TSG の例。MorphoSource の Manifest の中身は未確認）
 
 ## C. トップページ・検索（worktree `train-bodies.worktrees/site`）
@@ -119,7 +121,8 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [ ] 本人に確かめる: フッターの「© 2026 中村 覚」と、IIIF の提供者（`tools/build_iiif.py` の PROVIDER）「中村 覚（東京大学）」を残すか
       2026-10-10 本人の指示「このサイトでは東京大学をあまり出さない」: IIIF の提供者を「中村 覚」「Satoru Nakamura」にした（build_iiif.py と 14 件の Manifest、未コミット）。フッターの © は未確認
 - [x] 新しい 4 モデル（allegra・frecciarossa・maglev・vandebharat）は注釈が無いので、IIIF マニフェストとダウンロードがまだ無い（2026-10-10 10:05 注釈 15〜16 か所ずつと Manifest を作った。Collection は 18 本。推測は frecciarossa 2・maglev 1。ダウンロードはまだ無いので、Manifest の rendering は GLB だけ。navPlace は入れていない）
-- [ ] `docs/downloads/`（git の管理外）は穴なし版から 14 件作り直した。公開の置き場所（git か Releases か）は未定のまま
+- [x] `docs/downloads/`（git の管理外）は穴なし版から 14 件作り直した。公開の置き場所（git か Releases か）は未定のまま
+      2026-10-10 10:45 決めた: git の main には入れず、公開の手順（gh-pages、履歴なし）でそのまま配る。Releases は使わない。作り直しても履歴に溜まらない。ファイルが欠けていると npm test が落ちる。Manifest の rendering も作り直した（404 は解消）
       2026-10-10 気づいたこと: Manifest の rendering（ダウンロード 4 件）は downloads/ を指しているが、公開の手順で downloads/ を外すので、今は 404 になる。置き場所が決まったら Manifest を作り直す
 - [x] 2026-10-09 新しい 4 モデルを `tools/build_rdf.py` の MODELS・CLASSES・LIVERIES に足し、RDF と検索の索引を作り直した（3D のある形式 12 → 16）。
       形式は gallery の wikidata 欄どおり（Q671805・Q370895・Q289090 = Transrapid 08・Q119775864）。上海リニアは運行会社の Wikidata 項目が無いので、塗装は路線 Q769591 に結んだ。

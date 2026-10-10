@@ -1,12 +1,13 @@
 ---
 // One 3D model (rdf/model/<id>.html), the page for the model's URI: what it is, the class it was made for (whose page
-// shows it in 3D with the part notes), and its data (Turtle, JSON-LD, IIIF Manifest, GLB). Replaces the bare page
+// shows it in 3D with the part notes), its data (Turtle, JSON-LD, IIIF Manifest) and its download files, one link per
+// format (GLB from docs/models/, the others from docs/downloads/<id>/). Replaces the bare page
 // tools/build_rdf.py used to write.
 import "../styles/class.css";
 import Base from "../layouts/Base.astro";
 import { file, page, t, type Lang } from "../i18n";
 import { modelClasses, classPage } from "../lib/classes";
-import { models, fmtSize, hasManifest } from "../lib/data";
+import { models, fmtSize, hasManifest, downloads, fmtBytes, docsBytes } from "../lib/data";
 
 const { lang, id } = Astro.props as { lang: Lang; id: string };
 const ui = t(lang);
@@ -17,6 +18,7 @@ const cid = modelClasses()[id];
 const cname = cid ? classPage(cid, lang, n => String(n), y => String(y)).name : null;
 const uri = `https://nakamura196.github.io/train-bodies/rdf/model/${id}`;
 const here = `rdf/model/${id}.html`;
+const dl = downloads(id, lang);
 ---
 <Base lang={lang} path={here} current="search" title={`${m.title} (${m.groupLabel}) — ${ui.site.name}`} description={`${T.kicker}: ${m.title}`}>
 <link slot="head" rel="alternate" type="text/turtle" href={file(`rdf/model/${id}.ttl`)}>
@@ -44,8 +46,16 @@ const here = `rdf/model/${id}.html`;
         <p class="links">
           <a href={file(`rdf/model/${id}.ttl`)}>Turtle</a> · <a href={file(`rdf/model/${id}.jsonld`)}>JSON-LD</a>
           {hasManifest(id) && <>{" · "}<a href={file(`iiif/${id}/manifest.json`)}>IIIF Manifest</a></>}
-          {" · "}<a href={file(`models/${id}.${M.ext}`)}>GLB</a>
         </p>
+      </section>
+      <section class="card" id="download">
+        <h2>{T.download}</h2>
+        <ul class="dl">
+          <li><a href={file(`models/${id}.${M.ext}`)} download>{T.glb}</a> <span>{fmtBytes(docsBytes(`models/${id}.${M.ext}`))}</span></li>
+          {dl.map(d => <li><a href={file(d.href)} download>{d.label}</a> <span>{fmtBytes(d.bytes)}</span></li>)}
+        </ul>
+        {dl.some(d => d.key === "mtl") && <p class="note">{T.objNote}</p>}
+        <p class="note">{T.meshNote}</p>
       </section>
     </aside>
   </div>
