@@ -45,13 +45,14 @@
 ## サイトを Astro に移す — 方針は `site.md` の「Astro に移す」
 
 - [ ] 前提: site（写真のクレジット・種類の大分類）と iiif の枝を main に入れる
-- [ ] Astro の雛形、レイアウト 1 つ（ヘッダ・フッタ）、GitHub Actions で Pages に出す
-- [ ] トップ・ビューア・検索・形式の詳細の 4 種類を移す。URL と見た目が今と同じことを確かめる
+- [x] Astro の雛形、レイアウト 1 つ（ヘッダ・フッタ）、GitHub Actions で Pages に出す（配る段は配信元の切り替えまで止めてある）
+- [ ] トップ・ビューア・検索・形式の詳細の 4 種類を移す。URL と見た目が今と同じことを確かめる（トップ・ビューアは済み。検索・形式の詳細は site が入ってから）
 - [ ] `build_rdf.py` から HTML を書く部分を外し、形式の詳細ページは Astro が JSON から作る
-- [ ] 多言語（日本語は今の URL、英語は `/en/`）
-- [ ] ライト・ダーク・OS に従う の切り替え（ヘッダのボタン、選択を覚える、開いた瞬間のちらつきなし）
+- [ ] 多言語（日本語は今の URL、英語は `/en/`）（トップ・ビューアは済み。モデルの英語は `web/src/i18n/models.en.json` に仮置き → gallery.py が出すようにする）
+- [x] ライト・ダーク・OS に従う の切り替え（ヘッダのボタン、選択を覚える、開いた瞬間のちらつきなし）
 - [ ] `assets/site.js` のヘッダ・フッタ差し込みを消す
-- [ ] Dependabot（cooldown つき）、Actions の SHA 固定、`npm audit`
+- [x] Dependabot（cooldown つき）、Actions の SHA 固定、`npm audit`
+- [ ] Pages の配信元を GitHub Actions に切り替え、変数 `PAGES_SOURCE=actions` を足す（3 つが main にそろってから本人に確かめる）。そのあと `docs/` の古い `index.html`・`view.html`・`assets/` を消す
 
 ## 路線（地図の線）— 担当は未定。方針は `data-model.md` の「路線の線データ」
 

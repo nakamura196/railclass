@@ -1,0 +1,44 @@
+---
+// One layout for every page: head, the theme decision (before first paint), shared header and footer.
+import "../styles/site.css";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { LANGS, page, t, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+  path: string;          // this page without the language prefix: "" (top), "view.html"
+  title?: string;        // full <title>; the site name alone when omitted
+  description?: string;
+  current?: string;      // nav key shown as the current page
+}
+const { lang, path, title, description, current } = Astro.props;
+const ui = t(lang);
+const canonical = new URL(page(lang, path), Astro.site).href;
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title ?? ui.site.name}</title>
+<meta name="description" content={description ?? ui.site.description}>
+<link rel="canonical" href={canonical}>
+{LANGS.map(l => <link rel="alternate" hreflang={l} href={new URL(page(l, path), Astro.site).href}>)}
+<link rel="alternate" hreflang="x-default" href={new URL(page("ja", path), Astro.site).href}>
+<script is:inline>
+// Light / dark chosen in the header is kept in localStorage; set it before the page paints so the colours never flash.
+// No stored choice = follow the OS (site.css uses prefers-color-scheme).
+(() => { try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {} })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<slot name="head" />
+</head>
+<body>
+<SiteHeader lang={lang} path={path} current={current} />
+<slot />
+<SiteFooter lang={lang} />
+</body>
+</html>
