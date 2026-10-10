@@ -50,7 +50,7 @@
 - [ ] `build_rdf.py` から HTML を書く部分を外し、形式の詳細ページは Astro が JSON から作る
 - [ ] 多言語（日本語は今の URL、英語は `/en/`）（4 種類とも済み。モデルの英語は `web/src/i18n/models.en.json` に仮置き → gallery.py が出すようにする）
 - [x] ライト・ダーク・OS に従う の切り替え（ヘッダのボタン、選択を覚える、開いた瞬間のちらつきなし）
-- [ ] `assets/site.js` のヘッダ・フッタ差し込みを消す
+- [x] `assets/site.js` のヘッダ・フッタ差し込みを消す（1462dbb で `docs/assets/` ごと削除）
 - [x] Dependabot（cooldown つき）、Actions の SHA 固定、`npm audit`
 - [x] Pages の配信元を切り替える（2026-10-09、Actions の残りが 0 のため `gh-pages` ブランチに。`zsh scripts/deploy-pages.zsh` を main で走らせて配る）
 - [x] `docs/` の古い `index.html`・`view.html`・`assets/`・`search/index.html`・`search.js`・`search.css` を消す（2026-10-09）
@@ -66,18 +66,20 @@
 
 ## 写真の保存と公開待ちの変更（2026-10-09 夜）
 
+2026-10-09 23:40 本人の指示で、train-bodies の作業はこのあと 1 つのセッションに一本化した。
+
 写真の保存（`tools/fetch_photos.py`）が終わるまで、コミットも公開もしない。終わったら本人に確かめてから進める。
 
 - [ ] 写真の保存が終わったか確かめる（2026-10-09 21:53 で約 600 / 12,195 枚、1 分に約 85 枚、0 時すぎに終わる見込み。
       記録ファイルは空のままなので、`ls data/photos | wc -l` で数える。`data/` は git の管理外）
-- [ ] 未コミットの変更を 2 つに分けてコミットする
+- [x] 未コミットの変更を分けてコミットする（2026-10-09 23:40: (1) のコードと記録 d736345、(2) 00e5c17、色 ef3aa31。索引 `docs/search/index.json` は写真の保存が終わってから）
       (1) 写真・検索: `tools/fetch_photos.py`・`tools/build_search.py`・`docs/search/index.json`・`web/scripts/sync-public.mjs`・`web/src/scripts/search.js`・検索と形式のページ
       (2) 文言と台座なし: 「プラレール」を外した注釈 `annotations/*.json`・`web/src/i18n/*.json`・README、作者の行の削除、台座を外して書き出し直した `docs/models/*.glb`・`docs/data/models.json`
-- [ ] 本人の了承を得てから push し、`zsh scripts/deploy-pages.zsh` を main で走らせて公開する（未 push の 1462dbb・322eb5c も一緒に出る）
+- [x] push は本人の指示で 2026-10-09 23:40 に済み（origin/main = ef3aa31）。公開はまだ: `zsh scripts/deploy-pages.zsh` を main で走らせて公開する（未 push の 1462dbb・322eb5c も一緒に出る）
 - [ ] 公開後に `/`・`/view.html`・`/search/`・`/en/`・形式のページ 1 つが開くか確かめる
-- [ ] (2) には次も含める: `docs/thumbs/*.jpg`、作り直した `docs/iiif/*/manifest.json`（14 件）、`web/src/components/SiteFooter.astro`（作者の行）。
+- [x] (2) には次も含める: `docs/thumbs/*.jpg`、作り直した `docs/iiif/*/manifest.json`（14 件）、`web/src/components/SiteFooter.astro`（作者の行）。
       注釈は「爪の穴より上」を「印刷用の版で開ける爪の穴より上」に、ICE TD の屋根の穴の説明も印刷用の版の話に直してある
-- [ ] skytrain 側も別にコミットする: `lib.py`（`NO_MOUNT` でネジ受けの柱・屋根の切り欠き・後ろの爪穴を省く）・`build.py`（`--no-mount`、出力は `out/<モデル>/nomount/`）・
+- [x] skytrain 側も別にコミットした（299111d 台座なし、e37b7c3 印刷の道具とノート。skytrain は手元だけで push しない）: `lib.py`（`NO_MOUNT` でネジ受けの柱・屋根の切り欠き・後ろの爪穴を省く）・`build.py`（`--no-mount`、出力は `out/<モデル>/nomount/`）・
       `tools/gallery.py` と `tools/export_formats.py`（どちらも `--no-mount`。2 つとも未追跡のファイル）。旗なしは今までどおり穴あり（印刷用）
 - [ ] 本人に確かめる: フッターの「© 2026 中村 覚」と、IIIF の提供者（`tools/build_iiif.py` の PROVIDER）「中村 覚（東京大学）」を残すか
 - [ ] 新しい 4 モデル（allegra・frecciarossa・maglev・vandebharat）は注釈が無いので、IIIF マニフェストとダウンロードがまだ無い
