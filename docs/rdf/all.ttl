@@ -1,0 +1,789 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+tb:Livery a rdfs:Class ;
+    rdfs:label "Livery"@en,
+        "塗装"@ja ;
+    rdfs:comment "A paint scheme that a 3D model reproduces."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:VehicleClass a rdfs:Class ;
+    rdfs:label "Vehicle class"@en,
+        "形式"@ja ;
+    rdfs:comment "A class (type) of railway vehicle or road vehicle; one record per class."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:galleryGroup a rdf:Property ;
+    rdfs:label "gallery group"@en,
+        "ギャラリーの区分"@ja ;
+    rdfs:comment "Group id used on the gallery page."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:handEntered a rdf:Property ;
+    rdfs:label "hand-entered property"@en,
+        "手入力の項目"@ja ;
+    rdfs:comment "A property whose values on this class were entered by hand (see dcterms:source), not copied from Wikidata."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:has3DModel a rdf:Property ;
+    rdfs:label "has 3D model"@en,
+        "3D モデルあり"@ja ;
+    rdfs:comment "True when at least one 3D model in train-bodies depicts this class."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:livery a rdf:Property ;
+    rdfs:label "livery"@en,
+        "塗装"@ja ;
+    rdfs:comment "The livery a 3D model reproduces."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:liveryOf a rdf:Property ;
+    rdfs:label "livery of"@en,
+        "塗装の持ち主"@ja ;
+    rdfs:comment "The operator whose livery this is."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:part a rdf:Property ;
+    rdfs:label "part"@en,
+        "部分"@ja ;
+    rdfs:comment "Which part of the vehicle the model is, when one vehicle is split into several models."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+wd:Q1100969 rdfs:label "Talgo"@en,
+        "タルゴ"@ja .
+
+wd:Q1126054 rdfs:label "NFI Group"@en,
+        "ニュー・フライヤー・インダストリーズ"@ja .
+
+wd:Q1567915 rdfs:label "diesel multiple unit"@en,
+        "気動車"@ja .
+
+wd:Q23239 rdfs:label "アムトラック"@ja .
+
+wd:Q2476154 rdfs:label "Renfe Operadora"@en,
+        "レンフェ"@ja .
+
+wd:Q2738829 rdfs:label "Fiat Ferroviaria"@en,
+        "フィアット"@ja .
+
+wd:Q29 rdfs:label "Spain"@en,
+        "スペイン王国"@ja .
+
+wd:Q313106 rdfs:label "Talgo Train"@en,
+        "タルゴ"@ja .
+
+wd:Q333498 rdfs:label "Bombardier"@en,
+        "ボンバルディア"@ja .
+
+wd:Q3552199 rdfs:label "Urban Transportation Development Corporation"@en,
+        "都市交通開発公社"@ja .
+
+wd:Q3959904 rdfs:label "multiple unit"@en,
+        "動力分散方式の列車編成"@ja .
+
+wd:Q40 rdfs:label "Austria"@en,
+        "オーストリア"@ja .
+
+wd:Q4102249 rdfs:label "subway car"@en,
+        "地下鉄車両"@ja .
+
+wd:Q483373 rdfs:label "electric multiple unit"@en,
+        "電車"@ja .
+
+wd:Q59618126 rdfs:label "New Flyer Xcelsior"@en,
+        "ニューフライヤー・エクセルシオール"@ja .
+
+wd:Q654749 rdfs:label "articulated bus"@en,
+        "連節バス"@ja .
+
+wd:Q697217 rdfs:label "Amtrak Cascades"@en,
+        "アムトラック・カスケーズ"@ja .
+
+wd:Q83824 rdfs:label "DSB"@en,
+        "デンマーク国鉄"@ja .
+
+wd:Q83910 rdfs:label "Red Nacional de los Ferrocarriles Españoles"@en,
+        "レンフェ"@ja .
+
+wd:Q96106536 rdfs:label "Siemens Venture"@en,
+        "シーメンス・ベンチャー"@ja .
+
+cls:Q1087710 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "AVE Class 102"@en,
+        "レンフェ102系"@ja ;
+    skos:exactMatch wd:Q1087710 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "AVE Class 102"@en,
+        "レンフェ102系"@ja ;
+    prov:wasDerivedFrom wd:Q1087710 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q83910 ;
+    wdt:P17 wd:Q29 ;
+    wdt:P176 wd:Q1100969 ;
+    wdt:P2052 330.0 ;
+    wdt:P279 wd:Q13402959,
+        wd:Q313106 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:ave102 .
+
+cls:Q115612330 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "DBAG Class 411"@en,
+        "ICE T 411形"@ja ;
+    skos:broader cls:Q696668 ;
+    skos:exactMatch wd:Q115612330 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "DBAG Class 411"@en,
+        "ICE T 411形"@ja ;
+    prov:wasDerivedFrom wd:Q115612330 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q452140,
+        wd:Q83822 ;
+    wdt:P17 wd:Q183 ;
+    wdt:P2052 230.0 ;
+    wdt:P279 wd:Q129172,
+        wd:Q696668 ;
+    wdt:P930 wd:Q1415234 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:icet_411 .
+
+cls:Q137972762 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "DBAG Class 415"@en,
+        "ICE T 415形"@ja ;
+    skos:broader cls:Q696668 ;
+    skos:exactMatch wd:Q137972762 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "DBAG Class 415"@en,
+        "ICE T 415形"@ja ;
+    prov:wasDerivedFrom wd:Q137972762 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q452140 ;
+    wdt:P17 wd:Q183 ;
+    wdt:P2052 230.0 ;
+    wdt:P279 wd:Q129172,
+        wd:Q696668 ;
+    wdt:P729 "1999"^^xsd:gYear ;
+    wdt:P930 wd:Q1415234 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:icet_415 .
+
+cls:Q140611223 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Amtrak Airo"@en,
+        "Amtrak Airo"@ja ;
+    skos:exactMatch wd:Q140611223 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Amtrak Airo"@en,
+        "Amtrak Airo"@ja ;
+    prov:wasDerivedFrom wd:Q140611223 ;
+    wdt:P137 wd:Q23239 ;
+    wdt:P176 wd:Q391895 ;
+    wdt:P279 wd:Q96106536 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:airo .
+
+cls:Q8078904 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ÖBB 4011"@en,
+        "ÖBB 4011形"@ja ;
+    skos:broader cls:Q696668 ;
+    skos:exactMatch wd:Q8078904 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "ÖBB 4011"@en,
+        "ÖBB 4011形"@ja ;
+    prov:wasDerivedFrom wd:Q8078904 ;
+    wdt:P137 wd:Q83822 ;
+    wdt:P17 wd:Q40 ;
+    wdt:P176 wd:Q391895 ;
+    wdt:P279 wd:Q3959904 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:icet_oebb .
+
+cls:tb-skytrain-mk1 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SkyTrain Mark I"@en,
+        "スカイトレイン Mark I"@ja ;
+    dcterms:source "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text."@en ;
+    skos:broadMatch wd:Q4940487 ;
+    skos:broader cls:Q4940487 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "SkyTrain Mark I"@en,
+        "スカイトレイン Mark I"@ja ;
+    wdt:P137 wd:Q141170526 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q3552199 ;
+    wdt:P729 "1985"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:mk1 .
+
+cls:tb-skytrain-mk2 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SkyTrain Mark II"@en,
+        "スカイトレイン Mark II"@ja ;
+    dcterms:source "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text."@en ;
+    skos:broadMatch wd:Q4940487 ;
+    skos:broader cls:Q4940487 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "SkyTrain Mark II"@en,
+        "スカイトレイン Mark II"@ja ;
+    wdt:P137 wd:Q141170526 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P729 "2002"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:mk2 .
+
+cls:tb-skytrain-mk3 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SkyTrain Mark III"@en,
+        "スカイトレイン Mark III"@ja ;
+    dcterms:source "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text."@en ;
+    skos:broadMatch wd:Q4940487 ;
+    skos:broader cls:Q4940487 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "SkyTrain Mark III"@en,
+        "スカイトレイン Mark III"@ja ;
+    wdt:P137 wd:Q141170526 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P729 "2016"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:mk3 .
+
+cls:tb-skytrain-mk5 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SkyTrain Mark V"@en,
+        "スカイトレイン Mark V"@ja ;
+    dcterms:source "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text."@en ;
+    skos:broadMatch wd:Q4940487 ;
+    skos:broader cls:Q4940487 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "SkyTrain Mark V"@en,
+        "スカイトレイン Mark V"@ja ;
+    wdt:P137 wd:Q141170526 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q309084 ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:mk5 .
+
+mdl:airo a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/airo#livery> ;
+    schema:about cls:Q140611223 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/airo.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "2026年9月に走り始めた、シアトル〜バンクーバーの新型客車。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "Airo（Amtrak Cascades）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/airo/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/airo.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#airo> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#livery> a tb:Livery ;
+    rdfs:label "Amtrak Cascades livery"@en,
+        "Amtrak Cascades の塗装"@ja ;
+    tb:liveryOf wd:Q697217 .
+
+mdl:ave102 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery> ;
+    schema:about cls:Q1087710 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ave102.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "スペインの高速列車。カモのくちばしのような鼻。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "AVE 102「Pato」"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ave102/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ave102.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#ave102> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery> a tb:Livery ;
+    rdfs:label "Renfe AVE livery"@en,
+        "Renfe AVE の塗装"@ja ;
+    tb:liveryOf wd:Q2476154 .
+
+mdl:bus49_front a schema:3DModel ;
+    tb:galleryGroup "bus" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery> ;
+    tb:part "front half of the articulated bus"@en,
+        "連節バスの前半分"@ja ;
+    schema:about cls:Q137921671 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/bus49_front.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 145.1 ] ;
+    schema:description "TransLink の連節バス XD60 の前半分。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 46.0 ] ;
+    schema:name "49番バス（前）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/bus49_front/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/bus49_front.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#bus49_front> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery> a tb:Livery ;
+    rdfs:label "TransLink livery"@en,
+        "TransLink の塗装"@ja ;
+    tb:liveryOf wd:Q1142140 .
+
+mdl:bus49_rear a schema:3DModel ;
+    tb:galleryGroup "bus" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery> ;
+    tb:part "rear half of the articulated bus"@en,
+        "連節バスの後ろ半分"@ja ;
+    schema:about cls:Q137921671 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/bus49_rear.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 143.5 ] ;
+    schema:description "同じバスの後ろ半分。2 台をつないで走らせる。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 46.0 ] ;
+    schema:name "49番バス（後ろ）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/bus49_rear/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/bus49_rear.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#bus49_rear> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery> a tb:Livery ;
+    rdfs:label "TransLink livery"@en,
+        "TransLink の塗装"@ja ;
+    tb:liveryOf wd:Q1142140 .
+
+mdl:icet_411 a schema:3DModel ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery> ;
+    schema:about cls:Q115612330 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_411.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "標準の塗装。赤い帯と「ICE」の文字、鼻に DB のマーク。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "411（7両編成）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_411/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_411.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#icet_411> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery> a tb:Livery ;
+    rdfs:label "Deutsche Bahn livery (red stripe)"@en,
+        "DB の塗装（赤い帯）"@ja ;
+    tb:liveryOf wd:Q9322 .
+
+mdl:icet_415 a schema:3DModel ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_415#livery> ;
+    schema:about cls:Q137972762 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_415.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "形は 411 と同じ。車番だけが違う。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "415（5両編成）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_415/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_415.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#icet_415> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_415#livery> a tb:Livery ;
+    rdfs:label "Deutsche Bahn livery (red stripe)"@en,
+        "DB の塗装（赤い帯）"@ja ;
+    tb:liveryOf wd:Q9322 .
+
+mdl:icet_dsb a schema:3DModel ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery> ;
+    schema:about cls:Q659660 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_dsb.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "デンマーク国鉄に貸した時期の塗装。窓まわりが紺。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "ICE TD（DSB）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_dsb/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_dsb.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#icet_dsb> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery> a tb:Livery ;
+    rdfs:label "DSB livery"@en,
+        "DSB の塗装"@ja ;
+    tb:liveryOf wd:Q83824 .
+
+mdl:icet_green a schema:3DModel ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery> ;
+    schema:about cls:Q696668 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_green.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "2019〜2022年。帯の前半が緑で、ラベルとプラグの印が付く。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "緑の帯"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_green/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_green.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#icet_green> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery> a tb:Livery ;
+    rdfs:label "Deutsche Bahn livery with green stripe (2019–2022)"@en,
+        "DB の塗装（緑の帯、2019〜2022年）"@ja ;
+    tb:liveryOf wd:Q9322 .
+
+mdl:icet_oebb a schema:3DModel ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery> ;
+    schema:about cls:Q8078904 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_oebb.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "オーストリア国鉄が使った 3 編成。DB の塗装に ÖBB の印。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "ÖBB 4011"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_oebb/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_oebb.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#icet_oebb> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery> a tb:Livery ;
+    rdfs:label "Deutsche Bahn livery with ÖBB marks"@en,
+        "DB の塗装に ÖBB の印"@ja ;
+    tb:liveryOf wd:Q83822 .
+
+mdl:icet_td a schema:3DModel ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_td#livery> ;
+    schema:about cls:Q659660 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_td.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "ディーゼル版の 605 形。外から見ると 411 と同じ。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "ICE TD（DB）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_td/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_td.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#icet_td> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_td#livery> a tb:Livery ;
+    rdfs:label "Deutsche Bahn livery (red stripe)"@en,
+        "DB の塗装（赤い帯）"@ja ;
+    tb:liveryOf wd:Q9322 .
+
+mdl:mk1 a schema:3DModel ;
+    tb:galleryGroup "skytrain" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery> ;
+    schema:about cls:tb-skytrain-mk1 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/mk1.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 130.0 ] ;
+    schema:description "1985年から走る、角ばった短い車体。今の TransLink 塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "Mark I"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/mk1/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/mk1.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#mk1> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery> a tb:Livery ;
+    rdfs:label "TransLink livery"@en,
+        "TransLink の塗装"@ja ;
+    tb:liveryOf wd:Q1142140 .
+
+mdl:mk2 a schema:3DModel ;
+    tb:galleryGroup "skytrain" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery> ;
+    schema:about cls:tb-skytrain-mk2 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/mk2.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.7 ] ;
+    schema:description "丸い鼻と大きな前面ガラス。2002年から。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:name "Mark II"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/mk2/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/mk2.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#mk2> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery> a tb:Livery ;
+    rdfs:label "TransLink livery"@en,
+        "TransLink の塗装"@ja ;
+    tb:liveryOf wd:Q1142140 .
+
+mdl:mk3 a schema:3DModel ;
+    tb:galleryGroup "skytrain" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/mk3#livery> ;
+    schema:about cls:tb-skytrain-mk3 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/mk3.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 152.0 ] ;
+    schema:description "Innovia Metro 300。2016年から。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:name "Mark III"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/mk3/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/mk3.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#mk3> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk3#livery> a tb:Livery ;
+    rdfs:label "TransLink livery"@en,
+        "TransLink の塗装"@ja ;
+    tb:liveryOf wd:Q1142140 .
+
+mdl:mk5 a schema:3DModel ;
+    tb:galleryGroup "skytrain" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery> ;
+    schema:about cls:tb-skytrain-mk5 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/mk5.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "いちばん新しい車両。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "Mark V"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/mk5/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/mk5.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#mk5> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery> a tb:Livery ;
+    rdfs:label "TransLink livery"@en,
+        "TransLink の塗装"@ja ;
+    tb:liveryOf wd:Q1142140 .
+
+wd:Q129172 rdfs:label "InterCityExpress"@en,
+        "ICE"@ja .
+
+wd:Q1415234 rdfs:label "15 kV, 16.7 Hz AC railway electrification"@en .
+
+wd:Q183 rdfs:label "Germany"@en,
+        "ドイツ"@ja .
+
+wd:Q309084 rdfs:label "アルストム"@ja .
+
+wd:Q391895 rdfs:label "Siemens Mobility"@en,
+        "シーメンス・モビリティ"@ja .
+
+wd:Q452140 rdfs:label "DB Fernverkehr"@en,
+        "DB長距離交通"@ja .
+
+wd:Q671188 rdfs:label "tilting train"@en,
+        "車体傾斜式車両"@ja .
+
+wd:Q81230 rdfs:label "Siemens"@en,
+        "シーメンス"@ja .
+
+cls:Q137921671 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "New Flyer XD60"@en,
+        "New Flyer XD60"@ja ;
+    skos:exactMatch wd:Q137921671 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "New Flyer XD60"@en,
+        "New Flyer XD60"@ja ;
+    prov:wasDerivedFrom wd:Q137921671 ;
+    wdt:P176 wd:Q1126054 ;
+    wdt:P279 wd:Q59618126,
+        wd:Q654749 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:bus49_front,
+        mdl:bus49_rear .
+
+cls:Q659660 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ICE TD"@en,
+        "ICE TD"@ja ;
+    skos:exactMatch wd:Q659660 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "ICE TD"@en,
+        "ICE TD"@ja ;
+    prov:wasDerivedFrom wd:Q659660 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q9322 ;
+    wdt:P176 wd:Q309084,
+        wd:Q333498,
+        wd:Q81230 ;
+    wdt:P2052 200.0 ;
+    wdt:P279 wd:Q13402959,
+        wd:Q1567915,
+        wd:Q671188 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:icet_dsb,
+        mdl:icet_td .
+
+wd:Q13402959 rdfs:label "high-speed train"@en,
+        "高速列車"@ja .
+
+wd:Q83822 rdfs:label "Austrian Federal Railways"@en,
+        "オーストリア連邦鉄道"@ja .
+
+wd:Q141170526 rdfs:label "British Columbia Rapid Transit Company"@en .
+
+wd:Q688893 rdfs:label "ALSTOM Transportation Germany"@en,
+        "ボンバルディア・トランスポーテーション"@ja .
+
+wd:Q696668 rdfs:label "ICE T"@en,
+        "ICE T"@ja .
+
+cls:Q4940487 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Innovia Metro"@en,
+        "ボンバルディア・イノヴィア・メトロ"@ja ;
+    skos:exactMatch wd:Q4940487 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Innovia Metro"@en,
+        "ボンバルディア・イノヴィア・メトロ"@ja ;
+    prov:wasDerivedFrom wd:Q4940487 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P279 wd:Q4102249 ;
+    tb:has3DModel false .
+
+cls:Q696668 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ICE T"@en,
+        "ICE T"@ja ;
+    skos:exactMatch wd:Q696668 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "ICE T"@en,
+        "ICE T"@ja ;
+    prov:wasDerivedFrom wd:Q696668 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q9322 ;
+    wdt:P176 wd:Q2738829,
+        wd:Q688893,
+        wd:Q81230 ;
+    wdt:P2052 230.0 ;
+    wdt:P279 wd:Q13402959,
+        wd:Q483373,
+        wd:Q671188 ;
+    wdt:P729 "1999"^^xsd:gYear ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:icet_green .
+
+wd:Q16 rdfs:label "Canada"@en,
+        "カナダ"@ja .
+
+wd:Q1999572 rdfs:label "standard-gauge railway"@en,
+        "標準軌"@ja .
+
+wd:Q1142140 rdfs:label "TransLink"@en,
+        "トランスリンク"@ja .
+
+wd:Q9322 rdfs:label "Deutsche Bahn"@en,
+        "ドイツ鉄道"@ja .
+
+<https://nakamura196.github.io/train-bodies/rdf/> a skos:ConceptScheme ;
+    rdfs:label "train-bodies: vehicle classes"@en,
+        "train-bodies: 車両の形式"@ja .
+

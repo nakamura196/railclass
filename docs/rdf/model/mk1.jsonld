@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery",
+      "@type": "Livery",
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "TransLink livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "TransLink の塗装"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1",
+      "@type": "schema:3DModel",
+      "galleryGroup": "skytrain",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk1"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/mk1.glb"
+      },
+      "schema:depth": {
+        "@id": "_:mk1-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "1985年から走る、角ばった短い車体。今の TransLink 塗装。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:mk1-height"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "Mark I"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/mk1/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/mk1.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/#mk1"
+      },
+      "schema:width": {
+        "@id": "_:mk1-width"
+      }
+    },
+    {
+      "@id": "_:mk1-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "130.0"
+      }
+    },
+    {
+      "@id": "_:mk1-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:mk1-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    }
+  ]
+}

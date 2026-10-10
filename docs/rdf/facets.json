@@ -1,0 +1,16 @@
+{
+  "version": "2026-10-09",
+  "note": "Properties used in the class RDF (docs/rdf/class/<cid>.ttl|.jsonld) that the search page filters on. Wikidata properties are used as predicates as-is (wdt:). datatype iri = filter by value list (labels: rdfs:label @ja/@en in docs/rdf/all.ttl); decimal / gYear / boolean = filter by range or yes/no. inherit = when a class has no value, take it from its skos:broader class in this dataset (e.g. DBAG Class 411 -> ICE T). Values are copied from Wikidata (CC0) or entered by hand (prov:wasDerivedFrom on the class says which).",
+  "facets": [
+    {"id": "kind", "uri": "http://www.wikidata.org/prop/direct/P279", "label": {"ja": "種類", "en": "Type"}, "datatype": "iri", "multi": true, "inherit": true},
+    {"id": "country", "uri": "http://www.wikidata.org/prop/direct/P17", "label": {"ja": "国", "en": "Country"}, "datatype": "iri", "multi": true, "inherit": true},
+    {"id": "operator", "uri": "http://www.wikidata.org/prop/direct/P137", "label": {"ja": "運行者", "en": "Operator"}, "datatype": "iri", "multi": true, "inherit": false},
+    {"id": "manufacturer", "uri": "http://www.wikidata.org/prop/direct/P176", "label": {"ja": "製造者", "en": "Manufacturer"}, "datatype": "iri", "multi": true, "inherit": true},
+    {"id": "gauge", "uri": "http://www.wikidata.org/prop/direct/P1064", "label": {"ja": "軌間", "en": "Track gauge"}, "datatype": "iri", "multi": true, "inherit": true},
+    {"id": "electrification", "uri": "http://www.wikidata.org/prop/direct/P930", "label": {"ja": "電化方式", "en": "Electrification"}, "datatype": "iri", "multi": true, "inherit": true},
+    {"id": "wheelArrangement", "uri": "http://www.wikidata.org/prop/direct/P2978", "label": {"ja": "軸配置", "en": "Wheel arrangement"}, "datatype": "iri", "multi": true, "inherit": true},
+    {"id": "maxSpeed", "uri": "http://www.wikidata.org/prop/direct/P2052", "label": {"ja": "最高速度", "en": "Maximum speed"}, "datatype": "decimal", "unit": "km/h", "multi": false, "inherit": true},
+    {"id": "serviceEntry", "uri": "http://www.wikidata.org/prop/direct/P729", "label": {"ja": "営業開始年", "en": "Service entry"}, "datatype": "gYear", "multi": false, "inherit": false},
+    {"id": "has3d", "uri": "https://nakamura196.github.io/train-bodies/vocab#has3DModel", "label": {"ja": "3D モデルあり", "en": "Has 3D model"}, "datatype": "boolean", "multi": false, "inherit": false}
+  ]
+}

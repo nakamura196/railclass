@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ICE TD（DB）</title>
+<link rel="alternate" type="text/turtle" href="icet_td.ttl">
+<link rel="alternate" type="application/ld+json" href="icet_td.jsonld">
+</head><body><h1>ICE TD（DB）</h1>
+<p><code>https://nakamura196.github.io/train-bodies/rdf/model/icet_td</code></p>
+<p><a href="icet_td.ttl">Turtle</a> · <a href="icet_td.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
+<pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix schema: &lt;https://schema.org/&gt; .
+@prefix tb: &lt;https://nakamura196.github.io/train-bodies/vocab#&gt; .
+@prefix wd: &lt;http://www.wikidata.org/entity/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+mdl:icet_td a schema:3DModel ;
+    tb:galleryGroup &quot;icet&quot; ;
+    tb:livery &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_td#livery&gt; ;
+    schema:about cls:Q659660 ;
+    schema:contentUrl &lt;https://nakamura196.github.io/train-bodies/models/icet_td.glb&gt; ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 149.9 ] ;
+    schema:description &quot;ディーゼル版の 605 形。外から見ると 411 と同じ。&quot;@ja ;
+    schema:encodingFormat &quot;model/gltf-binary&quot; ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 38.0 ] ;
+    schema:name &quot;ICE TD（DB）&quot;@ja ;
+    schema:subjectOf &lt;https://nakamura196.github.io/train-bodies/iiif/icet_td/manifest.json&gt; ;
+    schema:thumbnailUrl &lt;https://nakamura196.github.io/train-bodies/thumbs/icet_td.jpg&gt; ;
+    schema:url &lt;https://nakamura196.github.io/train-bodies/#icet_td&gt; ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 40.0 ] .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_td#livery&gt; a tb:Livery ;
+    rdfs:label &quot;Deutsche Bahn livery (red stripe)&quot;@en,
+        &quot;DB の塗装（赤い帯）&quot;@ja ;
+    tb:liveryOf wd:Q9322 .
+
+</pre>
+</body></html>

@@ -1,0 +1,34 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:icet_oebb a schema:3DModel ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery> ;
+    schema:about cls:Q8078904 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_oebb.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "オーストリア国鉄が使った 3 編成。DB の塗装に ÖBB の印。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:name "ÖBB 4011"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_oebb/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_oebb.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/#icet_oebb> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery> a tb:Livery ;
+    rdfs:label "Deutsche Bahn livery with ÖBB marks"@en,
+        "DB の塗装に ÖBB の印"@ja ;
+    tb:liveryOf wd:Q83822 .
+

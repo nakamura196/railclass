@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery",
+      "@type": "Livery",
+      "liveryOf": {
+        "@id": "wd:Q9322"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn livery with green stripe (2019–2022)"
+        },
+        {
+          "@language": "ja",
+          "@value": "DB の塗装（緑の帯、2019〜2022年）"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green",
+      "@type": "schema:3DModel",
+      "galleryGroup": "icet",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q696668"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/icet_green.glb"
+      },
+      "schema:depth": {
+        "@id": "_:icet_green-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "2019〜2022年。帯の前半が緑で、ラベルとプラグの印が付く。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:icet_green-height"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "緑の帯"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/icet_green/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/icet_green.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/#icet_green"
+      },
+      "schema:width": {
+        "@id": "_:icet_green-width"
+      }
+    },
+    {
+      "@id": "_:icet_green-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:icet_green-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:icet_green-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    }
+  ]
+}

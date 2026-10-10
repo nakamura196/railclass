@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ICE TD（DSB）</title>
+<link rel="alternate" type="text/turtle" href="icet_dsb.ttl">
+<link rel="alternate" type="application/ld+json" href="icet_dsb.jsonld">
+</head><body><h1>ICE TD（DSB）</h1>
+<p><code>https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb</code></p>
+<p><a href="icet_dsb.ttl">Turtle</a> · <a href="icet_dsb.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
+<pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix schema: &lt;https://schema.org/&gt; .
+@prefix tb: &lt;https://nakamura196.github.io/train-bodies/vocab#&gt; .
+@prefix wd: &lt;http://www.wikidata.org/entity/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+mdl:icet_dsb a schema:3DModel ;
+    tb:galleryGroup &quot;icet&quot; ;
+    tb:livery &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery&gt; ;
+    schema:about cls:Q659660 ;
+    schema:contentUrl &lt;https://nakamura196.github.io/train-bodies/models/icet_dsb.glb&gt; ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 149.9 ] ;
+    schema:description &quot;デンマーク国鉄に貸した時期の塗装。窓まわりが紺。&quot;@ja ;
+    schema:encodingFormat &quot;model/gltf-binary&quot; ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 38.0 ] ;
+    schema:name &quot;ICE TD（DSB）&quot;@ja ;
+    schema:subjectOf &lt;https://nakamura196.github.io/train-bodies/iiif/icet_dsb/manifest.json&gt; ;
+    schema:thumbnailUrl &lt;https://nakamura196.github.io/train-bodies/thumbs/icet_dsb.jpg&gt; ;
+    schema:url &lt;https://nakamura196.github.io/train-bodies/#icet_dsb&gt; ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode &quot;MMT&quot; ;
+            schema:value 40.0 ] .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery&gt; a tb:Livery ;
+    rdfs:label &quot;DSB livery&quot;@en,
+        &quot;DSB の塗装&quot;@ja ;
+    tb:liveryOf wd:Q83824 .
+
+</pre>
+</body></html>
