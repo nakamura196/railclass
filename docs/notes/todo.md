@@ -56,12 +56,25 @@
 - [x] `docs/` の古い `index.html`・`view.html`・`assets/`・`search/index.html`・`search.js`・`search.css` を消す（2026-10-09）
 - [ ] Actions の残りが戻ったら `pages.yml` の push の起動を戻し、配信元を Actions にするか決める
 
-## 路線（地図の線）— 担当は未定。方針は `data-model.md` の「路線の線データ」
+## 路線（地図の線）— 担当はこのセッション。方針は `data-model.md` の「路線の線データ」
 
-- [ ] 形式 → 路線の Wikidata ID の対応表を作る（Wikidata の P3438 を逆にたどる。足りない分は GTFS・Wikipedia から手で、出典つき）
+- [x] 形式 → 路線の Wikidata ID の対応表を作る（Wikidata の P3438 を逆にたどる。足りない分は GTFS・Wikipedia から手で、出典つき）
+      2026-10-09 23:45: 置き場所は `tools/class_lines.tsv`（git に入れる。列は class・line・lineLabel・status・source_url・source_section・note）。まだ作っていない。
+      Wikidata だけでは 12 形式中 4 形式しか路線に届かない（`tools/queries/wd-class-lines.rq`、AVE 102・Frecciarossa 1000・Innovia Metro・S series 経由で Line 3）。
+      1 段上の分類（P279）経由は「電車」「バス」などの広い分類を通る無関係な路線ばかりなので使わない。Q847141 は路線でなく運行会社なので除く。
+      残りは Wikipedia の各形式の記事を出典に手で補う（サブエージェントに調べさせ中。結果が来たら表にする。来ていなければ調べ直す）
+      2026-10-10 0:05 作った（未コミット）: 50 行・42 路線・12 形式。Wikipedia の記事（en/de/it）を出典に、Wikidata の P3438 の 4 件（Kelana Jaya 延伸・Córdoba–Málaga・Milan–Paris Frecciarossa ほか）を足した。
+      ID はすべて Wikidata の API で照合済み。記事が運行区間（例: München–Berlin）しか書いていない所は路線を推定し、note に INFERRED と書いた（17 行）。
+      「Expo Line」は英語版の記事名だと LA の路線（Q5421492）に当たる。SkyTrain は Q736619。
+      ヴァンデ・バーラトと Milan–Paris は線路でなく列車の運行（サービス）の項目なので、OSM の線は無いはず。
+      49 番バスは Wikidata に項目が無く、line は空（TransLink の GTFS から取るなら別の道）
 - [ ] 対応表を RDF に入れる（A の形式の RDF に、路線へのリンクとして）
 - [ ] 対象の路線のうち、OSM の route relation に `wikidata=` 札が付いている数を数える
+      道具は `tools/osm_lines.py`（未コミット）。`--count` で数えるだけ、無しで線も取り出して `data/lines/<Q>.geojson`（git の管理外）に書く。
+      2026-10-09 23:40 試運転: Expo Line・Millennium Line・上海リニアの 3 路線とも札があり、線が取れた（点を減らして 1 路線 2〜3 KB）
 - [ ] OSM の線を地図に出す方法を決める（表示のたびに Overpass か、事前に切り出すか。後者ならライセンスの扱いも）
+      推奨して本人の返事待ち: 事前に切り出し、RDF とは別の表示用の層（例 `lines/<Q>.geojson`、ODbL と「© OpenStreetMap contributors」を明記）として公開する
+- [ ] 形式のページに地図を出す（上が決まってから）
 - [ ] 線の形は train-bodies のデータに入れない（ODbL に縛られないため）。これを崩す案が出たら本人に確かめる
 
 ## 写真の保存と公開待ちの変更（2026-10-09 夜）
@@ -70,7 +83,9 @@
 
 写真の保存（`tools/fetch_photos.py`）が終わるまで、コミットも公開もしない。終わったら本人に確かめてから進める。
 
-- [ ] 写真の保存が終わったか確かめる（2026-10-09 21:53 で約 600 / 12,195 枚、1 分に約 85 枚、0 時すぎに終わる見込み。
+- [ ] 写真の保存が終わったか確かめる（2026-10-09 23:43 で 6,762 / 12,194 枚、1 分に約 65 枚、1:10 ごろ終わる見込み。
+      2026-10-09 23:46 会話から切り離して動かし直した（PID 88172、記録は `data/photos_fetch.log`）。/clear しても止まらない。
+      動いているかは `pgrep -fl tools/fetch_photos.py`。止まっていたら `python3 tools/fetch_photos.py` を流し直せば続きから取る。
       記録ファイルは空のままなので、`ls data/photos | wc -l` で数える。`data/` は git の管理外）
 - [x] 未コミットの変更を分けてコミットする（2026-10-09 23:40: (1) のコードと記録 d736345、(2) 00e5c17、色 ef3aa31。索引 `docs/search/index.json` は写真の保存が終わってから）
       (1) 写真・検索: `tools/fetch_photos.py`・`tools/build_search.py`・`docs/search/index.json`・`web/scripts/sync-public.mjs`・`web/src/scripts/search.js`・検索と形式のページ
@@ -92,3 +107,17 @@
 - [x] 2026-10-09 22:20 公開用の `docs/models/*.glb` 18 件が、skytrain の `out/<モデル>/nomount/*.glb` と同じファイル（穴なし版）であることを cmp で確かめた
 - 2026-10-09 22:11 時点の写真の保存: 1,894 / 12,195 枚（PID 89664、1 分に約 76 枚、0 時半ごろ終わる見込み）。
   終わったら: `python3 tools/build_search.py` で索引を作り直す → web を組み立てて手元で確かめる → (1)(2)・色・skytrain の順にコミット → 本人の了承を得て push と `zsh scripts/deploy-pages.zsh`
+
+## 形式のページで 3D を見せる（2026-10-09 夜に依頼。2026-10-09 23:59 手元で作った、未コミット・未公開）
+
+- [x] 2026-10-09 23:59 公開中の模型 18 件が穴ありのままだった（公開 21:51、穴なし版のコミット 23:31、公開し直していなかった）。gh-pages に模型 18 件だけ差し替えるコミット 53a0675 を足し、公開中のファイル 18 件が `docs/models/*.glb` と一致することを確かめた。文言の変更（作者の行の削除・「プラレール」を外した文）は、まだ公開に入っていない。写真のあとの全体の公開で入る
+- [x] 形式のページ（`rdf/class/<Q>.html`、`web/src/components/ClassPage.astro`）に 3D の表示を置く。注釈 `annotations/<id>.json`（14 件）を部位の印として重ねる。今は注釈は IIIF の Manifest にしか出ていない。1 つの形式に模型が複数あるとき（Innovia Metro の Mk1〜Mk5 など）は切り替え
+- [x] `view.html` は振り分けだけのページにする（一覧は検索の「3D モデルあり」 `search/?has3d=1` と同じなので持たない）: `view.html#<模型>` は その模型の形式のページへ、`view.html` だけなら `search/?has3d=1` へ移す。見出しの「3D で見る」も `search/?has3d=1` に替える。URL は残す（外から張られている）
+- [x] フッターが 2 重に見える件: `view.html` の注記（寸法・塗装の説明、`ja.json` の `view.note`）がサイトのフッターの真上に並んでいる。注記を 3D の表示の下（情報欄）に移す
+- 作ったもの: `ClassPage.astro` の上に 3D の舞台（番号の印・模型の切り替え・向きのボタン・注記）と部位の一覧。部位を押すと、IIIF の Manifest に書いた部位ごとのカメラ（位置と注視点）に寄る。注釈は `lib/data.ts` の `modelParts` が Manifest から読む。区分（実車の特徴など）は Manifest に日本語しか無いので英語はページ側で訳す。Manifest の無い 4 件（allegra ほか）は印なし・リンクなしで、1 列の配置
+- `view.html` は振り分けだけ（`lib/classes.ts` の `modelClasses`）。見出し・フッター・トップの「3D で見る」と新着は形式のページか `search/?has3d=1` へ。`styles/view.css` は消した
+- 手元の確かめ（astro preview）: ICE TD で部位 1 を押すと前面ガラスに寄る、DSB への切り替えと `#icet_dsb`、英語のページ、Mk1、Allegra、`view.html` → `search/?has3d=1`、`view.html#icet_dsb` → ICE TD の DSB
+- 気づいたこと: icet_green は models.json では Q115612330（411 形）だが、RDF では Q696668（ICE T）のページに載っている。どちらが正しいか未確認
+- [ ] 隠れた側の印も見えている（面の向き `data-normal` を渡していない）。Manifest に向きを足すか、ページ側で薄くするか
+- [ ] コミット（写真のあとの公開と一緒に）
+

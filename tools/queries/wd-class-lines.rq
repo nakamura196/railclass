@@ -1,0 +1,14 @@
+# Lines that use each modelled class: ?line wdt:P3438 (vehicle normally used) ?c, where ?c is the class itself,
+# a class it is a subclass of (P279), or a subclass of it (one step either way; ?via says which).
+# P402 = OpenStreetMap relation ID on the line item (if any), P3896 = geoshape.
+SELECT ?class ?via ?c ?line ?lineLabel ?osm ?shape WHERE {
+  VALUES ?class { wd:Q4940487 wd:Q115612330 wd:Q137972762 wd:Q8078904 wd:Q659660 wd:Q140611223
+                  wd:Q1087710 wd:Q671805 wd:Q370895 wd:Q289090 wd:Q119775864 wd:Q137921671 }
+  ?line wdt:P3438 ?c .
+  ?c (wdt:P279|^wdt:P279)? ?class .
+  BIND(IF(?c = ?class, "self", IF(EXISTS { ?class wdt:P279 ?c }, "parent", "child")) AS ?via)
+  OPTIONAL { ?line wdt:P402 ?osm }
+  OPTIONAL { ?line wdt:P3896 ?shape }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,ja,de,fr,es,it". }
+}
+ORDER BY ?class ?line
