@@ -71,7 +71,8 @@ button, select, input { font: inherit; color: inherit; }
 
 /* Grid */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; margin-top: 10px; }
-.card { display: grid; grid-template-rows: auto 1fr; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; color: inherit; text-decoration: none; }
+.card { display: grid; grid-template-rows: 1fr auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.card .main { display: grid; grid-template-rows: auto 1fr; color: inherit; text-decoration: none; }
 .card:hover { border-color: var(--muted); }
 .card .ph { position: relative; aspect-ratio: 4 / 3; background: var(--sel); }
 .card .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -82,6 +83,10 @@ button, select, input { font: inherit; color: inherit; }
 .card .tx { padding: 7px 9px 9px; display: grid; gap: 2px; align-content: start; }
 .card b { font-size: .88rem; line-height: 1.35; }
 .card .sub { font-size: .74rem; color: var(--muted); line-height: 1.35; }
+.card .credit { display: flex; gap: .3em; margin: 0; padding: 0 9px 7px; font-size: .64rem; line-height: 1.3; color: var(--muted); white-space: nowrap; }
+.card .credit a { color: inherit; }
+.card .credit a:first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; }   /* the author shortens; the licence stays whole */
+.card .credit a[rel=license] { flex: none; }
 .card .meta { font-family: var(--f-data); font-size: .7rem; color: var(--muted); }
 
 /* List */

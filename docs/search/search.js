@@ -20,6 +20,8 @@ const words = s => " " + (s || "").normalize("NFKC").toLowerCase().replace(/[\s\
 const CJK = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u;
 const hit = (t, i) => CJK.test(t) ? text[i].includes(t) : text[i].includes(" " + t);
 const COMMONS = "https://commons.wikimedia.org/wiki/Special:FilePath/";
+const THUMB = "https://thumb.wikimedia.org/wikipedia/commons/thumb/";   // + hash dir + "/" + file + "/330px-" + file
+const FILEPAGE = "https://commons.wikimedia.org/wiki/File:";
 const NUM = new Set(["decimal", "integer", "gYear"]);
 const fmtN = n => n.toLocaleString("ja-JP");
 
@@ -203,23 +205,43 @@ function renderChips() {
 }
 
 // ---- results
-const iriFacets = () => F.filter(f => f.datatype === "iri").slice(0, 2);   // the first two value facets (type, country) are shown on each result
+const iriFacets = () => F.filter(f => f.datatype === "iri" && !f.of).slice(0, 2);   // the first two value facets (type, country) are shown on each result; group facets (f.of) are not
 const numFacets = () => F.filter(f => NUM.has(f.datatype));
 // Classes described in this site's RDF open their page (docs/rdf/class/<id>.html); the others open Wikidata.
 function href(i) { return D.page[i] ? `../rdf/class/${D.id[i]}.html` : `https://www.wikidata.org/wiki/${D.id[i]}`; }
 function vals(f, i, max = 2) { const x = D[f.id][i]; return x.slice(0, max).map(k => vlabel(f, k)).join("・") + (x.length > max ? " ほか" : ""); }
 function numText(f, i) { const x = D[f.id][i]; return x == null ? "" : f.datatype === "gYear" ? `${x}年` : `${fmtN(x)}${f.unit ? " " + f.unit : ""}`; }
 
+// The photo's URL: the thumbnail address from the index when there is one (one request), else Special:FilePath (a redirect).
+function photo(i) {
+  const f = D.img[i], t = D.thumb ? D.thumb[i] : "";
+  if (!f) return null;
+  if (t.length > 4) return t;
+  if (t) { const u = encodeURIComponent(f.replace(/ /g, "_")); return `${THUMB}${t}/${u}/330px-${u}`; }
+  return COMMONS + encodeURIComponent(f) + "?width=330";
+}
+// Credit line under a Commons photo: author (links to the file page, which has the full terms) and licence (links to it).
+function credit(i) {
+  const f = D.img[i]; if (!f || D.models[i].length) return null;
+  const c = D.credit ? D.credit[i] : 0;
+  const page = FILEPAGE + encodeURIComponent(f.replace(/ /g, "_"));
+  if (!c) return el("p", { class: "credit" }, el("a", { href: page, text: "写真: Wikimedia Commons" }));
+  const who = D.artists[c[0]] || "作者不明", [lic, url] = D.licenses[c[1]];
+  return el("p", { class: "credit", title: `${who} / ${lic || "ライセンス不明"}（Wikimedia Commons）` },
+    el("a", { href: page, text: `写真: ${who}` }), el("span", { text: "/" }), url ? el("a", { href: url, text: lic, rel: "license" }) : (lic || "ライセンス不明"));
+}
+
 function card(i) {
   const m = D.models[i];
   const ph = el("div", { class: "ph" + (m.length ? " model" : "") });
-  const src = m.length ? `../thumbs/${m[0]}.jpg` : D.img[i] ? COMMONS + encodeURIComponent(D.img[i]) + "?width=330" : null;
+  const src = m.length ? `../thumbs/${m[0]}.jpg` : photo(i);
   ph.append(src ? el("img", { src, alt: "", loading: "lazy", decoding: "async" }) : el("span", { class: "none", text: "写真なし" }));
   if (m.length) ph.append(el("span", { class: "badge", text: m.length > 1 ? `3D ×${m.length}` : "3D" }));
   const meta = [...iriFacets().slice(1).map(f => vals(f, i)), ...numFacets().map(f => numText(f, i))].filter(Boolean).join(" · ");
-  return el("a", { class: "card", href: href(i) }, ph,
+  return el("div", { class: "card" }, el("a", { class: "main", href: href(i) }, ph,
     el("div", { class: "tx" }, el("b", { text: name(i) }), D.ja[i] && D.en[i] && D.ja[i] !== D.en[i] ? el("span", { class: "sub", text: D.en[i] }) : null,
-      el("span", { class: "sub", text: iriFacets()[0] ? vals(iriFacets()[0], i) : "" }), meta ? el("span", { class: "meta", text: meta }) : null));
+      el("span", { class: "sub", text: iriFacets()[0] ? vals(iriFacets()[0], i) : "" }), meta ? el("span", { class: "meta", text: meta }) : null)),
+    credit(i));
 }
 function table(rows) {
   const ff = iriFacets(), nf = numFacets();

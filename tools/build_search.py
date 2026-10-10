@@ -7,13 +7,18 @@ Inputs:
                                         rows are used: ERATV data stays out of docs/ until its reuse terms are known
   data/wikidata/class-labels-ja.tsv     Japanese labels (tools/queries/wd-class-labels-ja.rq)
   data/wikidata/facets/<id>.tsv         facet values per class (tools/fetch_facets.py)
+  data/wikidata/facets/_image_credit.tsv  author, licence and thumbnail of each photo (tools/fetch_image_credits.py), if present
   docs/rdf/all.jsonld                   the class and model RDF (made by the RDF work), if present. For the classes in it:
                                         its values replace the Wikidata ones, facets marked "inherit" take the value of the
                                         skos:broader class when the class has none, the 3D models come from schema:subjectOf,
-                                        and classes outside the Wikidata list (SkyTrain Mark I, Airo, XD60...) are added
+                                        and classes outside the Wikidata list (SkyTrain Mark I, Airo, XD60...) are added.
+                                        Facets with on="livery" (colour) take the values of the liveries of the class's
+                                        models (<class> schema:subjectOf <model>, <model>#livery wdt:P462 ...)
 index.json is column-wise to stay small:
   {"facets":[{id,label,datatype,unit,values:[[id,en,ja],...]}], "n":N, "id":[...], "en":[...], "ja":[...],
-   "img":[file name or ""], "models":[[model id,...]], "page":[1 if docs/rdf/class/<id>.html exists else 0], "<facet id>":[[value index,...] | number | null]}
+   "img":[file name or ""], "thumb":[hash dir "f/f3" | full thumbnail URL | "" (use Special:FilePath)],
+   "credit":[[artist index, licence index] | 0], "artists":[text], "licenses":[[short name, url]],
+   a group facet {id:"<facet id>Group", of:"<facet id>", ...} just before each facet listed in GROUPS, "models":[[model id,...]], "page":[1 if docs/rdf/class/<id>.html exists else 0], "<facet id>":[[value index,...] | number | null]}
 Usage: python3 tools/build_search.py [--data data] [--facets docs/rdf/facets.json] [--out docs/search]
 """
 import csv, collections, json, os, sys, urllib.parse
@@ -27,13 +32,34 @@ OUT = opt("--out", "docs/search")
 RDF = opt("--rdf", "docs/rdf/all.jsonld")
 BASE = "https://nakamura196.github.io/train-bodies/rdf/"
 FP = "http://commons.wikimedia.org/wiki/Special:FilePath/"
+THUMB = "https://thumb.wikimedia.org/wikipedia/commons/thumb/"   # search.js builds THUMB + h + "/" + f + "/330px-" + f
+# The type facet (kind) has ~700 values, many used once. They are folded into these groups, shown as a facet of their
+# own ("kindGroup", just above it). A value goes to the first group it is a subclass of (wdt:P279*,
+# data/wikidata/facets/kind_broader.tsv); several ancestors in one entry are one group. The list is a choice of this
+# site, not Wikidata's: picked on 2026-10-09 from the ancestors that cover the most classes, plus the values most often left in "other"
+# (diesel railcar Q10915943 and Q7132141 have no subclass link to the railcar classes).
+GROUPS = {"kind": [
+    (["Q171043"], "steam locomotive", "蒸気機関車"),
+    (["Q625151"], "electric locomotive", "電気機関車"),
+    (["Q34336"], "diesel locomotive", "ディーゼル機関車"),
+    (["Q93301"], "other locomotive", "その他の機関車"),
+    (["Q15825863", "Q3407658"], "tram / light rail vehicle", "路面電車・LRV"),
+    (["Q4102249"], "subway car", "地下鉄車両"),
+    (["Q483373"], "electric multiple unit", "電車"),
+    (["Q116951672", "Q1567915", "Q10915943", "Q7132141"], "diesel multiple unit / railcar", "気動車"),
+    (["Q3959904", "Q752392", "Q640040", "Q50398146", "Q3707399"], "other multiple unit / railcar", "その他の動力車"),
+    (["Q11504498", "Q753779"], "passenger car", "客車"),
+    (["Q9166501"], "freight car", "貨車"),
+    (["Q1117277", "Q800342"], "service vehicle", "事業用車"),
+    ([], "other", "その他"),
+]}
 
 def read(p):
     return list(csv.DictReader(open(p), delimiter="\t", quoting=csv.QUOTE_NONE))
 
 def load_rdf():
     """Classes in docs/rdf/all.jsonld: {cid: {en, ja, models, broader, values: {property uri: [values]}}}, and value labels."""
-    out = dict(classes={}, labels={})
+    out = dict(classes={}, labels={}, liveries={})
     if not os.path.exists(RDF):
         return out
     d = json.load(open(RDF))
@@ -57,6 +83,9 @@ def load_rdf():
     for n in d["@graph"]:
         types = [expand(t) for t in many(n.get("@type", []))]
         nid = short(n["@id"])
+        if any(t.endswith("vocab#Livery") for t in types):           # model#livery: values of the facets with on="livery"
+            out["liveries"][nid.split("#")[0]] = {expand(k): [short(x) for x in many(v)] for k, v in n.items()
+                                                  if expand(k).startswith("http://www.wikidata.org/prop/direct/")}
         if "rdfs:label" in n and not any(t.endswith("VehicleClass") for t in types):
             l = lang(n["rdfs:label"]); out["labels"][nid] = [l.get("en", ""), l.get("ja", "")]
         if not any(t.endswith("VehicleClass") for t in types):
@@ -70,6 +99,49 @@ def load_rdf():
                 c["values"][u] = [short(x) for x in many(v)]
         out["classes"][nid] = c
     return out
+
+def credits(idx, fdir):
+    """Author and licence of each photo, and its thumbnail address (to skip the Special:FilePath redirect)."""
+    p = os.path.join(fdir, "_image_credit.tsv")
+    if not os.path.exists(p):
+        print("no photo credits yet: run tools/fetch_image_credits.py"); return
+    cr = {r["file"]: r for r in read(p)}
+    artists, apos, lics, lpos = [], {}, [], {}
+    idx["thumb"], idx["credit"] = [], []
+    for f in idx["img"]:
+        r = cr.get(f)
+        if not r or not r["thumb"]:
+            idx["thumb"].append(""); idx["credit"].append(0); continue
+        u = f.replace(" ", "_")
+        t = urllib.parse.unquote(r["thumb"])
+        if t.startswith(THUMB) and t.endswith("/" + u + "/330px-" + u) and t[len(THUMB) + 4] == "/":
+            t = t[len(THUMB):len(THUMB) + 4]
+        else:
+            t = r["thumb"]
+        idx["thumb"].append(t)
+        a, l = r["artist"][:200], (r["license"], r["license_url"])
+        if a not in apos: apos[a] = len(artists); artists.append(a)
+        if l not in lpos: lpos[l] = len(lics); lics.append(list(l))
+        idx["credit"].append([apos[a], lpos[l]])
+    idx["artists"], idx["licenses"] = artists, lics
+    print("photos with credit:", sum(1 for c in idx["credit"] if c), "of", sum(1 for f in idx["img"] if f),
+          "| short thumb:", sum(1 for t in idx["thumb"] if len(t) == 4), "| other thumb:", sum(1 for t in idx["thumb"] if len(t) > 4))
+
+def group(fid, values, col, fdir):
+    """The group facet of an iri facet: (facet, column). Each class gets the groups of its values."""
+    anc = {}
+    p = os.path.join(fdir, fid + "_broader.tsv")
+    if os.path.exists(p):
+        for r in read(p): anc.setdefault(r["value"], set()).add(r["ancestor"])
+    gs = GROUPS[fid]
+    def which(v):
+        a = anc.get(v, set()) | {v}
+        return next(k for k, (ids, _, _) in enumerate(gs) if not ids or a & set(ids))
+    of = [which(v[0]) for v in values]
+    gcol = [sorted({of[k] for k in c}) for c in col]
+    g = dict(id=fid + "Group", label=dict(ja="種類（大分類）", en="Type (group)"), datatype="iri", of=fid,
+             values=[[ids[0] if ids else "other", en, ja] for ids, en, ja in gs])
+    return g, gcol
 
 
 def main():
@@ -87,6 +159,7 @@ def main():
                img=[img.get(q, "") for q in ids],
                models=[rdf["classes"].get(q, {}).get("models", []) for q in ids],
                page=[1 if q in rdf["classes"] else 0 for q in ids])
+    credits(idx, fdir)
     for f in json.load(open(FACETS))["facets"]:
         d = dict(id=f["id"], label=f["label"], datatype=f["datatype"])
         if f.get("unit"): d["unit"] = f["unit"]
@@ -100,6 +173,8 @@ def main():
             got = {r["item"]: int(float(r["value"])) for r in read(p) if r["value"]}
         for q, c in rdf["classes"].items():          # the RDF wins for its classes
             v = c["values"].get(f["uri"])
+            if f.get("on") == "livery":                # a class has a colour when one of its models' liveries has it
+                v = sorted({x for m in c["models"] for x in rdf["liveries"].get(m, {}).get(f["uri"], [])}) or None
             if v is None and f.get("inherit"):
                 v = rdf["classes"].get(c.get("broader"), {}).get("values", {}).get(f["uri"])
             if v is not None:
@@ -124,6 +199,9 @@ def main():
             col = [None] * len(ids)
             for q, v in got.items():
                 if q in pos: col[pos[q]] = int(float(v))
+        if f["id"] in GROUPS and f["datatype"] == "iri":
+            g, gcol = group(f["id"], d["values"], col, fdir)
+            idx["facets"].append(g); idx[g["id"]] = gcol
         idx["facets"].append(d); idx[f["id"]] = col
     os.makedirs(OUT, exist_ok=True)
     json.dump(idx, open(os.path.join(OUT, "index.json"), "w"), ensure_ascii=False, separators=(",", ":"))
