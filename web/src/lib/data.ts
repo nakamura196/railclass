@@ -43,3 +43,36 @@ export function stats(): Record<string, number> | null {
 }
 
 export const fmtSize = (s: number[]) => s.map(v => v.toFixed(v % 1 ? 1 : 0)).join(" × ");
+
+export type Part = { id: string; label: string; text: string; kind: string; kindKey: string; at: number[]; cam: { pos: number[]; look: number[] } | null };
+
+/** The part annotations of a model, read from its IIIF Manifest (docs/iiif/<id>/manifest.json, tools/build_iiif.py):
+ *  the commenting annotations with their PointSelector, and the camera each one is scoped to (position and lookAt). */
+export function modelParts(id: string, lang: Lang): Part[] {
+  const p = `iiif/${id}/manifest.json`;
+  if (!existsSync(docsPath(p))) return [];
+  const anns: any[] = [];
+  const walk = (o: any) => {
+    if (Array.isArray(o)) o.forEach(walk);
+    else if (o && typeof o === "object") { if (o.type === "Annotation" && o.motivation) anns.push(o); Object.values(o).forEach(walk); }
+  };
+  walk(readJSON(p));
+  const byId = new Map(anns.map(a => [a.id, a]));
+  const pt = (s: any) => [s.x, s.y, s.z];
+  const str = (l: any) => { const v = l?.[lang] ?? l?.ja ?? l?.en ?? Object.values(l ?? {})[0]; return Array.isArray(v) ? v.join(" ") : v ?? ""; };
+  // The category is written in Japanese only (KIND in tools/build_iiif.py)
+  const KIND: Record<string, [string, string]> = { "実車の特徴": ["real", "Real car"], "模型の都合": ["toy", "Toy adaptation"], "推測": ["guess", "Inferred"] };
+  return anns.filter(a => a.motivation.includes("commenting")).map(a => {
+    const body = Array.isArray(a.body) ? a.body : [a.body];
+    const text = (purpose: string) => (body.find((b: any) => b.purpose === purpose && b.language === lang) ?? body.find((b: any) => b.purpose === purpose))?.value ?? "";
+    const sel = [a.target?.selector].flat().find((s: any) => s?.type === "PointSelector");
+    const c = (a.scope ?? []).map((s: any) => byId.get(s.id)).find((x: any) => x?.body?.type === "PerspectiveCamera");
+    const cs = c && [c.target?.selector].flat().find((s: any) => s?.type === "PointSelector");
+    const k = text("tagging"), kk = KIND[k];
+    return { id: a.id.split("/").pop(), label: str(a.label), text: text("describing"),
+             kind: lang === "en" && kk ? kk[1] : k, kindKey: kk?.[0] ?? "",
+             at: sel ? pt(sel) : [0, 0, 0], cam: cs && c.body.lookAt ? { pos: pt(cs), look: pt(c.body.lookAt) } : null };
+  }).filter(x => x.label);
+}
+
+export const hasManifest = (id: string) => existsSync(docsPath(`iiif/${id}/manifest.json`));

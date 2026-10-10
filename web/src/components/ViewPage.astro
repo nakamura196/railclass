@@ -1,115 +1,34 @@
 ---
-// Viewer: the list of bodies (cards by group) is written at build time; the script below puts the chosen one on the mat.
-// view.html#<model-id> opens that model.
-import "../styles/view.css";
+// view.html is kept only so that old links still work: the models are now shown on their class pages
+// (rdf/class/<id>.html, with the part annotations), and the list of them is the search with "has a 3D model".
+// view.html#<model-id> goes to that model on its class page; view.html alone goes to search/?has3d=1.
+// Without a script the page shows the same links.
 import Base from "../layouts/Base.astro";
-import { file, t, type Lang } from "../i18n";
-import { models, fmtSize } from "../lib/data";
+import { page, t, type Lang } from "../i18n";
+import { models } from "../lib/data";
+import { modelClasses } from "../lib/classes";
 
 const { lang } = Astro.props as { lang: Lang };
 const ui = t(lang);
 const V = ui.view;
 const M = models(lang);
-const first = M.items[0];
-const ORBITS: [keyof typeof V.orbits, string][] = [["quarter", "-55deg 70deg auto"], ["side", "0deg 90deg auto"], ["front", "-90deg 85deg auto"], ["top", "0deg 0deg auto"]];
-const clientData = {
-  classLabel: V.classLabel,
-  items: M.items.map(it => ({ id: it.id, group: it.groupLabel, title: it.title, line: it.line, wikidata: it.wikidata,
-    tag: `${it.id} · ${fmtSize(it.size)} mm · ${it.kb} KB`, src: file(`models/${it.id}.${M.ext}`), poster: file(`thumbs/${it.id}.jpg`) })),
-};
-const wd = (q?: string) => q && `https://www.wikidata.org/wiki/${q}`;
+const where = modelClasses();
+const to = Object.fromEntries(M.items.filter(it => where[it.id]).map(it => [it.id, page(lang, `rdf/class/${where[it.id]}.html#${it.id}`)]));
+const list = page(lang, "search/") + "?has3d=1";
 ---
 <Base lang={lang} path="view.html" current="view" title={`${V.title} — ${ui.site.name}`} description={V.description}>
-<script slot="head" type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
-<div class="wrap view">
-  <div class="head">
-    <h1>{V.title}</h1>
-    <p>{V.lead}</p>
-  </div>
-  <main>
-    <section class="stage" aria-label={V.stage}>
-      <div class="mat">
-        <model-viewer id="mv" src={clientData.items[0].src} poster={clientData.items[0].poster} camera-controls touch-action="pan-y" shadow-intensity="0.8" exposure="1.05"
-          tone-mapping="neutral" interaction-prompt="none" camera-orbit="-55deg 70deg auto" alt={V.alt}></model-viewer>
-        <span class="tag" id="tag">{clientData.items[0].tag}</span>
-        <span class="hint">{V.hint}</span>
-      </div>
-      <div class="info">
-        <div>
-          <span class="grp" id="grp">{first.groupLabel}</span>
-          <h2 id="name">{first.title}</h2>
-          <p id="line">{first.line}</p>
-          <p class="wd" id="wd">{first.wikidata && <>{V.classLabel}<a href={wd(first.wikidata)}>Wikidata {first.wikidata}</a></>}</p>
-        </div>
-        <div class="views" role="group" aria-label={V.orient}>
-          {ORBITS.map(([k, orbit], i) => <button type="button" data-orbit={orbit} aria-pressed={i === 0 ? "true" : "false"}>{V.orbits[k]}</button>)}
-          <button type="button" id="spin" aria-pressed="false">{V.orbits.spin}</button>
-        </div>
-      </div>
-    </section>
-    <nav class="shelf" id="shelf" aria-label={V.shelf}>
-      {M.groups.map((g: any) => (
-        <section>
-          <h3>{g.label}</h3>
-          <div class="cards">
-            {M.items.filter(it => it.group === g.id).map(it => (
-              <button type="button" class="card" data-id={it.id} aria-current={it.id === first.id ? "true" : "false"}>
-                <img src={file(`thumbs/${it.id}.jpg`)} alt="" loading="lazy">
-                <b>{it.title}</b>
-                <span>{fmtSize(it.size)} mm</span>
-              </button>
-            ))}
-          </div>
-        </section>
-      ))}
-    </nav>
-  </main>
-  <div class="note">{V.note.map(p => <p>{p}</p>)}</div>
+<meta slot="head" name="robots" content="noindex">
+<div class="wrap" style="padding-block: 20px">
+  <h1>{V.title}</h1>
+  <p>{V.moved} <a href={list}>{V.movedList}</a></p>
+  <ul>
+    {M.items.filter(it => to[it.id]).map(it => <li><a href={to[it.id]}>{it.title}</a></li>)}
+  </ul>
 </div>
-<script type="application/json" id="view-data" set:html={JSON.stringify(clientData)} />
+<script type="application/json" id="view-to" set:html={JSON.stringify({ to, list })} />
 </Base>
 
 <script>
-  type Item = { id: string; group: string; title: string; line: string; wikidata?: string; tag: string; src: string; poster: string };
-  const DATA: { classLabel: string; items: Item[] } = JSON.parse(document.getElementById("view-data")!.textContent!);
-  const byId = Object.fromEntries(DATA.items.map(i => [i.id, i]));
-  const mv = document.getElementById("mv") as any;
-  const shelf = document.getElementById("shelf")!;
-  const $ = (id: string) => document.getElementById(id)!;
-
-  function show(id: string) {
-    const it = byId[id] || DATA.items[0];
-    if (mv.getAttribute("src") !== it.src) { mv.src = it.src; mv.poster = it.poster; }
-    $("grp").textContent = it.group;
-    $("name").textContent = it.title;
-    $("line").textContent = it.line;
-    const wd = $("wd");
-    wd.replaceChildren();
-    if (it.wikidata) {
-      const a = document.createElement("a");
-      a.href = `https://www.wikidata.org/wiki/${it.wikidata}`; a.textContent = `Wikidata ${it.wikidata}`;
-      wd.append(DATA.classLabel, a);
-    }
-    $("tag").textContent = it.tag;
-    for (const c of shelf.querySelectorAll<HTMLElement>(".card")) c.setAttribute("aria-current", String(c.dataset.id === it.id));
-    try { history.replaceState(null, "", "#" + it.id); } catch (e) {}
-  }
-
-  for (const c of shelf.querySelectorAll<HTMLElement>(".card")) {
-    c.addEventListener("click", () => {
-      show(c.dataset.id!);
-      if (matchMedia("(max-width: 900px)").matches) document.querySelector(".stage")!.scrollIntoView({ behavior: "smooth" });
-    });
-  }
-  const orbitButtons = document.querySelectorAll<HTMLElement>(".views [data-orbit]");
-  for (const b of orbitButtons) {
-    b.addEventListener("click", () => {
-      mv.cameraOrbit = b.dataset.orbit; mv.fieldOfView = "auto"; mv.jumpCameraToGoal?.();
-      for (const o of orbitButtons) o.setAttribute("aria-pressed", String(o === b));
-    });
-  }
-  const spin = $("spin");
-  spin.addEventListener("click", () => { const on = !mv.autoRotate; mv.autoRotate = on; spin.setAttribute("aria-pressed", String(on)); });
-
-  if (location.hash) show(location.hash.slice(1));
+  const { to, list } = JSON.parse(document.getElementById("view-to")!.textContent!);
+  location.replace(to[location.hash.slice(1)] ?? list);
 </script>

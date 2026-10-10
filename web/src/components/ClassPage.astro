@@ -1,11 +1,14 @@
 ---
 // One class (rdf/class/<id>.html): name, the values (as in the search), links to Wikidata and the broader / narrower
-// classes, the 3D models made for it (viewer, IIIF Manifest) and the RDF itself. Written at build time; no script.
+// classes, the 3D models made for it (viewer with the part annotations of the IIIF Manifest) and the RDF itself.
+// Written at build time; the script only moves the camera to a part and switches between the class's models.
+// rdf/class/<id>.html#<model-id> opens that model.
 import "../styles/class.css";
 import Base from "../layouts/Base.astro";
 import { file, page, t, type Lang } from "../i18n";
 import { classPage } from "../lib/classes";
-import { models } from "../lib/data";
+import iiifLogo from "../assets/iiif-logo.svg";   // the IIIF logo, as on the IIIF Consortium's site
+import { models, modelParts, fmtSize, hasManifest } from "../lib/data";
 
 const { lang, id } = Astro.props as { lang: Lang; id: string };
 const ui = t(lang);
@@ -14,12 +17,19 @@ const fmt = (s: string, o: Record<string, string | number>) => s.replace(/\{(\w+
 const nf = new Intl.NumberFormat(ui.numberLocale);
 const c = classPage(id, lang, n => nf.format(n), y => fmt(T.year, { y }));
 const M = models(lang);
-const mods = c.models.map(m => M.items.find(it => it.id === m) ?? { id: m, title: m, line: "" });
+const mods = c.models.map(m => M.items.find(it => it.id === m)).filter(Boolean) as ReturnType<typeof models>["items"];
+const V = ui.view;
+const ORBITS: [keyof typeof V.orbits, string][] = [["quarter", "-55deg 70deg auto"], ["side", "0deg 90deg auto"], ["front", "-90deg 85deg auto"], ["top", "0deg 0deg auto"]];
+const parts = Object.fromEntries(mods.map(m => [m.id, modelParts(m.id, lang)]));
+const mdata = mods.map(m => ({ id: m.id, src: file(`models/${m.id}.${M.ext}`), poster: file(`thumbs/${m.id}.jpg`),
+  tag: `${fmtSize(m.size)} mm`, cams: parts[m.id].map(p => p.cam) }));
+const pos = (v: number[]) => v.map(x => `${x}m`).join(" ");
 const uri = `https://nakamura196.github.io/train-bodies/rdf/class/${id}`;
 const here = `rdf/class/${id}.html`;
 const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
 ---
 <Base lang={lang} path={here} current="search" title={`${c.name} — ${ui.site.name}`} description={`${T.kicker}: ${c.name}${c.other ? ` (${c.other})` : ""}`}>
+{mods.length > 0 && <script slot="head" type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>}
 <link slot="head" rel="alternate" type="text/turtle" href={file(`rdf/class/${id}.ttl`)}>
 <link slot="head" rel="alternate" type="application/ld+json" href={file(`rdf/class/${id}.jsonld`)}>
 <div class="wrap cls">
@@ -29,6 +39,59 @@ const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
     {c.other && <p class="other">{c.other}</p>}
     <p class="uri"><code>{uri}</code></p>
   </div>
+
+  {mods.length > 0 && (
+    <section class:list={["m3d", { solo: mods.every(m => !parts[m.id].length) }]} aria-labelledby="h-models">
+      <div class="stage">
+        <h2 id="h-models">{T.models}</h2>
+        <div class="mat">
+          <model-viewer id="mv" src={mdata[0].src} poster={mdata[0].poster} camera-controls touch-action="pan-y" shadow-intensity="0.8"
+            tone-mapping="neutral" interaction-prompt="none" camera-orbit={ORBITS[0][1]} alt={V.alt}>
+            {mods.map((m, mi) => parts[m.id].map((p, k) => (
+              <button type="button" class="hs" slot={`hotspot-${m.id}-${k}`} data-model={m.id} data-part={k} data-position={pos(p.at)}
+                hidden={mi > 0} aria-label={p.label}>{k + 1}</button>
+            )))}
+          </model-viewer>
+          <span class="tag" id="tag">{mdata[0].tag}</span>
+          <span class="hint">{V.hint}</span>
+        </div>
+        {mods.length > 1 && (
+          <div class="views pick" role="group" aria-label={T.models}>
+            {mods.map((m, i) => <button type="button" data-model={m.id} aria-pressed={i === 0 ? "true" : "false"}>{m.title}</button>)}
+          </div>
+        )}
+        <div class="views orbits" role="group" aria-label={V.orient}>
+          {ORBITS.map(([k, orbit], i) => <button type="button" data-orbit={orbit} aria-pressed={i === 0 ? "true" : "false"}>{V.orbits[k]}</button>)}
+          <button type="button" id="spin" aria-pressed="false">{V.orbits.spin}</button>
+        </div>
+        {mods.map((m, i) => (
+          <div class="about" data-model={m.id} hidden={i > 0}>
+            <b>{m.title}</b>
+            {m.line && <p>{m.line}</p>}
+            {hasManifest(m.id) && <p class="acts"><a class="iiif" href={file(`iiif/${m.id}/manifest.json`)} title={T.manifest}><img src={iiifLogo.src} alt={T.manifest} width="22" height="20"></a></p>}
+          </div>
+        ))}
+        <div class="note">{V.note.map(p => <p>{p}</p>)}</div>
+      </div>
+      <div class="parts">
+        {mods.map((m, mi) => parts[m.id].length > 0 && (
+          <div data-model={m.id} hidden={mi > 0}>
+            <h2>{T.parts}</h2>
+            <p class="hint">{T.partsHint}</p>
+            <ol>
+              {parts[m.id].map((p, k) => (
+                <li data-kind={p.kindKey}>
+                  <button type="button" data-model={m.id} data-part={k}><span class="n">{k + 1}</span><b>{p.label}</b>{p.kind && <span class="kind">{p.kind}</span>}</button>
+                  <p>{p.text}</p>
+                </li>
+              ))}
+            </ol>
+            <button type="button" class="overview">{T.overview}</button>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
 
   <div class="body">
     <section class="props" aria-labelledby="h-values">
@@ -57,23 +120,6 @@ const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
     </section>
 
     <aside class="media">
-      {mods.length > 0 && (
-        <section aria-labelledby="h-models">
-          <h2 id="h-models">{T.models}</h2>
-          <ul class="models">
-            {mods.map(m => (
-              <li>
-                <a class="ph" href={page(lang, `view.html#${m.id}`)}><img src={file(`thumbs/${m.id}.jpg`)} alt="" loading="lazy" decoding="async"></a>
-                <div class="tx">
-                  <b>{m.title}</b>
-                  {m.line && <span>{m.line}</span>}
-                  <span class="acts"><a href={page(lang, `view.html#${m.id}`)}>{T.view}</a> · <a href={file(`iiif/${m.id}/manifest.json`)}>{T.manifest}</a></span>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
       {c.photo && (
         <figure class="photo">
           <a href={c.photo.page}><img src={c.photo.src.startsWith("http") ? c.photo.src : file(c.photo.src)} alt={c.name} loading="lazy" decoding="async"></a>
@@ -91,4 +137,57 @@ const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
     <pre>{c.ttl}</pre>
   </details>
 </div>
+{mods.length > 0 && <script type="application/json" id="m3d-data" set:html={JSON.stringify({ models: mdata, orbit: ORBITS[0][1] })} />}
 </Base>
+
+<script>
+  // Only on pages with a model: switch models, move the camera to a part (its IIIF camera: position and lookAt), orbits.
+  const el = document.getElementById("m3d-data");
+  if (el) {
+    type Cam = { pos: number[]; look: number[] } | null;
+    type M = { id: string; src: string; poster: string; tag: string; cams: Cam[] };
+    const D: { models: M[]; orbit: string } = JSON.parse(el.textContent!);
+    const mv = document.getElementById("mv") as any;
+    const all = (sel: string) => [...document.querySelectorAll<HTMLElement>(sel)];
+    let cur = D.models[0];
+
+    const orbitOf = (c: NonNullable<Cam>) => {
+      const [dx, dy, dz] = c.pos.map((v, i) => v - c.look[i]);
+      const r = Math.hypot(dx, dy, dz);
+      return `${(Math.atan2(dx, dz) * 180 / Math.PI).toFixed(1)}deg ${(Math.acos(dy / r) * 180 / Math.PI).toFixed(1)}deg ${r.toFixed(1)}m`;
+    };
+    function overview(orbit = D.orbit) {
+      mv.cameraTarget = "auto auto auto"; mv.cameraOrbit = orbit; mv.fieldOfView = "auto";
+      for (const b of all("[data-part]")) b.removeAttribute("aria-current");
+    }
+    function focus(k: number) {
+      const c = cur.cams[k];
+      if (c) { mv.cameraTarget = c.look.map(v => `${v}m`).join(" "); mv.cameraOrbit = orbitOf(c); mv.fieldOfView = "30deg"; }
+      for (const b of all("[data-part]")) b.toggleAttribute("aria-current", b.dataset.model === cur.id && +b.dataset.part! === k);
+      for (const o of all(".orbits [data-orbit]")) o.setAttribute("aria-pressed", "false");
+    }
+    function show(id: string) {
+      cur = D.models.find(m => m.id === id) ?? D.models[0];
+      if (mv.getAttribute("src") !== cur.src) { mv.src = cur.src; mv.poster = cur.poster; }
+      document.getElementById("tag")!.textContent = cur.tag;
+      for (const x of all("[data-model]:not(button)")) x.hidden = x.dataset.model !== cur.id;
+      for (const h of all(".hs")) h.hidden = h.dataset.model !== cur.id;
+      for (const b of all(".pick [data-model]")) b.setAttribute("aria-pressed", String(b.dataset.model === cur.id));
+      overview();
+    }
+    for (const b of all(".pick [data-model]")) b.addEventListener("click", () => {
+      show(b.dataset.model!);
+      try { history.replaceState(null, "", "#" + cur.id); } catch (e) {}
+    });
+    for (const b of all("[data-part]")) b.addEventListener("click", () => focus(+b.dataset.part!));
+    for (const b of all(".overview")) b.addEventListener("click", () => overview());
+    const orbits = all(".orbits [data-orbit]");
+    for (const b of orbits) b.addEventListener("click", () => {
+      overview(b.dataset.orbit);
+      for (const o of orbits) o.setAttribute("aria-pressed", String(o === b));
+    });
+    const spin = document.getElementById("spin")!;
+    spin.addEventListener("click", () => { const on = !mv.autoRotate; mv.autoRotate = on; spin.setAttribute("aria-pressed", String(on)); });
+    if (location.hash && D.models.some(m => m.id === location.hash.slice(1))) show(location.hash.slice(1));
+  }
+</script>

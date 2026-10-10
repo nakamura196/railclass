@@ -4,6 +4,7 @@ import "../styles/top.css";
 import Base from "../layouts/Base.astro";
 import { page, file, t, type Lang } from "../i18n";
 import { models, newest, news, stats } from "../lib/data";
+import { modelClasses } from "../lib/classes";
 
 const { lang } = Astro.props as { lang: Lang };
 const ui = t(lang);
@@ -14,6 +15,9 @@ const hero = items.find(it => it.group !== "bus") ?? items[0];   // the hero sho
 const S = stats();
 const num = (k: string) => (typeof S?.[k] === "number" ? S[k].toLocaleString(ui.numberLocale) : "—");
 const F = T.features;
+const where = modelClasses();
+const modelPage = (id: string) => where[id] ? page(lang, `rdf/class/${where[id]}.html#${id}`) : page(lang, `view.html#${id}`);
+const list3d = page(lang, "search/") + "?has3d=1";
 const D = T.dataItems;
 ---
 <Base lang={lang} path="" current="top">
@@ -38,7 +42,7 @@ const D = T.dataItems;
             auto-rotate rotation-per-second="18deg" auto-rotate-delay="0" camera-controls touch-action="pan-y"
             shadow-intensity="0.8" exposure="1.05" tone-mapping="neutral" interaction-prompt="none" camera-orbit="-55deg 70deg auto"
             alt={T.heroAlt}></model-viewer>
-          <figcaption><a href={page(lang, `view.html#${hero.id}`)}>{hero.groupLabel} · {hero.title} →</a></figcaption>
+          <figcaption><a href={modelPage(hero.id)}>{hero.groupLabel} · {hero.title} →</a></figcaption>
         </figure>
       )}
     </div>
@@ -58,7 +62,7 @@ const D = T.dataItems;
       <ul class="features">
         <li><a href={page(lang, "search/")}><b>{F.search[0]}</b><span>{F.search[1]}</span></a></li>
         <li><div><b>{F.map[0]} <span class="soon">{ui.site.soon}</span></b><span>{F.map[1]}</span></div></li>
-        <li><a href={page(lang, "view.html")}><b>{F.view[0]}</b><span>{F.view[1]}</span></a></li>
+        <li><a href={list3d}><b>{F.view[0]}</b><span>{F.view[1]}</span></a></li>
         <li><div><b>{F.download[0]} <span class="soon">{ui.site.soon}</span></b><span>{F.download[1]}</span></div></li>
         <li><a href="#data"><b>{F.data[0]}</b><span>{F.data[1]}</span></a></li>
       </ul>
@@ -67,10 +71,10 @@ const D = T.dataItems;
 
   <section class="block" id="new" aria-labelledby="new-h">
     <div class="wrap">
-      <div class="h-row"><h2 id="new-h">{T.newTitle}</h2><a href={page(lang, "view.html")}>{T.seeAll}</a></div>
+      <div class="h-row"><h2 id="new-h">{T.newTitle}</h2><a href={list3d}>{T.seeAll}</a></div>
       <ul class="models">
         {items.slice(0, 6).map(it => (
-          <li><a href={page(lang, `view.html#${it.id}`)}>
+          <li><a href={modelPage(it.id)}>
             <img src={file(`thumbs/${it.id}.jpg`)} alt="" loading="lazy">
             <span class="grp">{it.groupLabel}</span><b>{it.title}</b><time datetime={it.added}>{it.added}</time>
           </a></li>

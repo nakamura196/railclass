@@ -98,3 +98,13 @@ export function classPage(id: string, lang: Lang, fmtN: (n: number) => string, y
     ttl: readFileSync(resolve(CLASS_DIR, id + ".ttl"), "utf8"),
   };
 }
+
+/** Which class page shows each model (the class whose RDF has schema:subjectOf the model); for view.html#<model>. */
+export function modelClasses(): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const c of classIds()) {
+    const node = JSON.parse(readFileSync(resolve(CLASS_DIR, c + ".jsonld"), "utf8"));
+    for (const u of many(node["schema:subjectOf"]).map(iri)) { const m = local(u, "model"); if (m && !out[m]) out[m] = c; }
+  }
+  return out;
+}

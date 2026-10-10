@@ -1,4 +1,5 @@
-/* Class page (rdf/class/<id>.html): values on the left, the 3D models and the photo on the right; stacks on phones. */
+/* Class page (rdf/class/<id>.html): the 3D model with its parts on top (when the class has one), then the values on the
+   left and the photo on the right; stacks on phones. */
 .cls { padding-block: 20px 0; display: grid; gap: 16px; }
 .cls .crumb { margin: 0; font-size: .82rem; color: var(--muted); }
 .cls .crumb a { color: inherit; }
@@ -20,13 +21,51 @@
 .cls .hint { margin: 6px 0 0; font-size: .78rem; color: var(--muted); }
 
 .cls .media { display: grid; gap: 16px; }
-.cls .models { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.cls .models li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-.cls .models .ph { display: block; background: var(--mat); }
-.cls .models img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-.cls .models .tx { display: grid; gap: 2px; padding: 8px 10px 8px 0; font-size: .85rem; align-content: start; }
-.cls .models .tx span { color: var(--muted); font-size: .78rem; }
-.cls .models .acts a { color: var(--fg); }
+
+/* The 3D model: the stage (mat, model switch, orbits, notes) and the list of parts beside it */
+.m3d { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; align-items: start; }
+.m3d.solo { grid-template-columns: minmax(0, 1fr); max-width: 900px; }
+@media (max-width: 860px) { .m3d { grid-template-columns: minmax(0, 1fr); } }
+.m3d .stage { position: sticky; top: 12px; display: grid; gap: 10px; min-width: 0; }
+@media (max-width: 860px) { .m3d .stage { position: static; } }
+.m3d .mat { aspect-ratio: 16 / 10; }
+.m3d model-viewer { width: 100%; height: 100%; --poster-color: transparent; background: transparent; }
+.m3d .mat .tag { position: absolute; left: 12px; bottom: 10px; font-family: var(--f-data); font-size: .72rem; color: rgba(255,255,255,.8); pointer-events: none; }
+.m3d .mat .hint { position: absolute; right: 12px; bottom: 10px; font-size: .72rem; color: rgba(255,255,255,.7); pointer-events: none; }
+.m3d .views { display: flex; flex-wrap: wrap; gap: 6px; }
+.m3d .views button, .m3d .overview {
+  font: inherit; font-size: .82rem; padding: 5px 11px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--panel); color: var(--fg);
+}
+.m3d .views button[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.m3d .about b { font-family: var(--f-display); font-size: 1.05rem; }
+.m3d .about p { margin: 2px 0 0; color: var(--muted); font-size: .88rem; }
+.m3d .about .acts { margin-top: 6px; }
+.m3d .about .iiif { display: inline-block; line-height: 0; }
+.m3d .about .iiif img { display: block; }
+.m3d .note { color: var(--muted); font-size: .75rem; display: grid; gap: 2px; }
+.m3d .note p { margin: 0; }
+
+.m3d .hs {
+  width: 22px; height: 22px; border-radius: 50%; padding: 0; cursor: pointer; font: 700 .7rem/1 var(--f-data);
+  border: 2px solid #fff; background: var(--accent); color: var(--accent-fg); box-shadow: 0 1px 3px rgba(0,0,0,.4);
+}
+.m3d .hs[hidden] { display: none; }
+.m3d .hs[aria-current] { transform: scale(1.3); }
+
+.m3d .parts ol { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
+.m3d .parts li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.m3d .parts li button { display: flex; align-items: baseline; gap: 8px; width: 100%; text-align: left; padding: 0; cursor: pointer;
+  font: inherit; color: inherit; background: none; border: 0; }
+.m3d .parts .n { flex: none; width: 20px; height: 20px; border-radius: 50%; display: inline-grid; place-items: center;
+  font: 700 .68rem/1 var(--f-data); background: var(--accent); color: var(--accent-fg); }
+.m3d .parts li button b { font-size: .9rem; }
+.m3d .parts .kind { margin-left: auto; font-size: .68rem; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 0 6px; white-space: nowrap; }
+.m3d .parts li[data-kind="toy"] .n { background: var(--muted); }
+.m3d .parts li button[aria-current] b { color: var(--accent); }
+.m3d .parts li p { margin: 4px 0 0 28px; font-size: .8rem; color: var(--muted); }
+.m3d .parts .hint { margin: 0 0 8px; }
+.m3d .overview { margin-top: 10px; }
 
 .cls .photo { margin: 0; }
 .cls .photo img { display: block; width: 100%; border-radius: 8px; }
