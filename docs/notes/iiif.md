@@ -127,3 +127,28 @@
   遅いのは描画の側（自動操作のタブが裏に回っていたためと思われる。確かめていない）。Manifest の問題ではない。
 - 確かめていないこと: navPlace の地図表示（ビューアの georef ページ）、注釈を押したときの視点の移動（前回 icet_411 の 1 か所だけ）、
   Kompakkt・Voyager での表示（Manifest は公開済みなので試せるようになった）。
+
+### 「IIIF v4 の実例」としての位置付けと先行例（同じ日、10:05）
+
+調べ方: ウェブ検索（2026-10-10）と、IIIF 3D TSG のリポジトリ（https://github.com/IIIF/3d）の例を読んだ。網羅的な調査ではない。
+
+先行例:
+- MorphoSource（デューク大学の 3D データの公開基盤）。全件のプレビューが IIIF 4 の Manifest で動いているという。
+  出典: Thomas Flynn「Interoperable, Accessible, Portable 3D Data」2025-06-30（https://nebulousflynn.substack.com/p/interoperable-accesible-portable）。
+  同じ記事は、部位へのコメントの注釈があるとだけ書き、点の位置・注釈ごとのカメラ・navPlace には触れていない。Manifest そのものは見ていない。
+- Smithsonian Voyager（https://3d.si.edu/iiif-support）。v4 への対応は開発中で、試験用の Manifest がある、という段階。
+- IIIF 3D TSG の例（MorphoSource のゴリラの頭骨、Royal Pavilion & Museums の鳥の剥製、British Library の書き物机ほか）。
+  仕様を詰めるための例で、古い書き方のものも混じる。
+- 仕様の本文の例（チェスの駒の Scene など）。
+
+このサイトの Manifest で、上の先行例に見当たらなかった点（「無い」とは言い切れない。見つからなかった、という意味）:
+- 部位ごとの `commenting` 注釈と、その部位を見せるカメラを `scope` で結んだ実データが、1 モデルに 10〜16 件ずつ、14 モデルある
+  （公開しているページで、注釈を選ぶとカメラが寄るところまで動く）。
+- 注釈に「実車の特徴／模型の都合／推測」の区分を持たせ、実車の特徴には Wikidata の項目を付けている。
+- Manifest の `seeAlso` から、形式の RDF（Wikidata・ERATV と結んだもの）に渡れる。`navPlace` に運行地域を入れている。
+- 注釈の位置を、生成スクリプトの図面座標から光線で求めている（前の主張の候補）。
+
+- 主張の候補: 「文化財の 3D」でなく「量産品の形式（鉄道車両の形式）」を単位にして、IIIF v4 の 3D Manifest と Linked Data を結んだ実例。
+  根拠: 上の先行例はいずれも 1 点ものの資料（標本・美術品）。形式の RDF への seeAlso は iiif/<モデル>/manifest.json にある。
+- 限界: MorphoSource の Manifest の中身を見ていない。点の注釈とカメラの組み合わせがそこにあるかは未確認。次に確かめるなら、MorphoSource の公開データ 1 件の Manifest を取って読む。
+

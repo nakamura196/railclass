@@ -26,7 +26,7 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [x] 14 モデル全部の Manifest と、全体の Collection `docs/iiif/collection.json`（2026-10-10 9:45 Collection を足した: `build_iiif.py --collection`。トップの「データ」の RDF と IIIF の「準備中」を外してリンクした。Manifest の homepage を `view.html#<模型>`（形式のページへ）に直した）
 - [ ] ダウンロード形式 `docs/downloads/<model-id>/`（GLB・STL・OBJ・3MF・STEP など）と `~/git/3d/skytrain/tools/export_formats.py`。
       STEP は面を貼っただけで、CAD で寸法を直せる立体ではないことを画面とノートに書く
-- [ ] 「IIIF v4 の実例」としての位置付けをノート `docs/notes/iiif.md` に（先行例の有無も）
+- [x] 「IIIF v4 の実例」としての位置付けをノート `docs/notes/iiif.md` に（先行例の有無も）（2026-10-10 10:05。先行例は MorphoSource・Smithsonian Voyager・TSG の例。MorphoSource の Manifest の中身は未確認）
 
 ## C. トップページ・検索（worktree `train-bodies.worktrees/site`）
 
