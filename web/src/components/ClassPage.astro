@@ -100,7 +100,12 @@ const mapped = lines.filter(l => l.map);
                 </li>
               ))}
             </ol>
-            <button type="button" class="overview">{T.overview}</button>
+            <div class="step">
+              <button type="button" class="prev" aria-label={T.prev}>‹ {T.prev}</button>
+              <span class="at" aria-live="polite">– / {parts[m.id].length}</span>
+              <button type="button" class="next" aria-label={T.next}>{T.next} ›</button>
+              <button type="button" class="overview">{T.overview}</button>
+            </div>
           </div>
         ))}
       </div>
@@ -232,9 +237,13 @@ const mapped = lines.filter(l => l.map);
       const r = Math.hypot(dx, dy, dz);
       return `${(Math.atan2(dx, dz) * 180 / Math.PI).toFixed(1)}deg ${(Math.acos(dy / r) * 180 / Math.PI).toFixed(1)}deg ${r.toFixed(1)}m`;
     };
+    let at = -1;    // the part shown, -1 = the whole body
+    const count = () => all(`.parts li button[data-model="${cur.id}"]`).length;
+    const step = () => { for (const s of all(`.parts [data-model="${cur.id}"] .step .at`)) s.textContent = `${at < 0 ? "–" : at + 1} / ${count()}`; };
     function overview(orbit = D.orbit) {
       mv.cameraTarget = "auto auto auto"; mv.cameraOrbit = orbit; mv.fieldOfView = "auto";
       for (const b of all("[data-part]")) b.removeAttribute("aria-current");
+      at = -1; step();
     }
     function focus(k: number) {
       const c = cur.cams[k];
@@ -242,7 +251,12 @@ const mapped = lines.filter(l => l.map);
       for (const b of all("[data-part]")) b.toggleAttribute("aria-current", b.dataset.model === cur.id && +b.dataset.part! === k);
       document.querySelector<HTMLElement>(`.parts li button[data-model="${cur.id}"][data-part="${k}"]`)?.scrollIntoView({ block: "nearest", behavior: "smooth" });
       for (const o of all(".orbits [data-orbit]")) o.setAttribute("aria-pressed", "false");
+      at = k; step();
     }
+    // Previous / next part, in the list's order, going round (as Sketchfab's annotation arrows)
+    const go = (d: number) => { const n = count(); if (n) focus(at < 0 ? (d > 0 ? 0 : n - 1) : (at + d + n) % n); };
+    for (const b of all(".step .prev")) b.addEventListener("click", () => go(-1));
+    for (const b of all(".step .next")) b.addEventListener("click", () => go(1));
     function show(id: string) {
       cur = D.models.find(m => m.id === id) ?? D.models[0];
       if (mv.getAttribute("src") !== cur.src) { mv.src = cur.src; mv.poster = cur.poster; }
