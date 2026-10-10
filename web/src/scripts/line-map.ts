@@ -55,6 +55,9 @@ export function lineMap() {
     for (const k of shapes.keys()) if (map.getLayer(layer(k))) map.setPaintProperty(layer(k), "line-width", k === id ? 6 : 4);
     if (id && map.getLayer(layer(id))) map.moveLayer(layer(id));
     for (const b of document.querySelectorAll<HTMLElement>(".lines button[data-line]")) b.toggleAttribute("aria-current", b.dataset.line === id);
+    // A list scrolled on its own (map/, positioned so offsetTop counts from it): bring the chosen line into view, without moving the page
+    const li = id ? document.querySelector<HTMLElement>(`.lines ul.scroll li[data-line="${id}"]`) : null;
+    if (li) { const ul = li.parentElement!; if (li.offsetTop < ul.scrollTop || li.offsetTop + li.offsetHeight > ul.scrollTop + ul.clientHeight) ul.scrollTop = li.offsetTop - 8; }
     fit(id && boxes.has(id) ? boxes.get(id)! : join([...boxes.values()]), id ? 13 : 12);
   };
 

@@ -1,0 +1,56 @@
+---
+// map/ — every line of tools/class_lines.tsv on one world map (the OSM shapes in docs/lines, ODbL, as on the class
+// pages) with the classes that run on it. The map and its list work as on a class page (scripts/line-map.ts).
+import "../styles/class.css";
+import Base from "../layouts/Base.astro";
+import { file, page, t, type Lang } from "../i18n";
+import { classIds, classPage } from "../lib/classes";
+import { allLines } from "../lib/data";
+
+const { lang } = Astro.props as { lang: Lang };
+const ui = t(lang);
+const T = ui.map;
+const fmt = (s: string, o: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (_, k) => String(o[k]));
+const pages = new Set(classIds());
+const lines = allLines();
+const mapped = lines.filter(l => l.map);
+const ids = [...new Set(lines.flatMap(l => l.classes))].filter(c => pages.has(c));
+const names = Object.fromEntries(ids.map(c => [c, classPage(c, lang, n => String(n), y => String(y)).name]));
+---
+<Base lang={lang} path="map/" current="map" title={`${T.title} — ${ui.site.name}`} description={T.description}>
+{mapped.length > 0 && <link slot="head" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.css">}
+{mapped.length > 0 && <script slot="head" is:inline src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>}
+<div class="wrap cls mappage">
+  <h1>{T.title}</h1>
+  <p class="lead">{fmt(T.lead, { n: ids.length, l: lines.length, m: mapped.length })}</p>
+  <section class="lines" aria-label={T.title}>
+    <div class="map">
+      <div id="line-map" role="img" aria-label={T.title}></div>
+      <p class="credit"><a href="https://www.openstreetmap.org/copyright">{ui.class.mapCredit}</a></p>
+    </div>
+    <div class="side">
+      <button type="button" class="all-lines">{T.all}</button>
+      <ul class="scroll">
+        {lines.map(l => (
+          <li data-line={l.id} class:list={{ old: !l.current }}>
+            {l.map ? <button type="button" data-line={l.id}><span class="sw" aria-hidden="true"></span>{l.label}</button>
+                   : <span class="name"><span class="sw none" aria-hidden="true"></span>{l.label}</span>}
+            <span class="meta">
+              {!l.current && <span>{T.old}</span>}
+              {!l.map && <span>{T.noMap}</span>}
+              <a href={`https://www.wikidata.org/wiki/${l.id}`}>{l.id}</a>
+            </span>
+            <span class="on">{T.classes}: {l.classes.filter(c => names[c]).map((c, k) => <>{k > 0 && ", "}<a href={page(lang, `rdf/class/${c}.html`)}>{names[c]}</a></>)}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</div>
+{mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify(mapped.map(l => ({ id: l.id, label: l.label, old: !l.current, src: file(`lines/${l.id}.geojson`) })))} />}
+</Base>
+
+<script>
+  import { lineMap } from "../scripts/line-map";
+  lineMap();
+</script>

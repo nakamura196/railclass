@@ -79,14 +79,33 @@ export const hasManifest = (id: string) => existsSync(docsPath(`iiif/${id}/manif
 
 export type Line = { id: string; label: string; status: string; until: string; source: string; map: boolean };
 
-/** The lines a class runs (ran) on: tools/class_lines.tsv (hand-filled with sources). map = an OSM shape was cut out
- *  for it (docs/lines/<Q>.geojson, tools/osm_lines.py; ODbL, kept apart from the dataset). */
-export function classLines(id: string): Line[] {
+const lineRows = (): Record<string, string>[] => {
   const p = resolve(process.cwd(), "../tools/class_lines.tsv");
   if (!existsSync(p)) return [];
   const [head, ...rows] = readFileSync(p, "utf8").trim().split("\n").map(r => r.split("\t"));
+  return rows.map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ""])));
+};
+
+export type MapLine = { id: string; label: string; current: boolean; map: boolean; classes: string[] };
+
+/** Every line of tools/class_lines.tsv with the classes on it (for the map page). current = some class still runs on it. */
+export function allLines(): MapLine[] {
+  const by = new Map<string, MapLine>();
+  for (const r of lineRows()) {
+    if (!r.line) continue;
+    const l = by.get(r.line) ?? { id: r.line, label: r.lineLabel, current: false, map: existsSync(docsPath(`lines/${r.line}.geojson`)), classes: [] };
+    if (r.status.split(" ")[0] === "current") l.current = true;
+    if (!l.classes.includes(r.class)) l.classes.push(r.class);
+    by.set(r.line, l);
+  }
+  return [...by.values()].sort((a, b) => Number(b.map) - Number(a.map) || a.label.localeCompare(b.label));
+}
+
+/** The lines a class runs (ran) on: tools/class_lines.tsv (hand-filled with sources). map = an OSM shape was cut out
+ *  for it (docs/lines/<Q>.geojson, tools/osm_lines.py; ODbL, kept apart from the dataset). */
+export function classLines(id: string): Line[] {
   const seen = new Set<string>();
-  return rows.map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ""])))
+  return lineRows()
     .filter(r => r.class === id && r.line && !seen.has(r.line) && seen.add(r.line))
     .map(r => {
       const [status, until = ""] = r.status.split(" ");

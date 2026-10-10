@@ -90,6 +90,22 @@ for (const f of existsSync(docs + "lines") ? readdirSync(docs + "lines").filter(
 }
 if (existsSync(docs + "lines") && !existsSync(dist + "lines/README.md")) fail("lines/README.md", "licence note not published");
 
+// map/: every line of the table listed, each shape linked, each class on a line linked to its page
+const allLines = [...new Set(rows.filter(r => r.line).map(r => r.line))];
+for (const pre of ["", "en/"]) {
+  const p = `${pre}map/index.html`;
+  if (!existsSync(dist + p)) { fail(p, "missing"); continue; }
+  const h = read(dist + p);
+  const items = (h.match(/<li[^>]*data-line="/g) ?? []).length;
+  if (items !== allLines.length) fail(p, `${items} line(s) listed, ${allLines.length} in tools/class_lines.tsv`);
+  for (const l of allLines.filter(shape)) if (!h.includes(`/lines/${l}.geojson`)) fail(p, `shape ${l} not linked`);
+  for (const c of new Set(rows.filter(r => r.line && classes.includes(r.class)).map(r => r.class)))
+    if (!h.includes(`rdf/class/${c}.html`)) fail(p, `class ${c} not linked`);
+  if (allLines.some(shape) && !h.includes("maplibre-gl.js")) fail(p, "map without MapLibre");
+  if (!h.includes("OpenStreetMap contributors")) fail(p, "map without the OSM credit");
+}
+for (const p of ["index.html", "en/index.html"]) if (existsSync(dist + p) && !read(dist + p).includes('/map/"')) fail(p, "no link to map/");
+
 // Search: the index is there and not empty
 const stats = existsSync(dist + "search/stats.json") ? JSON.parse(read(dist + "search/stats.json")) : null;
 if (!stats || !Object.values(stats).some(v => typeof v === "number" && v > 0)) fail("search/stats.json", "missing or empty");

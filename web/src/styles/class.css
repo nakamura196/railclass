@@ -126,3 +126,18 @@
 .cls .lines .maplibregl-ctrl-attrib a { color: inherit; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cls .lines .maplibregl-ctrl button .maplibregl-ctrl-icon { filter: invert(1); } }
 :root[data-theme="dark"] .cls .lines .maplibregl-ctrl button .maplibregl-ctrl-icon { filter: invert(1); }
+
+/* map/: the same map and list, the list beside the map and scrolled on its own */
+.mappage .lead { color: var(--muted); max-width: 60em; }
+.mappage .lines { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.mappage .lines #line-map { height: min(70vh, 640px); }
+.mappage .lines .side .all-lines { margin: 0 0 8px; }
+.mappage .lines ul.scroll { position: relative; margin: 0; max-height: calc(min(70vh, 640px) - 10px); overflow-y: auto; }
+.mappage .lines li .on { flex-basis: 100%; font-size: .78rem; color: var(--muted); padding-left: 26px; }
+.mappage .lines li .on a { color: var(--fg); }
+.mappage .lines li:has(button[aria-current]) { background: var(--panel); }
+@media (max-width: 760px) {
+  .mappage .lines { grid-template-columns: 1fr; }
+  .mappage .lines #line-map { height: 55vh; }
+  .mappage .lines ul.scroll { max-height: none; }
+}

@@ -87,6 +87,9 @@
       手元で ETR400（Q370895）のページを確かめた: 暗・明の切り替えで線が消えない、引くと地球儀、コンソールのエラーなし。`npm test` 通過。公開は線がそろってから一緒に
       2026-10-10: ページ側は作った（未コミット: ClassPage.astro・lib/data.ts の classLines・scripts/line-map.ts・class.css・i18n・sync-public.mjs に lines/）。
       線の切り出しは Overpass の 504 で難航中（1 路線ずつやり直し、失敗は飛ばして続きから取れるようにした）。`python3 -u tools/osm_lines.py --api https://maps.mail.ru/osm/tools/overpass/api/interpreter`（記録は data/osm_lines.log）。出力は docs/lines/
+- [x] 地図のページ `map/`（日・英）を作った（2026-10-10 8:05、本人の了承）。準備中だった見出しの「地図」とトップの「地図から探す」から飛ぶ。
+      線を取り出せた路線を全部 1 枚の地球儀に重ね、横の一覧に各路線を走る形式（形式のページへのリンク）を出す。地図の動きは形式のページと同じ `line-map.ts`。
+      限界: 載るのは路線を調べた 12 形式だけ（検索の約 1 万 4 千形式の大半は出ない）。路線を足すほど育つ入口として出す。点検 `npm test` に map/ の確認を足した。公開は線がそろってから
 - [ ] 線の形は train-bodies のデータに入れない（ODbL に縛られないため）。これを崩す案が出たら本人に確かめる
 
 ## 写真の保存と公開待ちの変更（2026-10-09 夜）
