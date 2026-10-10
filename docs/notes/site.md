@@ -251,3 +251,12 @@ site と iiif が main に入る前なので、検索・形式の詳細・IIIF �
   索引に `photo`（key）の列を足し、控えがある形式では `thumb` を空にした。
 - 実測（50 枚の試し）: 1 枚 17.6 KB、取得と変換で 1 枚約 0.6 秒。対象 12,194 枚（出典の表で縮小画像のあるもの）で
   約 215 MB・約 2 時間の見込み。
+
+## 2026-10-10
+
+### モデル名の英語を models.json に入れた
+
+- 仮置きの `web/src/i18n/models.en.json` をやめ、skytrain の `tools/gallery.py` が `docs/data/models.json` に `label_en`・`title_en`・`line_en` を書くようにした。英語の正本は gallery.py の `EN`。
+- gallery.py に `--data-only` を足した。模型とサムネイルを書き直さずに models.json だけ作り直せる（サムネイルは sips で JPEG に作り直すたびにバイト列が変わり、差分が出るため）。
+- 日本語の値は変わっていないことを、作り直す前の models.json と突き合わせて確かめた。
+

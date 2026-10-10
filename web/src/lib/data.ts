@@ -1,7 +1,6 @@
 // Reads the JSON in docs/ at build time (written by the Python tools / by hand) and picks the text for a language.
 import { readFileSync, existsSync } from "node:fs";
 import type { Lang } from "../i18n";
-import modelsEn from "../i18n/models.en.json";
 
 import { resolve } from "node:path";
 
@@ -14,13 +13,14 @@ export type Model = { id: string; group: string; groupLabel: string; title: stri
 
 export function models(lang: Lang) {
   const data = readJSON("data/models.json");
-  const en = lang === "en" ? (modelsEn as any) : null;
-  const groups = data.groups.map((g: any) => ({ id: g.id, label: en?.groups[g.id] ?? g.label }));
+  // English: label_en / title_en / line_en, written by skytrain/tools/gallery.py (falls back to the Japanese)
+  const en = lang === "en";
+  const groups = data.groups.map((g: any) => ({ id: g.id, label: (en && g.label_en) || g.label }));
   const label = Object.fromEntries(groups.map((g: any) => [g.id, g.label]));
   const items: Model[] = data.items.map((it: any) => ({
     ...it, groupLabel: label[it.group],
-    title: en?.items[it.id]?.title ?? it.title,
-    line: en?.items[it.id]?.line ?? it.line,
+    title: (en && it.title_en) || it.title,
+    line: (en && it.line_en) || it.line,
   }));
   return { ext: data.ext as string, groups, items };
 }

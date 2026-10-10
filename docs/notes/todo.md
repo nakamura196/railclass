@@ -51,7 +51,7 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [x] Astro の雛形、レイアウト 1 つ（ヘッダ・フッタ）、GitHub Actions で Pages に出す（配る段は配信元の切り替えまで止めてある）
 - [x] トップ・ビューア・検索・形式の詳細の 4 種類を移す（2026-10-09。モデルのページ `rdf/model/*.html` はまだ Python の HTML）
 - [x] `build_rdf.py` から HTML を書く部分を外し、形式の詳細ページは Astro が JSON から作る（2026-10-10 9:50。モデルのページ `rdf/model/<id>.html` も Astro にした: 名前・形式・寸法・形式のページへの入口・Turtle／JSON-LD／IIIF／GLB。Python の HTML 35 件は消した。点検に足した）
-- [ ] 多言語（日本語は今の URL、英語は `/en/`）（4 種類とも済み。モデルの英語は `web/src/i18n/models.en.json` に仮置き → gallery.py が出すようにする）
+- [x] 多言語（日本語は今の URL、英語は `/en/`）（4 種類とも済み。2026-10-10 9:50 モデルの英語は gallery.py が `models.json` に label_en・title_en・line_en として書くようにし、仮置きの models.en.json は消した。`gallery.py --data-only` で models.json だけ書き直せる）
 - [x] ライト・ダーク・OS に従う の切り替え（ヘッダのボタン、選択を覚える、開いた瞬間のちらつきなし）
 - [x] `assets/site.js` のヘッダ・フッタ差し込みを消す（1462dbb で `docs/assets/` ごと削除）
 - [x] Dependabot（cooldown つき）、Actions の SHA 固定、`npm audit`
