@@ -85,7 +85,7 @@
 
 写真の保存（`tools/fetch_photos.py`）が終わるまで、コミットも公開もしない。終わったら本人に確かめてから進める。
 
-- [ ] 写真の保存が終わったか確かめる（2026-10-09 23:43 で 6,762 / 12,194 枚、1 分に約 65 枚、1:10 ごろ終わる見込み。
+- [x] 写真の保存が終わったか確かめる（2026-10-10 1:00 完了: 12,194 枚・214.5 MB・失敗 0。索引を作り直し bc80dd3 でコミット・push・公開。2026-10-09 23:43 で 6,762 / 12,194 枚、1 分に約 65 枚、1:10 ごろ終わる見込み。
       2026-10-09 23:46 会話から切り離して動かし直した（PID 88172、記録は `data/photos_fetch.log`）。/clear しても止まらない。
       動いているかは `pgrep -fl tools/fetch_photos.py`。止まっていたら `python3 tools/fetch_photos.py` を流し直せば続きから取る。
       記録ファイルは空のままなので、`ls data/photos | wc -l` で数える。`data/` は git の管理外）
@@ -93,7 +93,7 @@
       (1) 写真・検索: `tools/fetch_photos.py`・`tools/build_search.py`・`docs/search/index.json`・`web/scripts/sync-public.mjs`・`web/src/scripts/search.js`・検索と形式のページ
       (2) 文言と台座なし: 「プラレール」を外した注釈 `annotations/*.json`・`web/src/i18n/*.json`・README、作者の行の削除、台座を外して書き出し直した `docs/models/*.glb`・`docs/data/models.json`
 - [x] push は本人の指示で 2026-10-09 23:40 に済み（origin/main = ef3aa31）。公開はまだ: `zsh scripts/deploy-pages.zsh` を main で走らせて公開する（未 push の 1462dbb・322eb5c も一緒に出る）
-- [ ] 公開後に `/`・`/view.html`・`/search/`・`/en/`・形式のページ 1 つが開くか確かめる
+- [x] 公開後に `/`・`/view.html`・`/search/`・`/en/`・形式のページ 1 つが開くか確かめる（2026-10-10 1:05 bc80dd3 の公開で、いずれも 200。索引は 14,325 形式、写真も配信されている）
 - [x] (2) には次も含める: `docs/thumbs/*.jpg`、作り直した `docs/iiif/*/manifest.json`（14 件）、`web/src/components/SiteFooter.astro`（作者の行）。
       注釈は「爪の穴より上」を「印刷用の版で開ける爪の穴より上」に、ICE TD の屋根の穴の説明も印刷用の版の話に直してある
 - [x] skytrain 側も別にコミットした（299111d 台座なし、e37b7c3 印刷の道具とノート。skytrain は手元だけで push しない）: `lib.py`（`NO_MOUNT` でネジ受けの柱・屋根の切り欠き・後ろの爪穴を省く）・`build.py`（`--no-mount`、出力は `out/<モデル>/nomount/`）・
