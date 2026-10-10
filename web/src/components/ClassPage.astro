@@ -20,10 +20,19 @@ const M = models(lang);
 const mods = c.models.map(m => M.items.find(it => it.id === m)).filter(Boolean) as ReturnType<typeof models>["items"];
 const V = ui.view;
 const ORBITS: [keyof typeof V.orbits, string][] = [["quarter", "-55deg 70deg auto"], ["side", "0deg 90deg auto"], ["front", "-90deg 85deg auto"], ["top", "0deg 0deg auto"]];
+// The surface normal at a part: build_iiif.py puts each part's camera at hit + normal * 55 + up * 12, so the normal is
+// recovered from the camera. The script fades the markers whose surface faces away from the camera, as Sketchfab does.
+const normal = (c: { pos: number[]; look: number[] } | null) => {
+  if (!c) return null;
+  const d = [c.pos[0] - c.look[0], c.pos[1] - c.look[1] - 12, c.pos[2] - c.look[2]];
+  const n = Math.hypot(...d) || 1;
+  return d.map(x => +(x / n).toFixed(3));
+};
 const parts = Object.fromEntries(mods.map(m => [m.id, modelParts(m.id, lang)]));
 const mdata = mods.map(m => ({ id: m.id, src: file(`models/${m.id}.${M.ext}`), poster: file(`thumbs/${m.id}.jpg`),
-  tag: `${fmtSize(m.size)} mm`, cams: parts[m.id].map(p => p.cam) }));
+  tag: `${fmtSize(m.size)} mm`, cams: parts[m.id].map(p => p.cam), marks: parts[m.id].map(p => ({ at: p.at, n: normal(p.cam) })) }));
 const pos = (v: number[]) => v.map(x => `${x}m`).join(" ");
+
 const uri = `https://nakamura196.github.io/train-bodies/rdf/class/${id}`;
 const here = `rdf/class/${id}.html`;
 const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
@@ -63,6 +72,7 @@ const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
         <div class="views orbits" role="group" aria-label={V.orient}>
           {ORBITS.map(([k, orbit], i) => <button type="button" data-orbit={orbit} aria-pressed={i === 0 ? "true" : "false"}>{V.orbits[k]}</button>)}
           <button type="button" id="spin" aria-pressed="false">{V.orbits.spin}</button>
+          {mods.some(m => parts[m.id].length) && <button type="button" id="marks" aria-pressed="true">{T.marks}</button>}
         </div>
         {mods.map((m, i) => (
           <div class="about" data-model={m.id} hidden={i > 0}>
@@ -145,7 +155,7 @@ const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
   const el = document.getElementById("m3d-data");
   if (el) {
     type Cam = { pos: number[]; look: number[] } | null;
-    type M = { id: string; src: string; poster: string; tag: string; cams: Cam[] };
+    type M = { id: string; src: string; poster: string; tag: string; cams: Cam[]; marks: { at: number[]; n: number[] | null }[] };
     const D: { models: M[]; orbit: string } = JSON.parse(el.textContent!);
     const mv = document.getElementById("mv") as any;
     const all = (sel: string) => [...document.querySelectorAll<HTMLElement>(sel)];
@@ -164,6 +174,7 @@ const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
       const c = cur.cams[k];
       if (c) { mv.cameraTarget = c.look.map(v => `${v}m`).join(" "); mv.cameraOrbit = orbitOf(c); mv.fieldOfView = "30deg"; }
       for (const b of all("[data-part]")) b.toggleAttribute("aria-current", b.dataset.model === cur.id && +b.dataset.part! === k);
+      document.querySelector<HTMLElement>(`.parts li button[data-model="${cur.id}"][data-part="${k}"]`)?.scrollIntoView({ block: "nearest", behavior: "smooth" });
       for (const o of all(".orbits [data-orbit]")) o.setAttribute("aria-pressed", "false");
     }
     function show(id: string) {
@@ -185,6 +196,24 @@ const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
     for (const b of orbits) b.addEventListener("click", () => {
       overview(b.dataset.orbit);
       for (const o of orbits) o.setAttribute("aria-pressed", String(o === b));
+    });
+    // Fade the markers on the far side: the camera position from its orbit around the target, then normal · (camera - point)
+    function faces() {
+      const o = mv.getCameraOrbit?.(), t = mv.getCameraTarget?.();
+      if (!o || !t) return;
+      const cam = [t.x + o.radius * Math.sin(o.phi) * Math.sin(o.theta), t.y + o.radius * Math.cos(o.phi), t.z + o.radius * Math.sin(o.phi) * Math.cos(o.theta)];
+      for (const h of all(`.hs[data-model="${cur.id}"]`)) {
+        const m = cur.marks[+h.dataset.part!];
+        h.classList.toggle("back", !!m?.n && m.n.reduce((s, v, i) => s + v * (cam[i] - m.at[i]), 0) < 0);
+      }
+    }
+    mv.addEventListener("camera-change", faces);
+    mv.addEventListener("load", faces);
+    const marks = document.getElementById("marks");
+    marks?.addEventListener("click", () => {
+      const on = marks.getAttribute("aria-pressed") !== "true";
+      marks.setAttribute("aria-pressed", String(on));
+      mv.classList.toggle("nomarks", !on);
     });
     const spin = document.getElementById("spin")!;
     spin.addEventListener("click", () => { const on = !mv.autoRotate; mv.autoRotate = on; spin.setAttribute("aria-pressed", String(on)); });

@@ -6,7 +6,8 @@
 .cls .head h1 { font-family: var(--f-display); font-weight: 700; font-size: 1.6rem; margin: 0; text-wrap: balance; }
 .cls .head .other { margin: 2px 0 0; color: var(--muted); }
 .cls .head .uri { margin: 6px 0 0; font-family: var(--f-data); font-size: .75rem; color: var(--muted); overflow-wrap: anywhere; }
-.cls h2 { font-size: .8rem; letter-spacing: .06em; margin: 18px 0 6px; color: var(--muted); }
+.cls h2 { font-size: 1rem; letter-spacing: .04em; margin: 22px 0 8px; color: var(--fg); }
+.cls .body { border-top: 1px solid var(--line); padding-top: 18px; }
 .cls h2:first-child { margin-top: 0; }
 
 .cls .body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; align-items: start; }
@@ -14,7 +15,8 @@
 
 .cls dl { margin: 0; display: grid; border-top: 1px solid var(--line); }
 .cls dl > div { display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); }
-.cls dt { color: var(--muted); font-size: .85rem; }
+.cls dt { color: var(--muted); font-size: .9rem; }
+.cls dd { font-size: .95rem; }
 .cls dd { margin: 0; overflow-wrap: anywhere; }
 .cls dd a { color: var(--fg); }
 .cls .sep { color: var(--muted); }
@@ -47,12 +49,21 @@
 .m3d .note p { margin: 0; }
 
 .m3d .hs {
-  width: 22px; height: 22px; border-radius: 50%; padding: 0; cursor: pointer; font: 700 .7rem/1 var(--f-data);
-  border: 2px solid #fff; background: var(--accent); color: var(--accent-fg); box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  width: 14px; height: 14px; border-radius: 50%; padding: 0; cursor: pointer; font: 700 .5rem/1 var(--f-data);
+  border: 1.5px solid #fff; background: var(--accent); color: var(--accent-fg); box-shadow: 0 1px 2px rgba(0,0,0,.4);
+  opacity: .7; transition: transform .15s, opacity .15s;
 }
-.m3d .hs[hidden] { display: none; }
-.m3d .hs[aria-current] { transform: scale(1.3); }
+.m3d .hs.back { opacity: .12; pointer-events: none; }
+.m3d .hs:hover, .m3d .hs:focus-visible { opacity: 1; transform: scale(1.5); }
+.m3d .nomarks .hs { display: none; }
+.m3d .hs[aria-current] { opacity: 1; width: 30px; height: 30px; background: transparent; color: transparent; border: 2px solid var(--accent);
+  box-shadow: 0 0 0 1.5px #fff, inset 0 0 0 1.5px #fff; transform: none; }
 
+/* The part list scrolls inside its own box (as the annotation panel of Mirador does), so the values below stay close */
+.m3d .parts > div { display: flex; flex-direction: column; max-height: min(640px, calc(100vh - 24px)); }
+.m3d .parts ol { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+@media (max-width: 860px) { .m3d .parts > div { max-height: 60vh; } }
+.m3d [hidden] { display: none !important; }
 .m3d .parts ol { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
 .m3d .parts li { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .m3d .parts li button { display: flex; align-items: baseline; gap: 8px; width: 100%; text-align: left; padding: 0; cursor: pointer;
