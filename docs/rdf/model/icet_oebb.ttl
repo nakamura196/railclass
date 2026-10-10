@@ -1,9 +1,11 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:icet_oebb a schema:3DModel ;
@@ -22,13 +24,53 @@ mdl:icet_oebb a schema:3DModel ;
     schema:name "ÖBB 4011"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_oebb/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_oebb.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#icet_oebb> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#icet_oebb> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8669 ;
+    schema:color "#ECEEEC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0500 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0409 ;
+    schema:color "#C2C7CA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0271 ;
+    schema:color "#CC1014" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0111 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery> a tb:Livery ;
     rdfs:label "Deutsche Bahn livery with ÖBB marks"@en,
         "DB の塗装に ÖBB の印"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/icet_oebb/icet_oebb.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5> ;
     tb:liveryOf wd:Q83822 .
 

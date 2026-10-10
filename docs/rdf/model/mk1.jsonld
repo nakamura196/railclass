@@ -13,23 +13,6 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery",
-      "@type": "Livery",
-      "liveryOf": {
-        "@id": "wd:Q1142140"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "TransLink livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        }
-      ]
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1",
       "@type": "schema:3DModel",
       "galleryGroup": "skytrain",
@@ -64,7 +47,7 @@
         "@id": "https://nakamura196.github.io/train-bodies/thumbs/mk1.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/#mk1"
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#mk1"
       },
       "schema:width": {
         "@id": "_:mk1-width"
@@ -95,6 +78,104 @@
       "schema:value": {
         "@type": "xsd:decimal",
         "@value": "38.0"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color4"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/mk1/skytrain_mk1.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "TransLink livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "TransLink の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q1088"
+        },
+        {
+          "@id": "wd:Q23445"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0969"
+      },
+      "rdfs:label": "silver",
+      "schema:color": "#A9AEB4",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.2025"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#1D4FB4",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6468"
+      },
+      "rdfs:label": "dkgrey",
+      "schema:color": "#3A4048",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk1#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0406"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
       }
     }
   ]

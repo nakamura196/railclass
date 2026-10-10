@@ -1,9 +1,11 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:airo a schema:3DModel ;
@@ -22,13 +24,89 @@ mdl:airo a schema:3DModel ;
     schema:name "Airo（Amtrak Cascades）"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/airo/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/airo.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#airo> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#airo> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color1> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.6711 ;
+    schema:color "#2E504A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color10> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0065 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1312 ;
+    schema:color "#C8CCCE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color3> a tb:ColorSample ;
+    rdfs:label "cream" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0705 ;
+    schema:color "#E6E3DA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0414 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color5> a tb:ColorSample ;
+    rdfs:label "brown2" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0206 ;
+    schema:color "#4A2C24" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color6> a tb:ColorSample ;
+    rdfs:label "brown" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0199 ;
+    schema:color "#5C433A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color7> a tb:ColorSample ;
+    rdfs:label "gold" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0183 ;
+    schema:color "#A8845A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color8> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0128 ;
+    schema:color "#313537" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color9> a tb:ColorSample ;
+    rdfs:label "teal" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0072 ;
+    schema:color "#6FB5A5" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/airo#livery> a tb:Livery ;
     rdfs:label "Amtrak Cascades livery"@en,
         "Amtrak Cascades の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/airo/amtrak_airo.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3133,
+        wd:Q42519,
+        wd:Q47071 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/airo#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color9> ;
     tb:liveryOf wd:Q697217 .
 

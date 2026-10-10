@@ -13,6 +13,19 @@
   },
   "@graph": [
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0858"
+      },
+      "rdfs:label": "navy",
+      "schema:color": "#1C2B4A",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb",
       "@type": "schema:3DModel",
       "galleryGroup": "icet",
@@ -47,7 +60,7 @@
         "@id": "https://nakamura196.github.io/train-bodies/thumbs/icet_dsb.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/#icet_dsb"
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#icet_dsb"
       },
       "schema:width": {
         "@id": "_:icet_dsb-width"
@@ -81,8 +94,81 @@
       }
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0433"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0096"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0414"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#C2C7CA",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8171"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#ECEEEC",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery",
       "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_dsb/icet_dsb.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
+      },
       "liveryOf": {
         "@id": "wd:Q83824"
       },
@@ -94,6 +180,20 @@
         {
           "@language": "ja",
           "@value": "DSB の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q1088"
+        },
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q23445"
         }
       ]
     }

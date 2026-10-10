@@ -7,11 +7,13 @@
 <p><code>https://nakamura196.github.io/train-bodies/rdf/model/mk2</code></p>
 <p><a href="mk2.ttl">Turtle</a> · <a href="mk2.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
 <pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
 @prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix schema: &lt;https://schema.org/&gt; .
 @prefix tb: &lt;https://nakamura196.github.io/train-bodies/vocab#&gt; .
 @prefix wd: &lt;http://www.wikidata.org/entity/&gt; .
+@prefix wdt: &lt;http://www.wikidata.org/prop/direct/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 mdl:mk2 a schema:3DModel ;
@@ -30,14 +32,53 @@ mdl:mk2 a schema:3DModel ;
     schema:name &quot;Mark II&quot;@ja ;
     schema:subjectOf &lt;https://nakamura196.github.io/train-bodies/iiif/mk2/manifest.json&gt; ;
     schema:thumbnailUrl &lt;https://nakamura196.github.io/train-bodies/thumbs/mk2.jpg&gt; ;
-    schema:url &lt;https://nakamura196.github.io/train-bodies/#mk2&gt; ;
+    schema:url &lt;https://nakamura196.github.io/train-bodies/view.html#mk2&gt; ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode &quot;MMT&quot; ;
             schema:value 40.0 ] .
 
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1&gt; a tb:ColorSample ;
+    rdfs:label &quot;charcoal&quot; ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.6940 ;
+    schema:color &quot;#30343A&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2&gt; a tb:ColorSample ;
+    rdfs:label &quot;roof&quot; ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1043 ;
+    schema:color &quot;#A4A9B0&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3&gt; a tb:ColorSample ;
+    rdfs:label &quot;black&quot; ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0728 ;
+    schema:color &quot;#14161A&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4&gt; a tb:ColorSample ;
+    rdfs:label &quot;blue&quot; ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0668 ;
+    schema:color &quot;#1E58C0&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#color5&gt; a tb:ColorSample ;
+    rdfs:label &quot;silver&quot; ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0420 ;
+    schema:color &quot;#B4BAC2&quot; .
+
 &lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery&gt; a tb:Livery ;
     rdfs:label &quot;TransLink livery&quot;@en,
         &quot;TransLink の塗装&quot;@ja ;
+    dcterms:source &quot;Colours taken automatically from the face materials of skytrain/out/mk2/skytrain_mk2.obj (area share of the painted surface, kept when &gt;= 1.5%; tools/extract_colors.py)&quot;@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23445,
+        wd:Q42519 ;
+    tb:colorSample &lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/mk2#color5&gt; ;
     tb:liveryOf wd:Q1142140 .
 
 </pre>

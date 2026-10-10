@@ -7,11 +7,13 @@
 <p><code>https://nakamura196.github.io/train-bodies/rdf/model/icet_green</code></p>
 <p><a href="icet_green.ttl">Turtle</a> · <a href="icet_green.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
 <pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
 @prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix schema: &lt;https://schema.org/&gt; .
 @prefix tb: &lt;https://nakamura196.github.io/train-bodies/vocab#&gt; .
 @prefix wd: &lt;http://www.wikidata.org/entity/&gt; .
+@prefix wdt: &lt;http://www.wikidata.org/prop/direct/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 mdl:icet_green a schema:3DModel ;
@@ -30,14 +32,54 @@ mdl:icet_green a schema:3DModel ;
     schema:name &quot;緑の帯&quot;@ja ;
     schema:subjectOf &lt;https://nakamura196.github.io/train-bodies/iiif/icet_green/manifest.json&gt; ;
     schema:thumbnailUrl &lt;https://nakamura196.github.io/train-bodies/thumbs/icet_green.jpg&gt; ;
-    schema:url &lt;https://nakamura196.github.io/train-bodies/#icet_green&gt; ;
+    schema:url &lt;https://nakamura196.github.io/train-bodies/view.html#icet_green&gt; ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode &quot;MMT&quot; ;
             schema:value 40.0 ] .
 
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color1&gt; a tb:ColorSample ;
+    rdfs:label &quot;body&quot; ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8648 ;
+    schema:color &quot;#ECEEEC&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color2&gt; a tb:ColorSample ;
+    rdfs:label &quot;black&quot; ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0500 ;
+    schema:color &quot;#14161A&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color3&gt; a tb:ColorSample ;
+    rdfs:label &quot;skirt&quot; ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0409 ;
+    schema:color &quot;#C2C7CA&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color4&gt; a tb:ColorSample ;
+    rdfs:label &quot;green&quot; ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0165 ;
+    schema:color &quot;#3FB53A&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color5&gt; a tb:ColorSample ;
+    rdfs:label &quot;grey&quot; ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0109 ;
+    schema:color &quot;#5A6066&quot; .
+
 &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery&gt; a tb:Livery ;
     rdfs:label &quot;Deutsche Bahn livery with green stripe (2019–2022)&quot;@en,
         &quot;DB の塗装（緑の帯、2019〜2022年）&quot;@ja ;
+    dcterms:source &quot;Colours taken automatically from the face materials of skytrain/out/icet_green/icet_green.obj (area share of the painted surface, kept when &gt;= 1.5%; tools/extract_colors.py)&quot;@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3133,
+        wd:Q42519 ;
+    tb:colorSample &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color1&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color2&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color3&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color4&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color5&gt; ;
     tb:liveryOf wd:Q9322 .
 
 </pre>

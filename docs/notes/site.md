@@ -44,3 +44,82 @@
 確かめていないこと:
 - 写真の読み込みは Commons 側の速度に左右される。大量に開いたときの負荷・制限は見ていない。
 - 「種類」（P279）の値は 1,000 を超え、英語のままの値も多い。上位の種類にまとめる（階層で畳む）かは未決。
+
+### トップページ（D、worktree `train-bodies.worktrees/top`、ブランチ `top`）
+
+手本は ArchiveBase のトップ（https://ab.ldas.jp/）。2026-10-09 に読んだ並び: ヘッダ（ライブラリ・API・ツール・English）、
+サイト名と一言、公開中のサイトのカード（点数つき）、お知らせ 5 件、「ArchiveBase について」、フッタ。
+ArchiveBase のトップには検索窓と収録数の欄が無い。ここでは TODO のとおり両方を足した（形式を探すのが主な入口なので）。
+
+ファイルの分け方:
+
+- `index.html`（トップ）・`view.html`（一覧＋3D のビューア）・`assets/` は手で書く静的ファイル。
+  `data/models.json` だけを `~/git/3d/skytrain/tools/gallery.py` が書く（id・群・名前・一言・寸法・Wikidata の形式 ID・追加日・KB）。
+  `gallery_template.html` は廃止し、中身を `view.html`・`assets/view.css`・`assets/view.js` に移した。
+- `data/news.json` は手で書く。TODO にあった `content/news.yaml` はやめた。`docs/` の外に元データを置くと、
+  JSON に変える処理がもう 1 つ要るため。1 件は `date`・`title`・`body`（任意）・`url`（任意）。
+- 共通の見た目は `assets/site.css`（色の変数・地の文字・ヘッダ・フッタ・カッティングマットの `.mat`・「準備中」の印 `.soon`）。
+  ヘッダとフッタの中身は `assets/site.js` が 1 か所で描く。ページには空の
+  `<header class="site-header" data-base="../" data-current="search"></header>` と `<footer class="site-footer" data-base="../"></footer>` を置き、
+  `<script src="../assets/site.js" defer></script>` を読む。`data-base` はそのページから `docs/` への道筋、`data-current` はナビのどれを太くするか。
+  → 検索ページ（C）は今のところ自前のヘッダ。揃えるなら上の 2 行に置き換える。
+- `.gitignore` の `data/` が `docs/data/` まで除外していたので、`/data/`（ルートだけ）に直した。ERATV 由来のルートの `data/` は今までどおり入らない。
+
+判断:
+
+- ヘッダ: 探す（`search/`）・3D で見る（`view.html`）・地図・データ（トップの `#data`）・このサイトについて（`#about`）・English。
+  地図と English はまだ無いので、リンクにせず「準備中」の印を付けた。隠すより、何を作る予定かが見えるほうがよいと考えた。
+  TODO に無い「3D で見る」を足した。ビューアへの入口がヘッダに無いと、トップの新着カードからしか行けないため。
+- ヒーロー: いちばん新しいモデルを回して見せる。ただしバスは飛ばす（鉄道車両のサイトなので）。今は AVE 102。
+  検索窓は `search/?q=...` に送る（C の `search.js` が `q` を読むことを確かめた）。
+- 数字: `search/stats.json` の `classes`・`models`・`countries` をそのまま出す。読めないときは「—」のまま。手で書いた数字は置かない。
+  手元で C の `stats.json` を借りて表示を確かめた時点の値は 14,324・14・159。
+- できること: 5 枚のカード。まだ無いもの（地図・ダウンロード）は枠を点線にして「準備中」。
+- 新着モデル: `added` の新しい順に 6 件。同じ日のものは `models.json` で後ろにあるほうを新しいとみなす。
+- 追加日: SkyTrain 4 両は 2026-10-08、ほかは 2026-10-09（skytrain の `models/<name>.py` を最初にコミットした日）。
+- Wikidata の形式 ID: SkyTrain は Mark ごとの項目が無いので、4 両とも Innovia Metro の家族（Q4940487）を入れた。
+  ICE T の緑の帯は 411 の編成なので Q115612330、ICE TD は DB・DSB とも Q659660、49 番バスは前後とも XD60（Q137921671）。
+- 古いリンク: `index.html#mk1` のように、トップに無い id の `#` が付いていたら `view.html#mk1` へ送る（`location.replace`）。
+  トップの節の id（`features`・`new`・`news`・`about`・`data`）はモデルの id と重ならない。
+- フッタ: 作者「中村 覚（東京大学）」、非公式の注記（タカラトミー・各社の商標）、形式の情報は Wikidata（CC0）。
+  **3D モデルと画像のライセンスは未定なので「整備中」と書いた。** LOD チャレンジはライセンスの明記が要るので、決める必要がある。
+- 確かめたこと: 幅 1568px と 500px で表示し、横にはみ出さない（`scrollWidth` 485 ≤ 幅 500）。`#icet_oebb` で開くとビューアに移る。
+
+残り:
+
+- ライセンスを決めてフッタと「このサイトについて」に書く
+- 地図（B の navPlace）、データ（A の RDF、B の IIIF・ダウンロード）が出たら、「準備中」を外してリンクにする
+- English 版
+
+### Astro に移す（2026-10-09、本人と決めた）
+
+上の「Python は JSON だけ、HTML・JS・CSS は `docs/` の静的ファイル」を一段進め、HTML は Astro で作る。
+Python が JSON・RDF・IIIF を出し、Astro がそれを読んでページを作る、という分け方は変えない。
+
+移す理由:
+
+- 共通のヘッダ・フッタは、今は `assets/site.js` が開いたあとに差し込んでいる。表示が一瞬遅れ、
+  JS を動かさない検索エンジンや LOD の収集ツールからは見えない。Astro ならレイアウト 1 つから全ページに組み込んだ HTML が出る。
+- 形式の詳細ページは `tools/build_rdf.py` が HTML を直接書いている（2026-10-09 時点で 13 ページ、ヘッダ・フッタなし）。
+  共通の見た目を JS と Python の 2 か所で持つことになる。世界の形式を載せていくと数百〜数千ページになるので、
+  型を 1 か所で決めてデータから量産する仕組みが要る。
+- 検索ページにヘッダ・フッタを `site.js` で入れる作業は、移行で片付くのでやらない。
+
+引き換えに増えるもの: ビルドが要る（GitHub Actions でビルドして Pages に出す。公開リポジトリなので無料）、
+npm の依存（`package-lock.json` をコミット、Dependabot の cooldown、Actions の SHA 固定を同時に入れる）、
+A・B・C の担当ファイルの分け方の見直し。
+
+時期: 動いている枝（site のクレジット取得、iiif）を main に入れてから、別セッションで行う。
+
+移すときに守ること:
+
+- 公開中の URL を変えない。`index.html`・`view.html#<model>`・`search/?q=...`・`rdf/class/<id>.html`・
+  `rdf/` と `iiif/` の ttl・jsonld・manifest・`models/`・`thumbs/`。生成物は Astro の `public/` に置いて加工せず配る
+- 最初は今と同じ見た目・同じ URL の 4 種類（トップ・ビューア・検索・形式の詳細）だけ。新しい画面は足さない
+- 移行と同時に、次の 2 つを入れる（本人の指示、2026-10-09）:
+  - 多言語（日本語・英語）。日本語は今の URL のまま、英語は `/en/` の下に同じ構成で置く。
+    表示の文言は言語ごとのファイル 1 か所にまとめる。形式名などのデータは、索引にある `ja`・`en` を言語で選ぶ
+  - ライト・ダークの切り替え。既定は OS の設定に従い（今の CSS は `prefers-color-scheme` で OS にだけ従っている）、
+    ヘッダのボタンで「ライト・ダーク・OS に従う」を選べるようにする。選んだものはブラウザに覚えさせる。
+    ページを開いた瞬間に色がちらつかないよう、色の決定は HTML の頭で行う
+- ノート `docs/notes/` の置き場所は変えない（Pages の配信元が `docs/` から Actions に移るので、配信からは外れる）
