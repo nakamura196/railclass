@@ -123,7 +123,8 @@ def camera(cid, scene_id, label, pos, look, hidden):
 def build(model):
     src = json.load(open(os.path.join(ROOT, "annotations", model + ".json")))
     tris, mats = load_glb(os.path.join(ROOT, "docs", "models", model + ".glb"))
-    formats = json.load(open(os.path.join(ROOT, "docs", "downloads", model, "formats.json")))
+    fp = os.path.join(ROOT, "docs", "downloads", model, "formats.json")
+    formats = json.load(open(fp)) if os.path.exists(fp) else {"files": []}   # no download files yet: glb rendering only
 
     mid = f"{BASE}iiif/{model}/manifest.json"
     scene = f"{BASE}iiif/{model}/scene"

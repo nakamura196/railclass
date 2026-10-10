@@ -118,7 +118,7 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
       `tools/gallery.py` と `tools/export_formats.py`（どちらも `--no-mount`。2 つとも未追跡のファイル）。旗なしは今までどおり穴あり（印刷用）
 - [ ] 本人に確かめる: フッターの「© 2026 中村 覚」と、IIIF の提供者（`tools/build_iiif.py` の PROVIDER）「中村 覚（東京大学）」を残すか
       2026-10-10 本人の指示「このサイトでは東京大学をあまり出さない」: IIIF の提供者を「中村 覚」「Satoru Nakamura」にした（build_iiif.py と 14 件の Manifest、未コミット）。フッターの © は未確認
-- [ ] 新しい 4 モデル（allegra・frecciarossa・maglev・vandebharat）は注釈が無いので、IIIF マニフェストとダウンロードがまだ無い
+- [x] 新しい 4 モデル（allegra・frecciarossa・maglev・vandebharat）は注釈が無いので、IIIF マニフェストとダウンロードがまだ無い（2026-10-10 10:05 注釈 15〜16 か所ずつと Manifest を作った。Collection は 18 本。推測は frecciarossa 2・maglev 1。ダウンロードはまだ無いので、Manifest の rendering は GLB だけ。navPlace は入れていない）
 - [ ] `docs/downloads/`（git の管理外）は穴なし版から 14 件作り直した。公開の置き場所（git か Releases か）は未定のまま
       2026-10-10 気づいたこと: Manifest の rendering（ダウンロード 4 件）は downloads/ を指しているが、公開の手順で downloads/ を外すので、今は 404 になる。置き場所が決まったら Manifest を作り直す
 - [x] 2026-10-09 新しい 4 モデルを `tools/build_rdf.py` の MODELS・CLASSES・LIVERIES に足し、RDF と検索の索引を作り直した（3D のある形式 12 → 16）。
