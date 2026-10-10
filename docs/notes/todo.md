@@ -53,7 +53,7 @@
 - [ ] `assets/site.js` のヘッダ・フッタ差し込みを消す
 - [x] Dependabot（cooldown つき）、Actions の SHA 固定、`npm audit`
 - [x] Pages の配信元を切り替える（2026-10-09、Actions の残りが 0 のため `gh-pages` ブランチに。`zsh scripts/deploy-pages.zsh` を main で走らせて配る）
-- [ ] `docs/` の古い `index.html`・`view.html`・`assets/`・`search/index.html`・`search.js`・`search.css` を消す（検索を触る別セッションが終わってから）
+- [x] `docs/` の古い `index.html`・`view.html`・`assets/`・`search/index.html`・`search.js`・`search.css` を消す（2026-10-09）
 - [ ] Actions の残りが戻ったら `pages.yml` の push の起動を戻し、配信元を Actions にするか決める
 
 ## 路線（地図の線）— 担当は未定。方針は `data-model.md` の「路線の線データ」
