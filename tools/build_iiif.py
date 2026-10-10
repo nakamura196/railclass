@@ -2,6 +2,7 @@
 
 Run:
   python3 tools/build_iiif.py icet_411        -> docs/iiif/icet_411/manifest.json
+  python3 tools/build_iiif.py --collection    -> docs/iiif/collection.json (every docs/iiif/<model>/manifest.json)
 
 Input: annotations/<model>.json (parts and their text), docs/models/<model>.glb,
 docs/downloads/<model>/formats.json (written by ~/git/3d/skytrain/tools/export_formats.py).
@@ -198,8 +199,8 @@ def build(model):
         "id": mid, "type": "Manifest",
         "label": src["label"], "summary": src["summary"], "metadata": src["metadata"],
         "provider": [PROVIDER],
-        "homepage": [{"id": f"{BASE}#{model}", "type": "Text", "format": "text/html",
-                      "label": {"ja": ["ギャラリーで見る"], "en": ["Open in the gallery"]}}],
+        "homepage": [{"id": f"{BASE}view.html#{model}", "type": "Text", "format": "text/html",    # view.html sends it to the class page
+                      "label": {"ja": ["形式のページで見る"], "en": ["Open on the class page"]}}],
         "thumbnail": [{"id": f"{BASE}thumbs/{model}.jpg", "type": "Image", "format": "image/jpeg"}],
         "seeAlso": see_also,
         "rendering": rendering,
@@ -225,6 +226,31 @@ def build(model):
     print(f"{out}: {len(notes)} part annotations, {len(rendering)} downloads, {len(see_also)} seeAlso")
 
 
+def collection():
+    """One Collection of all the Manifests, in the order of docs/data/models.json (the gallery's order)."""
+    order = [m["id"] for m in json.load(open(os.path.join(ROOT, "docs", "data", "models.json")))["items"]]
+    have = [m for m in order if os.path.exists(os.path.join(ROOT, "docs", "iiif", m, "manifest.json"))]
+    items = []
+    for m in have:
+        man = json.load(open(os.path.join(ROOT, "docs", "iiif", m, "manifest.json")))
+        items.append({k: man[k] for k in ("id", "type", "label", "thumbnail") if k in man})
+    col = {
+        "@context": CONTEXT, "id": f"{BASE}iiif/collection.json", "type": "Collection",
+        "label": {"ja": ["Train Bodies の 3D モデル"], "en": ["Train Bodies 3D models"]},
+        "summary": {"ja": ["世界の鉄道車両の形式に結んだ、車体の 3D モデルの IIIF Manifest の一覧。"],
+                    "en": ["IIIF Manifests of the train-body 3D models, each linked to its rolling stock class."]},
+        "provider": [PROVIDER],
+        "homepage": [{"id": BASE, "type": "Text", "format": "text/html", "label": {"none": ["Train Bodies"]}}],
+        "items": items,
+    }
+    out = os.path.join(ROOT, "docs", "iiif", "collection.json")
+    with open(out, "w") as f:
+        json.dump(col, f, ensure_ascii=False, indent=1)
+        f.write("\n")
+    print(f"{out}: {len(items)} manifests")
+
+
 if __name__ == "__main__":
     for m in sys.argv[1:]:
-        build(m)
+        if m == "--collection": collection()
+        else: build(m)

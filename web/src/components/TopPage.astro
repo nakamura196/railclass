@@ -107,8 +107,8 @@ const D = T.dataItems;
       <h2 id="data-h">{T.dataTitle}</h2>
       <ul class="data">
         <li><a href={file("data/models.json")}>{D.models[0]}</a><span>{D.models[1]}</span></li>
-        <li><span class="off">{D.rdf[0]} <span class="soon">{ui.site.soon}</span></span><span>{D.rdf[1]}</span></li>
-        <li><span class="off">{D.iiif[0]} <span class="soon">{ui.site.soon}</span></span><span>{D.iiif[1]}</span></li>
+        <li><a href={file("rdf/all.ttl")}>{D.rdf[0]}</a><span>{D.rdf[1]} (<a href={file("rdf/all.ttl")}>Turtle</a> · <a href={file("rdf/all.jsonld")}>JSON-LD</a>)</span></li>
+        <li><a href={file("iiif/collection.json")}>{D.iiif[0]}</a><span>{D.iiif[1]}</span></li>
         <li><span class="off">{D.download[0]} <span class="soon">{ui.site.soon}</span></span><span>{D.download[1]}</span></li>
       </ul>
     </div>

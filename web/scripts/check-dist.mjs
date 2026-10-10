@@ -104,7 +104,14 @@ for (const pre of ["", "en/"]) {
   if (allLines.some(shape) && !h.includes("maplibre-gl.js")) fail(p, "map without MapLibre");
   if (!h.includes("OpenStreetMap contributors")) fail(p, "map without the OSM credit");
 }
-for (const p of ["index.html", "en/index.html"]) if (existsSync(dist + p) && !read(dist + p).includes('/map/"')) fail(p, "no link to map/");
+for (const p of ["index.html", "en/index.html"]) {
+  const h = existsSync(dist + p) ? read(dist + p) : "";
+  if (!h.includes('/map/"')) fail(p, "no link to map/");
+  for (const f of ["rdf/all.ttl", "rdf/all.jsonld", "iiif/collection.json"]) {
+    if (!h.includes(`/${f}"`)) fail(p, `no link to ${f}`);
+    if (!existsSync(dist + f)) fail(f, "not in dist");
+  }
+}
 
 // Search: the index is there and not empty
 const stats = existsSync(dist + "search/stats.json") ? JSON.parse(read(dist + "search/stats.json")) : null;
