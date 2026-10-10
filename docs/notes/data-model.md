@@ -306,3 +306,12 @@ URI の取り決め（3 つのセッションで共有する。変えるとき�
 - 塗装（緑帯）は 411 形と 415 形の両方に塗られたので、「塗装の範囲」と「模型にした車両の形式」を取り違えたとみられる。
 - `tools/build_rdf.py` の MODELS と `annotations/icet_green.json` を直した。Turtle の差分は icet_green の `schema:about` と、2 つの形式の `schema:subjectOf` だけ（all.jsonld などの差分は並び順）。
 
+### ERATV の再利用条件を確かめた（同じ日、10:00）
+
+- ERA の「Disclaimer and copyright notice」（https://www.era.europa.eu/content/disclaimer-and-copyright-notice、2026-10-10 に読んだ。版や日付の表示は無く、「Copyright European Union Agency for Railways, 2025」とだけある）は、
+  「出典を示せば複製してよい。ただし別に定めがある場合を除く」という一般的な許可。データやデータベース、ERATV のような登録簿についての個別の定めは無い。
+- ERATV の Terms of Use（V1.6、前に読んだもの）は登録する側の約束で、取り出したデータの再利用には触れていない。つまり「別の定め」には当たらない。
+- ERA の刊行物（例: 2024 年の「20 years of ERA」）は CC BY 4.0 と明記しているが、これは文書についての表示で、ERATV に同じ表示は見つからなかった。
+- 結論（解釈）: ERATV から取り出した型式の一覧は、出典（ERA・ERATV・取り出した日）を示せば公開してよいと読める。CC BY 4.0 と同じ扱いと言い切れる文言は無い。
+- 確かめていないこと: ERA に問い合わせてはいない。ERATV の画面そのものに別の表示が無いかは、一覧と出力の画面だけ見た。
+

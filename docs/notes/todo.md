@@ -15,6 +15,7 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [x] 全件をまとめたファイル（`docs/rdf/all.ttl` など）を一括ダウンロード用に
 - [ ] ERATV と Wikidata の照合を改善（「ICE T BR 411 ETCS BL3」→ Q115612330 のように、版の付いた名前を形式に結ぶ。skos:narrowMatch）
 - [ ] ERATV の再利用条件を確かめる（ERA の Copyright Notice）。結果で `docs/` に入れるか決める
+      2026-10-10 10:00 確かめた（data-model.md の同じ日）: 出典を示せば複製してよい、という ERA の一般の許可だけ。ERATV に個別の定めは無い。`docs/` に入れるかは本人の判断待ち（推奨: 出典つきで入れる）
 - [ ] 「RDF にする利点」をノートで実測で示す（例: 典拠の更新がそのまま反映される、外部と結べる件数）
 
 ## B. IIIF v4・注釈・ダウンロード（worktree `train-bodies.worktrees/iiif`）
