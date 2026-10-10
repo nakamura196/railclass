@@ -162,3 +162,31 @@ site と iiif が main に入る前なので、検索・形式の詳細・IIIF �
   `npm run build` で 4 ページが出て、`dist/iiif/` に 14 形式分の Manifest が写ることを確かめた。
 - ブランチ `astro` を push した。main には入れていない（Actions は main への push と PR でしか動かない）。
 - site の枝（写真の出典・形式のまとまり 47967bb）はまだ main に入っていないので、検索と形式の詳細ページの移行は待つ。
+
+#### 2026-10-09 移行の二段目: 検索と形式の詳細、手元でビルドして gh-pages から配る
+
+- site の枝は main に入る前だったが、本人の了承を得て、その時点の site（b6f8f3b）を astro に直接マージした。
+  `tools/build_search.py` が衝突した。色の絞り込みを main と site が別々に書いていたためで、main の書き方（形式ごとに `livery` を集める）を残し、
+  site 側の `liveries` を消した。索引を作り直し、色の値を持つ形式は 12 件。写真の出典は、別セッションの取得の途中の分まで入っている（10,402 枚中 8,633 枚）。
+- 検索: `web/src/components/SearchPage.astro` と `web/src/scripts/search.js`（`docs/search/search.js` を移したもの）。
+  日本語の文言は `ja.json`・`en.json` の `search.js` に出した。名前・値の名前・項目名は、ページの言語を先に、無ければもう一方を出す。
+  英語の検索は `/en/search/`。結果から開く形式のページも、その言語のもの（`/en/rdf/class/<id>.html`）。
+- 形式の詳細: `web/src/pages/rdf/class/[id].astro`。`docs/rdf/class/*.jsonld` 1 つにつき 1 ページ（今は 17）。
+  表示する値は検索の索引から取る。索引には両言語の値の名前、上位の形式から受け継いだ値、模型の塗装の色が既に入っているので、
+  検索とページで値が食い違わない。RDF からは、Wikidata・上位と下位の形式・3D モデルへのつながりと、Turtle の本文を取る。
+  値を押すと、その値で絞った検索に移る（ICE T の「高速列車」→ 60 件）。
+- `sync-public.mjs` は、Astro が作るようになった `search/index.html`・`search.js`・`search.css`・`rdf/class/*.html` を写さない。
+  `rdf/model/*.html` はまだ Python が書いたものを配る。
+- **配り方を変えた。** 本人から「Actions の残りが 0 なので、手元でビルドしてデプロイする」と指示があった。
+  ブランチから配る Pages（「pages build and deployment」）は今も成功しているので、`scripts/deploy-pages.zsh` で `web/dist` を
+  `gh-pages` ブランチに 1 コミットで強制 push し、Pages の配信元を `gh-pages` の `/` に切り替える。
+  履歴を残さないのは、ビルドの出力で、GLB が積み重なるとリポジトリが太るため。
+  `downloads/`（git に入れていない、置き場所は未定）は出さない。`_astro/` を配るため `.nojekyll` を置く。
+  `pages.yml` は手で動かすときだけにした（main への push で動くと、残りが 0 のため失敗する）。
+- 確かめたこと（手元の `astro preview`）: 32 ページが出る。英語の検索で「ice」が 14 件、結果が `/en/rdf/class/` に向く。
+  ICE T のページに 7 項目・下位の形式 3 つ・模型 1 つ・写真と出典が出る。
+
+確かめていないこと:
+- 幅 390px での検索と形式のページ。
+- `docs/` の古い `index.html`・`view.html`・`assets/`・`search/index.html` などは、配信元を切り替えたあとは使われない。
+  別のセッションがまだ `docs/search/search.js` を触っている可能性があるので、今回は消さない。

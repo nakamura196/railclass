@@ -1,0 +1,37 @@
+/* Class page (rdf/class/<id>.html): values on the left, the 3D models and the photo on the right; stacks on phones. */
+.cls { padding-block: 20px 0; display: grid; gap: 16px; }
+.cls .crumb { margin: 0; font-size: .82rem; color: var(--muted); }
+.cls .crumb a { color: inherit; }
+.cls .head h1 { font-family: var(--f-display); font-weight: 700; font-size: 1.6rem; margin: 0; text-wrap: balance; }
+.cls .head .other { margin: 2px 0 0; color: var(--muted); }
+.cls .head .uri { margin: 6px 0 0; font-family: var(--f-data); font-size: .75rem; color: var(--muted); overflow-wrap: anywhere; }
+.cls h2 { font-size: .8rem; letter-spacing: .06em; margin: 18px 0 6px; color: var(--muted); }
+.cls h2:first-child { margin-top: 0; }
+
+.cls .body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; align-items: start; }
+@media (max-width: 860px) { .cls .body { grid-template-columns: minmax(0, 1fr); } }
+
+.cls dl { margin: 0; display: grid; border-top: 1px solid var(--line); }
+.cls dl > div { display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.cls dt { color: var(--muted); font-size: .85rem; }
+.cls dd { margin: 0; overflow-wrap: anywhere; }
+.cls dd a { color: var(--fg); }
+.cls .sep { color: var(--muted); }
+.cls .hint { margin: 6px 0 0; font-size: .78rem; color: var(--muted); }
+
+.cls .media { display: grid; gap: 16px; }
+.cls .models { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.cls .models li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.cls .models .ph { display: block; background: var(--mat); }
+.cls .models img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.cls .models .tx { display: grid; gap: 2px; padding: 8px 10px 8px 0; font-size: .85rem; align-content: start; }
+.cls .models .tx span { color: var(--muted); font-size: .78rem; }
+.cls .models .acts a { color: var(--fg); }
+
+.cls .photo { margin: 0; }
+.cls .photo img { display: block; width: 100%; border-radius: 8px; }
+.cls .photo figcaption { font-size: .7rem; color: var(--muted); margin-top: 4px; overflow-wrap: anywhere; }
+.cls .photo figcaption a { color: inherit; }
+
+.cls .ttl summary { cursor: pointer; font-size: .85rem; color: var(--muted); }
+.cls .ttl pre { font-family: var(--f-data); font-size: .75rem; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px; overflow-x: auto; }

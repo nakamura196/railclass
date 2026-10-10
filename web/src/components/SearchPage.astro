@@ -1,0 +1,52 @@
+---
+// Search: the frame is written here; the script loads search/index.json (tools/build_search.py) and fills it in the browser.
+// The URL keeps the conditions (search/?q=...&country=...), the same as the page it replaces.
+import "../styles/search.css";
+import Base from "../layouts/Base.astro";
+import { file, page, t, type Lang } from "../i18n";
+
+const { lang } = Astro.props as { lang: Lang };
+const ui = t(lang);
+const S = ui.search;
+const clientData = {
+  lang, locale: ui.numberLocale, text: S.js,
+  index: file("search/index.json"), thumbs: file("thumbs/"), classPage: page(lang, "rdf/class/"),
+};
+---
+<Base lang={lang} path="search/" current="search" title={`${S.title} — ${ui.site.name}`} description={S.description}>
+<div class="wrap search">
+  <h1>{S.title}</h1>
+
+  <form class="qbar" id="qform" role="search" onsubmit="return false">
+    <label for="q" class="vh">{S.qLabel}</label>
+    <input id="q" type="search" placeholder={S.qPlaceholder} autocomplete="off">
+    <button type="button" id="ftoggle" class="ftoggle" aria-expanded="false" aria-controls="facets">{S.filters}</button>
+  </form>
+
+  <div class="layout">
+    <aside class="facets" id="facets" aria-label={S.filters}></aside>
+    <main class="results">
+      <div class="bar">
+        <p class="count" id="count" aria-live="polite">{S.loading}</p>
+        <div class="tools">
+          <label class="vh" for="sort">{S.sort}</label>
+          <select id="sort"></select>
+          <label class="vh" for="per">{S.per}</label>
+          <select id="per"><option>24</option><option>48</option><option>96</option></select>
+          <div class="seg" role="group" aria-label={S.viewLabel}>
+            <button type="button" data-view="grid" aria-pressed="true">{S.grid}</button>
+            <button type="button" data-view="list" aria-pressed="false">{S.list}</button>
+          </div>
+        </div>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div id="out"></div>
+      <nav class="pager" id="pager" aria-label={S.pager}></nav>
+    </main>
+  </div>
+
+  <p class="note">{S.note}</p>
+</div>
+<script type="application/json" id="search-data" set:html={JSON.stringify(clientData)} />
+<script src="../scripts/search.js"></script>
+</Base>

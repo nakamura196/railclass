@@ -1,9 +1,9 @@
 ---
-import { page, jaOnly, file, t, type Lang } from "../i18n";
+import { page, file, t, type Lang } from "../i18n";
 const { lang } = Astro.props as { lang: Lang };
 const ui = t(lang);
 const f = ui.footer;
-const siteLinks = [[ui.nav.search, jaOnly("search/")], [ui.nav.view, page(lang, "view.html")], [f.news, page(lang, "#news")], [ui.nav.about, page(lang, "#about")]];
+const siteLinks = [[ui.nav.search, page(lang, "search/")], [ui.nav.view, page(lang, "view.html")], [f.news, page(lang, "#news")], [ui.nav.about, page(lang, "#about")]];
 const dataLinks = [[f.modelsJson, file("data/models.json")], [f.newsJson, file("data/news.json")], [f.source, "https://github.com/nakamura196/train-bodies"]];
 ---
 <footer class="site-footer">

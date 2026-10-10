@@ -1,0 +1,94 @@
+---
+// One class (rdf/class/<id>.html): name, the values (as in the search), links to Wikidata and the broader / narrower
+// classes, the 3D models made for it (viewer, IIIF Manifest) and the RDF itself. Written at build time; no script.
+import "../styles/class.css";
+import Base from "../layouts/Base.astro";
+import { file, page, t, type Lang } from "../i18n";
+import { classPage } from "../lib/classes";
+import { models } from "../lib/data";
+
+const { lang, id } = Astro.props as { lang: Lang; id: string };
+const ui = t(lang);
+const T = ui.class;
+const fmt = (s: string, o: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (_, k) => String(o[k]));
+const nf = new Intl.NumberFormat(ui.numberLocale);
+const c = classPage(id, lang, n => nf.format(n), y => fmt(T.year, { y }));
+const M = models(lang);
+const mods = c.models.map(m => M.items.find(it => it.id === m) ?? { id: m, title: m, line: "" });
+const uri = `https://nakamura196.github.io/train-bodies/rdf/class/${id}`;
+const here = `rdf/class/${id}.html`;
+const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
+---
+<Base lang={lang} path={here} current="search" title={`${c.name} — ${ui.site.name}`} description={`${T.kicker}: ${c.name}${c.other ? ` (${c.other})` : ""}`}>
+<link slot="head" rel="alternate" type="text/turtle" href={file(`rdf/class/${id}.ttl`)}>
+<link slot="head" rel="alternate" type="application/ld+json" href={file(`rdf/class/${id}.jsonld`)}>
+<div class="wrap cls">
+  <p class="crumb"><a href={page(lang, "search/")}>{T.back}</a> / {T.kicker}</p>
+  <div class="head">
+    <h1>{c.name}</h1>
+    {c.other && <p class="other">{c.other}</p>}
+    <p class="uri"><code>{uri}</code></p>
+  </div>
+
+  <div class="body">
+    <section class="props" aria-labelledby="h-values">
+      <h2 id="h-values">{T.values}</h2>
+      {c.facets.length ? (
+        <>
+          <dl>
+            {c.facets.map(f => (
+              <div><dt>{f.label}</dt><dd>{f.values.map((v, k) => (
+                <>{k > 0 && <span class="sep">{lang === "ja" ? "・" : ", "}</span>}{v.search ? <a href={`${page(lang, "search/")}?${v.search}`}>{v.text}</a> : v.text}</>
+              ))}</dd></div>
+            ))}
+          </dl>
+          <p class="hint">{T.valuesHint}</p>
+        </>
+      ) : <p class="hint">{T.noValues}</p>}
+
+      <h2>{T.links}</h2>
+      <dl>
+        {c.wikidata && <div><dt>{T.wikidata}</dt><dd><a href={`https://www.wikidata.org/wiki/${c.wikidata}`}>{c.wikidata}</a></dd></div>}
+        {c.derivedFrom && !c.derivedFrom.endsWith("/" + c.wikidata) && <div><dt>{T.source}</dt><dd><a href={c.derivedFrom}>{c.derivedFrom}</a></dd></div>}
+        {c.broader.length > 0 && <div><dt>{T.broader}</dt><dd>{c.broader.map((b, k) => <>{k > 0 && ", "}<a href={cls(b.id)}>{b.name}</a></>)}</dd></div>}
+        {c.narrower.length > 0 && <div><dt>{T.narrower}</dt><dd>{c.narrower.map((b, k) => <>{k > 0 && ", "}<a href={cls(b.id)}>{b.name}</a></>)}</dd></div>}
+        <div><dt>{T.data}</dt><dd><a href={file(`rdf/class/${id}.ttl`)}>Turtle</a>, <a href={file(`rdf/class/${id}.jsonld`)}>JSON-LD</a></dd></div>
+      </dl>
+    </section>
+
+    <aside class="media">
+      {mods.length > 0 && (
+        <section aria-labelledby="h-models">
+          <h2 id="h-models">{T.models}</h2>
+          <ul class="models">
+            {mods.map(m => (
+              <li>
+                <a class="ph" href={page(lang, `view.html#${m.id}`)}><img src={file(`thumbs/${m.id}.jpg`)} alt="" loading="lazy" decoding="async"></a>
+                <div class="tx">
+                  <b>{m.title}</b>
+                  {m.line && <span>{m.line}</span>}
+                  <span class="acts"><a href={page(lang, `view.html#${m.id}`)}>{T.view}</a> · <a href={file(`iiif/${m.id}/manifest.json`)}>{T.manifest}</a></span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+      {c.photo && (
+        <figure class="photo">
+          <a href={c.photo.page}><img src={c.photo.src} alt={c.name} loading="lazy" decoding="async"></a>
+          <figcaption>
+            <a href={c.photo.page}>{c.photo.who ? fmt(T.photoBy, { who: c.photo.who }) : T.photoCommons}</a>
+            {c.photo.lic && <> / {c.photo.licUrl ? <a href={c.photo.licUrl} rel="license">{c.photo.lic}</a> : c.photo.lic}</>}
+          </figcaption>
+        </figure>
+      )}
+    </aside>
+  </div>
+
+  <details class="ttl">
+    <summary>{T.showTtl}</summary>
+    <pre>{c.ttl}</pre>
+  </details>
+</div>
+</Base>

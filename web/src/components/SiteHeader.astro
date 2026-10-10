@@ -1,13 +1,13 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
-import { page, jaOnly, t, type Lang } from "../i18n";
+import { page, t, type Lang } from "../i18n";
 
 interface Props { lang: Lang; path: string; current?: string }
 const { lang, path, current } = Astro.props;
 const ui = t(lang);
 const other: Lang = lang === "ja" ? "en" : "ja";
 const NAV = [
-  { key: "search", label: ui.nav.search, href: jaOnly("search/") },   // English search page: not yet
+  { key: "search", label: ui.nav.search, href: page(lang, "search/") },
   { key: "view", label: ui.nav.view, href: page(lang, "view.html") },
   { key: "map", label: ui.nav.map },                                    // after B's navPlace: the map in search/
   { key: "data", label: ui.nav.data, href: page(lang, "#data") },

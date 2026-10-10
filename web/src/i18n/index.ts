@@ -13,5 +13,3 @@ const BASE = import.meta.env.BASE_URL.replace(/\/?$/, "/");   // "/train-bodies/
 export const page = (lang: Lang, path = "") => BASE + (lang === "ja" ? "" : lang + "/") + path;
 /** Generated data, shared by all languages: file("models/mk1.glb") -> /train-bodies/models/mk1.glb */
 export const file = (path: string) => BASE + path;
-/** Pages not built by Astro yet (search/) have only a Japanese version: send every language there for now. */
-export const jaOnly = (path: string) => BASE + path;

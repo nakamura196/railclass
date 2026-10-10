@@ -1,10 +1,10 @@
 # Builds the site with Astro (web/) and, once Pages is switched to "GitHub Actions", deploys it.
-# Until then Pages still serves docs/ from the branch, so the deploy job is off: set the repository
-# variable PAGES_SOURCE=actions at the same time as switching Settings → Pages → Source.
+# For now the site is built locally and pushed to the gh-pages branch (scripts/deploy-pages.zsh), because the
+# account has no Actions minutes left; Pages serves that branch. So this workflow runs only by hand.
+# To move back: restore the push / pull_request triggers, switch Settings → Pages → Source to "GitHub Actions"
+# and set the repository variable PAGES_SOURCE=actions.
 name: pages
 on:
-  push: { branches: [main] }
-  pull_request: { branches: [main] }
   workflow_dispatch:
 permissions:
   contents: read
