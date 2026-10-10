@@ -63,3 +63,30 @@
 - [ ] 対象の路線のうち、OSM の route relation に `wikidata=` 札が付いている数を数える
 - [ ] OSM の線を地図に出す方法を決める（表示のたびに Overpass か、事前に切り出すか。後者ならライセンスの扱いも）
 - [ ] 線の形は train-bodies のデータに入れない（ODbL に縛られないため）。これを崩す案が出たら本人に確かめる
+
+## 写真の保存と公開待ちの変更（2026-10-09 夜）
+
+写真の保存（`tools/fetch_photos.py`）が終わるまで、コミットも公開もしない。終わったら本人に確かめてから進める。
+
+- [ ] 写真の保存が終わったか確かめる（2026-10-09 21:53 で約 600 / 12,195 枚、1 分に約 85 枚、0 時すぎに終わる見込み。
+      記録ファイルは空のままなので、`ls data/photos | wc -l` で数える。`data/` は git の管理外）
+- [ ] 未コミットの変更を 2 つに分けてコミットする
+      (1) 写真・検索: `tools/fetch_photos.py`・`tools/build_search.py`・`docs/search/index.json`・`web/scripts/sync-public.mjs`・`web/src/scripts/search.js`・検索と形式のページ
+      (2) 文言と台座なし: 「プラレール」を外した注釈 `annotations/*.json`・`web/src/i18n/*.json`・README、作者の行の削除、台座を外して書き出し直した `docs/models/*.glb`・`docs/data/models.json`
+- [ ] 本人の了承を得てから push し、`zsh scripts/deploy-pages.zsh` を main で走らせて公開する（未 push の 1462dbb・322eb5c も一緒に出る）
+- [ ] 公開後に `/`・`/view.html`・`/search/`・`/en/`・形式のページ 1 つが開くか確かめる
+- [ ] (2) には次も含める: `docs/thumbs/*.jpg`、作り直した `docs/iiif/*/manifest.json`（14 件）、`web/src/components/SiteFooter.astro`（作者の行）。
+      注釈は「爪の穴より上」を「印刷用の版で開ける爪の穴より上」に、ICE TD の屋根の穴の説明も印刷用の版の話に直してある
+- [ ] skytrain 側も別にコミットする: `lib.py`（`NO_MOUNT` でネジ受けの柱・屋根の切り欠き・後ろの爪穴を省く）・`build.py`（`--no-mount`、出力は `out/<モデル>/nomount/`）・
+      `tools/gallery.py` と `tools/export_formats.py`（どちらも `--no-mount`。2 つとも未追跡のファイル）。旗なしは今までどおり穴あり（印刷用）
+- [ ] 本人に確かめる: フッターの「© 2026 中村 覚」と、IIIF の提供者（`tools/build_iiif.py` の PROVIDER）「中村 覚（東京大学）」を残すか
+- [ ] 新しい 4 モデル（allegra・frecciarossa・maglev・vandebharat）は注釈が無いので、IIIF マニフェストとダウンロードがまだ無い
+- [ ] `docs/downloads/`（git の管理外）は穴なし版から 14 件作り直した。公開の置き場所（git か Releases か）は未定のまま
+- [x] 2026-10-09 新しい 4 モデルを `tools/build_rdf.py` の MODELS・CLASSES・LIVERIES に足し、RDF と検索の索引を作り直した（3D のある形式 12 → 16）。
+      形式は gallery の wikidata 欄どおり（Q671805・Q370895・Q289090 = Transrapid 08・Q119775864）。上海リニアは運行会社の Wikidata 項目が無いので、塗装は路線 Q769591 に結んだ。
+      ae15492 でコミット・push 済み（RDF だけ）。`docs/search/index.json` は (1) に入る（写真の保存が終わったら作り直す）
+- [x] 2026-10-09 22:20 4 モデルの色を `tools/extract_colors.py` で `tools/livery_colors.json` に足した（allegra 赤・灰／frecciarossa 赤・青／maglev 白・青／vandebharat 橙・茶・青。既存 14 件は変化なし）。
+      `tools/build_rdf.py` で `docs/rdf/` も作り直した（既存モデルの .jsonld の差分は並び順だけ）。未コミット。(1)(2) とは別の「色」コミットにする。`docs/search/index.json` への反映は (1) の索引の作り直しで入る
+- [x] 2026-10-09 22:20 公開用の `docs/models/*.glb` 18 件が、skytrain の `out/<モデル>/nomount/*.glb` と同じファイル（穴なし版）であることを cmp で確かめた
+- 2026-10-09 22:11 時点の写真の保存: 1,894 / 12,195 枚（PID 89664、1 分に約 76 枚、0 時半ごろ終わる見込み）。
+  終わったら: `python3 tools/build_search.py` で索引を作り直す → web を組み立てて手元で確かめる → (1)(2)・色・skytrain の順にコミット → 本人の了承を得て push と `zsh scripts/deploy-pages.zsh`

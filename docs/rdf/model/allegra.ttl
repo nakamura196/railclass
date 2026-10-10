@@ -1,9 +1,11 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:allegra a schema:3DModel ;
@@ -27,8 +29,60 @@ mdl:allegra a schema:3DModel ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color1> a tb:ColorSample ;
+    rdfs:label "rhbred" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.7200 ;
+    schema:color "#C4121C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1844 ;
+    schema:color "#C0C4C8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0399 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color4> a tb:ColorSample ;
+    rdfs:label "door" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0216 ;
+    schema:color "#B4B8BC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color5> a tb:ColorSample ;
+    rdfs:label "stripe" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0181 ;
+    schema:color "#DCDEE0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0065 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0063 ;
+    schema:color "#F2F4F5" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery> a tb:Livery ;
     rdfs:label "Rhaetian Railway livery"@en,
         "レーティッシュ鉄道の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/allegra/rhb_allegra.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7> ;
     tb:liveryOf wd:Q177598 .
 

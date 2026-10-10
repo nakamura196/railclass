@@ -1,9 +1,11 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:frecciarossa a schema:3DModel ;
@@ -27,8 +29,53 @@ mdl:frecciarossa a schema:3DModel ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.7786 ;
+    schema:color "#D41E2A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color2> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1062 ;
+    schema:color "#C8CCD0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0441 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color4> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0328 ;
+    schema:color "#2C3038" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0300 ;
+    schema:color "#263048" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0072 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> a tb:Livery ;
     rdfs:label "Trenitalia Frecciarossa livery (red to the bottom, from 2022)"@en,
         "Trenitalia フレッチャロッサの塗装（下まで赤、2022年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/frecciarossa/trenitalia_frecciarossa.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q3142 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color6> ;
     tb:liveryOf wd:Q286650 .
 

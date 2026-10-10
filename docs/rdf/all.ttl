@@ -29,9 +29,6 @@ tb:VehicleClass a rdfs:Class ;
     rdfs:comment "A class (type) of railway vehicle or road vehicle; one record per class."@en ;
     rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q429220 rdfs:label "pink"@en,
         "ピンク"@ja .
 
@@ -534,9 +531,61 @@ mdl:allegra a schema:3DModel ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color1> a tb:ColorSample ;
+    rdfs:label "rhbred" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.7200 ;
+    schema:color "#C4121C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1844 ;
+    schema:color "#C0C4C8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0399 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color4> a tb:ColorSample ;
+    rdfs:label "door" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0216 ;
+    schema:color "#B4B8BC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color5> a tb:ColorSample ;
+    rdfs:label "stripe" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0181 ;
+    schema:color "#DCDEE0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0065 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0063 ;
+    schema:color "#F2F4F5" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery> a tb:Livery ;
     rdfs:label "Rhaetian Railway livery"@en,
         "レーティッシュ鉄道の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/allegra/rhb_allegra.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7> ;
     tb:liveryOf wd:Q177598 .
 
 mdl:ave102 a schema:3DModel ;
@@ -747,9 +796,54 @@ mdl:frecciarossa a schema:3DModel ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.7786 ;
+    schema:color "#D41E2A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color2> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1062 ;
+    schema:color "#C8CCD0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0441 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color4> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0328 ;
+    schema:color "#2C3038" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0300 ;
+    schema:color "#263048" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0072 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> a tb:Livery ;
     rdfs:label "Trenitalia Frecciarossa livery (red to the bottom, from 2022)"@en,
         "Trenitalia フレッチャロッサの塗装（下まで赤、2022年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/frecciarossa/trenitalia_frecciarossa.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q3142 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color6> ;
     tb:liveryOf wd:Q286650 .
 
 mdl:icet_411 a schema:3DModel ;
@@ -1157,9 +1251,54 @@ mdl:maglev a schema:3DModel ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8316 ;
+    schema:color "#EEF0EE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0532 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0424 ;
+    schema:color "#5C626A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color4> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0280 ;
+    schema:color "#4A5560" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color5> a tb:ColorSample ;
+    rdfs:label "teal" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0227 ;
+    schema:color "#1C8EA8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0067 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/maglev#livery> a tb:Livery ;
     rdfs:label "Shanghai Maglev livery"@en,
         "上海リニアの塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/maglev/smt_maglev.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color6> ;
     tb:liveryOf wd:Q769591 .
 
 mdl:mk1 a schema:3DModel ;
@@ -1410,9 +1549,62 @@ mdl:vandebharat a schema:3DModel ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color1> a tb:ColorSample ;
+    rdfs:label "saffron" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.7380 ;
+    schema:color "#EE6A24" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color2> a tb:ColorSample ;
+    rdfs:label "charcoal" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1034 ;
+    schema:color "#3A3C40" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color3> a tb:ColorSample ;
+    rdfs:label "beige" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0877 ;
+    schema:color "#9E907C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0302 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0189 ;
+    schema:color "#5E7080" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0067 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color7> a tb:ColorSample ;
+    rdfs:label "door" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0055 ;
+    schema:color "#A8ACB0" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#livery> a tb:Livery ;
     rdfs:label "Vande Bharat livery (saffron and grey, from 2023)"@en,
         "ヴァンデ・バーラトの塗装（サフランと灰、2023年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/vandebharat/ir_vandebharat.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q39338,
+        wd:Q47071 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color7> ;
     tb:liveryOf wd:Q819425 .
 
 wd:Q129172 rdfs:label "InterCityExpress"@en,
@@ -1433,6 +1625,9 @@ wd:Q3257809 rdfs:label "purple"@en,
 
 wd:Q391895 rdfs:label "Siemens Mobility"@en,
         "シーメンス・モビリティ"@ja .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q452140 rdfs:label "DB Fernverkehr"@en,
         "DB長距離交通"@ja .
@@ -1498,9 +1693,6 @@ wd:Q83822 rdfs:label "Austrian Federal Railways"@en,
 
 wd:Q141170526 rdfs:label "British Columbia Rapid Transit Company"@en .
 
-wd:Q47071 rdfs:label "brown"@en,
-        "茶色"@ja .
-
 wd:Q696668 rdfs:label "ICE T"@en,
         "ICE T"@ja .
 
@@ -1555,14 +1747,18 @@ wd:Q1142140 rdfs:label "TransLink"@en,
 wd:Q1999572 rdfs:label "standard-gauge railway"@en,
         "標準軌"@ja .
 
+wd:Q47071 rdfs:label "brown"@en,
+        "茶色"@ja .
+
 wd:Q9322 rdfs:label "Deutsche Bahn"@en,
         "ドイツ鉄道"@ja .
 
 wd:Q3142 rdfs:label "red"@en,
         "赤"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
+<https://nakamura196.github.io/train-bodies/rdf/> a skos:ConceptScheme ;
+    rdfs:label "train-bodies: vehicle classes"@en,
+        "train-bodies: 車両の形式"@ja .
 
 wd:Q23445 rdfs:label "black"@en,
         "黒"@ja .
@@ -1570,9 +1766,8 @@ wd:Q23445 rdfs:label "black"@en,
 wd:Q23444 rdfs:label "white"@en,
         "白"@ja .
 
-<https://nakamura196.github.io/train-bodies/rdf/> a skos:ConceptScheme ;
-    rdfs:label "train-bodies: vehicle classes"@en,
-        "train-bodies: 車両の形式"@ja .
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q42519 rdfs:label "grey"@en,
         "灰色"@ja .

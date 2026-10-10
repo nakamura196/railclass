@@ -1,9 +1,11 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:vandebharat a schema:3DModel ;
@@ -27,8 +29,61 @@ mdl:vandebharat a schema:3DModel ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color1> a tb:ColorSample ;
+    rdfs:label "saffron" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.7380 ;
+    schema:color "#EE6A24" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color2> a tb:ColorSample ;
+    rdfs:label "charcoal" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1034 ;
+    schema:color "#3A3C40" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color3> a tb:ColorSample ;
+    rdfs:label "beige" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0877 ;
+    schema:color "#9E907C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0302 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0189 ;
+    schema:color "#5E7080" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0067 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color7> a tb:ColorSample ;
+    rdfs:label "door" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0055 ;
+    schema:color "#A8ACB0" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#livery> a tb:Livery ;
     rdfs:label "Vande Bharat livery (saffron and grey, from 2023)"@en,
         "ヴァンデ・バーラトの塗装（サフランと灰、2023年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/vandebharat/ir_vandebharat.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q39338,
+        wd:Q47071 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color7> ;
     tb:liveryOf wd:Q819425 .
 

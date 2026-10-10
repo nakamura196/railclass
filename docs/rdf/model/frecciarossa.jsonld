@@ -13,6 +13,19 @@
   },
   "@graph": [
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0441"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
@@ -81,8 +94,84 @@
       }
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7786"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#D41E2A",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0300"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#263048",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1062"
+      },
+      "rdfs:label": "silver",
+      "schema:color": "#C8CCD0",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0072"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery",
       "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color6"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/frecciarossa/trenitalia_frecciarossa.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
       "liveryOf": {
         "@id": "wd:Q286650"
       },
@@ -95,7 +184,28 @@
           "@language": "ja",
           "@value": "Trenitalia フレッチャロッサの塗装（下まで赤、2022年から）"
         }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q3142"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
       ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0328"
+      },
+      "rdfs:label": "band",
+      "schema:color": "#2C3038",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
     }
   ]
 }

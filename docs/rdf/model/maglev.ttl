@@ -1,9 +1,11 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:maglev a schema:3DModel ;
@@ -27,8 +29,53 @@ mdl:maglev a schema:3DModel ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8316 ;
+    schema:color "#EEF0EE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0532 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0424 ;
+    schema:color "#5C626A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color4> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0280 ;
+    schema:color "#4A5560" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color5> a tb:ColorSample ;
+    rdfs:label "teal" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0227 ;
+    schema:color "#1C8EA8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/maglev#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0067 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/maglev#livery> a tb:Livery ;
     rdfs:label "Shanghai Maglev livery"@en,
         "上海リニアの塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/maglev/smt_maglev.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color6> ;
     tb:liveryOf wd:Q769591 .
 

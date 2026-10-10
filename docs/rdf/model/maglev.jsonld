@@ -13,6 +13,120 @@
   },
   "@graph": [
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0424"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#5C626A",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0280"
+      },
+      "rdfs:label": "mask",
+      "schema:color": "#4A5560",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color6"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/maglev/smt_maglev.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q769591"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Shanghai Maglev livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "上海リニアの塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0067"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8316"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#EEF0EE",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0532"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
@@ -81,21 +195,17 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#livery",
-      "@type": "Livery",
-      "liveryOf": {
-        "@id": "wd:Q769591"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/maglev#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0227"
       },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Shanghai Maglev livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "上海リニアの塗装"
-        }
-      ]
+      "rdfs:label": "teal",
+      "schema:color": "#1C8EA8",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
     }
   ]
 }
