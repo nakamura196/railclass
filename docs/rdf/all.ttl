@@ -11,6 +11,12 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+tb:ColorSample a rdfs:Class ;
+    rdfs:label "Colour sample"@en,
+        "色見本"@ja ;
+    rdfs:comment "One colour of a livery as painted on the 3D model, with its share of the painted surface."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
 tb:Livery a rdfs:Class ;
     rdfs:label "Livery"@en,
         "塗装"@ja ;
@@ -21,6 +27,27 @@ tb:VehicleClass a rdfs:Class ;
     rdfs:label "Vehicle class"@en,
         "形式"@ja ;
     rdfs:comment "A class (type) of railway vehicle or road vehicle; one record per class."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
+
+wd:Q429220 rdfs:label "pink"@en,
+        "ピンク"@ja .
+
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
+
+tb:areaShare a rdf:Property ;
+    rdfs:label "area share"@en,
+        "面積の割合"@ja ;
+    rdfs:comment "Share (0-1) of the painted surface of the 3D model that has this colour (glass, lamps, seams left out)."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:colorSample a rdf:Property ;
+    rdfs:label "colour sample"@en,
+        "色見本"@ja ;
+    rdfs:comment "A colour of this livery, taken from the 3D model's faces."@en ;
     rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 
 tb:galleryGroup a rdf:Property ;
@@ -309,14 +336,90 @@ mdl:airo a schema:3DModel ;
     schema:name "Airo（Amtrak Cascades）"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/airo/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/airo.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#airo> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#airo> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color1> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.6711 ;
+    schema:color "#2E504A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color10> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0065 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1312 ;
+    schema:color "#C8CCCE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color3> a tb:ColorSample ;
+    rdfs:label "cream" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0705 ;
+    schema:color "#E6E3DA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0414 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color5> a tb:ColorSample ;
+    rdfs:label "brown2" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0206 ;
+    schema:color "#4A2C24" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color6> a tb:ColorSample ;
+    rdfs:label "brown" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0199 ;
+    schema:color "#5C433A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color7> a tb:ColorSample ;
+    rdfs:label "gold" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0183 ;
+    schema:color "#A8845A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color8> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0128 ;
+    schema:color "#313537" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/airo#color9> a tb:ColorSample ;
+    rdfs:label "teal" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0072 ;
+    schema:color "#6FB5A5" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/airo#livery> a tb:Livery ;
     rdfs:label "Amtrak Cascades livery"@en,
         "Amtrak Cascades の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/airo/amtrak_airo.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3133,
+        wd:Q42519,
+        wd:Q47071 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/airo#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/airo#color9> ;
     tb:liveryOf wd:Q697217 .
 
 mdl:ave102 a schema:3DModel ;
@@ -335,14 +438,61 @@ mdl:ave102 a schema:3DModel ;
     schema:name "AVE 102「Pato」"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ave102/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ave102.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#ave102> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#ave102> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8558 ;
+    schema:color "#F0F1F0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color2> a tb:ColorSample ;
+    rdfs:label "stripe" ;
+    wdt:P462 wd:Q3257809 ;
+    tb:areaShare 0.0420 ;
+    schema:color "#8A2C5A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color3> a tb:ColorSample ;
+    rdfs:label "panel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0395 ;
+    schema:color "#8C949C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0326 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color5> a tb:ColorSample ;
+    rdfs:label "line" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0196 ;
+    schema:color "#8E949A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0074 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery> a tb:Livery ;
     rdfs:label "Renfe AVE livery"@en,
         "Renfe AVE の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/ave102/renfe_ave102.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3257809,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6> ;
     tb:liveryOf wd:Q2476154 .
 
 mdl:bus49_front a schema:3DModel ;
@@ -363,14 +513,46 @@ mdl:bus49_front a schema:3DModel ;
     schema:name "49番バス（前）"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/bus49_front/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/bus49_front.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#bus49_front> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#bus49_front> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.8458 ;
+    schema:color "#006FD6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0668 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0369 ;
+    schema:color "#A9AEB3" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color4> a tb:ColorSample ;
+    rdfs:label "charcoal" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0297 ;
+    schema:color "#3A3E42" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery> a tb:Livery ;
     rdfs:label "TransLink livery"@en,
         "TransLink の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/bus49_front/translink_bus49_front.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23445,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#color4> ;
     tb:liveryOf wd:Q1142140 .
 
 mdl:bus49_rear a schema:3DModel ;
@@ -391,14 +573,46 @@ mdl:bus49_rear a schema:3DModel ;
     schema:name "49番バス（後ろ）"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/bus49_rear/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/bus49_rear.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#bus49_rear> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#bus49_rear> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color1> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.8247 ;
+    schema:color "#006FD6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color2> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0783 ;
+    schema:color "#A9AEB3" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0500 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4> a tb:ColorSample ;
+    rdfs:label "charcoal" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0282 ;
+    schema:color "#3A3E42" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery> a tb:Livery ;
     rdfs:label "TransLink livery"@en,
         "TransLink の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/bus49_rear/translink_bus49_rear.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23445,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4> ;
     tb:liveryOf wd:Q1142140 .
 
 mdl:icet_411 a schema:3DModel ;
@@ -417,14 +631,54 @@ mdl:icet_411 a schema:3DModel ;
     schema:name "411（7両編成）"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_411/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_411.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#icet_411> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#icet_411> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8665 ;
+    schema:color "#ECEEEC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0501 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0410 ;
+    schema:color "#C2C7CA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color4> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0275 ;
+    schema:color "#CC1014" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0109 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery> a tb:Livery ;
     rdfs:label "Deutsche Bahn livery (red stripe)"@en,
         "DB の塗装（赤い帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/icet_411/icet_411.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color5> ;
     tb:liveryOf wd:Q9322 .
 
 mdl:icet_415 a schema:3DModel ;
@@ -443,14 +697,54 @@ mdl:icet_415 a schema:3DModel ;
     schema:name "415（5両編成）"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_415/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_415.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#icet_415> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#icet_415> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8665 ;
+    schema:color "#ECEEEC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0501 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0410 ;
+    schema:color "#C2C7CA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color4> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0275 ;
+    schema:color "#CC1014" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0109 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/icet_415#livery> a tb:Livery ;
     rdfs:label "Deutsche Bahn livery (red stripe)"@en,
         "DB の塗装（赤い帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/icet_415/icet_415.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color5> ;
     tb:liveryOf wd:Q9322 .
 
 mdl:icet_dsb a schema:3DModel ;
@@ -469,14 +763,54 @@ mdl:icet_dsb a schema:3DModel ;
     schema:name "ICE TD（DSB）"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_dsb/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_dsb.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#icet_dsb> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#icet_dsb> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8171 ;
+    schema:color "#ECEEEC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0858 ;
+    schema:color "#1C2B4A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0433 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0414 ;
+    schema:color "#C2C7CA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0096 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery> a tb:Livery ;
     rdfs:label "DSB livery"@en,
         "DSB の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/icet_dsb/icet_dsb.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q23445,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5> ;
     tb:liveryOf wd:Q83824 .
 
 mdl:icet_green a schema:3DModel ;
@@ -495,14 +829,54 @@ mdl:icet_green a schema:3DModel ;
     schema:name "緑の帯"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_green/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_green.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#icet_green> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#icet_green> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8648 ;
+    schema:color "#ECEEEC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0500 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0409 ;
+    schema:color "#C2C7CA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color4> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0165 ;
+    schema:color "#3FB53A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0109 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/icet_green#livery> a tb:Livery ;
     rdfs:label "Deutsche Bahn livery with green stripe (2019–2022)"@en,
         "DB の塗装（緑の帯、2019〜2022年）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/icet_green/icet_green.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3133,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_green#color5> ;
     tb:liveryOf wd:Q9322 .
 
 mdl:icet_oebb a schema:3DModel ;
@@ -521,14 +895,54 @@ mdl:icet_oebb a schema:3DModel ;
     schema:name "ÖBB 4011"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_oebb/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_oebb.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#icet_oebb> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#icet_oebb> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8669 ;
+    schema:color "#ECEEEC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0500 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0409 ;
+    schema:color "#C2C7CA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0271 ;
+    schema:color "#CC1014" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0111 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery> a tb:Livery ;
     rdfs:label "Deutsche Bahn livery with ÖBB marks"@en,
         "DB の塗装に ÖBB の印"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/icet_oebb/icet_oebb.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5> ;
     tb:liveryOf wd:Q83822 .
 
 mdl:icet_td a schema:3DModel ;
@@ -547,14 +961,54 @@ mdl:icet_td a schema:3DModel ;
     schema:name "ICE TD（DB）"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_td/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_td.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#icet_td> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#icet_td> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8663 ;
+    schema:color "#ECEEEC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0501 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0410 ;
+    schema:color "#C2C7CA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color4> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0275 ;
+    schema:color "#CC1014" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0111 ;
+    schema:color "#5A6066" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/icet_td#livery> a tb:Livery ;
     rdfs:label "Deutsche Bahn livery (red stripe)"@en,
         "DB の塗装（赤い帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/icet_td/icet_td.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color5> ;
     tb:liveryOf wd:Q9322 .
 
 mdl:mk1 a schema:3DModel ;
@@ -573,14 +1027,46 @@ mdl:mk1 a schema:3DModel ;
     schema:name "Mark I"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/mk1/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/mk1.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#mk1> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#mk1> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1> a tb:ColorSample ;
+    rdfs:label "dkgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.6468 ;
+    schema:color "#3A4048" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk1#color2> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.2025 ;
+    schema:color "#1D4FB4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk1#color3> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0969 ;
+    schema:color "#A9AEB4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk1#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0406 ;
+    schema:color "#14161A" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery> a tb:Livery ;
     rdfs:label "TransLink livery"@en,
         "TransLink の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/mk1/skytrain_mk1.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23445,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/mk1#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk1#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk1#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk1#color4> ;
     tb:liveryOf wd:Q1142140 .
 
 mdl:mk2 a schema:3DModel ;
@@ -599,14 +1085,53 @@ mdl:mk2 a schema:3DModel ;
     schema:name "Mark II"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/mk2/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/mk2.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#mk2> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#mk2> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1> a tb:ColorSample ;
+    rdfs:label "charcoal" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.6940 ;
+    schema:color "#30343A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1043 ;
+    schema:color "#A4A9B0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0728 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0668 ;
+    schema:color "#1E58C0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk2#color5> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0420 ;
+    schema:color "#B4BAC2" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery> a tb:Livery ;
     rdfs:label "TransLink livery"@en,
         "TransLink の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/mk2/skytrain_mk2.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23445,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk2#color5> ;
     tb:liveryOf wd:Q1142140 .
 
 mdl:mk3 a schema:3DModel ;
@@ -625,14 +1150,53 @@ mdl:mk3 a schema:3DModel ;
     schema:name "Mark III"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/mk3/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/mk3.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#mk3> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#mk3> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/mk3#color1> a tb:ColorSample ;
+    rdfs:label "charcoal" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.5895 ;
+    schema:color "#2E3339" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk3#color2> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.2188 ;
+    schema:color "#1E4FA8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk3#color3> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0933 ;
+    schema:color "#A6ABB2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk3#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0756 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk3#color5> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0073 ;
+    schema:color "#BCC1C8" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/mk3#livery> a tb:Livery ;
     rdfs:label "TransLink livery"@en,
         "TransLink の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/mk3/skytrain_mk3.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23445,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/mk3#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk3#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk3#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk3#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk3#color5> ;
     tb:liveryOf wd:Q1142140 .
 
 mdl:mk5 a schema:3DModel ;
@@ -651,14 +1215,31 @@ mdl:mk5 a schema:3DModel ;
     schema:name "Mark V"@ja ;
     schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/mk5/manifest.json> ;
     schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/mk5.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/#mk5> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#mk5> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 40.0 ] .
 
+<https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.8553 ;
+    schema:color "#0056B8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.1257 ;
+    schema:color "#14161A" .
+
 <https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery> a tb:Livery ;
     rdfs:label "TransLink livery"@en,
         "TransLink の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/mk5/skytrain_mk5.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23445 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2> ;
     tb:liveryOf wd:Q1142140 .
 
 wd:Q129172 rdfs:label "InterCityExpress"@en,
@@ -670,6 +1251,9 @@ wd:Q183 rdfs:label "Germany"@en,
         "ドイツ"@ja .
 
 wd:Q309084 rdfs:label "アルストム"@ja .
+
+wd:Q3257809 rdfs:label "purple"@en,
+        "紫"@ja .
 
 wd:Q391895 rdfs:label "Siemens Mobility"@en,
         "シーメンス・モビリティ"@ja .
@@ -729,6 +1313,9 @@ wd:Q83822 rdfs:label "Austrian Federal Railways"@en,
 
 wd:Q141170526 rdfs:label "British Columbia Rapid Transit Company"@en .
 
+wd:Q47071 rdfs:label "brown"@en,
+        "茶色"@ja .
+
 wd:Q688893 rdfs:label "ALSTOM Transportation Germany"@en,
         "ボンバルディア・トランスポーテーション"@ja .
 
@@ -777,13 +1364,31 @@ wd:Q16 rdfs:label "Canada"@en,
 wd:Q1999572 rdfs:label "standard-gauge railway"@en,
         "標準軌"@ja .
 
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
+
 wd:Q1142140 rdfs:label "TransLink"@en,
         "トランスリンク"@ja .
 
 wd:Q9322 rdfs:label "Deutsche Bahn"@en,
         "ドイツ鉄道"@ja .
 
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
+
 <https://nakamura196.github.io/train-bodies/rdf/> a skos:ConceptScheme ;
     rdfs:label "train-bodies: vehicle classes"@en,
         "train-bodies: 車両の形式"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 

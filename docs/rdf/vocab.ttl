@@ -3,6 +3,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 
+tb:ColorSample a rdfs:Class ;
+    rdfs:label "Colour sample"@en,
+        "色見本"@ja ;
+    rdfs:comment "One colour of a livery as painted on the 3D model, with its share of the painted surface."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
 tb:Livery a rdfs:Class ;
     rdfs:label "Livery"@en,
         "塗装"@ja ;
@@ -18,6 +24,18 @@ tb:VehicleClass a rdfs:Class ;
 <https://nakamura196.github.io/train-bodies/rdf/> a skos:ConceptScheme ;
     rdfs:label "train-bodies: vehicle classes"@en,
         "train-bodies: 車両の形式"@ja .
+
+tb:areaShare a rdf:Property ;
+    rdfs:label "area share"@en,
+        "面積の割合"@ja ;
+    rdfs:comment "Share (0-1) of the painted surface of the 3D model that has this colour (glass, lamps, seams left out)."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
+
+tb:colorSample a rdf:Property ;
+    rdfs:label "colour sample"@en,
+        "色見本"@ja ;
+    rdfs:comment "A colour of this livery, taken from the 3D model's faces."@en ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 
 tb:galleryGroup a rdf:Property ;
     rdfs:label "gallery group"@en,

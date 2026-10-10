@@ -7,11 +7,13 @@
 <p><code>https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb</code></p>
 <p><a href="icet_dsb.ttl">Turtle</a> · <a href="icet_dsb.jsonld">JSON-LD</a> · <a href="https://nakamura196.github.io/train-bodies/">train-bodies</a></p>
 <pre>@prefix cls: &lt;https://nakamura196.github.io/train-bodies/rdf/class/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
 @prefix mdl: &lt;https://nakamura196.github.io/train-bodies/rdf/model/&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix schema: &lt;https://schema.org/&gt; .
 @prefix tb: &lt;https://nakamura196.github.io/train-bodies/vocab#&gt; .
 @prefix wd: &lt;http://www.wikidata.org/entity/&gt; .
+@prefix wdt: &lt;http://www.wikidata.org/prop/direct/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 mdl:icet_dsb a schema:3DModel ;
@@ -30,14 +32,54 @@ mdl:icet_dsb a schema:3DModel ;
     schema:name &quot;ICE TD（DSB）&quot;@ja ;
     schema:subjectOf &lt;https://nakamura196.github.io/train-bodies/iiif/icet_dsb/manifest.json&gt; ;
     schema:thumbnailUrl &lt;https://nakamura196.github.io/train-bodies/thumbs/icet_dsb.jpg&gt; ;
-    schema:url &lt;https://nakamura196.github.io/train-bodies/#icet_dsb&gt; ;
+    schema:url &lt;https://nakamura196.github.io/train-bodies/view.html#icet_dsb&gt; ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode &quot;MMT&quot; ;
             schema:value 40.0 ] .
 
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1&gt; a tb:ColorSample ;
+    rdfs:label &quot;body&quot; ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8171 ;
+    schema:color &quot;#ECEEEC&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2&gt; a tb:ColorSample ;
+    rdfs:label &quot;navy&quot; ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0858 ;
+    schema:color &quot;#1C2B4A&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3&gt; a tb:ColorSample ;
+    rdfs:label &quot;black&quot; ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0433 ;
+    schema:color &quot;#14161A&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4&gt; a tb:ColorSample ;
+    rdfs:label &quot;skirt&quot; ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0414 ;
+    schema:color &quot;#C2C7CA&quot; .
+
+&lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5&gt; a tb:ColorSample ;
+    rdfs:label &quot;grey&quot; ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0096 ;
+    schema:color &quot;#5A6066&quot; .
+
 &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#livery&gt; a tb:Livery ;
     rdfs:label &quot;DSB livery&quot;@en,
         &quot;DSB の塗装&quot;@ja ;
+    dcterms:source &quot;Colours taken automatically from the face materials of skytrain/out/icet_dsb/icet_dsb.obj (area share of the painted surface, kept when &gt;= 1.5%; tools/extract_colors.py)&quot;@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q23445,
+        wd:Q42519 ;
+    tb:colorSample &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color1&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color2&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color3&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color4&gt;,
+        &lt;https://nakamura196.github.io/train-bodies/rdf/model/icet_dsb#color5&gt; ;
     tb:liveryOf wd:Q83824 .
 
 </pre>

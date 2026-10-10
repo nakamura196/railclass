@@ -8,7 +8,8 @@ Writes:
   docs/rdf/model/<model-id>.ttl|.jsonld|.html   one 3D model each (URI .../rdf/model/<model-id>)
   docs/rdf/all.ttl|.jsonld   everything, plus rdfs:label @ja/@en of every Wikidata item used as a value
   docs/rdf/vocab.ttl   the few terms of our own (tb:)
-The facet properties are the ones in docs/rdf/facets.json. No ERATV-derived data goes in here (reuse licence unconfirmed).
+The facet properties are the ones in docs/rdf/facets.json. Livery colours come from tools/livery_colors.json
+(made by tools/extract_colors.py from the skytrain builds). No ERATV-derived data goes in here (reuse licence unconfirmed).
 """
 import html, json, os, sys, time, urllib.parse, urllib.request
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
@@ -28,7 +29,9 @@ SCHEME = URIRef(BASE + "rdf/")
 UA = "train-bodies/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
 
 FACETS = json.load(open(os.path.join(DOCS, "facets.json"), encoding="utf-8"))["facets"]
-WD_FACETS = [f for f in FACETS if f["uri"].startswith(str(WDT))]
+WD_FACETS = [f for f in FACETS if f["uri"].startswith(str(WDT)) and f.get("on", "class") == "class"]
+COLOR_URI = URIRef(next(f["uri"] for f in FACETS if f["id"] == "color"))
+COLORS = json.load(open(os.path.join(HERE, "tools", "livery_colors.json"), encoding="utf-8"))
 
 # cid: (Wikidata item or None, skos:broader cid in this dataset or None, labels for classes without a Wikidata item)
 # Classes without their own Wikidata item get skos:broadMatch to the nearest item (the family).
@@ -77,7 +80,7 @@ LIVERIES = {
     "renfe-ave": ({"en": "Renfe AVE livery", "ja": "Renfe AVE の塗装"}, "Q2476154"),
 }
 
-# model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/index.html.
+# model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
 MODELS = {
     "mk1": ("tb-skytrain-mk1", "translink", None),
     "mk2": ("tb-skytrain-mk2", "translink", None),
@@ -161,10 +164,20 @@ def fetch(refresh):
     return out
 
 
+def add_labels(wd, qs):
+    """Fetch Wikidata labels for items not in the cache yet (e.g. colours added after the last --refresh)."""
+    missing = sorted(q for q in qs if q not in wd["labels"])
+    if not missing:
+        return
+    vals = " ".join("wd:" + q for q in missing)
+    for b in sparql(f"""SELECT ?i ?l WHERE {{ VALUES ?i {{ {vals} }} ?i rdfs:label ?l FILTER(lang(?l) IN ("ja","en")) }}"""):
+        wd["labels"].setdefault(qid(b["i"]["value"]), {})[b["l"]["xml:lang"]] = b["l"]["value"]
+    json.dump(wd, open(CACHE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+
 def gallery_items():
-    s = open(os.path.join(HERE, "docs", "index.html"), encoding="utf-8").read()
-    line = next(l for l in s.splitlines() if l.startswith("const DATA = "))
-    return {i["id"]: i for i in json.loads(line[len("const DATA = "):].rstrip(";"))["items"]}
+    d = json.load(open(os.path.join(HERE, "docs", "data", "models.json"), encoding="utf-8"))   # written by skytrain/tools/gallery.py
+    return {i["id"]: i for i in d["items"]}
 
 
 def new_graph():
@@ -225,7 +238,7 @@ def add_model(g, mid, item):
     g.add((s, SDO.encodingFormat, Literal("model/gltf-binary")))
     g.add((s, SDO.thumbnailUrl, URIRef(f"{BASE}thumbs/{mid}.jpg")))
     g.add((s, SDO.subjectOf, URIRef(f"{BASE}iiif/{mid}/manifest.json")))   # IIIF Manifest (担当 B)
-    g.add((s, SDO.url, URIRef(f"{BASE}#{mid}")))
+    g.add((s, SDO.url, URIRef(f"{BASE}view.html#{mid}")))
     for prop, v in zip((SDO.depth, SDO.width, SDO.height), item["size"]):   # x = length, y = width, z = height, in mm
         q = BNode(f"{mid}-{prop.rsplit('/', 1)[-1]}")
         g.add((s, prop, q)); g.add((q, RDF.type, SDO.QuantitativeValue))
@@ -236,6 +249,18 @@ def add_model(g, mid, item):
     for lang, l in labels.items():
         g.add((lv, RDFS.label, Literal(l, lang=lang)))
     g.add((lv, TB.liveryOf, WD[op]))
+    c = COLORS["models"].get(mid)
+    if c:
+        for name in c["colors"]:
+            g.add((lv, COLOR_URI, WD[COLORS["basic"][name]]))
+        for k, smp in enumerate(c["samples"], 1):
+            n = URIRef(f"{MDL[mid]}#color{k}")
+            g.add((lv, TB.colorSample, n)); g.add((n, RDF.type, TB.ColorSample))
+            g.add((n, RDFS.label, Literal(smp["name"]))); g.add((n, SDO.color, Literal(smp["hex"])))
+            g.add((n, TB.areaShare, Literal(f"{smp['share']:.4f}", datatype=XSD.decimal)))
+            g.add((n, COLOR_URI, WD[COLORS["basic"][smp["basic"]]]))
+        g.add((lv, DCTERMS.source, Literal(f"Colours taken automatically from the face materials of {c['source']} "
+                                          f"(area share of the painted surface, kept when >= {COLORS['minShare']:.1%}; tools/extract_colors.py)", lang="en")))
     if part:
         for lang, l in part.items():
             g.add((s, TB.part, Literal(l, lang=lang)))
@@ -274,6 +299,9 @@ def vocab():
         (TB.handEntered, RDF.Property, "hand-entered property", "手入力の項目", "A property whose values on this class were entered by hand (see dcterms:source), not copied from Wikidata."),
         (TB.livery, RDF.Property, "livery", "塗装", "The livery a 3D model reproduces."),
         (TB.liveryOf, RDF.Property, "livery of", "塗装の持ち主", "The operator whose livery this is."),
+        (TB.ColorSample, RDFS.Class, "Colour sample", "色見本", "One colour of a livery as painted on the 3D model, with its share of the painted surface."),
+        (TB.colorSample, RDF.Property, "colour sample", "色見本", "A colour of this livery, taken from the 3D model's faces."),
+        (TB.areaShare, RDF.Property, "area share", "面積の割合", "Share (0-1) of the painted surface of the 3D model that has this colour (glass, lamps, seams left out)."),
         (TB.part, RDF.Property, "part", "部分", "Which part of the vehicle the model is, when one vehicle is split into several models."),
         (TB.galleryGroup, RDF.Property, "gallery group", "ギャラリーの区分", "Group id used on the gallery page."),
     ]
@@ -288,6 +316,7 @@ def vocab():
 
 def main():
     wd = fetch("--refresh" in sys.argv)
+    add_labels(wd, COLORS["basic"].values())
     items = gallery_items()
     by_class = {}
     for mid, (cid, _, _) in MODELS.items():
