@@ -13,6 +13,19 @@
   },
   "@graph": [
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8553"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#0056B8",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery",
       "@type": "Livery",
       "colorSample": [
@@ -25,7 +38,7 @@
       ],
       "dcterms:source": {
         "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/mk5/skytrain_mk5.obj (area share of the painted surface, kept when >= 1.5%; tools/extract_colors.py)"
+        "@value": "Colours taken automatically from the face materials of skytrain/out/mk5/skytrain_mk5.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
       },
       "liveryOf": {
         "@id": "wd:Q1142140"
@@ -40,14 +53,22 @@
           "@value": "TransLink の塗装"
         }
       ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q1088"
-        },
-        {
-          "@id": "wd:Q23445"
-        }
-      ]
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1257"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5",
@@ -115,32 +136,6 @@
       "schema:value": {
         "@type": "xsd:decimal",
         "@value": "38.0"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8553"
-      },
-      "rdfs:label": "blue",
-      "schema:color": "#0056B8",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1257"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
       }
     }
   ]
