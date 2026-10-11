@@ -164,6 +164,6 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [x] サイト・点検・RDF が 2 つの表を読む（data.ts・check-dist.mjs・build_rdf.py。地図のページは _all.geojson を 1 つの層で描く）。build_rdf.py は手の 17 形式にしか路線を書いていなかった不具合も直した: tb:usedOn 12 → 2,490
 - [x] 線の取り出し（`python3 -u tools/osm_lines.py --qlever`）: 1,733 路線のうち 935 本で線、失敗 0。558 形式に線（実数は data-model.md「全路線を取り出した」）
 - [x] build・`npm test` 通過、map/ と Q432757 を目で確認（明暗の切り替えで線は残る。選んだ線が見分けにくかったので、ほかを薄くした）。ノートに記録
-- [ ] 本人に見せてからコミットと公開
+- [x] コミットと公開（main 4706d76、2026-10-10）
 - [ ] 小さな残り: 線の読み込み前に一覧を押すと地図が動かない
 - 未コミットの変更: 上のファイル一式・docs/rdf・docs/notes（data-model.md・todo.md）
