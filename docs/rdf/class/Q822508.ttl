@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -25,5 +26,82 @@ cls:Q822508 a skos:Concept,
         wd:Q597307 ;
     wdt:P176 wd:Q1817331 ;
     wdt:P279 wd:Q1567915 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line7> ;
+    tb:usedOn wd:Q2227173,
+        wd:Q56338257,
+        wd:Q63434696,
+        wd:Q63484785,
+        wd:Q66363934,
+        wd:Q68008478,
+        wd:Q68809133 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2227173#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2227173 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q56338257#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q56338257 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q63434696#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q63434696 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q63484785#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q63484785 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q66363934#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q66363934 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q68008478#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q68008478 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822508#line7> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q68809133#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q68809133 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2227173 rdfs:label "RE 17"@en .
+
+wd:Q56338257 rdfs:label "Poznań Metropolitan Railway"@en .
+
+wd:Q63434696 rdfs:label "RB 12 (Berlin/Brandenburg)"@en .
+
+wd:Q63484785 rdfs:label "RB 25 (Berlin/Brandenburg)"@en .
+
+wd:Q66363934 rdfs:label "RB 26 (Berlin/Brandenburg)"@en .
+
+wd:Q68008478 rdfs:label "RB 54"@en .
+
+wd:Q68809133 rdfs:label "RB 61"@en .
 

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,5 +19,71 @@ cls:Q568836 a skos:Concept,
     prov:wasDerivedFrom wd:Q568836 ;
     wdt:P176 wd:Q28668498 ;
     wdt:P279 wd:Q3407658 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line6> ;
+    tb:usedOn wd:Q112841862,
+        wd:Q1544435,
+        wd:Q1575695,
+        wd:Q252135,
+        wd:Q3400451,
+        wd:Q746258 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q112841862#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q112841862 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1544435#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1544435 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1575695#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1575695 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q252135#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q252135 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3400451#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3400451 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q568836#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q746258#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q746258 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q112841862 rdfs:label "ligne du tramway de Sassari"@en .
+
+wd:Q1544435 rdfs:label "Sassari Tram-train"@en .
+
+wd:Q1575695 rdfs:label "Trams in Naples"@en .
+
+wd:Q252135 rdfs:label "Athens Tram"@en .
+
+wd:Q3400451 rdfs:label "Xijiao line"@en .
+
+wd:Q746258 rdfs:label "trams in Florence"@en .
 

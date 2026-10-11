@@ -11,44 +11,77 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q113508057",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q113508057"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "ÖBB Nightjet New Generation"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q113508057"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "ÖBB Nightjet New Generation"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q83822"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q935330"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q113508057",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q113508057#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q113508057"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ÖBB Nightjet New Generation"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q113508057"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "ÖBB Nightjet New Generation"
+      },
+      "usedOn": {
+        "@id": "wd:Q28127371"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83822"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q935330"
+        },
+        {
+          "@id": "wd:Q753779"
+        },
+        {
+          "@id": "wd:Q123035621"
+        }
+      ]
     },
     {
-      "@id": "wd:Q753779"
+      "@id": "wd:Q28127371",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ÖBB Nightjet"
+      }
     },
     {
-      "@id": "wd:Q123035621"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q113508057#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q28127371#P3438"
+      },
+      "line": {
+        "@id": "wd:Q28127371"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

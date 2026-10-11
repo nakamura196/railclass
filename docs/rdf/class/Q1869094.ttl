@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,29 @@ cls:Q1869094 a skos:Concept,
     wdt:P176 wd:Q5182762 ;
     wdt:P279 wd:Q208502,
         wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1869094#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1869094#line2> ;
+    tb:usedOn wd:Q19891,
+        wd:Q831794 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1869094#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19891#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19891 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2012"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1869094#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q831794#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q831794 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2007"^^xsd:gYear .
+
+wd:Q19891 rdfs:label "Metropolitan line"@en .
+
+wd:Q831794 rdfs:label "East London Line"@en .
 

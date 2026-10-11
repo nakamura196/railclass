@@ -11,55 +11,88 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q21040792",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q21040792"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Avenio in Munich"
+      "@id": "wd:Q526596",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Munich Tramway"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ミュンヘン市電T形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q21040792"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Avenio in Munich"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q21040792",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q21040792#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q21040792"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Avenio in Munich"
+        },
+        {
+          "@language": "ja",
+          "@value": "ミュンヘン市電T形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q21040792"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Avenio in Munich"
+        },
+        {
+          "@language": "ja",
+          "@value": "ミュンヘン市電T形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q526596"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q81230"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "70"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q664902"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ミュンヘン市電T形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q21040792#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q526596#P3438"
+      },
+      "line": {
+        "@id": "wd:Q526596"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q81230"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "70"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q664902"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

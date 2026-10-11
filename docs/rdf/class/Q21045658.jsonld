@@ -11,61 +11,94 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q21045658",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q21045658"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "DBAG Class 182"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q21045658"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "DBAG Class 182"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q9322"
+      "@id": "wd:Q513745",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dresden S-Bahn"
+      }
     },
     {
-      "@id": "wd:Q18853"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q21045658#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q513745#P3438"
+      },
+      "line": {
+        "@id": "wd:Q513745"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q50300033"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q248035"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  },
-  "wdt:P930": [
-    {
-      "@id": "wd:Q106530439"
-    },
-    {
-      "@id": "wd:Q1415234"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q21045658",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q21045658#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q21045658"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "DBAG Class 182"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q21045658"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "DBAG Class 182"
+      },
+      "usedOn": {
+        "@id": "wd:Q513745"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q9322"
+        },
+        {
+          "@id": "wd:Q18853"
+        },
+        {
+          "@id": "wd:Q50300033"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q248035"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      },
+      "wdt:P930": [
+        {
+          "@id": "wd:Q106530439"
+        },
+        {
+          "@id": "wd:Q1415234"
+        }
+      ]
     }
   ]
 }

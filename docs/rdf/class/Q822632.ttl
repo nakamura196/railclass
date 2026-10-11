@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,60 @@ cls:Q822632 a skos:Concept,
     wdt:P176 wd:Q152517 ;
     wdt:P279 wd:Q483373 ;
     wdt:P729 "2009"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q822632#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q822632#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q822632#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q822632#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q822632#line5> ;
+    tb:usedOn wd:Q14544114,
+        wd:Q41498795,
+        wd:Q55074880,
+        wd:Q7521893,
+        wd:Q8080232 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822632#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q14544114#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q14544114 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822632#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q41498795#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q41498795 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822632#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q55074880#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q55074880 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822632#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7521893#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7521893 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q822632#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q8080232#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q8080232 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q14544114 rdfs:label "Haydarpaşa suburban"@en .
+
+wd:Q41498795 rdfs:label "Adaray"@en .
+
+wd:Q55074880 rdfs:label "Gaziray"@en .
+
+wd:Q7521893 rdfs:label "Başkentray"@en .
+
+wd:Q8080232 rdfs:label "Sirkeci suburban"@en .
 

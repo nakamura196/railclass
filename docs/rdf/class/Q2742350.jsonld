@@ -11,33 +11,128 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2742350",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2742350"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "ODEG ET 445"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q2742350"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "ODEG ET 445"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q145188"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q672992"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q112992594",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 8 (Berlin/Brandenburg)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2742350#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q15119419#P3438"
+      },
+      "line": {
+        "@id": "wd:Q15119419"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2742350#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q112992594#P3438"
+      },
+      "line": {
+        "@id": "wd:Q112992594"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2742350#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q138313400#P3438"
+      },
+      "line": {
+        "@id": "wd:Q138313400"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q15119419",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 2 (Berlin/Brandenburg)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2742350",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2742350#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2742350#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2742350#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2742350"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ODEG ET 445"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q2742350"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "ODEG ET 445"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q112992594"
+        },
+        {
+          "@id": "wd:Q138313400"
+        },
+        {
+          "@id": "wd:Q15119419"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q145188"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q672992"
+      }
+    },
+    {
+      "@id": "wd:Q138313400",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 20 (Berlin/Brandenburg)"
+      }
+    }
+  ]
 }

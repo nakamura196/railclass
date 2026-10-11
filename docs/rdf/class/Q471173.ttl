@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,27 @@ cls:Q471173 a skos:Concept,
     wdt:P176 wd:Q666703 ;
     wdt:P2052 100.0 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q471173#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q471173#line2> ;
+    tb:usedOn wd:Q105328486,
+        wd:Q676266 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q471173#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q105328486#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q105328486 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q471173#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q676266#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q676266 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q105328486 rdfs:label "S18"@en .
+
+wd:Q676266 rdfs:label "trams in Geneva"@en .
 

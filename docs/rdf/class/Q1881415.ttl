@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,27 @@ cls:Q1881415 a skos:Concept,
     wdt:P279 wd:Q2371310,
         wd:Q5063597 ;
     wdt:P930 wd:Q21855034 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1881415#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1881415#line2> ;
+    tb:usedOn wd:Q126808,
+        wd:Q2326636 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1881415#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q126808#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q126808 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1881415#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2326636#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2326636 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q126808 rdfs:label "trams in Kassel"@en .
+
+wd:Q2326636 rdfs:label "Erfurt Stadtbahn"@en .
 

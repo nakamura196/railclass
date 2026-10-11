@@ -11,34 +11,67 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487402",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1487402"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "GTZ8-B"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1487402"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "GTZ8-B"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q1601371"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "80"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q574488",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bielefeld Stadtbahn"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487402#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q574488#P3438"
+      },
+      "line": {
+        "@id": "wd:Q574488"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487402",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487402#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1487402"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "GTZ8-B"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1487402"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "GTZ8-B"
+      },
+      "usedOn": {
+        "@id": "wd:Q574488"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q1601371"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "80"
+      }
+    }
+  ]
 }

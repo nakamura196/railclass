@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,41 @@ cls:Q1869104 a skos:Concept,
     wdt:P137 wd:Q682520 ;
     wdt:P176 wd:Q3112198 ;
     wdt:P279 wd:Q269061 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line3> ;
+    tb:usedOn wd:Q210321,
+        wd:Q211265,
+        wd:Q211270 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q210321#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q210321 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2014"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q211265#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q211265 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2014"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q211270#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q211270 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2014"^^xsd:gYear .
+
+wd:Q210321 rdfs:label "Circle line"@en .
+
+wd:Q211265 rdfs:label "District line"@en .
+
+wd:Q211270 rdfs:label "Hammersmith & City line"@en .
 

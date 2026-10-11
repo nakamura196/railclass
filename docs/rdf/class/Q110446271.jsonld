@@ -11,61 +11,127 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110446271",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q110446271"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "BLS RABe 528"
+      "@id": "wd:Q116053240",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IR 66"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "BLS AG RABe528形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q110446271"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "BLS RABe 528"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110446271",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110446271#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110446271#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q110446271"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "BLS RABe 528"
+        },
+        {
+          "@language": "ja",
+          "@value": "BLS AG RABe528形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q110446271"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "BLS RABe 528"
+        },
+        {
+          "@language": "ja",
+          "@value": "BLS AG RABe528形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q116053240"
+        },
+        {
+          "@id": "wd:Q137386184"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q246824"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q39"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q1415234"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "BLS AG RABe528形電車"
+      "@id": "wd:Q137386184",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IR 56"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110446271#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q116053240#P3438"
+      },
+      "line": {
+        "@id": "wd:Q116053240"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110446271#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q137386184#P3438"
+      },
+      "line": {
+        "@id": "wd:Q137386184"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q246824"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q39"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2021"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q1415234"
-  }
+  ]
 }

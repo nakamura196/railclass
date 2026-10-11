@@ -11,50 +11,145 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q87714334",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q87714334"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Stadler Flirt3XL"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q87714334"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Stadler Flirt3XL"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q18853"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q76883133#P3438"
+      },
+      "line": {
+        "@id": "wd:Q76883133"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q2521737"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q481509#P3438"
+      },
+      "line": {
+        "@id": "wd:Q481509"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q47004906"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q66912703#P3438"
+      },
+      "line": {
+        "@id": "wd:Q66912703"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q64212458"
+      "@id": "wd:Q66912703",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 40"
+      }
     },
     {
-      "@id": "wd:Q79876049"
+      "@id": "wd:Q76883133",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 49"
+      }
+    },
+    {
+      "@id": "wd:Q481509",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rhine-Ruhr S-Bahn"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q87714334",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q87714334"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Stadler Flirt3XL"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q87714334"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Stadler Flirt3XL"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q481509"
+        },
+        {
+          "@id": "wd:Q66912703"
+        },
+        {
+          "@id": "wd:Q76883133"
+        }
+      ],
+      "wdt:P137": [
+        {
+          "@id": "wd:Q18853"
+        },
+        {
+          "@id": "wd:Q2521737"
+        },
+        {
+          "@id": "wd:Q47004906"
+        },
+        {
+          "@id": "wd:Q64212458"
+        },
+        {
+          "@id": "wd:Q79876049"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q87714348"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q87714348"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,27 @@ cls:Q1472045 a skos:Concept,
     wdt:P729 "1999"^^xsd:gYear ;
     wdt:P930 wd:Q106530439,
         wd:Q1415234 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1472045#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1472045#line2> ;
+    tb:usedOn wd:Q125350160,
+        wd:Q2448871 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1472045#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q125350160#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q125350160 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1472045#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2448871#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2448871 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q125350160 rdfs:label "Railjet 1"@en .
+
+wd:Q2448871 rdfs:label "Transalpin"@en .
 

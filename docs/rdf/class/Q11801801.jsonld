@@ -11,58 +11,91 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11801801",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q11801801"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Pesa 218M"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q11801801"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Pesa 218M"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q11741120"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11801801#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q112600701#P3438"
+      },
+      "line": {
+        "@id": "wd:Q112600701"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q1139703"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11801801",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11801801#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q11801801"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Pesa 218M"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q11801801"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Pesa 218M"
+      },
+      "usedOn": {
+        "@id": "wd:Q112600701"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q11741120"
+        },
+        {
+          "@id": "wd:Q1139703"
+        },
+        {
+          "@id": "wd:Q324614"
+        },
+        {
+          "@id": "wd:Q597307"
+        },
+        {
+          "@id": "wd:Q1478985"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q36"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q1817331"
+        },
+        {
+          "@id": "wd:Q9383703"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
     },
     {
-      "@id": "wd:Q324614"
-    },
-    {
-      "@id": "wd:Q597307"
-    },
-    {
-      "@id": "wd:Q1478985"
+      "@id": "wd:Q112600701",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 92 (Poland / Germany)"
+      }
     }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q36"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q1817331"
-    },
-    {
-      "@id": "wd:Q9383703"
-    }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -24,5 +25,29 @@ cls:Q613769 a skos:Concept,
         wd:Q3177971 ;
     wdt:P2052 70.0 ;
     wdt:P279 wd:Q108875699 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q613769#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q613769#line2> ;
+    tb:usedOn wd:Q13224,
+        wd:Q50743 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q613769#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q13224#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q13224 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2000"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q613769#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q50743#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q50743 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2012"^^xsd:gYear .
+
+wd:Q13224 rdfs:label "Paris Métro Line 1"@en .
+
+wd:Q50743 rdfs:label "Paris Métro Line 4"@en .
 

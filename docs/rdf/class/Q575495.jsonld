@@ -11,52 +11,85 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q575495",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q575495"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "ÖBB bilevel rail car"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q575495"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "ÖBB bilevel rail car"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q83822"
+      "@id": "wd:Q694029",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "City Airport Train"
+      }
     },
     {
-      "@id": "wd:Q113816797"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q40"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q668355"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q935330"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q575495#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q694029#P3438"
+      },
+      "line": {
+        "@id": "wd:Q694029"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q1243337"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q575495",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q575495#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q575495"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ÖBB bilevel rail car"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q575495"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "ÖBB bilevel rail car"
+      },
+      "usedOn": {
+        "@id": "wd:Q694029"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q83822"
+        },
+        {
+          "@id": "wd:Q113816797"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q40"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q668355"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q935330"
+        },
+        {
+          "@id": "wd:Q1243337"
+        }
+      ]
     }
   ]
 }

@@ -11,47 +11,80 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3854648",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3854648"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "AnsaldoBreda Meneghino"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q3854648"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "AnsaldoBreda Meneghino"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q381955"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q38"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q568840"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3854648",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3854648#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3854648"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "AnsaldoBreda Meneghino"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q3854648"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "AnsaldoBreda Meneghino"
+      },
+      "usedOn": {
+        "@id": "wd:Q2400801"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q381955"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q38"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q568840"
+        },
+        {
+          "@id": "wd:Q3072845"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     },
     {
-      "@id": "wd:Q3072845"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3854648#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2400801#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2400801"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q2400801",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Milan Metro Line 1"
+      }
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

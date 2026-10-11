@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -24,5 +25,93 @@ cls:Q2975712 a skos:Concept,
     wdt:P2052 161.0 ;
     wdt:P279 wd:Q3959904 ;
     wdt:P729 "2003"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line7>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line8> ;
+    tb:usedOn wd:Q5051906,
+        wd:Q5191309,
+        wd:Q5383996,
+        wd:Q7007887,
+        wd:Q7305911,
+        wd:Q7650289,
+        wd:Q7688392,
+        wd:Q787651 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5051906#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5051906 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5191309#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5191309 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5383996#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5383996 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7007887#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7007887 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7305911#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7305911 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7650289#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7650289 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line7> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7688392#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7688392 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975712#line8> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q787651#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q787651 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5051906 rdfs:label "Caterham Line"@en .
+
+wd:Q5191309 rdfs:label "Crystal Palace line"@en .
+
+wd:Q5383996 rdfs:label "Epsom Downs Branch"@en .
+
+wd:Q7007887 rdfs:label "New Guildford Line"@en .
+
+wd:Q7305911 rdfs:label "Redhill–Tonbridge line"@en .
+
+wd:Q7650289 rdfs:label "Sutton Loop Line"@en .
+
+wd:Q7688392 rdfs:label "Tattenham Corner Line"@en .
+
+wd:Q787651 rdfs:label "West London Line"@en .
 

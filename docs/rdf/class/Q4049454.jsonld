@@ -11,63 +11,96 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4049454",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4049454"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Siemens SD-100 and SD-160"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4049454#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1146444#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1146444"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "シーメンスSD-100形・SD-160形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q4049454"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Siemens SD-100 and SD-160"
+      "@id": "wd:Q1146444",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RTD Light Rail"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "シーメンスSD-100形・SD-160形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4049454",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4049454#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4049454"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Siemens SD-100 and SD-160"
+        },
+        {
+          "@language": "ja",
+          "@value": "シーメンスSD-100形・SD-160形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q4049454"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Siemens SD-100 and SD-160"
+        },
+        {
+          "@language": "ja",
+          "@value": "シーメンスSD-100形・SD-160形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q1146444"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q3048058"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q81230"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "80"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q15825863"
+        },
+        {
+          "@id": "wd:Q3407658"
+        }
+      ],
+      "wdt:P930": {
+        "@id": "wd:Q21855034"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q3048058"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q81230"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "80"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q15825863"
-    },
-    {
-      "@id": "wd:Q3407658"
-    }
-  ],
-  "wdt:P930": {
-    "@id": "wd:Q21855034"
-  }
+  ]
 }

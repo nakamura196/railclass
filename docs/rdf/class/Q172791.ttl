@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,38 @@ cls:Q172791 a skos:Concept,
     wdt:P2052 210.0 ;
     wdt:P279 wd:Q13402959,
         wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q172791#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q172791#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q172791#line3> ;
+    tb:usedOn wd:Q115256256,
+        wd:Q115256257,
+        wd:Q980395 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q172791#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q115256256#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q115256256 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q172791#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q115256257#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q115256257 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q172791#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q980395#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q980395 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q115256256 rdfs:label "FLY1 Drammen–Oslo Airport"@en .
+
+wd:Q115256257 rdfs:label "FLY2 Stabekk–Oslo Airport"@en .
+
+wd:Q980395 rdfs:label "Gardermoen Line"@en .
 

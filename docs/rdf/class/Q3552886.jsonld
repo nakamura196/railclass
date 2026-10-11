@@ -11,59 +11,129 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3552886",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3552886"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Taipei Metro VAL 256"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3552886#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2627597#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2627597"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1996"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "台北捷運VAL256型電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q3552886"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Taipei Metro VAL 256"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3552886#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q707644#P3438"
+      },
+      "line": {
+        "@id": "wd:Q707644"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "台北捷運VAL256型電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q906942"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q714810"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q309084"
+      "@id": "wd:Q707644",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Wenhu line"
+      }
     },
     {
-      "@id": "wd:Q35982"
+      "@id": "wd:Q2627597",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Jacksonville Skyway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3552886",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3552886#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3552886#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3552886"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Taipei Metro VAL 256"
+        },
+        {
+          "@language": "ja",
+          "@value": "台北捷運VAL256型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q3552886"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Taipei Metro VAL 256"
+        },
+        {
+          "@language": "ja",
+          "@value": "台北捷運VAL256型電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q2627597"
+        },
+        {
+          "@id": "wd:Q707644"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q906942"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q714810"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q309084"
+        },
+        {
+          "@id": "wd:Q35982"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

@@ -11,71 +11,166 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3721997"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "DBAG Class 424"
+      "@id": "wd:Q256524",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Munich S-Bahn"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ドイツ鉄道424形電車"
+      "@id": "wd:Q481504",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hanover S-Bahn"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3721997"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "DBAG Class 424"
+        },
+        {
+          "@language": "ja",
+          "@value": "ドイツ鉄道424形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q3721997"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "DBAG Class 424"
+        },
+        {
+          "@language": "ja",
+          "@value": "ドイツ鉄道424形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q256524"
+        },
+        {
+          "@id": "wd:Q481504"
+        },
+        {
+          "@id": "wd:Q95709"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q256524"
+        },
+        {
+          "@id": "wd:Q9322"
+        }
+      ],
+      "wdt:P176": [
+        {
+          "@id": "wd:Q333498"
+        },
+        {
+          "@id": "wd:Q378767"
+        },
+        {
+          "@id": "wd:Q391895"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "140"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q1415234"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q481504#P3438"
+      },
+      "line": {
+        "@id": "wd:Q481504"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q95709",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cologne S-Bahn"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q256524#P3438"
+      },
+      "line": {
+        "@id": "wd:Q256524"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q95709#P3438"
+      },
+      "line": {
+        "@id": "wd:Q95709"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q3721997"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "DBAG Class 424"
-    },
-    {
-      "@language": "ja",
-      "@value": "ドイツ鉄道424形電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q256524"
-    },
-    {
-      "@id": "wd:Q9322"
-    }
-  ],
-  "wdt:P176": [
-    {
-      "@id": "wd:Q333498"
-    },
-    {
-      "@id": "wd:Q378767"
-    },
-    {
-      "@id": "wd:Q391895"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "140"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q1415234"
-  }
+  ]
 }

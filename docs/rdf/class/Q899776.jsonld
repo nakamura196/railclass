@@ -11,60 +11,134 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q899776",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q899776"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "SNCF CC 6500"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q899776#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2762507#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2762507"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1990"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "CC6500形"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q899776"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "SNCF CC 6500"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q899776#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3226461#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3226461"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1978"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "CC6500形"
+      "@id": "wd:Q3226461",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Le Rhodanien"
+      }
+    },
+    {
+      "@id": "wd:Q2762507",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Aquitaine"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q899776",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q899776#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q899776#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q899776"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SNCF CC 6500"
+        },
+        {
+          "@language": "ja",
+          "@value": "CC6500形"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q899776"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SNCF CC 6500"
+        },
+        {
+          "@language": "ja",
+          "@value": "CC6500形"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q2762507"
+        },
+        {
+          "@id": "wd:Q3226461"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q13646"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q142"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q25414300"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q21253457"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q13646"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q142"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q25414300"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q21253457"
-  }
+  ]
 }

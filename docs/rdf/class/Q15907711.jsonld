@@ -11,53 +11,119 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15907711",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q15907711"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Siemens Modular Metro (Kaohsiung)"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15907711#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7304504#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7304504"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "高雄捷運高運量電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q15907711"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Siemens Modular Metro (Kaohsiung)"
+      "@id": "wd:Q7099668",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Orange Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "高雄捷運高運量電車"
-    }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q6366134"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15907711#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7099668#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7099668"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q4102249"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15907711",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15907711#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15907711#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q15907711"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Siemens Modular Metro (Kaohsiung)"
+        },
+        {
+          "@language": "ja",
+          "@value": "高雄捷運高運量電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q15907711"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Siemens Modular Metro (Kaohsiung)"
+        },
+        {
+          "@language": "ja",
+          "@value": "高雄捷運高運量電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q7099668"
+        },
+        {
+          "@id": "wd:Q7304504"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q6366134"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q4102249"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q7304504",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Red line"
+      }
     }
   ]
 }

@@ -11,55 +11,150 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97195555",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q97195555"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "FCG class 331"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q97195555"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "FCG class 331"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q3319112"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q83819"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q29"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "120"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q689485"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q135397325#P3438"
+      },
+      "line": {
+        "@id": "wd:Q135397325"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q1567915"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q135403421#P3438"
+      },
+      "line": {
+        "@id": "wd:Q135403421"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q8344094",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rodalia de Lleida"
+      }
+    },
+    {
+      "@id": "wd:Q135403421",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RL1 line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97195555",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q97195555"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "FCG class 331"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q97195555"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "FCG class 331"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q135397325"
+        },
+        {
+          "@id": "wd:Q135403421"
+        },
+        {
+          "@id": "wd:Q8344094"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q3319112"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83819"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q29"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "120"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q689485"
+        },
+        {
+          "@id": "wd:Q1567915"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      }
+    },
+    {
+      "@id": "wd:Q135397325",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RL2 line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q8344094#P3438"
+      },
+      "line": {
+        "@id": "wd:Q8344094"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2016"
-  }
+  ]
 }

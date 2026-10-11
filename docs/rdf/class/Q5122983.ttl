@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,60 @@ cls:Q5122983 a skos:Concept,
     wdt:P137 wd:Q7660181 ;
     wdt:P176 wd:Q7864623 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q5122983#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122983#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122983#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122983#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122983#line5> ;
+    tb:usedOn wd:Q5187750,
+        wd:Q5330503,
+        wd:Q63653326,
+        wd:Q7660181,
+        wd:Q979843 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5122983#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5187750#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5187750 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5122983#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5330503#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5330503 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5122983#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q63653326#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q63653326 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5122983#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7660181#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7660181 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5122983#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q979843#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q979843 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5187750 rdfs:label "Cronulla railway line"@en .
+
+wd:Q5330503 rdfs:label "Eastern Suburbs & Illawarra Line"@en .
+
+wd:Q63653326 rdfs:label "Northern Line"@en .
+
+wd:Q979843 rdfs:label "North Shore & Western Line"@en .
+
+wd:Q7660181 rdfs:label "Sydney Trains"@en .
 

@@ -11,40 +11,73 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1565859",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1565859"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "HRB R IIIc.4"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1565859"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "HRB R IIIc.4"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q10676739"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "20"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q785745"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q26212271"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1565859#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q139677808#P3438"
+      },
+      "line": {
+        "@id": "wd:Q139677808"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q139677808",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Calea ferată militară Vatra Dornei–Broșteni"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1565859",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1565859#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1565859"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "HRB R IIIc.4"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1565859"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "HRB R IIIc.4"
+      },
+      "usedOn": {
+        "@id": "wd:Q139677808"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q10676739"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "20"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q785745"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q26212271"
+      }
+    }
+  ]
 }

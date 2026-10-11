@@ -11,62 +11,95 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30951043",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q30951043"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Taipei Metro C610"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30951043",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30951043#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q30951043"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Taipei Metro C610"
+        },
+        {
+          "@language": "ja",
+          "@value": "台北捷運環状線電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q30951043"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Taipei Metro C610"
+        },
+        {
+          "@language": "ja",
+          "@value": "台北捷運環状線電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q5971413"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q11411921"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q28668498"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q4102249"
+        },
+        {
+          "@id": "wd:Q2408053"
+        }
+      ],
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "台北捷運環状線電車"
+      "@id": "wd:Q5971413",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Circular line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30951043#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5971413#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5971413"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q30951043"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Taipei Metro C610"
-    },
-    {
-      "@language": "ja",
-      "@value": "台北捷運環状線電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q11411921"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q28668498"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
-    },
-    {
-      "@id": "wd:Q4102249"
-    },
-    {
-      "@id": "wd:Q2408053"
-    }
-  ],
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

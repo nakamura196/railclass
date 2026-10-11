@@ -11,91 +11,157 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q665023",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q665023"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 317"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q665023#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5442954#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5442954"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄クラス317電車"
+      "@id": "wd:Q746021",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "London Overground"
+      }
+    },
+    {
+      "@id": "wd:Q5442954",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Fen line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q665023#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q746021#P3438"
+      },
+      "line": {
+        "@id": "wd:Q746021"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q665023",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q665023#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q665023#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q665023"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 317"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄クラス317電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q665023"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 317"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄クラス317電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q5442954"
+        },
+        {
+          "@id": "wd:Q746021"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q286262"
+        },
+        {
+          "@id": "wd:Q737478"
+        },
+        {
+          "@id": "wd:Q14500773"
+        },
+        {
+          "@id": "wd:Q6670591"
+        },
+        {
+          "@id": "wd:Q12859175"
+        },
+        {
+          "@id": "wd:Q18737011"
+        },
+        {
+          "@id": "wd:Q1967136"
+        },
+        {
+          "@id": "wd:Q2510370"
+        },
+        {
+          "@id": "wd:Q2707736"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q18160582"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "161"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1983"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q665023"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 317"
-    },
-    {
-      "@language": "ja",
-      "@value": "イギリス国鉄クラス317電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q286262"
-    },
-    {
-      "@id": "wd:Q737478"
-    },
-    {
-      "@id": "wd:Q14500773"
-    },
-    {
-      "@id": "wd:Q6670591"
-    },
-    {
-      "@id": "wd:Q12859175"
-    },
-    {
-      "@id": "wd:Q18737011"
-    },
-    {
-      "@id": "wd:Q1967136"
-    },
-    {
-      "@id": "wd:Q2510370"
-    },
-    {
-      "@id": "wd:Q2707736"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q18160582"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "161"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1983"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  ]
 }

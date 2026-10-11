@@ -11,30 +11,96 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30739607",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q30739607"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q30739607"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q13646"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q3959904"
+      "@id": "wd:Q123754045",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "A34 Strasbourg Wissembourg (Neustadt)"
+      }
     },
     {
-      "@id": "wd:Q28455463"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30739607",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30739607#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30739607#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q30739607"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q30739607"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q123754027"
+        },
+        {
+          "@id": "wd:Q123754045"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q13646"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q3959904"
+        },
+        {
+          "@id": "wd:Q28455463"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30739607#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q123754027#P3438"
+      },
+      "line": {
+        "@id": "wd:Q123754027"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30739607#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q123754045#P3438"
+      },
+      "line": {
+        "@id": "wd:Q123754045"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q123754027",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "A09 Strasbourg Lauterbourg Wörth"
+      }
     }
   ]
 }

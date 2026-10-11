@@ -11,74 +11,140 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529432",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4529432"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "ED4"
+      "@id": "wd:Q4073726",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Aeroexpress"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロシア鉄道ED4形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529432#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4207854#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4207854"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529432#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4073726#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4073726"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529432",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529432#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529432#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4529432"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "ED4"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロシア鉄道ED4形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q4529432"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ED4"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロシア鉄道ED4形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q4073726"
+        },
+        {
+          "@id": "wd:Q4207854"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1197451"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q660770"
+        },
+        {
+          "@id": "wd:Q923337"
+        },
+        {
+          "@id": "wd:Q25927159"
+        },
+        {
+          "@id": "wd:Q4504137"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q159"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q4157597"
+        },
+        {
+          "@id": "wd:Q1519572"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "130"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "wd:Q4207854",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kazanskoye line (Moscow Railway)"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q4529432"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "ED4"
-    },
-    {
-      "@language": "ja",
-      "@value": "ロシア鉄道ED4形電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1197451"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q660770"
-    },
-    {
-      "@id": "wd:Q923337"
-    },
-    {
-      "@id": "wd:Q25927159"
-    },
-    {
-      "@id": "wd:Q4504137"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q159"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q4157597"
-    },
-    {
-      "@id": "wd:Q1519572"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "130"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

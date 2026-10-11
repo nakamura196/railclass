@@ -11,42 +11,75 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432778",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q432778"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Alstom Prima"
+      "@id": "wd:Q7284244",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Railway electrification in Iran"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "Prima (機関車)"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q432778"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Alstom Prima"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432778",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432778#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q432778"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Alstom Prima"
+        },
+        {
+          "@language": "ja",
+          "@value": "Prima (機関車)"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q432778"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Alstom Prima"
+        },
+        {
+          "@language": "ja",
+          "@value": "Prima (機関車)"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q7284244"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q93301"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "Prima (機関車)"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432778#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7284244#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7284244"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q93301"
-  }
+  ]
 }

@@ -11,38 +11,104 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124515731",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q124515731"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Bombardier TRAXX P160 AC3"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q124515731"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Bombardier TRAXX P160 AC3"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q625151"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124515731#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q131633087#P3438"
+      },
+      "line": {
+        "@id": "wd:Q131633087"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q676771"
+      "@id": "wd:Q131633085",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 50"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124515731#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q131633085#P3438"
+      },
+      "line": {
+        "@id": "wd:Q131633085"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q131633087",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 51"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124515731",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124515731#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124515731#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q124515731"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bombardier TRAXX P160 AC3"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q124515731"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Bombardier TRAXX P160 AC3"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q131633085"
+        },
+        {
+          "@id": "wd:Q131633087"
+        }
+      ],
+      "wdt:P279": [
+        {
+          "@id": "wd:Q625151"
+        },
+        {
+          "@id": "wd:Q676771"
+        }
+      ],
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      }
     }
-  ],
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  }
+  ]
 }

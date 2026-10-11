@@ -11,43 +11,76 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120776927",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q120776927"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Solaris Tramino S109j"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q120776927"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Solaris Tramino S109j"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1686811"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q838369"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "70"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q780281"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120776927",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120776927#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q120776927"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Solaris Tramino S109j"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q120776927"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Solaris Tramino S109j"
+      },
+      "usedOn": {
+        "@id": "wd:Q320655"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1686811"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q838369"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "70"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q780281"
+      }
+    },
+    {
+      "@id": "wd:Q320655",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Jena"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120776927#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q320655#P3438"
+      },
+      "line": {
+        "@id": "wd:Q320655"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

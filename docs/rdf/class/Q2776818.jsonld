@@ -11,50 +11,116 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2776818",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2776818"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "SNCF Class Z 8800"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2776818#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q200906#P3438"
+      },
+      "line": {
+        "@id": "wd:Q200906"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "フランス国鉄Z8800形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q2776818"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "SNCF Class Z 8800"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2776818#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q93559#P3438"
+      },
+      "line": {
+        "@id": "wd:Q93559"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "フランス国鉄Z8800形電車"
-    }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q13646"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
+      "@id": "wd:Q200906",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RER C"
+      }
     },
     {
-      "@id": "wd:Q1243337"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2776818",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2776818#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2776818#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2776818"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SNCF Class Z 8800"
+        },
+        {
+          "@language": "ja",
+          "@value": "フランス国鉄Z8800形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q2776818"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SNCF Class Z 8800"
+        },
+        {
+          "@language": "ja",
+          "@value": "フランス国鉄Z8800形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q200906"
+        },
+        {
+          "@id": "wd:Q93559"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q13646"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q1243337"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q93559",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line U"
+      }
     }
   ]
 }

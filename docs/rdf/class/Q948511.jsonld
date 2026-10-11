@@ -11,51 +11,117 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q948511",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q948511"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "FS class ALn 668"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q948511#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q63522788#P3438"
+      },
+      "line": {
+        "@id": "wd:Q63522788"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ALn 668"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q948511"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "FS class ALn 668"
+      "@id": "wd:Q63522788",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Freccia del Gran Sasso"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ALn 668"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q948511#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2274335#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2274335"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q2274335",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cagliari metropolitan railway service"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q948511",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q948511#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q948511#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q948511"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "FS class ALn 668"
+        },
+        {
+          "@language": "ja",
+          "@value": "ALn 668"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q948511"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "FS class ALn 668"
+        },
+        {
+          "@language": "ja",
+          "@value": "ALn 668"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q2274335"
+        },
+        {
+          "@id": "wd:Q63522788"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83823"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q2738829"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q752392"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q83823"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q2738829"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q752392"
-  }
+  ]
 }

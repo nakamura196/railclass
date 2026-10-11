@@ -11,47 +11,113 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20856009",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q20856009"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Emepa Alerce"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q20856009"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Emepa Alerce"
-  },
-  "wdt:P1064": [
+  "@graph": [
     {
-      "@id": "wd:Q24609"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20856009#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q39081226#P3438"
+      },
+      "line": {
+        "@id": "wd:Q39081226"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q1493335"
+      "@id": "wd:Q39081226",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Salta Regional Service"
+      }
+    },
+    {
+      "@id": "wd:Q802144",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tren de las Sierras"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20856009",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20856009#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20856009#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q20856009"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Emepa Alerce"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q20856009"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Emepa Alerce"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q39081226"
+        },
+        {
+          "@id": "wd:Q802144"
+        }
+      ],
+      "wdt:P1064": [
+        {
+          "@id": "wd:Q24609"
+        },
+        {
+          "@id": "wd:Q1493335"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q6116255"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q414"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q19902982"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20856009#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q802144#P3438"
+      },
+      "line": {
+        "@id": "wd:Q802144"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q6116255"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q414"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q19902982"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  ]
 }

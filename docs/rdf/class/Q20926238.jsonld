@@ -11,49 +11,144 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20926238",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q20926238"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "TCDD E32000"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q20926238"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "TCDD E32000"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q28220824"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q43"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q152517"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2012"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q111263037#P3438"
+      },
+      "line": {
+        "@id": "wd:Q111263037"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q497844",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Marmaray"
+      }
+    },
+    {
+      "@id": "wd:Q111263037",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sirkeci-Kazlıçeşme Rail System"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q497844#P3438"
+      },
+      "line": {
+        "@id": "wd:Q497844"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q112118212#P3438"
+      },
+      "line": {
+        "@id": "wd:Q112118212"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q112118212",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Halkalı-Bahçeşehir Rail System"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20926238",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q20926238"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "TCDD E32000"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q20926238"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "TCDD E32000"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q111263037"
+        },
+        {
+          "@id": "wd:Q112118212"
+        },
+        {
+          "@id": "wd:Q497844"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q28220824"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q43"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q152517"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2012"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
+    }
+  ]
 }

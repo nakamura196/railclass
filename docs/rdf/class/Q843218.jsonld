@@ -11,43 +11,76 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q843218",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q843218"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "SJ X12"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q843218"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "SJ X12"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q52912"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q52825"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "160"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q10711725",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Uven-tåget"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q843218",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q843218#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q843218"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SJ X12"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q843218"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "SJ X12"
+      },
+      "usedOn": {
+        "@id": "wd:Q10711725"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q52912"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q52825"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "160"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q843218#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10711725#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10711725"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

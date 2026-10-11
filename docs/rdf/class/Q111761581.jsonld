@@ -11,36 +11,69 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q111761581",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q111761581"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "UT-01"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q111761581"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "UT-01"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q96"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q838212"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q56346322",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 1 of the Tren Suburbano"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q111761581#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q56346322#P3438"
+      },
+      "line": {
+        "@id": "wd:Q56346322"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q111761581",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q111761581#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q111761581"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "UT-01"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q111761581"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "UT-01"
+      },
+      "usedOn": {
+        "@id": "wd:Q56346322"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q96"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q838212"
+      }
+    }
+  ]
 }

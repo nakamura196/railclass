@@ -11,64 +11,97 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11153011",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q11153011"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Bombardier MOVIA 456 (Shenzhen Metro)"
+      "@id": "wd:Q842103",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 1"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "深圳地下鉄MOVIA電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q11153011"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Bombardier MOVIA 456 (Shenzhen Metro)"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11153011",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11153011#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q11153011"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Bombardier MOVIA 456 (Shenzhen Metro)"
+        },
+        {
+          "@language": "ja",
+          "@value": "深圳地下鉄MOVIA電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q11153011"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Bombardier MOVIA 456 (Shenzhen Metro)"
+        },
+        {
+          "@language": "ja",
+          "@value": "深圳地下鉄MOVIA電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q842103"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q11153052"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q688893"
+        },
+        {
+          "@id": "wd:Q15914660"
+        }
+      ],
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q2913359"
+        }
+      ],
+      "wdt:P930": {
+        "@id": "wd:Q21253457"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "深圳地下鉄MOVIA電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11153011#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q842103#P3438"
+      },
+      "line": {
+        "@id": "wd:Q842103"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q11153052"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q688893"
-    },
-    {
-      "@id": "wd:Q15914660"
-    }
-  ],
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
-    },
-    {
-      "@id": "wd:Q2913359"
-    }
-  ],
-  "wdt:P930": {
-    "@id": "wd:Q21253457"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -36,5 +37,72 @@ cls:Q3303833 a skos:Concept,
     wdt:P2052 161.0 ;
     wdt:P279 wd:Q3303940 ;
     wdt:P729 "1999"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line6> ;
+    tb:usedOn wd:Q1617936,
+        wd:Q1903208,
+        wd:Q2033221,
+        wd:Q5447355,
+        wd:Q6670303,
+        wd:Q7054182 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1617936#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1617936 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1903208#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1903208 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2033221#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2033221 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2017"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5447355#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5447355 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6670303#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6670303 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303833#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7054182#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7054182 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1617936 rdfs:label "Highland Main Line"@en .
+
+wd:Q1903208 rdfs:label "Aberdeen-Inverness line"@en .
+
+wd:Q2033221 rdfs:label "Glasgow to Edinburgh via Falkirk Line"@en .
+
+wd:Q5447355 rdfs:label "Fife Circle Line"@en .
+
+wd:Q6670303 rdfs:label "London Crosslink"@en .
+
+wd:Q7054182 rdfs:label "North Berwick Line"@en .
 

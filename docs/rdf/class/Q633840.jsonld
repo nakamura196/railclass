@@ -11,42 +11,75 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q633840",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q633840"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "SJ X14"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q633840"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "SJ X14"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q52912"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q52825"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q1415234"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q10549741",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Krösatågen"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q633840#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10549741#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10549741"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q633840",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q633840#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q633840"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SJ X14"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q633840"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "SJ X14"
+      },
+      "usedOn": {
+        "@id": "wd:Q10549741"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q52912"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q52825"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q1415234"
+      }
+    }
+  ]
 }

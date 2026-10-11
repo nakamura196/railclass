@@ -11,81 +11,114 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q672390",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q672390"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "SBB-CFF-FFS Re 420"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q672390#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q111523342#P3438"
+      },
+      "line": {
+        "@id": "wd:Q111523342"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "スイス国鉄Re420形電気機関車"
+      "@id": "wd:Q111523342",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "S20 (Zurich)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q672390",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q672390#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q672390"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SBB-CFF-FFS Re 420"
+        },
+        {
+          "@language": "ja",
+          "@value": "スイス国鉄Re420形電気機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q672390"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SBB-CFF-FFS Re 420"
+        },
+        {
+          "@language": "ja",
+          "@value": "スイス国鉄Re420形電気機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q111523342"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q83835"
+        },
+        {
+          "@id": "wd:Q376511"
+        }
+      ],
+      "wdt:P176": [
+        {
+          "@id": "wd:Q664420"
+        },
+        {
+          "@id": "wd:Q669606"
+        },
+        {
+          "@id": "wd:Q671488"
+        },
+        {
+          "@id": "wd:Q1906878"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "140"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1964"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q1415234"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q672390"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "SBB-CFF-FFS Re 420"
-    },
-    {
-      "@language": "ja",
-      "@value": "スイス国鉄Re420形電気機関車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q83835"
-    },
-    {
-      "@id": "wd:Q376511"
-    }
-  ],
-  "wdt:P176": [
-    {
-      "@id": "wd:Q664420"
-    },
-    {
-      "@id": "wd:Q669606"
-    },
-    {
-      "@id": "wd:Q671488"
-    },
-    {
-      "@id": "wd:Q1906878"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "140"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1964"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q1415234"
-  }
+  ]
 }

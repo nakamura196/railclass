@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -25,5 +26,49 @@ cls:Q575754 a skos:Concept,
     wdt:P17 wd:Q16 ;
     wdt:P176 wd:Q688893 ;
     wdt:P279 wd:Q1243337 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q575754#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q575754#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q575754#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q575754#line4> ;
+    tb:usedOn wd:Q105076572,
+        wd:Q123179018,
+        wd:Q846655,
+        wd:Q88627355 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q575754#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q105076572#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q105076572 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q575754#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q123179018#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q123179018 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q575754#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q846655#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q846655 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q575754#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q88627355#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q88627355 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q105076572 rdfs:label "RE 2"@en .
+
+wd:Q123179018 rdfs:label "RE 3"@en .
+
+wd:Q88627355 rdfs:label "RE 2 (Baden-Württemberg)"@en .
+
+wd:Q846655 rdfs:label "Israel Railways"@en .
 

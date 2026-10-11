@@ -11,38 +11,71 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q115936354",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q115936354"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Prosper VLT"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q115936354"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Prosper VLT"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q115935889"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q15825863"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q115936354",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q115936354#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q115936354"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Prosper VLT"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q115936354"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Prosper VLT"
+      },
+      "usedOn": {
+        "@id": "wd:Q6103954"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q115935889"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q15825863"
+        },
+        {
+          "@id": "wd:Q1567915"
+        }
+      ]
     },
     {
-      "@id": "wd:Q1567915"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q115936354#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6103954#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6103954"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q6103954",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tren Talca-Constitución"
+      }
     }
   ]
 }

@@ -11,88 +11,125 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q388564",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q388564"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "DB Class 103"
+      "@id": "wd:Q2559822",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rembrandt"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "西ドイツ国鉄103型電気機関車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q388564",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q388564#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q388564"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "DB Class 103"
+        },
+        {
+          "@language": "ja",
+          "@value": "西ドイツ国鉄103型電気機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q388564"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "DB Class 103"
+        },
+        {
+          "@language": "ja",
+          "@value": "西ドイツ国鉄103型電気機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q2559822"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q687175"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q81230"
+        },
+        {
+          "@id": "wd:Q664420"
+        },
+        {
+          "@id": "wd:Q163580"
+        },
+        {
+          "@id": "wd:Q158276"
+        },
+        {
+          "@id": "wd:Q1868564"
+        },
+        {
+          "@id": "wd:Q466871"
+        },
+        {
+          "@id": "wd:Q819150"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "200"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1022125"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1965"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q1415234"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q388564#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2559822#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2559822"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2002"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q388564"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "DB Class 103"
-    },
-    {
-      "@language": "ja",
-      "@value": "西ドイツ国鉄103型電気機関車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q687175"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q81230"
-    },
-    {
-      "@id": "wd:Q664420"
-    },
-    {
-      "@id": "wd:Q163580"
-    },
-    {
-      "@id": "wd:Q158276"
-    },
-    {
-      "@id": "wd:Q1868564"
-    },
-    {
-      "@id": "wd:Q466871"
-    },
-    {
-      "@id": "wd:Q819150"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "200"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1022125"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1965"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q1415234"
-  }
+  ]
 }

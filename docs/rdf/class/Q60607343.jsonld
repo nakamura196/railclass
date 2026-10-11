@@ -11,32 +11,98 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q60607343",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q60607343"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q60607343"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "65"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q60607343#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q107139062#P3438"
+      },
+      "line": {
+        "@id": "wd:Q107139062"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q60607343#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q107617397#P3438"
+      },
+      "line": {
+        "@id": "wd:Q107617397"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q107139062",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Wittlager Kreisbahn"
+      }
+    },
+    {
+      "@id": "wd:Q107617397",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Damme–Holzhausen-Heddinghausen railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q60607343",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q60607343#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q60607343#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q60607343"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q60607343"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q107139062"
+        },
+        {
+          "@id": "wd:Q107617397"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "65"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
+    }
+  ]
 }

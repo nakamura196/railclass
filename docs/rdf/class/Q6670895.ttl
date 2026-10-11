@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -16,5 +17,29 @@ cls:Q6670895 a skos:Concept,
     prov:wasDerivedFrom wd:Q6670895 ;
     wdt:P176 wd:Q2904527 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q6670895#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q6670895#line2> ;
+    tb:usedOn wd:Q207689,
+        wd:Q214793 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q6670895#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q207689#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q207689 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1979"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q6670895#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q214793#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q214793 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1993"^^xsd:gYear .
+
+wd:Q207689 rdfs:label "Piccadilly line"@en .
+
+wd:Q214793 rdfs:label "Northern line"@en .
 

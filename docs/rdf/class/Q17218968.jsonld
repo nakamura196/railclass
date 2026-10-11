@@ -11,62 +11,157 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17218968",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q17218968"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Taipei Metro C371"
+      "@id": "wd:Q697192",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Songshan–Xindian line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "台北捷運371型電車"
+      "@id": "wd:Q8044505",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Xinbeitou line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q8044505#P3438"
+      },
+      "line": {
+        "@id": "wd:Q8044505"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q697192#P3438"
+      },
+      "line": {
+        "@id": "wd:Q697192"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17218968",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q17218968"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Taipei Metro C371"
+        },
+        {
+          "@language": "ja",
+          "@value": "台北捷運371型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q17218968"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Taipei Metro C371"
+        },
+        {
+          "@language": "ja",
+          "@value": "台北捷運371型電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q6141590"
+        },
+        {
+          "@id": "wd:Q697192"
+        },
+        {
+          "@id": "wd:Q8044505"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q714810"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q682174"
+        },
+        {
+          "@id": "wd:Q6379763"
+        },
+        {
+          "@id": "wd:Q11412031"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6141590#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6141590"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q6141590",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Zhonghe–Xinlu line"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q17218968"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Taipei Metro C371"
-    },
-    {
-      "@language": "ja",
-      "@value": "台北捷運371型電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q714810"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q682174"
-    },
-    {
-      "@id": "wd:Q6379763"
-    },
-    {
-      "@id": "wd:Q11412031"
-    }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

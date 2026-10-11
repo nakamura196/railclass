@@ -11,46 +11,79 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7875993",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7875993"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Renfe class 436"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q7875993"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Renfe class 436"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q22670895"
+      "@id": "wd:Q685485",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cercanías Bilbao"
+      }
     },
     {
-      "@id": "wd:Q2476154"
-    }
-  ],
-  "wdt:P176": [
-    {
-      "@id": "wd:Q81230"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7875993#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q685485#P3438"
+      },
+      "line": {
+        "@id": "wd:Q685485"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q1969241"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7875993",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7875993#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7875993"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Renfe class 436"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q7875993"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Renfe class 436"
+      },
+      "usedOn": {
+        "@id": "wd:Q685485"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q22670895"
+        },
+        {
+          "@id": "wd:Q2476154"
+        }
+      ],
+      "wdt:P176": [
+        {
+          "@id": "wd:Q81230"
+        },
+        {
+          "@id": "wd:Q1969241"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

@@ -11,65 +11,98 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q288991",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q288991"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "TGV Sud-Est"
+      "@id": "wd:Q585219",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "LGV Sud-Est"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "TGV Sud-Est"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q288991"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "TGV Sud-Est"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q288991",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q288991#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q288991"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "TGV Sud-Est"
+        },
+        {
+          "@language": "ja",
+          "@value": "TGV Sud-Est"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q288991"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "TGV Sud-Est"
+        },
+        {
+          "@language": "ja",
+          "@value": "TGV Sud-Est"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q585219"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q13646"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q309084"
+        },
+        {
+          "@id": "wd:Q17510979"
+        }
+      ],
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q13402959"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1981"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "TGV Sud-Est"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q288991#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q585219#P3438"
+      },
+      "line": {
+        "@id": "wd:Q585219"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q13646"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q309084"
-    },
-    {
-      "@id": "wd:Q17510979"
-    }
-  ],
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
-    },
-    {
-      "@id": "wd:Q13402959"
-    }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1981"
-  }
+  ]
 }

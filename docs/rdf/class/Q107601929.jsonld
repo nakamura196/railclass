@@ -11,78 +11,115 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q107601929",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q107601929"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "LS 1 to 5"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q107601929"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "LS 1 to 5"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q698082"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q107601929#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q877259#P3438"
+      },
+      "line": {
+        "@id": "wd:Q877259"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1943"
+      }
     },
     {
-      "@id": "wd:Q877259"
+      "@id": "wd:Q877259",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lüneburg–Soltau Light Railway"
+      }
     },
     {
-      "@id": "wd:Q1616278"
-    },
-    {
-      "@id": "wd:Q2109663"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q107601929",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q107601929#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q107601929"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "LS 1 to 5"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q107601929"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "LS 1 to 5"
+      },
+      "usedOn": {
+        "@id": "wd:Q877259"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q698082"
+        },
+        {
+          "@id": "wd:Q877259"
+        },
+        {
+          "@id": "wd:Q1616278"
+        },
+        {
+          "@id": "wd:Q2109663"
+        }
+      ],
+      "wdt:P17": [
+        {
+          "@id": "wd:Q7318"
+        },
+        {
+          "@id": "wd:Q183"
+        },
+        {
+          "@id": "wd:Q16957"
+        },
+        {
+          "@id": "wd:Q41304"
+        },
+        {
+          "@id": "wd:Q43287"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q546769"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "45"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q785745"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q26212271"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1913"
+      }
     }
-  ],
-  "wdt:P17": [
-    {
-      "@id": "wd:Q7318"
-    },
-    {
-      "@id": "wd:Q183"
-    },
-    {
-      "@id": "wd:Q16957"
-    },
-    {
-      "@id": "wd:Q41304"
-    },
-    {
-      "@id": "wd:Q43287"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q546769"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "45"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q785745"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q26212271"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1913"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,60 @@ cls:Q2366763 a skos:Concept,
     wdt:P17 wd:Q142 ;
     wdt:P176 wd:Q2990201 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q2366763#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2366763#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2366763#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2366763#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2366763#line5> ;
+    tb:usedOn wd:Q1425351,
+        wd:Q200906,
+        wd:Q48753651,
+        wd:Q93383,
+        wd:Q93874 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2366763#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1425351#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1425351 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2366763#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q200906#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q200906 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2366763#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q48753651#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q48753651 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2366763#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q93383#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q93383 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2366763#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q93874#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q93874 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1425351 rdfs:label "RER D"@en .
+
+wd:Q200906 rdfs:label "RER C"@en .
+
+wd:Q48753651 rdfs:label "Barreau de Gonesse"@en .
+
+wd:Q93383 rdfs:label "Line R"@en .
+
+wd:Q93874 rdfs:label "Line P"@en .
 

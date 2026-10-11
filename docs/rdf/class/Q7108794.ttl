@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,5 +19,27 @@ cls:Q7108794 a skos:Concept,
     prov:wasDerivedFrom wd:Q7108794 ;
     wdt:P176 wd:Q1134069 ;
     wdt:P279 wd:Q1573358 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q7108794#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q7108794#line2> ;
+    tb:usedOn wd:Q5421647,
+        wd:Q6868054 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q7108794#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5421647#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5421647 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q7108794#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6868054#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6868054 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5421647 rdfs:label "ExpressTram"@en .
+
+wd:Q6868054 rdfs:label "Minneapolis–St. Paul Airport Trams"@en .
 

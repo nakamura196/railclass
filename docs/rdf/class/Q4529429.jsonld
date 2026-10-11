@@ -11,51 +11,84 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529429",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4529429"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "ED2T"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q4529429"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "ED2T"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1197451"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q660770"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529429",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529429#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4529429"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ED2T"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q4529429"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "ED2T"
+      },
+      "usedOn": {
+        "@id": "wd:Q4207854"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1197451"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q660770"
+        },
+        {
+          "@id": "wd:Q923337"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q159"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q4157597"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "130"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     },
     {
-      "@id": "wd:Q923337"
+      "@id": "wd:Q4207854",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kazanskoye line (Moscow Railway)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529429#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4207854#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4207854"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q159"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q4157597"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "130"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

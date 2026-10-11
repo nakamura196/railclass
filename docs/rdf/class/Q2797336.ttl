@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -17,5 +18,41 @@ cls:Q2797336 a skos:Concept,
     wdt:P137 wd:Q13646 ;
     wdt:P176 wd:Q566752 ;
     wdt:P279 wd:Q753779 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line3> ;
+    tb:usedOn wd:Q2329410,
+        wd:Q2762507,
+        wd:Q5354992 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2329410#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2329410 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1988"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2762507#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2762507 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1990"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5354992#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5354992 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1988"^^xsd:gYear .
+
+wd:Q2329410 rdfs:label "Kléber"@en .
+
+wd:Q2762507 rdfs:label "Aquitaine"@en .
+
+wd:Q5354992 rdfs:label "Stanislas"@en .
 

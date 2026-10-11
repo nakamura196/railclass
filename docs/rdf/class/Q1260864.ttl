@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,27 @@ cls:Q1260864 a skos:Concept,
     wdt:P279 wd:Q15825863 ;
     wdt:P930 wd:Q21855034,
         wd:Q25857994 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1260864#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1260864#line2> ;
+    tb:usedOn wd:Q63348805,
+        wd:Q637855 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1260864#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q63348805#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q63348805 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1260864#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q637855#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q637855 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q63348805 rdfs:label "7"@en .
+
+wd:Q637855 rdfs:label "Hanover Stadtbahn"@en .
 

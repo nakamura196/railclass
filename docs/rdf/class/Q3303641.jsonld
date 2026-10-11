@@ -11,48 +11,143 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303641",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3303641"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 142"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303641#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7492808#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7492808"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄142形気動車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q3303641"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 142"
+      "@id": "wd:Q7492808",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sheffield–Lincoln line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄142形気動車"
+      "@id": "wd:Q4923238",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Blackpool Branch Lines"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303641#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4923238#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4923238"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303641",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303641#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303641#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303641#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3303641"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 142"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄142形気動車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q3303641"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 142"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄142形気動車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q4865655"
+        },
+        {
+          "@id": "wd:Q4923238"
+        },
+        {
+          "@id": "wd:Q7492808"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q699959"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3303533"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303641#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4865655#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4865655"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q4865655",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Barton Line"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q699959"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3303533"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  ]
 }

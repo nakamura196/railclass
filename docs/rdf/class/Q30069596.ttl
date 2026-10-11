@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,16 @@ cls:Q30069596 a skos:Concept,
     wdt:P176 wd:Q163580 ;
     wdt:P279 wd:Q20650761 ;
     wdt:P2978 wd:Q1463583 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q30069596#line1> ;
+    tb:usedOn wd:Q2737219 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q30069596#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2737219#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2737219 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2737219 rdfs:label "La Trochita"@en .
 

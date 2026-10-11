@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,49 @@ cls:Q2505345 a skos:Concept,
     wdt:P279 wd:Q4102249 ;
     wdt:P729 "2004"^^xsd:gYear ;
     wdt:P930 wd:Q25857994 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q2505345#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2505345#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2505345#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2505345#line4> ;
+    tb:usedOn wd:Q3433210,
+        wd:Q3433219,
+        wd:Q3433227,
+        wd:Q697512 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2505345#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3433210#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3433210 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2505345#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3433219#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3433219 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2505345#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3433227#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3433227 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2505345#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q697512#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q697512 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3433210 rdfs:label "U1 (Nuremberg)"@en .
+
+wd:Q3433219 rdfs:label "U3 (Nuremberg)"@en .
+
+wd:Q3433227 rdfs:label "U2 (Nuremberg)"@en .
+
+wd:Q697512 rdfs:label "Nuremberg U-Bahn"@en .
 

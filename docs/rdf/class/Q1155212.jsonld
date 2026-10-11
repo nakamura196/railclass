@@ -11,55 +11,88 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155212",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1155212"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "DRG Class ET 125"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155212#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q99654#P3438"
+      },
+      "line": {
+        "@id": "wd:Q99654"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ET・EB125形"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1155212"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "DRG Class ET 125"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155212",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155212#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1155212"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "DRG Class ET 125"
+        },
+        {
+          "@language": "ja",
+          "@value": "ET・EB125形"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1155212"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "DRG Class ET 125"
+        },
+        {
+          "@language": "ja",
+          "@value": "ET・EB125形"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q99654"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q698082"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "120"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ET・EB125形"
+      "@id": "wd:Q99654",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Berlin S-Bahn"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q698082"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "120"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

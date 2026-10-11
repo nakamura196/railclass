@@ -11,101 +11,134 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6451428",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q6451428"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "M62 locomotive"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6451428",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6451428#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q6451428"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "M62 locomotive"
+        },
+        {
+          "@language": "ja",
+          "@value": "M62形ディーゼル機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q6451428"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "M62 locomotive"
+        },
+        {
+          "@language": "ja",
+          "@value": "M62形ディーゼル機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q22117593"
+      },
+      "wdt:P1064": [
+        {
+          "@id": "wd:Q1197451"
+        },
+        {
+          "@id": "wd:Q1999572"
+        }
+      ],
+      "wdt:P137": [
+        {
+          "@id": "wd:Q76987"
+        },
+        {
+          "@id": "wd:Q249591"
+        },
+        {
+          "@id": "wd:Q304944"
+        },
+        {
+          "@id": "wd:Q164914"
+        },
+        {
+          "@id": "wd:Q660770"
+        },
+        {
+          "@id": "wd:Q181697"
+        },
+        {
+          "@id": "wd:Q168082"
+        },
+        {
+          "@id": "wd:Q864803"
+        },
+        {
+          "@id": "wd:Q923337"
+        },
+        {
+          "@id": "wd:Q700563"
+        },
+        {
+          "@id": "wd:Q1069105"
+        },
+        {
+          "@id": "wd:Q9322"
+        },
+        {
+          "@id": "wd:Q15835510"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q289728"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "120"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q19842071"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1022125"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "M62形ディーゼル機関車"
+      "@id": "wd:Q22117593",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Moscow Central Ring Railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6451428#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q22117593#P3438"
+      },
+      "line": {
+        "@id": "wd:Q22117593"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q6451428"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "M62 locomotive"
-    },
-    {
-      "@language": "ja",
-      "@value": "M62形ディーゼル機関車"
-    }
-  ],
-  "wdt:P1064": [
-    {
-      "@id": "wd:Q1197451"
-    },
-    {
-      "@id": "wd:Q1999572"
-    }
-  ],
-  "wdt:P137": [
-    {
-      "@id": "wd:Q76987"
-    },
-    {
-      "@id": "wd:Q249591"
-    },
-    {
-      "@id": "wd:Q304944"
-    },
-    {
-      "@id": "wd:Q164914"
-    },
-    {
-      "@id": "wd:Q660770"
-    },
-    {
-      "@id": "wd:Q181697"
-    },
-    {
-      "@id": "wd:Q168082"
-    },
-    {
-      "@id": "wd:Q864803"
-    },
-    {
-      "@id": "wd:Q923337"
-    },
-    {
-      "@id": "wd:Q700563"
-    },
-    {
-      "@id": "wd:Q1069105"
-    },
-    {
-      "@id": "wd:Q9322"
-    },
-    {
-      "@id": "wd:Q15835510"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q289728"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "120"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q19842071"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1022125"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -25,5 +26,96 @@ cls:Q1719071 a skos:Concept,
     wdt:P2978 wd:Q1014107 ;
     wdt:P930 wd:Q21855034,
         wd:Q56044891 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line7>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line8> ;
+    tb:usedOn wd:Q1421624,
+        wd:Q2040228,
+        wd:Q219347,
+        wd:Q246247,
+        wd:Q25387669,
+        wd:Q3509082,
+        wd:Q3537105,
+        wd:Q4478423 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1421624#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1421624 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2022"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2040228#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2040228 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q219347#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q219347 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q246247#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q246247 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q25387669#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q25387669 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2004"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3509082#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3509082 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2010"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line7> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3537105#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3537105 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1719071#line8> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4478423#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4478423 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1421624 rdfs:label "Ust-Ilimsk tram system"@en .
+
+wd:Q2040228 rdfs:label "Tramtransporto en Kostjantinivka"@en .
+
+wd:Q219347 rdfs:label "Trams in Dnipro"@en .
+
+wd:Q246247 rdfs:label "Tram transport in Horlivka"@en .
+
+wd:Q25387669 rdfs:label "Tramway in Yerevan"@en .
+
+wd:Q3509082 rdfs:label "Trams in Ryazan"@en .
+
+wd:Q3537105 rdfs:label "Tram transport in Dzerzhinsk, Russia"@en .
+
+wd:Q4478423 rdfs:label "Tram transport in Oskemen"@en .
 

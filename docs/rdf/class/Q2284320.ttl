@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,27 @@ cls:Q2284320 a skos:Concept,
     wdt:P176 wd:Q391895 ;
     wdt:P2052 90.0 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q2284320#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2284320#line2> ;
+    tb:usedOn wd:Q3832673,
+        wd:Q6717618 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2284320#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3832673#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3832673 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2284320#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6717618#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6717618 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3832673 rdfs:label "M2 metro line"@en .
+
+wd:Q6717618 rdfs:label "Kajang line"@en .
 

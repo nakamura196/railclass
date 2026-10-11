@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,27 @@ cls:Q16908552 a skos:Concept,
     wdt:P137 wd:Q18169 ;
     wdt:P176 wd:Q152517 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q16908552#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q16908552#line2> ;
+    tb:usedOn wd:Q125404068,
+        wd:Q134342376 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16908552#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q125404068#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q125404068 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16908552#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q134342376#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q134342376 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q125404068 rdfs:label "Gyeongbu Line (ITX-Saemaeul)"@en .
+
+wd:Q134342376 rdfs:label "Honam Line (ITX-Saemaeul)"@en .
 

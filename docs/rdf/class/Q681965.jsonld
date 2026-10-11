@@ -11,36 +11,102 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q681965",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q681965"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "FS Vivalto carriages"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q681965"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "FS Vivalto carriages"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q83823"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q38"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q753779"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q681965",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q681965#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q681965#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q681965"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "FS Vivalto carriages"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q681965"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "FS Vivalto carriages"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q1159300"
+        },
+        {
+          "@id": "wd:Q1160580"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q83823"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q38"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q753779"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q681965#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1160580#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1160580"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q1159300",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line S5"
+      }
+    },
+    {
+      "@id": "wd:Q1160580",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line S6"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q681965#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1159300#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1159300"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

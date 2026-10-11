@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -26,5 +27,38 @@ cls:Q16800 a skos:Concept,
     wdt:P279 wd:Q625151 ;
     wdt:P2978 wd:Q1014107 ;
     wdt:P930 wd:Q1415234 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q16800#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q16800#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q16800#line3> ;
+    tb:usedOn wd:Q685807,
+        wd:Q7388286,
+        wd:Q7388394 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16800#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q685807#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q685807 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16800#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7388286#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7388286 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16800#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7388394#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7388394 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q685807 rdfs:label "Sihltal railway line"@en .
+
+wd:Q7388286 rdfs:label "S3"@en .
+
+wd:Q7388394 rdfs:label "S9"@en .
 

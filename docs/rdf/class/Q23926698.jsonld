@@ -11,36 +11,69 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23926698",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q23926698"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Bombardier Innovia APM 100 C801"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q23926698"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Bombardier Innovia APM 100 C801"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q3243209"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q378767"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q891791"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23926698#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q778271#P3438"
+      },
+      "line": {
+        "@id": "wd:Q778271"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q778271",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bukit Panjang LRT line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23926698",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23926698#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q23926698"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bombardier Innovia APM 100 C801"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q23926698"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Bombardier Innovia APM 100 C801"
+      },
+      "usedOn": {
+        "@id": "wd:Q778271"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q3243209"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q378767"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q891791"
+      }
+    }
+  ]
 }

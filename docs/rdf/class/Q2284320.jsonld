@@ -11,52 +11,118 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2284320",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2284320"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Siemens Inspiro"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2284320#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6717618#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6717618"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "Inspiro"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q2284320"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Siemens Inspiro"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2284320#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3832673#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3832673"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "Inspiro"
+      "@id": "wd:Q6717618",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kajang line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2284320",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2284320#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2284320#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2284320"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Siemens Inspiro"
+        },
+        {
+          "@language": "ja",
+          "@value": "Inspiro"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q2284320"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Siemens Inspiro"
+        },
+        {
+          "@language": "ja",
+          "@value": "Inspiro"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q3832673"
+        },
+        {
+          "@id": "wd:Q6717618"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "90"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "wd:Q3832673",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "M2 metro line"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "90"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

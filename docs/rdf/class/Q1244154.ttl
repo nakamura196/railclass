@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,16 @@ cls:Q1244154 a skos:Concept,
     wdt:P176 wd:Q838212 ;
     wdt:P2052 160.0 ;
     wdt:P279 wd:Q1567915 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1244154#line1> ;
+    tb:usedOn wd:Q3109506 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1244154#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3109506#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3109506 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3109506 rdfs:label "Media Distancia Renfe"@en .
 

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,49 @@ cls:Q6954368 a skos:Concept,
     wdt:P176 wd:Q838212 ;
     wdt:P279 wd:Q1567915 ;
     wdt:P729 "2004"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q6954368#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q6954368#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q6954368#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q6954368#line4> ;
+    tb:usedOn wd:Q3743313,
+        wd:Q3743315,
+        wd:Q3743316,
+        wd:Q3743389 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q6954368#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3743313#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3743313 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q6954368#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3743315#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3743315 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q6954368#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3743316#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3743316 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q6954368#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3743389#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3743389 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3743313 rdfs:label "Belfast–Bangor line"@en .
+
+wd:Q3743315 rdfs:label "Belfast–Derry line"@en .
+
+wd:Q3743316 rdfs:label "Belfast–Larne line"@en .
+
+wd:Q3743389 rdfs:label "Coleraine–Portrush line"@en .
 

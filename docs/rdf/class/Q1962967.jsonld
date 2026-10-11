@@ -11,42 +11,75 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1962967",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1962967"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "AKSM-60102"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1962967",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1962967#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1962967"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "AKSM-60102"
+        },
+        {
+          "@language": "ja",
+          "@value": "AKSM-60102"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1962967"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "AKSM-60102"
+        },
+        {
+          "@language": "ja",
+          "@value": "AKSM-60102"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q2142860"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q815665"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "AKSM-60102"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1962967"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "AKSM-60102"
+      "@id": "wd:Q2142860",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Minsk"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "AKSM-60102"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1962967#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2142860#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2142860"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q815665"
-  }
+  ]
 }

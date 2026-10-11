@@ -11,64 +11,159 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q650268",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q650268"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Tramway Français Standard"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2117983#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2117983"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "フランス標準型路面電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q650268"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Tramway Français Standard"
+      "@id": "wd:Q3239056",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Grenoble tram line A"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "フランス標準型路面電車"
-    }
-  ],
-  "wdt:P176": [
-    {
-      "@id": "wd:Q309084"
+      "@id": "wd:Q369969",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Île-de-France tramway Line 1"
+      }
     },
     {
-      "@id": "wd:Q2868906"
-    }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q5063597"
-  },
-  "wdt:P2978": [
-    {
-      "@id": "wd:Q41489456"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3239056#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3239056"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q41501592"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q369969#P3438"
+      },
+      "line": {
+        "@id": "wd:Q369969"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q41501635"
+      "@id": "wd:Q2117983",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Nantes tramway"
+      }
     },
     {
-      "@id": "wd:Q41501819"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q650268",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q650268"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Tramway Français Standard"
+        },
+        {
+          "@language": "ja",
+          "@value": "フランス標準型路面電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q650268"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Tramway Français Standard"
+        },
+        {
+          "@language": "ja",
+          "@value": "フランス標準型路面電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q2117983"
+        },
+        {
+          "@id": "wd:Q3239056"
+        },
+        {
+          "@id": "wd:Q369969"
+        }
+      ],
+      "wdt:P176": [
+        {
+          "@id": "wd:Q309084"
+        },
+        {
+          "@id": "wd:Q2868906"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q5063597"
+      },
+      "wdt:P2978": [
+        {
+          "@id": "wd:Q41489456"
+        },
+        {
+          "@id": "wd:Q41501592"
+        },
+        {
+          "@id": "wd:Q41501635"
+        },
+        {
+          "@id": "wd:Q41501819"
+        }
+      ]
     }
   ]
 }

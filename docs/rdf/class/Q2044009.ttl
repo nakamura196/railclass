@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,16 @@ cls:Q2044009 a skos:Concept,
     wdt:P2052 74.0 ;
     wdt:P279 wd:Q21094841 ;
     wdt:P930 <http://www.wikidata.org/entity/http://www.wikidata.org/.well-known/genid/a59703e8101beafaea227c3875b4079b> ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q2044009#line1> ;
+    tb:usedOn wd:Q9395021 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2044009#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q9395021#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q9395021 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q9395021 rdfs:label "Łódź Regional Tram"@en .
 

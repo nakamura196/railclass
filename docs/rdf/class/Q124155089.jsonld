@@ -11,56 +11,122 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124155089",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q124155089"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Frankfurt K-class tram"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q124155089"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Frankfurt K-class tram"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q1754870"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124155089",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124155089#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124155089#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q124155089"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Frankfurt K-class tram"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q124155089"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Frankfurt K-class tram"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q1278504"
+        },
+        {
+          "@id": "wd:Q1356078"
+        }
+      ],
+      "wdt:P137": [
+        {
+          "@id": "wd:Q1754870"
+        },
+        {
+          "@id": "wd:Q2328481"
+        },
+        {
+          "@id": "wd:Q124061628"
+        }
+      ],
+      "wdt:P176": [
+        {
+          "@id": "wd:Q822381"
+        },
+        {
+          "@id": "wd:Q1791811"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q1230042"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q56240448"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1949"
+      }
     },
     {
-      "@id": "wd:Q2328481"
+      "@id": "wd:Q1278504",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ebbelwei-Expreß"
+      }
     },
     {
-      "@id": "wd:Q124061628"
+      "@id": "wd:Q1356078",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lieschen"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124155089#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1278504#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1278504"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124155089#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1356078#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1356078"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P176": [
-    {
-      "@id": "wd:Q822381"
-    },
-    {
-      "@id": "wd:Q1791811"
-    }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q1230042"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q56240448"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1949"
-  }
+  ]
 }

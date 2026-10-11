@@ -11,78 +11,144 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15956101",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q15956101"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 800"
+      "@id": "wd:Q5758708",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Highland Chieftain"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス鉄道800形"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15956101#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5758708#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5758708"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q1617936",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Highland Main Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15956101",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15956101#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15956101#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q15956101"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 800"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道800形"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q15956101"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 800"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道800形"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q1617936"
+        },
+        {
+          "@id": "wd:Q5758708"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q53649859"
+        },
+        {
+          "@id": "wd:Q1419438"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q53238"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "201"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q1066003"
+        },
+        {
+          "@id": "wd:Q13402959"
+        },
+        {
+          "@id": "wd:Q28455463"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15956101#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1617936#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1617936"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q15956101"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 800"
-    },
-    {
-      "@language": "ja",
-      "@value": "イギリス鉄道800形"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q53649859"
-    },
-    {
-      "@id": "wd:Q1419438"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q53238"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "201"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q1066003"
-    },
-    {
-      "@id": "wd:Q13402959"
-    },
-    {
-      "@id": "wd:Q28455463"
-    }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2017"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  ]
 }

@@ -11,39 +11,72 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97280548",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q97280548"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "TUE series 200"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q97280548"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "TUE series 200"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q6071527"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q61901899"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q155"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q1418233",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Porto Alegre Metro"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97280548#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1418233#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1418233"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97280548",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97280548#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q97280548"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "TUE series 200"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q97280548"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "TUE series 200"
+      },
+      "usedOn": {
+        "@id": "wd:Q1418233"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q6071527"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q61901899"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q155"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    }
+  ]
 }

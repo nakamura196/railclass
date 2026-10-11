@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,38 @@ cls:Q17218968 a skos:Concept,
         wd:Q682174 ;
     wdt:P279 wd:Q483373 ;
     wdt:P930 wd:Q25857994 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line3> ;
+    tb:usedOn wd:Q6141590,
+        wd:Q697192,
+        wd:Q8044505 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6141590#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6141590 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q697192#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q697192 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q17218968#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q8044505#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q8044505 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q6141590 rdfs:label "Zhonghe–Xinlu line"@en .
+
+wd:Q697192 rdfs:label "Songshan–Xindian line"@en .
+
+wd:Q8044505 rdfs:label "Xinbeitou line"@en .
 

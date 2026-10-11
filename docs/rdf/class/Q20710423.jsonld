@@ -11,58 +11,153 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20710423",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q20710423"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Siemens SD-400 and SD-460"
+      "@id": "wd:Q86752660",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Silver Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "シーメンスSD-400形・SD-460形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q20710423"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Siemens SD-400 and SD-460"
+      "@id": "wd:Q18229920",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Blue Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "シーメンスSD-400形・SD-460形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20710423",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20710423#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20710423#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20710423#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q20710423"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Siemens SD-400 and SD-460"
+        },
+        {
+          "@language": "ja",
+          "@value": "シーメンスSD-400形・SD-460形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q20710423"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Siemens SD-400 and SD-460"
+        },
+        {
+          "@language": "ja",
+          "@value": "シーメンスSD-400形・SD-460形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q18229920"
+        },
+        {
+          "@id": "wd:Q587753"
+        },
+        {
+          "@id": "wd:Q86752660"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1632001"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q81230"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "105"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
+    },
+    {
+      "@id": "wd:Q587753",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Valencia Metro"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20710423#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q18229920#P3438"
+      },
+      "line": {
+        "@id": "wd:Q18229920"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20710423#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q86752660#P3438"
+      },
+      "line": {
+        "@id": "wd:Q86752660"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20710423#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q587753#P3438"
+      },
+      "line": {
+        "@id": "wd:Q587753"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1632001"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q81230"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "105"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

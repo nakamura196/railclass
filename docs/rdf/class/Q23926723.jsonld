@@ -11,54 +11,124 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23926723",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q23926723"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Siemens P2000"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23926723#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2482571#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2482571"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2024"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロサンゼルス郡都市圏交通局P2000形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q23926723"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Siemens P2000"
+      "@id": "wd:Q2482571",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "C Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロサンゼルス郡都市圏交通局P2000形電車"
+      "@id": "wd:Q3267759",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "A Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23926723",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23926723#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23926723#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q23926723"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Siemens P2000"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロサンゼルス郡都市圏交通局P2000形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q23926723"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Siemens P2000"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロサンゼルス郡都市圏交通局P2000形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q2482571"
+        },
+        {
+          "@id": "wd:Q3267759"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q3259702"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q81230"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q15825863"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23926723#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3267759#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3267759"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q3259702"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q81230"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q15825863"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,5 +19,27 @@ cls:Q27963794 a skos:Concept,
     prov:wasDerivedFrom wd:Q27963794 ;
     wdt:P176 wd:Q666703 ;
     wdt:P279 wd:Q5063597 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q27963794#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q27963794#line2> ;
+    tb:usedOn wd:Q114312991,
+        wd:Q42894086 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q27963794#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q114312991#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q114312991 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q27963794#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q42894086#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q42894086 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q114312991 rdfs:label "Red Line"@en .
+
+wd:Q42894086 rdfs:label "Mi Tren"@en .
 

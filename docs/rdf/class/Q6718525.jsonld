@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6718525",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q6718525"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Vibrant Express"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6718525",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6718525#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q6718525"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Vibrant Express"
+        },
+        {
+          "@language": "ja",
+          "@value": "香港鉄路動感号CRH380A型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q6718525"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Vibrant Express"
+        },
+        {
+          "@language": "ja",
+          "@value": "香港鉄路動感号CRH380A型電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q910209"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1479375"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q5014252"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "香港鉄路動感号CRH380A型電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q6718525"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Vibrant Express"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6718525#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q910209#P3438"
+      },
+      "line": {
+        "@id": "wd:Q910209"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "香港鉄路動感号CRH380A型電車"
+      "@id": "wd:Q910209",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Guangzhou–Shenzhen–Hong Kong Express Rail Link"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1479375"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q5014252"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  ]
 }

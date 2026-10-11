@@ -11,39 +11,134 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7669651"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "TCDD DM15000"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q7669651"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "TCDD DM15000"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q499967"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q43"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q152517"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q20949781",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Zonguldak-Filyos Regional"
+      }
+    },
+    {
+      "@id": "wd:Q48789868",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Konya-Karaman Regional"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q48789868#P3438"
+      },
+      "line": {
+        "@id": "wd:Q48789868"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q140610574#P3438"
+      },
+      "line": {
+        "@id": "wd:Q140610574"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q20949781#P3438"
+      },
+      "line": {
+        "@id": "wd:Q20949781"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7669651"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "TCDD DM15000"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q7669651"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "TCDD DM15000"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q140610574"
+        },
+        {
+          "@id": "wd:Q20949781"
+        },
+        {
+          "@id": "wd:Q48789868"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q499967"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q43"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q152517"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
+    },
+    {
+      "@id": "wd:Q140610574",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "AYBAN"
+      }
+    }
+  ]
 }

@@ -11,59 +11,92 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110821603",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q110821603"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "HLE 17"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q110821603"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "HLE 17"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q524255"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q31"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q676771"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  },
-  "wdt:P930": [
+  "@graph": [
     {
-      "@id": "wd:Q21251675"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110821603",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110821603#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q110821603"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "HLE 17"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q110821603"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "HLE 17"
+      },
+      "usedOn": {
+        "@id": "wd:Q131548728"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q524255"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q31"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q676771"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      },
+      "wdt:P930": [
+        {
+          "@id": "wd:Q21251675"
+        },
+        {
+          "@id": "wd:Q21253457"
+        },
+        {
+          "@id": "wd:Q106530439"
+        },
+        {
+          "@id": "wd:Q1415234"
+        }
+      ]
     },
     {
-      "@id": "wd:Q21253457"
+      "@id": "wd:Q131548728",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "EuroCity Brussels–Rotterdam"
+      }
     },
     {
-      "@id": "wd:Q106530439"
-    },
-    {
-      "@id": "wd:Q1415234"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110821603#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q131548728#P3438"
+      },
+      "line": {
+        "@id": "wd:Q131548728"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

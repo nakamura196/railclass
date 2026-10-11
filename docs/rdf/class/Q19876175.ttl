@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -17,5 +18,27 @@ cls:Q19876175 a skos:Concept,
     wdt:P137 wd:Q379439 ;
     wdt:P176 wd:Q688893 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q19876175#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q19876175#line2> ;
+    tb:usedOn wd:Q5188395,
+        wd:Q5578678 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q19876175#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5188395#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5188395 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q19876175#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5578678#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5578678 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5188395 rdfs:label "Cross River Rail"@en .
+
+wd:Q5578678 rdfs:label "Brisbane–Gold Coast railway line"@en .
 

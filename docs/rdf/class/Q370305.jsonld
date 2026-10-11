@@ -11,72 +11,109 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q370305",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q370305"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Mosbach–Mudau Nos. 1 to 4"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q370305"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Mosbach–Mudau Nos. 1 to 4"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q461289"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q370305",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q370305#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q370305"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mosbach–Mudau Nos. 1 to 4"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q370305"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Mosbach–Mudau Nos. 1 to 4"
+      },
+      "usedOn": {
+        "@id": "wd:Q802793"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q461289"
+        },
+        {
+          "@id": "wd:Q687175"
+        },
+        {
+          "@id": "wd:Q698082"
+        }
+      ],
+      "wdt:P17": [
+        {
+          "@id": "wd:Q7318"
+        },
+        {
+          "@id": "wd:Q183"
+        },
+        {
+          "@id": "wd:Q41304"
+        },
+        {
+          "@id": "wd:Q43287"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q546769"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "35"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q785745"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q26212271"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1904"
+      }
     },
     {
-      "@id": "wd:Q687175"
+      "@id": "wd:Q802793",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mosbach–Mudau railway line"
+      }
     },
     {
-      "@id": "wd:Q698082"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q370305#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q802793#P3438"
+      },
+      "line": {
+        "@id": "wd:Q802793"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1965"
+      }
     }
-  ],
-  "wdt:P17": [
-    {
-      "@id": "wd:Q7318"
-    },
-    {
-      "@id": "wd:Q183"
-    },
-    {
-      "@id": "wd:Q41304"
-    },
-    {
-      "@id": "wd:Q43287"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q546769"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "35"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q785745"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q26212271"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1904"
-  }
+  ]
 }

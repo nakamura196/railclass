@@ -11,48 +11,114 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1461088",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1461088"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "SNCF Class Z 5300"
+      "@id": "wd:Q1425351",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RER D"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "フランス国鉄Z5300形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1461088"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "SNCF Class Z 5300"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1461088#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1425351#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1425351"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "フランス国鉄Z5300形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1461088",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1461088#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1461088#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1461088"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SNCF Class Z 5300"
+        },
+        {
+          "@language": "ja",
+          "@value": "フランス国鉄Z5300形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1461088"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SNCF Class Z 5300"
+        },
+        {
+          "@language": "ja",
+          "@value": "フランス国鉄Z5300形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q1425351"
+        },
+        {
+          "@id": "wd:Q93383"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q13646"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1461088#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q93383#P3438"
+      },
+      "line": {
+        "@id": "wd:Q93383"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q93383",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line R"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q13646"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,5 +19,82 @@ cls:Q17190460 a skos:Concept,
     wdt:P137 wd:Q314293 ;
     wdt:P176 wd:Q309084 ;
     wdt:P279 wd:Q933795 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line7> ;
+    tb:usedOn wd:Q123179025,
+        wd:Q314293,
+        wd:Q449909,
+        wd:Q84703702,
+        wd:Q84703704,
+        wd:Q84703705,
+        wd:Q84703708 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q123179025#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q123179025 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q314293#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q314293 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q449909#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q449909 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q84703702#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q84703702 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q84703704#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q84703704 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q84703705#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q84703705 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q17190460#line7> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q84703708#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q84703708 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q123179025 rdfs:label "RS 6 (Bremen - Lower Saxony)"@en .
+
+wd:Q449909 rdfs:label "Bremen S-Bahn"@en .
+
+wd:Q84703702 rdfs:label "RS 1"@en .
+
+wd:Q84703704 rdfs:label "RS 2"@en .
+
+wd:Q84703705 rdfs:label "RS 3"@en .
+
+wd:Q84703708 rdfs:label "RS 4"@en .
+
+wd:Q314293 rdfs:label "NordWestBahn"@en .
 

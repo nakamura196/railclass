@@ -11,64 +11,97 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7468057",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7468057"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Alstom Coradia"
+      "@id": "wd:Q802283",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Flieden–Gemünden (Main) railway"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "コラディア"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7468057",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7468057#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7468057"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Alstom Coradia"
+        },
+        {
+          "@language": "ja",
+          "@value": "コラディア"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q7468057"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Alstom Coradia"
+        },
+        {
+          "@language": "ja",
+          "@value": "コラディア"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q802283"
+      },
+      "wdt:P1064": [
+        {
+          "@id": "wd:Q1197451"
+        },
+        {
+          "@id": "wd:Q1999572"
+        }
+      ],
+      "wdt:P137": [
+        {
+          "@id": "wd:Q265228"
+        },
+        {
+          "@id": "wd:Q970452"
+        },
+        {
+          "@id": "wd:Q13646"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3959904"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7468057#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q802283#P3438"
+      },
+      "line": {
+        "@id": "wd:Q802283"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q7468057"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Alstom Coradia"
-    },
-    {
-      "@language": "ja",
-      "@value": "コラディア"
-    }
-  ],
-  "wdt:P1064": [
-    {
-      "@id": "wd:Q1197451"
-    },
-    {
-      "@id": "wd:Q1999572"
-    }
-  ],
-  "wdt:P137": [
-    {
-      "@id": "wd:Q265228"
-    },
-    {
-      "@id": "wd:Q970452"
-    },
-    {
-      "@id": "wd:Q13646"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q3959904"
-  }
+  ]
 }

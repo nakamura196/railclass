@@ -11,51 +11,84 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q898532",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q898532"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "VR Class Sm4"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q898532"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "VR Class Sm4"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q19750814"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q913248"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q33"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q838212"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q898532#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q109535646#P3438"
+      },
+      "line": {
+        "@id": "wd:Q109535646"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q13400350"
+      "@id": "wd:Q109535646",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "VR commuter rail"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q898532",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q898532#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q898532"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "VR Class Sm4"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q898532"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "VR Class Sm4"
+      },
+      "usedOn": {
+        "@id": "wd:Q109535646"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q19750814"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q913248"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q33"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q838212"
+        },
+        {
+          "@id": "wd:Q13400350"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "160"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q42062659"
+      }
     }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "160"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q42062659"
-  }
+  ]
 }

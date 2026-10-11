@@ -11,49 +11,82 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6087160",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q6087160"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Israel Railways JT-42BW"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q6087160"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Israel Railways JT-42BW"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q846655"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q801"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q2729224"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q4735854"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1996"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6087160#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q846655#P3438"
+      },
+      "line": {
+        "@id": "wd:Q846655"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q846655",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Israel Railways"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6087160",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6087160#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q6087160"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Israel Railways JT-42BW"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q6087160"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Israel Railways JT-42BW"
+      },
+      "usedOn": {
+        "@id": "wd:Q846655"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q846655"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q801"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q2729224"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q4735854"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1996"
+      }
+    }
+  ]
 }

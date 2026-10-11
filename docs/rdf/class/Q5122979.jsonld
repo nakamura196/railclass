@@ -11,33 +11,99 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122979",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q5122979"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "New South Wales Endeavour railcar"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q5122979"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "New South Wales Endeavour railcar"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q7660181"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q52825"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122979#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7428064#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7428064"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122979#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5944651#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5944651"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q7428064",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Southern Highlands Line"
+      }
+    },
+    {
+      "@id": "wd:Q5944651",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hunter Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122979",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122979#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122979#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q5122979"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "New South Wales Endeavour railcar"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q5122979"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "New South Wales Endeavour railcar"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q5944651"
+        },
+        {
+          "@id": "wd:Q7428064"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q7660181"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q52825"
+      }
+    }
+  ]
 }

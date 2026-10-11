@@ -1,5 +1,7 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -15,5 +17,16 @@ cls:Q2805042 a skos:Concept,
     wdt:P17 wd:Q39 ;
     wdt:P279 wd:Q2049755,
         wd:Q3959904 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q2805042#line1> ;
+    tb:usedOn wd:Q661561 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2805042#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q661561#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q661561 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q661561 rdfs:label "Glacier Express"@en .
 

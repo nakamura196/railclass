@@ -11,48 +11,81 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q177425",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q177425"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Integral"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q177425"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Integral"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q259805"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q177425",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q177425#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q177425"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Integral"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q177425"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Integral"
+      },
+      "usedOn": {
+        "@id": "wd:Q7388234"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q259805"
+        },
+        {
+          "@id": "wd:Q2138160"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q1665380"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "140"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
     },
     {
-      "@id": "wd:Q2138160"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q177425#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7388234#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7388234"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q7388234",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "S28 (Rhine-Ruhr)"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q1665380"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "140"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  ]
 }

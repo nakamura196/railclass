@@ -11,53 +11,90 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124155129",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q124155129"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Frankfurt M-class tram"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q124155129"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Frankfurt M-class tram"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q1754870"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124155129",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124155129#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q124155129"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Frankfurt M-class tram"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q124155129"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Frankfurt M-class tram"
+      },
+      "usedOn": {
+        "@id": "wd:Q3040891"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q1754870"
+        },
+        {
+          "@id": "wd:Q2328481"
+        },
+        {
+          "@id": "wd:Q124061628"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q822381"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q1230042"
+        },
+        {
+          "@id": "wd:Q1263947"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1959"
+      }
     },
     {
-      "@id": "wd:Q2328481"
+      "@id": "wd:Q3040891",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "U2"
+      }
     },
     {
-      "@id": "wd:Q124061628"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124155129#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3040891#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3040891"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1978"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q822381"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q1230042"
-    },
-    {
-      "@id": "wd:Q1263947"
-    }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1959"
-  }
+  ]
 }

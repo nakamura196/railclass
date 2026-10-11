@@ -11,97 +11,163 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1083854",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1083854"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Y1"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1083854#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2631686#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2631686"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "Y1形気動車"
+      "@id": "wd:Q2631686",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bratsberg Line"
+      }
+    },
+    {
+      "@id": "wd:Q10545678",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kinnekulletåget"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1083854",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1083854#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1083854#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1083854"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Y1"
+        },
+        {
+          "@language": "ja",
+          "@value": "Y1形気動車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1083854"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Y1"
+        },
+        {
+          "@language": "ja",
+          "@value": "Y1形気動車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q10545678"
+        },
+        {
+          "@id": "wd:Q2631686"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q83825"
+        },
+        {
+          "@id": "wd:Q83832"
+        },
+        {
+          "@id": "wd:Q83878"
+        },
+        {
+          "@id": "wd:Q751807"
+        },
+        {
+          "@id": "wd:Q931988"
+        },
+        {
+          "@id": "wd:Q928178"
+        },
+        {
+          "@id": "wd:Q1663784"
+        },
+        {
+          "@id": "wd:Q10542127"
+        },
+        {
+          "@id": "wd:Q10542824"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q34"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q2738829"
+        },
+        {
+          "@id": "wd:Q1567755"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "130"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q752392"
+        },
+        {
+          "@id": "wd:Q10915943"
+        }
+      ],
+      "wdt:P2978": {
+        "@id": "wd:Q30432598"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1083854#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10545678#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10545678"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1083854"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Y1"
-    },
-    {
-      "@language": "ja",
-      "@value": "Y1形気動車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q83825"
-    },
-    {
-      "@id": "wd:Q83832"
-    },
-    {
-      "@id": "wd:Q83878"
-    },
-    {
-      "@id": "wd:Q751807"
-    },
-    {
-      "@id": "wd:Q931988"
-    },
-    {
-      "@id": "wd:Q928178"
-    },
-    {
-      "@id": "wd:Q1663784"
-    },
-    {
-      "@id": "wd:Q10542127"
-    },
-    {
-      "@id": "wd:Q10542824"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q34"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q2738829"
-    },
-    {
-      "@id": "wd:Q1567755"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "130"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q752392"
-    },
-    {
-      "@id": "wd:Q10915943"
-    }
-  ],
-  "wdt:P2978": {
-    "@id": "wd:Q30432598"
-  }
+  ]
 }

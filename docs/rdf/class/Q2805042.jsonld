@@ -11,33 +11,66 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2805042",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2805042"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q2805042"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q39"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q3959904"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2805042#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q661561#P3438"
+      },
+      "line": {
+        "@id": "wd:Q661561"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q2049755"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2805042",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2805042#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2805042"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q2805042"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "usedOn": {
+        "@id": "wd:Q661561"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q39"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q3959904"
+        },
+        {
+          "@id": "wd:Q2049755"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q661561",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Glacier Express"
+      }
     }
   ]
 }

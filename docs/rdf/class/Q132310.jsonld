@@ -11,65 +11,98 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q132310",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q132310"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Pesa 120Na"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q132310",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q132310#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q132310"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Pesa 120Na"
+        },
+        {
+          "@language": "ja",
+          "@value": "ペサ120Na"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q132310"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Pesa 120Na"
+        },
+        {
+          "@language": "ja",
+          "@value": "ペサ120Na"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q13390010"
+      },
+      "wdt:P1064": [
+        {
+          "@id": "wd:Q24609"
+        },
+        {
+          "@id": "wd:Q1999572"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q1817331"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "70"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q5063597"
+        },
+        {
+          "@id": "wd:Q2371310"
+        }
+      ],
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ペサ120Na"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q132310"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Pesa 120Na"
+      "@id": "wd:Q13390010",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tram line 2 (Szczecin)"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ペサ120Na"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q132310#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q13390010#P3438"
+      },
+      "line": {
+        "@id": "wd:Q13390010"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": [
-    {
-      "@id": "wd:Q24609"
-    },
-    {
-      "@id": "wd:Q1999572"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q1817331"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "70"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q5063597"
-    },
-    {
-      "@id": "wd:Q2371310"
-    }
-  ],
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

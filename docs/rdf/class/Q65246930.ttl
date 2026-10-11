@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,16 @@ cls:Q65246930 a skos:Concept,
     wdt:P137 wd:Q1152076 ;
     wdt:P2052 190.0 ;
     wdt:P279 wd:Q935330 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q65246930#line1> ;
+    tb:usedOn wd:Q322058 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q65246930#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q322058#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q322058 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q322058 rdfs:label "RE 1 (Bavaria)"@en .
 

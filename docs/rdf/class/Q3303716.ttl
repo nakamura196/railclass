@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -35,5 +36,95 @@ cls:Q3303716 a skos:Concept,
     wdt:P2052 121.0 ;
     wdt:P279 wd:Q7581317 ;
     wdt:P729 "1988"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line7>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line8> ;
+    tb:usedOn wd:Q233283,
+        wd:Q285588,
+        wd:Q5189635,
+        wd:Q5566918,
+        wd:Q6781196,
+        wd:Q7125176,
+        wd:Q7502606,
+        wd:Q7993583 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q233283#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q233283 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q285588#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q285588 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5189635#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5189635 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5566918#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5566918 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6781196#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6781196 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7125176#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7125176 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2012"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line7> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7502606#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7502606 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303716#line8> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7993583#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7993583 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2014"^^xsd:gYear .
+
+wd:Q233283 rdfs:label "West Highland Line"@en .
+
+wd:Q285588 rdfs:label "Breckland Line"@en .
+
+wd:Q5189635 rdfs:label "Croy Line"@en .
+
+wd:Q5566918 rdfs:label "Glasgow South Western Line"@en .
+
+wd:Q6781196 rdfs:label "Maryhill Line"@en .
+
+wd:Q7125176 rdfs:label "Paisley Canal Line"@en .
+
+wd:Q7502606 rdfs:label "Shotts Line"@en .
+
+wd:Q7993583 rdfs:label "Whifflet Line"@en .
 

@@ -11,49 +11,82 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q96405661",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q96405661"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Siemens Viaggio Comfort"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q96405661"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Siemens Viaggio Comfort"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q83822"
+      "@id": "wd:Q125350160",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Railjet 1"
+      }
     },
     {
-      "@id": "wd:Q304944"
-    }
-  ],
-  "wdt:P17": [
-    {
-      "@id": "wd:Q40"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q96405661#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q125350160#P3438"
+      },
+      "line": {
+        "@id": "wd:Q125350160"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q215"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q96405661",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q96405661#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q96405661"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Siemens Viaggio Comfort"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q96405661"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Siemens Viaggio Comfort"
+      },
+      "usedOn": {
+        "@id": "wd:Q125350160"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q83822"
+        },
+        {
+          "@id": "wd:Q304944"
+        }
+      ],
+      "wdt:P17": [
+        {
+          "@id": "wd:Q40"
+        },
+        {
+          "@id": "wd:Q215"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q101554053"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q101554053"
-  }
+  ]
 }

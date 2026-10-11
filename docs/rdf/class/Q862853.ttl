@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -28,5 +29,27 @@ cls:Q862853 a skos:Concept,
         wd:Q29638944 ;
     wdt:P930 wd:Q106530439,
         wd:Q1415234 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q862853#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q862853#line2> ;
+    tb:usedOn wd:Q802562,
+        wd:Q903625 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q862853#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q802562#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q802562 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q862853#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q903625#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q903625 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q802562 rdfs:label "Øresund Line"@en .
+
+wd:Q903625 rdfs:label "Øresundståg"@en .
 

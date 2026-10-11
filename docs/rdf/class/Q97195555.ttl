@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,38 @@ cls:Q97195555 a skos:Concept,
     wdt:P279 wd:Q1567915,
         wd:Q689485 ;
     wdt:P729 "2016"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line3> ;
+    tb:usedOn wd:Q135397325,
+        wd:Q135403421,
+        wd:Q8344094 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q135397325#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q135397325 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q135403421#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q135403421 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q97195555#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q8344094#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q8344094 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q135397325 rdfs:label "RL2 line"@en .
+
+wd:Q135403421 rdfs:label "RL1 line"@en .
+
+wd:Q8344094 rdfs:label "Rodalia de Lleida"@en .
 

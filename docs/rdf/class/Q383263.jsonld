@@ -11,79 +11,145 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q383263",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q383263"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "SBB-CFF-FFS RAm and NS DE4"
+      "@id": "wd:Q139261828",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Northlander"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "RAm TEEI (気動車)"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q383263",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q383263#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q383263#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q383263"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SBB-CFF-FFS RAm and NS DE4"
+        },
+        {
+          "@language": "ja",
+          "@value": "RAm TEEI (気動車)"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q383263"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SBB-CFF-FFS RAm and NS DE4"
+        },
+        {
+          "@language": "ja",
+          "@value": "RAm TEEI (気動車)"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q139261828"
+        },
+        {
+          "@id": "wd:Q2691511"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q83835"
+        },
+        {
+          "@id": "wd:Q23076"
+        },
+        {
+          "@id": "wd:Q3352823"
+        }
+      ],
+      "wdt:P17": [
+        {
+          "@id": "wd:Q16"
+        },
+        {
+          "@id": "wd:Q39"
+        },
+        {
+          "@id": "wd:Q55"
+        }
+      ],
+      "wdt:P176": [
+        {
+          "@id": "wd:Q2373726"
+        },
+        {
+          "@id": "wd:Q692083"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "140"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q383263#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q139261828#P3438"
+      },
+      "line": {
+        "@id": "wd:Q139261828"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q383263#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2691511#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2691511"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q2691511",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Aitrang rail accident"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q383263"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "SBB-CFF-FFS RAm and NS DE4"
-    },
-    {
-      "@language": "ja",
-      "@value": "RAm TEEI (気動車)"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q83835"
-    },
-    {
-      "@id": "wd:Q23076"
-    },
-    {
-      "@id": "wd:Q3352823"
-    }
-  ],
-  "wdt:P17": [
-    {
-      "@id": "wd:Q16"
-    },
-    {
-      "@id": "wd:Q39"
-    },
-    {
-      "@id": "wd:Q55"
-    }
-  ],
-  "wdt:P176": [
-    {
-      "@id": "wd:Q2373726"
-    },
-    {
-      "@id": "wd:Q692083"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "140"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  ]
 }

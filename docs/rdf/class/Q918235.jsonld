@@ -11,75 +11,141 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q918235",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q918235"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 450"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q918235",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q918235#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q918235#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q918235"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 450"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道450系電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q918235"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 450"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道450系電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q12858971"
+        },
+        {
+          "@id": "wd:Q575322"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q938861"
+        },
+        {
+          "@id": "wd:Q30602320"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "161"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q28054635"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2003"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス鉄道450系電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q918235"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 450"
+      "@id": "wd:Q575322",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Portsmouth Direct Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス鉄道450系電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q938861"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q918235#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q12858971#P3438"
+      },
+      "line": {
+        "@id": "wd:Q12858971"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q30602320"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "161"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
+      "@id": "wd:Q12858971",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lymington Branch Line"
+      }
     },
     {
-      "@id": "wd:Q28054635"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q918235#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q575322#P3438"
+      },
+      "line": {
+        "@id": "wd:Q575322"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2003"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

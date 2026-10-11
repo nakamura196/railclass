@@ -11,58 +11,124 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487246",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1487246"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "GT8-100C/2S"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487246",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487246#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487246#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1487246"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "GT8-100C/2S"
+        },
+        {
+          "@language": "ja",
+          "@value": "カールスルーエ・シュタットバーンGT8-100C/2S形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1487246"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "GT8-100C/2S"
+        },
+        {
+          "@language": "ja",
+          "@value": "カールスルーエ・シュタットバーンGT8-100C/2S形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q106450415"
+        },
+        {
+          "@id": "wd:Q874436"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q896547"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q822381"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "90"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3407658"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "カールスルーエ・シュタットバーンGT8-100C/2S形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1487246"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "GT8-100C/2S"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487246#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q874436#P3438"
+      },
+      "line": {
+        "@id": "wd:Q874436"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "カールスルーエ・シュタットバーンGT8-100C/2S形電車"
+      "@id": "wd:Q874436",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Karlsruhe Stadtbahn"
+      }
+    },
+    {
+      "@id": "wd:Q106450415",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "S 31"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487246#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q106450415#P3438"
+      },
+      "line": {
+        "@id": "wd:Q106450415"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q896547"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q822381"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "90"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q3407658"
-  }
+  ]
 }

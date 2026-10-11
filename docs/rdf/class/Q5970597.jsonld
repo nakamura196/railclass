@@ -11,46 +11,112 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970597",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q5970597"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "IE 29000 Class"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q5970597"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "IE 29000 Class"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q6071527"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q73043"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q27"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q838212"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q5197274"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2002"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970597#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3743407#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3743407"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970597#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5311032#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5311032"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970597",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970597#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970597#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q5970597"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IE 29000 Class"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q5970597"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "IE 29000 Class"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q3743407"
+        },
+        {
+          "@id": "wd:Q5311032"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q6071527"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q73043"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q27"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q838212"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q5197274"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2002"
+      }
+    },
+    {
+      "@id": "wd:Q5311032",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dublin–Navan railway line"
+      }
+    },
+    {
+      "@id": "wd:Q3743407",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dublin–Sligo railway line"
+      }
+    }
+  ]
 }

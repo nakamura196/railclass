@@ -11,55 +11,88 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2044009",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2044009"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "PESA 122N"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2044009",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2044009#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2044009"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "PESA 122N"
+        },
+        {
+          "@language": "ja",
+          "@value": "トラミカス"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q2044009"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "PESA 122N"
+        },
+        {
+          "@language": "ja",
+          "@value": "トラミカス"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q9395021"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q1817331"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "74"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q21094841"
+      },
+      "wdt:P930": {
+        "@id": "http://www.wikidata.org/entity/http://www.wikidata.org/.well-known/genid/a59703e8101beafaea227c3875b4079b"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "トラミカス"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q2044009"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "PESA 122N"
+      "@id": "wd:Q9395021",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Łódź Regional Tram"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "トラミカス"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2044009#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q9395021#P3438"
+      },
+      "line": {
+        "@id": "wd:Q9395021"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q1817331"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "74"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q21094841"
-  },
-  "wdt:P930": {
-    "@id": "http://www.wikidata.org/entity/http://www.wikidata.org/.well-known/genid/a59703e8101beafaea227c3875b4079b"
-  }
+  ]
 }

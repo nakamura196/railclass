@@ -11,51 +11,84 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20825880",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q20825880"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "SBB-CFF-FFS Be 4/6 12303–12342"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q20825880"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "SBB-CFF-FFS Be 4/6 12303–12342"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q83835"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q664420"
+      "@id": "wd:Q685114",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lausanne metro line M1"
+      }
     },
     {
-      "@id": "wd:Q669606"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20825880#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q685114#P3438"
+      },
+      "line": {
+        "@id": "wd:Q685114"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20825880",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20825880#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q20825880"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SBB-CFF-FFS Be 4/6 12303–12342"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q20825880"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "SBB-CFF-FFS Be 4/6 12303–12342"
+      },
+      "usedOn": {
+        "@id": "wd:Q685114"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83835"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q664420"
+        },
+        {
+          "@id": "wd:Q669606"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "75"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q1415234"
+      }
     }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "75"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q1415234"
-  }
+  ]
 }

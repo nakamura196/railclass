@@ -11,62 +11,95 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4735852",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4735852"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Alstom Metropolis C830"
+      "@id": "wd:Q2154003",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Circle Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "シンガポール地下鉄C830形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q4735852"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Alstom Metropolis C830"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4735852#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2154003#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2154003"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "シンガポール地下鉄C830形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4735852",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4735852#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4735852"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Alstom Metropolis C830"
+        },
+        {
+          "@language": "ja",
+          "@value": "シンガポール地下鉄C830形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q4735852"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Alstom Metropolis C830"
+        },
+        {
+          "@language": "ja",
+          "@value": "シンガポール地下鉄C830形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q2154003"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q3267863"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q334"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q662195"
+        }
+      ],
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q3267863"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q334"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
-    },
-    {
-      "@id": "wd:Q662195"
-    }
-  ],
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

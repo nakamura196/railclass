@@ -11,41 +11,74 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7011629",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7011629"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "New South Wales 600/700 class railcar"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q7011629"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "New South Wales 600/700 class railcar"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q1982888"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7011629#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q42954977#P3438"
+      },
+      "line": {
+        "@id": "wd:Q42954977"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q42954977"
+      "@id": "wd:Q42954977",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Byron Bay Railroad Company"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7011629",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7011629#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7011629"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "New South Wales 600/700 class railcar"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q7011629"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "New South Wales 600/700 class railcar"
+      },
+      "usedOn": {
+        "@id": "wd:Q42954977"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q1982888"
+        },
+        {
+          "@id": "wd:Q42954977"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q1982888"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q1982888"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  ]
 }

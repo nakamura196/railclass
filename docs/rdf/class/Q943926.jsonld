@@ -11,58 +11,124 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q943926",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q943926"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Norske tog Di 4"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q943926"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Norske tog Di 4"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q83825"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q943926",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q943926#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q943926#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q943926"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Norske tog Di 4"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q943926"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Norske tog Di 4"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q115328990"
+        },
+        {
+          "@id": "wd:Q1634815"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q83825"
+        },
+        {
+          "@id": "wd:Q7061278"
+        },
+        {
+          "@id": "wd:Q50291920"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q163580"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "140"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q19842071"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1022125"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1981"
+      }
     },
     {
-      "@id": "wd:Q7061278"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q943926#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q115328990#P3438"
+      },
+      "line": {
+        "@id": "wd:Q115328990"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q50291920"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q943926#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1634815#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1634815"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q1634815",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Nordland Line"
+      }
+    },
+    {
+      "@id": "wd:Q115328990",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "F7 Trondheim S–Bodø"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q163580"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "140"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q19842071"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1022125"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1981"
-  }
+  ]
 }

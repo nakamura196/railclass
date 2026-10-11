@@ -11,43 +11,80 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q98831592",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q98831592"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Henschel Riebeck type"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q98831592"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Henschel Riebeck type"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q163580"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "35"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q785745"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q26234727"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q98831592#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q801942#P3438"
+      },
+      "line": {
+        "@id": "wd:Q801942"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1951"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q98831592",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q98831592#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q98831592"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Henschel Riebeck type"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q98831592"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Henschel Riebeck type"
+      },
+      "usedOn": {
+        "@id": "wd:Q801942"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q163580"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "35"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q785745"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q26234727"
+      }
+    },
+    {
+      "@id": "wd:Q801942",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bahnstrecke Bergwitz–Kemberg"
+      }
+    }
+  ]
 }

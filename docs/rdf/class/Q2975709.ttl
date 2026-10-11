@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -26,5 +27,71 @@ cls:Q2975709 a skos:Concept,
     wdt:P2052 161.0 ;
     wdt:P279 wd:Q841722 ;
     wdt:P729 "2000"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line6> ;
+    tb:usedOn wd:Q16993741,
+        wd:Q2304428,
+        wd:Q5087674,
+        wd:Q529213,
+        wd:Q6735524,
+        wd:Q6807431 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16993741#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q16993741 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2304428#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2304428 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5087674#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5087674 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q529213#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q529213 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6735524#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6735524 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2975709#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6807431#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6807431 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q16993741 rdfs:label "Hastings line"@en .
+
+wd:Q2304428 rdfs:label "South Eastern main line"@en .
+
+wd:Q5087674 rdfs:label "Chatham Main Line"@en .
+
+wd:Q529213 rdfs:label "North Kent Line"@en .
+
+wd:Q6735524 rdfs:label "Maidstone East Line"@en .
+
+wd:Q6807431 rdfs:label "Medway Valley Line"@en .
 

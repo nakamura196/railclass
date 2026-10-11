@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,27 @@ cls:Q4770499 a skos:Concept,
     wdt:P137 wd:Q1339558 ;
     wdt:P176 wd:Q904589 ;
     wdt:P279 wd:Q4102249 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q4770499#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4770499#line2> ;
+    tb:usedOn wd:Q2778331,
+        wd:Q3916689 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4770499#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2778331#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2778331 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4770499#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3916689#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3916689 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2778331 rdfs:label "B Line"@en .
+
+wd:Q3916689 rdfs:label "D Line"@en .
 

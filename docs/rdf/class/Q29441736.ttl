@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,49 @@ cls:Q29441736 a skos:Concept,
     wdt:P176 wd:Q1592306 ;
     wdt:P279 wd:Q15825863,
         wd:Q3407658 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q29441736#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q29441736#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q29441736#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q29441736#line4> ;
+    tb:usedOn wd:Q2482571,
+        wd:Q3267759,
+        wd:Q4993859,
+        wd:Q5184164 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q29441736#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2482571#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2482571 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q29441736#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3267759#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3267759 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q29441736#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4993859#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4993859 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q29441736#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5184164#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5184164 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2482571 rdfs:label "C Line"@en .
+
+wd:Q3267759 rdfs:label "A Line"@en .
+
+wd:Q4993859 rdfs:label "E Line"@en .
+
+wd:Q5184164 rdfs:label "K Line"@en .
 

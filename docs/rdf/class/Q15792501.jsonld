@@ -11,36 +11,69 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15792501",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q15792501"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Tram class G in Munich"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q15792501"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Tram class G in Munich"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q28024084"
-  },
-  "wdt:P930": {
-    "@id": "http://www.wikidata.org/entity/http://www.wikidata.org/.well-known/genid/e043e8f8ded06877f82400af7ba9956b"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15792501",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15792501#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q15792501"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tram class G in Munich"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q15792501"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Tram class G in Munich"
+      },
+      "usedOn": {
+        "@id": "wd:Q526596"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q28024084"
+      },
+      "wdt:P930": {
+        "@id": "http://www.wikidata.org/entity/http://www.wikidata.org/.well-known/genid/e043e8f8ded06877f82400af7ba9956b"
+      }
+    },
+    {
+      "@id": "wd:Q526596",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Munich Tramway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15792501#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q526596#P3438"
+      },
+      "line": {
+        "@id": "wd:Q526596"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

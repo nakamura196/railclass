@@ -11,72 +11,109 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q751903",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q751903"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 312"
+      "@id": "wd:Q106104076",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "London, Tilbury and Southend line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄クラス312電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q751903#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q106104076#P3438"
+      },
+      "line": {
+        "@id": "wd:Q106104076"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2003"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q751903",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q751903#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q751903"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 312"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄クラス312電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q751903"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 312"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄クラス312電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q106104076"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q286262"
+        },
+        {
+          "@id": "wd:Q6670591"
+        },
+        {
+          "@id": "wd:Q1967136"
+        },
+        {
+          "@id": "wd:Q5330408"
+        },
+        {
+          "@id": "wd:Q5453058"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q18160582"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1975"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q751903"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 312"
-    },
-    {
-      "@language": "ja",
-      "@value": "イギリス国鉄クラス312電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q286262"
-    },
-    {
-      "@id": "wd:Q6670591"
-    },
-    {
-      "@id": "wd:Q1967136"
-    },
-    {
-      "@id": "wd:Q5330408"
-    },
-    {
-      "@id": "wd:Q5453058"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q18160582"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1975"
-  }
+  ]
 }

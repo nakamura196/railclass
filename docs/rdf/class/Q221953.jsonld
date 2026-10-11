@@ -11,51 +11,88 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q221953",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q221953"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "TCDD E8000"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q221953"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "TCDD E8000"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q499967"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q309084"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q221953",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q221953#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q221953"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "TCDD E8000"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q221953"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "TCDD E8000"
+      },
+      "usedOn": {
+        "@id": "wd:Q8080232"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q499967"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q309084"
+        },
+        {
+          "@id": "wd:Q695014"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1955"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
     },
     {
-      "@id": "wd:Q695014"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q221953#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q8080232#P3438"
+      },
+      "line": {
+        "@id": "wd:Q8080232"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2011"
+      }
+    },
+    {
+      "@id": "wd:Q8080232",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sirkeci suburban"
+      }
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1955"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  ]
 }

@@ -11,45 +11,111 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q27963794",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q27963794"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Stadler Metelitsa"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q27963794#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q42894086#P3438"
+      },
+      "line": {
+        "@id": "wd:Q42894086"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "メテリツァ (路面電車車両)"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q27963794"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Stadler Metelitsa"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q27963794#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q114312991#P3438"
+      },
+      "line": {
+        "@id": "wd:Q114312991"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "メテリツァ (路面電車車両)"
+      "@id": "wd:Q114312991",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Red Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q27963794",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q27963794#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q27963794#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q27963794"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Stadler Metelitsa"
+        },
+        {
+          "@language": "ja",
+          "@value": "メテリツァ (路面電車車両)"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q27963794"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Stadler Metelitsa"
+        },
+        {
+          "@language": "ja",
+          "@value": "メテリツァ (路面電車車両)"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q114312991"
+        },
+        {
+          "@id": "wd:Q42894086"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q5063597"
+      }
+    },
+    {
+      "@id": "wd:Q42894086",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mi Tren"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q5063597"
-  }
+  ]
 }

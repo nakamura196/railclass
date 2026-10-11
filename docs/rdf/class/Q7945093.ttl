@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,5 +19,16 @@ cls:Q7945093 a skos:Concept,
     prov:wasDerivedFrom wd:Q7945093 ;
     wdt:P176 wd:Q6811935 ;
     wdt:P279 wd:Q3407658 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q7945093#line1> ;
+    tb:usedOn wd:Q5123100 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q7945093#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5123100#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5123100 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5123100 rdfs:label "City Circle"@en .
 

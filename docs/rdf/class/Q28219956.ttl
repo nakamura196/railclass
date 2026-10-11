@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,49 @@ cls:Q28219956 a skos:Concept,
     wdt:P176 wd:Q152517 ;
     wdt:P279 wd:Q483373 ;
     wdt:P729 "2014"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line4> ;
+    tb:usedOn wd:Q5347760,
+        wd:Q55105894,
+        wd:Q7058666,
+        wd:Q7570092 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5347760#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5347760 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q55105894#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q55105894 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7058666#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7058666 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7570092#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7570092 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5347760 rdfs:label "İZBAN"@en .
+
+wd:Q55105894 rdfs:label "Central Line"@en .
+
+wd:Q7058666 rdfs:label "Northern Line"@en .
+
+wd:Q7570092 rdfs:label "Southern Line"@en .
 

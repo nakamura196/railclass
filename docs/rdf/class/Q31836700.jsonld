@@ -11,45 +11,78 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q31836700",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q31836700"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q31836700"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q682656"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1130135"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q28"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q1008067"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "30"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q752392"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q2037045"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1929"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q31836700#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1130135#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1130135"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q31836700",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q31836700#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q31836700"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q31836700"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "usedOn": {
+        "@id": "wd:Q1130135"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q682656"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1130135"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q28"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q1008067"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "30"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q752392"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q2037045"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1929"
+      }
+    },
+    {
+      "@id": "wd:Q1130135",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lillafüred Forest Train"
+      }
+    }
+  ]
 }

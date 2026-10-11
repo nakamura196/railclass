@@ -11,36 +11,102 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q25245445",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q25245445"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Mitsubishi Heavy Industries Crystal Mover C810/C810A"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q25245445"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Mitsubishi Heavy Industries Crystal Mover C810/C810A"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q2661305"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q648280"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1685852"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q25245445",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q25245445#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q25245445#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q25245445"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mitsubishi Heavy Industries Crystal Mover C810/C810A"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q25245445"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Mitsubishi Heavy Industries Crystal Mover C810/C810A"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q6133879"
+        },
+        {
+          "@id": "wd:Q6134179"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q2661305"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q648280"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1685852"
+      }
+    },
+    {
+      "@id": "wd:Q6133879",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sengkang LRT line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q25245445#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6133879#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6133879"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q25245445#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6134179#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6134179"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q6134179",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Punggol LRT line"
+      }
+    }
+  ]
 }

@@ -11,38 +11,71 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11064614",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q11064614"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Bombardier MOVIA 456 A2/A3"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q11064614"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Bombardier MOVIA 456 A2/A3"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q688893"
+      "@id": "wd:Q862965",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 8"
+      }
     },
     {
-      "@id": "wd:Q15914660"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11064614#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q862965#P3438"
+      },
+      "line": {
+        "@id": "wd:Q862965"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11064614",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11064614#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q11064614"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bombardier MOVIA 456 A2/A3"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q11064614"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Bombardier MOVIA 456 A2/A3"
+      },
+      "usedOn": {
+        "@id": "wd:Q862965"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q688893"
+        },
+        {
+          "@id": "wd:Q15914660"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

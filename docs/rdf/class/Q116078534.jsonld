@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q116078534",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q116078534"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "SBB RABe 512"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q116078534",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q116078534#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q116078534"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SBB RABe 512"
+        },
+        {
+          "@language": "ja",
+          "@value": "スイス国鉄RABe512形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q116078534"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SBB RABe 512"
+        },
+        {
+          "@language": "ja",
+          "@value": "スイス国鉄RABe512形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q137407349"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83835"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q39"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q672992"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "スイス国鉄RABe512形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q116078534"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "SBB RABe 512"
+      "@id": "wd:Q137407349",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IR 55"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "スイス国鉄RABe512形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q116078534#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q137407349#P3438"
+      },
+      "line": {
+        "@id": "wd:Q137407349"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q83835"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q39"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q672992"
-  }
+  ]
 }

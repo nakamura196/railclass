@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,71 @@ cls:Q3497150 a skos:Concept,
     wdt:P176 wd:Q568501 ;
     wdt:P279 wd:Q19842071 ;
     wdt:P2978 wd:Q1014107 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line6> ;
+    tb:usedOn wd:Q11328810,
+        wd:Q3204410,
+        wd:Q4891507,
+        wd:Q6736006,
+        wd:Q6941488,
+        wd:Q7230730 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q11328810#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q11328810 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3204410#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3204410 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4891507#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4891507 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6736006#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6736006 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6941488#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6941488 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3497150#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7230730#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7230730 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q11328810 rdfs:label "Pascack Valley Line"@en .
+
+wd:Q3204410 rdfs:label "The Ocean"@en .
+
+wd:Q4891507 rdfs:label "Bergen County Line"@en .
+
+wd:Q6736006 rdfs:label "Main Line"@en .
+
+wd:Q6941488 rdfs:label "WeGo Star"@en .
+
+wd:Q7230730 rdfs:label "Port Jervis Line"@en .
 

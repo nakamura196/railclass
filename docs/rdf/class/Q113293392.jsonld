@@ -11,44 +11,77 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q113293392",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q113293392"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "SSB ZT 4.2"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q113293392"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "SSB ZT 4.2"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q2359602"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q16936947"
+      "@id": "wd:Q143861",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Stuttgart Rack Railway"
+      }
     },
     {
-      "@id": "wd:Q50398146"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q113293392",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q113293392#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q113293392"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SSB ZT 4.2"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q113293392"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "SSB ZT 4.2"
+      },
+      "usedOn": {
+        "@id": "wd:Q143861"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q2359602"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q16936947"
+        },
+        {
+          "@id": "wd:Q50398146"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q113293392#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q143861#P3438"
+      },
+      "line": {
+        "@id": "wd:Q143861"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

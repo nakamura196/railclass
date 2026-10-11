@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,16 @@ cls:Q527098 a skos:Concept,
         wd:Q2747143 ;
     wdt:P176 wd:Q391895 ;
     wdt:P279 wd:Q1567915 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q527098#line1> ;
+    tb:usedOn wd:Q4176756 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q527098#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4176756#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4176756 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4176756 rdfs:label "Nærum Line"@en .
 

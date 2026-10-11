@@ -11,49 +11,115 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q820678",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q820678"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Renfe Class 334"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q820678"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Renfe Class 334"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q3319112"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q2476154"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q29"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q689256"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q19842071"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2006"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q17166965",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trenhotel Lusitania"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q820678",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q820678#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q820678#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q820678"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Renfe Class 334"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q820678"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Renfe Class 334"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q136377421"
+        },
+        {
+          "@id": "wd:Q17166965"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q3319112"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q2476154"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q29"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q689256"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q19842071"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2006"
+      }
+    },
+    {
+      "@id": "wd:Q136377421",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Talgo Mare Nostrum"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q820678#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q136377421#P3438"
+      },
+      "line": {
+        "@id": "wd:Q136377421"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q820678#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q17166965#P3438"
+      },
+      "line": {
+        "@id": "wd:Q17166965"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

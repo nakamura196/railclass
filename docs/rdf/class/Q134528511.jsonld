@@ -11,31 +11,64 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q134528511",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q134528511"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q134528511"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q133284972"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q688893"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q572856"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q122667947",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ligne 6"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q134528511#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q122667947#P3438"
+      },
+      "line": {
+        "@id": "wd:Q122667947"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q134528511",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q134528511#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q134528511"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q134528511"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "usedOn": {
+        "@id": "wd:Q122667947"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q133284972"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q688893"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q572856"
+      }
+    }
+  ]
 }

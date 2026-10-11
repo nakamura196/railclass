@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -25,5 +26,38 @@ cls:Q3721997 a skos:Concept,
     wdt:P2052 140.0 ;
     wdt:P279 wd:Q483373 ;
     wdt:P930 wd:Q1415234 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line3> ;
+    tb:usedOn wd:Q256524,
+        wd:Q481504,
+        wd:Q95709 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q256524#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q256524 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q481504#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q481504 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q95709#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q95709 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q481504 rdfs:label "Hanover S-Bahn"@en .
+
+wd:Q95709 rdfs:label "Cologne S-Bahn"@en .
+
+wd:Q256524 rdfs:label "Munich S-Bahn"@en .
 

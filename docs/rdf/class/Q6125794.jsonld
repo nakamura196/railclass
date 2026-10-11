@@ -11,45 +11,78 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6125794",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q6125794"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "RENFE class 436/437/438"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6125794#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q11904065#P3438"
+      },
+      "line": {
+        "@id": "wd:Q11904065"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "レンフェ436系電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q6125794"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "RENFE class 436/437/438"
+      "@id": "wd:Q11904065",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "1979 Franqueses del Vallès rail accident"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "レンフェ436系電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6125794",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6125794#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q6125794"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "RENFE class 436/437/438"
+        },
+        {
+          "@language": "ja",
+          "@value": "レンフェ436系電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q6125794"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "RENFE class 436/437/438"
+        },
+        {
+          "@language": "ja",
+          "@value": "レンフェ436系電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q11904065"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83910"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q29"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q83910"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q29"
-  }
+  ]
 }

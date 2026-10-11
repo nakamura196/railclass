@@ -11,36 +11,73 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3246927",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3246927"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "SNCF Class Z 11500"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q3246927"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "SNCF Class Z 11500"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q13646"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q142"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3246927#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1983246#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1983246"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      }
+    },
+    {
+      "@id": "wd:Q1983246",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "TER Alsace"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3246927",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3246927#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3246927"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SNCF Class Z 11500"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q3246927"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "SNCF Class Z 11500"
+      },
+      "usedOn": {
+        "@id": "wd:Q1983246"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q13646"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q142"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    }
+  ]
 }

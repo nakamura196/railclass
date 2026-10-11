@@ -11,68 +11,134 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q856438"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "China Railway CRH5"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q856438"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "China Railway CRH5"
+        },
+        {
+          "@language": "ja",
+          "@value": "中国高速鉄道CRH5型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q856438"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "China Railway CRH5"
+        },
+        {
+          "@language": "ja",
+          "@value": "中国高速鉄道CRH5型電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q10877282"
+        },
+        {
+          "@id": "wd:Q873605"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1038182"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q148"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q309084"
+        },
+        {
+          "@id": "wd:Q15914660"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "250"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q20795192"
+        },
+        {
+          "@id": "wd:Q29523365"
+        }
+      ]
     },
     {
-      "@language": "ja",
-      "@value": "中国高速鉄道CRH5型電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q856438"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "China Railway CRH5"
+      "@id": "wd:Q873605",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Qinhuangdao–Shenyang high-speed railway"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "中国高速鉄道CRH5型電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1038182"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q148"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q309084"
+      "@id": "wd:Q10877282",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dandong–Dalian intercity railway"
+      }
     },
     {
-      "@id": "wd:Q15914660"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "250"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q20795192"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q873605#P3438"
+      },
+      "line": {
+        "@id": "wd:Q873605"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q29523365"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10877282#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10877282"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

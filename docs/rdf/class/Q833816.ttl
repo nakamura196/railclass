@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,16 @@ cls:Q833816 a skos:Concept,
         wd:Q19842071 ;
     wdt:P2978 wd:Q1014107,
         wd:Q1022125 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q833816#line1> ;
+    tb:usedOn wd:Q1382191 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q833816#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1382191#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1382191 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1382191 rdfs:label "Transdev Regio Ost"@en .
 

@@ -11,51 +11,146 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303824",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3303824"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 171"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303824",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3303824"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 171"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄171形気動車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q3303824"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 171"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄171形気動車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q1277792"
+        },
+        {
+          "@id": "wd:Q14953694"
+        },
+        {
+          "@id": "wd:Q1902800"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q1258373"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q16"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q688893"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3303940"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄171形気動車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q3303824"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 171"
+      "@id": "wd:Q1277792",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "East Coastway Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄171形気動車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1277792#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1277792"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q14953694#P3438"
+      },
+      "line": {
+        "@id": "wd:Q14953694"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1902800#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1902800"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q14953694",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Oxted Line"
+      }
+    },
+    {
+      "@id": "wd:Q1902800",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Marshlink Line"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q1258373"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q16"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q688893"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q3303940"
-  }
+  ]
 }

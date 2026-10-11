@@ -11,86 +11,152 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q381106",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q381106"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Cityrunner"
+      "@id": "wd:Q9395021",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Łódź Regional Tram"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "シティーランナー"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q381106#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q9395021#P3438"
+      },
+      "line": {
+        "@id": "wd:Q9395021"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q676266",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "trams in Geneva"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q381106",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q381106#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q381106#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q381106"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Cityrunner"
+        },
+        {
+          "@language": "ja",
+          "@value": "シティーランナー"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q381106"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Cityrunner"
+        },
+        {
+          "@language": "ja",
+          "@value": "シティーランナー"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q676266"
+        },
+        {
+          "@id": "wd:Q9395021"
+        }
+      ],
+      "wdt:P137": [
+        {
+          "@id": "wd:Q760573"
+        },
+        {
+          "@id": "wd:Q750832"
+        },
+        {
+          "@id": "wd:Q876786"
+        },
+        {
+          "@id": "wd:Q402899"
+        },
+        {
+          "@id": "wd:Q677004"
+        },
+        {
+          "@id": "wd:Q11780295"
+        },
+        {
+          "@id": "wd:Q1631655"
+        },
+        {
+          "@id": "wd:Q1664245"
+        },
+        {
+          "@id": "wd:Q17978"
+        },
+        {
+          "@id": "wd:Q3454986"
+        },
+        {
+          "@id": "wd:Q2208780"
+        },
+        {
+          "@id": "wd:Q3601014"
+        },
+        {
+          "@id": "wd:Q49842804"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q333498"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q260254"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q381106#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q676266#P3438"
+      },
+      "line": {
+        "@id": "wd:Q676266"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q381106"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Cityrunner"
-    },
-    {
-      "@language": "ja",
-      "@value": "シティーランナー"
-    }
-  ],
-  "wdt:P137": [
-    {
-      "@id": "wd:Q760573"
-    },
-    {
-      "@id": "wd:Q750832"
-    },
-    {
-      "@id": "wd:Q876786"
-    },
-    {
-      "@id": "wd:Q402899"
-    },
-    {
-      "@id": "wd:Q677004"
-    },
-    {
-      "@id": "wd:Q11780295"
-    },
-    {
-      "@id": "wd:Q1631655"
-    },
-    {
-      "@id": "wd:Q1664245"
-    },
-    {
-      "@id": "wd:Q17978"
-    },
-    {
-      "@id": "wd:Q3454986"
-    },
-    {
-      "@id": "wd:Q2208780"
-    },
-    {
-      "@id": "wd:Q3601014"
-    },
-    {
-      "@id": "wd:Q49842804"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q333498"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q260254"
-  }
+  ]
 }

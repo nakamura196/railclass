@@ -11,30 +11,63 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1227404",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1227404"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Pesa 120Nb"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1227404"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Pesa 120Nb"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q833824",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "trams in Szeged"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1227404",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1227404#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1227404"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Pesa 120Nb"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1227404"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Pesa 120Nb"
+      },
+      "usedOn": {
+        "@id": "wd:Q833824"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1227404#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q833824#P3438"
+      },
+      "line": {
+        "@id": "wd:Q833824"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

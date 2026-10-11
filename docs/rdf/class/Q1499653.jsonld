@@ -11,74 +11,140 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499653",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1499653"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Alstom Citadis 200"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499653#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3537081#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3537081"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "NGT8D型"
+      "@id": "wd:Q3537081",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Braunschweig"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499653",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499653#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499653#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1499653"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Alstom Citadis 200"
+        },
+        {
+          "@language": "ja",
+          "@value": "NGT8D型"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1499653"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Alstom Citadis 200"
+        },
+        {
+          "@language": "ja",
+          "@value": "NGT8D型"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q1411089"
+        },
+        {
+          "@id": "wd:Q3537081"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q901999"
+        },
+        {
+          "@id": "wd:Q1449258"
+        },
+        {
+          "@id": "wd:Q1883929"
+        },
+        {
+          "@id": "wd:Q43402515"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q309084"
+        },
+        {
+          "@id": "wd:Q432790"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "70"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q355477"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499653#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1411089#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1411089"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q1411089",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Magdeburg"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1499653"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Alstom Citadis 200"
-    },
-    {
-      "@language": "ja",
-      "@value": "NGT8D型"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q901999"
-    },
-    {
-      "@id": "wd:Q1449258"
-    },
-    {
-      "@id": "wd:Q1883929"
-    },
-    {
-      "@id": "wd:Q43402515"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q309084"
-    },
-    {
-      "@id": "wd:Q432790"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "70"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q355477"
-  }
+  ]
 }

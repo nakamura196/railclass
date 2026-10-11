@@ -11,33 +11,66 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2659649",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2659649"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Tram class A in Munich"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q2659649"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Tram class A in Munich"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q1724325"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2659649",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2659649#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2659649"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tram class A in Munich"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q2659649"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Tram class A in Munich"
+      },
+      "usedOn": {
+        "@id": "wd:Q526596"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q1724325"
+      }
+    },
+    {
+      "@id": "wd:Q526596",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Munich Tramway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2659649#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q526596#P3438"
+      },
+      "line": {
+        "@id": "wd:Q526596"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

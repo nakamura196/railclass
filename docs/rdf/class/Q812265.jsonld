@@ -11,55 +11,88 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q812265",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q812265"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Bavarian Pts 3/4"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q812265"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Bavarian Pts 3/4"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q564937"
+      "@id": "wd:Q1158878",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Neuötting–Altötting steam tramway"
+      }
     },
     {
-      "@id": "wd:Q698082"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q812265#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1158878#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1158878"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q812265",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q812265#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q812265"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bavarian Pts 3/4"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q812265"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Bavarian Pts 3/4"
+      },
+      "usedOn": {
+        "@id": "wd:Q1158878"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q564937"
+        },
+        {
+          "@id": "wd:Q698082"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q16283636"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "30"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q785745"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q26208367"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1906"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q16283636"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "30"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q785745"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q26208367"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1906"
-  }
+  ]
 }

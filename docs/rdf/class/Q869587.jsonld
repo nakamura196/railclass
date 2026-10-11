@@ -11,52 +11,118 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q869587",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q869587"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "SBB RABDe 500"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q869587",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q869587#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q869587#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q869587"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SBB RABDe 500"
+        },
+        {
+          "@language": "ja",
+          "@value": "スイス国鉄RABDe500形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q869587"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SBB RABDe 500"
+        },
+        {
+          "@language": "ja",
+          "@value": "スイス国鉄RABDe500形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q115932346"
+        },
+        {
+          "@id": "wd:Q115932401"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q378767"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "200"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "スイス国鉄RABDe500形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q869587"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "SBB RABDe 500"
+      "@id": "wd:Q115932401",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IC 51"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "スイス国鉄RABDe500形電車"
+      "@id": "wd:Q115932346",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IC 5"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q869587#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q115932346#P3438"
+      },
+      "line": {
+        "@id": "wd:Q115932346"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q869587#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q115932401#P3438"
+      },
+      "line": {
+        "@id": "wd:Q115932401"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q378767"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "200"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

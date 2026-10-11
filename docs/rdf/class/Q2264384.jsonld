@@ -11,43 +11,109 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2264384",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2264384"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Renfe class 524"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q2264384"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Renfe class 524"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q2476154"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q29"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3210519"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "80"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2264384#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3109506#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3109506"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2264384",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2264384#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2264384#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2264384"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Renfe class 524"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q2264384"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Renfe class 524"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q2842994"
+        },
+        {
+          "@id": "wd:Q3109506"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q2476154"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q29"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3210519"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "80"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2264384#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2842994#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2842994"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q3109506",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Media Distancia Renfe"
+      }
+    },
+    {
+      "@id": "wd:Q2842994",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Renfe Regionales"
+      }
+    }
+  ]
 }

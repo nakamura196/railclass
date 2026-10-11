@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -24,5 +25,71 @@ cls:Q862570 a skos:Concept,
     wdt:P2052 160.0 ;
     wdt:P279 wd:Q5204383,
         wd:Q671188 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line6> ;
+    tb:usedOn wd:Q113462371,
+        wd:Q113462372,
+        wd:Q113462373,
+        wd:Q113462374,
+        wd:Q113462494,
+        wd:Q1885609 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q113462371#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q113462371 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q113462372#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q113462372 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q113462373#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q113462373 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q113462374#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q113462374 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q113462494#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q113462494 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q862570#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1885609#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1885609 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q113462371 rdfs:label "RE 30"@en .
+
+wd:Q113462372 rdfs:label "RE 31 (Bavaria)"@en .
+
+wd:Q113462373 rdfs:label "RE 32 (Bavaria)"@en .
+
+wd:Q113462374 rdfs:label "RE 33"@en .
+
+wd:Q113462494 rdfs:label "RE 35 (Bavaria)"@en .
+
+wd:Q1885609 rdfs:label "Mainfranken-Thüringen-Express"@en .
 

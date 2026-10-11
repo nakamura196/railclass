@@ -11,50 +11,83 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q134001801",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q134001801"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Taipei Metro Wanda Line EMU"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q134001801"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Taipei Metro Wanda Line EMU"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q11411921"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q865"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q483373"
+      "@id": "wd:Q19853362",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Wanda–Zhonghe–Shulin line"
+      }
     },
     {
-      "@id": "wd:Q662195"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q134001801#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q19853362#P3438"
+      },
+      "line": {
+        "@id": "wd:Q19853362"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q134001801",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q134001801#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q134001801"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Taipei Metro Wanda Line EMU"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q134001801"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Taipei Metro Wanda Line EMU"
+      },
+      "usedOn": {
+        "@id": "wd:Q19853362"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q11411921"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q865"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q662195"
+        }
+      ],
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
     }
-  ],
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

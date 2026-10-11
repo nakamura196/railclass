@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -24,5 +25,82 @@ cls:Q3425407 a skos:Concept,
     wdt:P2052 100.0 ;
     wdt:P279 wd:Q483373 ;
     wdt:P930 wd:Q21251675 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line7> ;
+    tb:usedOn wd:Q167503,
+        wd:Q3239078,
+        wd:Q3832677,
+        wd:Q4802044,
+        wd:Q4802702,
+        wd:Q685485,
+        wd:Q8880127 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q167503#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q167503 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3239078#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3239078 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3832677#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3832677 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4802044#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4802044 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4802702#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4802702 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q685485#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q685485 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3425407#line7> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q8880127#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q8880127 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q167503 rdfs:label "Cercanías Málaga"@en .
+
+wd:Q3239078 rdfs:label "C-1 line (Cercanías Bilbao)"@en .
+
+wd:Q3832677 rdfs:label "Line C-5"@en .
+
+wd:Q4802044 rdfs:label "C-3 line (Cercanías Bilbao)"@en .
+
+wd:Q4802702 rdfs:label "C-2 line (Cercanías Bilbao)"@en .
+
+wd:Q685485 rdfs:label "Cercanías Bilbao"@en .
+
+wd:Q8880127 rdfs:label "Line C-8"@en .
 

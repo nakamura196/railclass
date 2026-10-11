@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,38 @@ cls:Q50318679 a skos:Concept,
     wdt:P2052 420.0 ;
     wdt:P279 wd:Q22100858 ;
     wdt:P930 wd:Q106530439 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q50318679#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q50318679#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q50318679#line3> ;
+    tb:usedOn wd:Q10902104,
+        wd:Q22712677,
+        wd:Q85886652 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q50318679#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q10902104#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q10902104 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q50318679#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q22712677#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q22712677 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q50318679#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q85886652#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q85886652 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q10902104 rdfs:label "Beijing underground cross-city railway"@en .
+
+wd:Q22712677 rdfs:label "Beijing–Guangzhou High-Speed Railway"@en .
+
+wd:Q85886652 rdfs:label "Jakarta-Bandung high-speed railway"@en .
 

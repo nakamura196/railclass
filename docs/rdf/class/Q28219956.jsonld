@@ -11,43 +11,167 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q28219956",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q28219956"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "İZBAN E22100"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q28219956"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "İZBAN E22100"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q16850711"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q43"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q152517"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2014"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q28219956",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line4"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q28219956"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "İZBAN E22100"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q28219956"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "İZBAN E22100"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q5347760"
+        },
+        {
+          "@id": "wd:Q55105894"
+        },
+        {
+          "@id": "wd:Q7058666"
+        },
+        {
+          "@id": "wd:Q7570092"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q16850711"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q43"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q152517"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7058666#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7058666"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line4",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7570092#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7570092"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5347760#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5347760"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q55105894",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Central Line"
+      }
+    },
+    {
+      "@id": "wd:Q5347760",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "İZBAN"
+      }
+    },
+    {
+      "@id": "wd:Q7058666",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Northern Line"
+      }
+    },
+    {
+      "@id": "wd:Q7570092",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Southern Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q28219956#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q55105894#P3438"
+      },
+      "line": {
+        "@id": "wd:Q55105894"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

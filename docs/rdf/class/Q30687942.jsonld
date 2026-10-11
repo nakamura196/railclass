@@ -11,59 +11,183 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q30687942"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "X'Trapolis Mega"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line4"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q30687942"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "X'Trapolis Mega"
+        },
+        {
+          "@language": "ja",
+          "@value": "エクストラポリス・メガ"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q30687942"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "X'Trapolis Mega"
+        },
+        {
+          "@language": "ja",
+          "@value": "エクストラポリス・メガ"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q5034802"
+        },
+        {
+          "@id": "wd:Q5061363"
+        },
+        {
+          "@id": "wd:Q7058663"
+        },
+        {
+          "@id": "wd:Q7570093"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1193463"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1434734"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q258"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q309084"
+        },
+        {
+          "@id": "wd:Q30687943"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "エクストラポリス・メガ"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q30687942"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "X'Trapolis Mega"
+      "@id": "wd:Q7570093",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Southern Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "エクストラポリス・メガ"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1193463"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1434734"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q258"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q309084"
+      "@id": "wd:Q7058663",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Northern Line"
+      }
     },
     {
-      "@id": "wd:Q30687943"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5061363#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5061363"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5034802#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5034802"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line4",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7570093#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7570093"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q5034802",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cape Flats Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7058663#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7058663"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q5061363",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Central Line"
+      }
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

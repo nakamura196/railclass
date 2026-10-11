@@ -11,63 +11,96 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155175",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1155175"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "DRG Class 99.32"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1155175"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "DRG Class 99.32"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q10397424"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q698082"
+      "@id": "wd:Q117462947",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Molli"
+      }
     },
     {
-      "@id": "wd:Q700563"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q16957"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q652491"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155175",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155175#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1155175"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "DRG Class 99.32"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1155175"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "DRG Class 99.32"
+      },
+      "usedOn": {
+        "@id": "wd:Q117462947"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q10397424"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q698082"
+        },
+        {
+          "@id": "wd:Q700563"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q16957"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q652491"
+        },
+        {
+          "@id": "wd:Q1158839"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "50"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q785745"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q26198128"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1932"
+      }
     },
     {
-      "@id": "wd:Q1158839"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155175#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q117462947#P3438"
+      },
+      "line": {
+        "@id": "wd:Q117462947"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "50"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q785745"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q26198128"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1932"
-  }
+  ]
 }

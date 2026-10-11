@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2633939",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2633939"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Achenseebahn 1 to 4"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q2633939"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Achenseebahn 1 to 4"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q163504"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q40"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q477493"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q785745"
+      "@id": "wd:Q163504",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Achensee railway line"
+      }
     },
     {
-      "@id": "wd:Q143872"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2633939#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q163504#P3438"
+      },
+      "line": {
+        "@id": "wd:Q163504"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2633939",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2633939#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2633939"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Achenseebahn 1 to 4"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q2633939"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Achenseebahn 1 to 4"
+      },
+      "usedOn": {
+        "@id": "wd:Q163504"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q163504"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q40"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q477493"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q785745"
+        },
+        {
+          "@id": "wd:Q143872"
+        }
+      ],
+      "wdt:P2978": {
+        "@id": "wd:Q26234727"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1889"
+      }
     }
-  ],
-  "wdt:P2978": {
-    "@id": "wd:Q26234727"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1889"
-  }
+  ]
 }

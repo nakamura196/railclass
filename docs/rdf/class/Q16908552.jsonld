@@ -11,48 +11,114 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16908552",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q16908552"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Korail Class 210000"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16908552#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q134342376#P3438"
+      },
+      "line": {
+        "@id": "wd:Q134342376"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "韓国鉄道公社210000系電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q16908552"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Korail Class 210000"
+      "@id": "wd:Q125404068",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Gyeongbu Line (ITX-Saemaeul)"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "韓国鉄道公社210000系電車"
+      "@id": "wd:Q134342376",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Honam Line (ITX-Saemaeul)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16908552#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q125404068#P3438"
+      },
+      "line": {
+        "@id": "wd:Q125404068"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16908552",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16908552#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16908552#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q16908552"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Korail Class 210000"
+        },
+        {
+          "@language": "ja",
+          "@value": "韓国鉄道公社210000系電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q16908552"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Korail Class 210000"
+        },
+        {
+          "@language": "ja",
+          "@value": "韓国鉄道公社210000系電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q125404068"
+        },
+        {
+          "@id": "wd:Q134342376"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q18169"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q152517"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q18169"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q152517"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

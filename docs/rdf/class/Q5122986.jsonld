@@ -11,48 +11,114 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122986",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q5122986"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "V set"
+      "@id": "wd:Q4929552",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Blue Mountains Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "NSWトレインリンクV形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q5122986"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "V set"
+      "@id": "wd:Q7428218",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Central Coast & Newcastle Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "NSWトレインリンクV形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122986#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7428218#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7428218"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122986#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4929552#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4929552"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122986",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122986#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122986#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q5122986"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "V set"
+        },
+        {
+          "@language": "ja",
+          "@value": "NSWトレインリンクV形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q5122986"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "V set"
+        },
+        {
+          "@language": "ja",
+          "@value": "NSWトレインリンクV形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q4929552"
+        },
+        {
+          "@id": "wd:Q7428218"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q6955406"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q5153737"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q6955406"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q5153737"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

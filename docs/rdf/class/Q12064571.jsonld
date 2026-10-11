@@ -11,48 +11,143 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12064571",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q12064571"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "New Zealand FP class electric multiple unit"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q16926948#P3438"
+      },
+      "line": {
+        "@id": "wd:Q16926948"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ニュージーランド鉄道FP形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q12064571"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "New Zealand FP class electric multiple unit"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q16926970#P3438"
+      },
+      "line": {
+        "@id": "wd:Q16926970"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ニュージーランド鉄道FP形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6813114#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6813114"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q16926970",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kapiti Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12064571",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q12064571"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "New Zealand FP class electric multiple unit"
+        },
+        {
+          "@language": "ja",
+          "@value": "ニュージーランド鉄道FP形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q12064571"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "New Zealand FP class electric multiple unit"
+        },
+        {
+          "@language": "ja",
+          "@value": "ニュージーランド鉄道FP形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q16926948"
+        },
+        {
+          "@id": "wd:Q16926970"
+        },
+        {
+          "@id": "wd:Q6813114"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q24088909"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q152517"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "wd:Q16926948",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Johnsonville Line"
+      }
+    },
+    {
+      "@id": "wd:Q6813114",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Melling Branch"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q24088909"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q152517"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

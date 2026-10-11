@@ -11,45 +11,111 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3689904",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3689904"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Convoglio Servizio Aeroportuale"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q3689904"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Convoglio Servizio Aeroportuale"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1324935"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q38"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q21251675"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q3836539",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lombardia Express"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3689904",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3689904#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3689904#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3689904"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Convoglio Servizio Aeroportuale"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q3689904"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Convoglio Servizio Aeroportuale"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q137392243"
+        },
+        {
+          "@id": "wd:Q3836539"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1324935"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q38"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q21251675"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3689904#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q137392243#P3438"
+      },
+      "line": {
+        "@id": "wd:Q137392243"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3689904#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3836539#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3836539"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q137392243",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line S19"
+      }
+    }
+  ]
 }

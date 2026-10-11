@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499650",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1499650"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "NGT12-LEI"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499650",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499650#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1499650"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "NGT12-LEI"
+        },
+        {
+          "@language": "ja",
+          "@value": "ライプツィヒ市電NGT12-LEI形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1499650"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "NGT12-LEI"
+        },
+        {
+          "@language": "ja",
+          "@value": "ライプツィヒ市電NGT12-LEI形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q324601"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q688893"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "60"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q5063597"
+        },
+        {
+          "@id": "wd:Q2371310"
+        }
+      ]
     },
     {
-      "@language": "ja",
-      "@value": "ライプツィヒ市電NGT12-LEI形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1499650"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "NGT12-LEI"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499650#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q324601#P3438"
+      },
+      "line": {
+        "@id": "wd:Q324601"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ライプツィヒ市電NGT12-LEI形電車"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q688893"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "60"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q5063597"
-    },
-    {
-      "@id": "wd:Q2371310"
+      "@id": "wd:Q324601",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Leipzig"
+      }
     }
   ]
 }

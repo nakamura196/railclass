@@ -11,56 +11,89 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18613087",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q18613087"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "VR Snabbtåg Sverige X74"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q18613087"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "VR Snabbtåg Sverige X74"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q19060208"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q34"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "200"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q62607147"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2015"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q1415234"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18613087#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q19060208#P3438"
+      },
+      "line": {
+        "@id": "wd:Q19060208"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18613087",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18613087#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q18613087"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "VR Snabbtåg Sverige X74"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q18613087"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "VR Snabbtåg Sverige X74"
+      },
+      "usedOn": {
+        "@id": "wd:Q19060208"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q19060208"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q34"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "200"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q62607147"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2015"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q1415234"
+      }
+    },
+    {
+      "@id": "wd:Q19060208",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "VR Snabbtåg Sverige"
+      }
+    }
+  ]
 }

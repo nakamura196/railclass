@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,71 @@ cls:Q315137 a skos:Concept,
         wd:Q822381 ;
     wdt:P279 wd:Q3407658 ;
     wdt:P930 wd:Q25857994 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line6> ;
+    tb:usedOn wd:Q121298190,
+        wd:Q2326657,
+        wd:Q474954,
+        wd:Q661002,
+        wd:Q88799606,
+        wd:Q95685 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q121298190#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q121298190 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2326657#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2326657 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q474954#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q474954 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q661002#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q661002 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q88799606#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q88799606 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q95685#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q95685 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q121298190 rdfs:label "U17 metro line"@en .
+
+wd:Q2326657 rdfs:label "Bonn Stadtbahn"@en .
+
+wd:Q474954 rdfs:label "Dortmund Stadtbahn"@en .
+
+wd:Q661002 rdfs:label "Düsseldorf Stadtbahn"@en .
+
+wd:Q88799606 rdfs:label "U18 metro line"@en .
+
+wd:Q95685 rdfs:label "Cologne Stadtbahn"@en .
 

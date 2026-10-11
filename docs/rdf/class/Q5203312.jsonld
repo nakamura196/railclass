@@ -11,45 +11,78 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5203312",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q5203312"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "D-class tram"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5203312#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q28428375#P3438"
+      },
+      "line": {
+        "@id": "wd:Q28428375"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "D1形"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q5203312"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "D-class tram"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5203312",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5203312#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q5203312"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "D-class tram"
+        },
+        {
+          "@language": "ja",
+          "@value": "D1形"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q5203312"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "D-class tram"
+        },
+        {
+          "@language": "ja",
+          "@value": "D1形"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q28428375"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q392615"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "D1形"
+      "@id": "wd:Q28428375",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "route 58"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q392615"
-  }
+  ]
 }

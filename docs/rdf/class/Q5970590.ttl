@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,60 @@ cls:Q5970590 a skos:Concept,
     wdt:P176 wd:Q152517 ;
     wdt:P279 wd:Q1567915 ;
     wdt:P729 "2007"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q5970590#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5970590#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5970590#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5970590#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5970590#line5> ;
+    tb:usedOn wd:Q3743405,
+        wd:Q3743448,
+        wd:Q3743699,
+        wd:Q6044834,
+        wd:Q6502757 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5970590#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3743405#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3743405 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5970590#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3743448#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3743448 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5970590#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3743699#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3743699 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5970590#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6044834#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6044834 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5970590#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6502757#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6502757 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3743405 rdfs:label "Dublin–Cork railway line"@en .
+
+wd:Q3743448 rdfs:label "Dublin–Waterford railway line"@en .
+
+wd:Q3743699 rdfs:label "Dublin–Galway railway line"@en .
+
+wd:Q6044834 rdfs:label "InterCity"@en .
+
+wd:Q6502757 rdfs:label "Lavistown Loop Line"@en .
 

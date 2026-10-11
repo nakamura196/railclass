@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q24088485",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q24088485"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Norfolk and Western Railway class LC-1"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q24088485"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Norfolk and Western Railway class LC-1"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q917079"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q30"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q632404"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q24088485",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q24088485#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q24088485"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Norfolk and Western Railway class LC-1"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q24088485"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Norfolk and Western Railway class LC-1"
+      },
+      "usedOn": {
+        "@id": "wd:Q23134914"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q917079"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q30"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q632404"
+        },
+        {
+          "@id": "wd:Q804868"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1914"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q24736436"
+      }
     },
     {
-      "@id": "wd:Q804868"
+      "@id": "wd:Q23134914",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Elkhorn Grade electrification"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q24088485#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q23134914#P3438"
+      },
+      "line": {
+        "@id": "wd:Q23134914"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1914"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q24736436"
-  }
+  ]
 }

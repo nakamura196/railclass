@@ -11,61 +11,94 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18486450",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q18486450"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "CPTM Series 9000"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18486450#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6553067#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6553067"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "アルストム9000シリーズ"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q18486450"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "CPTM Series 9000"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18486450",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18486450#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q18486450"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "CPTM Series 9000"
+        },
+        {
+          "@language": "ja",
+          "@value": "アルストム9000シリーズ"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q18486450"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "CPTM Series 9000"
+        },
+        {
+          "@language": "ja",
+          "@value": "アルストム9000シリーズ"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q6553067"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q6071527"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1121227"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q155"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q21251675"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "アルストム9000シリーズ"
+      "@id": "wd:Q6553067",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 13"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q6071527"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1121227"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q155"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2014"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q21251675"
-  }
+  ]
 }

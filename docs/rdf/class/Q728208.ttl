@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -25,5 +26,27 @@ cls:Q728208 a skos:Concept,
     wdt:P279 wd:Q483373 ;
     wdt:P2978 wd:Q62625117 ;
     wdt:P729 "1992"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q728208#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q728208#line2> ;
+    tb:usedOn wd:Q1246915,
+        wd:Q1281231 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q728208#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1246915#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1246915 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q728208#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1281231#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1281231 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1246915 rdfs:label "Vestfold Line"@en .
+
+wd:Q1281231 rdfs:label "Asker Line"@en .
 

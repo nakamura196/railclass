@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q751742",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q751742"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "SNCB Class AM08"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q751742"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "SNCB Class AM08"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q524255"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q31"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "160"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q443874"
-  },
-  "wdt:P930": [
+  "@graph": [
     {
-      "@id": "wd:Q21251675"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q751742",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q751742#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q751742"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SNCB Class AM08"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q751742"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "SNCB Class AM08"
+      },
+      "usedOn": {
+        "@id": "wd:Q56678265"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q524255"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q31"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "160"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q443874"
+      },
+      "wdt:P930": [
+        {
+          "@id": "wd:Q21251675"
+        },
+        {
+          "@id": "wd:Q106530439"
+        }
+      ]
     },
     {
-      "@id": "wd:Q106530439"
+      "@id": "wd:Q56678265",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ghent S train"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q751742#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q56678265#P3438"
+      },
+      "line": {
+        "@id": "wd:Q56678265"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

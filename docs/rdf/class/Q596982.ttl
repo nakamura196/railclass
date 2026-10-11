@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,49 @@ cls:Q596982 a skos:Concept,
     wdt:P176 wd:Q688893 ;
     wdt:P279 wd:Q119790,
         wd:Q20795192 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q596982#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q596982#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q596982#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q596982#line4> ;
+    tb:usedOn wd:Q1396886,
+        wd:Q844171,
+        wd:Q871642,
+        wd:Q902942 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q596982#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1396886#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1396886 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q596982#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q844171#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q844171 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q596982#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q871642#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q871642 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q596982#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q902942#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q902942 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1396886 rdfs:label "Hainan eastern ring high-speed railway"@en .
+
+wd:Q844171 rdfs:label "Shanghai–Nanjing intercity railway"@en .
+
+wd:Q871642 rdfs:label "Chengdu–Chongqing Intercity Railway"@en .
+
+wd:Q902942 rdfs:label "Shanghai–Hangzhou high-speed railway"@en .
 

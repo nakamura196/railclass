@@ -11,62 +11,95 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18407971",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q18407971"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "ESh2"
+      "@id": "wd:Q4073726",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Aeroexpress"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "エヴラジア"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18407971#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4073726#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4073726"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18407971",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18407971#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q18407971"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "ESh2"
+        },
+        {
+          "@language": "ja",
+          "@value": "エヴラジア"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q18407971"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ESh2"
+        },
+        {
+          "@language": "ja",
+          "@value": "エヴラジア"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q4073726"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1197451"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q115880"
+        },
+        {
+          "@id": "wd:Q617956"
+        },
+        {
+          "@id": "wd:Q4073726"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q672992"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q21251675"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q18407971"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "ESh2"
-    },
-    {
-      "@language": "ja",
-      "@value": "エヴラジア"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1197451"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q115880"
-    },
-    {
-      "@id": "wd:Q617956"
-    },
-    {
-      "@id": "wd:Q4073726"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q672992"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q21251675"
-  }
+  ]
 }

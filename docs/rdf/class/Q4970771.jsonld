@@ -11,70 +11,136 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4970771",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4970771"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 345"
+      "@id": "wd:Q111297173",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Elizabeth line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス鉄道345形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q4970771"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 345"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4970771",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4970771#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4970771#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4970771"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 345"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道345形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q4970771"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 345"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道345形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q111297173"
+        },
+        {
+          "@id": "wd:Q18160926"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q113577377"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q333498"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "145"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q4828161"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス鉄道345形電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q113577377"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q333498"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "145"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
+      "@id": "wd:Q18160926",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "TfL Rail"
+      }
     },
     {
-      "@id": "wd:Q4828161"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4970771#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q18160926#P3438"
+      },
+      "line": {
+        "@id": "wd:Q18160926"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4970771#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q111297173#P3438"
+      },
+      "line": {
+        "@id": "wd:Q111297173"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2017"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  ]
 }

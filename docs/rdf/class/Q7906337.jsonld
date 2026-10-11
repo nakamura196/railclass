@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7906337",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7906337"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "V/Line N class"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q7906337"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "V/Line N class"
-  },
-  "wdt:P1064": [
+  "@graph": [
     {
-      "@id": "wd:Q1999572"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7906337#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7653446#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7653446"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q6071527"
+      "@id": "wd:Q7653446",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Yungera railway line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7906337",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7906337#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7906337"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "V/Line N class"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q7906337"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "V/Line N class"
+      },
+      "usedOn": {
+        "@id": "wd:Q7653446"
+      },
+      "wdt:P1064": [
+        {
+          "@id": "wd:Q1999572"
+        },
+        {
+          "@id": "wd:Q6071527"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q7906335"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q408"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q5136910"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q19842071"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1022125"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1985"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q7906335"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q408"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q5136910"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q19842071"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1022125"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1985"
-  }
+  ]
 }

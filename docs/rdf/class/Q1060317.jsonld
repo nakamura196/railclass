@@ -11,60 +11,93 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1060317",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1060317"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "TU2 diesel locomotive"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1060317"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "TU2 diesel locomotive"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q4032352"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q164914"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1060317#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4277159#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4277159"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q660770"
+      "@id": "wd:Q4277159",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Malaya October Railway"
+      }
     },
     {
-      "@id": "wd:Q923337"
-    },
-    {
-      "@id": "wd:Q11884253"
-    },
-    {
-      "@id": "wd:Q1021914"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1060317",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1060317#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1060317"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "TU2 diesel locomotive"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1060317"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "TU2 diesel locomotive"
+      },
+      "usedOn": {
+        "@id": "wd:Q4277159"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q4032352"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q164914"
+        },
+        {
+          "@id": "wd:Q660770"
+        },
+        {
+          "@id": "wd:Q923337"
+        },
+        {
+          "@id": "wd:Q11884253"
+        },
+        {
+          "@id": "wd:Q1021914"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q15706491"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "50"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q19842071"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q15706491"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "50"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q19842071"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  }
+  ]
 }

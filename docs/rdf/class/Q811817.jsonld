@@ -11,58 +11,91 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q811817",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q811817"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Munich Class S tram"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q811817",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q811817#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q811817"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Munich Class S tram"
+        },
+        {
+          "@language": "ja",
+          "@value": "ミュンヘン市電S形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q811817"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Munich Class S tram"
+        },
+        {
+          "@language": "ja",
+          "@value": "ミュンヘン市電S形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q526596"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q456402"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q87772942"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "60"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q730066"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ミュンヘン市電S形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q811817"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Munich Class S tram"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q811817#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q526596#P3438"
+      },
+      "line": {
+        "@id": "wd:Q526596"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ミュンヘン市電S形電車"
+      "@id": "wd:Q526596",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Munich Tramway"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q456402"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q87772942"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "60"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q730066"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

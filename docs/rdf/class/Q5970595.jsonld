@@ -11,54 +11,120 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970595",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q5970595"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "IÉ 2800 Class"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970595",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970595#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970595#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q5970595"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "IÉ 2800 Class"
+        },
+        {
+          "@language": "ja",
+          "@value": "2800形気動車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q5970595"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "IÉ 2800 Class"
+        },
+        {
+          "@language": "ja",
+          "@value": "2800形気動車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q3743465"
+        },
+        {
+          "@id": "wd:Q4019185"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q6071527"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q73043"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q27"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q5920477"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "2800形気動車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q5970595"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "IÉ 2800 Class"
+      "@id": "wd:Q3743465",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Limerick–Rosslare railway line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "2800形気動車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970595#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4019185#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4019185"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q4019185",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Western Railway Corridor"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970595#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3743465#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3743465"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q6071527"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q73043"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q27"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q5920477"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  ]
 }

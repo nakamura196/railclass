@@ -11,64 +11,130 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q742252",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q742252"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "China Railway SS9"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q742252#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q873605#P3438"
+      },
+      "line": {
+        "@id": "wd:Q873605"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "中国国鉄韶山9型電気機関車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q742252"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "China Railway SS9"
+      "@id": "wd:Q873605",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Qinhuangdao–Shenyang high-speed railway"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "中国国鉄韶山9型電気機関車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q742252#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10902104#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10902104"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q10902104",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Beijing underground cross-city railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q742252",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q742252#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q742252#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q742252"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "China Railway SS9"
+        },
+        {
+          "@language": "ja",
+          "@value": "中国国鉄韶山9型電気機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q742252"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "China Railway SS9"
+        },
+        {
+          "@language": "ja",
+          "@value": "中国国鉄韶山9型電気機関車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q10902104"
+        },
+        {
+          "@id": "wd:Q873605"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1073489"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q148"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q840960"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1022125"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1998"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1073489"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q148"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q840960"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1022125"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1998"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  ]
 }

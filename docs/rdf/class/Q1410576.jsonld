@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1410576",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1410576"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "NF8U"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1410576",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1410576#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1410576"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "NF8U"
+        },
+        {
+          "@language": "ja",
+          "@value": "ラインバーンNF8U形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1410576"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "NF8U"
+        },
+        {
+          "@language": "ja",
+          "@value": "ラインバーンNF8U形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q661002"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q81230"
+        },
+        {
+          "@id": "wd:Q391895"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "70"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ラインバーンNF8U形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1410576"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "NF8U"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1410576#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q661002#P3438"
+      },
+      "line": {
+        "@id": "wd:Q661002"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ラインバーンNF8U形電車"
+      "@id": "wd:Q661002",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Düsseldorf Stadtbahn"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q81230"
-    },
-    {
-      "@id": "wd:Q391895"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "70"
-  }
+  ]
 }

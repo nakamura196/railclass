@@ -11,30 +11,63 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2460934",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2460934"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Stadler Tango (Rhônexpress)"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q2460934"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Stadler Tango (Rhônexpress)"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q471173"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2460934#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1559#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1559"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q1559",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rhônexpress"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2460934",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2460934#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2460934"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Stadler Tango (Rhônexpress)"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q2460934"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Stadler Tango (Rhônexpress)"
+      },
+      "usedOn": {
+        "@id": "wd:Q1559"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q471173"
+      }
+    }
+  ]
 }

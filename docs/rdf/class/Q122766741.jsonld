@@ -11,30 +11,63 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q122766741",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q122766741"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Stadtbahnwagen P89"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q122766741"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Stadtbahnwagen P89"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q121298190",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "U17 metro line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q122766741",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q122766741#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q122766741"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Stadtbahnwagen P89"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q122766741"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Stadtbahnwagen P89"
+      },
+      "usedOn": {
+        "@id": "wd:Q121298190"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q122766741#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q121298190#P3438"
+      },
+      "line": {
+        "@id": "wd:Q121298190"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

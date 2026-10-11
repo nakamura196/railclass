@@ -11,49 +11,82 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11867045",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q11867045"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "EVO2"
+      "@id": "wd:Q1421032",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Liberec tramway"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "EVO2 (路面電車車両)"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q11867045"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "EVO2"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11867045",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11867045#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q11867045"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "EVO2"
+        },
+        {
+          "@language": "ja",
+          "@value": "EVO2 (路面電車車両)"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q11867045"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "EVO2"
+        },
+        {
+          "@language": "ja",
+          "@value": "EVO2 (路面電車車両)"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q1421032"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q213"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "65"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q131697394"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "EVO2 (路面電車車両)"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11867045#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1421032#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1421032"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q213"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "65"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q131697394"
-  }
+  ]
 }

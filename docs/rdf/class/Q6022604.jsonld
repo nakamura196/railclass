@@ -11,61 +11,94 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6022604",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q6022604"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Indian locomotive class WAM-4"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6022604#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q16243809#P3438"
+      },
+      "line": {
+        "@id": "wd:Q16243809"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "インド鉄道WAM4形電気機関車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q6022604"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Indian locomotive class WAM-4"
+      "@id": "wd:Q16243809",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bhusawal–Kalyan section"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "インド鉄道WAM4形電気機関車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6022604",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6022604#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q6022604"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Indian locomotive class WAM-4"
+        },
+        {
+          "@language": "ja",
+          "@value": "インド鉄道WAM4形電気機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q6022604"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Indian locomotive class WAM-4"
+        },
+        {
+          "@language": "ja",
+          "@value": "インド鉄道WAM4形電気機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q16243809"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1493335"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q819425"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3348301"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "120"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1022125"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1493335"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q819425"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3348301"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "120"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1022125"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  ]
 }

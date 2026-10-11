@@ -11,46 +11,116 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20829049",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q20829049"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "MBB 6 to 11"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q20829049"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "MBB 6 to 11"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q4032352"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1891103"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q652491"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "35"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q785745"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q26203877"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q1891103",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mansfeld Mining Railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20829049",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20829049#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20829049#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q20829049"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "MBB 6 to 11"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q20829049"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "MBB 6 to 11"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q1891103"
+        },
+        {
+          "@id": "wd:Q883462"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q4032352"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1891103"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q652491"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "35"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q785745"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q26203877"
+      }
+    },
+    {
+      "@id": "wd:Q883462",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rügensche Kleinbahn"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20829049#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1891103#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1891103"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20829049#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q883462#P3438"
+      },
+      "line": {
+        "@id": "wd:Q883462"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1940"
+      }
+    }
+  ]
 }

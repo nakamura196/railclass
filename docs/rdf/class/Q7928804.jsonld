@@ -11,48 +11,114 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7928804",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7928804"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Viewliner"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7928804#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q130354885#P3438"
+      },
+      "line": {
+        "@id": "wd:Q130354885"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ビューライナー"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q7928804"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Viewliner"
+      "@id": "wd:Q130354885",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Floridian"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ビューライナー"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7928804",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7928804#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7928804#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7928804"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Viewliner"
+        },
+        {
+          "@language": "ja",
+          "@value": "ビューライナー"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q7928804"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Viewliner"
+        },
+        {
+          "@language": "ja",
+          "@value": "ビューライナー"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q130354885"
+        },
+        {
+          "@id": "wd:Q23239"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q23239"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q960308"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q753779"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7928804#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q23239#P3438"
+      },
+      "line": {
+        "@id": "wd:Q23239"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q23239",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Amtrak"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q23239"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q960308"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q753779"
-  }
+  ]
 }

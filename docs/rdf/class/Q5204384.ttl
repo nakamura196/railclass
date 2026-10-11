@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,5 +19,82 @@ cls:Q5204384 a skos:Concept,
         wd:Q50300033 ;
     wdt:P176 wd:Q309084 ;
     wdt:P279 wd:Q64236110 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line7> ;
+    tb:usedOn wd:Q107023360,
+        wd:Q107110025,
+        wd:Q19845490,
+        wd:Q19845516,
+        wd:Q96474187,
+        wd:Q96474188,
+        wd:Q98104051 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q107023360#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q107023360 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q107110025#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q107110025 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19845490#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19845490 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19845516#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19845516 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q96474187#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q96474187 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q96474188#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q96474188 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5204384#line7> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q98104051#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q98104051 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q107023360 rdfs:label "RB 48"@en .
+
+wd:Q107110025 rdfs:label "RB 81 (Bavaria)"@en .
+
+wd:Q19845490 rdfs:label "RE 72 (Schleswig-Holstein)"@en .
+
+wd:Q19845516 rdfs:label "RB 75 (Schleswig-Holstein)"@en .
+
+wd:Q96474187 rdfs:label "RB 23"@en .
+
+wd:Q96474188 rdfs:label "RB 38"@en .
+
+wd:Q98104051 rdfs:label "RE 25"@en .
 

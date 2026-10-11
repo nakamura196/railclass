@@ -11,51 +11,117 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4770499",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4770499"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Breda A650"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4770499",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4770499#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4770499#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4770499"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Breda A650"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロサンゼルス郡都市圏交通局A650型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q4770499"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Breda A650"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロサンゼルス郡都市圏交通局A650型電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q2778331"
+        },
+        {
+          "@id": "wd:Q3916689"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1339558"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q904589"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q4102249"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロサンゼルス郡都市圏交通局A650型電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q4770499"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Breda A650"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4770499#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3916689#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3916689"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ロサンゼルス郡都市圏交通局A650型電車"
+      "@id": "wd:Q2778331",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "B Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4770499#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2778331#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2778331"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q3916689",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "D Line"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1339558"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q904589"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q4102249"
-  }
+  ]
 }

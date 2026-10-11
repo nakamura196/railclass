@@ -11,46 +11,79 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q968687",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q968687"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "EP20"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q968687"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "EP20"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1197451"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q660770"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q429282"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "200"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q4931035"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q968687#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q20942893#P3438"
+      },
+      "line": {
+        "@id": "wd:Q20942893"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q968687",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q968687#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q968687"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "EP20"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q968687"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "EP20"
+      },
+      "usedOn": {
+        "@id": "wd:Q20942893"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1197451"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q660770"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q429282"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "200"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q4931035"
+      }
+    },
+    {
+      "@id": "wd:Q20942893",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Strizh"
+      }
+    }
+  ]
 }

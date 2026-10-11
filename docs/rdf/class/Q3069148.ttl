@@ -1,5 +1,7 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -17,5 +19,16 @@ cls:Q3069148 a skos:Concept,
     wdt:P176 wd:Q666703 ;
     wdt:P279 wd:Q668935 ;
     wdt:P930 wd:Q106530439 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3069148#line1> ;
+    tb:usedOn wd:Q30738887 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3069148#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q30738887#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q30738887 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q30738887 rdfs:label "Algiers Suburban Rail Network"@en .
 

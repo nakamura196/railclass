@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,60 @@ cls:Q1869108 a skos:Concept,
     wdt:P2052 100.0 ;
     wdt:P279 wd:Q269061,
         wd:Q2913359 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1869108#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1869108#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1869108#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1869108#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1869108#line5> ;
+    tb:usedOn wd:Q14425806,
+        wd:Q19891,
+        wd:Q210321,
+        wd:Q211265,
+        wd:Q211270 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1869108#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q14425806#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q14425806 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1869108#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19891#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19891 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1869108#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q210321#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q210321 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1869108#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q211265#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q211265 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1869108#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q211270#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q211270 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q14425806 rdfs:label "Chesham branch"@en .
+
+wd:Q19891 rdfs:label "Metropolitan line"@en .
+
+wd:Q210321 rdfs:label "Circle line"@en .
+
+wd:Q211265 rdfs:label "District line"@en .
+
+wd:Q211270 rdfs:label "Hammersmith & City line"@en .
 

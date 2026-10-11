@@ -11,50 +11,116 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30693490",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q30693490"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Citadis Spirit"
+      "@id": "wd:Q17019227",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 6 Finch West"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "シタディス・スピリット"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q30693490"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Citadis Spirit"
+      "@id": "wd:Q5159786",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Confederation Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "シタディス・スピリット"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q432757"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30693490",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30693490#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30693490#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q30693490"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Citadis Spirit"
+        },
+        {
+          "@language": "ja",
+          "@value": "シタディス・スピリット"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q30693490"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Citadis Spirit"
+        },
+        {
+          "@language": "ja",
+          "@value": "シタディス・スピリット"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q17019227"
+        },
+        {
+          "@id": "wd:Q5159786"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q432757"
+        },
+        {
+          "@id": "wd:Q2371310"
+        }
+      ]
     },
     {
-      "@id": "wd:Q2371310"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30693490#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5159786#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5159786"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30693490#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q17019227#P3438"
+      },
+      "line": {
+        "@id": "wd:Q17019227"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

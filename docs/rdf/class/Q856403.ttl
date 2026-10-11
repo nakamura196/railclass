@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -27,5 +28,27 @@ cls:Q856403 a skos:Concept,
     wdt:P2978 wd:Q1014107 ;
     wdt:P729 "1993"^^xsd:gYear ;
     wdt:P930 wd:Q106530439 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q856403#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q856403#line2> ;
+    tb:usedOn wd:Q17166965,
+        wd:Q1897278 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q856403#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q17166965#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q17166965 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q856403#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1897278#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1897278 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q17166965 rdfs:label "Trenhotel Lusitania"@en .
+
+wd:Q1897278 rdfs:label "Sud Express"@en .
 

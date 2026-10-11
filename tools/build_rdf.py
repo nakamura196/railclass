@@ -40,7 +40,14 @@ COLOR_URI = URIRef(next(f["uri"] for f in FACETS if f["id"] == "color"))
 COLORS = json.load(open(os.path.join(HERE, "tools", "livery_colors.json"), encoding="utf-8"))
 # class -> line (Wikidata items), hand-filled with sources (docs/notes/todo.md, 路線). Only the IDs come into the RDF:
 # the line shapes are OSM data (ODbL) and stay in docs/lines, outside the dataset.
-LINES = [r for r in csv.DictReader(open(os.path.join(HERE, "tools", "class_lines.tsv"), encoding="utf-8"), delimiter="\t") if r["line"]]
+# Then the Wikidata P3438 rows (tools/class_lines_wd.tsv); the hand table wins on the same (class, line).
+LINES, _seen = [], set()
+for _f in ("class_lines.tsv", "class_lines_wd.tsv"):
+    _p = os.path.join(HERE, "tools", _f)
+    if not os.path.exists(_p): continue
+    for r in csv.DictReader(open(_p, encoding="utf-8"), delimiter="\t"):
+        if r["line"] and (r["class"], r["line"]) not in _seen:
+            _seen.add((r["class"], r["line"])); LINES.append(r)
 
 # cid: (Wikidata item or None, skos:broader cid in this dataset or None, labels for classes without a Wikidata item)
 # Classes without their own Wikidata item get skos:broadMatch to the nearest item (the family).
@@ -242,6 +249,8 @@ def add_tsv_class(g, cid, rec):
     for f in WD_FACETS:
         for v in rec.get(f["id"], []):
             g.add((s, URIRef(f["uri"]), value_node(f, v)))
+    for k, r in enumerate((r for r in LINES if r["class"] == cid), 1):
+        add_line(g, s, k, r)
     g.add((s, TB.has3DModel, Literal(False)))
 
 
@@ -390,7 +399,7 @@ def vocab():
         (TB.colorSample, RDF.Property, "colour sample", "色見本", "A colour of this livery, taken from the 3D model's faces."),
         (TB.areaShare, RDF.Property, "area share", "面積の割合", "Share (0-1) of the painted surface of the 3D model that has this colour (glass, lamps, seams left out)."),
         (TB.part, RDF.Property, "part", "部分", "Which part of the vehicle the model is, when one vehicle is split into several models."),
-        (TB.usedOn, RDF.Property, "used on line", "走る路線", "A line (a Wikidata item) this class runs or ran on: the inverse direction of Wikidata P3438 (vehicle normally used), filled by hand with sources. See tb:lineUse for the status and the source."),
+        (TB.usedOn, RDF.Property, "used on line", "走る路線", "A line (a Wikidata item) this class runs or ran on: the inverse direction of Wikidata P3438 (vehicle normally used), from the hand-filled table with sources, and from Wikidata P3438 statements (the source is the statement). See tb:lineUse for the status and the source."),
         (TB.lineUse, RDF.Property, "line use", "路線での運用", "How this class is (was) used on one line, with the source: a tb:LineUse."),
         (TB.LineUse, RDFS.Class, "Line use", "路線での運用", "One class on one line: tb:line, tb:useStatus, tb:usedUntil, dcterms:source."),
         (TB.line, RDF.Property, "line", "路線", "The line (a Wikidata item)."),

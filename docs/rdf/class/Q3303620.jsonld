@@ -11,48 +11,81 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303620",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3303620"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 483"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303620#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1416017#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1416017"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄483形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q3303620"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 483"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303620",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303620#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3303620"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 483"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄483形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q3303620"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 483"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄483形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q1416017"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q6083285"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3112198"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄483形電車"
+      "@id": "wd:Q1416017",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Island Line, Isle of Wight"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q6083285"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3112198"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -17,5 +18,71 @@ cls:Q20656760 a skos:Concept,
     wdt:P17 wd:Q16 ;
     wdt:P176 wd:Q333498 ;
     wdt:P279 wd:Q125920856 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line6> ;
+    tb:usedOn wd:Q104850852,
+        wd:Q110983664,
+        wd:Q14784897,
+        wd:Q5430612,
+        wd:Q6584557,
+        wd:Q935072 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q104850852#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q104850852 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q110983664#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q110983664 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q14784897#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q14784897 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5430612#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5430612 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6584557#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6584557 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20656760#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q935072#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q935072 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q104850852 rdfs:label "East Nile Monorail"@en .
+
+wd:Q110983664 rdfs:label "مونوريل غرب النيل"@en .
+
+wd:Q14784897 rdfs:label "MRT Yellow Line"@en .
+
+wd:Q5430612 rdfs:label "Line 15"@en .
+
+wd:Q6584557 rdfs:label "MRT Pink Line"@en .
+
+wd:Q935072 rdfs:label "Las Vegas Monorail"@en .
 

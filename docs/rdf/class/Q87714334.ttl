@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,38 @@ cls:Q87714334 a skos:Concept,
         wd:Q79876049 ;
     wdt:P176 wd:Q666703 ;
     wdt:P279 wd:Q87714348 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line3> ;
+    tb:usedOn wd:Q481509,
+        wd:Q66912703,
+        wd:Q76883133 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q481509#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q481509 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q66912703#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q66912703 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q87714334#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q76883133#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q76883133 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q481509 rdfs:label "Rhine-Ruhr S-Bahn"@en .
+
+wd:Q66912703 rdfs:label "RB 40"@en .
+
+wd:Q76883133 rdfs:label "RE 49"@en .
 

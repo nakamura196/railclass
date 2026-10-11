@@ -11,56 +11,89 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529478",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4529478"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "ER2R"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q4529478"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "ER2R"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1197451"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q1327441"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529478#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4207854#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4207854"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q1765011"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529478",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529478#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4529478"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ER2R"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q4529478"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "ER2R"
+      },
+      "usedOn": {
+        "@id": "wd:Q4207854"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1197451"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q1327441"
+        },
+        {
+          "@id": "wd:Q1765011"
+        },
+        {
+          "@id": "wd:Q4533925"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q1089278"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q155792"
+        },
+        {
+          "@id": "wd:Q483373"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1979"
+      }
     },
     {
-      "@id": "wd:Q4533925"
+      "@id": "wd:Q4207854",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kazanskoye line (Moscow Railway)"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q1089278"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q155792"
-    },
-    {
-      "@id": "wd:Q483373"
-    }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1979"
-  }
+  ]
 }

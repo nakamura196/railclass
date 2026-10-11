@@ -11,39 +11,72 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48929160",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q48929160"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Taichung Metro Green Line EMU"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48929160",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48929160#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q48929160"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Taichung Metro Green Line EMU"
+        },
+        {
+          "@language": "ja",
+          "@value": "台中捷運中運量電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q48929160"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Taichung Metro Green Line EMU"
+        },
+        {
+          "@language": "ja",
+          "@value": "台中捷運中運量電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q10914047"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "台中捷運中運量電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q48929160"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Taichung Metro Green Line EMU"
+      "@id": "wd:Q10914047",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Taichung Metro Green Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "台中捷運中運量電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48929160#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10914047#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10914047"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

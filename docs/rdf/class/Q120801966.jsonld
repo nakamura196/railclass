@@ -11,44 +11,77 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120801966",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q120801966"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Corcovado Rack trains, 2nd generation"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q120801966"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Corcovado Rack trains, 2nd generation"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1132053"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q669606"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q143872"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120801966",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120801966#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q120801966"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Corcovado Rack trains, 2nd generation"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q120801966"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Corcovado Rack trains, 2nd generation"
+      },
+      "usedOn": {
+        "@id": "wd:Q1132053"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1132053"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q669606"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q143872"
+        },
+        {
+          "@id": "wd:Q21036483"
+        }
+      ]
     },
     {
-      "@id": "wd:Q21036483"
+      "@id": "wd:Q1132053",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Corcovado Rack Railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120801966#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1132053#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1132053"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

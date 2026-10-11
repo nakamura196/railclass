@@ -11,48 +11,81 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q104902404",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q104902404"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Beijing Subway DKZ93"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q104902404"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Beijing Subway DKZ93"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q10902028"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q848225"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q483373"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q104902404",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q104902404#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q104902404"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Beijing Subway DKZ93"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q104902404"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Beijing Subway DKZ93"
+      },
+      "usedOn": {
+        "@id": "wd:Q6553080"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q10902028"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q848225"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q4102249"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      }
     },
     {
-      "@id": "wd:Q4102249"
+      "@id": "wd:Q6553080",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 16"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q104902404#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6553080#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6553080"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2016"
-  }
+  ]
 }

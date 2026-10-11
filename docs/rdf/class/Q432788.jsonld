@@ -11,57 +11,123 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432788",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q432788"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Alstom RegioCitadis"
+      "@id": "wd:Q2138125",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kassel RegioTram"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "レギオシタディス"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q432788"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Alstom RegioCitadis"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432788",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432788#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432788#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q432788"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Alstom RegioCitadis"
+        },
+        {
+          "@language": "ja",
+          "@value": "レギオシタディス"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q432788"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Alstom RegioCitadis"
+        },
+        {
+          "@language": "ja",
+          "@value": "レギオシタディス"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q126808"
+        },
+        {
+          "@id": "wd:Q2138125"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q132168"
+        },
+        {
+          "@id": "wd:Q26277538"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "100"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "レギオシタディス"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q132168"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432788#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2138125#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2138125"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q26277538"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432788#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q126808#P3438"
+      },
+      "line": {
+        "@id": "wd:Q126808"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q126808",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "trams in Kassel"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "100"
-  }
+  ]
 }

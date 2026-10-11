@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,82 @@ cls:Q8041402 a skos:Concept,
     wdt:P176 wd:Q309084 ;
     wdt:P279 wd:Q483373 ;
     wdt:P729 "2002"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line7> ;
+    tb:usedOn wd:Q4705897,
+        wd:Q5123288,
+        wd:Q52468593,
+        wd:Q54878257,
+        wd:Q5568092,
+        wd:Q6548623,
+        wd:Q7257648 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4705897#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4705897 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5123288#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5123288 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q52468593#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q52468593 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q54878257#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q54878257 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5568092#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5568092 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6548623#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6548623 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q8041402#line7> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7257648#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7257648 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4705897 rdfs:label "Alamein"@en .
+
+wd:Q5123288 rdfs:label "City Loop"@en .
+
+wd:Q52468593 rdfs:label "Belgrave"@en .
+
+wd:Q54878257 rdfs:label "Flemington Racecourse"@en .
+
+wd:Q5568092 rdfs:label "Glen Waverley railway line"@en .
+
+wd:Q6548623 rdfs:label "Lilydale"@en .
+
+wd:Q7257648 rdfs:label "Transport Victoria"@en .
 

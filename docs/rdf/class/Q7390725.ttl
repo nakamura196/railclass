@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,60 @@ cls:Q7390725 a skos:Concept,
     wdt:P2052 80.0 ;
     wdt:P279 wd:Q2371310,
         wd:Q5063597 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line5> ;
+    tb:usedOn wd:Q4343537,
+        wd:Q4394929,
+        wd:Q7525042,
+        wd:Q7538284,
+        wd:Q7879175 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4343537#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4343537 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4394929#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4394929 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7525042#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7525042 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7538284#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7538284 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7879175#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7879175 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4343537 rdfs:label "Lilleaker Line"@en .
+
+wd:Q4394929 rdfs:label "Ekeberg Line"@en .
+
+wd:Q7525042 rdfs:label "Sinsen Line"@en .
+
+wd:Q7538284 rdfs:label "Skøyen Line"@en .
+
+wd:Q7879175 rdfs:label "Ullevål Hageby Line"@en .
 

@@ -11,43 +11,76 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120801969",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q120801969"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Corcovado Rack railcars, 4th generation"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q120801969"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Corcovado Rack railcars, 4th generation"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1132053"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q50398146"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2019"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120801969#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1132053#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1132053"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120801969",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q120801969#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q120801969"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Corcovado Rack railcars, 4th generation"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q120801969"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Corcovado Rack railcars, 4th generation"
+      },
+      "usedOn": {
+        "@id": "wd:Q1132053"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1132053"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q50398146"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2019"
+      }
+    },
+    {
+      "@id": "wd:Q1132053",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Corcovado Rack Railway"
+      }
+    }
+  ]
 }

@@ -11,58 +11,95 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529430",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4529430"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "ED9"
+      "@id": "wd:Q4073726",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Aeroexpress"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロシア鉄道ED9形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q4529430"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "ED9"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529430",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529430#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4529430"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "ED9"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロシア鉄道ED9形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q4529430"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ED9"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロシア鉄道ED9形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q4073726"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1197451"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q660770"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q159"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q4157597"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "130"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロシア鉄道ED9形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529430#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4073726#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4073726"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2015"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1197451"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q660770"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q159"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q4157597"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "130"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

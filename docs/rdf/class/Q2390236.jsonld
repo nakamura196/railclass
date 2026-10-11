@@ -11,48 +11,81 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2390236",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2390236"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Deutsche Bahn Talgo coaches"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2390236#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q80682296#P3438"
+      },
+      "line": {
+        "@id": "wd:Q80682296"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "タルゴ"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q2390236"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Deutsche Bahn Talgo coaches"
+      "@id": "wd:Q80682296",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "InterCityNight"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "タルゴ"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2390236",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2390236#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2390236"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn Talgo coaches"
+        },
+        {
+          "@language": "ja",
+          "@value": "タルゴ"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q2390236"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn Talgo coaches"
+        },
+        {
+          "@language": "ja",
+          "@value": "タルゴ"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q80682296"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q9322"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q1100969"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q9322"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q1100969"
-  }
+  ]
 }

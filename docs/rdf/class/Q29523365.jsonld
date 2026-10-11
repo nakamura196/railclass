@@ -11,41 +11,74 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q29523365",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q29523365"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "New Pendolino"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q29523365"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "New Pendolino"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q3757636"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q29523365",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q29523365#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q29523365"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "New Pendolino"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q29523365"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "New Pendolino"
+      },
+      "usedOn": {
+        "@id": "wd:Q3752594"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q3757636"
+        },
+        {
+          "@id": "wd:Q99965194"
+        }
+      ]
     },
     {
-      "@id": "wd:Q99965194"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q29523365#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3752594#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3752594"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q3752594",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Frecciargento"
+      }
     }
   ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,71 @@ cls:Q855445 a skos:Concept,
         wd:Q7864623 ;
     wdt:P279 wd:Q483373 ;
     wdt:P930 wd:Q21253457 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line6> ;
+    tb:usedOn wd:Q1194568,
+        wd:Q7210855,
+        wd:Q736412,
+        wd:Q989316,
+        wd:Q989330,
+        wd:Q989347 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1194568#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1194568 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7210855#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7210855 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q736412#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q736412 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q989316#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q989316 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q989330#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q989330 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q855445#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q989347#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q989347 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1194568 rdfs:label "Tsuen Wan line"@en .
+
+wd:Q7210855 rdfs:label "Kwun Tong line extension"@en .
+
+wd:Q736412 rdfs:label "Kwun Tong line"@en .
+
+wd:Q989316 rdfs:label "Island line"@en .
+
+wd:Q989330 rdfs:label "Disneyland Resort line"@en .
+
+wd:Q989347 rdfs:label "Tseung Kwan O line"@en .
 

@@ -11,46 +11,145 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507448",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q507448"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "FS Gran Confort coaches"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q507448"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "FS Gran Confort coaches"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q83823"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q38"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q27597"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "200"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q16814621"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507448",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507448#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507448#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507448#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q507448"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "FS Gran Confort coaches"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q507448"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "FS Gran Confort coaches"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q1853394"
+        },
+        {
+          "@id": "wd:Q2341070"
+        },
+        {
+          "@id": "wd:Q2464598"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83823"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q38"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q27597"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "200"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q16814621"
+      }
+    },
+    {
+      "@id": "wd:Q1853394",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Adriatico (train)"
+      }
+    },
+    {
+      "@id": "wd:Q2464598",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cycnus (train)"
+      }
+    },
+    {
+      "@id": "wd:Q2341070",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Vesuvio (train)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507448#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2341070#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2341070"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2005"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507448#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1853394#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1853394"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507448#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2464598#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2464598"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

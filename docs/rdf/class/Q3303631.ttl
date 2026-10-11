@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,71 @@ cls:Q3303631 a skos:Concept,
         wd:Q567000 ;
     wdt:P176 wd:Q18160582 ;
     wdt:P279 wd:Q7001262 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line6> ;
+    tb:usedOn wd:Q12069282,
+        wd:Q2663638,
+        wd:Q5604040,
+        wd:Q5714599,
+        wd:Q6265568,
+        wd:Q6771981 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q12069282#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q12069282 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2663638#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2663638 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5604040#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5604040 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5714599#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5714599 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6265568#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6265568 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303631#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6771981#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6771981 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q12069282 rdfs:label "Slough to Windsor & Eton Line"@en .
+
+wd:Q2663638 rdfs:label "Brighton Main Line"@en .
+
+wd:Q5604040 rdfs:label "West Ealing Loop, West Ealing Junction to Greenford West Junction"@en .
+
+wd:Q5714599 rdfs:label "Henley Branch Line"@en .
+
+wd:Q6265568 rdfs:label "North Downs Line"@en .
+
+wd:Q6771981 rdfs:label "Marlow branch line"@en .
 

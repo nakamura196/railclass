@@ -11,66 +11,99 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6459094",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q6459094"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "LMS Class 3 2-6-2T"
+      "@id": "wd:Q24897303",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Stanmore branch line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "LMS 2-6-2T蒸気機関車 (ファウラー)"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q6459094"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "LMS Class 3 2-6-2T"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6459094#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q24897303#P3438"
+      },
+      "line": {
+        "@id": "wd:Q24897303"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "LMS 2-6-2T蒸気機関車 (ファウラー)"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6459094",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6459094#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q6459094"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "LMS Class 3 2-6-2T"
+        },
+        {
+          "@language": "ja",
+          "@value": "LMS 2-6-2T蒸気機関車 (ファウラー)"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q6459094"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "LMS Class 3 2-6-2T"
+        },
+        {
+          "@language": "ja",
+          "@value": "LMS 2-6-2T蒸気機関車 (ファウラー)"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q24897303"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q629139"
+        },
+        {
+          "@id": "wd:Q6670591"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q5261524"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q785745"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q26000795"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1930"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q629139"
-    },
-    {
-      "@id": "wd:Q6670591"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q5261524"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q785745"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q26000795"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1930"
-  }
+  ]
 }

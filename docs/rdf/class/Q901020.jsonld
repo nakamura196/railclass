@@ -11,56 +11,122 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q901020",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q901020"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "DWA LVT/S"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q901020"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "DWA LVT/S"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q1200905"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q901020#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q22979891#P3438"
+      },
+      "line": {
+        "@id": "wd:Q22979891"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q22979891"
-    }
-  ],
-  "wdt:P176": [
-    {
-      "@id": "wd:Q688893"
+      "@id": "wd:Q22979891",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hanseatische Eisenbahn"
+      }
     },
     {
-      "@id": "wd:Q1204480"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q901020#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q111730292#P3438"
+      },
+      "line": {
+        "@id": "wd:Q111730292"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q111730292",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 27 (Mecklenburg-Vorpommern)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q901020",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q901020#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q901020#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q901020"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "DWA LVT/S"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q901020"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "DWA LVT/S"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q111730292"
+        },
+        {
+          "@id": "wd:Q22979891"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q1200905"
+        },
+        {
+          "@id": "wd:Q22979891"
+        }
+      ],
+      "wdt:P176": [
+        {
+          "@id": "wd:Q688893"
+        },
+        {
+          "@id": "wd:Q1204480"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "100"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q56427078"
+      }
     }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "100"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q56427078"
-  }
+  ]
 }

@@ -11,33 +11,66 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q625658",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q625658"
-  },
-  "rdfs:label": {
-    "@language": "ja",
-    "@value": "ソウル特別市地下鉄公社2000系電車"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q625658"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "ja",
-    "@value": "ソウル特別市地下鉄公社2000系電車"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q20394"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q625658",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q625658#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q625658"
+      },
+      "rdfs:label": {
+        "@language": "ja",
+        "@value": "ソウル特別市地下鉄公社2000系電車"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q625658"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "ja",
+        "@value": "ソウル特別市地下鉄公社2000系電車"
+      },
+      "usedOn": {
+        "@id": "wd:Q17501"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q20394"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q625658#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q17501#P3438"
+      },
+      "line": {
+        "@id": "wd:Q17501"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q17501",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Seoul Subway Line 2"
+      }
+    }
+  ]
 }

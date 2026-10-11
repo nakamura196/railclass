@@ -11,42 +11,75 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48878817",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q48878817"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "CP series 0592"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q48878817"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "CP series 0592"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q3319112"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q81123"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q45"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q2729224"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q8348317",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Celta"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48878817#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q8348317#P3438"
+      },
+      "line": {
+        "@id": "wd:Q8348317"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48878817",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48878817#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q48878817"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "CP series 0592"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q48878817"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "CP series 0592"
+      },
+      "usedOn": {
+        "@id": "wd:Q8348317"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q3319112"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q81123"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q45"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q2729224"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
+    }
+  ]
 }

@@ -11,55 +11,88 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1151916",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1151916"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "DB VT 98"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1151916#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q22979891#P3438"
+      },
+      "line": {
+        "@id": "wd:Q22979891"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "西ドイツ国鉄VT98型気動車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1151916"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "DB VT 98"
+      "@id": "wd:Q22979891",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hanseatische Eisenbahn"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "西ドイツ国鉄VT98型気動車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1151916",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1151916#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1151916"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "DB VT 98"
+        },
+        {
+          "@language": "ja",
+          "@value": "西ドイツ国鉄VT98型気動車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1151916"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "DB VT 98"
+        },
+        {
+          "@language": "ja",
+          "@value": "西ドイツ国鉄VT98型気動車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q22979891"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q22979891"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q822381"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "90"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q22979891"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q822381"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "90"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  ]
 }

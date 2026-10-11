@@ -11,44 +11,77 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q56346815",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q56346815"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "São Paulo Metro P stock"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q56346815"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "São Paulo Metro P stock"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q38182538"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q56346815#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3308465#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3308465"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q55962686"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q56346815",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q56346815#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q56346815"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "São Paulo Metro P stock"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q56346815"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "São Paulo Metro P stock"
+      },
+      "usedOn": {
+        "@id": "wd:Q3308465"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q38182538"
+        },
+        {
+          "@id": "wd:Q55962686"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q155"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q838212"
+      }
+    },
+    {
+      "@id": "wd:Q3308465",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 5"
+      }
     }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q155"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q838212"
-  }
+  ]
 }

@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507760",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q507760"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Renfe class 104"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507760#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3111346#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3111346"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "レンフェ104系電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q507760"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Renfe class 104"
+      "@id": "wd:Q3111346",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Avant"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "レンフェ104系電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507760",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q507760#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q507760"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Renfe class 104"
+        },
+        {
+          "@language": "ja",
+          "@value": "レンフェ104系電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q507760"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Renfe class 104"
+        },
+        {
+          "@language": "ja",
+          "@value": "レンフェ104系電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q3111346"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q2476154"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q29"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q2476154"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q29"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

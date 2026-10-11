@@ -11,36 +11,69 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q123370433",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q123370433"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "ÖBB 1216"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q123370433"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "ÖBB 1216"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q83822"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q40"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q929148"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q123370433#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q125350160#P3438"
+      },
+      "line": {
+        "@id": "wd:Q125350160"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q125350160",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Railjet 1"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q123370433",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q123370433#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q123370433"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ÖBB 1216"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q123370433"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "ÖBB 1216"
+      },
+      "usedOn": {
+        "@id": "wd:Q125350160"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83822"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q40"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q929148"
+      }
+    }
+  ]
 }

@@ -11,46 +11,79 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499660",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1499660"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "NGT8DD"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499660#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q315614#P3438"
+      },
+      "line": {
+        "@id": "wd:Q315614"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ドレスデン市電NGT 8 DD形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1499660"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "NGT8DD"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499660",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1499660#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1499660"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "NGT8DD"
+        },
+        {
+          "@language": "ja",
+          "@value": "ドレスデン市電NGT 8 DD形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1499660"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "NGT8DD"
+        },
+        {
+          "@language": "ja",
+          "@value": "ドレスデン市電NGT 8 DD形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q315614"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q688893"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "70"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ドレスデン市電NGT 8 DD形電車"
+      "@id": "wd:Q315614",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "trams in Dresden"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q688893"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "70"
-  }
+  ]
 }

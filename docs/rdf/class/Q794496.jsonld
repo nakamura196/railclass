@@ -11,36 +11,131 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q794496"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "H-START 20-07 Bhv"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q794496"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "H-START 20-07 Bhv"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1180332"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q834350"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1548721"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q101147976",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Z60"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q101147966#P3438"
+      },
+      "line": {
+        "@id": "wd:Q101147966"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q101147976#P3438"
+      },
+      "line": {
+        "@id": "wd:Q101147976"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q101147953",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "S60"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q101147953#P3438"
+      },
+      "line": {
+        "@id": "wd:Q101147953"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q794496"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "H-START 20-07 Bhv"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q794496"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "H-START 20-07 Bhv"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q101147953"
+        },
+        {
+          "@id": "wd:Q101147966"
+        },
+        {
+          "@id": "wd:Q101147976"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q1180332"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q834350"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1548721"
+      }
+    },
+    {
+      "@id": "wd:Q101147966",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "G60"
+      }
+    }
+  ]
 }

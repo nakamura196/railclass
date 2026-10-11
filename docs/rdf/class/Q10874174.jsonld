@@ -11,68 +11,134 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10874174",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q10874174"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "China Railway 25K"
+      "@id": "wd:Q873605",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Qinhuangdao–Shenyang high-speed railway"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "中国国鉄25K型客車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10874174#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q873605#P3438"
+      },
+      "line": {
+        "@id": "wd:Q873605"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10874174#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q16688781#P3438"
+      },
+      "line": {
+        "@id": "wd:Q16688781"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10874174",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10874174#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10874174#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q10874174"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "China Railway 25K"
+        },
+        {
+          "@language": "ja",
+          "@value": "中国国鉄25K型客車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q10874174"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "China Railway 25K"
+        },
+        {
+          "@language": "ja",
+          "@value": "中国国鉄25K型客車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q16688781"
+        },
+        {
+          "@id": "wd:Q873605"
+        }
+      ],
+      "wdt:P137": [
+        {
+          "@id": "wd:Q1073489"
+        },
+        {
+          "@id": "wd:Q1038182"
+        }
+      ],
+      "wdt:P176": [
+        {
+          "@id": "wd:Q5014252"
+        },
+        {
+          "@id": "wd:Q848225"
+        },
+        {
+          "@id": "wd:Q6963679"
+        },
+        {
+          "@id": "wd:Q6141856"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q6857344"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1996"
+      }
+    },
+    {
+      "@id": "wd:Q16688781",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "T236/237 & T238/235 Kunshan-Chongqing Express Train"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q10874174"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "China Railway 25K"
-    },
-    {
-      "@language": "ja",
-      "@value": "中国国鉄25K型客車"
-    }
-  ],
-  "wdt:P137": [
-    {
-      "@id": "wd:Q1073489"
-    },
-    {
-      "@id": "wd:Q1038182"
-    }
-  ],
-  "wdt:P176": [
-    {
-      "@id": "wd:Q5014252"
-    },
-    {
-      "@id": "wd:Q848225"
-    },
-    {
-      "@id": "wd:Q6963679"
-    },
-    {
-      "@id": "wd:Q6141856"
-    }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q6857344"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1996"
-  }
+  ]
 }

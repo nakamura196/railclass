@@ -1,5 +1,7 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -14,5 +16,16 @@ cls:Q64739187 a skos:Concept,
     wdt:P17 wd:Q183 ;
     wdt:P176 wd:Q641314 ;
     wdt:P2052 40.0 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q64739187#line1> ;
+    tb:usedOn wd:Q1428045 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q64739187#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1428045#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1428045 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1428045 rdfs:label "Flensburger Kreisbahn"@en .
 

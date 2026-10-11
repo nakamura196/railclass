@@ -11,46 +11,79 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4032277",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4032277"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "71-623"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4032277#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1925923#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1925923"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "KTM-23"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q4032277"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "71-623"
+      "@id": "wd:Q1925923",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Volgograd Metrotram"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "KTM-23"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4032277",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4032277#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4032277"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "71-623"
+        },
+        {
+          "@language": "ja",
+          "@value": "KTM-23"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q4032277"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "71-623"
+        },
+        {
+          "@language": "ja",
+          "@value": "KTM-23"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q1925923"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q844336"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "75"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q844336"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "75"
-  }
+  ]
 }

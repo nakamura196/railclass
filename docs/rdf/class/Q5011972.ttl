@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,16 @@ cls:Q5011972 a skos:Concept,
     wdt:P176 wd:Q1134914,
         wd:Q30114569 ;
     wdt:P279 wd:Q10915943 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q5011972#line1> ;
+    tb:usedOn wd:Q17091355 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5011972#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q17091355#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q17091355 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q17091355 rdfs:label "Harcourt Street railway line"@en .
 

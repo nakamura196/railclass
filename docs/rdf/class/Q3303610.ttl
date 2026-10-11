@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,27 @@ cls:Q3303610 a skos:Concept,
     wdt:P2052 121.0 ;
     wdt:P279 wd:Q483373 ;
     wdt:P729 "1993"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3303610#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303610#line2> ;
+    tb:usedOn wd:Q4973689,
+        wd:Q7492508 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303610#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4973689#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4973689 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303610#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7492508#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7492508 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4973689 rdfs:label "Bromley North Line"@en .
+
+wd:Q7492508 rdfs:label "Sheerness Line"@en .
 

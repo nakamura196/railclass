@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -27,5 +28,17 @@ cls:Q370305 a skos:Concept,
     wdt:P279 wd:Q785745 ;
     wdt:P2978 wd:Q26212271 ;
     wdt:P729 "1904"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q370305#line1> ;
+    tb:usedOn wd:Q802793 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q370305#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q802793#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q802793 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1965"^^xsd:gYear .
+
+wd:Q802793 rdfs:label "Mosbach–Mudau railway line"@en .
 

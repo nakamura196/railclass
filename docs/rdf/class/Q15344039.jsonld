@@ -11,50 +11,83 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15344039",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q15344039"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "NSB Class XXII"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q15344039"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "NSB Class XXII"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1193463"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q7061278"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q20"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q4037739"
+      "@id": "wd:Q1769317",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Setesdal Line"
+      }
     },
     {
-      "@id": "wd:Q7799189"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15344039",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15344039#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q15344039"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "NSB Class XXII"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q15344039"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "NSB Class XXII"
+      },
+      "usedOn": {
+        "@id": "wd:Q1769317"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1193463"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q7061278"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q20"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q4037739"
+        },
+        {
+          "@id": "wd:Q7799189"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q785745"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q26233895"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15344039#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1769317#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1769317"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q785745"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q26233895"
-  }
+  ]
 }

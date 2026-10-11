@@ -11,41 +11,74 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1317206",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1317206"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "ČKD–BKV Tatra T5C5K"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1317206"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "ČKD–BKV Tatra T5C5K"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q28"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q745664"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1317206#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q651686#P3438"
+      },
+      "line": {
+        "@id": "wd:Q651686"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q336811"
+      "@id": "wd:Q651686",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tram line 1"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1317206",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1317206#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1317206"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ČKD–BKV Tatra T5C5K"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1317206"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "ČKD–BKV Tatra T5C5K"
+      },
+      "usedOn": {
+        "@id": "wd:Q651686"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q28"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q745664"
+        },
+        {
+          "@id": "wd:Q336811"
+        }
+      ]
     }
   ]
 }

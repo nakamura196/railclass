@@ -11,51 +11,179 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2784315",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2784315"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "SNCF X 73500"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q2784315"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "SNCF X 73500"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q13646"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q142"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q1567915"
+      "@id": "wd:Q90149254",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 54"
+      }
     },
     {
-      "@id": "wd:Q445916"
+      "@id": "wd:Q3239097",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "D linea"
+      }
+    },
+    {
+      "@id": "wd:Q3239085",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "C linea"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2784315",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2784315#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2784315#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2784315#line3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2784315#line4"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2784315"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SNCF X 73500"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q2784315"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "SNCF X 73500"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q1983246"
+        },
+        {
+          "@id": "wd:Q3239085"
+        },
+        {
+          "@id": "wd:Q3239097"
+        },
+        {
+          "@id": "wd:Q90149254"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q13646"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q142"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q1567915"
+        },
+        {
+          "@id": "wd:Q445916"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1999"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2784315#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1983246#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1983246"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2016"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2784315#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3239085#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3239085"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q1983246",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "TER Alsace"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2784315#line4",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q90149254#P3438"
+      },
+      "line": {
+        "@id": "wd:Q90149254"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2784315#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3239097#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3239097"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1999"
-  }
+  ]
 }

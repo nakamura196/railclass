@@ -11,56 +11,89 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16617309",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q16617309"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "ATAC Class 9000"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16617309",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16617309#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q16617309"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "ATAC Class 9000"
+        },
+        {
+          "@language": "ja",
+          "@value": "ローマ市電9000形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q16617309"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ATAC Class 9000"
+        },
+        {
+          "@language": "ja",
+          "@value": "ローマ市電9000形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q785655"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q30106213"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q530087"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q38"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q158276"
+        },
+        {
+          "@id": "wd:Q3459850"
+        }
+      ]
     },
     {
-      "@language": "ja",
-      "@value": "ローマ市電9000形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q16617309"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "ATAC Class 9000"
+      "@id": "wd:Q785655",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rome tramway network"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ローマ市電9000形電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q30106213"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q530087"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q38"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q158276"
-    },
-    {
-      "@id": "wd:Q3459850"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16617309#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q785655#P3438"
+      },
+      "line": {
+        "@id": "wd:Q785655"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

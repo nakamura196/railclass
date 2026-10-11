@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,38 @@ cls:Q650268 a skos:Concept,
         wd:Q41501592,
         wd:Q41501635,
         wd:Q41501819 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line3> ;
+    tb:usedOn wd:Q2117983,
+        wd:Q3239056,
+        wd:Q369969 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2117983#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2117983 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3239056#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3239056 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q369969#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q369969 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2117983 rdfs:label "Nantes tramway"@en .
+
+wd:Q3239056 rdfs:label "Grenoble tram line A"@en .
+
+wd:Q369969 rdfs:label "Île-de-France tramway Line 1"@en .
 

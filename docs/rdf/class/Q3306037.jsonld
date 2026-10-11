@@ -11,101 +11,134 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3306037",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3306037"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 37"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3306037#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7608228#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7608228"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄37形ディーゼル機関車"
+      "@id": "wd:Q7608228",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Wherry Lines"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3306037",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3306037#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3306037"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 37"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄37形ディーゼル機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q3306037"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 37"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄37形ディーゼル機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q7608228"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q7055281"
+        },
+        {
+          "@id": "wd:Q7437933"
+        },
+        {
+          "@id": "wd:Q6670591"
+        },
+        {
+          "@id": "wd:Q7984828"
+        },
+        {
+          "@id": "wd:Q7988225"
+        },
+        {
+          "@id": "wd:Q2982351"
+        },
+        {
+          "@id": "wd:Q5330408"
+        },
+        {
+          "@id": "wd:Q456226"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q2011495"
+        },
+        {
+          "@id": "wd:Q1342845"
+        },
+        {
+          "@id": "wd:Q7350044"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "145"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q19842071"
+        },
+        {
+          "@id": "wd:Q27908860"
+        }
+      ],
+      "wdt:P2978": {
+        "@id": "wd:Q1022125"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1960"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q3306037"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 37"
-    },
-    {
-      "@language": "ja",
-      "@value": "イギリス国鉄37形ディーゼル機関車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q7055281"
-    },
-    {
-      "@id": "wd:Q7437933"
-    },
-    {
-      "@id": "wd:Q6670591"
-    },
-    {
-      "@id": "wd:Q7984828"
-    },
-    {
-      "@id": "wd:Q7988225"
-    },
-    {
-      "@id": "wd:Q2982351"
-    },
-    {
-      "@id": "wd:Q5330408"
-    },
-    {
-      "@id": "wd:Q456226"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q2011495"
-    },
-    {
-      "@id": "wd:Q1342845"
-    },
-    {
-      "@id": "wd:Q7350044"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "145"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q19842071"
-    },
-    {
-      "@id": "wd:Q27908860"
-    }
-  ],
-  "wdt:P2978": {
-    "@id": "wd:Q1022125"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1960"
-  }
+  ]
 }

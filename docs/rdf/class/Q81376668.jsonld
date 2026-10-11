@@ -11,44 +11,77 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q81376668",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q81376668"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Stadler M110"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q81376668"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Stadler M110"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q232164"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q184"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q483373"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q81376668#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q232164#P3438"
+      },
+      "line": {
+        "@id": "wd:Q232164"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q4102249"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q81376668",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q81376668#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q81376668"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Stadler M110"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q81376668"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Stadler M110"
+      },
+      "usedOn": {
+        "@id": "wd:Q232164"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q232164"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q184"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q4102249"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q232164",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Minsk Metro"
+      }
     }
   ]
 }

@@ -11,73 +11,106 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2975732",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2975732"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 67"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2975732#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2631964#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2631964"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "イギリス鉄道67形ディーゼル機関車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2975732",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2975732#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2975732"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 67"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道67形ディーゼル機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q2975732"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 67"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道67形ディーゼル機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q2631964"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q567000"
+        },
+        {
+          "@id": "wd:Q16147991"
+        },
+        {
+          "@id": "wd:Q44353"
+        },
+        {
+          "@id": "wd:Q3249958"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q2729224"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q4735854"
+        },
+        {
+          "@id": "wd:Q27972157"
+        }
+      ],
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      }
+    },
+    {
+      "@id": "wd:Q2631964",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "North Wales Main Line"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q2975732"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 67"
-    },
-    {
-      "@language": "ja",
-      "@value": "イギリス鉄道67形ディーゼル機関車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q567000"
-    },
-    {
-      "@id": "wd:Q16147991"
-    },
-    {
-      "@id": "wd:Q44353"
-    },
-    {
-      "@id": "wd:Q3249958"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q2729224"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q4735854"
-    },
-    {
-      "@id": "wd:Q27972157"
-    }
-  ],
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  }
+  ]
 }

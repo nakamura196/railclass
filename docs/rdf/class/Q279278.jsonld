@@ -11,57 +11,90 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q279278",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q279278"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Tatra KT8D5"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q279278#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q911344#P3438"
+      },
+      "line": {
+        "@id": "wd:Q911344"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "タトラKT8D5"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q279278"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Tatra KT8D5"
+      "@id": "wd:Q911344",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Pyongyang tram system"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "タトラKT8D5"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q279278",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q279278#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q279278"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Tatra KT8D5"
+        },
+        {
+          "@language": "ja",
+          "@value": "タトラKT8D5"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q279278"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Tatra KT8D5"
+        },
+        {
+          "@language": "ja",
+          "@value": "タトラKT8D5"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q911344"
+      },
+      "wdt:P1064": [
+        {
+          "@id": "wd:Q1999572"
+        },
+        {
+          "@id": "wd:Q19750814"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q336811"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "65"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q970639"
+      }
     }
-  ],
-  "wdt:P1064": [
-    {
-      "@id": "wd:Q1999572"
-    },
-    {
-      "@id": "wd:Q19750814"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q336811"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "65"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q970639"
-  }
+  ]
 }

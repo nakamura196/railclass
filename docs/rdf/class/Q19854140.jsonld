@@ -11,53 +11,86 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q19854140",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q19854140"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Bombardier INNOVIA APM 256"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q19854140#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q707644#P3438"
+      },
+      "line": {
+        "@id": "wd:Q707644"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "台北捷運370型電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q19854140"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Bombardier INNOVIA APM 256"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q19854140",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q19854140#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q19854140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Bombardier INNOVIA APM 256"
+        },
+        {
+          "@language": "ja",
+          "@value": "台北捷運370型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q19854140"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Bombardier INNOVIA APM 256"
+        },
+        {
+          "@language": "ja",
+          "@value": "台北捷運370型電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q707644"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q714810"
+        },
+        {
+          "@id": "wd:Q213717"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q688893"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "台北捷運370型電車"
+      "@id": "wd:Q707644",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Wenhu line"
+      }
     }
-  ],
-  "wdt:P137": [
-    {
-      "@id": "wd:Q714810"
-    },
-    {
-      "@id": "wd:Q213717"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q688893"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

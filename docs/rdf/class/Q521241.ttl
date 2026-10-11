@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,27 @@ cls:Q521241 a skos:Concept,
     wdt:P176 wd:Q822381 ;
     wdt:P2052 90.0 ;
     wdt:P279 wd:Q3707399 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q521241#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q521241#line2> ;
+    tb:usedOn wd:Q1129832,
+        wd:Q116505002 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q521241#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1129832#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1129832 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q521241#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q116505002#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q116505002 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1129832 rdfs:label "rail transport in Lebanon"@en .
+
+wd:Q116505002 rdfs:label "Ulmer Spatz"@en .
 

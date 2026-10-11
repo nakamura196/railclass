@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,40 @@ cls:Q1817694 a skos:Concept,
     wdt:P137 wd:Q682520 ;
     wdt:P176 wd:Q3112198 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line3> ;
+    tb:usedOn wd:Q19892,
+        wd:Q214793,
+        wd:Q961290 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19892#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19892 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q214793#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q214793 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1999"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q961290#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q961290 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1988"^^xsd:gYear .
+
+wd:Q19892 rdfs:label "Bakerloo line"@en .
+
+wd:Q214793 rdfs:label "Northern line"@en .
+
+wd:Q961290 rdfs:label "Jubilee line"@en .
 

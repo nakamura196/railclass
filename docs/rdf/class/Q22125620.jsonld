@@ -11,48 +11,81 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22125620",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q22125620"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "LRTA Class 1000"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22125620#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4165124#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4165124"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "マニラ・ライトレール1000形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q22125620"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "LRTA Class 1000"
+      "@id": "wd:Q4165124",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Manila Light Rail Transit System Line 1"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "マニラ・ライトレール1000形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22125620",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22125620#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q22125620"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "LRTA Class 1000"
+        },
+        {
+          "@language": "ja",
+          "@value": "マニラ・ライトレール1000形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q22125620"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "LRTA Class 1000"
+        },
+        {
+          "@language": "ja",
+          "@value": "マニラ・ライトレール1000形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q4165124"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q6546068"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q600414"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q6546068"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q600414"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

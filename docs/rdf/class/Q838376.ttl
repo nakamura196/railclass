@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -25,5 +26,82 @@ cls:Q838376 a skos:Concept,
     wdt:P2978 wd:Q1014107 ;
     wdt:P729 "1960"^^xsd:gYear ;
     wdt:P930 wd:Q21855034 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line7> ;
+    tb:usedOn wd:Q104583366,
+        wd:Q1421032,
+        wd:Q1925923,
+        wd:Q1984902,
+        wd:Q219347,
+        wd:Q911344,
+        wd:Q934798 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q104583366#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q104583366 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1421032#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1421032 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1925923#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1925923 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1984902#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1984902 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q219347#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q219347 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q911344#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q911344 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q838376#line7> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q934798#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q934798 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q104583366 rdfs:label "ligne 6"@en .
+
+wd:Q1421032 rdfs:label "Liberec tramway"@en .
+
+wd:Q1925923 rdfs:label "Volgograd Metrotram"@en .
+
+wd:Q1984902 rdfs:label "Kyiv Light Rail"@en .
+
+wd:Q219347 rdfs:label "Trams in Dnipro"@en .
+
+wd:Q911344 rdfs:label "Pyongyang tram system"@en .
+
+wd:Q934798 rdfs:label "trams in Schwerin"@en .
 

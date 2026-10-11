@@ -11,48 +11,155 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1869104",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1869104"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "London Underground C69 and C77 Stock"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q210321#P3438"
+      },
+      "line": {
+        "@id": "wd:Q210321"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロンドン地下鉄C69・C77形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1869104"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "London Underground C69 and C77 Stock"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q211270#P3438"
+      },
+      "line": {
+        "@id": "wd:Q211270"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロンドン地下鉄C69・C77形電車"
+      "@id": "wd:Q211265",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "District line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q211265#P3438"
+      },
+      "line": {
+        "@id": "wd:Q211265"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1869104",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1869104#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1869104"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "London Underground C69 and C77 Stock"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロンドン地下鉄C69・C77形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1869104"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "London Underground C69 and C77 Stock"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロンドン地下鉄C69・C77形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q210321"
+        },
+        {
+          "@id": "wd:Q211265"
+        },
+        {
+          "@id": "wd:Q211270"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q682520"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3112198"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q269061"
+      }
+    },
+    {
+      "@id": "wd:Q210321",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Circle line"
+      }
+    },
+    {
+      "@id": "wd:Q211270",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hammersmith & City line"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q682520"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3112198"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q269061"
-  }
+  ]
 }

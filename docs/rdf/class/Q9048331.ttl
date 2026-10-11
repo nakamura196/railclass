@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,71 @@ cls:Q9048331 a skos:Concept,
     wdt:P279 wd:Q108875699 ;
     wdt:P729 "1981"^^xsd:gYear ;
     wdt:P930 wd:Q25857994 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line6> ;
+    tb:usedOn wd:Q1149545,
+        wd:Q1152238,
+        wd:Q2837181,
+        wd:Q3239046,
+        wd:Q929645,
+        wd:Q945935 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1149545#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1149545 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1152238#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1152238 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2837181#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2837181 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3239046#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3239046 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q929645#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q929645 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q9048331#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q945935#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q945935 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1149545 rdfs:label "Line 8"@en .
+
+wd:Q1152238 rdfs:label "Line 5"@en .
+
+wd:Q2837181 rdfs:label "Line 4"@en .
+
+wd:Q3239046 rdfs:label "Line 9"@en .
+
+wd:Q929645 rdfs:label "Line 7"@en .
+
+wd:Q945935 rdfs:label "Line 3"@en .
 

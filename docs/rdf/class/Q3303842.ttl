@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,49 @@ cls:Q3303842 a skos:Concept,
     wdt:P2052 121.0 ;
     wdt:P279 wd:Q841722 ;
     wdt:P729 "2004"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line4> ;
+    tb:usedOn wd:Q1544828,
+        wd:Q4899810,
+        wd:Q5225621,
+        wd:Q6840748 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1544828#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1544828 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4899810#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4899810 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5225621#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5225621 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6840748#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6840748 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1544828 rdfs:label "Greenwich line"@en .
+
+wd:Q4899810 rdfs:label "Bexleyheath line"@en .
+
+wd:Q5225621 rdfs:label "Dartford Loop Line"@en .
+
+wd:Q6840748 rdfs:label "Mid-Kent line"@en .
 

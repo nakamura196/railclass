@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -17,5 +18,49 @@ cls:Q4833720 a skos:Concept,
         "B1形"@ja ;
     prov:wasDerivedFrom wd:Q4833720 ;
     wdt:P176 wd:Q5153737 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q4833720#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4833720#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4833720#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q4833720#line4> ;
+    tb:usedOn wd:Q12061650,
+        wd:Q18165625,
+        wd:Q28428375,
+        wd:Q6811950 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4833720#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q12061650#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q12061650 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4833720#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q18165625#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q18165625 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4833720#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q28428375#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q28428375 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q4833720#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6811950#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6811950 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q12061650 rdfs:label "route 86"@en .
+
+wd:Q18165625 rdfs:label "route 11"@en .
+
+wd:Q28428375 rdfs:label "route 58"@en .
+
+wd:Q6811950 rdfs:label "route 19"@en .
 

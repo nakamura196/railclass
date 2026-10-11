@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -24,5 +25,60 @@ cls:Q376007 a skos:Concept,
     wdt:P729 "2009"^^xsd:gYear ;
     wdt:P930 wd:Q106530439,
         wd:Q25857994 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q376007#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q376007#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q376007#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q376007#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q376007#line5> ;
+    tb:usedOn wd:Q1137886,
+        wd:Q1854601,
+        wd:Q19882,
+        wd:Q746021,
+        wd:Q831794 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q376007#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1137886#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1137886 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q376007#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1854601#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1854601 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q376007#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19882#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19882 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q376007#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q746021#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q746021 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q376007#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q831794#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q831794 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1137886 rdfs:label "South London Line"@en .
+
+wd:Q1854601 rdfs:label "North London line"@en .
+
+wd:Q19882 rdfs:label "Watford DC Line"@en .
+
+wd:Q746021 rdfs:label "London Overground"@en .
+
+wd:Q831794 rdfs:label "East London Line"@en .
 

@@ -11,87 +11,120 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q702311",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q702311"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "ICE 1"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q702311#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1653228#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1653228"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ICE 1"
+      "@id": "wd:Q1653228",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ICE Train North America Tour"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q702311",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q702311#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q702311"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "ICE 1"
+        },
+        {
+          "@language": "ja",
+          "@value": "ICE 1"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q702311"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ICE 1"
+        },
+        {
+          "@language": "ja",
+          "@value": "ICE 1"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q1653228"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q9322"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q163580"
+        },
+        {
+          "@id": "wd:Q158276"
+        },
+        {
+          "@id": "wd:Q1868564"
+        },
+        {
+          "@id": "wd:Q391895"
+        },
+        {
+          "@id": "wd:Q819150"
+        },
+        {
+          "@id": "wd:Q52825"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "280"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q13402959"
+        }
+      ],
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1991"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q1415234"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q702311"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "ICE 1"
-    },
-    {
-      "@language": "ja",
-      "@value": "ICE 1"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q9322"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q163580"
-    },
-    {
-      "@id": "wd:Q158276"
-    },
-    {
-      "@id": "wd:Q1868564"
-    },
-    {
-      "@id": "wd:Q391895"
-    },
-    {
-      "@id": "wd:Q819150"
-    },
-    {
-      "@id": "wd:Q52825"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "280"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
-    },
-    {
-      "@id": "wd:Q13402959"
-    }
-  ],
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1991"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q1415234"
-  }
+  ]
 }

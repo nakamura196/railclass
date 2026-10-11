@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,28 @@ cls:Q3552886 a skos:Concept,
         wd:Q35982 ;
     wdt:P279 wd:Q483373 ;
     wdt:P930 wd:Q25857994 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3552886#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3552886#line2> ;
+    tb:usedOn wd:Q2627597,
+        wd:Q707644 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3552886#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2627597#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2627597 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1996"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3552886#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q707644#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q707644 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2627597 rdfs:label "Jacksonville Skyway"@en .
+
+wd:Q707644 rdfs:label "Wenhu line"@en .
 

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,38 @@ cls:Q30633878 a skos:Concept,
     wdt:P279 wd:Q4828161,
         wd:Q483373 ;
     wdt:P729 "2020"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q30633878#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q30633878#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q30633878#line3> ;
+    tb:usedOn wd:Q2472778,
+        wd:Q4955938,
+        wd:Q5744695 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q30633878#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2472778#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2472778 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q30633878#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4955938#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4955938 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q30633878#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5744695#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5744695 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2472778 rdfs:label "Hertford East railway station"@en .
+
+wd:Q4955938 rdfs:label "Braintree Branch Line"@en .
+
+wd:Q5744695 rdfs:label "Hertford East Branch Line"@en .
 

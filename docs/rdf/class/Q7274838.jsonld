@@ -11,58 +11,91 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7274838",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7274838"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "R62A"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7274838#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q126698#P3438"
+      },
+      "line": {
+        "@id": "wd:Q126698"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ニューヨーク市地下鉄R62A電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q7274838"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "R62A"
+      "@id": "wd:Q126698",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "42nd Street Shuttle"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ニューヨーク市地下鉄R62A電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7274838",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7274838#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7274838"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "R62A"
+        },
+        {
+          "@language": "ja",
+          "@value": "ニューヨーク市地下鉄R62A電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q7274838"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "R62A"
+        },
+        {
+          "@language": "ja",
+          "@value": "ニューヨーク市地下鉄R62A電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q126698"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q7733"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q30"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q688893"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q4102249"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1985"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q7733"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q30"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q688893"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q4102249"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1985"
-  }
+  ]
 }

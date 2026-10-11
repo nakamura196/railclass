@@ -11,25 +11,58 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11124531",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q11124531"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q11124531"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q148"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11124531",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11124531#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q11124531"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q11124531"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "usedOn": {
+        "@id": "wd:Q5963161"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q148"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11124531#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5963161#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5963161"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q5963161",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 1"
+      }
+    }
+  ]
 }

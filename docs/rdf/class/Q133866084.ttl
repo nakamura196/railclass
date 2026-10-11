@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,16 @@ cls:Q133866084 a skos:Concept,
     wdt:P279 wd:Q483373 ;
     wdt:P729 "2025"^^xsd:gYear ;
     wdt:P930 wd:Q106530439 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q133866084#line1> ;
+    tb:usedOn wd:Q55074880 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q133866084#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q55074880#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q55074880 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q55074880 rdfs:label "Gaziray"@en .
 

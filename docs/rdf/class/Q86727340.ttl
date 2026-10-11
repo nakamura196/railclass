@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,17 @@ cls:Q86727340 a skos:Concept,
         wd:Q1516327 ;
     wdt:P17 wd:Q155 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q86727340#line1> ;
+    tb:usedOn wd:Q1516327 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q86727340#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1516327#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1516327 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1997"^^xsd:gYear .
+
+wd:Q1516327 rdfs:label "Rede Ferroviária Federal S.A."@en .
 

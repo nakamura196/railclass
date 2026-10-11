@@ -11,56 +11,122 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17183109",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q17183109"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Nippon Sharyo DMU"
+      "@id": "wd:Q497520",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Union Pearson Express"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "日本車両製造製北アメリカ向け気動車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q17183109"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Nippon Sharyo DMU"
+      "@id": "wd:Q7562166",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sonoma–Marin Area Rail Transit"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "日本車両製造製北アメリカ向け気動車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q7562166"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17183109",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17183109#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17183109#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q17183109"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Nippon Sharyo DMU"
+        },
+        {
+          "@language": "ja",
+          "@value": "日本車両製造製北アメリカ向け気動車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q17183109"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Nippon Sharyo DMU"
+        },
+        {
+          "@language": "ja",
+          "@value": "日本車両製造製北アメリカ向け気動車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q497520"
+        },
+        {
+          "@id": "wd:Q7562166"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q7562166"
+        },
+        {
+          "@id": "wd:Q3307451"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q682174"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
     },
     {
-      "@id": "wd:Q3307451"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17183109#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q497520#P3438"
+      },
+      "line": {
+        "@id": "wd:Q497520"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17183109#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7562166#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7562166"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q682174"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  ]
 }

@@ -11,96 +11,129 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q867817",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q867817"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 66"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q867817",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q867817#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q867817"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 66"
+        },
+        {
+          "@language": "ja",
+          "@value": "クラス66ディーゼル機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q867817"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 66"
+        },
+        {
+          "@language": "ja",
+          "@value": "クラス66ディーゼル機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q4807176"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q454879"
+        },
+        {
+          "@id": "wd:Q472941"
+        },
+        {
+          "@id": "wd:Q472109"
+        },
+        {
+          "@id": "wd:Q2982351"
+        },
+        {
+          "@id": "wd:Q456226"
+        },
+        {
+          "@id": "wd:Q956687"
+        },
+        {
+          "@id": "wd:Q4686685"
+        },
+        {
+          "@id": "wd:Q122830656"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q568501"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "121"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q19842071"
+        },
+        {
+          "@id": "wd:Q4131239"
+        },
+        {
+          "@id": "wd:Q27972157"
+        }
+      ],
+      "wdt:P2978": {
+        "@id": "wd:Q1022125"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1998"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "クラス66ディーゼル機関車"
+      "@id": "wd:Q4807176",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Askern Branch Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q867817#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4807176#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4807176"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q867817"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 66"
-    },
-    {
-      "@language": "ja",
-      "@value": "クラス66ディーゼル機関車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q454879"
-    },
-    {
-      "@id": "wd:Q472941"
-    },
-    {
-      "@id": "wd:Q472109"
-    },
-    {
-      "@id": "wd:Q2982351"
-    },
-    {
-      "@id": "wd:Q456226"
-    },
-    {
-      "@id": "wd:Q956687"
-    },
-    {
-      "@id": "wd:Q4686685"
-    },
-    {
-      "@id": "wd:Q122830656"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q568501"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "121"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q19842071"
-    },
-    {
-      "@id": "wd:Q4131239"
-    },
-    {
-      "@id": "wd:Q27972157"
-    }
-  ],
-  "wdt:P2978": {
-    "@id": "wd:Q1022125"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1998"
-  }
+  ]
 }

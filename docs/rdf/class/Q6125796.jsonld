@@ -11,48 +11,114 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6125796",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q6125796"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "RENFE Class 448"
+      "@id": "wd:Q3109506",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Media Distancia Renfe"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "レンフェ448系電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q6125796"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "RENFE Class 448"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6125796#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3109506#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3109506"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "レンフェ448系電車"
+      "@id": "wd:Q2842994",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Renfe Regionales"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6125796#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2842994#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2842994"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6125796",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6125796#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6125796#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q6125796"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "RENFE Class 448"
+        },
+        {
+          "@language": "ja",
+          "@value": "レンフェ448系電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q6125796"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "RENFE Class 448"
+        },
+        {
+          "@language": "ja",
+          "@value": "レンフェ448系電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q2842994"
+        },
+        {
+          "@id": "wd:Q3109506"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q2476154"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q29"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q838212"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q2476154"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q29"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q838212"
-  }
+  ]
 }

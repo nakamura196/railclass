@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,16 @@ cls:Q89045599 a skos:Concept,
     wdt:P17 wd:Q36 ;
     wdt:P176 wd:Q822381 ;
     wdt:P930 wd:Q21855034 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q89045599#line1> ;
+    tb:usedOn wd:Q875843 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q89045599#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q875843#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q875843 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q875843 rdfs:label "Trams in Mainz"@en .
 

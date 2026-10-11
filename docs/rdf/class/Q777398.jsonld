@@ -11,39 +11,105 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q777398",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q777398"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Toronto Rocket"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q777398"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Toronto Rocket"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q17978"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q16"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q688893"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q2913359"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q54373",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 4 Sheppard"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q777398#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q54369#P3438"
+      },
+      "line": {
+        "@id": "wd:Q54369"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q54369",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 1 Yonge–University"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q777398#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q54373#P3438"
+      },
+      "line": {
+        "@id": "wd:Q54373"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q777398",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q777398#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q777398#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q777398"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Toronto Rocket"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q777398"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Toronto Rocket"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q54369"
+        },
+        {
+          "@id": "wd:Q54373"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q17978"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q16"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q688893"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q2913359"
+      }
+    }
+  ]
 }

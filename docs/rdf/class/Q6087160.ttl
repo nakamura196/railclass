@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,16 @@ cls:Q6087160 a skos:Concept,
     wdt:P279 wd:Q4735854 ;
     wdt:P2978 wd:Q1014107 ;
     wdt:P729 "1996"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q6087160#line1> ;
+    tb:usedOn wd:Q846655 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q6087160#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q846655#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q846655 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q846655 rdfs:label "Israel Railways"@en .
 

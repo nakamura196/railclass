@@ -11,36 +11,102 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7312395",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7312395"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Renaissance"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q7312395"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Renaissance"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q876720"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3112198"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7312395",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7312395#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7312395#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7312395"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Renaissance"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q7312395"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Renaissance"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q3204410"
+        },
+        {
+          "@id": "wd:Q5380276"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q876720"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3112198"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7312395#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5380276#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5380276"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q5380276",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Enterprise"
+      }
+    },
+    {
+      "@id": "wd:Q3204410",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "The Ocean"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7312395#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3204410#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3204410"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

@@ -11,81 +11,114 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1244431",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1244431"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Soviet Railways ТЭП70"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1244431#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q20942893#P3438"
+      },
+      "line": {
+        "@id": "wd:Q20942893"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "TEP70型ディーゼル機関車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1244431",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1244431#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1244431"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Soviet Railways ТЭП70"
+        },
+        {
+          "@language": "ja",
+          "@value": "TEP70型ディーゼル機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1244431"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Soviet Railways ТЭП70"
+        },
+        {
+          "@language": "ja",
+          "@value": "TEP70型ディーゼル機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q20942893"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1197451"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q76987"
+        },
+        {
+          "@id": "wd:Q164914"
+        },
+        {
+          "@id": "wd:Q660770"
+        },
+        {
+          "@id": "wd:Q327094"
+        },
+        {
+          "@id": "wd:Q923337"
+        },
+        {
+          "@id": "wd:Q1069105"
+        },
+        {
+          "@id": "wd:Q2093569"
+        },
+        {
+          "@id": "wd:Q975842"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q4228338"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "160"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q19842071"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1022125"
+      }
+    },
+    {
+      "@id": "wd:Q20942893",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Strizh"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1244431"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Soviet Railways ТЭП70"
-    },
-    {
-      "@language": "ja",
-      "@value": "TEP70型ディーゼル機関車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1197451"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q76987"
-    },
-    {
-      "@id": "wd:Q164914"
-    },
-    {
-      "@id": "wd:Q660770"
-    },
-    {
-      "@id": "wd:Q327094"
-    },
-    {
-      "@id": "wd:Q923337"
-    },
-    {
-      "@id": "wd:Q1069105"
-    },
-    {
-      "@id": "wd:Q2093569"
-    },
-    {
-      "@id": "wd:Q975842"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q4228338"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "160"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q19842071"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1022125"
-  }
+  ]
 }

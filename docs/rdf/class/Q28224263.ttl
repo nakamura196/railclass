@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,27 @@ cls:Q28224263 a skos:Concept,
         wd:Q848225 ;
     wdt:P279 wd:Q483373 ;
     wdt:P930 wd:Q21253457 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q28224263#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q28224263#line2> ;
+    tb:usedOn wd:Q4787948,
+        wd:Q7257648 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q28224263#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4787948#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4787948 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q28224263#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7257648#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7257648 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4787948 rdfs:label "Metro Tunnel"@en .
+
+wd:Q7257648 rdfs:label "Transport Victoria"@en .
 

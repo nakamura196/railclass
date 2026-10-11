@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,27 @@ cls:Q12052514 a skos:Concept,
     wdt:P279 wd:Q483373 ;
     wdt:P729 "1992"^^xsd:gYear ;
     wdt:P930 wd:Q21855034 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q12052514#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q12052514#line2> ;
+    tb:usedOn wd:Q3112936,
+        wd:Q7296571 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q12052514#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3112936#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3112936 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q12052514#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7296571#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7296571 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3112936 rdfs:label "Brown Line"@en .
+
+wd:Q7296571 rdfs:label "Ravenswood Branch"@en .
 

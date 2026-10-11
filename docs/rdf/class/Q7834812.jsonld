@@ -11,45 +11,111 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7834812",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7834812"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Transperth A-series train"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7834812#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6842474#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6842474"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "トランスパース A＝シリーズ列車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q7834812"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Transperth A-series train"
+      "@id": "wd:Q6842474",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Midland Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "トランスパース A＝シリーズ列車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7834812",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7834812#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7834812#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7834812"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Transperth A-series train"
+        },
+        {
+          "@language": "ja",
+          "@value": "トランスパース A＝シリーズ列車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q7834812"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Transperth A-series train"
+        },
+        {
+          "@language": "ja",
+          "@value": "トランスパース A＝シリーズ列車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q114450306"
+        },
+        {
+          "@id": "wd:Q6842474"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q4285731"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7834812#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q114450306#P3438"
+      },
+      "line": {
+        "@id": "wd:Q114450306"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q114450306",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Perth trains network"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q4285731"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

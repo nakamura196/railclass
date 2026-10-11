@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -17,5 +18,16 @@ cls:Q432778 a skos:Concept,
         "Prima (機関車)"@ja ;
     prov:wasDerivedFrom wd:Q432778 ;
     wdt:P279 wd:Q93301 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q432778#line1> ;
+    tb:usedOn wd:Q7284244 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q432778#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7284244#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7284244 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q7284244 rdfs:label "Railway electrification in Iran"@en .
 

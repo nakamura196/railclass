@@ -11,53 +11,177 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q50324434",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q50324434"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "China Railway CR400BF series"
+      "@id": "wd:Q873605",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Qinhuangdao–Shenyang high-speed railway"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "中国高速鉄道CR400BF型電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q50324434"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "China Railway CR400BF series"
+      "@id": "wd:Q931127",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Beijing–Tianjin intercity railway"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "中国高速鉄道CR400BF型電車"
-    }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q1073489"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q848225"
+      "@id": "wd:Q22712677",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Beijing–Guangzhou High-Speed Railway"
+      }
     },
     {
-      "@id": "wd:Q6141856"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q50324434#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10902104#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10902104"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q50324434#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q22712677#P3438"
+      },
+      "line": {
+        "@id": "wd:Q22712677"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q50324434#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q873605#P3438"
+      },
+      "line": {
+        "@id": "wd:Q873605"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q10902104",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Beijing underground cross-city railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q50324434#line4",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q931127#P3438"
+      },
+      "line": {
+        "@id": "wd:Q931127"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q50324434",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q50324434#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q50324434#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q50324434#line3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q50324434#line4"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q50324434"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "China Railway CR400BF series"
+        },
+        {
+          "@language": "ja",
+          "@value": "中国高速鉄道CR400BF型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q50324434"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "China Railway CR400BF series"
+        },
+        {
+          "@language": "ja",
+          "@value": "中国高速鉄道CR400BF型電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q10902104"
+        },
+        {
+          "@id": "wd:Q22712677"
+        },
+        {
+          "@id": "wd:Q873605"
+        },
+        {
+          "@id": "wd:Q931127"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q1073489"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q848225"
+        },
+        {
+          "@id": "wd:Q6141856"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q22100858"
+      }
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q22100858"
-  }
+  ]
 }

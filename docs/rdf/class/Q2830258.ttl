@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,38 @@ cls:Q2830258 a skos:Concept,
     wdt:P176 wd:Q688893 ;
     wdt:P279 wd:Q16814621,
         wd:Q910157 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q2830258#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2830258#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q2830258#line3> ;
+    tb:usedOn wd:Q124126039,
+        wd:Q131548728,
+        wd:Q1374322 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2830258#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q124126039#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q124126039 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2830258#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q131548728#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q131548728 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q2830258#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1374322#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1374322 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q124126039 rdfs:label "Ouigo Train Classique"@en .
+
+wd:Q131548728 rdfs:label "EuroCity Brussels–Rotterdam"@en .
+
+wd:Q1374322 rdfs:label "S41"@en .
 

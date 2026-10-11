@@ -11,43 +11,76 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q677611",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q677611"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Vossloh G1000 BB"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q677611"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Vossloh G1000 BB"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q689256"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q24294815"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q24686956"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2002"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q677611",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q677611#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q677611"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Vossloh G1000 BB"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q677611"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Vossloh G1000 BB"
+      },
+      "usedOn": {
+        "@id": "wd:Q802540"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q689256"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q24294815"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q24686956"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2002"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q677611#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q802540#P3438"
+      },
+      "line": {
+        "@id": "wd:Q802540"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q802540",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kirkenes–Bjørnevatn Line"
+      }
+    }
+  ]
 }

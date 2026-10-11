@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,49 @@ cls:Q20810143 a skos:Concept,
     wdt:P176 wd:Q5014252 ;
     wdt:P279 wd:Q483373 ;
     wdt:P930 wd:Q21253457 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q20810143#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20810143#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20810143#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20810143#line4> ;
+    tb:usedOn wd:Q1194568,
+        wd:Q736412,
+        wd:Q989316,
+        wd:Q989347 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20810143#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1194568#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1194568 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20810143#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q736412#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q736412 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20810143#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q989316#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q989316 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20810143#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q989347#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q989347 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1194568 rdfs:label "Tsuen Wan line"@en .
+
+wd:Q736412 rdfs:label "Kwun Tong line"@en .
+
+wd:Q989316 rdfs:label "Island line"@en .
+
+wd:Q989347 rdfs:label "Tseung Kwan O line"@en .
 

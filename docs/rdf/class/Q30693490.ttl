@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,27 @@ cls:Q30693490 a skos:Concept,
     wdt:P176 wd:Q309084 ;
     wdt:P279 wd:Q2371310,
         wd:Q432757 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q30693490#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q30693490#line2> ;
+    tb:usedOn wd:Q17019227,
+        wd:Q5159786 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q30693490#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q17019227#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q17019227 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q30693490#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5159786#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5159786 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q17019227 rdfs:label "Line 6 Finch West"@en .
+
+wd:Q5159786 rdfs:label "Confederation Line"@en .
 

@@ -11,65 +11,98 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1244473",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1244473"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "VL11"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1244473#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q60995871#P3438"
+      },
+      "line": {
+        "@id": "wd:Q60995871"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ソ連運輸省VL11形電気機関車"
+      "@id": "wd:Q60995871",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "rail transport in Georgia"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1244473",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1244473#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1244473"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "VL11"
+        },
+        {
+          "@language": "ja",
+          "@value": "ソ連運輸省VL11形電気機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1244473"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "VL11"
+        },
+        {
+          "@language": "ja",
+          "@value": "ソ連運輸省VL11形電気機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q60995871"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1197451"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q115880"
+        },
+        {
+          "@id": "wd:Q660770"
+        },
+        {
+          "@id": "wd:Q923337"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q4453143"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q24730842"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q21251675"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1244473"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "VL11"
-    },
-    {
-      "@language": "ja",
-      "@value": "ソ連運輸省VL11形電気機関車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1197451"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q115880"
-    },
-    {
-      "@id": "wd:Q660770"
-    },
-    {
-      "@id": "wd:Q923337"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q4453143"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q24730842"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q21251675"
-  }
+  ]
 }

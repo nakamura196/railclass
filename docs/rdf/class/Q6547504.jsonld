@@ -11,45 +11,78 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6547504",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q6547504"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Korail Class 321000"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6547504#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q18233162#P3438"
+      },
+      "line": {
+        "@id": "wd:Q18233162"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "韓国鉄道公社6000系電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q6547504"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Korail Class 321000"
+      "@id": "wd:Q18233162",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Metro Gyeongui–Jungang Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "韓国鉄道公社6000系電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6547504",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6547504#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q6547504"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Korail Class 321000"
+        },
+        {
+          "@language": "ja",
+          "@value": "韓国鉄道公社6000系電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q6547504"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Korail Class 321000"
+        },
+        {
+          "@language": "ja",
+          "@value": "韓国鉄道公社6000系電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q18233162"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q18169"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q18169"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

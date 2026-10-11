@@ -11,51 +11,84 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q112286245",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q112286245"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Variobahn 6NGT-LDZ"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q112286245"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Variobahn 6NGT-LDZ"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1093772"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "80"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q730066"
-  },
-  "wdt:P930": [
+  "@graph": [
     {
-      "@id": "wd:Q21855034"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q112286245#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q104192648#P3438"
+      },
+      "line": {
+        "@id": "wd:Q104192648"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q25857994"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q112286245",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q112286245#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q112286245"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Variobahn 6NGT-LDZ"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q112286245"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Variobahn 6NGT-LDZ"
+      },
+      "usedOn": {
+        "@id": "wd:Q104192648"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1093772"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "80"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q730066"
+      },
+      "wdt:P930": [
+        {
+          "@id": "wd:Q21855034"
+        },
+        {
+          "@id": "wd:Q25857994"
+        }
+      ]
+    },
+    {
+      "@id": "wd:Q104192648",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "C11"
+      }
     }
   ]
 }

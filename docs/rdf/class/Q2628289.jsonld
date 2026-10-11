@@ -11,55 +11,88 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2628289",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2628289"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "SNCF Class Z 22500"
+      "@id": "wd:Q668655",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RER E"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "フランス国鉄Z22500形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q2628289"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "SNCF Class Z 22500"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2628289#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q668655#P3438"
+      },
+      "line": {
+        "@id": "wd:Q668655"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "フランス国鉄Z22500形電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2628289",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2628289#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2628289"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SNCF Class Z 22500"
+        },
+        {
+          "@language": "ja",
+          "@value": "フランス国鉄Z22500形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q2628289"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SNCF Class Z 22500"
+        },
+        {
+          "@language": "ja",
+          "@value": "フランス国鉄Z22500形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q668655"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q93090957"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "140"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q93090957"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "140"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

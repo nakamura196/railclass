@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,71 @@ cls:Q16927058 a skos:Concept,
     wdt:P176 wd:Q838212 ;
     wdt:P279 wd:Q483373,
         wd:Q5197274 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line6> ;
+    tb:usedOn wd:Q141485466,
+        wd:Q28180487,
+        wd:Q5330260,
+        wd:Q6753141,
+        wd:Q7570091,
+        wd:Q7988020 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q141485466#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q141485466 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q28180487#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q28180487 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5330260#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5330260 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6753141#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6753141 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7570091#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7570091 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q16927058#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7988020#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7988020 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q141485466 rdfs:label "Onehunga West Line"@en .
+
+wd:Q28180487 rdfs:label "Onehunga Line"@en .
+
+wd:Q5330260 rdfs:label "Eastern Line"@en .
+
+wd:Q6753141 rdfs:label "Manukau Branch"@en .
+
+wd:Q7570091 rdfs:label "Southern Line"@en .
+
+wd:Q7988020 rdfs:label "Western Line"@en .
 

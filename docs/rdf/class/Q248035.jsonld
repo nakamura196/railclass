@@ -11,68 +11,101 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q248035",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q248035"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Siemens ES64U2"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q248035"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Siemens ES64U2"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q83822"
+      "@id": "wd:Q694029",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "City Airport Train"
+      }
     },
     {
-      "@id": "wd:Q181697"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q248035#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q694029#P3438"
+      },
+      "line": {
+        "@id": "wd:Q694029"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q168082"
-    },
-    {
-      "@id": "wd:Q839829"
-    },
-    {
-      "@id": "wd:Q1302956"
-    },
-    {
-      "@id": "wd:Q44353"
-    },
-    {
-      "@id": "wd:Q1593169"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q248035",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q248035#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q248035"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Siemens ES64U2"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q248035"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Siemens ES64U2"
+      },
+      "usedOn": {
+        "@id": "wd:Q694029"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q83822"
+        },
+        {
+          "@id": "wd:Q181697"
+        },
+        {
+          "@id": "wd:Q168082"
+        },
+        {
+          "@id": "wd:Q839829"
+        },
+        {
+          "@id": "wd:Q1302956"
+        },
+        {
+          "@id": "wd:Q44353"
+        },
+        {
+          "@id": "wd:Q1593169"
+        }
+      ],
+      "wdt:P176": [
+        {
+          "@id": "wd:Q391895"
+        },
+        {
+          "@id": "wd:Q819150"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "230"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q174852"
+      }
     }
-  ],
-  "wdt:P176": [
-    {
-      "@id": "wd:Q391895"
-    },
-    {
-      "@id": "wd:Q819150"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "230"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q174852"
-  }
+  ]
 }

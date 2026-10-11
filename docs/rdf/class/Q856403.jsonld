@@ -11,76 +11,142 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856403",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q856403"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "CP 5600 Series"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856403#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1897278#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1897278"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "5600系電気機関車"
+      "@id": "wd:Q17166965",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trenhotel Lusitania"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856403",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856403#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856403#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q856403"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "CP 5600 Series"
+        },
+        {
+          "@language": "ja",
+          "@value": "5600系電気機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q856403"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "CP 5600 Series"
+        },
+        {
+          "@language": "ja",
+          "@value": "5600系電気機関車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q17166965"
+        },
+        {
+          "@id": "wd:Q1897278"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q3319112"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q81123"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q45"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q391895"
+        },
+        {
+          "@id": "wd:Q819150"
+        },
+        {
+          "@id": "wd:Q1635330"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "220"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1993"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856403#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q17166965#P3438"
+      },
+      "line": {
+        "@id": "wd:Q17166965"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q1897278",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sud Express"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q856403"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "CP 5600 Series"
-    },
-    {
-      "@language": "ja",
-      "@value": "5600系電気機関車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q3319112"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q81123"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q45"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q391895"
-    },
-    {
-      "@id": "wd:Q819150"
-    },
-    {
-      "@id": "wd:Q1635330"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "220"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1993"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  ]
 }

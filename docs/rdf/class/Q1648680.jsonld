@@ -11,41 +11,111 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1648680",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1648680"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Bombardier Guided Light Transit"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1648680"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Bombardier Guided Light Transit"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q16"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q688893"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q385653"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1648680",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1648680#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1648680#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1648680"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bombardier Guided Light Transit"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1648680"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Bombardier Guided Light Transit"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q1807910"
+        },
+        {
+          "@id": "wd:Q3540255"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q16"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q688893"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q385653"
+        },
+        {
+          "@id": "wd:Q836547"
+        }
+      ]
     },
     {
-      "@id": "wd:Q836547"
+      "@id": "wd:Q1807910",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Nancy Guided Light Transit"
+      }
+    },
+    {
+      "@id": "wd:Q3540255",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trolleybus de Nancy"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1648680#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1807910#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1807910"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2023"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1648680#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3540255#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3540255"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

@@ -11,77 +11,143 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q112306195",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q112306195"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "DB Class 408"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q112306195"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "DB Class 408"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q9322"
-  },
-  "wdt:P17": [
+  "@graph": [
     {
-      "@id": "wd:Q31"
+      "@id": "wd:Q50072731",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ICE 78"
+      }
     },
     {
-      "@id": "wd:Q55"
+      "@id": "wd:Q13732964",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IC Berlin - Amsterdam"
+      }
     },
     {
-      "@id": "wd:Q183"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "320"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q129172"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q112306195",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q112306195#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q112306195#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q112306195"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "DB Class 408"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q112306195"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "DB Class 408"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q13732964"
+        },
+        {
+          "@id": "wd:Q50072731"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q9322"
+      },
+      "wdt:P17": [
+        {
+          "@id": "wd:Q31"
+        },
+        {
+          "@id": "wd:Q55"
+        },
+        {
+          "@id": "wd:Q183"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "320"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q129172"
+        },
+        {
+          "@id": "wd:Q392909"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2022"
+      },
+      "wdt:P930": [
+        {
+          "@id": "wd:Q21251675"
+        },
+        {
+          "@id": "wd:Q21253457"
+        },
+        {
+          "@id": "wd:Q106530439"
+        },
+        {
+          "@id": "wd:Q1415234"
+        }
+      ]
     },
     {
-      "@id": "wd:Q392909"
-    }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2022"
-  },
-  "wdt:P930": [
-    {
-      "@id": "wd:Q21251675"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q112306195#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q13732964#P3438"
+      },
+      "line": {
+        "@id": "wd:Q13732964"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q21253457"
-    },
-    {
-      "@id": "wd:Q106530439"
-    },
-    {
-      "@id": "wd:Q1415234"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q112306195#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q50072731#P3438"
+      },
+      "line": {
+        "@id": "wd:Q50072731"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

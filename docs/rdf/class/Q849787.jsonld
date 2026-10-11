@@ -11,76 +11,216 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q849787",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q849787"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 303"
+      "@id": "wd:Q7054842",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "North Clyde Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄クラス303電車"
+      "@id": "wd:Q6060054",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Inverclyde Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q849787#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6060054#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6060054"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2002"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q849787#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4789827#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4789827"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2002"
+      }
+    },
+    {
+      "@id": "wd:Q4789827",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Argyle Line"
+      }
+    },
+    {
+      "@id": "wd:Q5052167",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cathcart Circle Lines"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q849787#line4",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7054842#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7054842"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2002"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q849787",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q849787#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q849787#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q849787#line3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q849787#line4"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q849787"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 303"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄クラス303電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q849787"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 303"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄クラス303電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q4789827"
+        },
+        {
+          "@id": "wd:Q5052167"
+        },
+        {
+          "@id": "wd:Q6060054"
+        },
+        {
+          "@id": "wd:Q7054842"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q7435455"
+        },
+        {
+          "@id": "wd:Q7437933"
+        },
+        {
+          "@id": "wd:Q18356171"
+        },
+        {
+          "@id": "wd:Q54817549"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q820428"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "121"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1960"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q849787#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5052167#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5052167"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2002"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q849787"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 303"
-    },
-    {
-      "@language": "ja",
-      "@value": "イギリス国鉄クラス303電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q7435455"
-    },
-    {
-      "@id": "wd:Q7437933"
-    },
-    {
-      "@id": "wd:Q18356171"
-    },
-    {
-      "@id": "wd:Q54817549"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q820428"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "121"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1960"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  ]
 }

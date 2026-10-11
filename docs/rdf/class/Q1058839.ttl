@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -17,5 +18,39 @@ cls:Q1058839 a skos:Concept,
     wdt:P137 wd:Q466985 ;
     wdt:P17 wd:Q142 ;
     wdt:P176 wd:Q309084 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1058839#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1058839#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1058839#line3> ;
+    tb:usedOn wd:Q1032141,
+        wd:Q1546399,
+        wd:Q466985 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1058839#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1032141#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1032141 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1058839#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1546399#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1546399 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1058839#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q466985#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q466985 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2023"^^xsd:gYear .
+
+wd:Q1032141 rdfs:label "HSL 3"@en .
+
+wd:Q1546399 rdfs:label "HSL 2"@en .
+
+wd:Q466985 rdfs:label "Thalys"@en .
 

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -28,5 +29,27 @@ cls:Q1023756 a skos:Concept,
         wd:Q1415234,
         wd:Q21251675,
         wd:Q21253457 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1023756#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1023756#line2> ;
+    tb:usedOn wd:Q105916542,
+        wd:Q46048144 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1023756#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q105916542#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q105916542 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1023756#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q46048144#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q46048144 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q105916542 rdfs:label "ECE 88"@en .
+
+wd:Q46048144 rdfs:label "EuroCity-Express"@en .
 

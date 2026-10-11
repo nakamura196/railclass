@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5008156",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q5008156"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "LIRR C3"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5008156#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q125943#P3438"
+      },
+      "line": {
+        "@id": "wd:Q125943"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ロングアイランド鉄道C3型客車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q5008156"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "LIRR C3"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5008156",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5008156#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q5008156"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "LIRR C3"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロングアイランド鉄道C3型客車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q5008156"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "LIRR C3"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロングアイランド鉄道C3型客車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q125943"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q125943"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q30"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q6379763"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1243337"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロングアイランド鉄道C3型客車"
+      "@id": "wd:Q125943",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Long Island Rail Road"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q125943"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q30"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q6379763"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1243337"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,49 @@ cls:Q5151515 a skos:Concept,
     wdt:P176 wd:Q5153737 ;
     wdt:P2052 115.0 ;
     wdt:P930 wd:Q21253457 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q5151515#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5151515#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5151515#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5151515#line4> ;
+    tb:usedOn wd:Q5123288,
+        wd:Q5492274,
+        wd:Q7257648,
+        wd:Q7898275 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5151515#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5123288#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5123288 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5151515#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5492274#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5492274 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5151515#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7257648#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7257648 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5151515#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7898275#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7898275 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5123288 rdfs:label "City Loop"@en .
+
+wd:Q5492274 rdfs:label "Frankston"@en .
+
+wd:Q7257648 rdfs:label "Transport Victoria"@en .
+
+wd:Q7898275 rdfs:label "Upfield"@en .
 

@@ -11,68 +11,134 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1091699"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "London Underground 1992 Stock"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1091699"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "London Underground 1992 Stock"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロンドン地下鉄1992形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1091699"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "London Underground 1992 Stock"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロンドン地下鉄1992形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q205355"
+        },
+        {
+          "@id": "wd:Q207699"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q605169"
+        },
+        {
+          "@id": "wd:Q20075"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3303533"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "100"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q269061"
+        }
+      ]
     },
     {
-      "@language": "ja",
-      "@value": "ロンドン地下鉄1992形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1091699"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "London Underground 1992 Stock"
+      "@id": "wd:Q205355",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Central line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロンドン地下鉄1992形電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q605169"
+      "@id": "wd:Q207699",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Waterloo & City line"
+      }
     },
     {
-      "@id": "wd:Q20075"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3303533"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "100"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q207699#P3438"
+      },
+      "line": {
+        "@id": "wd:Q207699"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q269061"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q205355#P3438"
+      },
+      "line": {
+        "@id": "wd:Q205355"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

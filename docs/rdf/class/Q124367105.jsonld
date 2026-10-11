@@ -11,43 +11,80 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124367105",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q124367105"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Frankfurt postal tram car"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q124367105"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Frankfurt postal tram car"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q124061628"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q81230"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "20"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1230042"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q56240475"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124367105#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2106313#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2106313"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1951"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124367105",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124367105#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q124367105"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Frankfurt postal tram car"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q124367105"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Frankfurt postal tram car"
+      },
+      "usedOn": {
+        "@id": "wd:Q2106313"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q124061628"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q81230"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "20"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1230042"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q56240475"
+      }
+    },
+    {
+      "@id": "wd:Q2106313",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "postal tram Frankfurt"
+      }
+    }
+  ]
 }

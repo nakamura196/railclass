@@ -1,5 +1,7 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -13,5 +15,16 @@ cls:Q87671162 a skos:Concept,
     prov:wasDerivedFrom wd:Q87671162 ;
     wdt:P17 wd:Q183 ;
     wdt:P279 wd:Q34336 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q87671162#line1> ;
+    tb:usedOn wd:Q2373944 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q87671162#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2373944#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2373944 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2373944 rdfs:label "Sylter Inselbahn"@en .
 

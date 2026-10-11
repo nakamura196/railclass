@@ -11,70 +11,165 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1441986",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1441986"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "VAG Class DT2"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1441986#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q697512#P3438"
+      },
+      "line": {
+        "@id": "wd:Q697512"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ニュルンベルク地下鉄DT2型電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1441986#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3433210#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3433210"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1441986#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3433227#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3433227"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q3433210",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "U1 (Nuremberg)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1441986",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1441986#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1441986#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1441986#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1441986"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "VAG Class DT2"
+        },
+        {
+          "@language": "ja",
+          "@value": "ニュルンベルク地下鉄DT2型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1441986"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "VAG Class DT2"
+        },
+        {
+          "@language": "ja",
+          "@value": "ニュルンベルク地下鉄DT2型電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q3433210"
+        },
+        {
+          "@id": "wd:Q3433227"
+        },
+        {
+          "@id": "wd:Q697512"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1557682"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q378767"
+        },
+        {
+          "@id": "wd:Q391895"
+        },
+        {
+          "@id": "wd:Q35953"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "80"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q4102249"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1993"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
+    },
+    {
+      "@id": "wd:Q697512",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Nuremberg U-Bahn"
+      }
+    },
+    {
+      "@id": "wd:Q3433227",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "U2 (Nuremberg)"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1441986"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "VAG Class DT2"
-    },
-    {
-      "@language": "ja",
-      "@value": "ニュルンベルク地下鉄DT2型電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1557682"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q378767"
-    },
-    {
-      "@id": "wd:Q391895"
-    },
-    {
-      "@id": "wd:Q35953"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "80"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q4102249"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1993"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

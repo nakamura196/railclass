@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,5 +19,16 @@ cls:Q1499655 a skos:Concept,
     prov:wasDerivedFrom wd:Q1499655 ;
     wdt:P176 wd:Q1204480 ;
     wdt:P2052 70.0 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1499655#line1> ;
+    tb:usedOn wd:Q315614 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1499655#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q315614#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q315614 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q315614 rdfs:label "trams in Dresden"@en .
 

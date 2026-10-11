@@ -11,54 +11,87 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10376792",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q10376792"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "CPTM 7000 series"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q10376792"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "CPTM 7000 series"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q6071527"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q1121227"
+      "@id": "wd:Q5245848",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 9"
+      }
     },
     {
-      "@id": "wd:Q110886945"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10376792#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5245848#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5245848"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10376792",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10376792#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q10376792"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "CPTM 7000 series"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q10376792"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "CPTM 7000 series"
+      },
+      "usedOn": {
+        "@id": "wd:Q5245848"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q6071527"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q1121227"
+        },
+        {
+          "@id": "wd:Q110886945"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q155"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q838212"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q21251675"
+      }
     }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q155"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q838212"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2010"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q21251675"
-  }
+  ]
 }

@@ -11,46 +11,112 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12052514",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q12052514"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "3200 series"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q12052514"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "3200 series"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q117309"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q6913993"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1992"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q21855034"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q7296571",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ravenswood Branch"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12052514#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3112936#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3112936"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12052514#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7296571#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7296571"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q3112936",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Brown Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12052514",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12052514#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q12052514#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q12052514"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "3200 series"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q12052514"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "3200 series"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q3112936"
+        },
+        {
+          "@id": "wd:Q7296571"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q117309"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q6913993"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1992"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q21855034"
+      }
+    }
+  ]
 }

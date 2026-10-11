@@ -11,48 +11,81 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5627865",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q5627865"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "H series"
+      "@id": "wd:Q1287549",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lagos Rail Mass Transit"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "H-5系電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q5627865"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "H series"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5627865#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1287549#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1287549"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "H-5系電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5627865",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5627865#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q5627865"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "H series"
+        },
+        {
+          "@language": "ja",
+          "@value": "H-5系電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q5627865"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "H series"
+        },
+        {
+          "@language": "ja",
+          "@value": "H-5系電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q1287549"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q17978"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q5684984"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q17978"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q5684984"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

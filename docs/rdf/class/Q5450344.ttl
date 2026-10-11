@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -24,5 +25,61 @@ cls:Q5450344 a skos:Concept,
         wd:Q6379763 ;
     wdt:P279 wd:Q483373 ;
     wdt:P930 wd:Q106530439 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q5450344#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5450344#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5450344#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5450344#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5450344#line5> ;
+    tb:usedOn wd:Q5329661,
+        wd:Q835376,
+        wd:Q989335,
+        wd:Q989339,
+        wd:Q989369 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5450344#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5329661#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5329661 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5450344#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q835376#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q835376 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5450344#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q989335#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q989335 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5450344#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q989339#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q989339 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q5450344#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q989369#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q989369 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5329661 rdfs:label "Tuen Ma line"@en .
+
+wd:Q835376 rdfs:label "Sha Tin to Central Link"@en .
+
+wd:Q989335 rdfs:label "Ma On Shan line"@en .
+
+wd:Q989339 rdfs:label "East Rail line"@en .
+
+wd:Q989369 rdfs:label "West Rail line"@en .
 

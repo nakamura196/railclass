@@ -11,78 +11,111 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18902",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q18902"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "MVG Series A"
+      "@id": "wd:Q164054",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Munich U-Bahn"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ミュンヘン地下鉄A型電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18902",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18902#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q18902"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "MVG Series A"
+        },
+        {
+          "@language": "ja",
+          "@value": "ミュンヘン地下鉄A型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q18902"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MVG Series A"
+        },
+        {
+          "@language": "ja",
+          "@value": "ミュンヘン地下鉄A型電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q164054"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q456402"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q652491"
+        },
+        {
+          "@id": "wd:Q1724325"
+        },
+        {
+          "@id": "wd:Q378767"
+        },
+        {
+          "@id": "wd:Q35953"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "80"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q4102249"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1971"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18902#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q164054#P3438"
+      },
+      "line": {
+        "@id": "wd:Q164054"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q18902"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "MVG Series A"
-    },
-    {
-      "@language": "ja",
-      "@value": "ミュンヘン地下鉄A型電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q456402"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q652491"
-    },
-    {
-      "@id": "wd:Q1724325"
-    },
-    {
-      "@id": "wd:Q378767"
-    },
-    {
-      "@id": "wd:Q35953"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "80"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
-    },
-    {
-      "@id": "wd:Q4102249"
-    }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1971"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

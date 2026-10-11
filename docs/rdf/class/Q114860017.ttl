@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,39 @@ cls:Q114860017 a skos:Concept,
     wdt:P176 wd:Q391895 ;
     wdt:P279 wd:Q26836339,
         wd:Q902403 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line3> ;
+    tb:usedOn wd:Q136692471,
+        wd:Q137403158,
+        wd:Q67991827 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q136692471#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q136692471 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q137403158#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q137403158 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2025"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q67991827#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q67991827 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q136692471 rdfs:label "RB 76"@en .
+
+wd:Q137403158 rdfs:label "Tesla-Shuttle"@en .
+
+wd:Q67991827 rdfs:label "RB 60 (Brandenburg)"@en .
 

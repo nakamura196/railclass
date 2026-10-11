@@ -11,61 +11,94 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3307690",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3307690"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 175"
+      "@id": "wd:Q568811",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Shrewsbury–Chester line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄クラス175気動車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q3307690"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 175"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3307690#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q568811#P3438"
+      },
+      "line": {
+        "@id": "wd:Q568811"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄クラス175気動車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3307690",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3307690#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3307690"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 175"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄クラス175気動車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q3307690"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 175"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄クラス175気動車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q568811"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q843251"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "161"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q1567915"
+        },
+        {
+          "@id": "wd:Q7468057"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2000"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q843251"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "161"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q1567915"
-    },
-    {
-      "@id": "wd:Q7468057"
-    }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2000"
-  }
+  ]
 }

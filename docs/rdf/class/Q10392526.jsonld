@@ -11,60 +11,93 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10392526",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q10392526"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Vossloh Tramlink"
+      "@id": "wd:Q29960068",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Baixada Santista Light Rail"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "トラムリンク"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q10392526"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Vossloh Tramlink"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10392526#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q29960068#P3438"
+      },
+      "line": {
+        "@id": "wd:Q29960068"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "トラムリンク"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10392526",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q10392526#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q10392526"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Vossloh Tramlink"
+        },
+        {
+          "@language": "ja",
+          "@value": "トラムリンク"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q10392526"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Vossloh Tramlink"
+        },
+        {
+          "@language": "ja",
+          "@value": "トラムリンク"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q29960068"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q353936"
+        },
+        {
+          "@id": "wd:Q2345645"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q7942066"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "80"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3407658"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q353936"
-    },
-    {
-      "@id": "wd:Q2345645"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q7942066"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "80"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q3407658"
-  }
+  ]
 }

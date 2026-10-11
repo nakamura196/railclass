@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,64 @@ cls:Q320279 a skos:Concept,
     wdt:P1064 wd:Q1999572 ;
     wdt:P176 wd:Q822381 ;
     wdt:P279 wd:Q15825863 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q320279#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q320279#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q320279#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q320279#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q320279#line5> ;
+    tb:usedOn wd:Q1337838,
+        wd:Q198432,
+        wd:Q19862991,
+        wd:Q3040891,
+        wd:Q3040904 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q320279#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1337838#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1337838 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q320279#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q198432#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q198432 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2012"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q320279#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19862991#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19862991 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2012"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q320279#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3040891#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3040891 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2012"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q320279#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3040904#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3040904 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2014"^^xsd:gYear .
+
+wd:Q1337838 rdfs:label "Metrotranvía of Mendoza"@en .
+
+wd:Q198432 rdfs:label "U1"@en .
+
+wd:Q19862991 rdfs:label "U3"@en .
+
+wd:Q3040891 rdfs:label "U2"@en .
+
+wd:Q3040904 rdfs:label "U7"@en .
 

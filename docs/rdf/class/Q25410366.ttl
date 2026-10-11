@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -23,5 +24,27 @@ cls:Q25410366 a skos:Concept,
         wd:Q65789247 ;
     wdt:P930 wd:Q21251675,
         wd:Q21253457 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q25410366#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q25410366#line2> ;
+    tb:usedOn wd:Q1207539,
+        wd:Q2274338 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q25410366#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1207539#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1207539 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q25410366#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2274338#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2274338 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1207539 rdfs:label "Leonardo Express"@en .
+
+wd:Q2274338 rdfs:label "Line 2"@en .
 

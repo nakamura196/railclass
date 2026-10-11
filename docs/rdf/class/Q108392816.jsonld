@@ -11,58 +11,91 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q108392816",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q108392816"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Acela Express"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q108392816"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Acela Express"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q23239"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q30"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q688893"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q108392816",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q108392816#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q108392816"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Acela Express"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q108392816"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Acela Express"
+      },
+      "usedOn": {
+        "@id": "wd:Q481759"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q23239"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q30"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q688893"
+        },
+        {
+          "@id": "wd:Q309084"
+        }
+      ],
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q671188"
+        },
+        {
+          "@id": "wd:Q13402959"
+        },
+        {
+          "@id": "wd:Q1363599"
+        }
+      ]
     },
     {
-      "@id": "wd:Q309084"
-    }
-  ],
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
+      "@id": "wd:Q481759",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Acela"
+      }
     },
     {
-      "@id": "wd:Q671188"
-    },
-    {
-      "@id": "wd:Q13402959"
-    },
-    {
-      "@id": "wd:Q1363599"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q108392816#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q481759#P3438"
+      },
+      "line": {
+        "@id": "wd:Q481759"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

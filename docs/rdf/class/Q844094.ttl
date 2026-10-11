@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -35,5 +36,27 @@ cls:Q844094 a skos:Concept,
     wdt:P729 "1988"^^xsd:gYear ;
     wdt:P930 wd:Q106530439,
         wd:Q25857994 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q844094#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q844094#line2> ;
+    tb:usedOn wd:Q19883,
+        wd:Q7057626 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q844094#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19883#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19883 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q844094#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7057626#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7057626 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q19883 rdfs:label "Abbey Line"@en .
+
+wd:Q7057626 rdfs:label "Northampton Loop Line"@en .
 

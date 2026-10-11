@@ -11,57 +11,90 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q324988",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q324988"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "DB Class E 41"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q324988"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "DB Class E 41"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q687175"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q163580"
+      "@id": "wd:Q1093774",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "City-Bahn"
+      }
     },
     {
-      "@id": "wd:Q158276"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q324988",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q324988#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q324988"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "DB Class E 41"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q324988"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "DB Class E 41"
+      },
+      "usedOn": {
+        "@id": "wd:Q1093774"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q687175"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q163580"
+        },
+        {
+          "@id": "wd:Q158276"
+        },
+        {
+          "@id": "wd:Q1868564"
+        },
+        {
+          "@id": "wd:Q819150"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "120"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      }
     },
     {
-      "@id": "wd:Q1868564"
-    },
-    {
-      "@id": "wd:Q819150"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q324988#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1093774#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1093774"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "120"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  }
+  ]
 }

@@ -11,63 +11,96 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7671976",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7671976"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Trondheim Trafikkselskap Class 8"
+      "@id": "wd:Q15222207",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Gråkallen Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "クラス8"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q7671976"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Trondheim Trafikkselskap Class 8"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7671976#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q15222207#P3438"
+      },
+      "line": {
+        "@id": "wd:Q15222207"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "クラス8"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7671976",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7671976#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7671976"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Trondheim Trafikkselskap Class 8"
+        },
+        {
+          "@language": "ja",
+          "@value": "クラス8"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q7671976"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Trondheim Trafikkselskap Class 8"
+        },
+        {
+          "@language": "ja",
+          "@value": "クラス8"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q15222207"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q7920685"
+        },
+        {
+          "@id": "wd:Q16958222"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q20"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q432790"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3407658"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1984"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q7920685"
-    },
-    {
-      "@id": "wd:Q16958222"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q20"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q432790"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q3407658"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1984"
-  }
+  ]
 }

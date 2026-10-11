@@ -11,36 +11,69 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4940484",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4940484"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Bombardier Movia C951/C951A"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q4940484"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Bombardier Movia C951/C951A"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q2661305"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q15914660"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q2913359"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q1663943",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Downtown Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4940484",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4940484#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4940484"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bombardier Movia C951/C951A"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q4940484"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Bombardier Movia C951/C951A"
+      },
+      "usedOn": {
+        "@id": "wd:Q1663943"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q2661305"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q15914660"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q2913359"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4940484#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1663943#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1663943"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

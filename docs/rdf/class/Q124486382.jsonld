@@ -11,42 +11,75 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124486382",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q124486382"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "DBAG Class 442"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q124486382"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "DBAG Class 442"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q18853"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q333498"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q729191"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124486382#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q66545031#P3438"
+      },
+      "line": {
+        "@id": "wd:Q66545031"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124486382",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q124486382#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q124486382"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "DBAG Class 442"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q124486382"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "DBAG Class 442"
+      },
+      "usedOn": {
+        "@id": "wd:Q66545031"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q18853"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q333498"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q729191"
+      }
+    },
+    {
+      "@id": "wd:Q66545031",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 5"
+      }
+    }
+  ]
 }

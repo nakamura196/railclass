@@ -11,55 +11,154 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q114860017",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q114860017"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Siemens Mireo Plus B"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q114860017"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Siemens Mireo Plus B"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q896102"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q136692471#P3438"
+      },
+      "line": {
+        "@id": "wd:Q136692471"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q1438506"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q114860017",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q114860017"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Siemens Mireo Plus B"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q114860017"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Siemens Mireo Plus B"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q136692471"
+        },
+        {
+          "@id": "wd:Q137403158"
+        },
+        {
+          "@id": "wd:Q67991827"
+        }
+      ],
+      "wdt:P137": [
+        {
+          "@id": "wd:Q896102"
+        },
+        {
+          "@id": "wd:Q1438506"
+        },
+        {
+          "@id": "wd:Q2381732"
+        },
+        {
+          "@id": "wd:Q1793083"
+        },
+        {
+          "@id": "wd:Q2144315"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q26836339"
+        },
+        {
+          "@id": "wd:Q902403"
+        }
+      ]
     },
     {
-      "@id": "wd:Q2381732"
+      "@id": "wd:Q136692471",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 76"
+      }
     },
     {
-      "@id": "wd:Q1793083"
+      "@id": "wd:Q67991827",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 60 (Brandenburg)"
+      }
     },
     {
-      "@id": "wd:Q2144315"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q26836339"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q137403158#P3438"
+      },
+      "line": {
+        "@id": "wd:Q137403158"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2025"
+      }
     },
     {
-      "@id": "wd:Q902403"
+      "@id": "wd:Q137403158",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tesla-Shuttle"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q114860017#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q67991827#P3438"
+      },
+      "line": {
+        "@id": "wd:Q67991827"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

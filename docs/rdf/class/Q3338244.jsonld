@@ -11,30 +11,96 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3338244",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3338244"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Neoval"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q3338244"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Neoval"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3338244#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q24641690#P3438"
+      },
+      "line": {
+        "@id": "wd:Q24641690"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q24641690",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "line B of Rennes subway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3338244#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q136483897#P3438"
+      },
+      "line": {
+        "@id": "wd:Q136483897"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q136483897",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "new SkyLine line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3338244",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3338244#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3338244#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3338244"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Neoval"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q3338244"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Neoval"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q136483897"
+        },
+        {
+          "@id": "wd:Q24641690"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      }
+    }
+  ]
 }

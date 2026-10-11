@@ -11,61 +11,127 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97768019",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q97768019"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "RhB ABe 4/16 3111–3166"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97768019#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q135623643#P3438"
+      },
+      "line": {
+        "@id": "wd:Q135623643"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "レーティッシュ鉄道ABe4/16 3111-3166形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q97768019"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "RhB ABe 4/16 3111–3166"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97768019#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q115867789#P3438"
+      },
+      "line": {
+        "@id": "wd:Q115867789"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "レーティッシュ鉄道ABe4/16 3111-3166形電車"
+      "@id": "wd:Q115867789",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "world's longest-ever passenger train"
+      }
+    },
+    {
+      "@id": "wd:Q135623643",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "R 15"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97768019",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97768019#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97768019#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q97768019"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "RhB ABe 4/16 3111–3166"
+        },
+        {
+          "@language": "ja",
+          "@value": "レーティッシュ鉄道ABe4/16 3111-3166形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q97768019"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "RhB ABe 4/16 3111–3166"
+        },
+        {
+          "@language": "ja",
+          "@value": "レーティッシュ鉄道ABe4/16 3111-3166形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q115867789"
+        },
+        {
+          "@id": "wd:Q135623643"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q177598"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q39"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "120"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q24736380"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q177598"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q39"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "120"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q24736380"
-  }
+  ]
 }

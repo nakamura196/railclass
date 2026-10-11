@@ -11,36 +11,69 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20970359",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q20970359"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Electron T5B64"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q20970359"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Electron T5B64"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q19750814"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q20076680"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q56044891"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20970359",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20970359#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q20970359"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Electron T5B64"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q20970359"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Electron T5B64"
+      },
+      "usedOn": {
+        "@id": "wd:Q1984902"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q19750814"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q20076680"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q56044891"
+      }
+    },
+    {
+      "@id": "wd:Q1984902",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kyiv Light Rail"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20970359#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1984902#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1984902"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

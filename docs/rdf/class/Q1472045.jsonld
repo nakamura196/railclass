@@ -11,57 +11,123 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1472045",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1472045"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "ÖBB 1116"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1472045"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "ÖBB 1116"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q83822"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q40"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q248035"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1999"
-  },
-  "wdt:P930": [
+  "@graph": [
     {
-      "@id": "wd:Q106530439"
+      "@id": "wd:Q125350160",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Railjet 1"
+      }
     },
     {
-      "@id": "wd:Q1415234"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1472045#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q125350160#P3438"
+      },
+      "line": {
+        "@id": "wd:Q125350160"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1472045",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1472045#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1472045#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1472045"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ÖBB 1116"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1472045"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "ÖBB 1116"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q125350160"
+        },
+        {
+          "@id": "wd:Q2448871"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q83822"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q40"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q248035"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1999"
+      },
+      "wdt:P930": [
+        {
+          "@id": "wd:Q106530439"
+        },
+        {
+          "@id": "wd:Q1415234"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1472045#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2448871#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2448871"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q2448871",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Transalpin"
+      }
     }
   ]
 }

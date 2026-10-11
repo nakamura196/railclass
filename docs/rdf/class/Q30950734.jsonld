@@ -11,45 +11,78 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30950734",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q30950734"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Taoyuan Metro 2000 series"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30950734",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30950734#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q30950734"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Taoyuan Metro 2000 series"
+        },
+        {
+          "@language": "ja",
+          "@value": "桃園捷運2000型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q30950734"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Taoyuan Metro 2000 series"
+        },
+        {
+          "@language": "ja",
+          "@value": "桃園捷運2000型電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q141252868"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q11111997"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "桃園捷運2000型電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q30950734"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Taoyuan Metro 2000 series"
+      "@id": "wd:Q141252868",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Express Train (Taoyuan Airport MRT)"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "桃園捷運2000型電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30950734#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q141252868#P3438"
+      },
+      "line": {
+        "@id": "wd:Q141252868"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q11111997"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

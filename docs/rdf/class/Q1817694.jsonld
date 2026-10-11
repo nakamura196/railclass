@@ -11,51 +11,154 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1817694",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1817694"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "London Underground 1972 Stock"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q19892#P3438"
+      },
+      "line": {
+        "@id": "wd:Q19892"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ロンドン地下鉄1972形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1817694"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "London Underground 1972 Stock"
+      "@id": "wd:Q19892",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bakerloo line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ロンドン地下鉄1972形電車"
+      "@id": "wd:Q214793",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Northern line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q214793#P3438"
+      },
+      "line": {
+        "@id": "wd:Q214793"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1999"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1817694",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1817694"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "London Underground 1972 Stock"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロンドン地下鉄1972形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1817694"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "London Underground 1972 Stock"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロンドン地下鉄1972形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q19892"
+        },
+        {
+          "@id": "wd:Q214793"
+        },
+        {
+          "@id": "wd:Q961290"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q682520"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3112198"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "wd:Q961290",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Jubilee line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1817694#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q961290#P3438"
+      },
+      "line": {
+        "@id": "wd:Q961290"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1988"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q682520"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3112198"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  ]
 }

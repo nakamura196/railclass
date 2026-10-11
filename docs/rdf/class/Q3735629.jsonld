@@ -11,59 +11,125 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3735629",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3735629"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Ezh3 subway trains"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3735629",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3735629#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3735629#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3735629"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Ezh3 subway trains"
+        },
+        {
+          "@language": "ja",
+          "@value": "地下鉄Ezh-3形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q3735629"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Ezh3 subway trains"
+        },
+        {
+          "@language": "ja",
+          "@value": "地下鉄Ezh-3形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q2710248"
+        },
+        {
+          "@id": "wd:Q340562"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1197451"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q159"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q934191"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q4102249"
+        },
+        {
+          "@id": "wd:Q2376563"
+        }
+      ]
     },
     {
-      "@language": "ja",
-      "@value": "地下鉄Ezh-3形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q3735629"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Ezh3 subway trains"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3735629#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2710248#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2710248"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "地下鉄Ezh-3形電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1197451"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q159"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q934191"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q483373"
+      "@id": "wd:Q340562",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Akhmeteli–Varketili Line"
+      }
     },
     {
-      "@id": "wd:Q4102249"
+      "@id": "wd:Q2710248",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kholodnohirsko–Zavodska Line"
+      }
     },
     {
-      "@id": "wd:Q2376563"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3735629#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q340562#P3438"
+      },
+      "line": {
+        "@id": "wd:Q340562"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

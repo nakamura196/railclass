@@ -11,43 +11,138 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4632347",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4632347"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "2600 series"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q4632347"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "2600 series"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q117309"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q960308"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1981"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4632347#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3180068#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3180068"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q3180068",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Orange Line"
+      }
+    },
+    {
+      "@id": "wd:Q2534873",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Blue Line"
+      }
+    },
+    {
+      "@id": "wd:Q3314559",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Milwaukee-Dearborn Subway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4632347",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4632347#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4632347#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4632347#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4632347"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "2600 series"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q4632347"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "2600 series"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q2534873"
+        },
+        {
+          "@id": "wd:Q3180068"
+        },
+        {
+          "@id": "wd:Q3314559"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q117309"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q960308"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1981"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4632347#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2534873#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2534873"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4632347#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3314559#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3314559"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

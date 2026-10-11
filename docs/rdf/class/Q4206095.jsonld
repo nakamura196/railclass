@@ -11,30 +11,63 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4206095",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4206095"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "K-1M8"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q4206095"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "K-1M8"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q20962000"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q1984902",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kyiv Light Rail"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4206095",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4206095#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4206095"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "K-1M8"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q4206095"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "K-1M8"
+      },
+      "usedOn": {
+        "@id": "wd:Q1984902"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q20962000"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4206095#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1984902#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1984902"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

@@ -11,45 +11,78 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4046174",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4046174"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Pesa Twist"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4046174#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1984902#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1984902"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "ペサ129Nb"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q4046174"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Pesa Twist"
+      "@id": "wd:Q1984902",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kyiv Light Rail"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "ペサ129Nb"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4046174",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4046174#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4046174"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Pesa Twist"
+        },
+        {
+          "@language": "ja",
+          "@value": "ペサ129Nb"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q4046174"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Pesa Twist"
+        },
+        {
+          "@language": "ja",
+          "@value": "ペサ129Nb"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q1984902"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q36"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q1817331"
+      }
     }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q36"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q1817331"
-  }
+  ]
 }

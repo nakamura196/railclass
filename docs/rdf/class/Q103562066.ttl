@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,5 +19,73 @@ cls:Q103562066 a skos:Concept,
     wdt:P176 wd:Q103767420,
         wd:Q834350 ;
     wdt:P279 wd:Q1548721 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line6> ;
+    tb:usedOn wd:Q101147265,
+        wd:Q104150850,
+        wd:Q104161605,
+        wd:Q104161828,
+        wd:Q115175464,
+        wd:Q117193853 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q101147265#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q101147265 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q104150850#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q104150850 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q104161605#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q104161605 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q104161828#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q104161828 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q115175464#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q115175464 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q103562066#line6> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q117193853#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q117193853 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q101147265 rdfs:label "S87"@en .
+
+wd:Q104150850 rdfs:label "Z80"@en .
+
+wd:Q104161605 rdfs:label "G30"@en .
+
+wd:Q104161828 rdfs:label "S50"@en .
+
+wd:Q115175464 rdfs:label "S77"@en .
+
+wd:Q117193853 rdfs:label "S225"@en .
 

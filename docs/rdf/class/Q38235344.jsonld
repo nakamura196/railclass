@@ -11,36 +11,131 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q38235344"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Euskotren 900 series"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q38235344"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Euskotren 900 series"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q3061020"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q838212"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q2992379",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 3"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q38235344"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Euskotren 900 series"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q38235344"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Euskotren 900 series"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q2992379"
+        },
+        {
+          "@id": "wd:Q43224027"
+        },
+        {
+          "@id": "wd:Q43263877"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q3061020"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q838212"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q43263877#P3438"
+      },
+      "line": {
+        "@id": "wd:Q43263877"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2992379#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2992379"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q43224027",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "E4 line (Euskotren Trena)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q43224027#P3438"
+      },
+      "line": {
+        "@id": "wd:Q43224027"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q43263877",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line E1 (Euskotren)"
+      }
+    }
+  ]
 }

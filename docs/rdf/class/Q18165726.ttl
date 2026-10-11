@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,27 @@ cls:Q18165726 a skos:Concept,
     wdt:P137 wd:Q4285731 ;
     wdt:P176 wd:Q309084 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q18165726#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q18165726#line2> ;
+    tb:usedOn wd:Q114450306,
+        wd:Q6276051 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q18165726#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q114450306#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q114450306 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q18165726#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6276051#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6276051 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q114450306 rdfs:label "Perth trains network"@en .
+
+wd:Q6276051 rdfs:label "Yanchep line"@en .
 

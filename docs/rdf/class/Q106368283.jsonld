@@ -11,36 +11,102 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q106368283"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "DBAG Class 633 (Pesa Link)"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q106368283"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "DBAG Class 633 (Pesa Link)"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q18853"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q822508"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q113458371",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 73"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q106368283"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "DBAG Class 633 (Pesa Link)"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q106368283"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "DBAG Class 633 (Pesa Link)"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q113458371"
+        },
+        {
+          "@id": "wd:Q121597803"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q18853"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q822508"
+      }
+    },
+    {
+      "@id": "wd:Q121597803",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 73"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q121597803#P3438"
+      },
+      "line": {
+        "@id": "wd:Q121597803"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q113458371#P3438"
+      },
+      "line": {
+        "@id": "wd:Q113458371"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

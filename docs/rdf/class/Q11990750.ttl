@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -25,5 +26,27 @@ cls:Q11990750 a skos:Concept,
         wd:Q16814621 ;
     wdt:P2978 wd:Q29638944 ;
     wdt:P729 "1981"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q11990750#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q11990750#line2> ;
+    tb:usedOn wd:Q115328988,
+        wd:Q1577458 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q11990750#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q115328988#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q115328988 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q11990750#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1577458#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1577458 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q115328988 rdfs:label "F4 Bergen–Oslo S"@en .
+
+wd:Q1577458 rdfs:label "Sørlandet Line"@en .
 

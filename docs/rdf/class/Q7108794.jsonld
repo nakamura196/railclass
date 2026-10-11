@@ -11,45 +11,111 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7108794",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7108794"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Otis Hovair"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7108794",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7108794#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7108794#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7108794"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Otis Hovair"
+        },
+        {
+          "@language": "ja",
+          "@value": "オーチス・ホバー"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q7108794"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Otis Hovair"
+        },
+        {
+          "@language": "ja",
+          "@value": "オーチス・ホバー"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q5421647"
+        },
+        {
+          "@id": "wd:Q6868054"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q1134069"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1573358"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "オーチス・ホバー"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q7108794"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Otis Hovair"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7108794#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6868054#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6868054"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "オーチス・ホバー"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7108794#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5421647#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5421647"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q6868054",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Minneapolis–St. Paul Airport Trams"
+      }
+    },
+    {
+      "@id": "wd:Q5421647",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ExpressTram"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q1134069"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1573358"
-  }
+  ]
 }

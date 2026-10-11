@@ -11,29 +11,62 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q64739187",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q64739187"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q64739187"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q183"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q641314"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "40"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q1428045",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Flensburger Kreisbahn"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q64739187",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q64739187#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q64739187"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q64739187"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "usedOn": {
+        "@id": "wd:Q1428045"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q183"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q641314"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "40"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q64739187#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1428045#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1428045"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

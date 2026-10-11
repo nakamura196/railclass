@@ -11,48 +11,81 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487262",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1487262"
-  },
-  "rdfs:label": {
-    "@language": "ja",
-    "@value": "ドルトムント市電GT8形電車"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1487262"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "ja",
-    "@value": "ドルトムント市電GT8形電車"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q474954"
+      "@id": "wd:Q28770201",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Wuppertal"
+      }
     },
     {
-      "@id": "wd:Q1196530"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487262#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q28770201#P3438"
+      },
+      "line": {
+        "@id": "wd:Q28770201"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487262",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1487262#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1487262"
+      },
+      "rdfs:label": {
+        "@language": "ja",
+        "@value": "ドルトムント市電GT8形電車"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1487262"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "ja",
+        "@value": "ドルトムント市電GT8形電車"
+      },
+      "usedOn": {
+        "@id": "wd:Q28770201"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q474954"
+        },
+        {
+          "@id": "wd:Q1196530"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "60"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3919804"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q21855034"
+      }
     }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "60"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q3919804"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q21855034"
-  }
+  ]
 }

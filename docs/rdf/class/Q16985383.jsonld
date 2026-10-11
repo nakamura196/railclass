@@ -11,86 +11,119 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16985383",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q16985383"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 68"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16985383#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1475064#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1475064"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "イギリス鉄道68形ディーゼル機関車"
+      "@id": "wd:Q1475064",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Furness Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16985383",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16985383#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q16985383"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 68"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道68形ディーゼル機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q16985383"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 68"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道68形ディーゼル機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q1475064"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q567000"
+        },
+        {
+          "@id": "wd:Q23925190"
+        },
+        {
+          "@id": "wd:Q456226"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q145"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q666703"
+        },
+        {
+          "@id": "wd:Q689256"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "161"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q19842071"
+        },
+        {
+          "@id": "wd:Q744493"
+        },
+        {
+          "@id": "wd:Q27972157"
+        }
+      ],
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2014"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q16985383"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 68"
-    },
-    {
-      "@language": "ja",
-      "@value": "イギリス鉄道68形ディーゼル機関車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q567000"
-    },
-    {
-      "@id": "wd:Q23925190"
-    },
-    {
-      "@id": "wd:Q456226"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q145"
-  },
-  "wdt:P176": [
-    {
-      "@id": "wd:Q666703"
-    },
-    {
-      "@id": "wd:Q689256"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "161"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q19842071"
-    },
-    {
-      "@id": "wd:Q744493"
-    },
-    {
-      "@id": "wd:Q27972157"
-    }
-  ],
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2014"
-  }
+  ]
 }

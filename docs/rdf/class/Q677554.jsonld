@@ -11,56 +11,89 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q677554",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q677554"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "MÁV V63 class"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q677554"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "MÁV V63 class"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q168082"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q28"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3107361"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "160"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q625151"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1022125"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1974"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q101147976",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Z60"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q677554#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q101147976#P3438"
+      },
+      "line": {
+        "@id": "wd:Q101147976"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q677554",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q677554#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q677554"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "MÁV V63 class"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q677554"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "MÁV V63 class"
+      },
+      "usedOn": {
+        "@id": "wd:Q101147976"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q168082"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q28"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3107361"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "160"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1022125"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1974"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
+    }
+  ]
 }

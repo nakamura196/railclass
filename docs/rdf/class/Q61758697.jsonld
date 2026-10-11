@@ -11,48 +11,81 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q61758697",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q61758697"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "PNR Hyundai Rotem DMU"
+      "@id": "wd:Q18388218",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "PNR Metro Commuter Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "フィリピン国鉄DMR1気動車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q61758697"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "PNR Hyundai Rotem DMU"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q61758697#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q18388218#P3438"
+      },
+      "line": {
+        "@id": "wd:Q18388218"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "フィリピン国鉄DMR1気動車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q61758697",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q61758697#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q61758697"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "PNR Hyundai Rotem DMU"
+        },
+        {
+          "@language": "ja",
+          "@value": "フィリピン国鉄DMR1気動車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q61758697"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "PNR Hyundai Rotem DMU"
+        },
+        {
+          "@language": "ja",
+          "@value": "フィリピン国鉄DMR1気動車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q18388218"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1637464"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q152517"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q1637464"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q152517"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  ]
 }

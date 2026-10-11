@@ -11,63 +11,129 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3315648",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3315648"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Minuetto"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q3315648"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Minuetto"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q286650"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3315648#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2097660#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2097660"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q3756307"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3315648#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2274335#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2274335"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q3743281"
+      "@id": "wd:Q2274335",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cagliari metropolitan railway service"
+      }
     },
     {
-      "@id": "wd:Q3743373"
+      "@id": "wd:Q2097660",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Palermo metropolitan railway service"
+      }
     },
     {
-      "@id": "wd:Q3998389"
-    },
-    {
-      "@id": "wd:Q16617570"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3315648",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3315648#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3315648#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3315648"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Minuetto"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q3315648"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Minuetto"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q2097660"
+        },
+        {
+          "@id": "wd:Q2274335"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q286650"
+        },
+        {
+          "@id": "wd:Q3756307"
+        },
+        {
+          "@id": "wd:Q3743281"
+        },
+        {
+          "@id": "wd:Q3743373"
+        },
+        {
+          "@id": "wd:Q3998389"
+        },
+        {
+          "@id": "wd:Q16617570"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q38"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "160"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q65789247"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q60325071"
+      }
     }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q38"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "160"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q65789247"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q60325071"
-  }
+  ]
 }

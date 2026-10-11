@@ -11,45 +11,169 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3536994",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3536994"
-  },
-  "rdfs:label": {
-    "@language": "ja",
-    "@value": "ブリュッセル首都圏交通T4000形電車"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q3536994"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "ja",
-    "@value": "ブリュッセル首都圏交通T4000形電車"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1631655"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q31"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q688893"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q381106"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q21855034"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q1888831",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Brussels tram route 3"
+      }
+    },
+    {
+      "@id": "wd:Q2527775",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Brussels tram route 4"
+      }
+    },
+    {
+      "@id": "wd:Q111210270",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Brussels tram route 10"
+      }
+    },
+    {
+      "@id": "wd:Q3239018",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Brussels tram route 7"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3536994",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3536994#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3536994#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3536994#line3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3536994#line4"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3536994"
+      },
+      "rdfs:label": {
+        "@language": "ja",
+        "@value": "ブリュッセル首都圏交通T4000形電車"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q3536994"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "ja",
+        "@value": "ブリュッセル首都圏交通T4000形電車"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q111210270"
+        },
+        {
+          "@id": "wd:Q1888831"
+        },
+        {
+          "@id": "wd:Q2527775"
+        },
+        {
+          "@id": "wd:Q3239018"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1631655"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q31"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q688893"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q381106"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q21855034"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3536994#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2527775#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2527775"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3536994#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q111210270#P3438"
+      },
+      "line": {
+        "@id": "wd:Q111210270"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3536994#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1888831#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1888831"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3536994#line4",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3239018#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3239018"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

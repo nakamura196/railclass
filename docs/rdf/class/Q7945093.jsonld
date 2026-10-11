@@ -11,45 +11,78 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7945093",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7945093"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "W-class Melbourne tram"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7945093",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7945093#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7945093"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "W-class Melbourne tram"
+        },
+        {
+          "@language": "ja",
+          "@value": "メルボルントラムW形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q7945093"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "W-class Melbourne tram"
+        },
+        {
+          "@language": "ja",
+          "@value": "メルボルントラムW形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q5123100"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q6811935"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3407658"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "メルボルントラムW形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q7945093"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "W-class Melbourne tram"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7945093#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5123100#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5123100"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "メルボルントラムW形電車"
+      "@id": "wd:Q5123100",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "City Circle"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q6811935"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q3407658"
-  }
+  ]
 }

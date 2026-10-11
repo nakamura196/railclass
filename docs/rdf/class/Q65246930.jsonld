@@ -11,52 +11,85 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q65246930",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q65246930"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Škoda push-pull trainset"
+      "@id": "wd:Q322058",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 1 (Bavaria)"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "シュコダ・プッシュプル・トレインセット"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q65246930"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Škoda push-pull trainset"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q65246930#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q322058#P3438"
+      },
+      "line": {
+        "@id": "wd:Q322058"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "シュコダ・プッシュプル・トレインセット"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q65246930",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q65246930#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q65246930"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Škoda push-pull trainset"
+        },
+        {
+          "@language": "ja",
+          "@value": "シュコダ・プッシュプル・トレインセット"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q65246930"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Škoda push-pull trainset"
+        },
+        {
+          "@language": "ja",
+          "@value": "シュコダ・プッシュプル・トレインセット"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q322058"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1152076"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "190"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q935330"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1152076"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "190"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q935330"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,38 @@ cls:Q12064571 a skos:Concept,
     wdt:P137 wd:Q24088909 ;
     wdt:P176 wd:Q152517 ;
     wdt:P279 wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line3> ;
+    tb:usedOn wd:Q16926948,
+        wd:Q16926970,
+        wd:Q6813114 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16926948#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q16926948 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16926970#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q16926970 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q12064571#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6813114#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6813114 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q16926948 rdfs:label "Johnsonville Line"@en .
+
+wd:Q16926970 rdfs:label "Kapiti Line"@en .
+
+wd:Q6813114 rdfs:label "Melling Branch"@en .
 

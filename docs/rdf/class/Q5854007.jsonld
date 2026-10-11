@@ -11,36 +11,69 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5854007",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q5854007"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "FM-86"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q5854007"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "FM-86"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q96"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q5731817"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q3239049",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line A"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5854007",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5854007#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q5854007"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "FM-86"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q5854007"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "FM-86"
+      },
+      "usedOn": {
+        "@id": "wd:Q3239049"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q96"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q5731817"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5854007#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3239049#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3239049"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

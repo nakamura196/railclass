@@ -11,45 +11,78 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1765661",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1765661"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "SNCF Class VB 2N"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1765661"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "SNCF Class VB 2N"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q13646"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "140"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q1243337"
+      "@id": "wd:Q93388",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line J"
+      }
     },
     {
-      "@id": "wd:Q16814621"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1765661",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1765661#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1765661"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SNCF Class VB 2N"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1765661"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "SNCF Class VB 2N"
+      },
+      "usedOn": {
+        "@id": "wd:Q93388"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q13646"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "140"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q1243337"
+        },
+        {
+          "@id": "wd:Q16814621"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1765661#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q93388#P3438"
+      },
+      "line": {
+        "@id": "wd:Q93388"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

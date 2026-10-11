@@ -11,55 +11,88 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1078118",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1078118"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Tatra T5C5"
+      "@id": "wd:Q651686",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tram line 1"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "タトラT5C5"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q1078118"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Tatra T5C5"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1078118#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q651686#P3438"
+      },
+      "line": {
+        "@id": "wd:Q651686"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "タトラT5C5"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1078118",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1078118#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1078118"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Tatra T5C5"
+        },
+        {
+          "@language": "ja",
+          "@value": "タトラT5C5"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1078118"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Tatra T5C5"
+        },
+        {
+          "@language": "ja",
+          "@value": "タトラT5C5"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q651686"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q745664"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q336811"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "65"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q970639"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q745664"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q336811"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "65"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q970639"
-  }
+  ]
 }

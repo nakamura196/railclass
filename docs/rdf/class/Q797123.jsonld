@@ -11,39 +11,109 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q797123",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q797123"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "BVG Class G"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q797123"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "BVG Class G"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q99633"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q466615"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q797123#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q80872#P3438"
+      },
+      "line": {
+        "@id": "wd:Q80872"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2001"
+      }
+    },
+    {
+      "@id": "wd:Q80872",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Pyŏngyang Metro"
+      }
+    },
+    {
+      "@id": "wd:Q99697",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "U2"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q797123#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q99697#P3438"
+      },
+      "line": {
+        "@id": "wd:Q99697"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q797123",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q797123#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q797123#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q797123"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "BVG Class G"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q797123"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "BVG Class G"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q80872"
+        },
+        {
+          "@id": "wd:Q99697"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q99633"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q466615"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    }
+  ]
 }

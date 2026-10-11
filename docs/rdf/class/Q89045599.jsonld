@@ -11,62 +11,95 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q89045599",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q89045599"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Düwag M"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q89045599#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q875843#P3438"
+      },
+      "line": {
+        "@id": "wd:Q875843"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "フランクフルト市電M形電車"
+      "@id": "wd:Q875843",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Mainz"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q89045599",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q89045599#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q89045599"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Düwag M"
+        },
+        {
+          "@language": "ja",
+          "@value": "フランクフルト市電M形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q89045599"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Düwag M"
+        },
+        {
+          "@language": "ja",
+          "@value": "フランクフルト市電M形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q875843"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q1754870"
+        },
+        {
+          "@id": "wd:Q53430"
+        },
+        {
+          "@id": "wd:Q3997541"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q36"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q822381"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q21855034"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q89045599"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Düwag M"
-    },
-    {
-      "@language": "ja",
-      "@value": "フランクフルト市電M形電車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q1754870"
-    },
-    {
-      "@id": "wd:Q53430"
-    },
-    {
-      "@id": "wd:Q3997541"
-    }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q36"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q822381"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q21855034"
-  }
+  ]
 }

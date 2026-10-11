@@ -11,45 +11,78 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30069596",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q30069596"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Ferrocarriles Patagónicos 75H"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q30069596"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Ferrocarriles Patagónicos 75H"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q4032352"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q5445422"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q414"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q163580"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q20650761"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1463583"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30069596#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2737219#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2737219"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30069596",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30069596#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q30069596"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ferrocarriles Patagónicos 75H"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q30069596"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Ferrocarriles Patagónicos 75H"
+      },
+      "usedOn": {
+        "@id": "wd:Q2737219"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q4032352"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q5445422"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q414"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q163580"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q20650761"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1463583"
+      }
+    },
+    {
+      "@id": "wd:Q2737219",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "La Trochita"
+      }
+    }
+  ]
 }

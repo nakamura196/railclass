@@ -11,56 +11,122 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3303735"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 507"
+      "@id": "wd:Q12064448",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Northern Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄507形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q3303735"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 507"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q8026990#P3438"
+      },
+      "line": {
+        "@id": "wd:Q8026990"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄507形電車"
+      "@id": "wd:Q8026990",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Wirral Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q12064448#P3438"
+      },
+      "line": {
+        "@id": "wd:Q12064448"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3303735"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 507"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄507形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q3303735"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 507"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄507形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q12064448"
+        },
+        {
+          "@id": "wd:Q8026990"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q1922100"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3303533"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "121"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q4970920"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1978"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q1922100"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3303533"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "121"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q4970920"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1978"
-  }
+  ]
 }

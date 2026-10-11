@@ -11,36 +11,102 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3061133",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3061133"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "MPL 75"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q3061133"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "MPL 75"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q8700"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q142"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q309084"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3061133#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2965#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2965"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3061133",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3061133#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3061133#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3061133"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "MPL 75"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q3061133"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "MPL 75"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q2944"
+        },
+        {
+          "@id": "wd:Q2965"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q8700"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q142"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q309084"
+      }
+    },
+    {
+      "@id": "wd:Q2944",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lyon Metro Line A"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3061133#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2944#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2944"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q2965",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lyon Metro Line B"
+      }
+    }
+  ]
 }

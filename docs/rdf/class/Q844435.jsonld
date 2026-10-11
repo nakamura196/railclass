@@ -11,49 +11,86 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q844435",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q844435"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "KTM-2"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q844435",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q844435#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q844435"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "KTM-2"
+        },
+        {
+          "@language": "ja",
+          "@value": "KTM-2"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q844435"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "KTM-2"
+        },
+        {
+          "@language": "ja",
+          "@value": "KTM-2"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q3509082"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q844336"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "40"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3407658"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "KTM-2"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q844435"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "KTM-2"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q844435#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3509082#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3509082"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "KTM-2"
+      "@id": "wd:Q3509082",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Ryazan"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q844336"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "40"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q3407658"
-  }
+  ]
 }

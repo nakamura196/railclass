@@ -11,43 +11,109 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q336680",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q336680"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "ČD Class 814"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q336680"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "ČD Class 814"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q304944"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q12043871"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "80"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q168331",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Esko Prague"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q336680",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q336680#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q336680#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q336680"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ČD Class 814"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q336680"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "ČD Class 814"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q168331"
+        },
+        {
+          "@id": "wd:Q803355"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q304944"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q12043871"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "80"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q336680#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q168331#P3438"
+      },
+      "line": {
+        "@id": "wd:Q168331"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q336680#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q803355#P3438"
+      },
+      "line": {
+        "@id": "wd:Q803355"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q803355",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tábor–Bechyně railway"
+      }
+    }
+  ]
 }

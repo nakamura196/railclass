@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,5 +23,27 @@ cls:Q3735629 a skos:Concept,
     wdt:P279 wd:Q2376563,
         wd:Q4102249,
         wd:Q483373 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3735629#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3735629#line2> ;
+    tb:usedOn wd:Q2710248,
+        wd:Q340562 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3735629#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2710248#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2710248 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3735629#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q340562#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q340562 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2710248 rdfs:label "Kholodnohirsko–Zavodska Line"@en .
+
+wd:Q340562 rdfs:label "Akhmeteli–Varketili Line"@en .
 

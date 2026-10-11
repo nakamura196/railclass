@@ -11,36 +11,69 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6044844",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q6044844"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "InterCity Express"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q6044844"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "InterCity Express"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q379439"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q13551978"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q16927337",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sunshine Coast railway line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6044844",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6044844#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q6044844"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "InterCity Express"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q6044844"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "InterCity Express"
+      },
+      "usedOn": {
+        "@id": "wd:Q16927337"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q379439"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q13551978"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6044844#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q16927337#P3438"
+      },
+      "line": {
+        "@id": "wd:Q16927337"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

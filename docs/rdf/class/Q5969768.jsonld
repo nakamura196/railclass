@@ -11,36 +11,69 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5969768",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q5969768"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "S series"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q5969768"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "S series"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q17978"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q3552199"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q4940487"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q54372",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 3 Scarborough"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5969768",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5969768#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q5969768"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "S series"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q5969768"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "S series"
+      },
+      "usedOn": {
+        "@id": "wd:Q54372"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q17978"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3552199"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q4940487"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5969768#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q54372#P3438"
+      },
+      "line": {
+        "@id": "wd:Q54372"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

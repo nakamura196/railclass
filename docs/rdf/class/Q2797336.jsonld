@@ -11,36 +11,143 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2797336"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "SNCF Grand Confort car"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q2797336"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "SNCF Grand Confort car"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q13646"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q566752"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q753779"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2329410#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2329410"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1988"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5354992#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5354992"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1988"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2797336"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SNCF Grand Confort car"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q2797336"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "SNCF Grand Confort car"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q2329410"
+        },
+        {
+          "@id": "wd:Q2762507"
+        },
+        {
+          "@id": "wd:Q5354992"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q13646"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q566752"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q753779"
+      }
+    },
+    {
+      "@id": "wd:Q2329410",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kléber"
+      }
+    },
+    {
+      "@id": "wd:Q2762507",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Aquitaine"
+      }
+    },
+    {
+      "@id": "wd:Q5354992",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Stanislas"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2762507#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2762507"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1990"
+      }
+    }
+  ]
 }

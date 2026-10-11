@@ -11,45 +11,78 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17051139",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q17051139"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Kawasaki Heavy Industries & CRRC Sifang T251"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17051139#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7795883#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7795883"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "CT251型電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q17051139"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Kawasaki Heavy Industries & CRRC Sifang T251"
+      "@id": "wd:Q7795883",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Thomson–East Coast Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "CT251型電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17051139",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17051139#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q17051139"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Kawasaki Heavy Industries & CRRC Sifang T251"
+        },
+        {
+          "@language": "ja",
+          "@value": "CT251型電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q17051139"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Kawasaki Heavy Industries & CRRC Sifang T251"
+        },
+        {
+          "@language": "ja",
+          "@value": "CT251型電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q7795883"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q3243209"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q6379763"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q3243209"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q6379763"
-  }
+  ]
 }

@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -25,5 +26,39 @@ cls:Q616829 a skos:Concept,
     wdt:P729 "1976"^^xsd:gYear ;
     wdt:P930 wd:Q106530439,
         wd:Q21253457 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q616829#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q616829#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q616829#line3> ;
+    tb:usedOn wd:Q111061358,
+        wd:Q124126039,
+        wd:Q2796934 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q616829#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q111061358#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q111061358 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q616829#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q124126039#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q124126039 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q616829#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2796934#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2796934 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1995"^^xsd:gYear .
+
+wd:Q111061358 rdfs:label "OSLO"@en .
+
+wd:Q124126039 rdfs:label "Ouigo Train Classique"@en .
+
+wd:Q2796934 rdfs:label "Watteau"@en .
 

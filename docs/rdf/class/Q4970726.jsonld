@@ -11,52 +11,89 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4970726",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q4970726"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 126"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4970726",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4970726#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q4970726"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 126"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄クラス126気動車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q4970726"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 126"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス国鉄クラス126気動車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q4831682"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q7437933"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q922964"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q1567915"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1959"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄クラス126気動車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q4970726"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 126"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4970726#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4831682#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4831682"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1983"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス国鉄クラス126気動車"
+      "@id": "wd:Q4831682",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ayrshire Coast Line"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q7437933"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q922964"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q1567915"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1959"
-  }
+  ]
 }

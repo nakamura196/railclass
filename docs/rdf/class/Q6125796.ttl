@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -19,5 +20,27 @@ cls:Q6125796 a skos:Concept,
     wdt:P137 wd:Q2476154 ;
     wdt:P17 wd:Q29 ;
     wdt:P176 wd:Q838212 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q6125796#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q6125796#line2> ;
+    tb:usedOn wd:Q2842994,
+        wd:Q3109506 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q6125796#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2842994#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2842994 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q6125796#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3109506#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3109506 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2842994 rdfs:label "Renfe Regionales"@en .
+
+wd:Q3109506 rdfs:label "Media Distancia Renfe"@en .
 

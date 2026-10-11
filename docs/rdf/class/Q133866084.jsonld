@@ -11,49 +11,82 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q133866084",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q133866084"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "TCDD E 39000"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q133866084"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "TCDD E 39000"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q28220824"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q43"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q97219287"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2025"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q133866084",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q133866084#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q133866084"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "TCDD E 39000"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q133866084"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "TCDD E 39000"
+      },
+      "usedOn": {
+        "@id": "wd:Q55074880"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q28220824"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q43"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q97219287"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2025"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q133866084#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q55074880#P3438"
+      },
+      "line": {
+        "@id": "wd:Q55074880"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q55074880",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Gaziray"
+      }
+    }
+  ]
 }

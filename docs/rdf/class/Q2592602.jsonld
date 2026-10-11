@@ -11,46 +11,79 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2592602",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2592602"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Škoda 14 T"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2592602",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2592602#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2592602"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Škoda 14 T"
+        },
+        {
+          "@language": "ja",
+          "@value": "シュコダ 14T"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q2592602"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Škoda 14 T"
+        },
+        {
+          "@language": "ja",
+          "@value": "シュコダ 14T"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q1420119"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q933787"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "60"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "シュコダ 14T"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q2592602"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Škoda 14 T"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2592602#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1420119#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1420119"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "シュコダ 14T"
+      "@id": "wd:Q1420119",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Prague tram system"
+      }
     }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q933787"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "60"
-  }
+  ]
 }

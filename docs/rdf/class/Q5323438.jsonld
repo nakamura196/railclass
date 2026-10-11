@@ -11,51 +11,117 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5323438",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q5323438"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "EMD GP40-based passenger locomotives"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5323438",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5323438#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5323438#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q5323438"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "EMD GP40-based passenger locomotives"
+        },
+        {
+          "@language": "ja",
+          "@value": "EMD GP40形ベースの旅客型ディーゼル機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q5323438"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "EMD GP40-based passenger locomotives"
+        },
+        {
+          "@language": "ja",
+          "@value": "EMD GP40形ベースの旅客型ディーゼル機関車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q7294577"
+        },
+        {
+          "@id": "wd:Q756350"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q568501"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q4037798"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q1014107"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "EMD GP40形ベースの旅客型ディーゼル機関車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q5323438"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "EMD GP40-based passenger locomotives"
+      "@id": "wd:Q756350",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Atlantic City Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "EMD GP40形ベースの旅客型ディーゼル機関車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5323438#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q756350#P3438"
+      },
+      "line": {
+        "@id": "wd:Q756350"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q7294577",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Raritan Valley Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5323438#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7294577#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7294577"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q568501"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q4037798"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q1014107"
-  }
+  ]
 }

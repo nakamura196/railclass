@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -26,5 +27,27 @@ cls:Q706345 a skos:Concept,
     wdt:P176 wd:Q2675204 ;
     wdt:P2052 180.0 ;
     wdt:P279 wd:Q1567915 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q706345#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q706345#line2> ;
+    tb:usedOn wd:Q74951,
+        wd:Q846655 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q706345#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q74951#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q74951 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q706345#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q846655#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q846655 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q74951 rdfs:label "Jaffa–Jerusalem railway"@en .
+
+wd:Q846655 rdfs:label "Israel Railways"@en .
 

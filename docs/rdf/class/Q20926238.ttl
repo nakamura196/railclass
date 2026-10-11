@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,5 +22,38 @@ cls:Q20926238 a skos:Concept,
     wdt:P279 wd:Q483373 ;
     wdt:P729 "2012"^^xsd:gYear ;
     wdt:P930 wd:Q106530439 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line3> ;
+    tb:usedOn wd:Q111263037,
+        wd:Q112118212,
+        wd:Q497844 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q111263037#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q111263037 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q112118212#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q112118212 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q497844#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q497844 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q111263037 rdfs:label "Sirkeci-Kazlıçeşme Rail System"@en .
+
+wd:Q112118212 rdfs:label "Halkalı-Bahçeşehir Rail System"@en .
+
+wd:Q497844 rdfs:label "Marmaray"@en .
 

@@ -11,54 +11,91 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1412760",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q1412760"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Heeresfeldbahn HF 130C"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q1412760"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Heeresfeldbahn HF 130C"
-  },
-  "wdt:P176": [
+  "@graph": [
     {
-      "@id": "wd:Q652491"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1412760#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q883462#P3438"
+      },
+      "line": {
+        "@id": "wd:Q883462"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1940"
+      }
     },
     {
-      "@id": "wd:Q319035"
+      "@id": "wd:Q883462",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rügensche Kleinbahn"
+      }
     },
     {
-      "@id": "wd:Q870024"
-    },
-    {
-      "@id": "wd:Q533617"
-    },
-    {
-      "@id": "wd:Q529531"
-    },
-    {
-      "@id": "wd:Q1667111"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1412760",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1412760#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1412760"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Heeresfeldbahn HF 130C"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q1412760"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Heeresfeldbahn HF 130C"
+      },
+      "usedOn": {
+        "@id": "wd:Q883462"
+      },
+      "wdt:P176": [
+        {
+          "@id": "wd:Q652491"
+        },
+        {
+          "@id": "wd:Q319035"
+        },
+        {
+          "@id": "wd:Q870024"
+        },
+        {
+          "@id": "wd:Q533617"
+        },
+        {
+          "@id": "wd:Q529531"
+        },
+        {
+          "@id": "wd:Q1667111"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "30"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q2922269"
+      }
     }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "30"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q2922269"
-  }
+  ]
 }

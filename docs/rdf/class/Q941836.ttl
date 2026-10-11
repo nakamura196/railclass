@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -17,5 +18,60 @@ cls:Q941836 a skos:Concept,
         "ハーグ市営交通会社GTL-8形電車"@ja ;
     prov:wasDerivedFrom wd:Q941836 ;
     wdt:P17 wd:Q55 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q941836#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q941836#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q941836#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q941836#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q941836#line5> ;
+    tb:usedOn wd:Q2085324,
+        wd:Q2205103,
+        wd:Q2541548,
+        wd:Q2746551,
+        wd:Q3926989 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q941836#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2085324#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2085324 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q941836#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2205103#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2205103 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q941836#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2541548#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2541548 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q941836#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2746551#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2746551 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q941836#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3926989#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3926989 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2085324 rdfs:label "Haaglanden tram line 1"@en .
+
+wd:Q2205103 rdfs:label "Haaglanden tram line 6"@en .
+
+wd:Q2541548 rdfs:label "Haaglanden tram line 12"@en .
+
+wd:Q2746551 rdfs:label "Haaglanden tram line 16"@en .
+
+wd:Q3926989 rdfs:label "Haaglanden tram line 2"@en .
 

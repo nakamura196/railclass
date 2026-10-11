@@ -11,56 +11,89 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q107210897",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q107210897"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Tyne and Wear Metro Class 555"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q107210897",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q107210897#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q107210897"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Tyne and Wear Metro Class 555"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道555形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q107210897"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Tyne and Wear Metro Class 555"
+        },
+        {
+          "@language": "ja",
+          "@value": "イギリス鉄道555形電車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q541027"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q541027"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q666703"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "80"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2024"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "イギリス鉄道555形電車"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q107210897"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Tyne and Wear Metro Class 555"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q107210897#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q541027#P3438"
+      },
+      "line": {
+        "@id": "wd:Q541027"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "イギリス鉄道555形電車"
+      "@id": "wd:Q541027",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tyne and Wear Metro"
+      }
     }
-  ],
-  "wdt:P137": {
-    "@id": "wd:Q541027"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q666703"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "80"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2024"
-  }
+  ]
 }

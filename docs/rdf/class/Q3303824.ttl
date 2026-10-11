@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,5 +21,38 @@ cls:Q3303824 a skos:Concept,
     wdt:P17 wd:Q16 ;
     wdt:P176 wd:Q688893 ;
     wdt:P279 wd:Q3303940 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line3> ;
+    tb:usedOn wd:Q1277792,
+        wd:Q14953694,
+        wd:Q1902800 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1277792#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1277792 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q14953694#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q14953694 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303824#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1902800#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1902800 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1277792 rdfs:label "East Coastway Line"@en .
+
+wd:Q14953694 rdfs:label "Oxted Line"@en .
+
+wd:Q1902800 rdfs:label "Marshlink Line"@en .
 

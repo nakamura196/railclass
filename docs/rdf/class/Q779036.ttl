@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -24,5 +25,62 @@ cls:Q779036 a skos:Concept,
     wdt:P2052 145.0 ;
     wdt:P279 wd:Q4735850 ;
     wdt:P729 "2001"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q779036#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q779036#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q779036#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q779036#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q779036#line5> ;
+    tb:usedOn wd:Q4789827,
+        wd:Q4831682,
+        wd:Q6060054,
+        wd:Q7054842,
+        wd:Q7993583 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q779036#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4789827#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4789827 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q779036#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4831682#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4831682 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2011"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q779036#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6060054#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6060054 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2011"^^xsd:gYear .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q779036#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7054842#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7054842 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q779036#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7993583#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7993583 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4789827 rdfs:label "Argyle Line"@en .
+
+wd:Q4831682 rdfs:label "Ayrshire Coast Line"@en .
+
+wd:Q6060054 rdfs:label "Inverclyde Line"@en .
+
+wd:Q7054842 rdfs:label "North Clyde Line"@en .
+
+wd:Q7993583 rdfs:label "Whifflet Line"@en .
 

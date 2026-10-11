@@ -11,33 +11,66 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3630898",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3630898"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Trenord ATR 125"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q3630898"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Trenord ATR 125"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1324935"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q3967974"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3630898",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3630898#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3630898"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trenord ATR 125"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q3630898"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Trenord ATR 125"
+      },
+      "usedOn": {
+        "@id": "wd:Q26878568"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1324935"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3967974"
+      }
+    },
+    {
+      "@id": "wd:Q26878568",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "S7 (Milan)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3630898#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q26878568#P3438"
+      },
+      "line": {
+        "@id": "wd:Q26878568"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

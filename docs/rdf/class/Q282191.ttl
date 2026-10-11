@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -27,5 +28,50 @@ cls:Q282191 a skos:Concept,
     wdt:P2052 80.0 ;
     wdt:P279 wd:Q3407658 ;
     wdt:P930 wd:Q25857994 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q282191#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q282191#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q282191#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q282191#line4> ;
+    tb:usedOn wd:Q1339376,
+        wd:Q1425645,
+        wd:Q63349759,
+        wd:Q637855 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q282191#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1339376#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1339376 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q282191#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1425645#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1425645 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q282191#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q63349759#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q63349759 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q282191#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q637855#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q637855 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2021"^^xsd:gYear .
+
+wd:Q1339376 rdfs:label "Trams in Houten"@en .
+
+wd:Q1425645 rdfs:label "Métro léger de Tunis"@en .
+
+wd:Q63349759 rdfs:label "9"@en .
+
+wd:Q637855 rdfs:label "Hanover Stadtbahn"@en .
 

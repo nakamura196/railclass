@@ -11,33 +11,128 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q2647945"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "SJ X11"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q2647945"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "SJ X11"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q104185516"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  }
+  "@graph": [
+    {
+      "@id": "wd:Q10720782",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "X-Tåget"
+      }
+    },
+    {
+      "@id": "wd:Q10549741",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Krösatågen"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10549741#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10549741"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q10602972",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Norrtåg"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10602972#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10602972"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945#line2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945#line3"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q2647945"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SJ X11"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q2647945"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "SJ X11"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q10549741"
+        },
+        {
+          "@id": "wd:Q10602972"
+        },
+        {
+          "@id": "wd:Q10720782"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q104185516"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10720782#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10720782"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    }
+  ]
 }

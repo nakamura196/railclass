@@ -11,64 +11,130 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303610",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q3303610"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "British Rail Class 466"
+      "@id": "wd:Q4973689",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bromley North Line"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "クラス466電車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303610",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303610#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303610#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q3303610"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 466"
+        },
+        {
+          "@language": "ja",
+          "@value": "クラス466電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q3303610"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "British Rail Class 466"
+        },
+        {
+          "@language": "ja",
+          "@value": "クラス466電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q4973689"
+        },
+        {
+          "@id": "wd:Q7492508"
+        }
+      ],
+      "wdt:P137": [
+        {
+          "@id": "wd:Q1696490"
+        },
+        {
+          "@id": "wd:Q1867165"
+        },
+        {
+          "@id": "wd:Q5161796"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q3112198"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "121"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1993"
+      }
+    },
+    {
+      "@id": "wd:Q7492508",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sheerness Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303610#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7492508#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7492508"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303610#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4973689#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4973689"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q3303610"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "British Rail Class 466"
-    },
-    {
-      "@language": "ja",
-      "@value": "クラス466電車"
-    }
-  ],
-  "wdt:P137": [
-    {
-      "@id": "wd:Q1696490"
-    },
-    {
-      "@id": "wd:Q1867165"
-    },
-    {
-      "@id": "wd:Q5161796"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q3112198"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "121"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "1993"
-  }
+  ]
 }

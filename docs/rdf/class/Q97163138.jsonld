@@ -11,57 +11,90 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97163138",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q97163138"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Tatra-Yug K1T"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97163138#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q219347#P3438"
+      },
+      "line": {
+        "@id": "wd:Q219347"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "K-1T"
-    }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q97163138"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Tatra-Yug K1T"
+      "@id": "wd:Q219347",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Dnipro"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "K-1T"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97163138",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q97163138#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q97163138"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Tatra-Yug K1T"
+        },
+        {
+          "@language": "ja",
+          "@value": "K-1T"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q97163138"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Tatra-Yug K1T"
+        },
+        {
+          "@language": "ja",
+          "@value": "K-1T"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q219347"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1197451"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1623863"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q212"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q20962000"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3407658"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q56044891"
+      }
     }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1197451"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1623863"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q212"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q20962000"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q3407658"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q56044891"
-  }
+  ]
 }

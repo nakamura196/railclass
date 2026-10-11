@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -38,5 +39,49 @@ cls:Q600750 a skos:Concept,
     wdt:P2052 65.0 ;
     wdt:P279 wd:Q970639 ;
     wdt:P2978 wd:Q1014107 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q600750#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q600750#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q600750#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q600750#line4> ;
+    tb:usedOn wd:Q219347,
+        wd:Q315614,
+        wd:Q324601,
+        wd:Q911344 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q600750#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q219347#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q219347 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q600750#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q315614#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q315614 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q600750#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q324601#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q324601 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q600750#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q911344#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q911344 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q219347 rdfs:label "Trams in Dnipro"@en .
+
+wd:Q315614 rdfs:label "trams in Dresden"@en .
+
+wd:Q324601 rdfs:label "Trams in Leipzig"@en .
+
+wd:Q911344 rdfs:label "Pyongyang tram system"@en .
 

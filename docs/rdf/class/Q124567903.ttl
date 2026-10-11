@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -82,5 +83,38 @@ cls:Q124567903 a skos:Concept,
         wd:Q1415234,
         wd:Q21251675,
         wd:Q21253457 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q124567903#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q124567903#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q124567903#line3> ;
+    tb:usedOn wd:Q131633085,
+        wd:Q131633087,
+        wd:Q137294390 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q124567903#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q131633085#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q131633085 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q124567903#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q131633087#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q131633087 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q124567903#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q137294390#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q137294390 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q131633085 rdfs:label "RE 50"@en .
+
+wd:Q131633087 rdfs:label "RB 51"@en .
+
+wd:Q137294390 rdfs:label "GoVolta"@en .
 

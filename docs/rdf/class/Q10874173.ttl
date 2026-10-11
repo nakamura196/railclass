@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -24,5 +25,49 @@ cls:Q10874173 a skos:Concept,
         wd:Q848225 ;
     wdt:P279 wd:Q6857344 ;
     wdt:P729 "1992"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q10874173#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q10874173#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q10874173#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q10874173#line4> ;
+    tb:usedOn wd:Q138259410,
+        wd:Q17370502,
+        wd:Q20982403,
+        wd:Q873605 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q10874173#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q138259410#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q138259410 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q10874173#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q17370502#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q17370502 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q10874173#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q20982403#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q20982403 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q10874173#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q873605#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q873605 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q138259410 rdfs:label "Nanhu 1921 Train"@en .
+
+wd:Q17370502 rdfs:label "K1156/1157 & K1158/1155 Chengdu-Shanghai Express Train"@en .
+
+wd:Q20982403 rdfs:label "Addis Ababa–Djibouti Railway"@en .
+
+wd:Q873605 rdfs:label "Qinhuangdao–Shenyang high-speed railway"@en .
 

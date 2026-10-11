@@ -11,50 +11,83 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7120486",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q7120486"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Pennsylvania Railroad G5"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q7120486"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Pennsylvania Railroad G5"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q125943"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7120486",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7120486#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q7120486"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Pennsylvania Railroad G5"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q7120486"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Pennsylvania Railroad G5"
+      },
+      "usedOn": {
+        "@id": "wd:Q125943"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q125943"
+        },
+        {
+          "@id": "wd:Q1197895"
+        }
+      ],
+      "wdt:P17": {
+        "@id": "wd:Q30"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q4736953"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q20650761"
+      },
+      "wdt:P2978": {
+        "@id": "wd:Q483711"
+      }
     },
     {
-      "@id": "wd:Q1197895"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7120486#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q125943#P3438"
+      },
+      "line": {
+        "@id": "wd:Q125943"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q125943",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Long Island Rail Road"
+      }
     }
-  ],
-  "wdt:P17": {
-    "@id": "wd:Q30"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q4736953"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q20650761"
-  },
-  "wdt:P2978": {
-    "@id": "wd:Q483711"
-  }
+  ]
 }

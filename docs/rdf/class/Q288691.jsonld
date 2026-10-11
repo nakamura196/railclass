@@ -11,47 +11,113 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q288691",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q288691"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Silberling"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q288691"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Silberling"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
+  "@graph": [
     {
-      "@id": "wd:Q9322"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q288691",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q288691#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q288691#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q288691"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Silberling"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q288691"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Silberling"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q1093774"
+        },
+        {
+          "@id": "wd:Q64520536"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q9322"
+        },
+        {
+          "@id": "wd:Q1466214"
+        },
+        {
+          "@id": "wd:Q98848266"
+        },
+        {
+          "@id": "wd:Q106834604"
+        }
+      ],
+      "wdt:P279": {
+        "@id": "wd:Q753779"
+      }
     },
     {
-      "@id": "wd:Q1466214"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q288691#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1093774#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1093774"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q98848266"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q288691#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q64520536#P3438"
+      },
+      "line": {
+        "@id": "wd:Q64520536"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q106834604"
+      "@id": "wd:Q1093774",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "City-Bahn"
+      }
+    },
+    {
+      "@id": "wd:Q64520536",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 7 (Baden-Württemberg)"
+      }
     }
-  ],
-  "wdt:P279": {
-    "@id": "wd:Q753779"
-  }
+  ]
 }

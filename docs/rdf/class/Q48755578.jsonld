@@ -11,55 +11,121 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48755578",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q48755578"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "VAG Class G1"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q48755578"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "VAG Class G1"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q1557682"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q391895"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "80"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q4102249"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48755578#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3433210#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3433210"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q2284320"
+      "@id": "wd:Q3433210",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "U1 (Nuremberg)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48755578",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48755578#line1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48755578#line2"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q48755578"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "VAG Class G1"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q48755578"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "VAG Class G1"
+      },
+      "usedOn": [
+        {
+          "@id": "wd:Q3433210"
+        },
+        {
+          "@id": "wd:Q697512"
+        }
+      ],
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1557682"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q391895"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "80"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q4102249"
+        },
+        {
+          "@id": "wd:Q2284320"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q25857994"
+      }
+    },
+    {
+      "@id": "wd:Q697512",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Nuremberg U-Bahn"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q48755578#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q697512#P3438"
+      },
+      "line": {
+        "@id": "wd:Q697512"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
-  ],
-  "wdt:P729": {
-    "@type": "xsd:gYear",
-    "@value": "2020"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q25857994"
-  }
+  ]
 }

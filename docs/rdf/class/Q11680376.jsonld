@@ -11,42 +11,75 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11680376",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q11680376"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "CP 4000 Series"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q11680376"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "CP 4000 Series"
-  },
-  "wdt:P137": {
-    "@id": "wd:Q81123"
-  },
-  "wdt:P17": {
-    "@id": "wd:Q45"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q2738829"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q483373"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q106530439"
-  }
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11680376#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q223386#P3438"
+      },
+      "line": {
+        "@id": "wd:Q223386"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q223386",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Alfa Pendular"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11680376",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11680376#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q11680376"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "CP 4000 Series"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q11680376"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "CP 4000 Series"
+      },
+      "usedOn": {
+        "@id": "wd:Q223386"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q81123"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q45"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q2738829"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q106530439"
+      }
+    }
+  ]
 }

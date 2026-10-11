@@ -11,41 +11,74 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q66058049",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q66058049"
-  },
-  "rdfs:label": {
-    "@language": "en",
-    "@value": "Škoda ForCity Smart Artic X54"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q66058049"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": {
-    "@language": "en",
-    "@value": "Škoda ForCity Smart Artic X54"
-  },
-  "wdt:P1064": {
-    "@id": "wd:Q24609"
-  },
-  "wdt:P176": {
-    "@id": "wd:Q1716136"
-  },
-  "wdt:P279": [
+  "@graph": [
     {
-      "@id": "wd:Q5063597"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q66058049#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q31085928#P3438"
+      },
+      "line": {
+        "@id": "wd:Q31085928"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@id": "wd:Q233063"
+      "@id": "wd:Q31085928",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Light rail line 15"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q66058049",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q66058049#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q66058049"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Škoda ForCity Smart Artic X54"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q66058049"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Škoda ForCity Smart Artic X54"
+      },
+      "usedOn": {
+        "@id": "wd:Q31085928"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q24609"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q1716136"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q5063597"
+        },
+        {
+          "@id": "wd:Q233063"
+        }
+      ]
     }
   ]
 }

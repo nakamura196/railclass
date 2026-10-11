@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -28,5 +29,49 @@ cls:Q3303693 a skos:Concept,
         wd:Q752392,
         wd:Q7581317 ;
     wdt:P729 "1991"^^xsd:gYear ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q3303693#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303693#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303693#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q3303693#line4> ;
+    tb:usedOn wd:Q5184842,
+        wd:Q6098137,
+        wd:Q7352513,
+        wd:Q847214 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303693#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5184842#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5184842 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303693#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6098137#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6098137 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303693#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7352513#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7352513 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q3303693#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q847214#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q847214 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5184842 rdfs:label "Crewe–Derby line"@en .
+
+wd:Q6098137 rdfs:label "Ivanhoe Line"@en .
+
+wd:Q7352513 rdfs:label "Robin Hood Line"@en .
+
+wd:Q847214 rdfs:label "Looe Valley Line"@en .
 

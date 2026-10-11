@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -16,5 +17,38 @@ cls:Q33123322 a skos:Concept,
     prov:wasDerivedFrom wd:Q33123322 ;
     wdt:P176 wd:Q309084 ;
     wdt:P279 wd:Q25410366 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line3> ;
+    tb:usedOn wd:Q2097660,
+        wd:Q26769358,
+        wd:Q26828150 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2097660#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2097660 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q26769358#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q26769358 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q26828150#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q26828150 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2097660 rdfs:label "Palermo metropolitan railway service"@en .
+
+wd:Q26769358 rdfs:label "RE 5"@en .
+
+wd:Q26828150 rdfs:label "Line S12"@en .
 

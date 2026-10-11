@@ -11,67 +11,100 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q96106536",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q96106536"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Siemens Venture"
+      "@id": "wd:Q283928",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Northlander"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "シーメンス・ベンチャー"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q96106536#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q283928#P3438"
+      },
+      "line": {
+        "@id": "wd:Q283928"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q96106536",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q96106536#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q96106536"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Siemens Venture"
+        },
+        {
+          "@language": "ja",
+          "@value": "シーメンス・ベンチャー"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q96106536"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Siemens Venture"
+        },
+        {
+          "@language": "ja",
+          "@value": "シーメンス・ベンチャー"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q283928"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q876720"
+        },
+        {
+          "@id": "wd:Q27012668"
+        },
+        {
+          "@id": "wd:Q23239"
+        }
+      ],
+      "wdt:P17": [
+        {
+          "@id": "wd:Q16"
+        },
+        {
+          "@id": "wd:Q30"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q81230"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q753779"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q96106536"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Siemens Venture"
-    },
-    {
-      "@language": "ja",
-      "@value": "シーメンス・ベンチャー"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q876720"
-    },
-    {
-      "@id": "wd:Q27012668"
-    },
-    {
-      "@id": "wd:Q23239"
-    }
-  ],
-  "wdt:P17": [
-    {
-      "@id": "wd:Q16"
-    },
-    {
-      "@id": "wd:Q30"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q81230"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q753779"
-  }
+  ]
 }

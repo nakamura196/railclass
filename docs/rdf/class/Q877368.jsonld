@@ -11,88 +11,125 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q877368",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": false,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q877368"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "NÖLB E"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q877368",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q877368#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q877368"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "NÖLB E"
+        },
+        {
+          "@language": "ja",
+          "@value": "オーストリア連邦鉄道1099形電気機関車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q877368"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "NÖLB E"
+        },
+        {
+          "@language": "ja",
+          "@value": "オーストリア連邦鉄道1099形電気機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q875251"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q682656"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q83822"
+        },
+        {
+          "@id": "wd:Q698082"
+        },
+        {
+          "@id": "wd:Q1281018"
+        },
+        {
+          "@id": "wd:Q1964944"
+        },
+        {
+          "@id": "wd:Q1988799"
+        },
+        {
+          "@id": "wd:Q131409427"
+        }
+      ],
+      "wdt:P176": [
+        {
+          "@id": "wd:Q466871"
+        },
+        {
+          "@id": "wd:Q16283636"
+        }
+      ],
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "50"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q625151"
+        },
+        {
+          "@id": "wd:Q117196686"
+        }
+      ],
+      "wdt:P2978": {
+        "@id": "wd:Q25414300"
+      },
+      "wdt:P930": {
+        "@id": "wd:Q30232058"
+      }
     },
     {
-      "@language": "ja",
-      "@value": "オーストリア連邦鉄道1099形電気機関車"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q877368#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q875251#P3438"
+      },
+      "line": {
+        "@id": "wd:Q875251"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2013"
+      }
+    },
+    {
+      "@id": "wd:Q875251",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mariazell Railway"
+      }
     }
-  ],
-  "skos:exactMatch": {
-    "@id": "wd:Q877368"
-  },
-  "skos:inScheme": {
-    "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "NÖLB E"
-    },
-    {
-      "@language": "ja",
-      "@value": "オーストリア連邦鉄道1099形電気機関車"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q682656"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q83822"
-    },
-    {
-      "@id": "wd:Q698082"
-    },
-    {
-      "@id": "wd:Q1281018"
-    },
-    {
-      "@id": "wd:Q1964944"
-    },
-    {
-      "@id": "wd:Q1988799"
-    },
-    {
-      "@id": "wd:Q131409427"
-    }
-  ],
-  "wdt:P176": [
-    {
-      "@id": "wd:Q466871"
-    },
-    {
-      "@id": "wd:Q16283636"
-    }
-  ],
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "50"
-  },
-  "wdt:P279": [
-    {
-      "@id": "wd:Q625151"
-    },
-    {
-      "@id": "wd:Q117196686"
-    }
-  ],
-  "wdt:P2978": {
-    "@id": "wd:Q25414300"
-  },
-  "wdt:P930": {
-    "@id": "wd:Q30232058"
-  }
+  ]
 }

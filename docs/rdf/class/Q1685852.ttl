@@ -1,4 +1,5 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,5 +19,60 @@ cls:Q1685852 a skos:Concept,
     prov:wasDerivedFrom wd:Q1685852 ;
     wdt:P176 wd:Q648280 ;
     wdt:P279 wd:Q639030 ;
-    tb:has3DModel false .
+    tb:has3DModel false ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line5> ;
+    tb:usedOn wd:Q19876957,
+        wd:Q29017880,
+        wd:Q4654717,
+        wd:Q6715935,
+        wd:Q987251 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19876957#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19876957 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q29017880#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q29017880 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4654717#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4654717 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6715935#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6715935 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q987251#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q987251 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q19876957 rdfs:label "Skytrain"@en .
+
+wd:Q29017880 rdfs:label "Dubai International Airport Automated People Mover"@en .
+
+wd:Q4654717 rdfs:label "ATL SkyTrain"@en .
+
+wd:Q6715935 rdfs:label "MIA Mover"@en .
+
+wd:Q987251 rdfs:label "Changi Airport Skytrain"@en .
 
