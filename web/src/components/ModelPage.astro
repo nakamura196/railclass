@@ -8,6 +8,7 @@ import Base from "../layouts/Base.astro";
 import { file, page, t, type Lang } from "../i18n";
 import { modelClasses, classPage } from "../lib/classes";
 import { models, fmtSize, hasManifest, downloads, fmtBytes, docsBytes } from "../lib/data";
+import { ldBrowser } from "../lib/ldbrowser";
 
 const { lang, id } = Astro.props as { lang: Lang; id: string };
 const ui = t(lang);
@@ -28,7 +29,7 @@ const dl = downloads(id, lang);
   <div class="head">
     <h1>{m.title}</h1>
     <p class="other">{m.groupLabel}</p>
-    <p class="uri"><code>{uri}</code></p>
+    <p class="uri"><code>{uri}</code> · <a href={ldBrowser(lang, uri)}>{ui.site.ldBrowser}</a></p>
   </div>
   <div class="body">
     <section class="props">

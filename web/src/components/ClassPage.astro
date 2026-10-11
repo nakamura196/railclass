@@ -9,6 +9,7 @@ import { file, page, t, type Lang } from "../i18n";
 import { classPage } from "../lib/classes";
 import iiifLogo from "../assets/iiif-logo.svg";   // the IIIF logo, as on the IIIF Consortium's site
 import { models, modelParts, fmtSize, hasManifest, classLines, downloads } from "../lib/data";
+import { ldBrowser } from "../lib/ldbrowser";
 
 const { lang, id } = Astro.props as { lang: Lang; id: string };
 const ui = t(lang);
@@ -51,7 +52,7 @@ const mapped = lines.filter(l => l.map);
   <div class="head">
     <h1>{c.name}</h1>
     {c.other && <p class="other">{c.other}</p>}
-    <p class="uri"><code>{uri}</code></p>
+    <p class="uri"><code>{uri}</code> · <a href={ldBrowser(lang, uri)}>{ui.site.ldBrowser}</a></p>
   </div>
 
   {mods.length > 0 && (
