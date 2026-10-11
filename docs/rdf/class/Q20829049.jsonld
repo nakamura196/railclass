@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,10 +14,39 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q1891103",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20829049#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1891103#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1891103"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Mansfeld Mining Railway"
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20829049#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q883462#P3438"
+      },
+      "line": {
+        "@id": "wd:Q883462"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1940"
       }
     },
     {
@@ -25,6 +55,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/99%204011%20Putbus%2027.07.12%20w.JPG"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -80,46 +113,17 @@
       }
     },
     {
+      "@id": "wd:Q1891103",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mansfeld Mining Railway"
+      }
+    },
+    {
       "@id": "wd:Q883462",
       "rdfs:label": {
         "@language": "en",
         "@value": "Rügensche Kleinbahn"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20829049#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q1891103#P3438"
-      },
-      "line": {
-        "@id": "wd:Q1891103"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20829049#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q883462#P3438"
-      },
-      "line": {
-        "@id": "wd:Q883462"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "historical",
-      "usedUntil": {
-        "@type": "xsd:gYear",
-        "@value": "1940"
       }
     }
   ]

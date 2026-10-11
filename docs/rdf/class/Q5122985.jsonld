@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,13 +14,27 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122985#line4",
+      "@id": "wd:Q125727482",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lidcombe & Bankstown Line"
+      }
+    },
+    {
+      "@id": "wd:Q4663585",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Olympic Park Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122985#line3",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q7660181#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q5193991#P3438"
       },
       "line": {
-        "@id": "wd:Q7660181"
+        "@id": "wd:Q5193991"
       },
       "skos:note": {
         "@language": "en",
@@ -45,33 +60,17 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q125727482",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Lidcombe & Bankstown Line"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122985#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q4663585#P3438"
-      },
-      "line": {
-        "@id": "wd:Q4663585"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "wd:Q7660181",
       "rdfs:label": {
         "@language": "en",
         "@value": "Sydney Trains"
+      }
+    },
+    {
+      "@id": "wd:Q5193991",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cumberland Line"
       }
     },
     {
@@ -80,6 +79,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Cityrail-millennium-M32-ext.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -155,13 +157,13 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122985#line3",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122985#line4",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q5193991#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q7660181#P3438"
       },
       "line": {
-        "@id": "wd:Q5193991"
+        "@id": "wd:Q7660181"
       },
       "skos:note": {
         "@language": "en",
@@ -171,18 +173,20 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q4663585",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122985#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4663585#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4663585"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Olympic Park Line"
-      }
-    },
-    {
-      "@id": "wd:Q5193991",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Cumberland Line"
-      }
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,20 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q139261828",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q383263#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2691511#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2691511"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Northlander"
-      }
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q383263",
@@ -25,6 +35,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/NS-TEE.JPG"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -129,20 +142,11 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q383263#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2691511#P3438"
-      },
-      "line": {
-        "@id": "wd:Q2691511"
-      },
-      "skos:note": {
+      "@id": "wd:Q139261828",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
+        "@value": "Northlander"
+      }
     },
     {
       "@id": "wd:Q2691511",

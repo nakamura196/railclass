@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,18 +14,14 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q113458371",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "RB 73"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/633%20109%2C%201%2C%20Oeventrop%2C%20Arnsberg%2C%20Hochsauerlandkreis.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -77,13 +74,13 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283#line2",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283#line1",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q121597803#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q113458371#P3438"
       },
       "line": {
-        "@id": "wd:Q121597803"
+        "@id": "wd:Q113458371"
       },
       "skos:note": {
         "@language": "en",
@@ -93,13 +90,20 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283#line1",
+      "@id": "wd:Q113458371",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 73"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q106368283#line2",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q113458371#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q121597803#P3438"
       },
       "line": {
-        "@id": "wd:Q113458371"
+        "@id": "wd:Q121597803"
       },
       "skos:note": {
         "@language": "en",

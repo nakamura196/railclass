@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -20,20 +21,11 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529432#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q4207854#P3438"
-      },
-      "line": {
-        "@id": "wd:Q4207854"
-      },
-      "skos:note": {
+      "@id": "wd:Q4207854",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
+        "@value": "Kazanskoye line (Moscow Railway)"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529432#line1",
@@ -52,11 +44,30 @@
       "useStatus": "current"
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529432#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4207854#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4207854"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4529432",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/ED4M-0137.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -137,13 +148,6 @@
       },
       "wdt:P279": {
         "@id": "wd:Q483373"
-      }
-    },
-    {
-      "@id": "wd:Q4207854",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Kazanskoye line (Moscow Railway)"
       }
     }
   ]

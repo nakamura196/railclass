@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,13 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "wd:Q2523955",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Interborough Rapid Transit Company"
-      }
-    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7274839#line1",
       "@type": "LineUse",
@@ -41,6 +35,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/New%20Lots%20ShenanigansR62%20%283%29%20Train.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7274839#line1"
@@ -97,6 +94,13 @@
           "@id": "wd:Q4102249"
         }
       ]
+    },
+    {
+      "@id": "wd:Q2523955",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Interborough Rapid Transit Company"
+      }
     }
   ]
 }

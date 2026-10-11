@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,20 +14,11 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q56345433#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q862929#P3438"
-      },
-      "line": {
-        "@id": "wd:Q862929"
-      },
-      "skos:note": {
+      "@id": "wd:Q862929",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
+        "@value": "Zhujiang New Town Automated People Mover System"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q56345433",
@@ -34,6 +26,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/APM%20train.JPG"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q56345433#line1"
@@ -83,11 +78,20 @@
       }
     },
     {
-      "@id": "wd:Q862929",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q56345433#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q862929#P3438"
+      },
+      "line": {
+        "@id": "wd:Q862929"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Zhujiang New Town Automated People Mover System"
-      }
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

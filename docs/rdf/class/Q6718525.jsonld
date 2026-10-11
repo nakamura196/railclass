@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,37 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q910209",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Guangzhou–Shenzhen–Hong Kong Express Rail Link"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6718525#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q910209#P3438"
+      },
+      "line": {
+        "@id": "wd:Q910209"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6718525",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/CRH380A-0251%40FTI%20%2820180927161411%29.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6718525#line1"
@@ -68,29 +95,6 @@
       },
       "wdt:P930": {
         "@id": "wd:Q106530439"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q6718525#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q910209#P3438"
-      },
-      "line": {
-        "@id": "wd:Q910209"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q910209",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Guangzhou–Shenzhen–Hong Kong Express Rail Link"
       }
     }
   ]

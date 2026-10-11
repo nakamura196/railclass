@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,26 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2329410#P3438"
-      },
-      "line": {
-        "@id": "wd:Q2329410"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "historical",
-      "usedUntil": {
-        "@type": "xsd:gYear",
-        "@value": "1988"
-      }
-    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line3",
       "@type": "LineUse",
@@ -53,11 +34,41 @@
       }
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2762507#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2762507"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1990"
+      }
+    },
+    {
+      "@id": "wd:Q5354992",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Stanislas"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Ex-TEE%20cars%20in%20Rapide%20Le%20Capitole%2C%20Limoges%20%281988%29.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -109,13 +120,6 @@
       }
     },
     {
-      "@id": "wd:Q2329410",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Kléber"
-      }
-    },
-    {
       "@id": "wd:Q2762507",
       "rdfs:label": {
         "@language": "en",
@@ -123,20 +127,13 @@
       }
     },
     {
-      "@id": "wd:Q5354992",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Stanislas"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line2",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2797336#line1",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2762507#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q2329410#P3438"
       },
       "line": {
-        "@id": "wd:Q2762507"
+        "@id": "wd:Q2329410"
       },
       "skos:note": {
         "@language": "en",
@@ -146,7 +143,14 @@
       "useStatus": "historical",
       "usedUntil": {
         "@type": "xsd:gYear",
-        "@value": "1990"
+        "@value": "1988"
+      }
+    },
+    {
+      "@id": "wd:Q2329410",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kléber"
       }
     }
   ]

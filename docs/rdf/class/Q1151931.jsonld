@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,18 +14,14 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q883462",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Rügensche Kleinbahn"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1151931",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/2014%20R%C3%BCgensche%20Kleinbahn%2002.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1151931#line1"
@@ -106,6 +103,13 @@
       "usedUntil": {
         "@type": "xsd:gYear",
         "@value": "1940"
+      }
+    },
+    {
+      "@id": "wd:Q883462",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rügensche Kleinbahn"
       }
     }
   ]

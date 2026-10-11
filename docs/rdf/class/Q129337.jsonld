@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,10 +14,17 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q1585043",
+      "@id": "wd:Q3115255",
       "rdfs:label": {
         "@language": "en",
-        "@value": "TGV-Weltrekordfahrten am 5. Dezember 1989 und 18. Mai 1990"
+        "@value": "LGV"
+      }
+    },
+    {
+      "@id": "wd:Q2027802",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Opération Sardine"
       }
     },
     {
@@ -36,17 +44,10 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q542124",
+      "@id": "wd:Q1585043",
       "rdfs:label": {
         "@language": "en",
-        "@value": "TGV world speed record"
-      }
-    },
-    {
-      "@id": "wd:Q3115255",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "LGV"
+        "@value": "TGV-Weltrekordfahrten am 5. Dezember 1989 und 18. Mai 1990"
       }
     },
     {
@@ -55,6 +56,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Deux%20TGV%20%C3%A0%20Paris-Lyon.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -174,13 +178,6 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q2027802",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Opération Sardine"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q129337#line2",
       "@type": "LineUse",
       "dcterms:source": {
@@ -195,6 +192,13 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q542124",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "TGV world speed record"
+      }
     }
   ]
 }

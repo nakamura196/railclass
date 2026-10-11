@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,21 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q1548435",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cagliari light rail"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2097460",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/D2.13%20Bf%20Gennari%2C%20ET%2005.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2097460#line1"
@@ -63,13 +74,6 @@
       },
       "wdt:P279": {
         "@id": "wd:Q3407658"
-      }
-    },
-    {
-      "@id": "wd:Q1548435",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Cagliari light rail"
       }
     },
     {

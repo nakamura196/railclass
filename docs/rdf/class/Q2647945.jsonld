@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,27 +14,13 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q10720782",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "X-Tåget"
-      }
-    },
-    {
-      "@id": "wd:Q10549741",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Krösatågen"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945#line1",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945#line3",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q10549741#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q10720782#P3438"
       },
       "line": {
-        "@id": "wd:Q10549741"
+        "@id": "wd:Q10720782"
       },
       "skos:note": {
         "@language": "en",
@@ -41,6 +28,13 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q10549741",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Krösatågen"
+      }
     },
     {
       "@id": "wd:Q10602972",
@@ -66,11 +60,37 @@
       "useStatus": "current"
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10549741#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10549741"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q10720782",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "X-Tåget"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/SJ%20x11-3210.JPG"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -117,22 +137,6 @@
       "wdt:P279": {
         "@id": "wd:Q483373"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2647945#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q10720782#P3438"
-      },
-      "line": {
-        "@id": "wd:Q10720782"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
     }
   ]
 }

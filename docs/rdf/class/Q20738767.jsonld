@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,17 +14,33 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q989339",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "East Rail line"
-      }
-    },
-    {
       "@id": "wd:Q835376",
       "rdfs:label": {
         "@language": "en",
         "@value": "Sha Tin to Central Link"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20738767#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q989339#P3438"
+      },
+      "line": {
+        "@id": "wd:Q989339"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q989339",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "East Rail line"
       }
     },
     {
@@ -32,6 +49,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/D024-D022%20MTR%20East%20Rail%20Line%2006-02-2021.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -90,22 +110,6 @@
       "wdt:P930": {
         "@id": "wd:Q106530439"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20738767#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q989339#P3438"
-      },
-      "line": {
-        "@id": "wd:Q989339"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20738767#line1",

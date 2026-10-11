@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,27 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "wd:Q5744695",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hertford East Branch Line"
+      }
+    },
+    {
+      "@id": "wd:Q2472778",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hertford East railway station"
+      }
+    },
+    {
+      "@id": "wd:Q4955938",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Braintree Branch Line"
+      }
+    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30633878#line3",
       "@type": "LineUse",
@@ -29,18 +51,20 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q5744695",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30633878#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2472778#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2472778"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Hertford East Branch Line"
-      }
-    },
-    {
-      "@id": "wd:Q2472778",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Hertford East railway station"
-      }
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30633878",
@@ -48,6 +72,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Vehicles%20of%20the%20United%20Kingdom%20278%20%28edited%29.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -129,13 +156,6 @@
       }
     },
     {
-      "@id": "wd:Q4955938",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Braintree Branch Line"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30633878#line2",
       "@type": "LineUse",
       "dcterms:source": {
@@ -143,22 +163,6 @@
       },
       "line": {
         "@id": "wd:Q4955938"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30633878#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2472778#P3438"
-      },
-      "line": {
-        "@id": "wd:Q2472778"
       },
       "skos:note": {
         "@language": "en",

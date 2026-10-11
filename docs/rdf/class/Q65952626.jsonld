@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,29 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "wd:Q2455697",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trossingen Railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q65952626#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2455697#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2455697"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q65952626",
       "@type": [
@@ -48,29 +72,6 @@
       },
       "wdt:P930": {
         "@id": "wd:Q21855034"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q65952626#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2455697#P3438"
-      },
-      "line": {
-        "@id": "wd:Q2455697"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q2455697",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Trossingen Railway"
       }
     }
   ]

@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -29,18 +30,14 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q1653228",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "ICE Train North America Tour"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q702311",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/DB%20ICE1%20401%20590%20%2852508715939%29.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q702311#line1"
@@ -124,6 +121,13 @@
       },
       "wdt:P930": {
         "@id": "wd:Q1415234"
+      }
+    },
+    {
+      "@id": "wd:Q1653228",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ICE Train North America Tour"
       }
     }
   ]

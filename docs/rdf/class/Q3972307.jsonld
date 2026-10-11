@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -29,26 +30,17 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3972307#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q736412#P3438"
-      },
-      "line": {
-        "@id": "wd:Q736412"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "wd:Q736412",
       "rdfs:label": {
         "@language": "en",
         "@value": "Kwun Tong line"
+      }
+    },
+    {
+      "@id": "wd:Q2041013",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "South Island line"
       }
     },
     {
@@ -57,6 +49,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/MTR%20C%20KTL%20KOB.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -125,11 +120,20 @@
       }
     },
     {
-      "@id": "wd:Q2041013",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3972307#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q736412#P3438"
+      },
+      "line": {
+        "@id": "wd:Q736412"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "South Island line"
-      }
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

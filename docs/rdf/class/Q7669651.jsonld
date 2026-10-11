@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,13 +14,6 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q20949781",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Zonguldak-Filyos Regional"
-      }
-    },
-    {
       "@id": "wd:Q48789868",
       "rdfs:label": {
         "@language": "en",
@@ -27,59 +21,14 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q48789868#P3438"
-      },
-      "line": {
-        "@id": "wd:Q48789868"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q140610574#P3438"
-      },
-      "line": {
-        "@id": "wd:Q140610574"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q20949781#P3438"
-      },
-      "line": {
-        "@id": "wd:Q20949781"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Denizli%20railway%20station%2015.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -134,11 +83,66 @@
       }
     },
     {
+      "@id": "wd:Q20949781",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Zonguldak-Filyos Regional"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q48789868#P3438"
+      },
+      "line": {
+        "@id": "wd:Q48789868"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
       "@id": "wd:Q140610574",
       "rdfs:label": {
         "@language": "en",
         "@value": "AYBAN"
       }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q20949781#P3438"
+      },
+      "line": {
+        "@id": "wd:Q20949781"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7669651#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q140610574#P3438"
+      },
+      "line": {
+        "@id": "wd:Q140610574"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

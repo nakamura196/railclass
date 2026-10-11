@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,37 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q54371",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 2 Bloor–Danforth"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7667928#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q54371#P3438"
+      },
+      "line": {
+        "@id": "wd:Q54371"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7667928",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Bloor-Yonge%20TTC%20Subway%20station%2C%20August%2026%202025%20%2802%29.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7667928#line1"
@@ -59,29 +86,6 @@
           "@id": "wd:Q4102249"
         }
       ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7667928#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q54371#P3438"
-      },
-      "line": {
-        "@id": "wd:Q54371"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q54371",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Line 2 Bloor–Danforth"
-      }
     }
   ]
 }

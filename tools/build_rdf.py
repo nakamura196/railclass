@@ -13,11 +13,14 @@ Writes:
   docs/rdf/vocab.ttl   the few terms of our own (tb:)
 The facet properties are the ones in docs/rdf/facets.json. Livery colours come from tools/livery_colors.json
 (made by tools/extract_colors.py from the skytrain builds). No ERATV-derived data goes in here (only the mapping table is published, by tools/build_eratv_map.py).
+Class photos: foaf:depiction to the Commons file of Wikidata P18 (data/wikidata/facets/_image.tsv, tools/fetch_facets.py;
+one photo per class), with the same IRI as Wikidata's wdt:P18 (Special:FilePath) so the two join. Each photo keeps its own
+Commons licence; the credit lines are on the site (decided 2026-10-11).
 Terms (decided 2026-10-10): the data CC0 (dcterms:license on the scheme), the 3D models CC BY 4.0 (schema:license on each).
 """
 import csv, json, os, sys, time, urllib.parse, urllib.request
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
-from rdflib.namespace import DCTERMS, OWL, PROV, RDF, RDFS, SKOS, XSD
+from rdflib.namespace import DCTERMS, FOAF, OWL, PROV, RDF, RDFS, SKOS, XSD
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(HERE, "docs", "rdf")
@@ -249,9 +252,18 @@ def add_tsv_class(g, cid, rec):
     for f in WD_FACETS:
         for v in rec.get(f["id"], []):
             g.add((s, URIRef(f["uri"]), value_node(f, v)))
+    add_depiction(g, s, cid)
     for k, r in enumerate((r for r in LINES if r["class"] == cid), 1):
         add_line(g, s, k, r)
     g.add((s, TB.has3DModel, Literal(False)))
+
+
+IMAGES = {}   # Wikidata item -> Commons file IRI (P18), filled in main()
+
+
+def add_depiction(g, s, q):
+    if q in IMAGES:
+        g.add((s, FOAF.depiction, URIRef(IMAGES[q])))
 
 
 def gallery_items():
@@ -262,7 +274,7 @@ def gallery_items():
 def new_graph():
     g = Graph()
     for p, ns in (("tb", TB), ("wd", WD), ("wdt", WDT), ("schema", SDO), ("skos", SKOS), ("dcterms", DCTERMS),
-                  ("prov", PROV), ("owl", OWL), ("cls", CLS), ("mdl", MDL)):
+                  ("prov", PROV), ("foaf", FOAF), ("owl", OWL), ("cls", CLS), ("mdl", MDL)):
         g.bind(p, ns)
     return g
 
@@ -301,6 +313,8 @@ def add_class(g, cid, wd, models):
     for f in WD_FACETS:
         for v in vals.get(f["id"], []):
             g.add((s, URIRef(f["uri"]), value_node(f, v)))
+    if wq:
+        add_depiction(g, s, wq)
     for k, r in enumerate((r for r in LINES if r["class"] == cid), 1):
         add_line(g, s, k, r)
     g.add((s, TB.has3DModel, Literal(bool(models))))
@@ -376,7 +390,7 @@ def add_model(g, mid, item):
 
 CONTEXT = {
     "@vocab": str(TB), "tb": str(TB), "wd": str(WD), "wdt": str(WDT), "schema": str(SDO), "skos": str(SKOS),
-    "dcterms": str(DCTERMS), "prov": str(PROV), "rdfs": str(RDFS), "xsd": str(XSD),
+    "dcterms": str(DCTERMS), "prov": str(PROV), "foaf": str(FOAF), "rdfs": str(RDFS), "xsd": str(XSD),
 }
 
 
@@ -422,6 +436,7 @@ def vocab():
 def main():
     wd = fetch("--refresh" in sys.argv)
     add_labels(wd, COLORS["basic"].values())
+    IMAGES.update((r["item"], r["image"]) for r in read_tsv("wikidata/facets/_image.tsv") if r["image"])
     items = gallery_items()
     by_class = {}
     for mid, (cid, _, _) in MODELS.items():

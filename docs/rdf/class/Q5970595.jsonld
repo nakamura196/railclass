@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,28 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q3743465",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Limerick–Rosslare railway line"
+      }
+    },
+    {
+      "@id": "wd:Q4019185",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Western Railway Corridor"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970595",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Limerick%201.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -81,13 +99,6 @@
       }
     },
     {
-      "@id": "wd:Q3743465",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Limerick–Rosslare railway line"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970595#line2",
       "@type": "LineUse",
       "dcterms:source": {
@@ -102,13 +113,6 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q4019185",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Western Railway Corridor"
-      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970595#line1",

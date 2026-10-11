@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,20 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q2138125",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432788#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2138125#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2138125"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Kassel RegioTram"
-      }
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432788",
@@ -25,6 +35,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Regiotram.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -91,20 +104,18 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432788#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2138125#P3438"
-      },
-      "line": {
-        "@id": "wd:Q2138125"
-      },
-      "skos:note": {
+      "@id": "wd:Q126808",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
+        "@value": "trams in Kassel"
+      }
+    },
+    {
+      "@id": "wd:Q2138125",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kassel RegioTram"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q432788#line1",
@@ -121,13 +132,6 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q126808",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "trams in Kassel"
-      }
     }
   ]
 }

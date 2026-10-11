@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,22 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7274838#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q126698#P3438"
-      },
-      "line": {
-        "@id": "wd:Q126698"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
     {
       "@id": "wd:Q126698",
       "rdfs:label": {
@@ -41,6 +26,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/MTA%20NYC%20Subway%201%20train%20leaving%20125th%20St.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7274838#line1"
@@ -96,6 +84,22 @@
         "@type": "xsd:gYear",
         "@value": "1985"
       }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7274838#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q126698#P3438"
+      },
+      "line": {
+        "@id": "wd:Q126698"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

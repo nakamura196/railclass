@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,82 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "wd:Q3742025",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "S47"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q3737194#P3438"
-      },
-      "line": {
-        "@id": "wd:Q3737194"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q99654",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Berlin S-Bahn"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403#line6",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q99654#P3438"
-      },
-      "line": {
-        "@id": "wd:Q99654"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q4048678",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "S8 (Berlin)"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2090939#P3438"
-      },
-      "line": {
-        "@id": "wd:Q2090939"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q100985389",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "S15 service Berlin"
-      }
-    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403#line1",
       "@type": "LineUse",
@@ -105,11 +30,37 @@
       "useStatus": "current"
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403#line5",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4048678#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4048678"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q100985389",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "S15 service Berlin"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Baureihe%20483-484%20der%20S-Bahn%20Berlin.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -191,20 +142,18 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403#line5",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q4048678#P3438"
-      },
-      "line": {
-        "@id": "wd:Q4048678"
-      },
-      "skos:note": {
+      "@id": "wd:Q3737194",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
+        "@value": "S46"
+      }
+    },
+    {
+      "@id": "wd:Q2090939",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "S45"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403#line4",
@@ -223,18 +172,73 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q2090939",
+      "@id": "wd:Q4048678",
       "rdfs:label": {
         "@language": "en",
-        "@value": "S45"
+        "@value": "S8 (Berlin)"
       }
     },
     {
-      "@id": "wd:Q3737194",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3737194#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3737194"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403#line6",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q99654#P3438"
+      },
+      "line": {
+        "@id": "wd:Q99654"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q3742025",
       "rdfs:label": {
         "@language": "en",
-        "@value": "S46"
+        "@value": "S47"
       }
+    },
+    {
+      "@id": "wd:Q99654",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Berlin S-Bahn"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22344403#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2090939#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2090939"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

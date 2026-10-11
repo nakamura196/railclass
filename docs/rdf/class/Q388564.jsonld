@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,18 +14,14 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q2559822",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Rembrandt"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q388564",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/103%20184%20DB%20nahe%20Osterm%C3%BCnchen%20-%20Bayern%20%281%29.JPG"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q388564#line1"
@@ -109,6 +106,13 @@
       },
       "wdt:P930": {
         "@id": "wd:Q1415234"
+      }
+    },
+    {
+      "@id": "wd:Q2559822",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rembrandt"
       }
     },
     {

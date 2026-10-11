@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,53 @@
   },
   "@graph": [
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q873605#P3438"
+      },
+      "line": {
+        "@id": "wd:Q873605"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10877282#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10877282"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q10877282",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dandong–Dalian intercity railway"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/CRH5A-5036%20at%20Shahe%20Beidaqiao%20%2820220106140557%29.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -100,45 +143,6 @@
         "@language": "en",
         "@value": "Qinhuangdao–Shenyang high-speed railway"
       }
-    },
-    {
-      "@id": "wd:Q10877282",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Dandong–Dalian intercity railway"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q873605#P3438"
-      },
-      "line": {
-        "@id": "wd:Q873605"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856438#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q10877282#P3438"
-      },
-      "line": {
-        "@id": "wd:Q10877282"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
     }
   ]
 }

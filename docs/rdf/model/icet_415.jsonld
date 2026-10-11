@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -26,6 +27,78 @@
       }
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0109"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8665"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#ECEEEC",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color5"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_415/icet_415.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q9322"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn livery (red stripe)"
+        },
+        {
+          "@language": "ja",
+          "@value": "DB の塗装（赤い帯）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3142"
+        }
+      ]
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color4",
       "@type": "ColorSample",
       "areaShare": {
@@ -36,6 +109,19 @@
       "schema:color": "#CC1014",
       "wdt:P462": {
         "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0410"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#C2C7CA",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
       }
     },
     {
@@ -107,91 +193,6 @@
       "schema:value": {
         "@type": "xsd:decimal",
         "@value": "38.0"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color5"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_415/icet_415.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q9322"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Deutsche Bahn livery (red stripe)"
-        },
-        {
-          "@language": "ja",
-          "@value": "DB の塗装（赤い帯）"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q3142"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8665"
-      },
-      "rdfs:label": "body",
-      "schema:color": "#ECEEEC",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0109"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_415#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0410"
-      },
-      "rdfs:label": "skirt",
-      "schema:color": "#C2C7CA",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
       }
     }
   ]

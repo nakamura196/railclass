@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -29,18 +30,14 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q2142860",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Trams in Minsk"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q735476",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/157depo.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q735476#line1"
@@ -98,6 +95,13 @@
       ],
       "wdt:P176": {
         "@id": "wd:Q815665"
+      }
+    },
+    {
+      "@id": "wd:Q2142860",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Minsk"
       }
     }
   ]

@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,13 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "wd:Q628289",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Liège tramway"
-      }
-    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q134269562#line1",
       "@type": "LineUse",
@@ -41,6 +35,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Vue%20d%27un%20tram%20sur%20le%20place%20du%20March%C3%A9%20en%20centre-ville%20de%20Li%C3%A8ge.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q134269562#line1"
@@ -67,6 +64,13 @@
       },
       "wdt:P279": {
         "@id": "wd:Q1022747"
+      }
+    },
+    {
+      "@id": "wd:Q628289",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Liège tramway"
       }
     }
   ]

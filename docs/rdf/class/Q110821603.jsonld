@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,21 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q131548728",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "EuroCity Brussels–Rotterdam"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110821603",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/HLE17-05.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110821603#line1"
@@ -74,13 +85,6 @@
           "@id": "wd:Q1415234"
         }
       ]
-    },
-    {
-      "@id": "wd:Q131548728",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "EuroCity Brussels–Rotterdam"
-      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q110821603#line1",

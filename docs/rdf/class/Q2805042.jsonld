@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,27 +14,14 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2805042#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q661561#P3438"
-      },
-      "line": {
-        "@id": "wd:Q661561"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2805042",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Matterhorn%20Gotthard%20Bahn%20panoramic%20coach%20Bp%204066%20and%204064%2C%20built%20by%20Stadler%20at%20Randa%20VS.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2805042#line1"
@@ -71,6 +59,22 @@
         "@language": "en",
         "@value": "Glacier Express"
       }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2805042#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q661561#P3438"
+      },
+      "line": {
+        "@id": "wd:Q661561"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

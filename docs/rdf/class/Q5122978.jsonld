@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,34 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "wd:Q5330503",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Eastern Suburbs & Illawarra Line"
-      }
-    },
-    {
-      "@id": "wd:Q7660181",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Sydney Trains"
-      }
-    },
-    {
-      "@id": "wd:Q7428218",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Central Coast & Newcastle Line"
-      }
-    },
-    {
-      "@id": "wd:Q7428155",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "South Coast Line"
-      }
-    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122978#line4",
       "@type": "LineUse",
@@ -57,36 +30,11 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122978#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q5330503#P3438"
-      },
-      "line": {
-        "@id": "wd:Q5330503"
-      },
-      "skos:note": {
+      "@id": "wd:Q7428155",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122978#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q7428218#P3438"
-      },
-      "line": {
-        "@id": "wd:Q7428218"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
+        "@value": "South Coast Line"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122978",
@@ -94,6 +42,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/H11-scarborough.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -176,6 +127,43 @@
       ]
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122978#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5330503#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5330503"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q5330503",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Eastern Suburbs & Illawarra Line"
+      }
+    },
+    {
+      "@id": "wd:Q7428218",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Central Coast & Newcastle Line"
+      }
+    },
+    {
+      "@id": "wd:Q7660181",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sydney Trains"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122978#line2",
       "@type": "LineUse",
       "dcterms:source": {
@@ -183,6 +171,22 @@
       },
       "line": {
         "@id": "wd:Q7428155"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122978#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7428218#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7428218"
       },
       "skos:note": {
         "@language": "en",

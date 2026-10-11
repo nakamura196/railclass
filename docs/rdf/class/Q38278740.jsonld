@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,20 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q13422345",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38278740#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q13422345#P3438"
+      },
+      "line": {
+        "@id": "wd:Q13422345"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Manila Metro Rail Transit System Line 3"
-      }
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38278740",
@@ -25,6 +35,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/MRT-3%20Dalian%208MLB%20Ortigas%202025-07-31.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38278740#line1"
@@ -87,20 +100,11 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38278740#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q13422345#P3438"
-      },
-      "line": {
-        "@id": "wd:Q13422345"
-      },
-      "skos:note": {
+      "@id": "wd:Q13422345",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
+        "@value": "Manila Metro Rail Transit System Line 3"
+      }
     }
   ]
 }

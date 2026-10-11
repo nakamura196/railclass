@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,36 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q474954#P3438"
+      },
+      "line": {
+        "@id": "wd:Q474954"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q88799606",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "U18 metro line"
+      }
+    },
+    {
+      "@id": "wd:Q474954",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dortmund Stadtbahn"
+      }
+    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line2",
       "@type": "LineUse",
@@ -29,13 +60,13 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line6",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line4",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q95685#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q661002#P3438"
       },
       "line": {
-        "@id": "wd:Q95685"
+        "@id": "wd:Q661002"
       },
       "skos:note": {
         "@language": "en",
@@ -68,73 +99,11 @@
       }
     },
     {
-      "@id": "wd:Q88799606",
+      "@id": "wd:Q95685",
       "rdfs:label": {
         "@language": "en",
-        "@value": "U18 metro line"
+        "@value": "Cologne Stadtbahn"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q121298190#P3438"
-      },
-      "line": {
-        "@id": "wd:Q121298190"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q2326657",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Bonn Stadtbahn"
-      }
-    },
-    {
-      "@id": "wd:Q661002",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Düsseldorf Stadtbahn"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line4",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q661002#P3438"
-      },
-      "line": {
-        "@id": "wd:Q661002"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q474954#P3438"
-      },
-      "line": {
-        "@id": "wd:Q474954"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315137",
@@ -142,6 +111,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/KVB2043%20SWB7752%20Thielenbruch.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -237,18 +209,50 @@
       }
     },
     {
-      "@id": "wd:Q474954",
+      "@id": "wd:Q2326657",
       "rdfs:label": {
         "@language": "en",
-        "@value": "Dortmund Stadtbahn"
+        "@value": "Bonn Stadtbahn"
       }
     },
     {
-      "@id": "wd:Q95685",
+      "@id": "wd:Q661002",
       "rdfs:label": {
         "@language": "en",
-        "@value": "Cologne Stadtbahn"
+        "@value": "Düsseldorf Stadtbahn"
       }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line6",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q95685#P3438"
+      },
+      "line": {
+        "@id": "wd:Q95685"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315137#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q121298190#P3438"
+      },
+      "line": {
+        "@id": "wd:Q121298190"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

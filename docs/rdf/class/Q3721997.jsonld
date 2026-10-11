@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,20 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q256524",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q95709#P3438"
+      },
+      "line": {
+        "@id": "wd:Q95709"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Munich S-Bahn"
-      }
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
       "@id": "wd:Q481504",
@@ -27,11 +37,21 @@
       }
     },
     {
+      "@id": "wd:Q256524",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Munich S-Bahn"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/S-Bahn%20Hannover%20Type%20424.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -118,6 +138,13 @@
       }
     },
     {
+      "@id": "wd:Q95709",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cologne S-Bahn"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line2",
       "@type": "LineUse",
       "dcterms:source": {
@@ -134,13 +161,6 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q95709",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Cologne S-Bahn"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line1",
       "@type": "LineUse",
       "dcterms:source": {
@@ -148,22 +168,6 @@
       },
       "line": {
         "@id": "wd:Q256524"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3721997#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q95709#P3438"
-      },
-      "line": {
-        "@id": "wd:Q95709"
       },
       "skos:note": {
         "@language": "en",

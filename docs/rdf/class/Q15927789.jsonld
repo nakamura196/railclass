@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,13 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "wd:Q836612",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line 2"
+      }
+    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15927789#line1",
       "@type": "LineUse",
@@ -29,18 +37,14 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q836612",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Line 2"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15927789",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Chongqing%20Metro%20Line%202%20-%20Hitachi%20Original%20Monorail%20Train%20-%20Overview.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15927789#line1"

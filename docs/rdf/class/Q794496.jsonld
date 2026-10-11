@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,45 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "wd:Q101147976",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Z60"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q101147966#P3438"
-      },
-      "line": {
-        "@id": "wd:Q101147966"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q101147976#P3438"
-      },
-      "line": {
-        "@id": "wd:Q101147976"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
     {
       "@id": "wd:Q101147953",
       "rdfs:label": {
@@ -75,11 +37,60 @@
       "useStatus": "current"
     },
     {
+      "@id": "wd:Q101147976",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Z60"
+      }
+    },
+    {
+      "@id": "wd:Q101147966",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "G60"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q101147976#P3438"
+      },
+      "line": {
+        "@id": "wd:Q101147976"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q101147966#P3438"
+      },
+      "line": {
+        "@id": "wd:Q101147966"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q794496",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Bhv%20kocsi%20Cegl%C3%A9d%20%C3%A1llom%C3%A1son.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -128,13 +139,6 @@
       },
       "wdt:P279": {
         "@id": "wd:Q1548721"
-      }
-    },
-    {
-      "@id": "wd:Q101147966",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "G60"
       }
     }
   ]

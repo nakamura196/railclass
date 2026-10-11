@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,34 +14,13 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q913275",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Beijing–Shanghai high-speed railway"
-      }
-    },
-    {
-      "@id": "wd:Q873605",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Qinhuangdao–Shenyang high-speed railway"
-      }
-    },
-    {
-      "@id": "wd:Q22712677",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Beijing–Guangzhou High-Speed Railway"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856457#line1",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856457#line3",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q10847223#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q753184#P3438"
       },
       "line": {
-        "@id": "wd:Q10847223"
+        "@id": "wd:Q753184"
       },
       "skos:note": {
         "@language": "en",
@@ -66,73 +46,14 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856457#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q22712677#P3438"
-      },
-      "line": {
-        "@id": "wd:Q22712677"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q10847223",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Beijing–Shanghai high-speed train"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856457#line4",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q873605#P3438"
-      },
-      "line": {
-        "@id": "wd:Q873605"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856457#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q753184#P3438"
-      },
-      "line": {
-        "@id": "wd:Q753184"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q753184",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Hefei–Bengbu high-speed railway"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856457",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/CRH380A-6020%2020130414.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -218,6 +139,89 @@
           "@id": "wd:Q13402959"
         }
       ]
+    },
+    {
+      "@id": "wd:Q913275",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Beijing–Shanghai high-speed railway"
+      }
+    },
+    {
+      "@id": "wd:Q22712677",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Beijing–Guangzhou High-Speed Railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856457#line4",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q873605#P3438"
+      },
+      "line": {
+        "@id": "wd:Q873605"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q753184",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hefei–Bengbu high-speed railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856457#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q10847223#P3438"
+      },
+      "line": {
+        "@id": "wd:Q10847223"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q856457#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q22712677#P3438"
+      },
+      "line": {
+        "@id": "wd:Q22712677"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q10847223",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Beijing–Shanghai high-speed train"
+      }
+    },
+    {
+      "@id": "wd:Q873605",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Qinhuangdao–Shenyang high-speed railway"
+      }
     }
   ]
 }

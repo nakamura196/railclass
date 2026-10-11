@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,20 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "wd:Q63484785",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 25 (Berlin/Brandenburg)"
+      }
+    },
+    {
+      "@id": "wd:Q63434696",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 12 (Berlin/Brandenburg)"
+      }
+    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line10",
       "@type": "LineUse",
@@ -27,6 +42,148 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line6",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q63484785#P3438"
+      },
+      "line": {
+        "@id": "wd:Q63484785"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q98104051",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 25"
+      }
+    },
+    {
+      "@id": "wd:Q1382191",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Transdev Regio Ost"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q137403158#P3438"
+      },
+      "line": {
+        "@id": "wd:Q137403158"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2024"
+      }
+    },
+    {
+      "@id": "wd:Q314293",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "NordWestBahn"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line9",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q96474187#P3438"
+      },
+      "line": {
+        "@id": "wd:Q96474187"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line8",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q68008478#P3438"
+      },
+      "line": {
+        "@id": "wd:Q68008478"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q103726127",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "S10"
+      }
+    },
+    {
+      "@id": "wd:Q68008478",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RB 54"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q103726127#P3438"
+      },
+      "line": {
+        "@id": "wd:Q103726127"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line7",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q64167548#P3438"
+      },
+      "line": {
+        "@id": "wd:Q64167548"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q137403158",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tesla-Shuttle"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line4",
@@ -45,18 +202,14 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q103726127",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "S10"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/MAV%20Talent.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -211,82 +364,6 @@
       }
     },
     {
-      "@id": "wd:Q68008478",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "RB 54"
-      }
-    },
-    {
-      "@id": "wd:Q63484785",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "RB 25 (Berlin/Brandenburg)"
-      }
-    },
-    {
-      "@id": "wd:Q314293",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "NordWestBahn"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q103726127#P3438"
-      },
-      "line": {
-        "@id": "wd:Q103726127"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line8",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q68008478#P3438"
-      },
-      "line": {
-        "@id": "wd:Q68008478"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q98104051",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "RE 25"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line7",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q64167548#P3438"
-      },
-      "line": {
-        "@id": "wd:Q64167548"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line5",
       "@type": "LineUse",
       "dcterms:source": {
@@ -303,43 +380,11 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line9",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q96474187#P3438"
-      },
-      "line": {
-        "@id": "wd:Q96474187"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q96474187",
+      "@id": "wd:Q64167548",
       "rdfs:label": {
         "@language": "en",
-        "@value": "RB 23"
+        "@value": "RB 63 (NRW)"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line6",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q63484785#P3438"
-      },
-      "line": {
-        "@id": "wd:Q63484785"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line3",
@@ -358,51 +403,10 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q1382191",
+      "@id": "wd:Q96474187",
       "rdfs:label": {
         "@language": "en",
-        "@value": "Transdev Regio Ost"
-      }
-    },
-    {
-      "@id": "wd:Q63434696",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "RB 12 (Berlin/Brandenburg)"
-      }
-    },
-    {
-      "@id": "wd:Q64167548",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "RB 63 (NRW)"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q267639#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q137403158#P3438"
-      },
-      "line": {
-        "@id": "wd:Q137403158"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "historical",
-      "usedUntil": {
-        "@type": "xsd:gYear",
-        "@value": "2024"
-      }
-    },
-    {
-      "@id": "wd:Q137403158",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Tesla-Shuttle"
+        "@value": "RB 23"
       }
     }
   ]

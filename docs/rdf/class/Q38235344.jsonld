@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,36 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "wd:Q43224027",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "E4 line (Euskotren Trena)"
+      }
+    },
+    {
+      "@id": "wd:Q43263877",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line E1 (Euskotren)"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2992379#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2992379"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
     {
       "@id": "wd:Q2992379",
       "rdfs:label": {
@@ -25,6 +56,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Irun%20EuskoTren%20station%202022%203.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -76,45 +110,6 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q43263877#P3438"
-      },
-      "line": {
-        "@id": "wd:Q43263877"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2992379#P3438"
-      },
-      "line": {
-        "@id": "wd:Q2992379"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q43224027",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "E4 line (Euskotren Trena)"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line2",
       "@type": "LineUse",
       "dcterms:source": {
@@ -131,11 +126,20 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q43263877",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q38235344#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q43263877#P3438"
+      },
+      "line": {
+        "@id": "wd:Q43263877"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Line E1 (Euskotren)"
-      }
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

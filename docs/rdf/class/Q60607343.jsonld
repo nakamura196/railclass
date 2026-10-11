@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -29,41 +30,14 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q60607343#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q107617397#P3438"
-      },
-      "line": {
-        "@id": "wd:Q107617397"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q107139062",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Wittlager Kreisbahn"
-      }
-    },
-    {
-      "@id": "wd:Q107617397",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Damme–Holzhausen-Heddinghausen railway"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q60607343",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Wittlager%20Kreisbahn%20T2.png"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -102,6 +76,36 @@
       },
       "wdt:P279": {
         "@id": "wd:Q1567915"
+      }
+    },
+    {
+      "@id": "wd:Q107139062",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Wittlager Kreisbahn"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q60607343#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q107617397#P3438"
+      },
+      "line": {
+        "@id": "wd:Q107617397"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q107617397",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Damme–Holzhausen-Heddinghausen railway"
       }
     }
   ]

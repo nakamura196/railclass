@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,18 +14,14 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q3537081",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Trams in Braunschweig"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q780281",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/27%20Grudnia%2C%20Tramino%2C%20Poznan.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q780281#line1"
@@ -94,6 +91,13 @@
           "@id": "wd:Q2371310"
         }
       ]
+    },
+    {
+      "@id": "wd:Q3537081",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Braunschweig"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q780281#line1",

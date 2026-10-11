@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,18 +14,14 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q452179",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Rübeland Railway"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315816",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/171%20005%20Die%20R%C3%BCbelandbahn%20near%20Elbingerode%2C%20Oct%201995..jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q315816#line1"
@@ -95,6 +92,13 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q452179",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rübeland Railway"
+      }
     }
   ]
 }

@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,21 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q874436",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Karlsruhe Stadtbahn"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16006216",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/20240722%20AVG%20393%20Karlsruhe%20Hbf%20%28cropped%29.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16006216#line1"
@@ -83,13 +94,6 @@
           "@id": "wd:Q5063597"
         }
       ]
-    },
-    {
-      "@id": "wd:Q874436",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Karlsruhe Stadtbahn"
-      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16006216#line1",

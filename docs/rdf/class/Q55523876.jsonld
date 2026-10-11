@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,13 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "wd:Q63438537",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "RE 6 (Schleswig-Holstein)"
-      }
-    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q55523876#line1",
       "@type": "LineUse",
@@ -36,11 +30,21 @@
       "useStatus": "current"
     },
     {
+      "@id": "wd:Q63438537",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "RE 6 (Schleswig-Holstein)"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q55523876",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/D-DB%2055%2080%2080-75%20012-5%20Bpmbdfa%20Westerland%20%28Sylt%29%2015.04.2017.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q55523876#line1"

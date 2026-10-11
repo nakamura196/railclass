@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,53 @@
   },
   "@graph": [
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2097660#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2097660"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q26828150#P3438"
+      },
+      "line": {
+        "@id": "wd:Q26828150"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q26828150",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Line S12"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q33123322",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Roma%20-%20stazione%20Termini%20-%20ETR.425.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -66,36 +109,11 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q26828150#P3438"
-      },
-      "line": {
-        "@id": "wd:Q26828150"
-      },
-      "skos:note": {
+      "@id": "wd:Q2097660",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2097660#P3438"
-      },
-      "line": {
-        "@id": "wd:Q2097660"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
+        "@value": "Palermo metropolitan railway service"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q33123322#line2",
@@ -112,20 +130,6 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q2097660",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Palermo metropolitan railway service"
-      }
-    },
-    {
-      "@id": "wd:Q26828150",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Line S12"
-      }
     },
     {
       "@id": "wd:Q26769358",

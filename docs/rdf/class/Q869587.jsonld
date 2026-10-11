@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,37 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q115932346",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IC 5"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q869587#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q115932346#P3438"
+      },
+      "line": {
+        "@id": "wd:Q115932346"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q869587",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/InterCity-Neigezug%20am%20B%C3%B6zberg%20-%20S%C3%BCdrampe.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -79,36 +106,6 @@
       }
     },
     {
-      "@id": "wd:Q115932401",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "IC 51"
-      }
-    },
-    {
-      "@id": "wd:Q115932346",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "IC 5"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q869587#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q115932346#P3438"
-      },
-      "line": {
-        "@id": "wd:Q115932346"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q869587#line2",
       "@type": "LineUse",
       "dcterms:source": {
@@ -123,6 +120,13 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q115932401",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IC 51"
+      }
     }
   ]
 }

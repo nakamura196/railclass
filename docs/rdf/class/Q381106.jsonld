@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,29 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "wd:Q9395021",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Łódź Regional Tram"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q381106#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q9395021#P3438"
-      },
-      "line": {
-        "@id": "wd:Q9395021"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
     {
       "@id": "wd:Q676266",
       "rdfs:label": {
@@ -48,6 +26,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Tramway%20graz23.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -150,6 +131,29 @@
       },
       "line": {
         "@id": "wd:Q676266"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q9395021",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Łódź Regional Tram"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q381106#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q9395021#P3438"
+      },
+      "line": {
+        "@id": "wd:Q9395021"
       },
       "skos:note": {
         "@language": "en",

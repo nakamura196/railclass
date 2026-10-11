@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,38 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line4",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q6840748#P3438"
-      },
-      "line": {
-        "@id": "wd:Q6840748"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q5225621#P3438"
-      },
-      "line": {
-        "@id": "wd:Q5225621"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line1",
       "@type": "LineUse",
@@ -61,48 +30,14 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q4899810#P3438"
-      },
-      "line": {
-        "@id": "wd:Q4899810"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q6840748",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Mid-Kent line"
-      }
-    },
-    {
-      "@id": "wd:Q1544828",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Greenwich line"
-      }
-    },
-    {
-      "@id": "wd:Q5225621",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Dartford Loop Line"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303842",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/376016%20passes%20Wandsworth%20Road%2020%2011%2025%20%2854936341620%29%20-%20cropped.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -188,11 +123,80 @@
       }
     },
     {
+      "@id": "wd:Q5225621",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dartford Loop Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4899810#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4899810"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5225621#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5225621"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q1544828",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Greenwich line"
+      }
+    },
+    {
       "@id": "wd:Q4899810",
       "rdfs:label": {
         "@language": "en",
         "@value": "Bexleyheath line"
       }
+    },
+    {
+      "@id": "wd:Q6840748",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mid-Kent line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303842#line4",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6840748#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6840748"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

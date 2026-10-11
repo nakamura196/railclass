@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,26 +14,17 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15907711#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q7304504#P3438"
-      },
-      "line": {
-        "@id": "wd:Q7304504"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "wd:Q7099668",
       "rdfs:label": {
         "@language": "en",
         "@value": "Orange Line"
+      }
+    },
+    {
+      "@id": "wd:Q7304504",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Red line"
       }
     },
     {
@@ -52,11 +44,30 @@
       "useStatus": "current"
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15907711#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7304504#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7304504"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q15907711",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%AB%98%E9%9B%84%E6%8D%B7%E9%81%8B%20%2815684880656%29.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -117,13 +128,6 @@
           "@id": "wd:Q4102249"
         }
       ]
-    },
-    {
-      "@id": "wd:Q7304504",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Red line"
-      }
     }
   ]
 }

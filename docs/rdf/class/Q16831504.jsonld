@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,18 +14,14 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q874436",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Karlsruhe Stadtbahn"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16831504",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Ubstadt-Weiher%20-%20Ubstadt%20Ort%20-%20Duewag-Siemens%20GT8-100D-2S-M%20-%202017-09-03%2019-24-59.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16831504#line1"
@@ -79,6 +76,13 @@
       },
       "wdt:P279": {
         "@id": "wd:Q3407658"
+      }
+    },
+    {
+      "@id": "wd:Q874436",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Karlsruhe Stadtbahn"
       }
     },
     {

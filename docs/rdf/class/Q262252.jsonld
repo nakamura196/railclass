@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -18,6 +19,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/71-608K%204060%20tram%20on%20Proletarskaya.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -76,17 +80,23 @@
       }
     },
     {
-      "@id": "wd:Q219347",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q262252#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3509082#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3509082"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Trams in Dnipro"
-      }
-    },
-    {
-      "@id": "wd:Q3509082",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Trams in Ryazan"
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2010"
       }
     },
     {
@@ -106,23 +116,17 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q262252#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q3509082#P3438"
-      },
-      "line": {
-        "@id": "wd:Q3509082"
-      },
-      "skos:note": {
+      "@id": "wd:Q219347",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "historical",
-      "usedUntil": {
-        "@type": "xsd:gYear",
-        "@value": "2010"
+        "@value": "Trams in Dnipro"
+      }
+    },
+    {
+      "@id": "wd:Q3509082",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trams in Ryazan"
       }
     }
   ]

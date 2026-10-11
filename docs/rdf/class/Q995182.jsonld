@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,13 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "wd:Q2274335",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Cagliari metropolitan railway service"
-      }
-    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q995182#line1",
       "@type": "LineUse",
@@ -41,6 +35,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/06%20911a%20Bf%20Trapani%2C%20ALn%20663%201178.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q995182#line1"
@@ -90,6 +87,13 @@
       "wdt:P729": {
         "@type": "xsd:gYear",
         "@value": "1983"
+      }
+    },
+    {
+      "@id": "wd:Q2274335",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cagliari metropolitan railway service"
       }
     }
   ]

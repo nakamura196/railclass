@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,21 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q7660181",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sydney Trains"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122981",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Sydney%20Trains%20K%20Set%2C%20Sydenham%20%2820240212%29%20%282%29.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5122981#line1"
@@ -83,13 +94,6 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q7660181",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Sydney Trains"
-      }
     }
   ]
 }

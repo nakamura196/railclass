@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,22 +13,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22829656#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q4207854#P3438"
-      },
-      "line": {
-        "@id": "wd:Q4207854"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22829656#line1",
       "@type": "LineUse",
@@ -45,11 +30,27 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q20795233",
+      "@id": "wd:Q4207854",
       "rdfs:label": {
         "@language": "en",
-        "@value": "South Caucasus Railway"
+        "@value": "Kazanskoye line (Moscow Railway)"
       }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22829656#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4207854#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4207854"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q22829656",
@@ -57,6 +58,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%20%D0%AD%D0%9F2%D0%94.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -125,10 +129,10 @@
       }
     },
     {
-      "@id": "wd:Q4207854",
+      "@id": "wd:Q20795233",
       "rdfs:label": {
         "@language": "en",
-        "@value": "Kazanskoye line (Moscow Railway)"
+        "@value": "South Caucasus Railway"
       }
     }
   ]

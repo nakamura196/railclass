@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -29,11 +30,21 @@
       "useStatus": "current"
     },
     {
+      "@id": "wd:Q7257648",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Transport Victoria"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7510911",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Siemens%20train%20in%20Metro%20Trains%20Melbourne%20Livery.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7510911#line1"
@@ -78,13 +89,6 @@
       },
       "wdt:P279": {
         "@id": "wd:Q483373"
-      }
-    },
-    {
-      "@id": "wd:Q7257648",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Transport Victoria"
       }
     }
   ]

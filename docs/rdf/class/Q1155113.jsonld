@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,13 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "wd:Q318652",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Heidenau–Altenberg railway"
+      }
+    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155113#line1",
       "@type": "LineUse",
@@ -29,18 +37,14 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q318652",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Heidenau–Altenberg railway"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155113",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/2008-07-26%2013-18-54%20Germany%20Baden-W%C3%BCrttemberg%20Weizen.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1155113#line1"

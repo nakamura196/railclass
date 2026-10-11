@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,29 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "wd:Q6044834",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "InterCity"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970588#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q6044834#P3438"
+      },
+      "line": {
+        "@id": "wd:Q6044834"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970588#line1",
       "@type": "LineUse",
@@ -29,27 +53,14 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970588#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q488724#P3438"
-      },
-      "line": {
-        "@id": "wd:Q488724"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970588",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Balmoral%20railway%20station%20in%202007.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -137,13 +148,13 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970588#line3",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5970588#line2",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q6044834#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q488724#P3438"
       },
       "line": {
-        "@id": "wd:Q6044834"
+        "@id": "wd:Q488724"
       },
       "skos:note": {
         "@language": "en",
@@ -157,13 +168,6 @@
       "rdfs:label": {
         "@language": "en",
         "@value": "Belfast–Newry line"
-      }
-    },
-    {
-      "@id": "wd:Q6044834",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "InterCity"
       }
     }
   ]

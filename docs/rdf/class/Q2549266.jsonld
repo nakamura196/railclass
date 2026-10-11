@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,18 +14,14 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q2976",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Lyon Metro Line D"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2549266",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Zoom%20sur%20un%20MPL85%20%C3%A0%20la%20station%20Vieux-Lyon.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2549266#line1"
@@ -57,6 +54,13 @@
       },
       "wdt:P176": {
         "@id": "wd:Q309084"
+      }
+    },
+    {
+      "@id": "wd:Q2976",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lyon Metro Line D"
       }
     },
     {

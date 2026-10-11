@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,20 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "wd:Q4639990",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "511 Bathurst"
+      }
+    },
+    {
+      "@id": "wd:Q17018472",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dundas Exhibition 522"
+      }
+    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line8",
       "@type": "LineUse",
@@ -29,37 +44,33 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q17507867",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Tram line 521 Exhibition East (Toronto)"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line5",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line3",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q3238946#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q3238944#P3438"
       },
       "line": {
-        "@id": "wd:Q3238946"
+        "@id": "wd:Q3238944"
       },
       "skos:note": {
         "@language": "en",
         "@value": "wikidata"
       },
       "sourceSection": "P3438",
-      "useStatus": "historical",
-      "usedUntil": {
-        "@type": "xsd:gYear",
-        "@value": "2020"
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q4639838",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "508 Lake Shore"
       }
     },
     {
-      "@id": "wd:Q3238947",
+      "@id": "wd:Q4639788",
       "rdfs:label": {
         "@language": "en",
-        "@value": "506 Carlton"
+        "@value": "503 Kingston Rd"
       }
     },
     {
@@ -83,6 +94,29 @@
       }
     },
     {
+      "@id": "wd:Q3238947",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "506 Carlton"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line10",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4639990#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4639990"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line1",
       "@type": "LineUse",
       "dcterms:source": {
@@ -99,10 +133,40 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q17018472",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line6",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3238947#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3238947"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q3238944",
       "rdfs:label": {
         "@language": "en",
-        "@value": "Dundas Exhibition 522"
+        "@value": "501 Queen"
+      }
+    },
+    {
+      "@id": "wd:Q3238945",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "504 King"
+      }
+    },
+    {
+      "@id": "wd:Q17507867",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tram line 521 Exhibition East (Toronto)"
       }
     },
     {
@@ -113,11 +177,46 @@
       }
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q17507867#P3438"
+      },
+      "line": {
+        "@id": "wd:Q17507867"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line9",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q4639838#P3438"
+      },
+      "line": {
+        "@id": "wd:Q4639838"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/CLRV%204059%20Glamour%20Shot.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -242,79 +341,10 @@
       }
     },
     {
-      "@id": "wd:Q4639788",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "503 Kingston Rd"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q3238944#P3438"
-      },
-      "line": {
-        "@id": "wd:Q3238944"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q3238945",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "504 King"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line6",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q3238947#P3438"
-      },
-      "line": {
-        "@id": "wd:Q3238947"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q17507867#P3438"
-      },
-      "line": {
-        "@id": "wd:Q17507867"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "wd:Q3238950",
       "rdfs:label": {
         "@language": "en",
         "@value": "512 St. Clair"
-      }
-    },
-    {
-      "@id": "wd:Q3238944",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "501 Queen"
       }
     },
     {
@@ -338,50 +368,24 @@
       }
     },
     {
-      "@id": "wd:Q4639838",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "508 Lake Shore"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line9",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line5",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q4639838#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q3238946#P3438"
       },
       "line": {
-        "@id": "wd:Q4639838"
+        "@id": "wd:Q3238946"
       },
       "skos:note": {
         "@language": "en",
         "@value": "wikidata"
       },
       "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q4639990",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "511 Bathurst"
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2020"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2865749#line10",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q4639990#P3438"
-      },
-      "line": {
-        "@id": "wd:Q4639990"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
     }
   ]
 }

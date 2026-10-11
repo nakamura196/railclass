@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,81 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q3089167",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Honam High-speed Railway"
+      }
+    },
+    {
+      "@id": "wd:Q125454571",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Gyeongbu High-speed Railway Line (Suwon Branch)"
+      }
+    },
+    {
+      "@id": "wd:Q125471583",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Jeolla KTX"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q496662#line5",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q3089167#P3438"
+      },
+      "line": {
+        "@id": "wd:Q3089167"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q496662#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q125454560#P3438"
+      },
+      "line": {
+        "@id": "wd:Q125454560"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q125471208",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Gyeongjeon KTX"
+      }
+    },
+    {
+      "@id": "wd:Q489378",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Gyeongbu High-speed Railway"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q496662",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/KTX-Sancheon.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -105,59 +176,6 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q496662#line6",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q489378#P3438"
-      },
-      "line": {
-        "@id": "wd:Q489378"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q496662#line5",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q3089167#P3438"
-      },
-      "line": {
-        "@id": "wd:Q3089167"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q125454560",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Gyeongbu High-speed Railway Line (Gupo Branch)"
-      }
-    },
-    {
-      "@id": "wd:Q125471583",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Jeolla KTX"
-      }
-    },
-    {
-      "@id": "wd:Q489378",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Gyeongbu High-speed Railway"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q496662#line4",
       "@type": "LineUse",
       "dcterms:source": {
@@ -172,6 +190,13 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q125454560",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Gyeongbu High-speed Railway Line (Gupo Branch)"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q496662#line3",
@@ -206,13 +231,13 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q496662#line1",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q496662#line6",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q125454560#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q489378#P3438"
       },
       "line": {
-        "@id": "wd:Q125454560"
+        "@id": "wd:Q489378"
       },
       "skos:note": {
         "@language": "en",
@@ -220,27 +245,6 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q125471208",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Gyeongjeon KTX"
-      }
-    },
-    {
-      "@id": "wd:Q125454571",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Gyeongbu High-speed Railway Line (Suwon Branch)"
-      }
-    },
-    {
-      "@id": "wd:Q3089167",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Honam High-speed Railway"
-      }
     }
   ]
 }

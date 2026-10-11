@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,21 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q10602972",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Norrtåg"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4097720",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Y31%201418%20at%20Lidk%C3%B6pings%20resecentrum%20%28front%20view%29.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q4097720#line1"
@@ -76,13 +87,6 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q10602972",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Norrtåg"
-      }
     }
   ]
 }

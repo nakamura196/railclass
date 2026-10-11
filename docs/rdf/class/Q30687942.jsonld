@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,106 @@
   },
   "@graph": [
     {
+      "@id": "wd:Q5034802",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cape Flats Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5034802#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5034802"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q7058663",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Northern Line"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7058663#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7058663"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line4",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7570093#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7570093"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q5061363#P3438"
+      },
+      "line": {
+        "@id": "wd:Q5061363"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q7570093",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Southern Line"
+      }
+    },
+    {
+      "@id": "wd:Q5061363",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Central Line"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/PRASA%20X%27trapolis%20Mega.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -95,98 +191,6 @@
       ],
       "wdt:P279": {
         "@id": "wd:Q483373"
-      }
-    },
-    {
-      "@id": "wd:Q7570093",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Southern Line"
-      }
-    },
-    {
-      "@id": "wd:Q7058663",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Northern Line"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q5061363#P3438"
-      },
-      "line": {
-        "@id": "wd:Q5061363"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q5034802#P3438"
-      },
-      "line": {
-        "@id": "wd:Q5034802"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line4",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q7570093#P3438"
-      },
-      "line": {
-        "@id": "wd:Q7570093"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q5034802",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Cape Flats Line"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q30687942#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q7058663#P3438"
-      },
-      "line": {
-        "@id": "wd:Q7058663"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q5061363",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Central Line"
       }
     }
   ]

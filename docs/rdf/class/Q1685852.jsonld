@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,20 +14,36 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q29017880",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q29017880#P3438"
+      },
+      "line": {
+        "@id": "wd:Q29017880"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q987251",
       "rdfs:label": {
         "@language": "en",
-        "@value": "Dubai International Airport Automated People Mover"
+        "@value": "Changi Airport Skytrain"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line4",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line3",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q6715935#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q4654717#P3438"
       },
       "line": {
-        "@id": "wd:Q6715935"
+        "@id": "wd:Q4654717"
       },
       "skos:note": {
         "@language": "en",
@@ -52,64 +69,14 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q19876957#P3438"
-      },
-      "line": {
-        "@id": "wd:Q19876957"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q987251",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Changi Airport Skytrain"
-      }
-    },
-    {
-      "@id": "wd:Q19876957",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Skytrain"
-      }
-    },
-    {
-      "@id": "wd:Q6715935",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "MIA Mover"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q29017880#P3438"
-      },
-      "line": {
-        "@id": "wd:Q29017880"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1685852",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/CrystalMover-Changi-Ext.JPG"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -182,6 +149,13 @@
       }
     },
     {
+      "@id": "wd:Q6715935",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "MIA Mover"
+      }
+    },
+    {
       "@id": "wd:Q4654717",
       "rdfs:label": {
         "@language": "en",
@@ -189,13 +163,13 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line3",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line4",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q4654717#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q6715935#P3438"
       },
       "line": {
-        "@id": "wd:Q4654717"
+        "@id": "wd:Q6715935"
       },
       "skos:note": {
         "@language": "en",
@@ -203,6 +177,36 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1685852#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q19876957#P3438"
+      },
+      "line": {
+        "@id": "wd:Q19876957"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q29017880",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dubai International Airport Automated People Mover"
+      }
+    },
+    {
+      "@id": "wd:Q19876957",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Skytrain"
+      }
     }
   ]
 }

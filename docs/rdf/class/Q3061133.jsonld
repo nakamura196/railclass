@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -29,11 +30,21 @@
       "useStatus": "current"
     },
     {
+      "@id": "wd:Q2965",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lyon Metro Line B"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3061133",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/MPL%2075%20Perrache.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -79,13 +90,6 @@
       }
     },
     {
-      "@id": "wd:Q2944",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Lyon Metro Line A"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3061133#line1",
       "@type": "LineUse",
       "dcterms:source": {
@@ -102,10 +106,10 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q2965",
+      "@id": "wd:Q2944",
       "rdfs:label": {
         "@language": "en",
-        "@value": "Lyon Metro Line B"
+        "@value": "Lyon Metro Line A"
       }
     }
   ]

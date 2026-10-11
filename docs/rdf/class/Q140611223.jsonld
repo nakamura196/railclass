@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,11 +14,20 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q697217",
-      "rdfs:label": {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://en.wikipedia.org/wiki/Amtrak_Airo"
+      },
+      "line": {
+        "@id": "wd:Q697217"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Amtrak Cascades"
-      }
+        "@value": "service began 30 Sep 2026; only route so far"
+      },
+      "sourceSection": "Development",
+      "useStatus": "current"
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223",
@@ -75,20 +85,11 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://en.wikipedia.org/wiki/Amtrak_Airo"
-      },
-      "line": {
-        "@id": "wd:Q697217"
-      },
-      "skos:note": {
+      "@id": "wd:Q697217",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "service began 30 Sep 2026; only route so far"
-      },
-      "sourceSection": "Development",
-      "useStatus": "current"
+        "@value": "Amtrak Cascades"
+      }
     }
   ]
 }

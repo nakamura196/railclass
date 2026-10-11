@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,57 +14,14 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1023756#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q46048144#P3438"
-      },
-      "line": {
-        "@id": "wd:Q46048144"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q105916542",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "ECE 88"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1023756#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q105916542#P3438"
-      },
-      "line": {
-        "@id": "wd:Q105916542"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q46048144",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "EuroCity-Express"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1023756",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/ETR%20610%20006%20Domodossola%2030-10-2010%20EC50.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -152,6 +110,52 @@
           "@id": "wd:Q1415234"
         }
       ]
+    },
+    {
+      "@id": "wd:Q105916542",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ECE 88"
+      }
+    },
+    {
+      "@id": "wd:Q46048144",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "EuroCity-Express"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1023756#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q46048144#P3438"
+      },
+      "line": {
+        "@id": "wd:Q46048144"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1023756#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q105916542#P3438"
+      },
+      "line": {
+        "@id": "wd:Q105916542"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

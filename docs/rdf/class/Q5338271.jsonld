@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,18 +14,14 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q2299624",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Edinburgh Trams"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5338271",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Edinburgh%20Tram%20255.jpg"
+      },
       "has3DModel": false,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5338271#line1"
@@ -79,6 +76,13 @@
       },
       "wdt:P930": {
         "@id": "wd:Q25857994"
+      }
+    },
+    {
+      "@id": "wd:Q2299624",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Edinburgh Trams"
       }
     },
     {

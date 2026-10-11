@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,33 +14,10 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2117983#P3438"
-      },
-      "line": {
-        "@id": "wd:Q2117983"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "wd:Q3239056",
       "rdfs:label": {
         "@language": "en",
         "@value": "Grenoble tram line A"
-      }
-    },
-    {
-      "@id": "wd:Q369969",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Île-de-France tramway Line 1"
       }
     },
     {
@@ -50,6 +28,29 @@
       },
       "line": {
         "@id": "wd:Q3239056"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q2117983",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Nantes tramway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q650268#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2117983#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2117983"
       },
       "skos:note": {
         "@language": "en",
@@ -75,10 +76,10 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q2117983",
+      "@id": "wd:Q369969",
       "rdfs:label": {
         "@language": "en",
-        "@value": "Nantes tramway"
+        "@value": "Île-de-France tramway Line 1"
       }
     },
     {
@@ -87,6 +88,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Alsthom%20TFS%20n%C2%B0336%20%C3%89cole%20Centrale%20Audencia.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {

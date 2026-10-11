@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -13,29 +14,16 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0271"
+        "@value": "0.8669"
       },
-      "rdfs:label": "red",
-      "schema:color": "#CC1014",
+      "rdfs:label": "body",
+      "schema:color": "#ECEEEC",
       "wdt:P462": {
-        "@id": "wd:Q3142"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0500"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
+        "@id": "wd:Q23444"
       }
     },
     {
@@ -50,52 +38,6 @@
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_oebb/icet_oebb.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q83822"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Deutsche Bahn livery with ÖBB marks"
-        },
-        {
-          "@language": "ja",
-          "@value": "DB の塗装に ÖBB の印"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q3142"
-        }
-      ]
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb",
@@ -169,6 +111,65 @@
       }
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/icet_oebb/icet_oebb.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q83822"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn livery with ÖBB marks"
+        },
+        {
+          "@language": "ja",
+          "@value": "DB の塗装に ÖBB の印"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3142"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0271"
+      },
+      "rdfs:label": "red",
+      "schema:color": "#CC1014",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5",
       "@type": "ColorSample",
       "areaShare": {
@@ -182,16 +183,16 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.8669"
+        "@value": "0.0500"
       },
-      "rdfs:label": "body",
-      "schema:color": "#ECEEEC",
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
       "wdt:P462": {
-        "@id": "wd:Q23444"
+        "@id": "wd:Q23445"
       }
     }
   ]

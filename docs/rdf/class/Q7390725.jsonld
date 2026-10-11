@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,27 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "wd:Q7525042",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sinsen Line"
+      }
+    },
+    {
+      "@id": "wd:Q7879175",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ullevål Hageby Line"
+      }
+    },
+    {
+      "@id": "wd:Q4394929",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ekeberg Line"
+      }
+    },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line2",
       "@type": "LineUse",
@@ -29,64 +51,13 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q4394929",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Ekeberg Line"
-      }
-    },
-    {
-      "@id": "wd:Q7538284",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Skøyen Line"
-      }
-    },
-    {
-      "@id": "wd:Q7879175",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Ullevål Hageby Line"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line1",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line5",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q4343537#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q7879175#P3438"
       },
       "line": {
-        "@id": "wd:Q4343537"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q7525042",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Sinsen Line"
-      }
-    },
-    {
-      "@id": "wd:Q4343537",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Lilleaker Line"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line4",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q7538284#P3438"
-      },
-      "line": {
-        "@id": "wd:Q7538284"
+        "@id": "wd:Q7879175"
       },
       "skos:note": {
         "@language": "en",
@@ -101,6 +72,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Tram%20SL-95%20TRS%20050416%20044.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -191,13 +165,13 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line5",
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line1",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q7879175#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q4343537#P3438"
       },
       "line": {
-        "@id": "wd:Q7879175"
+        "@id": "wd:Q4343537"
       },
       "skos:note": {
         "@language": "en",
@@ -205,6 +179,36 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line4",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q7538284#P3438"
+      },
+      "line": {
+        "@id": "wd:Q7538284"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q7538284",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Skøyen Line"
+      }
+    },
+    {
+      "@id": "wd:Q4343537",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lilleaker Line"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q7390725#line3",

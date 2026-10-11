@@ -2,6 +2,7 @@
   "@context": {
     "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
@@ -12,6 +13,59 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "wd:Q126678444",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Light Rail Route 720"
+      }
+    },
+    {
+      "@id": "wd:Q121734885",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Light Rail Route 611"
+      }
+    },
+    {
+      "@id": "wd:Q119233511",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Light Rail Route 511"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11370372#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q121734885#P3438"
+      },
+      "line": {
+        "@id": "wd:Q121734885"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11370372#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q126678444#P3438"
+      },
+      "line": {
+        "@id": "wd:Q126678444"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
     {
       "@id": "wd:Q129804196",
       "rdfs:label": {
@@ -25,6 +79,9 @@
         "VehicleClass",
         "skos:Concept"
       ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/1081%2B1203%28178%29%20MTR%20Light%20Rail%20751%2020-09-2022.jpg"
+      },
       "has3DModel": false,
       "lineUse": [
         {
@@ -93,36 +150,6 @@
       ]
     },
     {
-      "@id": "wd:Q119233511",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Light Rail Route 511"
-      }
-    },
-    {
-      "@id": "wd:Q121734885",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Light Rail Route 611"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11370372#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q126678444#P3438"
-      },
-      "line": {
-        "@id": "wd:Q126678444"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11370372#line1",
       "@type": "LineUse",
       "dcterms:source": {
@@ -130,29 +157,6 @@
       },
       "line": {
         "@id": "wd:Q119233511"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q126678444",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Light Rail Route 720"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q11370372#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q121734885#P3438"
-      },
-      "line": {
-        "@id": "wd:Q121734885"
       },
       "skos:note": {
         "@language": "en",
