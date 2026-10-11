@@ -1,0 +1,7 @@
+# Every "vehicle normally used" (P3438) statement in Wikidata: ?line uses ?c.
+# Matched against the class index locally in tools/count_class_lines.py, not in SPARQL.
+# P402 = OpenStreetMap relation ID on the line item (if any).
+SELECT ?line ?c ?osm WHERE {
+  ?line wdt:P3438 ?c .
+  OPTIONAL { ?line wdt:P402 ?osm }
+}
