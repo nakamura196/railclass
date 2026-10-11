@@ -140,6 +140,10 @@ URI の取り決め（3 つのセッションで共有する。変えるとき�
     `https://w3id.org/railclass/<cid>`（例 `/Q1200438`）、モデルは `/model/<id>` のまま。
     形式の ID は `Q` 番号 14,321 件と `tb-` 4 件だけで、`era-` を含めても、`model`・`vocab` とも今のモデル ID とも重ならない。
     これからモデル ID を付けるときは、`Q` で始めない・`era-`/`tb-` を付けない
+  - 同日実施: GitHub のリポジトリ名を `railclass` に変え、サイトは `https://nakamura196.github.io/railclass/` に移った（1ad8754）。
+    表示名も「RailClass」に。IIIF の `id`・`annotations/` も新しいアドレスにした（build_iiif.py で作り直した結果と一致を確認）。
+    旧アドレス `…/train-bodies/` は 404（GitHub Pages は転送しない）。RDF の URI は旧アドレスのままで、w3id への切り替えまで引けない。
+    手元のフォルダ名は `~/git/3d/train-bodies` のまま
 
 担当（触るファイルが重ならないように分ける）:
 
