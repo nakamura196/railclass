@@ -1,5 +1,5 @@
 ---
-// map/ — every line of tools/class_lines.tsv on one world map (the OSM shapes in docs/lines, ODbL, as on the class
+// map/ — every line of the class-line tables (hand-filled + Wikidata P3438) on one world map (the OSM shapes in docs/lines, ODbL, as on the class
 // pages) with the classes that run on it. The map and its list work as on a class page (scripts/line-map.ts).
 import "../styles/class.css";
 import Base from "../layouts/Base.astro";
@@ -47,7 +47,7 @@ const names = Object.fromEntries(ids.map(c => [c, classPage(c, lang, n => String
     </div>
   </section>
 </div>
-{mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify(mapped.map(l => ({ id: l.id, label: l.label, old: !l.current, src: file(`lines/${l.id}.geojson`) })))} />}
+{mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify({ all: file("lines/_all.geojson"), old: lines.filter(l => !l.current).map(l => l.id) })} />}
 </Base>
 
 <script>

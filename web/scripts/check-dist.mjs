@@ -28,9 +28,15 @@ const modelsOf = c => {
 const exact = c => ttl[c].match(/skos:exactMatch\s+wd:(Q\d+)/)?.[1] ?? null;
 
 // Lines, from the table and the cut-out shapes
-const tsv = read(root + "tools/class_lines.tsv").trim().split("\n").map(r => r.split("\t"));
-const H = tsv[0];
-const rows = tsv.slice(1).map(r => Object.fromEntries(H.map((h, i) => [h, r[i] ?? ""])));
+const rows = [], seenPair = new Set();
+for (const f of ["class_lines.tsv", "class_lines_wd.tsv"]) {
+  if (!existsSync(root + "tools/" + f)) continue;
+  const [H, ...t] = read(root + "tools/" + f).trim().split("\n").map(r => r.split("\t"));
+  for (const r of t.map(r => Object.fromEntries(H.map((h, i) => [h, r[i] ?? ""])))) {
+    const k = r.class + "\t" + r.line;
+    if (!seenPair.has(k)) { seenPair.add(k); rows.push(r); }
+  }
+}
 const linesOf = c => [...new Set(rows.filter(r => r.class === c && r.line).map(r => r.line))];
 const shape = q => existsSync(`${docs}lines/${q}.geojson`);
 
@@ -58,7 +64,7 @@ for (const lang of ["ja", "en"]) {
     // Lines: one list item per line; a map when at least one line has a shape, with each shape linked
     const ls = linesOf(c);
     const items = (h.match(/<li[^>]*data-line="/g) ?? []).length;
-    if (items !== ls.length) fail(p, `${items} line(s) listed, ${ls.length} in tools/class_lines.tsv`);
+    if (items !== ls.length) fail(p, `${items} line(s) listed, ${ls.length} in the class-line tables`);
     const mapped = ls.filter(shape);
     const map = h.includes('id="line-map"');
     if (mapped.length && !map) fail(p, `no map (shapes: ${mapped.join(" ")})`);
@@ -108,15 +114,15 @@ for (const f of existsSync(docs + "lines") ? readdirSync(docs + "lines").filter(
 }
 if (existsSync(docs + "lines") && !existsSync(dist + "lines/README.md")) fail("lines/README.md", "licence note not published");
 
-// map/: every line of the table listed, each shape linked, each class on a line linked to its page
+// map/: every line of the table listed, the combined shape file referenced, each class on a line linked to its page
 const allLines = [...new Set(rows.filter(r => r.line).map(r => r.line))];
 for (const pre of ["", "en/"]) {
   const p = `${pre}map/index.html`;
   if (!existsSync(dist + p)) { fail(p, "missing"); continue; }
   const h = read(dist + p);
   const items = (h.match(/<li[^>]*data-line="/g) ?? []).length;
-  if (items !== allLines.length) fail(p, `${items} line(s) listed, ${allLines.length} in tools/class_lines.tsv`);
-  for (const l of allLines.filter(shape)) if (!h.includes(`/lines/${l}.geojson`)) fail(p, `shape ${l} not linked`);
+  if (items !== allLines.length) fail(p, `${items} line(s) listed, ${allLines.length} in the class-line tables`);
+  if (existsSync(`${docs}lines/_all.geojson`) && !h.includes("lines/_all.geojson")) fail(p, "lines/_all.geojson not referenced");
   for (const c of new Set(rows.filter(r => r.line && classes.includes(r.class)).map(r => r.class)))
     if (!h.includes(`rdf/class/${c}.html`)) fail(p, `class ${c} not linked`);
   if (allLines.some(shape) && !h.includes("maplibre-gl.js")) fail(p, "map without MapLibre");

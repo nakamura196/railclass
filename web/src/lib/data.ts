@@ -91,16 +91,26 @@ export const fmtBytes = (n: number) => n >= 1e6 ? `${(n / 1e6).toFixed(1)} MB` :
 
 export type Line = { id: string; label: string; status: string; until: string; source: string; map: boolean };
 
+// tools/class_lines.tsv (hand-filled, sources) first, then tools/class_lines_wd.tsv (Wikidata P3438); the first (class, line) wins
 const lineRows = (): Record<string, string>[] => {
-  const p = resolve(process.cwd(), "../tools/class_lines.tsv");
-  if (!existsSync(p)) return [];
-  const [head, ...rows] = readFileSync(p, "utf8").trim().split("\n").map(r => r.split("\t"));
-  return rows.map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ""])));
+  const seen = new Set<string>(), out: Record<string, string>[] = [];
+  for (const f of ["class_lines.tsv", "class_lines_wd.tsv"]) {
+    const p = resolve(process.cwd(), "../tools", f);
+    if (!existsSync(p)) continue;
+    const [head, ...rows] = readFileSync(p, "utf8").trim().split("\n").map(r => r.split("\t"));
+    for (const r of rows) {
+      const o: Record<string, string> = Object.fromEntries(head.map((h, i) => [h, r[i] ?? ""]));
+      const k = `${o.class}\t${o.line}`;
+      if (!o.line || seen.has(k)) continue;
+      seen.add(k); out.push(o);
+    }
+  }
+  return out;
 };
 
 export type MapLine = { id: string; label: string; current: boolean; map: boolean; classes: string[] };
 
-/** Every line of tools/class_lines.tsv with the classes on it (for the map page). current = some class still runs on it. */
+/** Every line of the class-line tables (hand-filled and Wikidata) with the classes on it (for the map page). current = some class still runs on it. */
 export function allLines(): MapLine[] {
   const by = new Map<string, MapLine>();
   for (const r of lineRows()) {
@@ -113,7 +123,7 @@ export function allLines(): MapLine[] {
   return [...by.values()].sort((a, b) => Number(b.map) - Number(a.map) || a.label.localeCompare(b.label));
 }
 
-/** The lines a class runs (ran) on: tools/class_lines.tsv (hand-filled with sources). map = an OSM shape was cut out
+/** The lines a class runs (ran) on: the class-line tables (hand-filled with sources, then Wikidata P3438). map = an OSM shape was cut out
  *  for it (docs/lines/<Q>.geojson, tools/osm_lines.py; ODbL, kept apart from the dataset). */
 export function classLines(id: string): Line[] {
   const seen = new Set<string>();
