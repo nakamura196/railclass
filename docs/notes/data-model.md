@@ -144,6 +144,15 @@ URI の取り決め（3 つのセッションで共有する。変えるとき�
     表示名も「RailClass」に。IIIF の `id`・`annotations/` も新しいアドレスにした（build_iiif.py で作り直した結果と一致を確認）。
     旧アドレス `…/train-bodies/` は 404（GitHub Pages は転送しない）。RDF の URI は旧アドレスのままで、w3id への切り替えまで引けない。
     手元のフォルダ名は `~/git/3d/train-bodies` のまま
+  - w3id の出し方が変わっていた（2026-10-11 に README で確認）: 置き場所が直下ではなく `ids/<名前>/.htaccess`。
+    前回の申請（perma-id/w3id.org#6804、histact、2026-10-04）でも管理者から「`ids/` の下へ移して」と言われていた。
+    PR には自動の点検が走る。手元でも `node tools/check/bin/w3id-check.js ids/<名前>` で同じ点検ができる。
+    `.htaccess` の冒頭のコメントに連絡先と GitHub のユーザー名を書く決まり。`ids/railclass` も未使用だった
+  - 同日、申請を出した: perma-id/w3id.org#6867（`ids/railclass/.htaccess` と `README.md`）。自動の点検は通過。
+    手元の Apache（macOS 付属。w3id の Docker 環境はネットワークの空きが無く起動できなかった）で、
+    形式・モデル・語彙・全体 × HTML/Turtle/JSON-LD の転送先を確認し、転送先がすべて 200 で正しい形式を返すことも確かめた。
+    `run-server` を macOS の Apache で動かすには `W3ID_ALLOW_SYSTEM_HTTPD=1 W3ID_MODDIR=/usr/libexec/apache2 W3ID_MIMETYPES=/private/etc/apache2/mime.types` が要る。
+    語彙は Turtle しか無いので、`/vocab` は常に Turtle を返す。取り込まれたら、RDF の URI を一括で差し替える
 
 担当（触るファイルが重ならないように分ける）:
 
