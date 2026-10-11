@@ -11,7 +11,7 @@ Usage: python3 tools/count_class_lines.py
 """
 import collections, csv, json, os, urllib.parse, urllib.request
 
-UA = "train-bodies/0.1 (https://github.com/nakamura196/train-bodies)"
+UA = "railclass/0.1 (https://github.com/nakamura196/railclass)"
 HERE = os.path.dirname(__file__)
 os.makedirs("data", exist_ok=True)
 

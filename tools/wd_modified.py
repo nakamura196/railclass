@@ -10,7 +10,7 @@ import csv, json, os, sys, time, urllib.parse, urllib.request
 
 ARGS = sys.argv[1:]
 DATA = ARGS[ARGS.index("--data") + 1] if "--data" in ARGS else "data"
-UA = "train-bodies/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
+UA = "railclass/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
 
 ids = {r["wikidata"] for r in csv.DictReader(open(os.path.join(DATA, "classes.tsv"), encoding="utf-8"), delimiter="\t")
        if r["source"] == "wikidata" and r["wikidata"]}

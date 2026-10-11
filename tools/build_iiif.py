@@ -19,7 +19,7 @@ import json, os, re, struct, sys
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = "https://nakamura196.github.io/train-bodies/"
+BASE = "https://nakamura196.github.io/railclass/"
 CONTEXT = "http://iiif.io/api/presentation/4/context.json"
 PROVIDER = {"id": "https://github.com/nakamura196", "type": "Agent",
             "label": {"ja": ["中村 覚"], "en": ["Satoru Nakamura"]}}
@@ -238,11 +238,11 @@ def collection():
         items.append({k: man[k] for k in ("id", "type", "label", "thumbnail") if k in man})
     col = {
         "@context": CONTEXT, "id": f"{BASE}iiif/collection.json", "type": "Collection",
-        "label": {"ja": ["Train Bodies の 3D モデル"], "en": ["Train Bodies 3D models"]},
+        "label": {"ja": ["RailClass の 3D モデル"], "en": ["RailClass 3D models"]},
         "summary": {"ja": ["世界の鉄道車両の形式に結んだ、車体の 3D モデルの IIIF Manifest の一覧。"],
                     "en": ["IIIF Manifests of the train-body 3D models, each linked to its rolling stock class."]},
         "provider": [PROVIDER],
-        "homepage": [{"id": BASE, "type": "Text", "format": "text/html", "label": {"none": ["Train Bodies"]}}],
+        "homepage": [{"id": BASE, "type": "Text", "format": "text/html", "label": {"none": ["RailClass"]}}],
         "items": items,
     }
     out = os.path.join(ROOT, "docs", "iiif", "collection.json")

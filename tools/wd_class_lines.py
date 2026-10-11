@@ -9,7 +9,7 @@ Usage: python3 tools/wd_class_lines.py
 import csv, json, os, urllib.parse, urllib.request
 
 HERE = os.path.dirname(__file__)
-UA = "train-bodies/0.1 (https://github.com/nakamura196/train-bodies)"
+UA = "railclass/0.1 (https://github.com/nakamura196/railclass)"
 Q = """SELECT ?line ?c ?st (SAMPLE(?end) AS ?e) (SAMPLE(?closed) AS ?x) (SAMPLE(?en) AS ?le) (SAMPLE(?mul) AS ?lm) (SAMPLE(?any) AS ?la) WHERE {
   ?line p:P3438 ?st . ?st ps:P3438 ?c ; wikibase:rank ?rank . FILTER(?rank != wikibase:DeprecatedRank)
   OPTIONAL { ?st pq:P582 ?end }

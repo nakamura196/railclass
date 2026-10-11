@@ -9,7 +9,7 @@ q = sys.stdin.read()
 ep = sys.argv[1] if len(sys.argv) > 1 else "https://query.wikidata.org/sparql"
 r = urllib.request.Request(ep,
     data=urllib.parse.urlencode({"query": q, "format": "json"}).encode(),
-    headers={"Accept": "application/sparql-results+json", "User-Agent": "train-bodies/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"})
+    headers={"Accept": "application/sparql-results+json", "User-Agent": "railclass/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"})
 d = json.load(urllib.request.urlopen(r, timeout=300))
 cols = d["head"]["vars"]
 print("\t".join(cols))

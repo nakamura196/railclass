@@ -32,7 +32,7 @@ MDL = Namespace(BASE + "rdf/model/")
 SCHEME = URIRef(BASE + "rdf/")
 CC0 = URIRef("https://creativecommons.org/publicdomain/zero/1.0/")
 CC_BY = URIRef("https://creativecommons.org/licenses/by/4.0/")
-UA = "train-bodies/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
+UA = "railclass/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
 
 FACETS = json.load(open(os.path.join(DOCS, "facets.json"), encoding="utf-8"))["facets"]
 WD_FACETS = [f for f in FACETS if f["uri"].startswith(str(WDT)) and f.get("on", "class") == "class"]

@@ -1,9 +1,9 @@
-# train-bodies
+# railclass
 
 3Dプリントで作る、おもちゃの列車とバスの車体の一覧と3Dビューアです。
 おもちゃの車台に載る大きさで作っています。
 
-公開ページ: https://nakamura196.github.io/train-bodies/
+公開ページ: https://nakamura196.github.io/railclass/
 
 - SkyTrain（バンクーバー）Mark I / II / III / V
 - ICE T（ドイツ）411・415・緑の帯・ÖBB 4011・ICE TD（DB / DSB）

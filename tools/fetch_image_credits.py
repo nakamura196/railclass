@@ -21,7 +21,7 @@ FDIR = os.path.join(opt("--data", "data"), "wikidata", "facets")
 SRC, OUT = os.path.join(FDIR, "_image.tsv"), os.path.join(FDIR, "_image_credit.tsv")
 FP = "http://commons.wikimedia.org/wiki/Special:FilePath/"
 API = "https://commons.wikimedia.org/w/api.php"
-UA = "train-bodies/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
+UA = "railclass/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
 COLS = ["file", "artist", "license", "license_url", "attribution", "thumb"]
 
 def text(s):

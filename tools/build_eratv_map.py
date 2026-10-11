@@ -45,7 +45,7 @@ meta = {
     "dc:title": "ERATV vehicle types matched to Wikidata classes (train-bodies)",
     "dc:description": "Automatic matching of the vehicle types in the European Register of Authorised Types of Vehicles (ERATV) "
                       "to Wikidata rolling stock classes, by name. Not checked by hand. Made by tools/build_eratv_map.py from "
-                      "tools/build_classes.py in https://github.com/nakamura196/train-bodies",
+                      "tools/build_classes.py in https://github.com/nakamura196/railclass",
     "dc:source": {"@id": "https://eratv.era.europa.eu/Eratv/Home/List",
                   "dc:title": f"European Union Agency for Railways, ERATV (European Register of Authorised Types of Vehicles), list exported {exported}"},
     "dc:rights": "Type IDs and names: source European Union Agency for Railways (ERATV); reproduction is authorised provided the source is "

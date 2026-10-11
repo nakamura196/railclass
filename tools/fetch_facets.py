@@ -27,7 +27,7 @@ UNIT = {"km/h": 3.6}   # Wikidata normalises speed to m/s
 def run(q):
     r = urllib.request.Request("https://query.wikidata.org/sparql",
         data=urllib.parse.urlencode({"query": q, "format": "json"}).encode(),
-        headers={"Accept": "application/sparql-results+json", "User-Agent": "train-bodies/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"})
+        headers={"Accept": "application/sparql-results+json", "User-Agent": "railclass/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"})
     d = json.load(urllib.request.urlopen(r, timeout=300))
     cols = d["head"]["vars"]
     for b in d["results"]["bindings"]:

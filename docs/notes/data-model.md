@@ -126,6 +126,20 @@ URI の取り決め（3 つのセッションで共有する。変えるとき�
 - IIIF Manifest: `docs/iiif/<model-id>/manifest.json`。`seeAlso` でモデルの RDF と形式の RDF を指す
 - 検索用の索引: `docs/search/` の下（中身の形は検索の担当が決める）
 - **ERATV 由来のデータは、再利用条件を確かめるまで `docs/` に入れない。** Wikidata は CC0 なので入れてよい
+- 2026-10-11 決定（未実施）: 「もの」の URI を w3id に移す。名前は `railclass`。
+  `https://w3id.org/railclass/class/<cid>`・`/model/<id>`・`/vocab#<term>`、データセット全体は `https://w3id.org/railclass/`。
+  w3id の転送で、求められた形式（Turtle / JSON-LD / HTML）に振り分ける。GitHub Pages ではこれができないのが移す理由。
+  IIIF の Manifest の `id`（ファイルの置き場所）は変えない。ビューアが直接取りに行くので、転送と CORS を挟まない。
+  - 却下した名前: `train-bodies`（中身の大半は 14,325 件の形式で、3D は 14 点。名前が中身を表さない）、
+    `3d-train`（同じ理由）、`trains`・`rail`（一般的すぎて w3id で断られるおそれ）、`rail-cls`（1 文字短いだけで、`cls` が読めない）。
+    候補はどれも w3id で未使用だった（GitHub の perma-id/w3id.org を 2026-10-11 に確認）
+  - 今の公開状態で分かったこと: 形式の HTML は `rdf/class/<cid>`（末尾の `/` なし）。`vocab` と `rdf/`（概念体系の URI）は 404 で、
+    今の URI は引けない。`vocab.jsonld` は無い
+  - 全 28,650 ファイル（138MB）が書き換わるので、URI の差し替えは 1 回で済ませる
+  - 同日の修正: `railclass/class/` は class が重なる（本人の指摘）。形式は名前の直下に置く。
+    `https://w3id.org/railclass/<cid>`（例 `/Q1200438`）、モデルは `/model/<id>` のまま。
+    形式の ID は `Q` 番号 14,321 件と `tb-` 4 件だけで、`era-` を含めても、`model`・`vocab` とも今のモデル ID とも重ならない。
+    これからモデル ID を付けるときは、`Q` で始めない・`era-`/`tb-` を付けない
 
 担当（触るファイルが重ならないように分ける）:
 

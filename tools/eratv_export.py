@@ -17,7 +17,7 @@ BASE = "https://eratv.era.europa.eu"
 out = sys.argv[1] if len(sys.argv) > 1 else "data/eratv"
 os.makedirs(out, exist_ok=True)
 opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
-opener.addheaders = [("User-Agent", "train-bodies/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)")]
+opener.addheaders = [("User-Agent", "railclass/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)")]
 
 page = opener.open(BASE + "/Eratv/Home/List", timeout=60).read().decode()
 token = re.search(r'name="__RequestVerificationToken" type="hidden" value="([^"]+)"', page).group(1)

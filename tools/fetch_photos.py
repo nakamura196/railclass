@@ -22,7 +22,7 @@ DATA = opt("--data", "data")
 SRC = os.path.join(DATA, "wikidata", "facets", "_image_credit.tsv")
 DIR = os.path.join(DATA, "photos")
 OUT = os.path.join(DIR, "_photos.tsv")
-UA = "train-bodies/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
+UA = "railclass/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
 COLS = ["file", "key", "bytes", "width", "height", "source", "fetched"]
 
 def key(f):

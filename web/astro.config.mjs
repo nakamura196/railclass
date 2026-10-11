@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://nakamura196.github.io",
-  base: "/train-bodies",
+  base: "/railclass",
   trailingSlash: "ignore",
   // format: view.astro -> view.html, search/index.astro -> search/index.html (the URLs in use).
   // inlineStylesheets: since every class has a page (~28,000 with both languages, 2026-10-10), the CSS is one shared file,
