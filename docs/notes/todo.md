@@ -122,8 +122,9 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
       注釈は「爪の穴より上」を「印刷用の版で開ける爪の穴より上」に、ICE TD の屋根の穴の説明も印刷用の版の話に直してある
 - [x] skytrain 側も別にコミットした（299111d 台座なし、e37b7c3 印刷の道具とノート。skytrain は手元だけで push しない）: `lib.py`（`NO_MOUNT` でネジ受けの柱・屋根の切り欠き・後ろの爪穴を省く）・`build.py`（`--no-mount`、出力は `out/<モデル>/nomount/`）・
       `tools/gallery.py` と `tools/export_formats.py`（どちらも `--no-mount`。2 つとも未追跡のファイル）。旗なしは今までどおり穴あり（印刷用）
-- [ ] 本人に確かめる: フッターの「© 2026 中村 覚」と、IIIF の提供者（`tools/build_iiif.py` の PROVIDER）「中村 覚（東京大学）」を残すか
+- [x] 本人に確かめる: フッターの「© 2026 中村 覚」と、IIIF の提供者（`tools/build_iiif.py` の PROVIDER）「中村 覚（東京大学）」を残すか
       2026-10-10 本人の指示「このサイトでは東京大学をあまり出さない」: IIIF の提供者を「中村 覚」「Satoru Nakamura」にした（build_iiif.py と 14 件の Manifest、未コミット）。フッターの © は未確認
+      2026-10-10 本人の判断（お任せ）: フッターは「© 2026 中村 覚」「© 2026 Satoru Nakamura」のまま残す（名前だけ。東京大学は入れない）
 - [x] 新しい 4 モデル（allegra・frecciarossa・maglev・vandebharat）は注釈が無いので、IIIF マニフェストとダウンロードがまだ無い（2026-10-10 10:05 注釈 15〜16 か所ずつと Manifest を作った。Collection は 18 本。推測は frecciarossa 2・maglev 1。ダウンロードはまだ無いので、Manifest の rendering は GLB だけ。navPlace は入れていない）
 - [x] `docs/downloads/`（git の管理外）は穴なし版から 14 件作り直した。公開の置き場所（git か Releases か）は未定のまま
       2026-10-10 10:45 決めた: git の main には入れず、公開の手順（gh-pages、履歴なし）でそのまま配る。Releases は使わない。作り直しても履歴に溜まらない。ファイルが欠けていると npm test が落ちる。Manifest の rendering も作り直した（404 は解消）
@@ -153,3 +154,16 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [x] Sketchfab のような「前へ・次へ」で部位を順にたどるボタン（2026-10-10 9:50。部位の一覧の下に「‹ 前へ」「n / 全数」「次へ ›」。端で一周する。印を押しても番号が付いてくる）
 - [x] 2026-10-10 0:12 コミット・push・公開（deb2e8e、索引 7e8b87e、gh-pages は 7e8b87e のビルド 193 MB）。部品の説明の IIIF リンクは IIIF のロゴにした（`web/src/assets/iiif-logo.svg`、本人の他のサイトと同じファイル）。公開後に、形式のページの 3D・`view.html` の振り分け・文言（作者の行・プラレールが消えた）・写真の写し・検索・英語を確かめた
 
+
+## 路線を全形式に広げる（2026-10-10 午後。測り方と実数は data-model.md の同じ日の「路線の線を全形式に広げられるか」「20 路線で試した」）
+
+- [x] 件数調べ（`tools/count_class_lines.py`）: P3438 で 899 形式・1,695 路線、OSM の札あり 923、線まで届く形式 561
+- [x] 20 路線で試した: Overpass 14/20、QLever 20/20（形は同じ）
+- [x] Wikidata の対応表 `tools/class_lines_wd.tsv`（`tools/wd_class_lines.py`。deprecated を除く。2,441 行・913 形式・1,694 路線・終了 173）。手の表が優先
+- [x] `tools/osm_lines.py --qlever`（QLever で取る）と `docs/lines/_all.geojson`（地図のページ用に 1 つにまとめる）。試し用の qlever_lines.py は消した
+- [x] サイト・点検・RDF が 2 つの表を読む（data.ts・check-dist.mjs・build_rdf.py。地図のページは _all.geojson を 1 つの層で描く）。build_rdf.py は手の 17 形式にしか路線を書いていなかった不具合も直した: tb:usedOn 12 → 2,490
+- [x] 線の取り出し（`python3 -u tools/osm_lines.py --qlever`）: 1,733 路線のうち 935 本で線、失敗 0。558 形式に線（実数は data-model.md「全路線を取り出した」）
+- [x] build・`npm test` 通過、map/ と Q432757 を目で確認（明暗の切り替えで線は残る。選んだ線が見分けにくかったので、ほかを薄くした）。ノートに記録
+- [ ] 本人に見せてからコミットと公開
+- [ ] 小さな残り: 線の読み込み前に一覧を押すと地図が動かない
+- 未コミットの変更: 上のファイル一式・docs/rdf・docs/notes（data-model.md・todo.md）
