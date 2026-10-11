@@ -109,7 +109,8 @@ for (const f of existsSync(docs + "lines") ? readdirSync(docs + "lines").filter(
     const g = JSON.parse(read(dist + where));
     const ft = g.features?.[0];
     if (g.type !== "FeatureCollection" || !ft?.geometry?.coordinates?.length) fail(where, "no geometry");
-    if (ft?.properties?.license !== "ODbL-1.0" || !/OpenStreetMap contributors/.test(ft?.properties?.attribution ?? "")) fail(where, "no ODbL notice");
+    const lic = ft?.properties?.license ?? g.license, att = ft?.properties?.attribution ?? g.attribution;    // _all.geojson carries it once, on the collection
+    if (lic !== "ODbL-1.0" || !/OpenStreetMap contributors/.test(att ?? "")) fail(where, "no ODbL notice");
   } catch (e) { fail(where, "not JSON"); }
 }
 if (existsSync(docs + "lines") && !existsSync(dist + "lines/README.md")) fail("lines/README.md", "licence note not published");

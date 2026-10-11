@@ -7,7 +7,10 @@ Input:  tools/class_lines.tsv            class, line, ... (one row per class and
 Output: docs/lines/_osm.tsv              line, rel, type, route, name: every OSM relation that carries wikidata=<line>
         docs/lines/<line>.geojson         one Feature, MultiLineString of the track (ways of the relations and of
                                           their child relations), simplified to ~TOL degrees, 5 decimals
-        docs/lines/_all.geojson           every <line>.geojson in one FeatureCollection, for the map page
+        docs/lines/_all.geojson           every <line>.geojson in one FeatureCollection, for the map page: coarser (TOL_ALL,
+                                          3 decimals, only wikidata and label), so the world map loads fast; the page
+                                          fetches <line>.geojson for the detail of a chosen line or when zoomed in
+--all only rebuilds _all.geojson from the <line>.geojson files already there.
 --qlever asks QLever's OSM endpoint (SPARQL, about 1 s a line) instead of Overpass; the same relations and track ways
 (compared on 14 lines: same ways, at most 30 m apart; docs/notes/data-model.md, 2026-10-10). It knows no route_master
 tag, so a route_master's route column is empty in _osm.tsv.
@@ -16,10 +19,10 @@ Overpass is asked once per line, GAP s apart, with retries on 429/504 (it is a s
 still fails is reported and skipped; lines that already have a .geojson are not asked again unless --redo (so a run
 that was cut short can be started again and goes on where it stopped). _osm.tsv keeps the rows of lines not asked.
 Needs shapely.
-Usage: python3 tools/osm_lines.py [--count] [--only Q123] [--out docs/lines] [--qlever] [--api URL] [--gap 15] [--redo]
+Usage: python3 tools/osm_lines.py [--count] [--only Q123] [--out docs/lines] [--qlever] [--api URL] [--gap 15] [--redo] [--all]
 """
 import csv, json, os, sys, time, urllib.parse, urllib.request
-from shapely.geometry import LineString, MultiLineString, mapping
+from shapely.geometry import LineString, MultiLineString, mapping, shape
 from shapely.ops import linemerge
 from shapely import wkt
 
@@ -33,6 +36,7 @@ API = opt("--api", "https://overpass-api.de/api/interpreter")    # mirror when b
 UA = "railclass/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
 GAP = float(opt("--gap", "0" if QLEVER else "15"))
 TOL = 0.0003    # degrees, about 30 m: enough for a class page map, keeps a long line to some tens of KB
+TOL_ALL = 0.002    # degrees, about 200 m, for _all.geojson: 3.4 MB -> 1.1 MB (gzip 1.0 -> 0.24 MB), 2026-10-11
 TRACK = {"rail", "light_rail", "subway", "monorail", "narrow_gauge", "tram", "funicular", "construction"}
 
 def overpass(q):
@@ -93,8 +97,27 @@ def merge(lines):
     parts = [[(round(x, 5), round(y, 5)) for x, y in p.coords] for p in parts if p.length > 0]
     return MultiLineString(parts), len(lines)
 
+def write_all(rows):
+    allf = []
+    for q in sorted({r["line"] for r in rows if r["line"]}):
+        p = os.path.join(OUT, q + ".geojson")
+        if not os.path.exists(p): continue
+        f = json.load(open(p))["features"][0]
+        g = shape(f["geometry"]).simplify(TOL_ALL, preserve_topology=False)
+        parts = list(g.geoms) if hasattr(g, "geoms") else [g]
+        parts = [[[round(x, 3), round(y, 3)] for x, y in l.coords] for l in parts if l.length > 0]
+        parts = [l for l in parts if len(l) > 1]
+        if parts:
+            allf.append({"type": "Feature", "id": q, "geometry": {"type": "MultiLineString", "coordinates": parts},
+                         "properties": {"wikidata": q, "label": f["properties"].get("label", "")}})
+    p = os.path.join(OUT, "_all.geojson")
+    json.dump({"type": "FeatureCollection", "license": "ODbL-1.0", "attribution": "© OpenStreetMap contributors",
+               "features": allf}, open(p, "w"), ensure_ascii=False, separators=(",", ":"))
+    print(f"_all.geojson: {len(allf)} lines, {os.path.getsize(p) / 1e6:.1f} MB")
+
 def main():
     rows = [r for p in SRC if os.path.exists(p) for r in csv.DictReader(open(p), delimiter="\t")]
+    if "--all" in ARGS: return write_all(rows)
     want = [opt("--only", "")] if "--only" in ARGS else sorted({r["line"] for r in rows if r["line"]})
     os.makedirs(OUT, exist_ok=True)
     tsv = os.path.join(OUT, "_osm.tsv")
@@ -129,11 +152,7 @@ def main():
         for r in sorted(keep + found, key=lambda r: (r["line"], str(r["rel"]))):
             o.write("\t".join(str(r[c]).replace("\t", " ") for c in ("line", "rel", "type", "route", "name")) + "\n")
     if "--count" not in ARGS and "--only" not in ARGS:    # the map page draws them all from one file
-        allf = [json.load(open(os.path.join(OUT, q + ".geojson")))["features"][0] for q in sorted({r["line"] for r in rows if r["line"]})
-                if os.path.exists(os.path.join(OUT, q + ".geojson"))]
-        json.dump({"type": "FeatureCollection", "features": allf}, open(os.path.join(OUT, "_all.geojson"), "w"),
-                  ensure_ascii=False, separators=(",", ":"))
-        print(f"_all.geojson: {len(allf)} lines, {os.path.getsize(os.path.join(OUT, '_all.geojson')) / 1e6:.1f} MB")
+        write_all(rows)
     hit = {r["line"] for r in keep + found}
     print(f"lines: {len(want)} | with an OSM relation tagged wikidata=: {len(hit & set(want))} | shapes: "
           f"{sum(os.path.exists(os.path.join(OUT, q + '.geojson')) for q in want)} | failed this run: {' '.join(failed) or '-'}")

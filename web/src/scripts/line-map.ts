@@ -5,6 +5,8 @@
 // #lines-data is either an array of {id, label, old, src} (class page: one file per line) or {all, old: [ids]} (map/: one
 // lines/_all.geojson with every shape, features id = Q). Either way all shapes go into one source with two layers
 // (current: solid, old: dashed and fainter) and a highlight layer filtered by the chosen id.
+// map/'s _all.geojson is coarse (about 200 m, tools/osm_lines.py TOL_ALL) so the world map loads fast; the detailed
+// lines/<Q>.geojson replaces a line's shape when it is chosen, or when zoomed in (DETAIL_ZOOM) for the lines in view.
 type L = { id: string; label: string; old: boolean; src: string };
 type Box = [number, number, number, number];
 
@@ -22,6 +24,9 @@ const boxOf = (gj: any): Box | null => {    // gj: a FeatureCollection or one Fe
   for (const f of gj.features ?? [gj]) if (f.geometry) walk(f.geometry.coordinates);
   return b;
 };
+const DETAIL_ZOOM = 9;    // map/: from this zoom, the lines in view get their detailed shape
+const MAX_FETCH = 40;     // at most this many detailed files at one time (a city with many lines)
+const meets = (a: Box, b: Box) => a[0] <= b[2] && b[0] <= a[2] && a[1] <= b[3] && b[1] <= a[3];
 const join = (bs: Box[]): Box | null => bs.length ? bs.reduce((a, b) => [Math.min(a[0], b[0]), Math.min(a[1], b[1]), Math.max(a[2], b[2]), Math.max(a[3], b[3])]) : null;
 
 export function lineMap() {
@@ -73,6 +78,7 @@ export function lineMap() {
     const li = id ? document.querySelector<HTMLElement>(`.lines ul.scroll li[data-line="${id}"]`) : null;
     if (li) { const ul = li.parentElement!; if (li.offsetTop < ul.scrollTop || li.offsetTop + li.offsetHeight > ul.scrollTop + ul.clientHeight) ul.scrollTop = li.offsetTop - 8; }
     if (!ready) return;
+    if (id) detail([id]);
     if (!id && world) map.flyTo({ center: VAN, zoom: worldZoom(), duration: 600 });
     else fit(id && boxes.has(id) ? boxes.get(id)! : join([...boxes.values()]), id ? 13 : 12);
   };
@@ -109,6 +115,27 @@ export function lineMap() {
     draw(); (map.getSource("lines") as any)?.setData(shapes);
     ready = true;
     if (current || !world) choose(current);
+  });
+
+  // map/: swap in the detailed shape of a line (lines/<Q>.geojson next to _all.geojson), once per line
+  const detailed = new Set<string>();
+  const base = world ? String(data.all).replace(/_all\.geojson$/, "") : "";
+  const detail = (ids: string[]) => {
+    const want = ids.filter(id => !detailed.has(id)).slice(0, MAX_FETCH);
+    if (!world || !want.length) return;
+    for (const id of want) detailed.add(id);
+    Promise.all(want.map(id => get(`${base}${id}.geojson`).then(gj => [id, gj?.features?.[0]?.geometry] as const)))
+      .then(got => {
+        const g = new Map(got.filter(([, geom]) => geom));
+        if (!g.size) return;
+        shapes = { ...shapes, features: shapes.features.map((f: any) => g.has(f.properties.lid) ? { ...f, geometry: g.get(f.properties.lid) } : f) };
+        (map.getSource("lines") as any)?.setData(shapes);
+      });
+  };
+  if (world) map.on("moveend", () => {
+    if (!ready || map.getZoom() < DETAIL_ZOOM) return;
+    const b = map.getBounds(); const v: Box = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
+    detail([...boxes].filter(([id, bx]) => meets(bx, v) && (!only3d || has3d.includes(id))).map(([id]) => id));
   });
 
   const restyle = () => (proj = map.getProjection()?.type ?? proj, map.setStyle(STYLE[dark() ? "dark" : "light"], { diff: false }));
