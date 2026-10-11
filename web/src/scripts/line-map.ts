@@ -1,5 +1,5 @@
 // The map of a class page's lines (ClassPage.astro): the OSM shapes cut out by tools/osm_lines.py (docs/lines/<Q>.geojson,
-// ODbL) over OpenFreeMap's vector tiles, drawn by MapLibre GL JS as a globe. MapLibre is loaded from the CDN in the page
+// ODbL) over OpenFreeMap's vector tiles, drawn by MapLibre GL JS (map/: flat, centred on Vancouver; a class page: a globe). MapLibre is loaded from the CDN in the page
 // head, only on pages that have a mapped line. The base map follows the site's light/dark setting (the header button
 // sets <html data-theme>, otherwise the OS). Choosing a line in the list zooms to it and highlights it; "All lines" goes back.
 // #lines-data is either an array of {id, label, old, src} (class page: one file per line) or {all, old: [ids]} (map/: one
@@ -33,23 +33,34 @@ export function lineMap() {
   const lines: L[] | null = Array.isArray(data) ? data : null;
   const oldIds = new Set<string>(lines ? lines.filter(l => l.old).map(l => l.id) : data.old ?? []);
   const accent = getComputedStyle(box).getPropertyValue("--accent").trim() || "#c0392b";
-  const map = new ml.Map({ container: box, style: STYLE[dark() ? "dark" : "light"], center: [0, 30], zoom: 1,
-    scrollZoom: false, attributionControl: { compact: true } });
+  // map/ (one combined file) opens on the flat world centred on Vancouver, where every line is in view at once;
+  // a class page keeps the globe and fits its lines. Only map/ zooms on the wheel: a class page is a long page to scroll past it
+  const world = !lines;
+  const VAN: [number, number] = [-123.12, 49.28];
+  const worldZoom = () => Math.max(0, Math.log2(box.clientWidth / 512));    // the whole width of the world
+  let proj = world ? "mercator" : "globe";
+  const map = new ml.Map({ container: box, style: STYLE[dark() ? "dark" : "light"], center: world ? VAN : [0, 30], zoom: world ? worldZoom() : 1,
+    scrollZoom: world, attributionControl: { compact: true } });
   map.addControl(new ml.NavigationControl({ showCompass: false }));
+  if (world) map.addControl(new ml.GlobeControl());
 
   let shapes: any = { type: "FeatureCollection", features: [] };    // every shape, kept to put back after a style change
   const boxes = new Map<string, Box>();
   const labels = new Map<string, string>();
   let current: string | null = null;
+  let ready = false;
+  const has3d: string[] = lines ? [] : data.has3d ?? [];
+  let only3d = false;    // map/: only the lines a class with a 3D model runs on
+  const keep = (f: any[]) => only3d ? ["all", f, ["in", ["get", "lid"], ["literal", has3d]]] : f;    // the shapes are in; a line chosen before that is shown once they are
   const hl = (id: string | null) => ["==", ["get", "lid"], id ?? ""];
   const fade = (id: string | null) => ({ "lines-cur": id ? 0.25 : 0.9, "lines-old": id ? 0.15 : 0.45 });    // the others step back while one is chosen
   const draw = () => {
-    map.setProjection({ type: "globe" });
+    map.setProjection({ type: proj });
     if (map.getSource("lines")) return;
     map.addSource("lines", { type: "geojson", data: shapes });
     const layout = { "line-cap": "round", "line-join": "round" };
-    map.addLayer({ id: "lines-cur", type: "line", source: "lines", layout, filter: ["!=", ["get", "old"], 1], paint: { "line-color": accent, "line-width": 4, "line-opacity": fade(current)["lines-cur"] } });
-    map.addLayer({ id: "lines-old", type: "line", source: "lines", layout, filter: ["==", ["get", "old"], 1], paint: { "line-color": accent, "line-width": 4, "line-opacity": fade(current)["lines-old"], "line-dasharray": [1.5, 1.5] } });
+    map.addLayer({ id: "lines-cur", type: "line", source: "lines", layout, filter: keep(["!=", ["get", "old"], 1]), paint: { "line-color": accent, "line-width": 4, "line-opacity": fade(current)["lines-cur"] } });
+    map.addLayer({ id: "lines-old", type: "line", source: "lines", layout, filter: keep(["==", ["get", "old"], 1]), paint: { "line-color": accent, "line-width": 4, "line-opacity": fade(current)["lines-old"], "line-dasharray": [1.5, 1.5] } });
     map.addLayer({ id: "lines-hl", type: "line", source: "lines", layout, filter: hl(current), paint: { "line-color": accent, "line-width": 6, "line-opacity": 1 } });
   };
   const fit = (b: Box | null, maxZoom: number) => { if (b) map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: 24, maxZoom, duration: 600 }); };
@@ -61,7 +72,9 @@ export function lineMap() {
     // A list scrolled on its own (map/, positioned so offsetTop counts from it): bring the chosen line into view, without moving the page
     const li = id ? document.querySelector<HTMLElement>(`.lines ul.scroll li[data-line="${id}"]`) : null;
     if (li) { const ul = li.parentElement!; if (li.offsetTop < ul.scrollTop || li.offsetTop + li.offsetHeight > ul.scrollTop + ul.clientHeight) ul.scrollTop = li.offsetTop - 8; }
-    fit(id && boxes.has(id) ? boxes.get(id)! : join([...boxes.values()]), id ? 13 : 12);
+    if (!ready) return;
+    if (!id && world) map.flyTo({ center: VAN, zoom: worldZoom(), duration: 600 });
+    else fit(id && boxes.has(id) ? boxes.get(id)! : join([...boxes.values()]), id ? 13 : 12);
   };
 
   // Hovering a line shows its name; clicking it chooses it
@@ -92,13 +105,24 @@ export function lineMap() {
       boxes.set(lid, a ? [Math.min(a[0], b[0]), Math.min(a[1], b[1]), Math.max(a[2], b[2]), Math.max(a[3], b[3])] : b);
     }
     shapes = { type: "FeatureCollection", features: fs };
-  }).then(() => loaded).then(() => { draw(); (map.getSource("lines") as any)?.setData(shapes); fit(join([...boxes.values()]), 12); });
+  }).then(() => loaded).then(() => {
+    draw(); (map.getSource("lines") as any)?.setData(shapes);
+    ready = true;
+    if (current || !world) choose(current);
+  });
 
-  const restyle = () => map.setStyle(STYLE[dark() ? "dark" : "light"], { diff: false });
+  const restyle = () => (proj = map.getProjection()?.type ?? proj, map.setStyle(STYLE[dark() ? "dark" : "light"], { diff: false }));
   new MutationObserver(restyle).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", restyle);
 
   for (const b of document.querySelectorAll<HTMLElement>(".lines button[data-line]"))
     b.addEventListener("click", () => choose(b.hasAttribute("aria-current") ? null : b.dataset.line!));
   document.querySelector(".lines .all-lines")?.addEventListener("click", () => choose(null));
+  document.getElementById("only3d")?.addEventListener("change", e => {
+    only3d = (e.target as HTMLInputElement).checked;
+    document.querySelector(".lines ul.scroll")?.classList.toggle("f3d", only3d);
+    if (map.getLayer("lines-cur")) map.setFilter("lines-cur", keep(["!=", ["get", "old"], 1]));
+    if (map.getLayer("lines-old")) map.setFilter("lines-old", keep(["==", ["get", "old"], 1]));
+    if (only3d && current && !has3d.includes(current)) choose(null);
+  });
 }

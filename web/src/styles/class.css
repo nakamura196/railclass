@@ -133,7 +133,11 @@
 .mappage .lead { color: var(--muted); max-width: 60em; }
 .mappage .lines { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 16px; align-items: start; }
 .mappage .lines #line-map { height: min(70vh, 640px); }
-.mappage .lines .side .all-lines { margin: 0 0 8px; }
+.mappage .lines .side .tools { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 0 0 8px; }
+.mappage .lines .side .all-lines { margin: 0; }
+.mappage .lines .only3d { font-size: .8rem; display: inline-flex; align-items: center; gap: 4px; cursor: pointer; }
+.mappage .lines ul.f3d li:not([data-has3d]) { display: none; }
+.mappage .lines .b3d { margin-left: 3px; padding: 0 4px; border-radius: 3px; font-size: .68rem; background: var(--accent); color: #fff; vertical-align: 1px; }
 .mappage .lines ul.scroll { position: relative; margin: 0; max-height: calc(min(70vh, 640px) - 10px); overflow-y: auto; }
 .mappage .lines li .on { flex-basis: 100%; font-size: .78rem; color: var(--muted); padding-left: 26px; }
 .mappage .lines li .on a { color: var(--fg); }
