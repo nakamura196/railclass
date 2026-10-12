@@ -95,6 +95,7 @@ CLASSES = {
     # runs on (Q100145062, Cusco - Machu Picchu) is linked in tools/class_lines.tsv.
     "tb-vistadome": (None, None, {"en": "PeruRail Vistadome railcar (Macosa/MAN)", "ja": "ペルーレイルのビスタドーム気動車（Macosa/MAN）"}),
     "Q10871152": ("Q10871152", None, None),                    # China Railway DF8B (the Kenyan SGR export version has no item of its own)
+    "Q26158722": ("Q26158722", None, None),                    # Intercity Nieuwe Generatie (NS ICNG, Alstom Coradia Stream)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -126,7 +127,8 @@ for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
 # Japanese labels for Wikidata classes that have none (hand-entered; Wikidata's own labels win when they exist)
 LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q8078904": "ÖBB 4011形",
             "Q140611223": "Amtrak Airo", "Q137921671": "New Flyer XD60",
-            "Q289090": "トランスラピッド 08", "Q18331751": "ED250 ペンドリーノ"}
+            "Q289090": "トランスラピッド 08", "Q18331751": "ED250 ペンドリーノ",
+            "Q26158722": "ICNG（新世代インターシティ）"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -155,6 +157,7 @@ LIVERIES = {
     "kiwirail-ak-flames": ({"en": "KiwiRail Great Journeys AK carriage livery (silver with a grey line and yellow, orange and red flames)", "ja": "キウイレイルの AK 形客車の塗装（銀に灰色の線と黄・橙・赤の炎の帯）"}, "Q956508"),
     "perurail-vistadome": ({"en": "PeruRail livery (blue with yellow stripes, silver roof; seen in photos up to 2023)", "ja": "ペルーレイルの塗装（青に黄の線、銀の屋根。2023年の写真まで確認）"}, "Q1407952"),
     "kr-sgr-df8b": ({"en": "Kenya Railways SGR livery (red cabs and roof, white body, orange and yellow lines, Kenyan flag)", "ja": "ケニア鉄道 SGR の塗装（赤い運転室と屋根、白い車体、オレンジと黄色の線、ケニアの国旗）"}, "Q1663639"),
+    "ns-icng": ({"en": "NS livery (yellow and blue, dark grey round the cab)", "ja": "オランダ鉄道の塗装（黄と青、運転室のまわりは濃い灰）"}, "Q23076"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -190,6 +193,7 @@ MODELS = {
     "tranzalpine": ("Q7015181", "kiwirail-ak-flames", None),
     "vistadome": ("tb-vistadome", "perurail-vistadome", None),
     "madaraka": ("Q10871152", "kr-sgr-df8b", None),
+    "icng": ("Q26158722", "ns-icng", None),
 }
 
 

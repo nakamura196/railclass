@@ -114531,28 +114531,6 @@ cls:Q26156377 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q31 .
 
-cls:Q26158722 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Intercity Nieuwe Generatie"@en ;
-    skos:exactMatch wd:Q26158722 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "Intercity Nieuwe Generatie"@en ;
-    prov:wasDerivedFrom wd:Q26158722 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q23076 ;
-    wdt:P17 wd:Q55 ;
-    wdt:P176 wd:Q309084 ;
-    wdt:P2052 200.0 ;
-    wdt:P279 wd:Q3959904,
-        wd:Q42062659 ;
-    wdt:P729 "2023"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/J40%20562%20Bf%20Blankenburg%20Nord%2C%20NS%203114.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q26158722#line1> ;
-    tb:operatingCountry wd:Q31,
-        wd:Q55 ;
-    tb:usedOn wd:Q130477138 .
-
 cls:Q26161554 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "ZSSK Class 757"@en ;
@@ -249257,6 +249235,31 @@ cls:Q246841 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q26158722 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Intercity Nieuwe Generatie"@en,
+        "ICNG（新世代インターシティ）"@ja ;
+    skos:exactMatch wd:Q26158722 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Intercity Nieuwe Generatie"@en,
+        "ICNG（新世代インターシティ）"@ja ;
+    prov:wasDerivedFrom wd:Q26158722 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q23076 ;
+    wdt:P17 wd:Q55 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P2052 200.0 ;
+    wdt:P279 wd:Q3959904,
+        wd:Q42062659 ;
+    wdt:P729 "2023"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/J40%20562%20Bf%20Blankenburg%20Nord%2C%20NS%203114.jpg> ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q26158722#line1> ;
+    tb:operatingCountry wd:Q31,
+        wd:Q55 ;
+    tb:usedOn wd:Q130477138 ;
+    schema:subjectOf mdl:icng .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q26158722#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q130477138#P3438> ;
     skos:note "wikidata"@en ;
@@ -263092,6 +263095,85 @@ mdl:icet_td a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/icet_td#color5> ;
     tb:liveryOf wd:Q9322 .
 
+mdl:icng a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icng#livery> ;
+    schema:about cls:Q26158722 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icng.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "オランダの都市間電車。2023年から走る黄と青の新型インターシティ。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ICNG（オランダ鉄道）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icng/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icng.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#icng> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icng#color1> a tb:ColorSample ;
+    rdfs:label "nsyellow" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.6798 ;
+    schema:color "#FFBF1F" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icng#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1241 ;
+    schema:color "#8A939C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icng#color3> a tb:ColorSample ;
+    rdfs:label "nsblue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0951 ;
+    schema:color "#08368A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icng#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0461 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icng#color5> a tb:ColorSample ;
+    rdfs:label "cabdark" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0277 ;
+    schema:color "#3A3F47" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icng#color6> a tb:ColorSample ;
+    rdfs:label "under" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0192 ;
+    schema:color "#33302E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icng#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0067 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/icng#livery> a tb:Livery ;
+    rdfs:label "NS livery (yellow and blue, dark grey round the cab)"@en,
+        "オランダ鉄道の塗装（黄と青、運転室のまわりは濃い灰）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/icng/ns_icng.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q39338 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/icng#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icng#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icng#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icng#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icng#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icng#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/icng#color7> ;
+    tb:liveryOf wd:Q23076 .
+
 mdl:madaraka a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/madaraka#livery> ;
@@ -271907,9 +271989,6 @@ wd:Q39052868 rdfs:label "West Midlands Trains"@en,
 wd:Q392909 rdfs:label "Siemens Velaro"@en,
         "ヴェラロ"@ja .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q3963761 rdfs:label "Società Trazione Elettrica Lombarda"@en .
 
 wd:Q4207854 rdfs:label "Kazanskoye line (Moscow Railway)"@en .
@@ -272292,6 +272371,9 @@ wd:Q3552655 rdfs:label "Kim Chong-tae Electric Locomotive Works"@en,
 wd:Q3660349 rdfs:label "Carminati & Toselli"@en .
 
 wd:Q3752590 rdfs:label "Freccia della Versilia"@en .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q459508 rdfs:label "Salzburg S-Bahn"@en .
 
@@ -273562,9 +273644,6 @@ wd:Q13634023 rdfs:label "Società per le Strade Ferrate del Mediterraneo"@en,
 wd:Q184 rdfs:label "Belarus"@en,
         "ベラルーシ"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q26233074 rdfs:label "4-4-2T"@en .
 
 wd:Q573094 rdfs:label "Schichau-Werke"@en,
@@ -273585,6 +273664,9 @@ wd:Q1130918 rdfs:label "Konstal"@en,
         "アルストム・コンスタル"@ja .
 
 wd:Q13551978 rdfs:label "Walkers Limited"@en .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q25997539 rdfs:label "2-6-4T"@en .
 
@@ -273682,9 +273764,6 @@ wd:Q525359 rdfs:label "Société Nationale des Chemins de Fer Luxembourgeois"@en
 
 wd:Q6842345 rdfs:label "Midland Great Western Railway"@en .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1301901 rdfs:label "Colony of Natal"@en,
         "ナタール植民地"@ja .
 
@@ -273728,6 +273807,9 @@ wd:Q378181 rdfs:label "Chemins de fer du Midi"@en,
 
 wd:Q7885459 rdfs:label "Union Carriage & Wagon"@en,
         "ユニオン・キャリッジ・アンド・ワゴン"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q3077673 rdfs:label "0-4-4T"@en,
         "車輪配置 0-4-4T"@ja .
@@ -274360,9 +274442,6 @@ wd:Q2036496 rdfs:label "2-2-2"@en,
 wd:Q3959904 rdfs:label "multiple unit"@en,
         "動力分散方式の列車編成"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q52912 rdfs:label "Statens Järnvägar"@en .
 
 wd:Q1399767 rdfs:label "Sächsische Maschinenfabrik"@en,
@@ -274375,6 +274454,9 @@ wd:Q1092174 rdfs:label "Neilson and Company"@en,
         "ニールソン"@ja .
 
 wd:Q26208746 rdfs:label "0-6-2T"@en .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q336811 rdfs:label "ČKD社"@ja .
 
@@ -274457,10 +274539,10 @@ wd:Q656940 rdfs:label "0-8-0"@en .
 wd:Q29041 rdfs:label "Hanomag"@en,
         "ハノマーグ"@ja .
 
+wd:Q462362 rdfs:label "Wiener Neustädter Lokomotivfabrik"@en .
+
 wd:Q23076 rdfs:label "Nederlandse Spoorwegen"@en,
         "オランダ鉄道"@ja .
-
-wd:Q462362 rdfs:label "Wiener Neustädter Lokomotivfabrik"@en .
 
 wd:Q21855034 rdfs:label "600 V DC railway electrification"@en,
         "直流600V鉄道電化"@ja .

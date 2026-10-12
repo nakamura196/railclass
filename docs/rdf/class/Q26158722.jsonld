@@ -14,13 +14,6 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q130477138",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Eurocity Direct"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q26158722",
       "@type": [
         "VehicleClass",
@@ -29,7 +22,7 @@
       "foaf:depiction": {
         "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/J40%20562%20Bf%20Blankenburg%20Nord%2C%20NS%203114.jpg"
       },
-      "has3DModel": false,
+      "has3DModel": true,
       "lineUse": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q26158722#line1"
       },
@@ -44,9 +37,18 @@
       "prov:wasDerivedFrom": {
         "@id": "wd:Q26158722"
       },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Intercity Nieuwe Generatie"
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Intercity Nieuwe Generatie"
+        },
+        {
+          "@language": "ja",
+          "@value": "ICNG（新世代インターシティ）"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icng"
       },
       "skos:exactMatch": {
         "@id": "wd:Q26158722"
@@ -54,10 +56,16 @@
       "skos:inScheme": {
         "@id": "https://nakamura196.github.io/train-bodies/rdf/"
       },
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Intercity Nieuwe Generatie"
-      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Intercity Nieuwe Generatie"
+        },
+        {
+          "@language": "ja",
+          "@value": "ICNG（新世代インターシティ）"
+        }
+      ],
       "usedOn": {
         "@id": "wd:Q130477138"
       },
@@ -79,15 +87,22 @@
       },
       "wdt:P279": [
         {
-          "@id": "wd:Q42062659"
+          "@id": "wd:Q3959904"
         },
         {
-          "@id": "wd:Q3959904"
+          "@id": "wd:Q42062659"
         }
       ],
       "wdt:P729": {
         "@type": "xsd:gYear",
         "@value": "2023"
+      }
+    },
+    {
+      "@id": "wd:Q130477138",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Eurocity Direct"
       }
     },
     {
