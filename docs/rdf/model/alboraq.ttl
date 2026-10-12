@@ -1,0 +1,111 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:alboraq a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#livery> ;
+    schema:about cls:Q727577 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/alboraq.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "モロッコの高速列車（TGV と同系の Euroduplex）。銀地に赤と緑の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "アル・ボラク"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/alboraq/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/alboraq.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#alboraq> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color1> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7859 ;
+    schema:color "#C2C5C9" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color10> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0070 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color2> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0463 ;
+    schema:color "#3A3E44" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color3> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0426 ;
+    schema:color "#C6232D" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color4> a tb:ColorSample ;
+    rdfs:label "panel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0346 ;
+    schema:color "#8C867C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color5> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0229 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color6> a tb:ColorSample ;
+    rdfs:label "louvre" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0155 ;
+    schema:color "#22252A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color7> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0150 ;
+    schema:color "#1A844C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color8> a tb:ColorSample ;
+    rdfs:label "slat" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0138 ;
+    schema:color "#7A7E84" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color9> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0122 ;
+    schema:color "#2C3642" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#livery> a tb:Livery ;
+    rdfs:label "ONCF Al Boraq livery (silver with Moroccan red and green)"@en,
+        "ONCF のアル・ボラクの塗装（銀地に、モロッコの赤と緑）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/alboraq/oncf_alboraq.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3133,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color9> ;
+    tb:liveryOf wd:Q1815809 .
+

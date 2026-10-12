@@ -14,20 +14,6 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q97172588",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Ouigo España"
-      }
-    },
-    {
-      "@id": "wd:Q129337",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "TGV"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q727577#line1",
       "@type": "LineUse",
       "dcterms:source": {
@@ -44,20 +30,11 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q727577#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q97172588#P3438"
-      },
-      "line": {
-        "@id": "wd:Q97172588"
-      },
-      "skos:note": {
+      "@id": "wd:Q129337",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
+        "@value": "TGV"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q727577",
@@ -68,7 +45,7 @@
       "foaf:depiction": {
         "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Duplex%20in%20Karlsruhe%20III.JPG"
       },
-      "has3DModel": false,
+      "has3DModel": true,
       "lineUse": [
         {
           "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q727577#line1"
@@ -98,6 +75,9 @@
           "@value": "フランス国鉄TGV 2N2"
         }
       ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/alboraq"
+      },
       "skos:exactMatch": {
         "@id": "wd:Q727577"
       },
@@ -127,13 +107,13 @@
       },
       "wdt:P137": [
         {
-          "@id": "wd:Q97172588"
-        },
-        {
           "@id": "wd:Q13646"
         },
         {
           "@id": "wd:Q93090957"
+        },
+        {
+          "@id": "wd:Q97172588"
         }
       ],
       "wdt:P17": {
@@ -155,6 +135,9 @@
       ],
       "wdt:P930": [
         {
+          "@id": "wd:Q1415234"
+        },
+        {
           "@id": "wd:Q21251675"
         },
         {
@@ -162,11 +145,31 @@
         },
         {
           "@id": "wd:Q106530439"
-        },
-        {
-          "@id": "wd:Q1415234"
         }
       ]
+    },
+    {
+      "@id": "wd:Q97172588",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ouigo España"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q727577#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q97172588#P3438"
+      },
+      "line": {
+        "@id": "wd:Q97172588"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

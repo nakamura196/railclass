@@ -205534,37 +205534,6 @@ cls:Q7274949 a skos:Concept,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/R9%201802%20V%20train.JPG> ;
     tb:has3DModel false .
 
-cls:Q727577 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "SNCF TGV 2N2"@en,
-        "フランス国鉄TGV 2N2"@ja ;
-    skos:exactMatch wd:Q727577 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "SNCF TGV 2N2"@en,
-        "フランス国鉄TGV 2N2"@ja ;
-    prov:wasDerivedFrom wd:Q727577 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q13646,
-        wd:Q93090957,
-        wd:Q97172588 ;
-    wdt:P17 wd:Q142 ;
-    wdt:P176 wd:Q309084 ;
-    wdt:P279 wd:Q1917599,
-        wd:Q483373,
-        wd:Q99965194 ;
-    wdt:P930 wd:Q106530439,
-        wd:Q1415234,
-        wd:Q21251675,
-        wd:Q21253457 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Duplex%20in%20Karlsruhe%20III.JPG> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q727577#line1>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q727577#line2> ;
-    tb:operatingCountry wd:Q142,
-        wd:Q29 ;
-    tb:usedOn wd:Q129337,
-        wd:Q97172588 .
-
 cls:Q7276360 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Renfe Class 319 (early versions)"@en ;
@@ -258297,6 +258266,38 @@ cls:Q7274448 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q727577 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SNCF TGV 2N2"@en,
+        "フランス国鉄TGV 2N2"@ja ;
+    skos:exactMatch wd:Q727577 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "SNCF TGV 2N2"@en,
+        "フランス国鉄TGV 2N2"@ja ;
+    prov:wasDerivedFrom wd:Q727577 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q13646,
+        wd:Q93090957,
+        wd:Q97172588 ;
+    wdt:P17 wd:Q142 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q1917599,
+        wd:Q483373,
+        wd:Q99965194 ;
+    wdt:P930 wd:Q106530439,
+        wd:Q1415234,
+        wd:Q21251675,
+        wd:Q21253457 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Duplex%20in%20Karlsruhe%20III.JPG> ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q727577#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q727577#line2> ;
+    tb:operatingCountry wd:Q142,
+        wd:Q29 ;
+    tb:usedOn wd:Q129337,
+        wd:Q97172588 ;
+    schema:subjectOf mdl:alboraq .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q727577#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q129337#P3438> ;
     skos:note "wikidata"@en ;
@@ -262260,6 +262261,107 @@ mdl:airo a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/airo#color8>,
         <https://nakamura196.github.io/train-bodies/rdf/model/airo#color9> ;
     tb:liveryOf wd:Q697217 .
+
+mdl:alboraq a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#livery> ;
+    schema:about cls:Q727577 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/alboraq.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "モロッコの高速列車（TGV と同系の Euroduplex）。銀地に赤と緑の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "アル・ボラク"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/alboraq/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/alboraq.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#alboraq> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color1> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7859 ;
+    schema:color "#C2C5C9" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color10> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0070 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color2> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0463 ;
+    schema:color "#3A3E44" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color3> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0426 ;
+    schema:color "#C6232D" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color4> a tb:ColorSample ;
+    rdfs:label "panel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0346 ;
+    schema:color "#8C867C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color5> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0229 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color6> a tb:ColorSample ;
+    rdfs:label "louvre" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0155 ;
+    schema:color "#22252A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color7> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0150 ;
+    schema:color "#1A844C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color8> a tb:ColorSample ;
+    rdfs:label "slat" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0138 ;
+    schema:color "#7A7E84" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color9> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0122 ;
+    schema:color "#2C3642" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/alboraq#livery> a tb:Livery ;
+    rdfs:label "ONCF Al Boraq livery (silver with Moroccan red and green)"@en,
+        "ONCF のアル・ボラクの塗装（銀地に、モロッコの赤と緑）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/alboraq/oncf_alboraq.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3133,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/alboraq#color9> ;
+    tb:liveryOf wd:Q1815809 .
 
 mdl:allegra a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -274641,9 +274743,6 @@ wd:Q30116186 rdfs:label "Broadstone Works"@en .
 
 wd:Q30398528 rdfs:label "Bo′2′Bo′"@en .
 
-wd:Q3133 rdfs:label "green"@en,
-        "緑"@ja .
-
 wd:Q318679 rdfs:label "Greater Anglia"@en,
         "グレーター・アングリア"@ja .
 
@@ -274889,6 +274988,9 @@ wd:Q310293 rdfs:label "Saar Protectorate"@en,
         "ザール"@ja .
 
 wd:Q3107361 rdfs:label "Ganz-MÁVAG"@en .
+
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
 
 wd:Q3136281 rdfs:label "H.K. Porter, Inc."@en,
         "ポーター"@ja .
@@ -275310,9 +275412,6 @@ wd:Q164914 rdfs:label "Lietuvos geležinkeliai, AB"@en,
 wd:Q1808041 rdfs:label "GVB"@en,
         "アムステルダム市営交通会社"@ja .
 
-wd:Q1815809 rdfs:label "ONCF"@en,
-        "ONCF"@ja .
-
 wd:Q19601775 rdfs:label "CZ LOKO"@en .
 
 wd:Q2146117 rdfs:label "Rete Adriatica"@en .
@@ -275369,6 +275468,9 @@ wd:Q1635330 rdfs:label "Sorefame"@en .
 
 wd:Q170361 rdfs:label "Territory of the Saar Basin"@en,
         "ザール"@ja .
+
+wd:Q1815809 rdfs:label "ONCF"@en,
+        "ONCF"@ja .
 
 wd:Q181811 rdfs:label "Great Northern Railway"@en,
         "グレート・ノーザン鉄道"@ja .
@@ -275960,9 +276062,6 @@ wd:Q292745 rdfs:label "AG Vulcan Stettin"@en,
 
 wd:Q30114569 rdfs:label "Inchicore Works"@en .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q5532044 rdfs:label "General Motors Diesel"@en,
         "ゼネラル・モーターズ・ディーゼル"@ja .
 
@@ -275980,6 +276079,9 @@ wd:Q665793 rdfs:label "Maatschappij tot Exploitatie van Staatsspoorwegen"@en .
 wd:Q27943246 rdfs:label "0-4-0ST"@en .
 
 wd:Q30106213 rdfs:label "1445 mm track gauge"@en .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q3488304 rdfs:label "Société française de constructions mécaniques"@en .
 
@@ -276250,9 +276352,6 @@ wd:Q96 rdfs:label "Mexico"@en,
 wd:Q168082 rdfs:label "Hungarian State Railways"@en,
         "ハンガリー国鉄"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q27306 rdfs:label "Kingdom of Prussia"@en,
         "プロイセン王国"@ja .
 
@@ -276278,6 +276377,9 @@ wd:Q3401256 rdfs:label "2-6-2"@en,
 
 wd:Q461289 rdfs:label "Grand Duchy of Baden State Railway"@en,
         "バーデン大公国邦有鉄道"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q2449525 rdfs:label "Transnet Freight Rail"@en,
         "スポールネット"@ja .
@@ -276774,9 +276876,6 @@ wd:Q16 rdfs:label "Canada"@en,
 wd:Q33 rdfs:label "Finland"@en,
         "フィンランド"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q249591 rdfs:label "Polish State Railways"@en,
         "ポーランド国鉄"@ja .
 
@@ -276787,6 +276886,9 @@ wd:Q666703 rdfs:label "Stadler Rail"@en,
 
 wd:Q83822 rdfs:label "Austrian Federal Railways"@en,
         "オーストリア連邦鉄道"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q26234727 rdfs:label "0-4-0T"@en .
 
