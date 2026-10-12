@@ -241051,6 +241051,8 @@ wd:Q17044479 rdfs:label "Ministry of Railways"@en,
 
 wd:Q17051905 rdfs:label "J & A Brown"@en .
 
+wd:Q17077649 rdfs:label "National Capital Region Transport Corporation"@en .
+
 wd:Q17093974 rdfs:label "6-4-4-6"@en .
 
 wd:Q17102978 rdfs:label "boxcar"@en .
@@ -244975,6 +244977,19 @@ cls:Q117538222 a skos:Concept,
     tb:line wd:Q137599590 ;
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
+
+cls:Q119438293 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Namo Bharat"@en,
+        "ナモ・バーラト"@ja ;
+    skos:exactMatch wd:Q119438293 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Namo Bharat"@en,
+        "ナモ・バーラト"@ja ;
+    prov:wasDerivedFrom wd:Q119438293 ;
+    wdt:P17 wd:Q668 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:namobharat .
 
 cls:Q119775864 a skos:Concept,
         tb:VehicleClass ;
@@ -264917,6 +264932,85 @@ mdl:mk5 a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2> ;
     tb:liveryOf wd:Q1142140 .
 
+mdl:namobharat a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#livery> ;
+    schema:about cls:Q119438293 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/namobharat.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "デリーとメーラトを結ぶ地域高速鉄道（RRTS）の電車。2023年開業、ステンレスに赤い矢印の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ナモ・バーラト"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/namobharat/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/namobharat.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#namobharat> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.8331 ;
+    schema:color "#C4C8CC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color2> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0614 ;
+    schema:color "#8C939A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color3> a tb:ColorSample ;
+    rdfs:label "visor" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0247 ;
+    schema:color "#24292F" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color4> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0238 ;
+    schema:color "#D4232B" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color5> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0180 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color6> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0126 ;
+    schema:color "#3A3E44" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0066 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#livery> a tb:Livery ;
+    rdfs:label "NCRTC Namo Bharat livery (bare stainless with a red arrow on the cab)"@en,
+        "NCRTC のナモ・バーラトの塗装（ステンレスの地に、運転室の赤い矢印）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/namobharat/ncrtc_namobharat.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color7> ;
+    tb:liveryOf wd:Q17077649 .
+
 mdl:r211 a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/r211#livery> ;
@@ -275620,9 +275714,6 @@ wd:Q1544279 rdfs:label "Great Eastern Railway"@en,
 
 wd:Q26242916 rdfs:label "0-4-4-0T"@en .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q3487558 rdfs:label "Société Anonyme la Métallurgique"@en .
 
 wd:Q3517951 rdfs:label "0-10-0"@en,
@@ -275673,6 +275764,9 @@ wd:Q928 rdfs:label "Philippines"@en,
 
 wd:Q10399603 rdfs:label "battery electric locomotive"@en,
         "蓄電池機関車"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q378181 rdfs:label "Chemins de fer du Midi"@en,
         "ミディ鉄道"@ja .
@@ -275955,9 +276049,6 @@ wd:Q24730842 rdfs:label "Bo′Bo′+Bo′Bo′"@en .
 wd:Q6379763 rdfs:label "Kawasaki Railcar Manufacturing"@en,
         "川崎車両"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q249654 rdfs:label "Ministry of Railways"@en,
         "鉄道省"@ja .
 
@@ -275973,6 +276064,9 @@ wd:Q1038182 rdfs:label "Ministry of Railways of the People's Republic of China"@
 
 wd:Q129286 rdfs:label "British Raj"@en,
         "イギリス領インド帝国"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q5013176 rdfs:label "CRRC Dalian Co., Ltd."@en,
         "中国中車大連機車車輛"@ja .
@@ -276494,9 +276588,6 @@ wd:Q2994663 rdfs:label "2-8-0"@en,
 wd:Q713750 rdfs:label "West Germany"@en,
         "西ドイツ"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q17 rdfs:label "Japan"@en,
         "日本"@ja .
 
@@ -276505,6 +276596,9 @@ wd:Q629139 rdfs:label "London, Midland and Scottish Railway"@en,
 
 wd:Q4102249 rdfs:label "subway car"@en,
         "地下鉄車両"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q277030 rdfs:label "Imperial Royal Austrian State Railways"@en,
         "帝立王立オーストリア国鉄"@ja .

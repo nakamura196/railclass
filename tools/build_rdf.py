@@ -126,6 +126,7 @@ CLASSES = {
     "Q1814255": ("Q1814255", None, None),                     # London Underground 1973 Stock (Piccadilly line)
     "Q7274448": ("Q7274448", None, None),                     # R211 (New York City Subway, Kawasaki)
     "Q18619244": ("Q18619244", None, None),                    # KTM Class 93 (ETS, CRRC Zhuzhou)
+    "Q119438293": ("Q119438293", None, None),                  # Namo Bharat (NCRTC RRTS trainset; P31 is Q870 train)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -229,6 +230,7 @@ LIVERIES = {
     "lu-corporate": ({"en": "London Underground corporate livery (red cab end and doors, white sides, blue skirt)", "ja": "ロンドン地下鉄の塗装（赤い運転室の端と扉、白い側面、青い裾）"}, "Q682520"),
     "mta-r211": ({"en": "MTA R211 livery (blue face, stainless with a diagonal blue band)", "ja": "MTA の R211 の塗装（青い顔、ステンレスに斜めの青い帯）"}, "Q1146109"),
     "ktm-ets2": ({"en": "KTM ETS2 livery (yellow nose, silver with a red band)", "ja": "KTM の ETS2 の塗装（黄色の鼻、銀に赤い帯）"}, "Q1187590"),
+    "ncrtc-namobharat": ({"en": "NCRTC Namo Bharat livery (bare stainless with a red arrow on the cab)", "ja": "NCRTC のナモ・バーラトの塗装（ステンレスの地に、運転室の赤い矢印）"}, "Q17077649"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -285,6 +287,7 @@ MODELS = {
     "lu1973": ("Q1814255", "lu-corporate", None),
     "r211": ("Q7274448", "mta-r211", None),
     "ets": ("Q18619244", "ktm-ets2", None),
+    "namobharat": ("Q119438293", "ncrtc-namobharat", None),
 }
 
 

@@ -1,0 +1,89 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:namobharat a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#livery> ;
+    schema:about cls:Q119438293 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/namobharat.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "デリーとメーラトを結ぶ地域高速鉄道（RRTS）の電車。2023年開業、ステンレスに赤い矢印の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ナモ・バーラト"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/namobharat/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/namobharat.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#namobharat> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.8331 ;
+    schema:color "#C4C8CC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color2> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0614 ;
+    schema:color "#8C939A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color3> a tb:ColorSample ;
+    rdfs:label "visor" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0247 ;
+    schema:color "#24292F" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color4> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0238 ;
+    schema:color "#D4232B" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color5> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0180 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color6> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0126 ;
+    schema:color "#3A3E44" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0066 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/namobharat#livery> a tb:Livery ;
+    rdfs:label "NCRTC Namo Bharat livery (bare stainless with a red arrow on the cab)"@en,
+        "NCRTC のナモ・バーラトの塗装（ステンレスの地に、運転室の赤い矢印）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/namobharat/ncrtc_namobharat.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/namobharat#color7> ;
+    tb:liveryOf wd:Q17077649 .
+
