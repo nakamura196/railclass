@@ -5,9 +5,12 @@
 // #lines-data is either an array of {id, label, old, src} (class page: one file per line) or {all, old: [ids]} (map/: one
 // lines/_all.geojson with every shape, features id = Q). Either way all shapes go into one source with two layers
 // (current: solid, old: dashed and fainter) and a highlight layer filtered by the chosen id.
+// Each line is drawn in its own colour (official colour from Wikidata P465, else a fixed palette; web/src/lib/data.ts lineColor),
+// so that lines side by side (Vancouver's Expo and Millennium lines) can be told apart; a thin casing in the base map's
+// background colour keeps light colours (yellow) visible on the light map.
 // map/'s _all.geojson is coarse (about 200 m, tools/osm_lines.py TOL_ALL) so the world map loads fast; the detailed
 // lines/<Q>.geojson replaces a line's shape when it is chosen, or when zoomed in (DETAIL_ZOOM) for the lines in view.
-type L = { id: string; label: string; old: boolean; src: string };
+type L = { id: string; label: string; old: boolean; src: string; color: string };
 type Box = [number, number, number, number];
 
 const STYLE = { light: "https://tiles.openfreemap.org/styles/positron", dark: "https://tiles.openfreemap.org/styles/dark" };
@@ -38,6 +41,7 @@ export function lineMap() {
   const lines: L[] | null = Array.isArray(data) ? data : null;
   const oldIds = new Set<string>(lines ? lines.filter(l => l.old).map(l => l.id) : data.old ?? []);
   const accent = getComputedStyle(box).getPropertyValue("--accent").trim() || "#c0392b";
+  const colors: Record<string, string> = lines ? Object.fromEntries(lines.map(l => [l.id, l.color])) : data.colors ?? {};
   // map/ (one combined file) opens on the flat world centred on Vancouver, where every line is in view at once;
   // a class page keeps the globe and fits its lines. Only map/ zooms on the wheel: a class page is a long page to scroll past it
   const world = !lines;
@@ -58,20 +62,24 @@ export function lineMap() {
   let only3d = false;    // map/: only the lines a class with a 3D model runs on
   const keep = (f: any[]) => only3d ? ["all", f, ["in", ["get", "lid"], ["literal", has3d]]] : f;    // the shapes are in; a line chosen before that is shown once they are
   const hl = (id: string | null) => ["==", ["get", "lid"], id ?? ""];
-  const fade = (id: string | null) => ({ "lines-cur": id ? 0.25 : 0.9, "lines-old": id ? 0.15 : 0.45 });    // the others step back while one is chosen
+  const fade = (id: string | null) => ({ "lines-case": id ? 0.25 : 0.9, "lines-cur": id ? 0.25 : 0.95, "lines-old": id ? 0.15 : 0.6 });    // the others step back while one is chosen
   const draw = () => {
     map.setProjection({ type: proj });
     if (map.getSource("lines")) return;
     map.addSource("lines", { type: "geojson", data: shapes });
     const layout = { "line-cap": "round", "line-join": "round" };
-    map.addLayer({ id: "lines-cur", type: "line", source: "lines", layout, filter: keep(["!=", ["get", "old"], 1]), paint: { "line-color": accent, "line-width": 4, "line-opacity": fade(current)["lines-cur"] } });
-    map.addLayer({ id: "lines-old", type: "line", source: "lines", layout, filter: keep(["==", ["get", "old"], 1]), paint: { "line-color": accent, "line-width": 4, "line-opacity": fade(current)["lines-old"], "line-dasharray": [1.5, 1.5] } });
-    map.addLayer({ id: "lines-hl", type: "line", source: "lines", layout, filter: hl(current), paint: { "line-color": accent, "line-width": 6, "line-opacity": 1 } });
+    const color = ["coalesce", ["get", "color"], accent];
+    const casing = dark() ? "#111111" : "#ffffff";
+    map.addLayer({ id: "lines-case", type: "line", source: "lines", layout, filter: keep(["!=", ["get", "old"], 1]), paint: { "line-color": casing, "line-width": 6.5, "line-opacity": fade(current)["lines-case"] } });
+    map.addLayer({ id: "lines-cur", type: "line", source: "lines", layout, filter: keep(["!=", ["get", "old"], 1]), paint: { "line-color": color, "line-width": 4, "line-opacity": fade(current)["lines-cur"] } });
+    map.addLayer({ id: "lines-old", type: "line", source: "lines", layout, filter: keep(["==", ["get", "old"], 1]), paint: { "line-color": color, "line-width": 4, "line-opacity": fade(current)["lines-old"], "line-dasharray": [1.5, 1.5] } });
+    map.addLayer({ id: "lines-hl-case", type: "line", source: "lines", layout, filter: hl(current), paint: { "line-color": casing, "line-width": 10, "line-opacity": 1 } });
+    map.addLayer({ id: "lines-hl", type: "line", source: "lines", layout, filter: hl(current), paint: { "line-color": color, "line-width": 7, "line-opacity": 1 } });
   };
   const fit = (b: Box | null, maxZoom: number) => { if (b) map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: 24, maxZoom, duration: 600 }); };
   const choose = (id: string | null) => {
     current = id;
-    if (map.getLayer("lines-hl")) map.setFilter("lines-hl", hl(id));
+    for (const k of ["lines-hl-case", "lines-hl"]) if (map.getLayer(k)) map.setFilter(k, hl(id));
     for (const [k, v] of Object.entries(fade(id))) if (map.getLayer(k)) map.setPaintProperty(k, "line-opacity", v);
     for (const b of document.querySelectorAll<HTMLElement>(".lines button[data-line]")) b.toggleAttribute("aria-current", b.dataset.line === id);
     // A list scrolled on its own (map/, positioned so offsetTop counts from it): bring the chosen line into view, without moving the page
@@ -104,7 +112,7 @@ export function lineMap() {
   sources.then(fs => {
     for (const f of fs) {
       const lid = String(f.id ?? f.properties?.id ?? "");
-      f.properties = { ...f.properties, lid, old: oldIds.has(lid) ? 1 : 0 };
+      f.properties = { ...f.properties, lid, old: oldIds.has(lid) ? 1 : 0, color: colors[lid] ?? accent };
       if (!f.geometry) continue;
       const b = boxOf(f); if (!b) continue;
       const a = boxes.get(lid);
@@ -148,7 +156,7 @@ export function lineMap() {
   document.getElementById("only3d")?.addEventListener("change", e => {
     only3d = (e.target as HTMLInputElement).checked;
     document.querySelector(".lines ul.scroll")?.classList.toggle("f3d", only3d);
-    if (map.getLayer("lines-cur")) map.setFilter("lines-cur", keep(["!=", ["get", "old"], 1]));
+    for (const k of ["lines-case", "lines-cur"]) if (map.getLayer(k)) map.setFilter(k, keep(["!=", ["get", "old"], 1]));
     if (map.getLayer("lines-old")) map.setFilter("lines-old", keep(["==", ["get", "old"], 1]));
     if (only3d && current && !has3d.includes(current)) choose(null);
   });

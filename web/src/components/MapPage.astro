@@ -38,7 +38,7 @@ const names = Object.fromEntries(ids.map(c => [c, classPage(c, lang, n => String
       <ul class="scroll">
         {lines.map(l => (
           <li data-line={l.id} data-has3d={has3d(l) ? "" : undefined} class:list={{ old: !l.current }}>
-            {l.map ? <button type="button" data-line={l.id}><span class="sw" aria-hidden="true"></span>{l.label}</button>
+            {l.map ? <button type="button" data-line={l.id}><span class="sw" style={`--c: ${l.color}`} aria-hidden="true"></span>{l.label}</button>
                    : <span class="name"><span class="sw none" aria-hidden="true"></span>{l.label}</span>}
             <span class="meta">
               {!l.current && <span>{T.old}</span>}
@@ -52,7 +52,7 @@ const names = Object.fromEntries(ids.map(c => [c, classPage(c, lang, n => String
     </div>
   </section>
 </div>
-{mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify({ all: file("lines/_all.geojson"), old: lines.filter(l => !l.current).map(l => l.id), has3d: lines.filter(has3d).map(l => l.id) })} />}
+{mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify({ all: file("lines/_all.geojson"), old: lines.filter(l => !l.current).map(l => l.id), colors: Object.fromEntries(mapped.map(l => [l.id, l.color])), has3d: lines.filter(has3d).map(l => l.id) })} />}
 </Base>
 
 <script>

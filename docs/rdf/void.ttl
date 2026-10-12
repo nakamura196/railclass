@@ -1,0 +1,273 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://nakamura196.github.io/train-bodies/dataset#allJsonld> a dcat:Distribution ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:title "All classes and models (JSON-LD)"@en,
+        "全形式と 3D モデル（JSON-LD）"@ja ;
+    dcat:byteSize "18597193"^^xsd:nonNegativeInteger ;
+    dcat:downloadURL <https://nakamura196.github.io/railclass/rdf/all.jsonld> ;
+    dcat:mediaType "application/ld+json" .
+
+<https://nakamura196.github.io/train-bodies/dataset#allTtl> a dcat:Distribution ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:title "All classes and models (Turtle)"@en,
+        "全形式と 3D モデル（Turtle）"@ja ;
+    dcat:byteSize "9330873"^^xsd:nonNegativeInteger ;
+    dcat:downloadURL <https://nakamura196.github.io/railclass/rdf/all.ttl> ;
+    dcat:mediaType "text/turtle" .
+
+<https://nakamura196.github.io/train-bodies/dataset#eratv> a dcat:Distribution ;
+    dcterms:conformsTo <http://www.w3.org/ns/csvw> ;
+    dcterms:rights "Type IDs and names: source European Union Agency for Railways (ERATV); reproduction is authorised provided the source is acknowledged (https://www.era.europa.eu/content/disclaimer-and-copyright-notice). Wikidata identifiers: CC0."@en ;
+    dcterms:title "ERATV types matched to Wikidata classes (TSV + CSVW)"@en,
+        "ERATV の型式と Wikidata の形式の対応表（TSV と CSVW）"@ja ;
+    dcat:byteSize "66393"^^xsd:nonNegativeInteger ;
+    dcat:downloadURL <https://nakamura196.github.io/railclass/data/eratv-wikidata.tsv> ;
+    dcat:mediaType "text/tab-separated-values" .
+
+<https://nakamura196.github.io/train-bodies/dataset#iiif> a dcat:Distribution ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "IIIF Presentation 4.0 Collection of the 3D models"@en,
+        "3D モデルの IIIF Collection（Presentation 4.0）"@ja ;
+    dcat:byteSize "8103"^^xsd:nonNegativeInteger ;
+    dcat:downloadURL <https://nakamura196.github.io/railclass/iiif/collection.json> ;
+    dcat:mediaType "application/ld+json" .
+
+<https://nakamura196.github.io/train-bodies/dataset#lines> a dcat:Distribution ;
+    dcterms:license <https://opendatacommons.org/licenses/odbl/1-0/> ;
+    dcterms:rights "© OpenStreetMap contributors, ODbL. Only the line IDs (Wikidata items) are in the RDF."@en ;
+    dcterms:title "Line shapes from OpenStreetMap (GeoJSON, one file per line)"@en,
+        "路線の線（OpenStreetMap、GeoJSON、路線ごとのファイル）"@ja ;
+    dcat:byteSize "1111463"^^xsd:nonNegativeInteger ;
+    dcat:downloadURL <https://nakamura196.github.io/railclass/lines/_all.geojson> ;
+    dcat:mediaType "application/geo+json" .
+
+<https://nakamura196.github.io/train-bodies/dataset#links-commons> a void:Linkset ;
+    void:linkPredicate foaf:depiction ;
+    void:objectsTarget <http://commons.wikimedia.org/> ;
+    void:subjectsTarget <https://nakamura196.github.io/train-bodies/dataset> ;
+    void:triples 10402 .
+
+<https://nakamura196.github.io/train-bodies/dataset#links-wikidata> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://www.wikidata.org/> ;
+    void:subjectsTarget <https://nakamura196.github.io/train-bodies/dataset> ;
+    void:triples 14321 .
+
+<https://nakamura196.github.io/train-bodies/dataset#models> a dcat:Distribution ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "List of the 3D models (JSON)"@en,
+        "3D モデルの一覧（JSON）"@ja ;
+    dcat:byteSize "7454"^^xsd:nonNegativeInteger ;
+    dcat:downloadURL <https://nakamura196.github.io/railclass/data/models.json> ;
+    dcat:mediaType "application/json" .
+
+<https://nakamura196.github.io/train-bodies/dataset#vocab> a dcat:Distribution ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:title "Terms of our own (tb:)"@en,
+        "独自の語彙（tb:）"@ja ;
+    dcat:byteSize "5618"^^xsd:nonNegativeInteger ;
+    dcat:downloadURL <https://nakamura196.github.io/railclass/rdf/vocab.ttl> ;
+    dcat:mediaType "text/turtle" .
+
+<https://nakamura196.github.io/train-bodies/dataset> a void:Dataset,
+        dcat:Dataset ;
+    dcterms:creator _:N489e7e476b3c4db0afa5296ec4ab3a2d ;
+    dcterms:description "14,325 railway vehicle classes outside Japan, taken from Wikidata and linked to it (skos:exactMatch), with operator, manufacturer and other values as Wikidata IRIs, photos for 10,402 classes (Wikimedia Commons), the lines 923 classes run on, and 18 3D-printed vehicle bodies with their liveries. No SPARQL endpoint: every resource is a static file (Turtle and JSON-LD), and the whole dataset is in one dump file."@en,
+        "日本を除く世界の鉄道車両の形式 14,325 件。Wikidata から取り出し、skos:exactMatch で結んでいる。運行者・製造者などの値は Wikidata の IRI のまま持つ。写真 10,402 形式（Wikimedia Commons）、走る路線 923 形式、3D プリントで作った車体 18 件とその塗装を含む。SPARQL エンドポイントは無い。資源はすべて静的なファイル（Turtle と JSON-LD）で、全体は一括ファイル 1 つにまとめてある。"@ja ;
+    dcterms:isReferencedBy <https://github.com/nakamura196/railclass> ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:modified "2026-10-11"^^xsd:date ;
+    dcterms:publisher _:N489e7e476b3c4db0afa5296ec4ab3a2d ;
+    dcterms:rights "Class data CC0. 3D models (schema:3DModel and their files) CC BY 4.0, stated on each model with schema:license. Photos: the licence of each Wikimedia Commons file."@en ;
+    dcterms:source wd:Q2013 ;
+    dcterms:title "RailClass: railway vehicle classes of the world"@en,
+        "RailClass: 世界の鉄道車両の形式"@ja ;
+    void:classPartition [ void:class schema:QuantitativeValue ;
+            void:entities 54 ],
+        [ void:class schema:3DModel ;
+            void:entities 18 ],
+        [ void:class tb:Livery ;
+            void:entities 18 ],
+        [ void:class tb:LineUse ;
+            void:entities 2490 ],
+        [ void:class tb:VehicleClass ;
+            void:entities 14325 ],
+        [ void:class tb:ColorSample ;
+            void:entities 96 ],
+        [ void:class rdf:Property ;
+            void:entities 15 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 1 ],
+        [ void:class skos:Concept ;
+            void:entities 14325 ],
+        [ void:class rdfs:Class ;
+            void:entities 4 ] ;
+    void:dataDump <https://nakamura196.github.io/railclass/rdf/all.jsonld>,
+        <https://nakamura196.github.io/railclass/rdf/all.ttl> ;
+    void:distinctSubjects 16967 ;
+    void:entities 16967 ;
+    void:exampleResource cls:Q115612330,
+        cls:Q696668,
+        cls:tb-skytrain-mk2,
+        mdl:icet_411 ;
+    void:feature <http://www.w3.org/ns/formats/JSON-LD>,
+        <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 54 ;
+    void:propertyPartition [ void:property skos:exactMatch ;
+            void:triples 14321 ],
+        [ void:property tb:areaShare ;
+            void:triples 96 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P2978> ;
+            void:triples 7545 ],
+        [ void:property tb:has3DModel ;
+            void:triples 14325 ],
+        [ void:property tb:lineUse ;
+            void:triples 2490 ],
+        [ void:property tb:inferred ;
+            void:triples 16 ],
+        [ void:property dcterms:source ;
+            void:triples 2512 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P2052> ;
+            void:triples 3839 ],
+        [ void:property schema:subjectOf ;
+            void:triples 36 ],
+        [ void:property tb:useStatus ;
+            void:triples 2490 ],
+        [ void:property foaf:depiction ;
+            void:triples 10402 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P279> ;
+            void:triples 14090 ],
+        [ void:property tb:livery ;
+            void:triples 18 ],
+        [ void:property schema:license ;
+            void:triples 18 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 19 ],
+        [ void:property tb:usedUntil ;
+            void:triples 192 ],
+        [ void:property schema:description ;
+            void:triples 18 ],
+        [ void:property skos:prefLabel ;
+            void:triples 15851 ],
+        [ void:property skos:note ;
+            void:triples 2490 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P176> ;
+            void:triples 14876 ],
+        [ void:property tb:handEntered ;
+            void:triples 15 ],
+        [ void:property tb:galleryGroup ;
+            void:triples 18 ],
+        [ void:property schema:url ;
+            void:triples 18 ],
+        [ void:property skos:broader ;
+            void:triples 7 ],
+        [ void:property rdf:type ;
+            void:triples 31346 ],
+        [ void:property skos:broadMatch ;
+            void:triples 4 ],
+        [ void:property tb:colorSample ;
+            void:triples 96 ],
+        [ void:property schema:encodingFormat ;
+            void:triples 18 ],
+        [ void:property tb:sourceSection ;
+            void:triples 2490 ],
+        [ void:property schema:value ;
+            void:triples 54 ],
+        [ void:property schema:depth ;
+            void:triples 18 ],
+        [ void:property rdfs:label ;
+            void:triples 23885 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P930> ;
+            void:triples 1924 ],
+        [ void:property tb:line ;
+            void:triples 2490 ],
+        [ void:property schema:about ;
+            void:triples 18 ],
+        [ void:property schema:contentUrl ;
+            void:triples 18 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P17> ;
+            void:triples 8789 ],
+        [ void:property schema:unitCode ;
+            void:triples 54 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P137> ;
+            void:triples 15823 ],
+        [ void:property tb:liveryOf ;
+            void:triples 18 ],
+        [ void:property schema:width ;
+            void:triples 18 ],
+        [ void:property schema:height ;
+            void:triples 18 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P729> ;
+            void:triples 4433 ],
+        [ void:property schema:name ;
+            void:triples 18 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P462> ;
+            void:triples 130 ],
+        [ void:property prov:wasDerivedFrom ;
+            void:triples 14321 ],
+        [ void:property schema:thumbnailUrl ;
+            void:triples 18 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P1064> ;
+            void:triples 10070 ],
+        [ void:property tb:part ;
+            void:triples 4 ],
+        [ void:property skos:inScheme ;
+            void:triples 14325 ],
+        [ void:property tb:usedOn ;
+            void:triples 2490 ],
+        [ void:property rdfs:comment ;
+            void:triples 19 ],
+        [ void:property schema:color ;
+            void:triples 96 ],
+        [ void:property dcterms:license ;
+            void:triples 1 ] ;
+    void:rootResource <https://nakamura196.github.io/train-bodies/rdf/> ;
+    void:subset <https://nakamura196.github.io/train-bodies/dataset#links-commons>,
+        <https://nakamura196.github.io/train-bodies/dataset#links-wikidata> ;
+    void:triples 238708 ;
+    void:uriSpace "https://nakamura196.github.io/train-bodies/rdf/" ;
+    void:vocabulary dcterms:,
+        rdf:,
+        rdfs:,
+        skos:,
+        prov:,
+        <http://www.wikidata.org/prop/direct/>,
+        foaf:,
+        tb:,
+        schema: ;
+    rdfs:comment "There is no SPARQL endpoint. Load the dump (void:dataDump) into a triple store, or read single resources: each URI <…/rdf/class/{id}> has a human page and the files <…/rdf/class/{id}.ttl> and .jsonld next to it (GitHub Pages does no content negotiation)."@en ;
+    dcat:distribution <https://nakamura196.github.io/train-bodies/dataset#allJsonld>,
+        <https://nakamura196.github.io/train-bodies/dataset#allTtl>,
+        <https://nakamura196.github.io/train-bodies/dataset#eratv>,
+        <https://nakamura196.github.io/train-bodies/dataset#iiif>,
+        <https://nakamura196.github.io/train-bodies/dataset#lines>,
+        <https://nakamura196.github.io/train-bodies/dataset#models>,
+        <https://nakamura196.github.io/train-bodies/dataset#vocab> ;
+    dcat:keyword "3D model",
+        "Wikidata",
+        "railway",
+        "rolling stock",
+        "vehicle class",
+        "形式",
+        "鉄道車両" ;
+    dcat:landingPage <https://nakamura196.github.io/railclass/dataset.html> ;
+    foaf:homepage <https://nakamura196.github.io/railclass/> .
+
+_:N489e7e476b3c4db0afa5296ec4ab3a2d a foaf:Person ;
+    foaf:name "Satoru Nakamura"@en,
+        "中村 覚"@ja .
+

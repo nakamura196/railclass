@@ -149,7 +149,7 @@ const mapped = lines.filter(l => l.map);
           <ul>
             {lines.map(l => (
               <li data-line={l.id} class:list={{ old: l.status !== "current" }}>
-                {l.map ? <button type="button" data-line={l.id}><span class="sw" aria-hidden="true"></span>{l.label}</button>
+                {l.map ? <button type="button" data-line={l.id}><span class="sw" style={`--c: ${l.color}`} aria-hidden="true"></span>{l.label}</button>
                        : <span class="name"><span class="sw none" aria-hidden="true"></span>{l.label}</span>}
                 <span class="meta">
                   {l.until && <span>{fmt(T.until, { y: l.until })}</span>}
@@ -209,7 +209,7 @@ const mapped = lines.filter(l => l.map);
     <pre>{c.ttl}</pre>
   </details>
 </div>
-{mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify(mapped.map(l => ({ id: l.id, label: l.label, old: l.status !== "current", src: file(`lines/${l.id}.geojson`) })))} />}
+{mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify(mapped.map(l => ({ id: l.id, label: l.label, old: l.status !== "current", color: l.color, src: file(`lines/${l.id}.geojson`) })))} />}
 {mods.length > 0 && <script type="application/json" id="m3d-data" set:html={JSON.stringify({ models: mdata, orbit: ORBITS[0][1] })} />}
 </Base>
 

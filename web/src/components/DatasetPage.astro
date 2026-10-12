@@ -1,0 +1,110 @@
+---
+// Dataset page (dataset.html): the one place that describes the dataset — counts, files, URIs, no SPARQL, licences,
+// sources. The numbers come from docs/data/dataset.json, written by tools/build_void.py together with the VoID
+// (docs/rdf/void.ttl), so the page and the machine-readable description cannot disagree.
+import "../styles/dataset.css";
+import Base from "../layouts/Base.astro";
+import { page, file, t, type Lang } from "../i18n";
+import { dataset } from "../lib/data";
+import { ldBrowser } from "../lib/ldbrowser";
+
+const { lang } = Astro.props as { lang: Lang };
+const ui = t(lang);
+const T = ui.dataset;
+const D = dataset();
+const fmt = (v: number) => v.toLocaleString(ui.numberLocale);
+const bytes = (b: number) => b >= 1e6 ? `${(b / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(b / 1e3))} KB`;
+const fileOf = (k: string) => [...D.files, ...D.void].find((f: any) => f.key === k);
+const fill = (s: string) => s.replace(/\{(\w+)\}/g, (m, k) =>
+  k === "allTtlSize" ? bytes(fileOf("allTtl").bytes) : typeof D[k] === "number" ? fmt(D[k]) : m);
+const cls = D.uriSpace + "class/", mdl = D.uriSpace + "model/";
+const uriText = (s: string) => s.replace("{cls}", cls).replace("{mdl}", mdl);
+const examples = [cls + "Q696668", cls + "tb-skytrain-mk2", mdl + "icet_411"];
+// Until the URIs move to w3id.org they still name the old repository (train-bodies), which no longer resolves:
+// say so, and link the examples to where the pages are now. Drops out by itself once the URIs and the site agree.
+const uriBase = D.uriSpace.replace(/rdf\/$/, "");
+const moved = uriBase !== D.site;
+const at = (u: string) => u.replace(uriBase, D.site) + ".html";
+const vocab = D.uriSpace.replace(/rdf\/$/, "vocab#");
+const query = `PREFIX tb:   <${vocab}>
+PREFIX wdt:  <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?country ?name (COUNT(?class) AS ?n) WHERE {
+  ?class a tb:VehicleClass ; wdt:P17 ?country .
+  OPTIONAL { ?country rdfs:label ?name FILTER(lang(?name) = "${lang}") }
+} GROUP BY ?country ?name ORDER BY DESC(?n) LIMIT 10`;
+const year = D.modified.slice(0, 4);
+const site = new URL(page(lang, "dataset.html"), Astro.site).href;
+// schema.org Dataset for search engines (Google Dataset Search reads this)
+const ld = {
+  "@context": "https://schema.org", "@type": "Dataset",
+  name: lang === "ja" ? "RailClass: 世界の鉄道車両の形式" : "RailClass: railway vehicle classes of the world",
+  description: fill(T.lead), url: site, sameAs: D.uriSpace.replace(/rdf\/$/, "dataset"),
+  license: "https://creativecommons.org/publicdomain/zero/1.0/", dateModified: D.modified, inLanguage: ["ja", "en"],
+  creator: { "@type": "Person", name: lang === "ja" ? "中村 覚" : "Satoru Nakamura" },
+  isBasedOn: "https://www.wikidata.org/",
+  distribution: D.files.map((f: any) => ({ "@type": "DataDownload", name: T.files[f.key], contentUrl: new URL(file(f.path), Astro.site).href, encodingFormat: f.type })),
+};
+---
+<Base lang={lang} path="dataset.html" title={`${T.title} — ${ui.site.name}`} description={T.description} current="data">
+<link slot="head" rel="alternate" type="text/turtle" href={file("rdf/void.ttl")} title="VoID">
+<link slot="head" rel="alternate" type="application/ld+json" href={file("rdf/void.jsonld")} title="VoID">
+<script slot="head" type="application/ld+json" set:html={JSON.stringify(ld)} />
+<main class="ds wrap">
+  <header>
+    <h1>{T.title}</h1>
+    <p class="lead">{fill(T.lead)}</p>
+    <p class="meta">{T.modified}: <time datetime={D.modified}>{D.modified}</time> · <a href={file("rdf/void.ttl")}>VoID (Turtle)</a> · <a href={file("rdf/void.jsonld")}>JSON-LD</a></p>
+  </header>
+
+  <section aria-labelledby="counts-h">
+    <h2 id="counts-h">{T.countsTitle}</h2>
+    <dl class="counts">
+      {Object.values(T.counts).map(([k, v, note]) => <div><dt>{k}</dt><dd><b>{fill(v)}</b><span>{fill(note)}</span></dd></div>)}
+    </dl>
+  </section>
+
+  <section aria-labelledby="files-h">
+    <h2 id="files-h">{T.filesTitle}</h2>
+    <p>{T.filesLead}</p>
+    <ul class="files">
+      {[...D.files, ...D.void].map((f: any) => (
+        <li><a href={file(f.path)}>{f.path}</a><span>{T.files[f.key]}</span><span class="size">{bytes(f.bytes)}</span></li>
+      ))}
+    </ul>
+  </section>
+
+  <section aria-labelledby="uri-h">
+    <h2 id="uri-h">{T.uriTitle}</h2>
+    {T.uri.map(p => <p>{uriText(p)}</p>)}
+    {moved && <p class="moved">{T.uriMoved.replace("{old}", uriBase).replace("{site}", D.site)}</p>}
+    <p class="ex">{T.examples}: {examples.map((u, i) => <>{i > 0 && " · "}<a href={at(u)}><code>{u}</code></a></>)}</p>
+  </section>
+
+  <section aria-labelledby="sparql-h">
+    <h2 id="sparql-h">{T.sparqlTitle}</h2>
+    {T.sparql.map(p => <p>{fill(p)}</p>)}
+    <p><a href={ldBrowser(lang, cls + "Q696668")}>{T.ldBrowser} →</a></p>
+    <figure>
+      <figcaption>{T.queryLabel}</figcaption>
+      <pre><code>{query}</code></pre>
+    </figure>
+  </section>
+
+  <section aria-labelledby="licence-h">
+    <h2 id="licence-h">{T.licenceTitle}</h2>
+    <dl class="pairs">{T.licence.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
+  </section>
+
+  <section aria-labelledby="sources-h">
+    <h2 id="sources-h">{T.sourcesTitle}</h2>
+    <ul>{T.sources.map(s => <li>{s}</li>)}</ul>
+    <p><a href="https://github.com/nakamura196/railclass">{T.sourceCode} →</a></p>
+  </section>
+
+  <section aria-labelledby="cite-h">
+    <h2 id="cite-h">{T.citeTitle}</h2>
+    <p class="cite">{T.cite.replace("{year}", year).replace("{site}", site)}</p>
+  </section>
+</main>
+</Base>

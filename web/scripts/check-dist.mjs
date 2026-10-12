@@ -149,6 +149,18 @@ for (const p of scan) if (existsSync(dist + p) && /東京大学|University of To
 for (const c of classes) for (const p of [`rdf/class/${c}.html`, `en/rdf/class/${c}.html`])
   if (existsSync(dist + p) && /東京大学|University of Tokyo/.test(read(dist + p))) fail(p, "names the university");
 
+// Dataset page and VoID (tools/build_void.py): the class count agrees with the Turtle, the dumps they point to are published
+const ds = JSON.parse(read(docs + "data/dataset.json"));
+if (ds.classes !== classes.length) fail("docs/data/dataset.json", `${ds.classes} classes, the Turtle has ${classes.length} (run tools/build_void.py)`);
+for (const f of ["rdf/void.ttl", "rdf/void.jsonld", ...ds.files.map(f => f.path)]) if (!existsSync(dist + f)) fail(f, "not published");
+for (const p of ["dataset.html", "en/dataset.html"]) {
+  if (!existsSync(dist + p)) { fail(p, "missing"); continue; }
+  const h = read(dist + p);
+  if (!h.includes(classes.length.toLocaleString(p.startsWith("en/") ? "en-US" : "ja-JP"))) fail(p, "class count not shown");
+  if (!h.includes("rdf/all.ttl") || !h.includes("rdf/void.ttl")) fail(p, "no link to the dump or the VoID");
+  if (/東京大学|University of Tokyo/.test(h)) fail(p, "names the university");
+}
+
 if (bad.length) {
   console.error(`check: ${bad.length} failure(s)\n  ` + bad.join("\n  "));
   process.exit(1);

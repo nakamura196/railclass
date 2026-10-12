@@ -35,6 +35,7 @@
     "licence": "形式のデータ（RDF）は CC0 です。3D モデル（GLB・STL・OBJ・USDZ）とその画像は {cc} で使えます。形式の写真は Wikimedia Commons のもので、写真ごとに示した条件に従います。ERATV との対応表の型式番号と型式名は、欧州鉄道庁（ERA）の ERATV によります。",
     "copyright": "© 2026 中村 覚",
     "eratvTsv": "ERATV との対応表（TSV）",
+    "dataset": "データセットの説明",
     "allTtl": "全形式の RDF（Turtle）"
   },
   "top": {
@@ -64,6 +65,7 @@
     ],
     "dataTitle": "データ",
     "dataItems": {
+      "dataset": ["データセットの説明", "件数・ファイル・URI・ライセンス・典拠（VoID も）"],
       "models": ["3D モデルの一覧（JSON）", "名前・寸法・Wikidata の形式 ID・追加日"],
       "rdf": ["形式の RDF（Turtle・JSON-LD）", "形式ごとと、全件をまとめたファイル"],
       "iiif": ["IIIF Manifest（Presentation 4.0）", "3D モデルごとと、全体の Collection"],
@@ -205,6 +207,112 @@
     "glb": "GLB（色つき。ブラウザや Blender で開ける）",
     "objNote": "OBJ の色は MTL に入っています。2 つを同じフォルダに保存すると、色つきで開けます。",
     "meshNote": "どれも三角形の面を貼り合わせた形です。CAD で寸法を直せる立体（STEP など）ではありません。"
+  },
+  "dataset": {
+    "title": "データセット",
+    "description": "RailClass のデータセットの説明: 収録数、一括ファイル、URI の形、ライセンス、SPARQL が無いこと、典拠。",
+    "lead": "RailClass は、日本を除く世界の鉄道車両の形式 {classes} 件を、Wikidata と結んだ Linked Data として公開するデータセットです。このページに、件数・ファイル・URI・ライセンス・典拠をまとめました。同じ内容を機械が読める形（VoID と DCAT）でも置いています。",
+    "modified": "最終更新",
+    "countsTitle": "収録数",
+    "counts": {
+      "classes": [
+        "形式",
+        "{classes}",
+        "{exactMatch} 件を skos:exactMatch で Wikidata の項目に結んでいます。残りは Wikidata に項目の無い、独自に立てた形式です"
+      ],
+      "photo": [
+        "写真のある形式",
+        "{withPhoto}",
+        "foaf:depiction。Wikidata の P18 と同じ Wikimedia Commons の IRI です"
+      ],
+      "values": [
+        "Wikidata の値",
+        "{wikidataValues}",
+        "運行者・製造者・国・軌間など。値は Wikidata の IRI のまま持っています"
+      ],
+      "lines": [
+        "走る路線の分かる形式",
+        "{withLines}",
+        "路線 {lines} 本。うち {withLineShape} 形式・{lineShapes} 路線は、OpenStreetMap の線を地図で見られます"
+      ],
+      "models": [
+        "3D モデル",
+        "{models}",
+        "{withModel} 形式に結んでいます。塗装 {liveries} 種、IIIF Manifest {iiifManifests} 件"
+      ],
+      "eratv": [
+        "ERATV との対応",
+        "{eratvTypes} 型",
+        "欧州鉄道庁の車両型式登録（ERATV）の型を、Wikidata の {eratvClasses} 形式に結んだ表"
+      ],
+      "triples": [
+        "トリプル",
+        "{triples}",
+        "主語になる資源 {entities}、述語 {properties} 種"
+      ]
+    },
+    "filesTitle": "ファイル",
+    "filesLead": "一括ファイルに、全形式・3D モデル・独自の語彙が入っています。まず all.ttl を取ってください。",
+    "files": {
+      "allTtl": "全形式と 3D モデル（Turtle）",
+      "allJsonld": "全形式と 3D モデル（JSON-LD）",
+      "vocab": "独自の語彙（tb:）",
+      "eratv": "ERATV と Wikidata の対応表（TSV。列の説明は CSVW の .tsv-metadata.json）",
+      "lines": "路線の線（GeoJSON。路線ごとのファイルは lines/<Q番号>.geojson）",
+      "iiif": "3D モデルの IIIF Collection（Presentation 4.0）",
+      "models": "3D モデルの一覧（JSON）",
+      "voidTtl": "このデータセットの説明（VoID・DCAT、Turtle）",
+      "voidJsonld": "このデータセットの説明（VoID・DCAT、JSON-LD）"
+    },
+    "uriTitle": "URI と取り出し方",
+    "uri": [
+      "形式の URI は {cls}<ID>、3D モデルの URI は {mdl}<ID> です。<ID> は Wikidata の Q 番号（例: Q696668）か、Wikidata に項目の無い形式に付けた独自の ID（tb- で始まる）です。",
+      "URI をブラウザで開くと、人が読むページが出ます。RDF は同じ場所に .ttl と .jsonld を付けたファイルで取れます。置き場所の GitHub Pages は、要求に応じて形式を替える仕組み（コンテントネゴシエーション）を持たないためです。",
+      "URI は、w3id.org の恒久 URI（https://w3id.org/railclass/）に移す予定です。"
+    ],
+    "uriMoved": "今の URI は、リポジトリの名前を変える前の {old} のままで、そのままでは開けません。ページとファイルは {site} にあります。w3id.org に移すまでの間は、URI の前半をこちらに読み替えてください（下の例はこちらに結んであります）。",
+    "examples": "例",
+    "sparqlTitle": "SPARQL について",
+    "sparql": [
+      "SPARQL エンドポイントはありません。サイトは静的なファイルだけで動いています。",
+      "問い合わせたいときは、all.ttl を手元の RDF データベース（Oxigraph、Apache Jena など）や rdflib に読み込んでください。全体で {triples} トリプル（Turtle で {allTtlSize}）なので、ノート PC で数秒で読めます。",
+      "1 件ずつ見るなら、LD Browser（ブラウザだけで動く Linked Data の閲覧ツール）で URI を開けます。"
+    ],
+    "queryLabel": "問い合わせの例（国ごとの形式の数）",
+    "ldBrowser": "LD Browser で ICE T の形式を開く",
+    "licenceTitle": "ライセンス",
+    "licence": [
+      [
+        "形式のデータ（RDF）",
+        "CC0 1.0。値の多くは Wikidata（CC0）から取りました。"
+      ],
+      [
+        "3D モデルとその画像",
+        "CC BY 4.0。RDF でも各モデルに schema:license で書いています。"
+      ],
+      [
+        "形式の写真",
+        "Wikimedia Commons のファイルごとの条件に従います。RDF には写真の IRI だけを入れています。"
+      ],
+      [
+        "路線の線（GeoJSON）",
+        "© OpenStreetMap contributors、ODbL。RDF に入れているのは路線の Wikidata の ID だけです。"
+      ],
+      [
+        "ERATV の型式番号と型式名",
+        "欧州鉄道庁（ERA）の ERATV によります。出典を示せば複製してよい、という ERA の著作権表示に従っています。"
+      ]
+    ],
+    "sourcesTitle": "典拠と作り方",
+    "sources": [
+      "形式の一覧と値: Wikidata。鉄道車両の形式に当たる項目を SPARQL で集め、日本の形式を除きました。",
+      "走る路線: Wikidata の P3438（通常使う車両）と、出典を付けて手で埋めた表。路線の線は OpenStreetMap から切り出しました。",
+      "ERATV との対応: ERATV の型式の一覧と Wikidata の形式を、名前で自動照合しました。人の目では確かめていません。",
+      "3D モデル: 3D プリントで作った車体（おもちゃの車台に載る大きさ。縮尺模型ではありません）。"
+    ],
+    "sourceCode": "作り方のスクリプトとデータ（GitHub）",
+    "citeTitle": "引用",
+    "cite": "中村 覚 ({year}). RailClass: 世界の鉄道車両の形式（データセット）. {site}"
   },
   "numberLocale": "ja-JP"
 }

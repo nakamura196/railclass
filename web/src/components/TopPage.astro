@@ -64,7 +64,7 @@ const D = T.dataItems;
         <li><a href={page(lang, "map/")}><b>{F.map[0]}</b><span>{F.map[1]}</span></a></li>
         <li><a href={list3d}><b>{F.view[0]}</b><span>{F.view[1]}</span></a></li>
         <li><a href={list3d}><b>{F.download[0]}</b><span>{F.download[1]}</span></a></li>
-        <li><a href="#data"><b>{F.data[0]}</b><span>{F.data[1]}</span></a></li>
+        <li><a href={page(lang, "dataset.html")}><b>{F.data[0]}</b><span>{F.data[1]}</span></a></li>
       </ul>
     </div>
   </section>
@@ -106,6 +106,7 @@ const D = T.dataItems;
     <div class="wrap">
       <h2 id="data-h">{T.dataTitle}</h2>
       <ul class="data">
+        <li><a href={page(lang, "dataset.html")}><b>{D.dataset[0]}</b></a><span>{D.dataset[1]}</span></li>
         <li><a href={file("data/models.json")}>{D.models[0]}</a><span>{D.models[1]}</span></li>
         <li><a href={file("rdf/all.ttl")}>{D.rdf[0]}</a><span>{D.rdf[1]} (<a href={file("rdf/all.ttl")}>Turtle</a> · <a href={file("rdf/all.jsonld")}>JSON-LD</a>)</span></li>
         <li><a href={file("iiif/collection.json")}>{D.iiif[0]}</a><span>{D.iiif[1]}</span></li>

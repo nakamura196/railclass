@@ -89,7 +89,16 @@ export function downloads(id: string, lang: Lang): Download[] {
 export const docsBytes = (p: string) => statSync(docsPath(p)).size;
 export const fmtBytes = (n: number) => n >= 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(n / 1e3))} KB`;
 
-export type Line = { id: string; label: string; status: string; until: string; source: string; map: boolean };
+export type Line = { id: string; label: string; status: string; until: string; source: string; map: boolean; color: string };
+
+// The colour of a line on the maps: its official colour (Wikidata P465, docs/lines/_colors.json, tools/line_colors.py), else one of
+// these, picked by the Q number so a line keeps its colour everywhere. Each line its own colour, so that lines side by side can be told apart.
+const PALETTE = ["#1f77b4", "#d62728", "#2ca02c", "#9467bd", "#ff7f0e", "#17becf", "#8c564b", "#e377c2", "#bcbd22", "#7f7f7f", "#393b79", "#ad494a"];
+let colors: Record<string, string> | null = null;
+export const lineColor = (id: string): string => {
+  colors ??= existsSync(docsPath("lines/_colors.json")) ? readJSON("lines/_colors.json") : {};
+  return colors![id] ?? PALETTE[Number(id.slice(1)) % PALETTE.length];
+};
 
 // tools/class_lines.tsv (hand-filled, sources) first, then tools/class_lines_wd.tsv (Wikidata P3438); the first (class, line) wins
 const lineRows = (): Record<string, string>[] => {
@@ -108,14 +117,14 @@ const lineRows = (): Record<string, string>[] => {
   return out;
 };
 
-export type MapLine = { id: string; label: string; current: boolean; map: boolean; classes: string[] };
+export type MapLine = { id: string; label: string; current: boolean; map: boolean; classes: string[]; color: string };
 
 /** Every line of the class-line tables (hand-filled and Wikidata) with the classes on it (for the map page). current = some class still runs on it. */
 export function allLines(): MapLine[] {
   const by = new Map<string, MapLine>();
   for (const r of lineRows()) {
     if (!r.line) continue;
-    const l = by.get(r.line) ?? { id: r.line, label: r.lineLabel, current: false, map: existsSync(docsPath(`lines/${r.line}.geojson`)), classes: [] };
+    const l = by.get(r.line) ?? { id: r.line, label: r.lineLabel, current: false, map: existsSync(docsPath(`lines/${r.line}.geojson`)), classes: [], color: lineColor(r.line) };
     if (r.status.split(" ")[0] === "current") l.current = true;
     if (!l.classes.includes(r.class)) l.classes.push(r.class);
     by.set(r.line, l);
@@ -131,7 +140,12 @@ export function classLines(id: string): Line[] {
     .filter(r => r.class === id && r.line && !seen.has(r.line) && seen.add(r.line))
     .map(r => {
       const [status, until = ""] = r.status.split(" ");
-      return { id: r.line, label: r.lineLabel, status, until, source: r.source_url, map: existsSync(docsPath(`lines/${r.line}.geojson`)) };
+      return { id: r.line, label: r.lineLabel, status, until, source: r.source_url, map: existsSync(docsPath(`lines/${r.line}.geojson`)), color: lineColor(r.line) };
     })
     .sort((a, b) => Number(b.status === "current") - Number(a.status === "current"));
+}
+
+/** The dataset description (docs/data/dataset.json, tools/build_void.py): counts, files and their sizes. */
+export function dataset(): Record<string, any> {
+  return readJSON("data/dataset.json");
 }

@@ -22,6 +22,8 @@
     `python3 ~/git/3d/skytrain/tools/gallery.py --out <this repo>/docs` で書き出す
   - `search/` の索引 — `tools/build_search.py`
   - `rdf/` — `tools/build_rdf.py`
+  - `rdf/void.ttl`・`void.jsonld` と `data/dataset.json`（データセットの説明と件数） — `tools/build_void.py`。
+    `build_rdf.py`・`build_eratv_map.py`・路線の線を作り直したあとに走らせる
   - `iiif/` — `tools/build_iiif.py`
 
 個人が趣味で作った非公式のモデルです。タカラトミー、各鉄道会社・バス会社とは関係ありません。

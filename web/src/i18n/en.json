@@ -35,6 +35,7 @@
     "licence": "Class data (RDF) is CC0. The 3D models (GLB, STL, OBJ, USDZ) and their images may be used under {cc}. Class photos come from Wikimedia Commons, each under the terms shown with it. The type IDs and names in the ERATV table come from ERATV, European Union Agency for Railways (ERA).",
     "copyright": "© 2026 Satoru Nakamura",
     "eratvTsv": "ERATV to Wikidata table (TSV)",
+    "dataset": "About the dataset",
     "allTtl": "RDF of all classes (Turtle)"
   },
   "top": {
@@ -64,6 +65,7 @@
     ],
     "dataTitle": "Data",
     "dataItems": {
+      "dataset": ["About the dataset", "Counts, files, URIs, licences, sources (with VoID)"],
       "models": ["List of 3D models (JSON)", "Name, size, Wikidata class ID, date added"],
       "rdf": ["Class RDF (Turtle, JSON-LD)", "One file per class, and one for all"],
       "iiif": ["IIIF Manifest (Presentation 4.0)", "One per 3D model, and a Collection of all"],
@@ -205,6 +207,112 @@
     "glb": "GLB (colour; opens in browsers and Blender)",
     "objNote": "The OBJ's colours are in the MTL. Save both into the same folder to open it in colour.",
     "meshNote": "All are triangle meshes, not solids you can edit by dimension in CAD (STEP etc.)."
+  },
+  "dataset": {
+    "title": "Dataset",
+    "description": "About the RailClass dataset: counts, dump files, URI pattern, licences, no SPARQL endpoint, sources.",
+    "lead": "RailClass publishes {classes} railway vehicle classes from outside Japan as Linked Data, linked to Wikidata. This page puts the counts, files, URIs, licences and sources in one place. The same description is also available for machines (VoID and DCAT).",
+    "modified": "Last updated",
+    "countsTitle": "Counts",
+    "counts": {
+      "classes": [
+        "Classes",
+        "{classes}",
+        "{exactMatch} linked to their Wikidata items with skos:exactMatch; the rest are classes of our own with no Wikidata item"
+      ],
+      "photo": [
+        "Classes with a photo",
+        "{withPhoto}",
+        "foaf:depiction, with the same Wikimedia Commons IRI as Wikidata P18"
+      ],
+      "values": [
+        "Wikidata values",
+        "{wikidataValues}",
+        "Operator, manufacturer, country, gauge and more, kept as Wikidata IRIs"
+      ],
+      "lines": [
+        "Classes with known lines",
+        "{withLines}",
+        "{lines} lines; {withLineShape} classes and {lineShapes} lines have an OpenStreetMap track on the map"
+      ],
+      "models": [
+        "3D models",
+        "{models}",
+        "Linked to {withModel} classes; {liveries} liveries, {iiifManifests} IIIF Manifests"
+      ],
+      "eratv": [
+        "ERATV mapping",
+        "{eratvTypes} types",
+        "Types in the European Register of Authorised Types of Vehicles (ERATV) matched to {eratvClasses} Wikidata classes"
+      ],
+      "triples": [
+        "Triples",
+        "{triples}",
+        "{entities} subject resources, {properties} predicates"
+      ]
+    },
+    "filesTitle": "Files",
+    "filesLead": "The dump holds every class, every 3D model and our own terms. Start with all.ttl.",
+    "files": {
+      "allTtl": "All classes and 3D models (Turtle)",
+      "allJsonld": "All classes and 3D models (JSON-LD)",
+      "vocab": "Terms of our own (tb:)",
+      "eratv": "ERATV to Wikidata table (TSV; columns described in the CSVW .tsv-metadata.json)",
+      "lines": "Line tracks (GeoJSON; one file per line at lines/<Q id>.geojson)",
+      "iiif": "IIIF Collection of the 3D models (Presentation 4.0)",
+      "models": "List of the 3D models (JSON)",
+      "voidTtl": "This description (VoID and DCAT, Turtle)",
+      "voidJsonld": "This description (VoID and DCAT, JSON-LD)"
+    },
+    "uriTitle": "URIs and how to get the data",
+    "uri": [
+      "A class is {cls}<ID> and a 3D model is {mdl}<ID>. <ID> is the Wikidata Q id (e.g. Q696668), or an ID of our own starting with tb- for the few classes Wikidata has no item for.",
+      "Opening a URI in a browser shows a page for people. The RDF is next to it, with .ttl or .jsonld appended: GitHub Pages, which serves the site, does no content negotiation.",
+      "The URIs will move to persistent w3id.org URIs (https://w3id.org/railclass/)."
+    ],
+    "uriMoved": "For now the URIs still start with {old}, the address before the repository was renamed, and do not open as they are. The pages and files are at {site}. Until the move to w3id.org, read the first part of a URI as this address (the examples below link there).",
+    "examples": "Examples",
+    "sparqlTitle": "About SPARQL",
+    "sparql": [
+      "There is no SPARQL endpoint. The site is static files only.",
+      "To query the data, load all.ttl into a local triple store (Oxigraph, Apache Jena, ...) or rdflib. It is {triples} triples ({allTtlSize} of Turtle) and loads in seconds on a laptop.",
+      "To look at one resource, open its URI in LD Browser, a Linked Data browser that runs in the browser alone."
+    ],
+    "queryLabel": "Example query (classes per country)",
+    "ldBrowser": "Open the ICE T class in LD Browser",
+    "licenceTitle": "Licences",
+    "licence": [
+      [
+        "Class data (RDF)",
+        "CC0 1.0. Most values come from Wikidata (CC0)."
+      ],
+      [
+        "3D models and their images",
+        "CC BY 4.0, also stated on each model in the RDF with schema:license."
+      ],
+      [
+        "Class photos",
+        "The terms of each Wikimedia Commons file. The RDF holds only the photo IRIs."
+      ],
+      [
+        "Line tracks (GeoJSON)",
+        "© OpenStreetMap contributors, ODbL. The RDF holds only the Wikidata IDs of the lines."
+      ],
+      [
+        "ERATV type IDs and names",
+        "From ERATV, European Union Agency for Railways (ERA), reproduced with acknowledgement as ERA's copyright notice allows."
+      ]
+    ],
+    "sourcesTitle": "Sources and method",
+    "sources": [
+      "Classes and their values: Wikidata. The items that are railway vehicle classes were collected with SPARQL; Japanese classes are left out.",
+      "Lines: Wikidata P3438 (vehicle normally used), and a hand-filled table with sources. The tracks were cut out of OpenStreetMap.",
+      "ERATV mapping: the ERATV type list matched to Wikidata classes by name, automatically. Not checked by hand.",
+      "3D models: vehicle bodies made for 3D printing, sized for a toy chassis (not scale models)."
+    ],
+    "sourceCode": "Scripts and data (GitHub)",
+    "citeTitle": "How to cite",
+    "cite": "Nakamura, Satoru ({year}). RailClass: railway vehicle classes of the world [dataset]. {site}"
   },
   "numberLocale": "en-GB"
 }
