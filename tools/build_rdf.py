@@ -89,6 +89,7 @@ CLASSES = {
     # SRT Red Lines (Bangkok): Wikidata has no item for the Hitachi AT100 rolling stock (Q2542280 is the line system), so a class
     # of our own; the system is linked as the line it runs on (tools/class_lines.tsv). Not under Hitachi A-train (Q1066003): too broad a family.
     "tb-srtred": (None, None, {"en": "SRT Red Lines Hitachi AT100", "ja": "SRTレッドラインの電車（日立 AT100）"}),
+    "Q853105": ("Q853105", None, None),                       # SJ X2 (X2000 power car)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -142,6 +143,7 @@ LIVERIES = {
     "dubai-metro": ({"en": "Dubai Metro livery (silver and light blue)", "ja": "ドバイメトロの塗装（銀と水色）"}, "Q22101985"),   # RTA (Roads and Transport Authority, Dubai)
     "tr-emu3000-red": ({"en": "Taiwan Railway EMU3000 livery (white with a black nose, red stripe at the coupled end)", "ja": "台湾鉄路 EMU3000型の塗装（白い車体に黒い先頭部、連結側に赤い帯）"}, "Q697926"),
     "srt-red-line": ({"en": "SRT Red Lines livery (white with a red band, black front mask)", "ja": "SRTレッドラインの塗装（白に赤い帯、黒い前面）"}, "Q2165702"),
+    "sj-x2000-2021": ({"en": "SJ X2000 refurbished livery (dark grey nose and swoosh, light grey, stainless; from 2021)", "ja": "SJ X2000 の更新車の塗装（濃い灰の前頭部と帯、明るい灰、ステンレス。2021年から）"}, "Q8301325"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -173,6 +175,7 @@ MODELS = {
     "dubaimetro": ("tb-dubaimetro", "dubai-metro", None),
     "emu3000": ("Q65054413", "tr-emu3000-red", None),
     "srtred": ("tb-srtred", "srt-red-line", None),
+    "x2000": ("Q853105", "sj-x2000-2021", None),
 }
 
 
