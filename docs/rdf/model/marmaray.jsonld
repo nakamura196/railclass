@@ -1,0 +1,269 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0237"
+      },
+      "rdfs:label": "red",
+      "schema:color": "#C4282C",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color6"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color7"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color8"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color9"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/marmaray/tcdd_marmaray.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q28220824"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Marmaray livery (white cab front with a black face, stainless with teal and red lines; 2024-)"
+        },
+        {
+          "@language": "ja",
+          "@value": "マルマライの塗装（白い前頭部に黒い顔、ステンレスに青緑と赤の線。2024年以降の写真）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q1088"
+        },
+        {
+          "@id": "wd:Q3142"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q20926238"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/marmaray.glb"
+      },
+      "schema:depth": {
+        "@id": "_:marmaray-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "イスタンブールの海底トンネルを通る通勤電車。白い前頭部とステンレスの車体。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:marmaray-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "マルマライ"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/marmaray/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/marmaray.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#marmaray"
+      },
+      "schema:width": {
+        "@id": "_:marmaray-width"
+      }
+    },
+    {
+      "@id": "_:marmaray-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:marmaray-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:marmaray-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "37.6"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0130"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#586672",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0571"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#17181B",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0528"
+      },
+      "rdfs:label": "teal",
+      "schema:color": "#3AA8B8",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1611"
+      },
+      "rdfs:label": "steel",
+      "schema:color": "#C7C6BF",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.5648"
+      },
+      "rdfs:label": "white",
+      "schema:color": "#ECEDEB",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color9",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0065"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1123"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#86888A",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color8",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0077"
+      },
+      "rdfs:label": "lip",
+      "schema:color": "#B4B7BA",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    }
+  ]
+}

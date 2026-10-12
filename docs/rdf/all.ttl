@@ -96757,30 +96757,6 @@ cls:Q2091214 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q142 .
 
-cls:Q20926238 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "TCDD E32000"@en ;
-    skos:exactMatch wd:Q20926238 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "TCDD E32000"@en ;
-    prov:wasDerivedFrom wd:Q20926238 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q28220824 ;
-    wdt:P17 wd:Q43 ;
-    wdt:P176 wd:Q152517 ;
-    wdt:P279 wd:Q483373 ;
-    wdt:P729 "2012"^^xsd:gYear ;
-    wdt:P930 wd:Q106530439 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/MarmarayAyr%C4%B1l%C4%B1k%C3%87e%C5%9FmesiStation.JPG> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line1>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line2>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line3> ;
-    tb:operatingCountry wd:Q43 ;
-    tb:usedOn wd:Q111263037,
-        wd:Q112118212,
-        wd:Q497844 .
-
 cls:Q2093714 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "SS 9 to 78, 1 to 5"@en ;
@@ -247931,6 +247907,33 @@ cls:Q19877282 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q20926238 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "TCDD E32000"@en,
+        "TCDD E32000形"@ja ;
+    skos:exactMatch wd:Q20926238 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "TCDD E32000"@en,
+        "TCDD E32000形"@ja ;
+    prov:wasDerivedFrom wd:Q20926238 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q28220824 ;
+    wdt:P17 wd:Q43 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2012"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/MarmarayAyr%C4%B1l%C4%B1k%C3%87e%C5%9FmesiStation.JPG> ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line3> ;
+    tb:operatingCountry wd:Q43 ;
+    tb:usedOn wd:Q111263037,
+        wd:Q112118212,
+        wd:Q497844 ;
+    schema:subjectOf mdl:marmaray .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q20926238#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q111263037#P3438> ;
     skos:note "wikidata"@en ;
@@ -263345,6 +263348,101 @@ mdl:maglev a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/maglev#color6> ;
     tb:liveryOf wd:Q769591 .
 
+mdl:marmaray a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/marmaray#livery> ;
+    schema:about cls:Q20926238 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/marmaray.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "イスタンブールの海底トンネルを通る通勤電車。白い前頭部とステンレスの車体。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "マルマライ"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/marmaray/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/marmaray.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#marmaray> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.5648 ;
+    schema:color "#ECEDEB" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color2> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1611 ;
+    schema:color "#C7C6BF" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color3> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1123 ;
+    schema:color "#86888A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0571 ;
+    schema:color "#17181B" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color5> a tb:ColorSample ;
+    rdfs:label "teal" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0528 ;
+    schema:color "#3AA8B8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color6> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0237 ;
+    schema:color "#C4282C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0130 ;
+    schema:color "#586672" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color8> a tb:ColorSample ;
+    rdfs:label "lip" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0077 ;
+    schema:color "#B4B7BA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color9> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0065 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/marmaray#livery> a tb:Livery ;
+    rdfs:label "Marmaray livery (white cab front with a black face, stainless with teal and red lines; 2024-)"@en,
+        "マルマライの塗装（白い前頭部に黒い顔、ステンレスに青緑と赤の線。2024年以降の写真）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/marmaray/tcdd_marmaray.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/marmaray#color9> ;
+    tb:liveryOf wd:Q28220824 .
+
 mdl:mk1 a schema:3DModel ;
     tb:galleryGroup "skytrain" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/mk1#livery> ;
@@ -272435,8 +272533,6 @@ wd:Q267639 rdfs:label "Bombardier Talent"@en,
 
 wd:Q27928454 rdfs:label "1945 mm track gauge"@en .
 
-wd:Q28220824 rdfs:label "TCDD Taşımacılık"@en .
-
 wd:Q2913359 rdfs:label "Alstom Movia"@en .
 
 wd:Q302226 rdfs:label "Sentinel Waggon Works"@en,
@@ -272604,6 +272700,8 @@ wd:Q254483 rdfs:label "Waggonfabrik Fuchs"@en,
 
 wd:Q2675204 rdfs:label "Scandia AS"@en,
         "スカンディヤ社"@ja .
+
+wd:Q28220824 rdfs:label "TCDD Taşımacılık"@en .
 
 wd:Q2901670 rdfs:label "4-2-2"@en .
 
@@ -273111,9 +273209,6 @@ wd:Q282395 rdfs:label "Brissonneau et Lotz"@en,
 
 wd:Q2995303 rdfs:label "Constructions électriques de France"@en .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q3348301 rdfs:label "Chittaranjan Locomotive Works"@en,
         "チラタンジャン工場"@ja .
 
@@ -273237,6 +273332,9 @@ wd:Q26 rdfs:label "Northern Ireland"@en,
 wd:Q28455463 rdfs:label "electro-diesel multiple unit"@en .
 
 wd:Q2990395 rdfs:label "Compañía de los Caminos de Hierro del Norte de España"@en .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q3487579 rdfs:label "Société J. F Cail & Cie"@en .
 
@@ -273739,9 +273837,6 @@ wd:Q13634023 rdfs:label "Società per le Strade Ferrate del Mediterraneo"@en,
 wd:Q184 rdfs:label "Belarus"@en,
         "ベラルーシ"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q26233074 rdfs:label "4-4-2T"@en .
 
 wd:Q573094 rdfs:label "Schichau-Werke"@en,
@@ -273763,9 +273858,6 @@ wd:Q1130918 rdfs:label "Konstal"@en,
 
 wd:Q13551978 rdfs:label "Walkers Limited"@en .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q25997539 rdfs:label "2-6-4T"@en .
 
 wd:Q316984 rdfs:label "Waggonfabrik Talbot"@en,
@@ -273785,6 +273877,12 @@ wd:Q9166501 rdfs:label "freight car"@en,
 
 wd:Q2304446 rdfs:label "South Eastern and Chatham Railway"@en,
         "サウス・イースタン・アンド・チャタム鉄道"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q2539150 rdfs:label "Waggon- und Maschinenbau Görlitz"@en,
         "ゲルリッツ車両・機械工場"@ja .
@@ -273906,9 +274004,6 @@ wd:Q378181 rdfs:label "Chemins de fer du Midi"@en,
 wd:Q7885459 rdfs:label "Union Carriage & Wagon"@en,
         "ユニオン・キャリッジ・アンド・ワゴン"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q3077673 rdfs:label "0-4-4T"@en,
         "車輪配置 0-4-4T"@ja .
 
@@ -273941,6 +274036,9 @@ wd:Q725793 rdfs:label "Union Pacific Railroad"@en,
 
 wd:Q10676739 rdfs:label "600 mm track gauge"@en,
         "600mm軌間"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q610143 rdfs:label "Bulgarian State Railways"@en,
         "ブルガリア国鉄"@ja .
@@ -274558,9 +274656,6 @@ wd:Q336811 rdfs:label "ČKD社"@ja .
 wd:Q34336 rdfs:label "diesel locomotive"@en,
         "ディーゼル機関車"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q26000795 rdfs:label "2-6-2T"@en .
 
 wd:Q538101 rdfs:label "New Zealand Railways Department"@en,
@@ -274573,6 +274668,9 @@ wd:Q1493335 rdfs:label "1676 mm track gauge"@en,
         "インディアンゲージ"@ja .
 
 wd:Q10915943 rdfs:label "diesel railcar"@en .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q529531 rdfs:label "ベルリン機械製造"@ja .
 

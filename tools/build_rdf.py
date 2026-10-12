@@ -99,6 +99,7 @@ CLASSES = {
     # Tanzania SGR E6800: Wikidata has no item for the Hyundai Rotem locomotive (Q60744141 is the railway), so a class of our
     # own; the railway is linked in tools/class_lines.tsv. Not under TCDD E68000 (Q28444692), its design ancestor: another class.
     "tb-tanzania": (None, None, {"en": "Tanzania SGR class E6800 electric locomotive", "ja": "タンザニア SGR E6800 形電気機関車"}),
+    "Q20926238": ("Q20926238", None, None),                    # TCDD E32000 (Marmaray, Hyundai Rotem)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -134,7 +135,8 @@ for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
 LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q8078904": "ÖBB 4011形",
             "Q140611223": "Amtrak Airo", "Q137921671": "New Flyer XD60",
             "Q289090": "トランスラピッド 08", "Q18331751": "ED250 ペンドリーノ",
-            "Q26158722": "ICNG（新世代インターシティ）"}
+            "Q26158722": "ICNG（新世代インターシティ）",
+            "Q20926238": "TCDD E32000形"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -165,6 +167,7 @@ LIVERIES = {
     "kr-sgr-df8b": ({"en": "Kenya Railways SGR livery (red cabs and roof, white body, orange and yellow lines, Kenyan flag)", "ja": "ケニア鉄道 SGR の塗装（赤い運転室と屋根、白い車体、オレンジと黄色の線、ケニアの国旗）"}, "Q1663639"),
     "ns-icng": ({"en": "NS livery (yellow and blue, dark grey round the cab)", "ja": "オランダ鉄道の塗装（黄と青、運転室のまわりは濃い灰）"}, "Q23076"),
     "trc-sgr": ({"en": "Tanzania Railways Corporation SGR livery (cream with orange arches, maroon lower body)", "ja": "タンザニア鉄道公社 SGR の塗装（クリームにオレンジの弧、えんじの裾）"}, "Q2393276"),
+    "tcdd-marmaray": ({"en": "Marmaray livery (white cab front with a black face, stainless with teal and red lines; 2024-)", "ja": "マルマライの塗装（白い前頭部に黒い顔、ステンレスに青緑と赤の線。2024年以降の写真）"}, "Q28220824"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -202,6 +205,7 @@ MODELS = {
     "madaraka": ("Q10871152", "kr-sgr-df8b", None),
     "icng": ("Q26158722", "ns-icng", None),
     "tanzania": ("tb-tanzania", "trc-sgr", None),
+    "marmaray": ("Q20926238", "tcdd-marmaray", None),
 }
 
 
