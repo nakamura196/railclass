@@ -116,6 +116,9 @@ CLASSES = {
     "Q56394168": ("Q56394168", None, None),                    # MRTJ 1000 series (Jakarta MRT, Nippon Sharyo)
     "Q5122977": ("Q5122977", None, None),                     # Sydney Trains A & B sets (Waratah)
     "Q117538222": ("Q117538222", None, None),                   # EFE SFB-500 (CRRC Sifang bimodal)
+    # San Francisco cable cars: Wikidata has no item for the cars (Q374956 is the cable car system), so a class of our own;
+    # the system is linked in tools/class_lines.tsv. Route items: Powell-Hyde Q121410548, Powell-Mason Q113367771.
+    "tb-cablecar": (None, None, {"en": "San Francisco cable car (Powell Street single-ended type)", "ja": "サンフランシスコのケーブルカー（パウエル線の片運転台の車）"}),
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -139,6 +142,8 @@ HAND = {
     "tb-lisbon28": {"country": ["Q45"], "operator": ["Q1045108"], "kind": ["Q3407658"], "serviceEntry": [1995]},
     # Ethiopia; Ethiopian Railway Corporation; CRRC Changchun (then CNR Changchun); tram; opening 2015
     "tb-addis": {"country": ["Q115"], "operator": ["Q55639671"], "manufacturer": ["Q848225"], "kind": ["Q3407658"], "serviceEntry": [2015]},
+    # United States; San Francisco Municipal Railway (P137 of Q374956); cable car. No maker or year: the cars were built over many decades
+    "tb-cablecar": {"country": ["Q30"], "operator": ["Q1140138"], "kind": ["Q5609555"]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
@@ -149,6 +154,7 @@ HAND_SOURCE = {
     "tb-tanzania": "Country and operator from Wikidata Q60744141 (Tanzania Standard Gauge Railway); manufacturer and type (Hyundai Rotem electric locomotive, class E6800) from Railvolution 'New locomotives for Tanzania'; passenger service from 2024-06-14 (Railway Journal, The Citizen), read 2026-10-12 via the skytrain lab note docs/notes/tanzania.md.",
     "tb-lisbon28": "Country and operator (Carris) from Wikidata Q149629 (trams in Lisbon); type and the 1995-96 rebuild of the 1930s standard bodies (cars 541-585) from the skytrain lab note docs/notes/lisbon28.md.",
     "tb-addis": "Country and opening date (2015-09-21) from Wikidata Q16250141 (Addis Ababa Light Rail, the system); operator (Ethiopian Railway Corporation), manufacturer (CNR Changchun, now CRRC Changchun) and type (three-section 70 % low-floor tram) from the skytrain lab note docs/notes/addis.md (2026-10-12).",
+    "tb-cablecar": "Country, operator and type (cable car) from Wikidata Q374956 (San Francisco cable car system); the Powell Street single-ended car and its dimensions from streetcar.org via the skytrain lab note docs/notes/cablecar.md (2026-10-12).",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -206,6 +212,7 @@ LIVERIES = {
     "mrtj-standard": ({"en": "Jakarta MRT standard livery (navy and blue face, stainless with a sky-blue line; 2019-)", "ja": "ジャカルタ MRT の標準の塗装（紺と青の顔、ステンレスに水色の線。2019年から）"}, "Q137969581"),
     "sydney-trains-waratah": ({"en": "Sydney Trains Waratah livery (yellow face, orange cab sides, bare stainless, yellow doors)", "ja": "シドニー・トレインズのワラタの塗装（黄色の顔、橙色の運転室、ステンレス、黄色の扉）"}, "Q7660181"),
     "efe-sfb500": ({"en": "EFE SFB-500 livery (silver with a red-and-black nose and a blue stripe; 2024-)", "ja": "EFE SFB-500 の塗装（銀に赤と黒の顔、青い線。2024年から）"}, "Q679910"),
+    "muni-cablecar": ({"en": "Muni cable car livery (maroon, cream and light blue)", "ja": "Muni のケーブルカーの塗装（栗色・クリーム・水色）"}, "Q1140138"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -256,6 +263,7 @@ MODELS = {
     "jakartamrt": ("Q56394168", "mrtj-standard", None),
     "waratah": ("Q5122977", "sydney-trains-waratah", None),
     "santiago-chillan": ("Q117538222", "efe-sfb500", None),
+    "cablecar": ("tb-cablecar", "muni-cablecar", None),
 }
 
 

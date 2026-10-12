@@ -240489,9 +240489,6 @@ wd:Q11378730 rdfs:label "伊万里鉄道"@ja .
 
 wd:Q113833509 rdfs:label "Ateliers de Seneffe"@en .
 
-wd:Q1140138 rdfs:label "San Francisco Municipal Railway"@en,
-        "サンフランシスコ市営鉄道"@ja .
-
 wd:Q11402784 rdfs:label "Naebo Workshop"@en,
         "北海道旅客鉄道苗穂工場"@ja .
 
@@ -242498,6 +242495,9 @@ wd:Q5603798 rdfs:label "Greencore Group"@en,
         "アイルランド製糖会社"@ja .
 
 wd:Q5604969 rdfs:label "Greenwood & Batley"@en .
+
+wd:Q5609555 rdfs:label "cable car"@en,
+        "ケーブルカー (鉄道)"@ja .
 
 wd:Q56153119 rdfs:label "Alexandrovsky Machine Building Plant"@en .
 
@@ -261672,6 +261672,32 @@ cls:tb-addis a skos:Concept,
     tb:sourceSection "Wikidata (the system)" ;
     tb:useStatus "current" .
 
+cls:tb-cablecar a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "San Francisco cable car (Powell Street single-ended type)"@en,
+        "サンフランシスコのケーブルカー（パウエル線の片運転台の車）"@ja ;
+    dcterms:source "Country, operator and type (cable car) from Wikidata Q374956 (San Francisco cable car system); the Powell Street single-ended car and its dimensions from streetcar.org via the skytrain lab note docs/notes/cablecar.md (2026-10-12)."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "San Francisco cable car (Powell Street single-ended type)"@en,
+        "サンフランシスコのケーブルカー（パウエル線の片運転台の車）"@ja ;
+    wdt:P137 wd:Q1140138 ;
+    wdt:P17 wd:Q30 ;
+    wdt:P279 wd:Q5609555 ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P279 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-cablecar#line1> ;
+    tb:usedOn wd:Q374956 ;
+    schema:subjectOf mdl:cablecar .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-cablecar#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q374956> ;
+    skos:note "the San Francisco cable car system itself; Wikidata has no item for the cars"@en ;
+    tb:line wd:Q374956 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
 cls:tb-dubaimetro a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Dubai Metro Kinki Sharyo train"@en,
@@ -262449,6 +262475,114 @@ mdl:bus49_rear a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color3>,
         <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4> ;
     tb:liveryOf wd:Q1142140 .
+
+mdl:cablecar a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#livery> ;
+    schema:about cls:tb-cablecar ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/cablecar.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "パウエル線の片運転台の車（1号車）。栗色・クリーム・水色のMuni塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 44.8 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "サンフランシスコのケーブルカー"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/cablecar/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/cablecar.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#cablecar> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color1> a tb:ColorSample ;
+    rdfs:label "cream" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.6158 ;
+    schema:color "#ECE3C8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color10> a tb:ColorSample ;
+    rdfs:label "board" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0121 ;
+    schema:color "#BCBCB4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color11> a tb:ColorSample ;
+    rdfs:label "sill" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0078 ;
+    schema:color "#3C3E42" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color2> a tb:ColorSample ;
+    rdfs:label "shade" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0961 ;
+    schema:color "#1E1A18" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color3> a tb:ColorSample ;
+    rdfs:label "maroon" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0547 ;
+    schema:color "#6A1C24" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color4> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0525 ;
+    schema:color "#F2F4F5" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color5> a tb:ColorSample ;
+    rdfs:label "wood" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0525 ;
+    schema:color "#9A6230" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color6> a tb:ColorSample ;
+    rdfs:label "bench" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0463 ;
+    schema:color "#5E3A22" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color7> a tb:ColorSample ;
+    rdfs:label "skyblue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0179 ;
+    schema:color "#A8C6D6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color8> a tb:ColorSample ;
+    rdfs:label "frost" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0161 ;
+    schema:color "#F6F3E6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color9> a tb:ColorSample ;
+    rdfs:label "gold" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0134 ;
+    schema:color "#C89A3A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#livery> a tb:Livery ;
+    rdfs:label "Muni cable car livery (maroon, cream and light blue)"@en,
+        "Muni のケーブルカーの塗装（栗色・クリーム・水色）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/cablecar/muni_cablecar.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q39338,
+        wd:Q47071 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color11>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color9> ;
+    tb:liveryOf wd:Q1140138 .
 
 mdl:canadian a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -267628,6 +267762,8 @@ wd:Q3743699 rdfs:label "Dublin–Galway railway line"@en .
 
 wd:Q3744483 rdfs:label "S75"@en .
 
+wd:Q374956 rdfs:label "San Francisco cable car system"@en .
+
 wd:Q381109 rdfs:label "Aerfer"@en,
         "アリエフェール"@ja .
 
@@ -269361,6 +269497,9 @@ wd:Q11370367 rdfs:label "Kyushu Electric Railroad"@en,
         "九州電気軌道"@ja .
 
 wd:Q113816797 rdfs:label "City Air Terminal Betriebsgesellschaft m.b.H"@en .
+
+wd:Q1140138 rdfs:label "San Francisco Municipal Railway"@en,
+        "サンフランシスコ市営鉄道"@ja .
 
 wd:Q114018 rdfs:label "Stettiner Straßen-Eisenbahn-Gesellschaft"@en .
 
@@ -273656,9 +273795,6 @@ wd:Q3752590 rdfs:label "Freccia della Versilia"@en .
 
 wd:Q459508 rdfs:label "Salzburg S-Bahn"@en .
 
-wd:Q47071 rdfs:label "brown"@en,
-        "茶色"@ja .
-
 wd:Q4756279 rdfs:label "Andrew Barclay Sons & Co."@en,
         "バークレー"@ja .
 
@@ -274058,6 +274194,9 @@ wd:Q34266 rdfs:label "Russian Empire"@en,
 wd:Q4647719 rdfs:label "A. E. Goodwin"@en,
         "A.E.グッドウィン"@ja .
 
+wd:Q47071 rdfs:label "brown"@en,
+        "茶色"@ja .
+
 wd:Q501329 rdfs:label "Vietnam Railways"@en,
         "ベトナムの鉄道"@ja .
 
@@ -274432,9 +274571,6 @@ wd:Q3487579 rdfs:label "Société J. F Cail & Cie"@en .
 wd:Q384011 rdfs:label "Japanese National Railways"@en,
         "日本国有鉄道"@ja .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q3997890 rdfs:label "Caledonian Railway"@en,
         "カレドニアン鉄道"@ja .
 
@@ -274650,6 +274786,9 @@ wd:Q24736436 rdfs:label "11 kV, 25 Hz AC railway electrification"@en .
 
 wd:Q2842866 rdfs:label "American Car and Foundry Company"@en,
         "アメリカン・カー・アンド・ファウンドリー・カンパニー"@ja .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q45464 rdfs:label "Tatra"@en,
         "タトラ"@ja .
@@ -275157,9 +275296,6 @@ wd:Q18853 rdfs:label "DB Regio"@en,
 wd:Q2105117 rdfs:label "Hollandsche IJzeren Spoorweg-Maatschappij"@en,
         "ホラント鉄道"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q4736953 rdfs:label "Altoona Works"@en,
         "アルトゥーナ工場"@ja .
 
@@ -275197,6 +275333,9 @@ wd:Q1906878 rdfs:label "Oerlikon Works"@en,
         "エリコン機械製造"@ja .
 
 wd:Q20970690 rdfs:label "2140 mm track gauge"@en .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q2539159 rdfs:label "Waggonbau Bautzen"@en .
 
@@ -275295,9 +275434,6 @@ wd:Q131964 rdfs:label "Austrian Empire"@en,
 wd:Q2076679 rdfs:label "Montreal Locomotive Works"@en,
         "モントリオール・ロコモティブ・ワークス"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q5224013 rdfs:label "Darlington Works"@en,
         "ダーリントン工場"@ja .
 
@@ -275306,6 +275442,9 @@ wd:Q53238 rdfs:label "Hitachi"@en,
 
 wd:Q917079 rdfs:label "Norfolk and Western Railway"@en,
         "ノーフォーク・アンド・ウェスタン鉄道"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q4228338 rdfs:label "Kolomna Locomotive Works"@en,
         "コロムナ工場"@ja .
@@ -275441,9 +275580,6 @@ wd:Q2449525 rdfs:label "Transnet Freight Rail"@en,
 wd:Q5261524 rdfs:label "Derby Works"@en,
         "ダービー鉄道製作所"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q2476154 rdfs:label "Renfe Operadora"@en,
         "レンフェ"@ja .
 
@@ -275457,6 +275593,9 @@ wd:Q392082 rdfs:label "Škoda Vagonka"@en,
 
 wd:Q414 rdfs:label "Argentina"@en,
         "アルゼンチン"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q1982888 rdfs:label "New South Wales Government Railways"@en,
         "ニューサウスウェールズ鉄道"@ja .
@@ -275879,11 +276018,11 @@ wd:Q193619 rdfs:label "Union of South Africa"@en,
 wd:Q304944 rdfs:label "České dráhy"@en,
         "チェコ鉄道"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q45 rdfs:label "Portugal"@en,
         "ポルトガル"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q687175 rdfs:label "Deutsche Bundesbahn"@en,
         "ドイツ連邦鉄道"@ja .

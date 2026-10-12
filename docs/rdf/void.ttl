@@ -17,7 +17,7 @@
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
     dcterms:title "All classes and models (JSON-LD)"@en,
         "全形式と 3D モデル（JSON-LD）"@ja ;
-    dcat:byteSize "19565003"^^xsd:nonNegativeInteger ;
+    dcat:byteSize "19575816"^^xsd:nonNegativeInteger ;
     dcat:downloadURL <https://railclass.ldas.jp/rdf/all.jsonld> ;
     dcat:mediaType "application/ld+json" .
 
@@ -25,7 +25,7 @@
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
     dcterms:title "All classes and models (Turtle)"@en,
         "全形式と 3D モデル（Turtle）"@ja ;
-    dcat:byteSize "9825663"^^xsd:nonNegativeInteger ;
+    dcat:byteSize "9832095"^^xsd:nonNegativeInteger ;
     dcat:downloadURL <https://railclass.ldas.jp/rdf/all.ttl> ;
     dcat:mediaType "text/turtle" .
 
@@ -42,7 +42,7 @@
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:title "IIIF Presentation 4.0 Collection of the 3D models"@en,
         "3D モデルの IIIF Collection（Presentation 4.0）"@ja ;
-    dcat:byteSize "18345"^^xsd:nonNegativeInteger ;
+    dcat:byteSize "18751"^^xsd:nonNegativeInteger ;
     dcat:downloadURL <https://railclass.ldas.jp/iiif/collection.json> ;
     dcat:mediaType "application/ld+json" .
 
@@ -71,7 +71,7 @@
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:title "List of the 3D models (JSON)"@en,
         "3D モデルの一覧（JSON）"@ja ;
-    dcat:byteSize "21937"^^xsd:nonNegativeInteger ;
+    dcat:byteSize "22424"^^xsd:nonNegativeInteger ;
     dcat:downloadURL <https://railclass.ldas.jp/data/models.json> ;
     dcat:mediaType "application/json" .
 
@@ -85,41 +85,41 @@
 
 <https://nakamura196.github.io/train-bodies/dataset> a void:Dataset,
         dcat:Dataset ;
-    dcterms:creator _:N07808a7a6e42413cb35e8eca6a81c697 ;
-    dcterms:description "14,332 railway vehicle classes outside Japan, taken from Wikidata and linked to it (skos:exactMatch), with operator, manufacturer and other values as Wikidata IRIs, photos for 10,402 classes (Wikimedia Commons), the lines 930 classes run on, and 46 3D-printed vehicle bodies with their liveries. No SPARQL endpoint: every resource is a static file (Turtle and JSON-LD), and the whole dataset is in one dump file."@en,
-        "日本を除く世界の鉄道車両の形式 14,332 件。Wikidata から取り出し、skos:exactMatch で結んでいる。運行者・製造者などの値は Wikidata の IRI のまま持つ。写真 10,402 形式（Wikimedia Commons）、走る路線 930 形式、3D プリントで作った車体 46 件とその塗装を含む。SPARQL エンドポイントは無い。資源はすべて静的なファイル（Turtle と JSON-LD）で、全体は一括ファイル 1 つにまとめてある。"@ja ;
+    dcterms:creator _:N682fbbc2393c482b8939d85887f26935 ;
+    dcterms:description "14,333 railway vehicle classes outside Japan, taken from Wikidata and linked to it (skos:exactMatch), with operator, manufacturer and other values as Wikidata IRIs, photos for 10,402 classes (Wikimedia Commons), the lines 931 classes run on, and 47 3D-printed vehicle bodies with their liveries. No SPARQL endpoint: every resource is a static file (Turtle and JSON-LD), and the whole dataset is in one dump file."@en,
+        "日本を除く世界の鉄道車両の形式 14,333 件。Wikidata から取り出し、skos:exactMatch で結んでいる。運行者・製造者などの値は Wikidata の IRI のまま持つ。写真 10,402 形式（Wikimedia Commons）、走る路線 931 形式、3D プリントで作った車体 47 件とその塗装を含む。SPARQL エンドポイントは無い。資源はすべて静的なファイル（Turtle と JSON-LD）で、全体は一括ファイル 1 つにまとめてある。"@ja ;
     dcterms:isReferencedBy <https://github.com/nakamura196/railclass> ;
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
     dcterms:modified "2026-10-12"^^xsd:date ;
-    dcterms:publisher _:N07808a7a6e42413cb35e8eca6a81c697 ;
+    dcterms:publisher _:N682fbbc2393c482b8939d85887f26935 ;
     dcterms:rights "Class data CC0. 3D models (schema:3DModel and their files) CC BY 4.0, stated on each model with schema:license. Photos: the licence of each Wikimedia Commons file."@en ;
     dcterms:source wd:Q2013 ;
     dcterms:title "RailClass: railway vehicle classes of the world"@en,
         "RailClass: 世界の鉄道車両の形式"@ja ;
-    void:classPartition [ void:class rdf:Property ;
+    void:classPartition [ void:class tb:Livery ;
+            void:entities 47 ],
+        [ void:class tb:LineUse ;
+            void:entities 2498 ],
+        [ void:class rdf:Property ;
             void:entities 16 ],
-        [ void:class skos:Concept ;
-            void:entities 14332 ],
-        [ void:class tb:Livery ;
-            void:entities 46 ],
-        [ void:class tb:VehicleClass ;
-            void:entities 14332 ],
-        [ void:class rdfs:Class ;
-            void:entities 4 ],
         [ void:class skos:ConceptScheme ;
             void:entities 1 ],
         [ void:class tb:ColorSample ;
-            void:entities 299 ],
-        [ void:class schema:QuantitativeValue ;
-            void:entities 138 ],
+            void:entities 310 ],
         [ void:class schema:3DModel ;
-            void:entities 46 ],
-        [ void:class tb:LineUse ;
-            void:entities 2497 ] ;
+            void:entities 47 ],
+        [ void:class tb:VehicleClass ;
+            void:entities 14333 ],
+        [ void:class skos:Concept ;
+            void:entities 14333 ],
+        [ void:class schema:QuantitativeValue ;
+            void:entities 141 ],
+        [ void:class rdfs:Class ;
+            void:entities 4 ] ;
     void:dataDump <https://railclass.ldas.jp/rdf/all.jsonld>,
         <https://railclass.ldas.jp/rdf/all.ttl> ;
-    void:distinctSubjects 17241 ;
-    void:entities 17241 ;
+    void:distinctSubjects 17256 ;
+    void:entities 17256 ;
     void:exampleResource cls:Q115612330,
         cls:Q696668,
         cls:tb-skytrain-mk2,
@@ -127,120 +127,120 @@
     void:feature <http://www.w3.org/ns/formats/JSON-LD>,
         <http://www.w3.org/ns/formats/Turtle> ;
     void:properties 55 ;
-    void:propertyPartition [ void:property skos:note ;
-            void:triples 2497 ],
-        [ void:property <http://www.wikidata.org/prop/direct/P2978> ;
+    void:propertyPartition [ void:property <http://www.wikidata.org/prop/direct/P2978> ;
             void:triples 7545 ],
-        [ void:property <http://www.wikidata.org/prop/direct/P279> ;
-            void:triples 14097 ],
+        [ void:property schema:depth ;
+            void:triples 47 ],
         [ void:property prov:wasDerivedFrom ;
             void:triples 14321 ],
-        [ void:property schema:name ;
-            void:triples 46 ],
-        [ void:property <http://www.wikidata.org/prop/direct/P1064> ;
-            void:triples 10070 ],
         [ void:property schema:thumbnailUrl ;
-            void:triples 46 ],
-        [ void:property schema:subjectOf ;
-            void:triples 92 ],
-        [ void:property <http://www.wikidata.org/prop/direct/P930> ;
-            void:triples 1924 ],
-        [ void:property skos:prefLabel ;
-            void:triples 15874 ],
-        [ void:property <http://www.wikidata.org/prop/direct/P176> ;
-            void:triples 14882 ],
-        [ void:property schema:depth ;
-            void:triples 46 ],
-        [ void:property <http://www.wikidata.org/prop/direct/P17> ;
-            void:triples 8796 ],
-        [ void:property schema:url ;
-            void:triples 46 ],
-        [ void:property tb:useStatus ;
-            void:triples 2497 ],
-        [ void:property rdf:type ;
-            void:triples 31711 ],
-        [ void:property schema:about ;
-            void:triples 46 ],
-        [ void:property tb:sourceSection ;
-            void:triples 2497 ],
-        [ void:property dcterms:license ;
-            void:triples 1 ],
-        [ void:property skos:inScheme ;
-            void:triples 14332 ],
-        [ void:property tb:operatingCountry ;
-            void:triples 12202 ],
-        [ void:property schema:value ;
-            void:triples 138 ],
-        [ void:property schema:encodingFormat ;
-            void:triples 46 ],
-        [ void:property tb:areaShare ;
-            void:triples 299 ],
-        [ void:property tb:inferred ;
-            void:triples 16 ],
-        [ void:property <http://www.wikidata.org/prop/direct/P2052> ;
-            void:triples 3840 ],
-        [ void:property schema:height ;
-            void:triples 46 ],
-        [ void:property tb:part ;
-            void:triples 4 ],
-        [ void:property tb:colorSample ;
-            void:triples 299 ],
-        [ void:property schema:unitCode ;
-            void:triples 138 ],
-        [ void:property rdfs:isDefinedBy ;
-            void:triples 20 ],
-        [ void:property schema:color ;
-            void:triples 299 ],
-        [ void:property <http://www.wikidata.org/prop/direct/P137> ;
-            void:triples 15830 ],
-        [ void:property tb:lineUse ;
-            void:triples 2497 ],
-        [ void:property tb:has3DModel ;
-            void:triples 14332 ],
-        [ void:property foaf:depiction ;
-            void:triples 10402 ],
+            void:triples 47 ],
         [ void:property tb:usedOn ;
-            void:triples 2497 ],
-        [ void:property skos:exactMatch ;
-            void:triples 14321 ],
+            void:triples 2498 ],
         [ void:property rdfs:comment ;
             void:triples 20 ],
-        [ void:property tb:usedUntil ;
-            void:triples 192 ],
-        [ void:property tb:galleryGroup ;
-            void:triples 46 ],
-        [ void:property <http://www.wikidata.org/prop/direct/P729> ;
-            void:triples 4439 ],
-        [ void:property rdfs:label ;
-            void:triples 24251 ],
-        [ void:property schema:width ;
-            void:triples 46 ],
-        [ void:property schema:description ;
-            void:triples 46 ],
-        [ void:property tb:handEntered ;
-            void:triples 48 ],
-        [ void:property <http://www.wikidata.org/prop/direct/P462> ;
-            void:triples 394 ],
-        [ void:property tb:liveryOf ;
-            void:triples 46 ],
-        [ void:property skos:broader ;
-            void:triples 7 ],
+        [ void:property foaf:depiction ;
+            void:triples 10402 ],
+        [ void:property schema:subjectOf ;
+            void:triples 94 ],
+        [ void:property tb:operatingCountry ;
+            void:triples 12202 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 20 ],
         [ void:property skos:broadMatch ;
             void:triples 4 ],
+        [ void:property schema:url ;
+            void:triples 47 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P462> ;
+            void:triples 408 ],
+        [ void:property schema:name ;
+            void:triples 47 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P176> ;
+            void:triples 14882 ],
+        [ void:property skos:broader ;
+            void:triples 7 ],
+        [ void:property schema:encodingFormat ;
+            void:triples 47 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P729> ;
+            void:triples 4439 ],
+        [ void:property tb:liveryOf ;
+            void:triples 47 ],
+        [ void:property schema:about ;
+            void:triples 47 ],
+        [ void:property tb:colorSample ;
+            void:triples 310 ],
+        [ void:property skos:inScheme ;
+            void:triples 14333 ],
+        [ void:property schema:description ;
+            void:triples 47 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P279> ;
+            void:triples 14098 ],
+        [ void:property tb:lineUse ;
+            void:triples 2498 ],
+        [ void:property tb:handEntered ;
+            void:triples 51 ],
+        [ void:property schema:width ;
+            void:triples 47 ],
+        [ void:property tb:useStatus ;
+            void:triples 2498 ],
+        [ void:property tb:areaShare ;
+            void:triples 310 ],
+        [ void:property tb:galleryGroup ;
+            void:triples 47 ],
         [ void:property dcterms:source ;
-            void:triples 2554 ],
-        [ void:property tb:line ;
-            void:triples 2497 ],
-        [ void:property schema:license ;
-            void:triples 46 ],
+            void:triples 2557 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P1064> ;
+            void:triples 10070 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P137> ;
+            void:triples 15831 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P17> ;
+            void:triples 8797 ],
+        [ void:property tb:has3DModel ;
+            void:triples 14333 ],
+        [ void:property skos:exactMatch ;
+            void:triples 14321 ],
+        [ void:property tb:inferred ;
+            void:triples 16 ],
+        [ void:property rdf:type ;
+            void:triples 31730 ],
+        [ void:property schema:value ;
+            void:triples 141 ],
         [ void:property tb:livery ;
-            void:triples 46 ],
+            void:triples 47 ],
+        [ void:property tb:line ;
+            void:triples 2498 ],
+        [ void:property schema:unitCode ;
+            void:triples 141 ],
+        [ void:property tb:part ;
+            void:triples 4 ],
+        [ void:property schema:height ;
+            void:triples 47 ],
+        [ void:property tb:usedUntil ;
+            void:triples 192 ],
+        [ void:property skos:prefLabel ;
+            void:triples 15876 ],
+        [ void:property dcterms:license ;
+            void:triples 1 ],
+        [ void:property tb:sourceSection ;
+            void:triples 2498 ],
+        [ void:property schema:color ;
+            void:triples 310 ],
+        [ void:property schema:license ;
+            void:triples 47 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P2052> ;
+            void:triples 3840 ],
+        [ void:property rdfs:label ;
+            void:triples 24269 ],
+        [ void:property <http://www.wikidata.org/prop/direct/P930> ;
+            void:triples 1924 ],
+        [ void:property skos:note ;
+            void:triples 2498 ],
         [ void:property schema:contentUrl ;
-            void:triples 46 ] ;
+            void:triples 47 ] ;
     void:rootResource <https://nakamura196.github.io/train-bodies/rdf/> ;
     void:subset <https://nakamura196.github.io/train-bodies/dataset#links-commons>,
         <https://nakamura196.github.io/train-bodies/dataset#links-wikidata> ;
-    void:triples 253320 ;
+    void:triples 253445 ;
     void:uriSpace "https://nakamura196.github.io/train-bodies/rdf/" ;
     void:vocabulary dcterms:,
         rdf:,
@@ -269,7 +269,7 @@
     dcat:landingPage <https://railclass.ldas.jp/dataset.html> ;
     foaf:homepage <https://railclass.ldas.jp/> .
 
-_:N07808a7a6e42413cb35e8eca6a81c697 a foaf:Person ;
+_:N682fbbc2393c482b8939d85887f26935 a foaf:Person ;
     foaf:name "Satoru Nakamura"@en,
         "中村 覚"@ja .
 

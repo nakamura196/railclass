@@ -1,0 +1,118 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:cablecar a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#livery> ;
+    schema:about cls:tb-cablecar ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/cablecar.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "パウエル線の片運転台の車（1号車）。栗色・クリーム・水色のMuni塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 44.8 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "サンフランシスコのケーブルカー"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/cablecar/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/cablecar.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#cablecar> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color1> a tb:ColorSample ;
+    rdfs:label "cream" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.6158 ;
+    schema:color "#ECE3C8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color10> a tb:ColorSample ;
+    rdfs:label "board" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0121 ;
+    schema:color "#BCBCB4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color11> a tb:ColorSample ;
+    rdfs:label "sill" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0078 ;
+    schema:color "#3C3E42" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color2> a tb:ColorSample ;
+    rdfs:label "shade" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0961 ;
+    schema:color "#1E1A18" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color3> a tb:ColorSample ;
+    rdfs:label "maroon" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0547 ;
+    schema:color "#6A1C24" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color4> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0525 ;
+    schema:color "#F2F4F5" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color5> a tb:ColorSample ;
+    rdfs:label "wood" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0525 ;
+    schema:color "#9A6230" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color6> a tb:ColorSample ;
+    rdfs:label "bench" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0463 ;
+    schema:color "#5E3A22" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color7> a tb:ColorSample ;
+    rdfs:label "skyblue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0179 ;
+    schema:color "#A8C6D6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color8> a tb:ColorSample ;
+    rdfs:label "frost" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0161 ;
+    schema:color "#F6F3E6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color9> a tb:ColorSample ;
+    rdfs:label "gold" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0134 ;
+    schema:color "#C89A3A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cablecar#livery> a tb:Livery ;
+    rdfs:label "Muni cable car livery (maroon, cream and light blue)"@en,
+        "Muni のケーブルカーの塗装（栗色・クリーム・水色）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/cablecar/muni_cablecar.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q39338,
+        wd:Q47071 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color11>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color9> ;
+    tb:liveryOf wd:Q1140138 .
+

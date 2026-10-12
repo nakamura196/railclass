@@ -1,0 +1,104 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "wd:Q374956",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "San Francisco cable car system"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-cablecar",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Country, operator and type (cable car) from Wikidata Q374956 (San Francisco cable car system); the Powell Street single-ended car and its dimensions from streetcar.org via the skytrain lab note docs/notes/cablecar.md (2026-10-12)."
+      },
+      "handEntered": [
+        {
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P137"
+        },
+        {
+          "@id": "wdt:P279"
+        }
+      ],
+      "has3DModel": true,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-cablecar#line1"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "San Francisco cable car (Powell Street single-ended type)"
+        },
+        {
+          "@language": "ja",
+          "@value": "サンフランシスコのケーブルカー（パウエル線の片運転台の車）"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cablecar"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "San Francisco cable car (Powell Street single-ended type)"
+        },
+        {
+          "@language": "ja",
+          "@value": "サンフランシスコのケーブルカー（パウエル線の片運転台の車）"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q374956"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1140138"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q30"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q5609555"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-cablecar#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q374956"
+      },
+      "line": {
+        "@id": "wd:Q374956"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "the San Francisco cable car system itself; Wikidata has no item for the cars"
+      },
+      "sourceSection": "Wikidata (the system)",
+      "useStatus": "current"
+    }
+  ]
+}
