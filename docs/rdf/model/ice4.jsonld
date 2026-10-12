@@ -1,0 +1,250 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0153"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#5E7080",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0111"
+      },
+      "rdfs:label": "frame",
+      "schema:color": "#4C5055",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color6"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color7"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color8"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/ice4/db_ice4.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q9322"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Deutsche Bahn livery (red stripe)"
+        },
+        {
+          "@language": "ja",
+          "@value": "DB の塗装（赤い帯）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3142"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color8",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0067"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0293"
+      },
+      "rdfs:label": "seam",
+      "schema:color": "#303336",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q324870"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/ice4.glb"
+      },
+      "schema:depth": {
+        "@id": "_:ice4-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "ドイツ鉄道の高速電車（412 形）。白地に赤い帯 1 本の標準の塗装。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:ice4-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "ICE 4"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/ice4/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/ice4.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#ice4"
+      },
+      "schema:width": {
+        "@id": "_:ice4-width"
+      }
+    },
+    {
+      "@id": "_:ice4-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:ice4-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:ice4-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0363"
+      },
+      "rdfs:label": "red",
+      "schema:color": "#CC1014",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0519"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8070"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#ECEEEC",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ice4#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0369"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#55595D",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    }
+  ]
+}

@@ -128,6 +128,7 @@ CLASSES = {
     "Q18619244": ("Q18619244", None, None),                    # KTM Class 93 (ETS, CRRC Zhuzhou)
     "Q119438293": ("Q119438293", None, None),                  # Namo Bharat (NCRTC RRTS trainset; P31 is Q870 train)
     "Q55614147": ("Q55614147", None, None),                   # Hyundai Rotem EMU (SkyTrain Canada Line)
+    "Q324870": ("Q324870", None, None),                       # ICE 4 (DB Class 412)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -292,6 +293,7 @@ MODELS = {
     "ets": ("Q18619244", "ktm-ets2", None),
     "namobharat": ("Q119438293", "ncrtc-namobharat", None),
     "canadaline": ("Q55614147", "translink-canadaline", None),
+    "ice4": ("Q324870", "db", None),
 }
 
 
