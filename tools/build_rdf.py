@@ -122,6 +122,7 @@ CLASSES = {
     # Cairo Metro Line 2: Wikidata has no item for its Japanese-built cars (Q5017773 is the line), so a class of our own;
     # the line is linked in tools/class_lines.tsv.
     "tb-cairo": (None, None, {"en": "Cairo Metro Line 2 Japanese-built car", "ja": "カイロ地下鉄 2 号線の日本製の電車"}),
+    "Q423578": ("Q423578", None, None),                       # Vietnam Railways D19E
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -174,7 +175,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q18349836": "ダージリン・ヒマラヤ鉄道 B形",
             "Q120801969": "コルコバード登山鉄道 4 代目電車",
             "Q56394168": "ジャカルタ MRT 1000系",
-            "Q117538222": "チリ国鉄 SFB-500"}
+            "Q117538222": "チリ国鉄 SFB-500",
+            "Q423578": "ベトナム鉄道 D19E形"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -220,6 +222,7 @@ LIVERIES = {
     "efe-sfb500": ({"en": "EFE SFB-500 livery (silver with a red-and-black nose and a blue stripe; 2024-)", "ja": "EFE SFB-500 の塗装（銀に赤と黒の顔、青い線。2024年から）"}, "Q679910"),
     "muni-cablecar": ({"en": "Muni cable car livery (maroon, cream and light blue)", "ja": "Muni のケーブルカーの塗装（栗色・クリーム・水色）"}, "Q1140138"),
     "cairo-line2": ({"en": "Cairo Metro Line 2 livery (stainless with orange and lilac bands)", "ja": "カイロ地下鉄 2 号線の塗装（ステンレスにオレンジと薄紫の帯）"}, "Q64744683"),
+    "vnr-hanoi-skyblue": ({"en": "Vietnam Railways Hanoi depot livery (sky blue, cream cab front, red band)", "ja": "ベトナム鉄道ハノイ機関区の塗装（空色、クリーム色の運転室の正面、赤い帯）"}, "Q501329"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -272,6 +275,7 @@ MODELS = {
     "santiago-chillan": ("Q117538222", "efe-sfb500", None),
     "cablecar": ("tb-cablecar", "muni-cablecar", None),
     "cairo": ("tb-cairo", "cairo-line2", None),
+    "vietnam": ("Q423578", "vnr-hanoi-skyblue", None),
 }
 
 
