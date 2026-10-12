@@ -77,6 +77,8 @@ CLASSES = {
     "Q23641827": ("Q23641827", None, None),                     # Electric Tilt Train (Queensland Rail)
     "Q246841": ("Q246841", None, None),                         # British Rail Class 395 (Javelin)
     "Q18331751": ("Q18331751", None, None),                     # PKP class ED250 (Alstom New Pendolino)
+    # Wikidata has only a "mul" label for this class (none in en / ja), so the labels are given here
+    "Q140092296": ("Q140092296", None, {"en": "Alstom X'Trapolis Tsíimin K'áak (Tren Maya)", "ja": "トレン・マヤの電車（X'Trapolis Tsíimin K'áak）"}),
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -116,6 +118,7 @@ LIVERIES = {
     "qr-tilt": ({"en": "Queensland Rail Tilt Train livery (yellow cab end and stainless, since the 2015–17 refurbishment)", "ja": "クイーンズランド鉄道のティルト・トレインの塗装（黄色の先頭部とステンレス、2015〜17年の更新から）"}, "Q379439"),
     "southeastern-2025": ({"en": "Southeastern high-speed livery (2025: grey doors and swoosh)", "ja": "Southeastern の高速電車の塗装（2025年から、灰色の扉と弧）"}, "Q1696490"),
     "pkp-ic-ed250": ({"en": "PKP Intercity Pendolino livery (silver with sky blue and cobalt)", "ja": "PKP インターシティのペンドリーノの塗装（銀に空色と紺）"}, "Q590406"),
+    "tren-maya-xiinbal": ({"en": "Tren Maya Xiinbal livery (cream, dark teal and green)", "ja": "トレン・マヤ Xiinbal の塗装（クリーム、濃い青緑と緑）"}, "Q59806309"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -142,6 +145,7 @@ MODELS = {
     "tilttrain": ("Q23641827", "qr-tilt", None),
     "class395": ("Q246841", "southeastern-2025", None),
     "ed250": ("Q18331751", "pkp-ic-ed250", None),
+    "trenmaya": ("Q140092296", "tren-maya-xiinbal", None),
 }
 
 

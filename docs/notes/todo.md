@@ -215,3 +215,4 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [x] 2026-10-11 電気式ティルト・トレイン（tilttrain、Q23641827、塗装 qr-tilt）を足した。色は黄・灰、注釈 14 か所（推測 1・模型の都合 1）。npm test 通過。gallery は skytrain ce1a3a9
 - [x] 2026-10-11 クラス395「ジャベリン」（class395、Q246841、塗装 southeastern-2025、運行 Southeastern Q1696490）を足した。色は青（紺）・橙・黄、注釈 15 か所（推測 1・模型の都合 1）。npm test 通過。gallery は skytrain 5db1e42
 - [x] 2026-10-11 ED250 ペンドリーノ（ed250、Q18331751、塗装 pkp-ic-ed250、運行 PKP Intercity Q590406）を足した。Wikidata に日本語の名前が無いので LABEL_JA に「ED250 ペンドリーノ」。色は灰（銀）・青、注釈 13 か所（推測 1・模型の都合 1）。npm test 通過。gallery は skytrain 54e8d48
+- [x] 2026-10-12 トレン・マヤ（trenmaya、Q140092296、塗装 tren-maya-xiinbal、事業 Q59806309）を足した。Wikidata の名前が mul だけ（en・ja が無い）なので、CLASSES に en・ja の名前を手で入れた。色は白（クリーム）・緑、注釈 15 か所（推測 1・模型の都合 2）。npm test 通過。gallery は skytrain d4606cb

@@ -57581,18 +57581,6 @@ cls:Q140080673 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q213 .
 
-cls:Q140092296 a skos:Concept,
-        tb:VehicleClass ;
-    skos:exactMatch wd:Q140092296 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    prov:wasDerivedFrom wd:Q140092296 ;
-    wdt:P137 wd:Q59806309 ;
-    wdt:P176 wd:Q309084 ;
-    wdt:P279 wd:Q3570298 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Tren%20X%27Trapolis%20Ts%C3%ADimin%20K%E2%80%99%C3%A1ak%20arribando%20a%20la%20estaci%C3%B3n%20M%C3%A9rida%20Teya.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q96 .
-
 cls:Q1401013 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "StEG 32.5"@en ;
@@ -246003,6 +245991,23 @@ cls:Q137972762 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q140092296 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Alstom X'Trapolis Tsíimin K'áak (Tren Maya)"@en,
+        "トレン・マヤの電車（X'Trapolis Tsíimin K'áak）"@ja ;
+    skos:exactMatch wd:Q140092296 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Alstom X'Trapolis Tsíimin K'áak (Tren Maya)"@en,
+        "トレン・マヤの電車（X'Trapolis Tsíimin K'áak）"@ja ;
+    prov:wasDerivedFrom wd:Q140092296 ;
+    wdt:P137 wd:Q59806309 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q3570298 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Tren%20X%27Trapolis%20Ts%C3%ADimin%20K%E2%80%99%C3%A1ak%20arribando%20a%20la%20estaci%C3%B3n%20M%C3%A9rida%20Teya.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q96 ;
+    schema:subjectOf mdl:trenmaya .
+
 cls:Q140611223 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Amtrak Airo"@en,
@@ -263146,6 +263151,85 @@ mdl:tilttrain a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color7> ;
     tb:liveryOf wd:Q379439 .
 
+mdl:trenmaya a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#livery> ;
+    schema:about cls:Q140092296 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/trenmaya.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.3 ] ;
+    schema:description "メキシコ・ユカタン半島を回る電車。標準編成 Xiinbal のクリームと青緑・緑の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.7 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "トレン・マヤ"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/trenmaya/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/trenmaya.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#trenmaya> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color1> a tb:ColorSample ;
+    rdfs:label "cream" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.6181 ;
+    schema:color "#E6E3D6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color2> a tb:ColorSample ;
+    rdfs:label "teal" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.1630 ;
+    schema:color "#0E5552" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color3> a tb:ColorSample ;
+    rdfs:label "jade" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.1295 ;
+    schema:color "#3A8F72" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0341 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color5> a tb:ColorSample ;
+    rdfs:label "mint" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0304 ;
+    schema:color "#4DB88C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0127 ;
+    schema:color "#4A5A62" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0090 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#livery> a tb:Livery ;
+    rdfs:label "Tren Maya Xiinbal livery (cream, dark teal and green)"@en,
+        "トレン・マヤ Xiinbal の塗装（クリーム、濃い青緑と緑）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/trenmaya/tm_trenmaya.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color7> ;
+    tb:liveryOf wd:Q59806309 .
+
 mdl:vandebharat a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#livery> ;
@@ -268064,8 +268148,6 @@ wd:Q5927253 rdfs:label "Materfer"@en,
 wd:Q5948590 rdfs:label "Hurst Nelson"@en,
         "ハースト・ネルソン"@ja .
 
-wd:Q59806309 rdfs:label "Tren Maya"@en .
-
 wd:Q602910 rdfs:label "SJ T43"@en,
         "スウェーデン国鉄T43形ディーゼル機関車"@ja .
 
@@ -269253,6 +269335,8 @@ wd:Q5779777 rdfs:label "Compañía de los Ferrocarriles Andaluces"@en,
 
 wd:Q5944651 rdfs:label "Hunter Line"@en .
 
+wd:Q59806309 rdfs:label "Tren Maya"@en .
+
 wd:Q5994107 rdfs:label "Ankara–Konya high-speed train"@en .
 
 wd:Q5997215 rdfs:label "Ankara–Eskişehir high-speed train"@en .
@@ -269853,9 +269937,6 @@ wd:Q3024830 rdfs:label "Deutsche Eisenbahn-Gesellschaft"@en .
 
 wd:Q3080579 rdfs:label "LKAB Malmtrafik"@en,
         "マルムトラフィーク"@ja .
-
-wd:Q3133 rdfs:label "green"@en,
-        "緑"@ja .
 
 wd:Q3177971 rdfs:label "Jeumont-Schneider"@en,
         "ジューモン・シュナイダー"@ja .
@@ -271267,6 +271348,9 @@ wd:Q2868905 rdfs:label "Alstom Crespin"@en,
 wd:Q3041137 rdfs:label "Duluth, Missabe and Iron Range Railway"@en,
         "ダルース・ミセーベ・アンド・アイアン・レンジ鉄道"@ja .
 
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
+
 wd:Q3322605 rdfs:label "Banaras Locomotive Works"@en,
         "ディーゼル・ロコモーティブ・ワークス"@ja .
 
@@ -272270,9 +272354,6 @@ wd:Q19601775 rdfs:label "CZ LOKO"@en .
 
 wd:Q2146117 rdfs:label "Rete Adriatica"@en .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q262 rdfs:label "Algeria"@en,
         "アルジェリア"@ja .
 
@@ -272393,8 +272474,8 @@ wd:Q1640765 rdfs:label "Small locomotive"@en,
 
 wd:Q221186 rdfs:label "レギオジェット"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q26162489 rdfs:label "Co′Co′+Co′Co′"@en .
 
@@ -272443,6 +272524,9 @@ wd:Q17098038 rdfs:label "Hellenic State Railways"@en .
 
 wd:Q18160582 rdfs:label "Holgate Road carriage works"@en,
         "ホルゲート・ロード工場"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q2371310 rdfs:label "articulated tram"@en .
 
@@ -273326,9 +273410,6 @@ wd:Q81230 rdfs:label "Siemens"@en,
 wd:Q32 rdfs:label "Luxembourg"@en,
         "ルクセンブルク"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q7566134 rdfs:label "South Australian Railways"@en,
         "南オーストラリア鉄道"@ja .
 
@@ -273347,6 +273428,9 @@ wd:Q1550653 rdfs:label "Soviet Railways"@en .
 
 wd:Q1817331 rdfs:label "Pesa"@en,
         "PESA"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q503585 rdfs:label "Korea under Japanese rule"@en,
         "日本統治時代の朝鮮"@ja .

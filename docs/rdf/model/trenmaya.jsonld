@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1630"
+      },
+      "rdfs:label": "teal",
+      "schema:color": "#0E5552",
+      "wdt:P462": {
+        "@id": "wd:Q3133"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0341"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6181"
+      },
+      "rdfs:label": "cream",
+      "schema:color": "#E6E3D6",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140092296"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/trenmaya.glb"
+      },
+      "schema:depth": {
+        "@id": "_:trenmaya-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "メキシコ・ユカタン半島を回る電車。標準編成 Xiinbal のクリームと青緑・緑の塗装。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:trenmaya-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "トレン・マヤ"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/trenmaya/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/trenmaya.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#trenmaya"
+      },
+      "schema:width": {
+        "@id": "_:trenmaya-width"
+      }
+    },
+    {
+      "@id": "_:trenmaya-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.3"
+      }
+    },
+    {
+      "@id": "_:trenmaya-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:trenmaya-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "37.7"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color6"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color7"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/trenmaya/tm_trenmaya.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q59806309"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Tren Maya Xiinbal livery (cream, dark teal and green)"
+        },
+        {
+          "@language": "ja",
+          "@value": "トレン・マヤ Xiinbal の塗装（クリーム、濃い青緑と緑）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3133"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0304"
+      },
+      "rdfs:label": "mint",
+      "schema:color": "#4DB88C",
+      "wdt:P462": {
+        "@id": "wd:Q3133"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1295"
+      },
+      "rdfs:label": "jade",
+      "schema:color": "#3A8F72",
+      "wdt:P462": {
+        "@id": "wd:Q3133"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0127"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#4A5A62",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0090"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    }
+  ]
+}

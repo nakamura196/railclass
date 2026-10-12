@@ -1,0 +1,89 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:trenmaya a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#livery> ;
+    schema:about cls:Q140092296 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/trenmaya.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.3 ] ;
+    schema:description "メキシコ・ユカタン半島を回る電車。標準編成 Xiinbal のクリームと青緑・緑の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.7 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "トレン・マヤ"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/trenmaya/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/trenmaya.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#trenmaya> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color1> a tb:ColorSample ;
+    rdfs:label "cream" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.6181 ;
+    schema:color "#E6E3D6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color2> a tb:ColorSample ;
+    rdfs:label "teal" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.1630 ;
+    schema:color "#0E5552" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color3> a tb:ColorSample ;
+    rdfs:label "jade" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.1295 ;
+    schema:color "#3A8F72" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0341 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color5> a tb:ColorSample ;
+    rdfs:label "mint" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0304 ;
+    schema:color "#4DB88C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0127 ;
+    schema:color "#4A5A62" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0090 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#livery> a tb:Livery ;
+    rdfs:label "Tren Maya Xiinbal livery (cream, dark teal and green)"@en,
+        "トレン・マヤ Xiinbal の塗装（クリーム、濃い青緑と緑）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/trenmaya/tm_trenmaya.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#color7> ;
+    tb:liveryOf wd:Q59806309 .
+
