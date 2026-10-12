@@ -34,6 +34,9 @@ def run(q):
         yield [b[c]["value"].replace("http://www.wikidata.org/entity/", "") if c in b else "" for c in cols]
 
 def query(f):
+    if "wd" in f:   # a derived facet: a SPARQL pattern instead of one property (docs/rdf/facets.json, operatingCountry)
+        return f"""SELECT DISTINCT ?item ?v ?en ?ja WHERE {{ {POP} {f["wd"]} FILTER(isIRI(?v))
+ OPTIONAL {{ ?v rdfs:label ?en FILTER(LANG(?en)="en") }} OPTIONAL {{ ?v rdfs:label ?ja FILTER(LANG(?ja)="ja") }} }}"""
     p = "wdt:" + f["uri"][len(WDT):]
     if f["datatype"] == "iri":
         return f"""SELECT ?item ?v ?en ?ja WHERE {{ {POP} ?item {p} ?v. FILTER(isIRI(?v))
@@ -43,6 +46,23 @@ def query(f):
         return f"""SELECT ?item (MAX(?n) AS ?v) WHERE {{ {POP} ?item p:{pid}/psn:{pid}/wikibase:quantityAmount ?n. }} GROUP BY ?item"""
     if f["datatype"] == "gYear":
         return f"""SELECT ?item (MIN(YEAR(?d)) AS ?v) WHERE {{ {POP} ?item {p} ?d. }} GROUP BY ?item"""
+
+def line_rows(rows):
+    """The countries (P17) of the lines in the hand-filled table tools/class_lines.tsv (the Wikidata P3438 lines are in the query)."""
+    import csv
+    have = {(r[0], r[1]) for r in rows}
+    pairs = [(r["class"], r["line"]) for r in csv.DictReader(open("tools/class_lines.tsv", encoding="utf-8"), delimiter="\t") if r["line"]]
+    vals = " ".join(sorted({"wd:" + l for _, l in pairs}))
+    by_line = {}
+    for l, v, en, ja in run(f"""SELECT ?l ?v ?en ?ja WHERE {{ VALUES ?l {{ {vals} }} ?l wdt:P17 ?v.
+ OPTIONAL {{ ?v rdfs:label ?en FILTER(LANG(?en)="en") }} OPTIONAL {{ ?v rdfs:label ?ja FILTER(LANG(?ja)="ja") }} }}"""):
+        by_line.setdefault(l, []).append([v, en, ja])
+    out = []
+    for c, l in pairs:
+        for v, en, ja in by_line.get(l, []):
+            if (c, v) not in have:
+                have.add((c, v)); out.append([c, v, en, ja])
+    return out
 
 def save(name, header, rows):
     os.makedirs(OUT, exist_ok=True)
@@ -56,9 +76,11 @@ def main():
     facets = json.load(open(FACETS))["facets"]
     for f in facets:
         # on="livery" (colour): the values are on the 3D models' liveries in the RDF, not on the classes in Wikidata
-        if ONLY and f["id"] not in ONLY or not f["uri"].startswith(WDT) or f.get("on", "class") != "class":
+        if ONLY and f["id"] not in ONLY or not (f["uri"].startswith(WDT) or "wd" in f) or f.get("on", "class") != "class":
             continue
         rows = list(run(query(f)))
+        if f.get("lines"):
+            rows += line_rows(rows)
         if f["datatype"] in ("decimal", "integer"):
             k = UNIT.get(f.get("unit"), 1)
             rows = [[i, f"{float(v) * k:.0f}"] for i, v in rows]

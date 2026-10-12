@@ -38,7 +38,8 @@ CC_BY = URIRef("https://creativecommons.org/licenses/by/4.0/")
 UA = "railclass/0.1 (nakamura.satoru@mail.u-tokyo.ac.jp)"
 
 FACETS = json.load(open(os.path.join(DOCS, "facets.json"), encoding="utf-8"))["facets"]
-WD_FACETS = [f for f in FACETS if f["uri"].startswith(str(WDT)) and f.get("on", "class") == "class"]
+# with the derived facets ("wd": a SPARQL pattern, e.g. operatingCountry), which come from the facet tables only
+WD_FACETS = [f for f in FACETS if (f["uri"].startswith(str(WDT)) or "wd" in f) and f.get("on", "class") == "class"]
 COLOR_URI = URIRef(next(f["uri"] for f in FACETS if f["id"] == "color"))
 COLORS = json.load(open(os.path.join(HERE, "tools", "livery_colors.json"), encoding="utf-8"))
 # class -> line (Wikidata items), hand-filled with sources (docs/notes/todo.md, 路線). Only the IDs come into the RDF:
@@ -155,6 +156,8 @@ def fetch(refresh):
     vals = " ".join("wd:" + q for q in items)
     out = {"fetched": time.strftime("%Y-%m-%d"), "classes": {q: {} for q in items}, "labels": {}}
     for f in WD_FACETS:
+        if "wd" in f:   # derived: added from the facet table in main(), not cached
+            continue
         p = qid(f["uri"])
         if f["datatype"] == "decimal":   # quantity: normalised to SI (m/s for speed), converted to km/h
             q = f"""SELECT ?i ?v WHERE {{ VALUES ?i {{ {vals} }} ?i p:{p}/psn:{p}/wikibase:quantityAmount ?v }}"""
@@ -413,6 +416,7 @@ def vocab():
         (TB.colorSample, RDF.Property, "colour sample", "色見本", "A colour of this livery, taken from the 3D model's faces."),
         (TB.areaShare, RDF.Property, "area share", "面積の割合", "Share (0-1) of the painted surface of the 3D model that has this colour (glass, lamps, seams left out)."),
         (TB.part, RDF.Property, "part", "部分", "Which part of the vehicle the model is, when one vehicle is split into several models."),
+        (TB.operatingCountry, RDF.Property, "operating country", "運行国", "A country where this class runs or ran: the countries (Wikidata P17) of its operators (P137) and of the lines it runs on (P3438 on the line, and the hand-filled line table). Added because P17 on a class is sometimes only the country it was built in."),
         (TB.usedOn, RDF.Property, "used on line", "走る路線", "A line (a Wikidata item) this class runs or ran on: the inverse direction of Wikidata P3438 (vehicle normally used), from the hand-filled table with sources, and from Wikidata P3438 statements (the source is the statement). See tb:lineUse for the status and the source."),
         (TB.lineUse, RDF.Property, "line use", "路線での運用", "How this class is (was) used on one line, with the source: a tb:LineUse."),
         (TB.LineUse, RDFS.Class, "Line use", "路線での運用", "One class on one line: tb:line, tb:useStatus, tb:usedUntil, dcterms:source."),
@@ -433,8 +437,26 @@ def vocab():
     return g
 
 
+def add_derived(wd):
+    """The derived facets (operatingCountry) for the classes with a page: from data/wikidata/facets/<id>.tsv
+    (tools/fetch_facets.py), since the cache (fetch) only holds single Wikidata properties."""
+    for f in (f for f in WD_FACETS if "wd" in f):
+        for r in read_tsv(f"wikidata/facets/{f['id']}.tsv"):
+            c = wd["classes"].get(r["item"])
+            if c is None or not r["value"]:
+                continue
+            lst = c.setdefault(f["id"], [])
+            if r["value"] not in lst:
+                lst.append(r["value"])
+            if r["value"] not in wd["labels"]:
+                ls = {k: r[f"label_{k}"] for k in ("ja", "en") if r.get(f"label_{k}")}
+                if ls:
+                    wd["labels"][r["value"]] = ls
+
+
 def main():
     wd = fetch("--refresh" in sys.argv)
+    add_derived(wd)
     add_labels(wd, COLORS["basic"].values())
     IMAGES.update((r["item"], r["image"]) for r in read_tsv("wikidata/facets/_image.tsv") if r["image"])
     items = gallery_items()

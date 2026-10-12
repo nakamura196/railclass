@@ -14,13 +14,6 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q12064448",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Northern Line"
-      }
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735",
       "@type": [
         "VehicleClass",
@@ -38,6 +31,9 @@
           "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735#line2"
         }
       ],
+      "operatingCountry": {
+        "@id": "wd:Q145"
+      },
       "prov:wasDerivedFrom": {
         "@id": "wd:Q3303735"
       },
@@ -94,6 +90,22 @@
       }
     },
     {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q8026990#P3438"
+      },
+      "line": {
+        "@id": "wd:Q8026990"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735#line1",
       "@type": "LineUse",
       "dcterms:source": {
@@ -110,27 +122,18 @@
       "useStatus": "current"
     },
     {
+      "@id": "wd:Q12064448",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Northern Line"
+      }
+    },
+    {
       "@id": "wd:Q8026990",
       "rdfs:label": {
         "@language": "en",
         "@value": "Wirral Line"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3303735#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q8026990#P3438"
-      },
-      "line": {
-        "@id": "wd:Q8026990"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
     }
   ]
 }
