@@ -1,0 +1,110 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:ic3 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ic3#livery> ;
+    schema:about cls:Q706345 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ic3.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "デンマークの気動車。顔の大きな黒いゴムの枠が目印。今の銀と紺の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "IC3"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ic3/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ic3.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#ic3> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color1> a tb:ColorSample ;
+    rdfs:label "alu" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.6904 ;
+    schema:color "#B9BEC2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color10> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0054 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color2> a tb:ColorSample ;
+    rdfs:label "rib" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0723 ;
+    schema:color "#868C92" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color3> a tb:ColorSample ;
+    rdfs:label "sglass" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0576 ;
+    schema:color "#6A7886" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color4> a tb:ColorSample ;
+    rdfs:label "rubber" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0505 ;
+    schema:color "#1B1C1E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color5> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0427 ;
+    schema:color "#1F2C4A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color6> a tb:ColorSample ;
+    rdfs:label "panel" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0265 ;
+    schema:color "#101113" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color7> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0204 ;
+    schema:color "#50565C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color8> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0131 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color9> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0054 ;
+    schema:color "#4E5C68" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#livery> a tb:Livery ;
+    rdfs:label "DSB livery (silver aluminium with a navy window band)"@en,
+        "デンマーク国鉄の塗装（銀のアルミに紺の窓帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/ic3/dsb_ic3.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color9> ;
+    tb:liveryOf wd:Q83824 .
+

@@ -202655,35 +202655,6 @@ cls:Q7058841 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q30 .
 
-cls:Q706345 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "IC3"@en,
-        "デンマーク国鉄IC3型気動車"@ja ;
-    skos:exactMatch wd:Q706345 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "IC3"@en,
-        "デンマーク国鉄IC3型気動車"@ja ;
-    prov:wasDerivedFrom wd:Q706345 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q2476154,
-        wd:Q83824,
-        wd:Q846655 ;
-    wdt:P17 wd:Q29,
-        wd:Q35,
-        wd:Q801 ;
-    wdt:P176 wd:Q2675204 ;
-    wdt:P2052 180.0 ;
-    wdt:P279 wd:Q1567915 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/P1160325%20DSB%20MFB%205253.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q706345#line1>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q706345#line2> ;
-    tb:operatingCountry wd:Q29,
-        wd:Q35,
-        wd:Q801 ;
-    tb:usedOn wd:Q74951,
-        wd:Q846655 .
-
 cls:Q7073068 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "OS T1000"@en ;
@@ -258107,6 +258078,36 @@ cls:Q7015181 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q706345 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "IC3"@en,
+        "デンマーク国鉄IC3型気動車"@ja ;
+    skos:exactMatch wd:Q706345 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "IC3"@en,
+        "デンマーク国鉄IC3型気動車"@ja ;
+    prov:wasDerivedFrom wd:Q706345 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q2476154,
+        wd:Q83824,
+        wd:Q846655 ;
+    wdt:P17 wd:Q29,
+        wd:Q35,
+        wd:Q801 ;
+    wdt:P176 wd:Q2675204 ;
+    wdt:P2052 180.0 ;
+    wdt:P279 wd:Q1567915 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/P1160325%20DSB%20MFB%205253.jpg> ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q706345#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q706345#line2> ;
+    tb:operatingCountry wd:Q29,
+        wd:Q35,
+        wd:Q801 ;
+    tb:usedOn wd:Q74951,
+        wd:Q846655 ;
+    schema:subjectOf mdl:ic3 .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q706345#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q74951#P3438> ;
     skos:note "wikidata"@en ;
@@ -262738,6 +262739,106 @@ mdl:gautrain a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color5>,
         <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color6> ;
     tb:liveryOf wd:Q84945092 .
+
+mdl:ic3 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ic3#livery> ;
+    schema:about cls:Q706345 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ic3.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "デンマークの気動車。顔の大きな黒いゴムの枠が目印。今の銀と紺の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "IC3"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ic3/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ic3.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#ic3> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color1> a tb:ColorSample ;
+    rdfs:label "alu" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.6904 ;
+    schema:color "#B9BEC2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color10> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0054 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color2> a tb:ColorSample ;
+    rdfs:label "rib" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0723 ;
+    schema:color "#868C92" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color3> a tb:ColorSample ;
+    rdfs:label "sglass" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0576 ;
+    schema:color "#6A7886" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color4> a tb:ColorSample ;
+    rdfs:label "rubber" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0505 ;
+    schema:color "#1B1C1E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color5> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0427 ;
+    schema:color "#1F2C4A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color6> a tb:ColorSample ;
+    rdfs:label "panel" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0265 ;
+    schema:color "#101113" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color7> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0204 ;
+    schema:color "#50565C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color8> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0131 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#color9> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0054 ;
+    schema:color "#4E5C68" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic3#livery> a tb:Livery ;
+    rdfs:label "DSB livery (silver aluminium with a navy window band)"@en,
+        "デンマーク国鉄の塗装（銀のアルミに紺の窓帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/ic3/dsb_ic3.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic3#color9> ;
+    tb:liveryOf wd:Q83824 .
 
 mdl:icet_411 a schema:3DModel ;
     tb:galleryGroup "icet" ;
@@ -274103,9 +274204,6 @@ wd:Q1544279 rdfs:label "Great Eastern Railway"@en,
 wd:Q23444 rdfs:label "white"@en,
         "白"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q26242916 rdfs:label "0-4-4-0T"@en .
 
 wd:Q3487558 rdfs:label "Société Anonyme la Métallurgique"@en .
@@ -274164,6 +274262,9 @@ wd:Q378181 rdfs:label "Chemins de fer du Midi"@en,
 
 wd:Q7885459 rdfs:label "Union Carriage & Wagon"@en,
         "ユニオン・キャリッジ・アンド・ワゴン"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q3077673 rdfs:label "0-4-4T"@en,
         "車輪配置 0-4-4T"@ja .
@@ -274288,9 +274389,6 @@ wd:Q682174 rdfs:label "Nippon Sharyo"@en,
 wd:Q960308 rdfs:label "Budd Company"@en,
         "バッド社"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1272318 rdfs:label "Great Northern Railway"@en,
         "グレート・ノーザン鉄道"@ja .
 
@@ -274328,6 +274426,9 @@ wd:Q4931035 rdfs:label "Bo′Bo′Bo′"@en .
 
 wd:Q840960 rdfs:label "CRRC Zhuzhou Locomotive Co., Ltd."@en,
         "中車株洲電力機車有限公司"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q1128687 rdfs:label "Fablok"@en .
 
@@ -274470,9 +274571,6 @@ wd:Q5063597 rdfs:label "low-floor tram"@en,
 
 wd:Q52323406 rdfs:label "0-6-0dh"@en .
 
-wd:Q83824 rdfs:label "DSB"@en,
-        "デンマーク国鉄"@ja .
-
 wd:Q96 rdfs:label "Mexico"@en,
         "メキシコ"@ja .
 
@@ -274489,6 +274587,9 @@ wd:Q683873 rdfs:label "Prussian state railways"@en,
 
 wd:Q697926 rdfs:label "Taiwan Railways Administration"@en,
         "台湾鉄路管理局"@ja .
+
+wd:Q83824 rdfs:label "DSB"@en,
+        "デンマーク国鉄"@ja .
 
 wd:Q13402959 rdfs:label "high-speed train"@en,
         "高速列車"@ja .
@@ -274846,9 +274947,6 @@ wd:Q838212 rdfs:label "CAF"@ja .
 wd:Q188712 rdfs:label "Empire of Japan"@en,
         "大日本帝国"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q741266 rdfs:label "Southern Railway"@en,
         "サザン鉄道"@ja .
 
@@ -274860,6 +274958,9 @@ wd:Q749311 rdfs:label "tender"@en,
 
 wd:Q155 rdfs:label "Brazil"@en,
         "ブラジル"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q477493 rdfs:label "Lokomotivfabrik Floridsdorf"@en .
 
