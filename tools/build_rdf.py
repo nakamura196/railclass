@@ -131,6 +131,7 @@ CLASSES = {
     "Q324870": ("Q324870", None, None),                       # ICE 4 (DB Class 412)
     "Q727577": ("Q727577", None, None),                       # SNCF TGV 2N2 (Euroduplex; Al Boraq is the ONCF service Q60539878)
     "Q16798908": ("Q16798908", None, None),                   # SBB RABe 501 Giruno (Stadler SMILE)
+    "Q6138251": ("Q6138251", None, {"en": "Talgo 350 SRO (Haramain High Speed Railway)", "ja": "ハラマイン高速鉄道 Talgo 350 SRO"}),  # Talgo 350 SRO (Haramain High Speed Railway; Wikidata has es/mul labels only)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -239,6 +240,7 @@ LIVERIES = {
     "translink-canadaline": ({"en": "Canada Line livery (stainless, blue cab with a black shield face, white and blue swooshes, blue fading to green)", "ja": "カナダ・ラインの塗装（ステンレス、黒い盾形の顔の青い運転台、白と青の流れ模様、青から緑への移り）"}, "Q141170779"),
     "oncf-alboraq": ({"en": "ONCF Al Boraq livery (silver with Moroccan red and green)", "ja": "ONCF のアル・ボラクの塗装（銀地に、モロッコの赤と緑）"}, "Q1815809"),
     "sbb-giruno": ({"en": "SBB Giruno livery (white body, red nose, black roof)", "ja": "スイス国鉄のギルノの塗装（白い車体、赤い鼻、黒い屋根）"}, "Q83835"),
+    "sar-haramain": ({"en": "Haramain High Speed Railway livery (white with gold and green lines)", "ja": "ハラマイン高速鉄道の塗装（白地に金と緑の線）"}, "Q843548"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -300,6 +302,7 @@ MODELS = {
     "ice4": ("Q324870", "db", None),
     "alboraq": ("Q727577", "oncf-alboraq", None),
     "giruno": ("Q16798908", "sbb-giruno", None),
+    "haramain": ("Q6138251", "sar-haramain", None),
 }
 
 

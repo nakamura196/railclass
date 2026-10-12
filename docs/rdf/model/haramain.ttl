@@ -1,0 +1,96 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:haramain a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/haramain#livery> ;
+    schema:about cls:Q6138251 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/haramain.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.4 ] ;
+    schema:description "メッカとメディナを結ぶサウジアラビアの高速列車の動力車。白地に金と緑の線。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ハラマイン高速鉄道 Talgo 350 SRO"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/haramain/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/haramain.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#haramain> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8613 ;
+    schema:color "#F0F1EE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0428 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color3> a tb:ColorSample ;
+    rdfs:label "canopy" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0322 ;
+    schema:color "#7A868E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color4> a tb:ColorSample ;
+    rdfs:label "lens" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0133 ;
+    schema:color "#D8DCD6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color5> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0115 ;
+    schema:color "#1E7A4C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color6> a tb:ColorSample ;
+    rdfs:label "dkgreen" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0107 ;
+    schema:color "#0E523A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color7> a tb:ColorSample ;
+    rdfs:label "sidewin" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0082 ;
+    schema:color "#5E6A72" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color8> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0071 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#livery> a tb:Livery ;
+    rdfs:label "Haramain High Speed Railway livery (white with gold and green lines)"@en,
+        "ハラマイン高速鉄道の塗装（白地に金と緑の線）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/haramain/hhr_haramain.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color8> ;
+    tb:liveryOf wd:Q843548 .
+

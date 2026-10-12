@@ -184613,20 +184613,6 @@ cls:Q613769 a skos:Concept,
     tb:usedOn wd:Q13224,
         wd:Q50743 .
 
-cls:Q6138251 a skos:Concept,
-        tb:VehicleClass ;
-    skos:exactMatch wd:Q6138251 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    prov:wasDerivedFrom wd:Q6138251 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q843548 ;
-    wdt:P17 wd:Q29 ;
-    wdt:P2052 300.0 ;
-    wdt:P279 wd:Q13402959 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Talgo%20350%20SRO.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q851 .
-
 cls:Q6138252 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Talgo I"@en ;
@@ -255982,6 +255968,25 @@ cls:Q56394168 a skos:Concept,
     tb:useStatus "historical" ;
     tb:usedUntil "2012"^^xsd:gYear .
 
+cls:Q6138251 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Talgo 350 SRO (Haramain High Speed Railway)"@en,
+        "ハラマイン高速鉄道 Talgo 350 SRO"@ja ;
+    skos:exactMatch wd:Q6138251 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Talgo 350 SRO (Haramain High Speed Railway)"@en,
+        "ハラマイン高速鉄道 Talgo 350 SRO"@ja ;
+    prov:wasDerivedFrom wd:Q6138251 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q843548 ;
+    wdt:P17 wd:Q29 ;
+    wdt:P2052 300.0 ;
+    wdt:P279 wd:Q13402959 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Talgo%20350%20SRO.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q851 ;
+    schema:subjectOf mdl:haramain .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q616829#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q111061358#P3438> ;
     skos:note "wikidata"@en ;
@@ -263743,6 +263748,92 @@ mdl:giruno a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color7> ;
     tb:liveryOf wd:Q83835 .
 
+mdl:haramain a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/haramain#livery> ;
+    schema:about cls:Q6138251 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/haramain.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.4 ] ;
+    schema:description "メッカとメディナを結ぶサウジアラビアの高速列車の動力車。白地に金と緑の線。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ハラマイン高速鉄道 Talgo 350 SRO"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/haramain/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/haramain.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#haramain> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.8613 ;
+    schema:color "#F0F1EE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0428 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color3> a tb:ColorSample ;
+    rdfs:label "canopy" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0322 ;
+    schema:color "#7A868E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color4> a tb:ColorSample ;
+    rdfs:label "lens" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0133 ;
+    schema:color "#D8DCD6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color5> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0115 ;
+    schema:color "#1E7A4C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color6> a tb:ColorSample ;
+    rdfs:label "dkgreen" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.0107 ;
+    schema:color "#0E523A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color7> a tb:ColorSample ;
+    rdfs:label "sidewin" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0082 ;
+    schema:color "#5E6A72" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#color8> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0071 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/haramain#livery> a tb:Livery ;
+    rdfs:label "Haramain High Speed Railway livery (white with gold and green lines)"@en,
+        "ハラマイン高速鉄道の塗装（白地に金と緑の線）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/haramain/hhr_haramain.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/haramain#color8> ;
+    tb:liveryOf wd:Q843548 .
+
 mdl:ic125 a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ic125#livery> ;
@@ -271470,9 +271561,6 @@ wd:Q841298 rdfs:label "SNCB Class 12"@en,
 wd:Q841331 rdfs:label "gas turbine‐mechanical locomotive"@en,
         "機械式ガスタービン機関車"@ja .
 
-wd:Q843548 rdfs:label "Saudi Railways Organization"@en,
-        "サウジアラビア鉄道機構"@ja .
-
 wd:Q8460714 rdfs:label "Companhia dos Caminhos de Ferro Portugueses da Beira Alta"@en .
 
 wd:Q856434 rdfs:label "China Railway CRH3"@en,
@@ -272715,6 +272803,9 @@ wd:Q839557 rdfs:label "RET"@en,
 
 wd:Q841722 rdfs:label "Electrostar"@en,
         "エレクトロスター"@ja .
+
+wd:Q843548 rdfs:label "Saudi Railways Organization"@en,
+        "サウジアラビア鉄道機構"@ja .
 
 wd:Q847214 rdfs:label "Looe Valley Line"@en .
 
@@ -275070,9 +275161,6 @@ wd:Q310293 rdfs:label "Saar Protectorate"@en,
 
 wd:Q3107361 rdfs:label "Ganz-MÁVAG"@en .
 
-wd:Q3133 rdfs:label "green"@en,
-        "緑"@ja .
-
 wd:Q3136281 rdfs:label "H.K. Porter, Inc."@en,
         "ポーター"@ja .
 
@@ -275329,6 +275417,9 @@ wd:Q282395 rdfs:label "Brissonneau et Lotz"@en,
         "ブリッソノー・エ・ロッツ"@ja .
 
 wd:Q2995303 rdfs:label "Constructions électriques de France"@en .
+
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
 
 wd:Q3348301 rdfs:label "Chittaranjan Locomotive Works"@en,
         "チラタンジャン工場"@ja .
@@ -276386,9 +276477,6 @@ wd:Q933787 rdfs:label "Škoda Transportation"@en,
 
 wd:Q19960466 rdfs:label "Finnish State Railways"@en .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q2373726 rdfs:label "Werkspoor"@en,
         "ヴェルクスプール"@ja .
 
@@ -276418,6 +276506,9 @@ wd:Q5013176 rdfs:label "CRRC Dalian Co., Ltd."@en,
 
 wd:Q692083 rdfs:label "SIG Group"@en,
         "シグ"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q499967 rdfs:label "Turkish State Railways"@en,
         "トルコ国鉄"@ja .
@@ -276482,9 +276573,6 @@ wd:Q414 rdfs:label "Argentina"@en,
 wd:Q1982888 rdfs:label "New South Wales Government Railways"@en,
         "ニューサウスウェールズ鉄道"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q286650 rdfs:label "Trenitalia"@en,
         "トレニタリア"@ja .
 
@@ -276496,6 +276584,9 @@ wd:Q534384 rdfs:label "Maschinenbau Kiel"@en,
 
 wd:Q1069376 rdfs:label "Chemins de fer de l'État"@en,
         "国有鉄道"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q319035 rdfs:label "Arnold Jung Lokomotivfabrik"@en,
         "アーノルト・ユンク"@ja .
@@ -276973,11 +277064,11 @@ wd:Q26234727 rdfs:label "0-4-0T"@en .
 wd:Q214 rdfs:label "Slovakia"@en,
         "スロバキア"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q7318 rdfs:label "Nazi Germany"@en,
         "ナチス・ドイツ"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q871174 rdfs:label "Československé státní dráhy"@en,
         "チェコスロバキア国鉄"@ja .
