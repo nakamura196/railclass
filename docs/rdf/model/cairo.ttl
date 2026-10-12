@@ -1,0 +1,90 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:cairo a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/cairo#livery> ;
+    schema:about cls:tb-cairo ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/cairo.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "エジプトの地下鉄。日本製の電車で、ステンレスにオレンジと薄紫の帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "カイロ地下鉄2号線"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/cairo/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/cairo.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#cairo> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.6714 ;
+    schema:color "#CCCFD2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1527 ;
+    schema:color "#9A9EA2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color3> a tb:ColorSample ;
+    rdfs:label "lilac" ;
+    wdt:P462 wd:Q429220 ;
+    tb:areaShare 0.0680 ;
+    schema:color "#A884C8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color4> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0505 ;
+    schema:color "#F27E66" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color5> a tb:ColorSample ;
+    rdfs:label "panel" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0277 ;
+    schema:color "#16181C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color6> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0154 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0065 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#livery> a tb:Livery ;
+    rdfs:label "Cairo Metro Line 2 livery (stainless with orange and lilac bands)"@en,
+        "カイロ地下鉄 2 号線の塗装（ステンレスにオレンジと薄紫の帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/cairo/ecm_cairo.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q42519,
+        wd:Q429220 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color7> ;
+    tb:liveryOf wd:Q64744683 .
+

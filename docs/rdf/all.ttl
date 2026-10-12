@@ -36,9 +36,6 @@ tb:VehicleClass a rdfs:Class ;
     rdfs:comment "A class (type) of railway vehicle or road vehicle; one record per class."@en ;
     rdfs:isDefinedBy <https://nakamura196.github.io/train-bodies/vocab> .
 
-wd:Q429220 rdfs:label "pink"@en,
-        "ピンク"@ja .
-
 cls:Q100140515 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Transitio ER1"@en ;
@@ -261698,6 +261695,36 @@ cls:tb-cablecar a skos:Concept,
     tb:sourceSection "Wikidata (the system)" ;
     tb:useStatus "current" .
 
+cls:tb-cairo a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Cairo Metro Line 2 Japanese-built car"@en,
+        "カイロ地下鉄 2 号線の日本製の電車"@ja ;
+    dcterms:source "Country and opening year (1996) from Wikidata Q5017773 (Cairo Metro Line 2); builders (Mitsubishi Corporation, Kinki Sharyo and Toshiba) and type from the skytrain lab note docs/notes/cairo.md (2026-10-12); operator entered as the National Authority for Tunnels, the owner of the Cairo Metro."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Cairo Metro Line 2 Japanese-built car"@en,
+        "カイロ地下鉄 2 号線の日本製の電車"@ja ;
+    wdt:P137 wd:Q64744683 ;
+    wdt:P17 wd:Q79 ;
+    wdt:P176 wd:Q1592306 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "1996"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-cairo#line1> ;
+    tb:usedOn wd:Q5017773 ;
+    schema:subjectOf mdl:cairo .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-cairo#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5017773> ;
+    skos:note "Cairo Metro Line 2 itself; Wikidata has no item for its Japanese-built cars"@en ;
+    tb:line wd:Q5017773 ;
+    tb:sourceSection "Wikidata (the line)" ;
+    tb:useStatus "current" .
+
 cls:tb-dubaimetro a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Dubai Metro Kinki Sharyo train"@en,
@@ -262583,6 +262610,86 @@ mdl:cablecar a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color8>,
         <https://nakamura196.github.io/train-bodies/rdf/model/cablecar#color9> ;
     tb:liveryOf wd:Q1140138 .
+
+mdl:cairo a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/cairo#livery> ;
+    schema:about cls:tb-cairo ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/cairo.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "エジプトの地下鉄。日本製の電車で、ステンレスにオレンジと薄紫の帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "カイロ地下鉄2号線"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/cairo/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/cairo.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#cairo> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.6714 ;
+    schema:color "#CCCFD2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1527 ;
+    schema:color "#9A9EA2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color3> a tb:ColorSample ;
+    rdfs:label "lilac" ;
+    wdt:P462 wd:Q429220 ;
+    tb:areaShare 0.0680 ;
+    schema:color "#A884C8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color4> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0505 ;
+    schema:color "#F27E66" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color5> a tb:ColorSample ;
+    rdfs:label "panel" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0277 ;
+    schema:color "#16181C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color6> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0154 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0065 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/cairo#livery> a tb:Livery ;
+    rdfs:label "Cairo Metro Line 2 livery (stainless with orange and lilac bands)"@en,
+        "カイロ地下鉄 2 号線の塗装（ステンレスにオレンジと薄紫の帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/cairo/ecm_cairo.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q42519,
+        wd:Q429220 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color7> ;
+    tb:liveryOf wd:Q64744683 .
 
 mdl:canadian a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -267871,6 +267978,9 @@ wd:Q42894086 rdfs:label "Mi Tren"@en .
 
 wd:Q429055 rdfs:label "RE 16"@en .
 
+wd:Q429220 rdfs:label "pink"@en,
+        "ピンク"@ja .
+
 wd:Q4313358 rdfs:label "People's Commissariat for Railways of the USSR"@en,
         "ソビエト連邦運輸人民委員"@ja .
 
@@ -268061,6 +268171,8 @@ wd:Q5001067 rdfs:label "Bury, Curtis and Kennedy"@en .
 wd:Q5002507 rdfs:label "Butetown Branch Line"@en .
 
 wd:Q50072731 rdfs:label "ICE 78"@en .
+
+wd:Q5017773 rdfs:label "Cairo Metro Line 2"@en .
 
 wd:Q502125 rdfs:label "West Japan Railway Company"@en,
         "西日本旅客鉄道"@ja .
@@ -268549,6 +268661,8 @@ wd:Q64512415 rdfs:label "RE 10b"@en .
 wd:Q64518230 rdfs:label "RB 26 (NRW, RLP)"@en .
 
 wd:Q64667644 rdfs:label "S2"@en .
+
+wd:Q64744683 rdfs:label "National Authority for Tunnels"@en .
 
 wd:Q6502757 rdfs:label "Lavistown Loop Line"@en .
 
@@ -273196,9 +273310,6 @@ wd:Q781593 rdfs:label "Australian National Railways Commission"@en,
 
 wd:Q7845477 rdfs:label "Trondheim Sporvei"@en .
 
-wd:Q79 rdfs:label "Egypt"@en,
-        "エジプト"@ja .
-
 wd:Q7907522 rdfs:label "VR blue carriages"@en .
 
 wd:Q8008904 rdfs:label "William Fairbairn & Sons"@en,
@@ -273497,6 +273608,9 @@ wd:Q7581317 rdfs:label "British Rail Sprinter"@en,
         "スプリンター"@ja .
 
 wd:Q785655 rdfs:label "Rome tramway network"@en .
+
+wd:Q79 rdfs:label "Egypt"@en,
+        "エジプト"@ja .
 
 wd:Q7989618 rdfs:label "Westrail"@en .
 
@@ -274035,9 +274149,6 @@ wd:Q1415097 rdfs:label "London Post Office Railway"@en,
 wd:Q1509724 rdfs:label "baggage car"@en,
         "荷物車"@ja .
 
-wd:Q1592306 rdfs:label "Kinki Sharyo"@en,
-        "近畿車輛"@ja .
-
 wd:Q18208626 rdfs:label "Abellio ScotRail (2015-2022)"@en,
         "アベリオ・スコットレール"@ja .
 
@@ -274148,6 +274259,9 @@ wd:Q15227203 rdfs:label "Hutt Workshops"@en .
 
 wd:Q1539334 rdfs:label "Gottfried Lindner AG"@en,
         "リントナー"@ja .
+
+wd:Q1592306 rdfs:label "Kinki Sharyo"@en,
+        "近畿車輛"@ja .
 
 wd:Q18415369 rdfs:label "Société Anonyme des Usines Métallurgiques du Hainaut"@en .
 
@@ -275004,9 +275118,6 @@ wd:Q232962 rdfs:label "electro-diesel locomotive"@en,
 wd:Q2407588 rdfs:label "2-10-4"@en,
         "2-10-4"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q4881162 rdfs:label "Beijing Mass Transit Railway Operation Corporation Limited"@en,
         "北京市地鉄運営"@ja .
 
@@ -275036,6 +275147,9 @@ wd:Q1079190 rdfs:label "switcher"@en,
 
 wd:Q1089278 rdfs:label "Riga Railway Carriage Building Factory"@en,
         "リガ車両製作工場"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q37 rdfs:label "Lithuania"@en,
         "リトアニア"@ja .
@@ -275443,9 +275557,6 @@ wd:Q53238 rdfs:label "Hitachi"@en,
 wd:Q917079 rdfs:label "Norfolk and Western Railway"@en,
         "ノーフォーク・アンド・ウェスタン鉄道"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q4228338 rdfs:label "Kolomna Locomotive Works"@en,
         "コロムナ工場"@ja .
 
@@ -275463,6 +275574,9 @@ wd:Q13622547 rdfs:label "road switcher"@en,
         "ロード・スイッチャー"@ja .
 
 wd:Q1951373 rdfs:label "Chemin de fer de Paris à Orléans et du Midi"@en .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q369524 rdfs:label "Ganz Works"@en,
         "ガンツ"@ja .
@@ -276021,9 +276135,6 @@ wd:Q304944 rdfs:label "České dráhy"@en,
 wd:Q45 rdfs:label "Portugal"@en,
         "ポルトガル"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q687175 rdfs:label "Deutsche Bundesbahn"@en,
         "ドイツ連邦鉄道"@ja .
 
@@ -276032,6 +276143,9 @@ wd:Q3319112 rdfs:label "1668 mm track gauge"@en,
 
 wd:Q700563 rdfs:label "Deutsche Reichsbahn (GDR)"@en,
         "ドイツ国営鉄道"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q668 rdfs:label "India"@en,
         "インド"@ja .

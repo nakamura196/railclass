@@ -119,6 +119,9 @@ CLASSES = {
     # San Francisco cable cars: Wikidata has no item for the cars (Q374956 is the cable car system), so a class of our own;
     # the system is linked in tools/class_lines.tsv. Route items: Powell-Hyde Q121410548, Powell-Mason Q113367771.
     "tb-cablecar": (None, None, {"en": "San Francisco cable car (Powell Street single-ended type)", "ja": "サンフランシスコのケーブルカー（パウエル線の片運転台の車）"}),
+    # Cairo Metro Line 2: Wikidata has no item for its Japanese-built cars (Q5017773 is the line), so a class of our own;
+    # the line is linked in tools/class_lines.tsv.
+    "tb-cairo": (None, None, {"en": "Cairo Metro Line 2 Japanese-built car", "ja": "カイロ地下鉄 2 号線の日本製の電車"}),
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -144,6 +147,8 @@ HAND = {
     "tb-addis": {"country": ["Q115"], "operator": ["Q55639671"], "manufacturer": ["Q848225"], "kind": ["Q3407658"], "serviceEntry": [2015]},
     # United States; San Francisco Municipal Railway (P137 of Q374956); cable car. No maker or year: the cars were built over many decades
     "tb-cablecar": {"country": ["Q30"], "operator": ["Q1140138"], "kind": ["Q5609555"]},
+    # Egypt; National Authority for Tunnels (owner); Kinki Sharyo (with Mitsubishi Corporation and Toshiba); EMU; opening 1996
+    "tb-cairo": {"country": ["Q79"], "operator": ["Q64744683"], "manufacturer": ["Q1592306"], "kind": ["Q483373"], "serviceEntry": [1996]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
@@ -155,6 +160,7 @@ HAND_SOURCE = {
     "tb-lisbon28": "Country and operator (Carris) from Wikidata Q149629 (trams in Lisbon); type and the 1995-96 rebuild of the 1930s standard bodies (cars 541-585) from the skytrain lab note docs/notes/lisbon28.md.",
     "tb-addis": "Country and opening date (2015-09-21) from Wikidata Q16250141 (Addis Ababa Light Rail, the system); operator (Ethiopian Railway Corporation), manufacturer (CNR Changchun, now CRRC Changchun) and type (three-section 70 % low-floor tram) from the skytrain lab note docs/notes/addis.md (2026-10-12).",
     "tb-cablecar": "Country, operator and type (cable car) from Wikidata Q374956 (San Francisco cable car system); the Powell Street single-ended car and its dimensions from streetcar.org via the skytrain lab note docs/notes/cablecar.md (2026-10-12).",
+    "tb-cairo": "Country and opening year (1996) from Wikidata Q5017773 (Cairo Metro Line 2); builders (Mitsubishi Corporation, Kinki Sharyo and Toshiba) and type from the skytrain lab note docs/notes/cairo.md (2026-10-12); operator entered as the National Authority for Tunnels, the owner of the Cairo Metro.",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -213,6 +219,7 @@ LIVERIES = {
     "sydney-trains-waratah": ({"en": "Sydney Trains Waratah livery (yellow face, orange cab sides, bare stainless, yellow doors)", "ja": "シドニー・トレインズのワラタの塗装（黄色の顔、橙色の運転室、ステンレス、黄色の扉）"}, "Q7660181"),
     "efe-sfb500": ({"en": "EFE SFB-500 livery (silver with a red-and-black nose and a blue stripe; 2024-)", "ja": "EFE SFB-500 の塗装（銀に赤と黒の顔、青い線。2024年から）"}, "Q679910"),
     "muni-cablecar": ({"en": "Muni cable car livery (maroon, cream and light blue)", "ja": "Muni のケーブルカーの塗装（栗色・クリーム・水色）"}, "Q1140138"),
+    "cairo-line2": ({"en": "Cairo Metro Line 2 livery (stainless with orange and lilac bands)", "ja": "カイロ地下鉄 2 号線の塗装（ステンレスにオレンジと薄紫の帯）"}, "Q64744683"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -264,6 +271,7 @@ MODELS = {
     "waratah": ("Q5122977", "sydney-trains-waratah", None),
     "santiago-chillan": ("Q117538222", "efe-sfb500", None),
     "cablecar": ("tb-cablecar", "muni-cablecar", None),
+    "cairo": ("tb-cairo", "cairo-line2", None),
 }
 
 

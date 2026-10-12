@@ -1,0 +1,43 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:tb-cairo a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Cairo Metro Line 2 Japanese-built car"@en,
+        "カイロ地下鉄 2 号線の日本製の電車"@ja ;
+    dcterms:source "Country and opening year (1996) from Wikidata Q5017773 (Cairo Metro Line 2); builders (Mitsubishi Corporation, Kinki Sharyo and Toshiba) and type from the skytrain lab note docs/notes/cairo.md (2026-10-12); operator entered as the National Authority for Tunnels, the owner of the Cairo Metro."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Cairo Metro Line 2 Japanese-built car"@en,
+        "カイロ地下鉄 2 号線の日本製の電車"@ja ;
+    wdt:P137 wd:Q64744683 ;
+    wdt:P17 wd:Q79 ;
+    wdt:P176 wd:Q1592306 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "1996"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-cairo#line1> ;
+    tb:usedOn wd:Q5017773 ;
+    schema:subjectOf mdl:cairo .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-cairo#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5017773> ;
+    skos:note "Cairo Metro Line 2 itself; Wikidata has no item for its Japanese-built cars"@en ;
+    tb:line wd:Q5017773 ;
+    tb:sourceSection "Wikidata (the line)" ;
+    tb:useStatus "current" .
+
+wd:Q5017773 rdfs:label "Cairo Metro Line 2"@en .
+
