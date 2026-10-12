@@ -104,6 +104,7 @@ CLASSES = {
     "Q2284320": ("Q2284320", None, None),                     # Siemens Inspiro (family; no item for the Riyadh trains)
     "Q706345": ("Q706345", None, None),                       # IC3 (DSB MF, ABB Scandia)
     "Q18349836": ("Q18349836", None, None),                    # DHR B class (0-4-0ST steam)
+    "Q26724167": ("Q26724167", None, None),                    # Avelia Liberty (new Acela, Alstom)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -177,6 +178,7 @@ LIVERIES = {
     "riyadh-metro-line1": ({"en": "Riyadh Metro Line 1 (Blue Line) livery (white lower side, black window band, blue band)", "ja": "リヤド・メトロ 1 号線（ブルーライン）の塗装（白い下回り、黒い窓帯、青い帯）"}, "Q12194736"),   # Royal Commission for Riyadh City (owner)
     "dsb-ic3": ({"en": "DSB livery (silver aluminium with a navy window band)", "ja": "デンマーク国鉄の塗装（銀のアルミに紺の窓帯）"}, "Q83824"),
     "dhr-blue": ({"en": "Darjeeling Himalayan Railway blue livery (blue tank, bunker and cab with white lining)", "ja": "ダージリン・ヒマラヤ鉄道の青の塗装（青いタンク・炭庫・運転室に白線）"}, "Q463874"),
+    "amtrak-acela-2025": ({"en": "Acela livery (white and silver with Acela blue and a red band; 2025-)", "ja": "アセラの塗装（白と銀にアセラの青と赤い帯。2025年から）"}, "Q23239"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -219,6 +221,7 @@ MODELS = {
     "riyadh": ("Q2284320", "riyadh-metro-line1", None),
     "ic3": ("Q706345", "dsb-ic3", None),
     "darjeeling": ("Q18349836", "dhr-blue", None),
+    "acela": ("Q26724167", "amtrak-acela-2025", None),
 }
 
 

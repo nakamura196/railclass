@@ -1,0 +1,110 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:acela a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/acela#livery> ;
+    schema:about cls:Q26724167 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/acela.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "アメリカ北東回廊の高速列車。2025年からの新型の動力車。白と青に赤い帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "アセラ（アヴェリア・リバティ）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/acela/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/acela.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#acela> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#color1> a tb:ColorSample ;
+    rdfs:label "acela" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.6932 ;
+    schema:color "#1E6AA4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#color10> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0056 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#color2> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.1255 ;
+    schema:color "#F7F7F6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#color3> a tb:ColorSample ;
+    rdfs:label "pearl" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0547 ;
+    schema:color "#E3E5E7" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#color4> a tb:ColorSample ;
+    rdfs:label "louvre" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0313 ;
+    schema:color "#163B5E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#color5> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0274 ;
+    schema:color "#D8312F" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0228 ;
+    schema:color "#24303C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#color7> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0186 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#color8> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0121 ;
+    schema:color "#4E5258" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#color9> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0089 ;
+    schema:color "#1B2F55" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/acela#livery> a tb:Livery ;
+    rdfs:label "Acela livery (white and silver with Acela blue and a red band; 2025-)"@en,
+        "アセラの塗装（白と銀にアセラの青と赤い帯。2025年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/acela/amtrak_acela.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q3142 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/acela#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/acela#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/acela#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/acela#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/acela#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/acela#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/acela#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/acela#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/acela#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/acela#color9> ;
+    tb:liveryOf wd:Q23239 .
+
