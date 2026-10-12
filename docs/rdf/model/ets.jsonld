@@ -1,0 +1,253 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0890"
+      },
+      "rdfs:label": "ktmred",
+      "schema:color": "#C2262C",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0214"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#4E5E6E",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0561"
+      },
+      "rdfs:label": "midgrey",
+      "schema:color": "#9CA3AB",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color8",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0134"
+      },
+      "rdfs:label": "swoosh",
+      "schema:color": "#E4E6E8",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0217"
+      },
+      "rdfs:label": "ktmblue",
+      "schema:color": "#1F3C96",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0453"
+      },
+      "rdfs:label": "ktmyellow",
+      "schema:color": "#F4C018",
+      "wdt:P462": {
+        "@id": "wd:Q943"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7015"
+      },
+      "rdfs:label": "silver",
+      "schema:color": "#D6DADE",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0497"
+      },
+      "rdfs:label": "mask",
+      "schema:color": "#1A1D21",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color6"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color7"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#color8"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/ets/ktm_ets.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1187590"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "KTM ETS2 livery (yellow nose, silver with a red band)"
+        },
+        {
+          "@language": "ja",
+          "@value": "KTM の ETS2 の塗装（黄色の鼻、銀に赤い帯）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3142"
+        },
+        {
+          "@id": "wd:Q943"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ets#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q18619244"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/ets.glb"
+      },
+      "schema:depth": {
+        "@id": "_:ets-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "マレーシアの都市間電車。黄色の鼻と赤い帯の ETS2 塗装。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:ets-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "KTM ETS クラス93"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/ets/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/ets.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#ets"
+      },
+      "schema:width": {
+        "@id": "_:ets-width"
+      }
+    },
+    {
+      "@id": "_:ets-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.6"
+      }
+    },
+    {
+      "@id": "_:ets-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:ets-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    }
+  ]
+}

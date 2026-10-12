@@ -249,3 +249,4 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [x] 2026-10-12 ベトナム鉄道 D19E 形 923 号機（vietnam、Q423578、塗装 vnr-hanoi-skyblue、運行 ベトナム鉄道 Q501329）を足した。Wikidata に日本語の名前が無いので LABEL_JA に「ベトナム鉄道 D19E形」。高さ 41.4 mm。色は青・赤（クリーム色の運転室の正面 5.4% は落ちた）。注釈 16 か所（推測 1・模型の都合 1）。npm test 通過（28,668 形式のページ・49 模型）。gallery は skytrain 5e12ea5
 - [x] 2026-10-12 ロンドン地下鉄 1973 形（lu1973、Q1814255、塗装 lu-corporate、運行 London Underground Q682520）を足した。高さ 40 mm。色は白・赤・青。注釈 12 か所（模型の都合 1）。npm test 通過（28,668 形式のページ・50 模型）。gallery は skytrain 83a3f61
 - [x] 2026-10-12 ニューヨーク地下鉄 R211A（r211、Q7274448、塗装 mta-r211、運行 MTA ニューヨーク市交通局 Q1146109）を足した。色は灰・青。注釈 11 か所（模型の都合 1）。npm test 通過（28,668 形式のページ・51 模型）。gallery は skytrain a46ca51
+- [x] 2026-10-12 KTM ETS 93 形（ets、Q18619244、塗装 ktm-ets2、運行 KTM Q1187590）を足した。色は白・赤・黄・青。注釈 14 か所（推測 1・模型の都合 1）。npm test 通過（28,668 形式のページ・52 模型）。gallery は skytrain a904761

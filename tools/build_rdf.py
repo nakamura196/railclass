@@ -125,6 +125,7 @@ CLASSES = {
     "Q423578": ("Q423578", None, None),                       # Vietnam Railways D19E
     "Q1814255": ("Q1814255", None, None),                     # London Underground 1973 Stock (Piccadilly line)
     "Q7274448": ("Q7274448", None, None),                     # R211 (New York City Subway, Kawasaki)
+    "Q18619244": ("Q18619244", None, None),                    # KTM Class 93 (ETS, CRRC Zhuzhou)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -227,6 +228,7 @@ LIVERIES = {
     "vnr-hanoi-skyblue": ({"en": "Vietnam Railways Hanoi depot livery (sky blue, cream cab front, red band)", "ja": "ベトナム鉄道ハノイ機関区の塗装（空色、クリーム色の運転室の正面、赤い帯）"}, "Q501329"),
     "lu-corporate": ({"en": "London Underground corporate livery (red cab end and doors, white sides, blue skirt)", "ja": "ロンドン地下鉄の塗装（赤い運転室の端と扉、白い側面、青い裾）"}, "Q682520"),
     "mta-r211": ({"en": "MTA R211 livery (blue face, stainless with a diagonal blue band)", "ja": "MTA の R211 の塗装（青い顔、ステンレスに斜めの青い帯）"}, "Q1146109"),
+    "ktm-ets2": ({"en": "KTM ETS2 livery (yellow nose, silver with a red band)", "ja": "KTM の ETS2 の塗装（黄色の鼻、銀に赤い帯）"}, "Q1187590"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -282,6 +284,7 @@ MODELS = {
     "vietnam": ("Q423578", "vnr-hanoi-skyblue", None),
     "lu1973": ("Q1814255", "lu-corporate", None),
     "r211": ("Q7274448", "mta-r211", None),
+    "ets": ("Q18619244", "ktm-ets2", None),
 }
 
 

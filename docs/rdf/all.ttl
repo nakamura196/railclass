@@ -88499,25 +88499,6 @@ cls:Q1861367 a skos:Concept,
         wd:Q646388,
         wd:Q7634842 .
 
-cls:Q18619244 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "KTM Class 93"@en,
-        "クラス93"@ja ;
-    skos:exactMatch wd:Q18619244 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "KTM Class 93"@en,
-        "クラス93"@ja ;
-    prov:wasDerivedFrom wd:Q18619244 ;
-    wdt:P1064 wd:Q24609 ;
-    wdt:P137 wd:Q1187590 ;
-    wdt:P17 wd:Q833 ;
-    wdt:P176 wd:Q840960 ;
-    wdt:P279 wd:Q483373 ;
-    wdt:P930 wd:Q106530439 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/KTM%20Class%2093%20ETS%20at%20Butterworth%20KTM%2020250915%20121329.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q833 .
-
 cls:Q18619292 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "D set"@en ;
@@ -247231,6 +247212,26 @@ cls:Q18349836 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q18619244 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "KTM Class 93"@en,
+        "クラス93"@ja ;
+    skos:exactMatch wd:Q18619244 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "KTM Class 93"@en,
+        "クラス93"@ja ;
+    prov:wasDerivedFrom wd:Q18619244 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P137 wd:Q1187590 ;
+    wdt:P17 wd:Q833 ;
+    wdt:P176 wd:Q840960 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/KTM%20Class%2093%20ETS%20at%20Butterworth%20KTM%2020250915%20121329.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q833 ;
+    schema:subjectOf mdl:ets .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q18619292#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q7428218#P3438> ;
     skos:note "wikidata"@en ;
@@ -263234,6 +263235,94 @@ mdl:emu3000 a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color4> ;
     tb:liveryOf wd:Q697926 .
 
+mdl:ets a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ets#livery> ;
+    schema:about cls:Q18619244 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ets.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.6 ] ;
+    schema:description "マレーシアの都市間電車。黄色の鼻と赤い帯の ETS2 塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "KTM ETS クラス93"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ets/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ets.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#ets> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ets#color1> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.7015 ;
+    schema:color "#D6DADE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ets#color2> a tb:ColorSample ;
+    rdfs:label "ktmred" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0890 ;
+    schema:color "#C2262C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ets#color3> a tb:ColorSample ;
+    rdfs:label "midgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0561 ;
+    schema:color "#9CA3AB" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ets#color4> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0497 ;
+    schema:color "#1A1D21" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ets#color5> a tb:ColorSample ;
+    rdfs:label "ktmyellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0453 ;
+    schema:color "#F4C018" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ets#color6> a tb:ColorSample ;
+    rdfs:label "ktmblue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0217 ;
+    schema:color "#1F3C96" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ets#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0214 ;
+    schema:color "#4E5E6E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ets#color8> a tb:ColorSample ;
+    rdfs:label "swoosh" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0134 ;
+    schema:color "#E4E6E8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ets#livery> a tb:Livery ;
+    rdfs:label "KTM ETS2 livery (yellow nose, silver with a red band)"@en,
+        "KTM の ETS2 の塗装（黄色の鼻、銀に赤い帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/ets/ktm_ets.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q3142,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ets#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color8> ;
+    tb:liveryOf wd:Q1187590 .
+
 mdl:frecciarossa a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> ;
@@ -274220,9 +274309,6 @@ wd:Q911344 rdfs:label "Pyongyang tram system"@en .
 wd:Q918096 rdfs:label "Pakistan Railways"@en,
         "パキスタン鉄道"@ja .
 
-wd:Q943 rdfs:label "yellow"@en,
-        "黄色"@ja .
-
 wd:Q95709 rdfs:label "Cologne S-Bahn"@en .
 
 wd:Q964851 rdfs:label "steam turbine locomotive"@en,
@@ -274466,6 +274552,9 @@ wd:Q847966 rdfs:label "Masovian Railways"@en,
 wd:Q874436 rdfs:label "Karlsruhe Stadtbahn"@en .
 
 wd:Q929687 rdfs:label "Societatea de Transport Public Timișoara"@en .
+
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
 
 wd:Q96141169 rdfs:label "ŽOS Trnava"@en .
 
@@ -274837,9 +274926,6 @@ wd:Q1116993 rdfs:label "Commonwealth Railways"@en,
 wd:Q1121227 rdfs:label "Companhia Paulista de Trens Metropolitanos"@en,
         "サンパウロ都市圏鉄道会社"@ja .
 
-wd:Q1187590 rdfs:label "Keretapi Tanah Melayu"@en,
-        "マレー鉄道"@ja .
-
 wd:Q1456089 rdfs:label "Frichs"@en .
 
 wd:Q14912860 rdfs:label "Staatsspoorwegen"@en .
@@ -274897,6 +274983,9 @@ wd:Q1071790 rdfs:label "Chicago, Burlington and Quincy Railroad"@en,
 
 wd:Q11784488 rdfs:label "Modertrans Poznań"@en,
         "モダトランス"@ja .
+
+wd:Q1187590 rdfs:label "Keretapi Tanah Melayu"@en,
+        "マレー鉄道"@ja .
 
 wd:Q12560 rdfs:label "Ottoman Empire"@en,
         "オスマン帝国"@ja .
@@ -275493,9 +275582,6 @@ wd:Q1985988 rdfs:label "4-2-0"@en .
 
 wd:Q2905881 rdfs:label "Blanc-Misseron"@en .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q381955 rdfs:label "ATM"@en,
         "アジエンダ・トラスポルティ・ミラネージ"@ja .
 
@@ -275533,6 +275619,9 @@ wd:Q1544279 rdfs:label "Great Eastern Railway"@en,
         "グレートイースタン鉄道"@ja .
 
 wd:Q26242916 rdfs:label "0-4-4-0T"@en .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q3487558 rdfs:label "Société Anonyme la Métallurgique"@en .
 
@@ -275757,9 +275846,6 @@ wd:Q1128687 rdfs:label "Fablok"@en .
 wd:Q143609 rdfs:label "Lima Locomotive Works"@en,
         "ライマ・ロコモティブ・ワークス"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q26086670 rdfs:label "4-6-4T"@en .
 
 wd:Q290188 rdfs:label "Ansaldo"@en,
@@ -275799,6 +275885,9 @@ wd:Q53238 rdfs:label "Hitachi"@en,
 
 wd:Q917079 rdfs:label "Norfolk and Western Railway"@en,
         "ノーフォーク・アンド・ウェスタン鉄道"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q4228338 rdfs:label "Kolomna Locomotive Works"@en,
         "コロムナ工場"@ja .
@@ -275858,9 +275947,6 @@ wd:Q933787 rdfs:label "Škoda Transportation"@en,
 
 wd:Q19960466 rdfs:label "Finnish State Railways"@en .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q2373726 rdfs:label "Werkspoor"@en,
         "ヴェルクスプール"@ja .
 
@@ -275868,6 +275954,9 @@ wd:Q24730842 rdfs:label "Bo′Bo′+Bo′Bo′"@en .
 
 wd:Q6379763 rdfs:label "Kawasaki Railcar Manufacturing"@en,
         "川崎車両"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q249654 rdfs:label "Ministry of Railways"@en,
         "鉄道省"@ja .
@@ -276040,9 +276129,6 @@ wd:Q1130022 rdfs:label "London and South Western Railway"@en,
 wd:Q289728 rdfs:label "Luhanskteplovoz"@en,
         "ヴォロシロフグラード機関車工場"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1121154 rdfs:label "Compagnie des chemins de fer de Paris à Lyon et à la Méditerranée"@en,
         "パリ＝リヨン＝地中海鉄道"@ja .
 
@@ -276068,6 +276154,9 @@ wd:Q1473764 rdfs:label "Southern Pacific Transportation Company"@en,
 
 wd:Q1034433 rdfs:label "Cape Government Railways"@en,
         "ケープ植民地鉄道"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q219 rdfs:label "Bulgaria"@en,
         "ブルガリア"@ja .
