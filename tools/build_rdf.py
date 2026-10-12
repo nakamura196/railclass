@@ -115,6 +115,7 @@ CLASSES = {
     "tb-addis": (None, None, {"en": "Addis Ababa Light Rail tram (CNR Changchun)", "ja": "アディスアベバ・ライトレールの路面電車（CNR 長春）"}),
     "Q56394168": ("Q56394168", None, None),                    # MRTJ 1000 series (Jakarta MRT, Nippon Sharyo)
     "Q5122977": ("Q5122977", None, None),                     # Sydney Trains A & B sets (Waratah)
+    "Q117538222": ("Q117538222", None, None),                   # EFE SFB-500 (CRRC Sifang bimodal)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -160,7 +161,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q20926238": "TCDD E32000形",
             "Q18349836": "ダージリン・ヒマラヤ鉄道 B形",
             "Q120801969": "コルコバード登山鉄道 4 代目電車",
-            "Q56394168": "ジャカルタ MRT 1000系"}
+            "Q56394168": "ジャカルタ MRT 1000系",
+            "Q117538222": "チリ国鉄 SFB-500"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -203,6 +205,7 @@ LIVERIES = {
     "aalrt-green": ({"en": "Addis Ababa Light Rail East-West (green) line livery (white and green)", "ja": "アディスアベバ・ライトレール東西線（緑線）の塗装（白と緑）"}, "Q55639671"),
     "mrtj-standard": ({"en": "Jakarta MRT standard livery (navy and blue face, stainless with a sky-blue line; 2019-)", "ja": "ジャカルタ MRT の標準の塗装（紺と青の顔、ステンレスに水色の線。2019年から）"}, "Q137969581"),
     "sydney-trains-waratah": ({"en": "Sydney Trains Waratah livery (yellow face, orange cab sides, bare stainless, yellow doors)", "ja": "シドニー・トレインズのワラタの塗装（黄色の顔、橙色の運転室、ステンレス、黄色の扉）"}, "Q7660181"),
+    "efe-sfb500": ({"en": "EFE SFB-500 livery (silver with a red-and-black nose and a blue stripe; 2024-)", "ja": "EFE SFB-500 の塗装（銀に赤と黒の顔、青い線。2024年から）"}, "Q679910"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -252,6 +255,7 @@ MODELS = {
     "addis": ("tb-addis", "aalrt-green", None),
     "jakartamrt": ("Q56394168", "mrtj-standard", None),
     "waratah": ("Q5122977", "sydney-trains-waratah", None),
+    "santiago-chillan": ("Q117538222", "efe-sfb500", None),
 }
 
 

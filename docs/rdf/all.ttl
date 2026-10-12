@@ -27782,21 +27782,6 @@ cls:Q11752311 a skos:Concept,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Wroclaw%20Tramwaj%20BabaJaga.JPG> ;
     tb:has3DModel false .
 
-cls:Q117538222 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "EFE SFB-500"@en ;
-    skos:exactMatch wd:Q117538222 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "EFE SFB-500"@en ;
-    prov:wasDerivedFrom wd:Q117538222 ;
-    wdt:P137 wd:Q679910 ;
-    wdt:P17 wd:Q298 ;
-    wdt:P176 wd:Q5014252 ;
-    wdt:P279 wd:Q483373 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Presidente%20de%20la%20Rep%C3%BAblica%2C%20Gabriel%20Boric%20Font%2C%20inaugura%20extensi%C3%B3n%20del%20tren%20r%C3%A1pido%20hasta%20Chill%C3%A1n%2003.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q298 .
-
 cls:Q117538615 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "EFE SFE/SFD"@en ;
@@ -244903,6 +244888,24 @@ cls:Q1087710 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q117538222 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "EFE SFB-500"@en,
+        "チリ国鉄 SFB-500"@ja ;
+    skos:exactMatch wd:Q117538222 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "EFE SFB-500"@en,
+        "チリ国鉄 SFB-500"@ja ;
+    prov:wasDerivedFrom wd:Q117538222 ;
+    wdt:P137 wd:Q679910 ;
+    wdt:P17 wd:Q298 ;
+    wdt:P176 wd:Q5014252 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Presidente%20de%20la%20Rep%C3%BAblica%2C%20Gabriel%20Boric%20Font%2C%20inaugura%20extensi%C3%B3n%20del%20tren%20r%C3%A1pido%20hasta%20Chill%C3%A1n%2003.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q298 ;
+    schema:subjectOf mdl:santiago-chillan .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q11801801#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q112600701#P3438> ;
     skos:note "wikidata"@en ;
@@ -264585,6 +264588,93 @@ mdl:riyadh a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color8> ;
     tb:liveryOf wd:Q12194736 .
 
+mdl:santiago-chillan a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#livery> ;
+    schema:about cls:Q117538222 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/santiago-chillan.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "チリ国鉄の四方製の電気・ディーゼル両用の列車。2024年からの銀に赤と黒の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "サンティアゴ〜チジャン線 SFB-500"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/santiago-chillan/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/santiago-chillan.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#santiago-chillan> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color1> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.6888 ;
+    schema:color "#B6BABE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0940 ;
+    schema:color "#1C1F23" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color3> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0893 ;
+    schema:color "#9CA0A4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color4> a tb:ColorSample ;
+    rdfs:label "efered" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0729 ;
+    schema:color "#E83C3C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color5> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0192 ;
+    schema:color "#5C6268" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color6> a tb:ColorSample ;
+    rdfs:label "stripe" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0135 ;
+    schema:color "#1F4FB8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0108 ;
+    schema:color "#4E5C68" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color8> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0067 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#livery> a tb:Livery ;
+    rdfs:label "EFE SFB-500 livery (silver with a red-and-black nose and a blue stripe; 2024-)"@en,
+        "EFE SFB-500 の塗装（銀に赤と黒の顔、青い線。2024年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/santiago-chillan/efe_santiago-chillan.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/santiago-chillan#color8> ;
+    tb:liveryOf wd:Q679910 .
+
 mdl:srtred a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/srtred#livery> ;
@@ -272618,9 +272708,6 @@ wd:Q672038 rdfs:label "Escher Wyss & Cie."@en,
 
 wd:Q676639 rdfs:label "Südostbahn"@en .
 
-wd:Q679910 rdfs:label "Empresa de los Ferrocarriles del Estado"@en,
-        "チリ国鉄"@ja .
-
 wd:Q694029 rdfs:label "City Airport Train"@en,
         "シティ・エアポート・トレイン"@ja .
 
@@ -272939,6 +273026,9 @@ wd:Q660608 rdfs:label "Clayton Equipment Company"@en .
 
 wd:Q6673877 rdfs:label "Longhedge Works"@en,
         "ロングヘッジ・レイルウェイ・ワークス (バタシー)"@ja .
+
+wd:Q679910 rdfs:label "Empresa de los Ferrocarriles del Estado"@en,
+        "チリ国鉄"@ja .
 
 wd:Q6811935 rdfs:label "Melbourne and Metropolitan Tramways Board"@en,
         "メルボルン・都市圏路面電車委員会"@ja .
@@ -274716,9 +274806,6 @@ wd:Q2989965 rdfs:label "Compagnie des forges et aciéries de la marine et d’Ho
 
 wd:Q30432598 rdfs:label "(1A)(A1)"@en .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q3210519 rdfs:label "La Maquinista Terrestre y Maritima"@en,
         "テレストレ・マリティマ機械製作所"@ja .
 
@@ -274777,6 +274864,9 @@ wd:Q232962 rdfs:label "electro-diesel locomotive"@en,
 
 wd:Q2407588 rdfs:label "2-10-4"@en,
         "2-10-4"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q4881162 rdfs:label "Beijing Mass Transit Railway Operation Corporation Limited"@en,
         "北京市地鉄運営"@ja .
@@ -275182,9 +275272,6 @@ wd:Q290188 rdfs:label "Ansaldo"@en,
 wd:Q5014252 rdfs:label "CRRC Qingdao Sifang Co., Ltd."@en,
         "中車青島四方機車車輛股份有限公司"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q29638944 rdfs:label "2′2′"@en .
 
 wd:Q3428923 rdfs:label "John Cockerill & Cie."@en,
@@ -275207,6 +275294,9 @@ wd:Q131964 rdfs:label "Austrian Empire"@en,
 
 wd:Q2076679 rdfs:label "Montreal Locomotive Works"@en,
         "モントリオール・ロコモティブ・ワークス"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q5224013 rdfs:label "Darlington Works"@en,
         "ダーリントン工場"@ja .
@@ -275333,9 +275423,6 @@ wd:Q697926 rdfs:label "Taiwan Railways Administration"@en,
 wd:Q83824 rdfs:label "DSB"@en,
         "デンマーク国鉄"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q13402959 rdfs:label "high-speed train"@en,
         "高速列車"@ja .
 
@@ -275353,6 +275440,9 @@ wd:Q2449525 rdfs:label "Transnet Freight Rail"@en,
 
 wd:Q5261524 rdfs:label "Derby Works"@en,
         "ダービー鉄道製作所"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q2476154 rdfs:label "Renfe Operadora"@en,
         "レンフェ"@ja .
@@ -275771,9 +275861,6 @@ wd:Q688893 rdfs:label "ALSTOM Transportation Germany"@en,
 wd:Q314543 rdfs:label "Maschinenfabrik Esslingen"@en,
         "エスリンゲン (鉄道車両メーカー)"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q664 rdfs:label "New Zealand"@en,
         "ニュージーランド"@ja .
 
@@ -275791,6 +275878,9 @@ wd:Q193619 rdfs:label "Union of South Africa"@en,
 
 wd:Q304944 rdfs:label "České dráhy"@en,
         "チェコ鉄道"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q45 rdfs:label "Portugal"@en,
         "ポルトガル"@ja .
