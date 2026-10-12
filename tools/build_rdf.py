@@ -79,6 +79,10 @@ CLASSES = {
     "Q18331751": ("Q18331751", None, None),                     # PKP class ED250 (Alstom New Pendolino)
     # Wikidata has only a "mul" label for this class (none in en / ja), so the labels are given here
     "Q140092296": ("Q140092296", None, {"en": "Alstom X'Trapolis Tsíimin K'áak (Tren Maya)", "ja": "トレン・マヤの電車（X'Trapolis Tsíimin K'áak）"}),
+    # Gautrain: Wikidata has no item for the rolling stock (Q1476881 is the system), so a class of our own; the system
+    # is linked as the line it runs on (tools/class_lines.tsv). No skos:broader: Electrostar (Q841722) is the UK series
+    # item, and the facets marked "inherit" would carry its values over.
+    "tb-gautrain": (None, None, {"en": "Gautrain Electrostar", "ja": "ハウトレインの電車（Electrostar）"}),
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -88,9 +92,12 @@ HAND = {
     "tb-skytrain-mk2": {**SKYTRAIN, "manufacturer": ["Q688893"], "serviceEntry": [2002]},    # Bombardier Transportation
     "tb-skytrain-mk3": {**SKYTRAIN, "manufacturer": ["Q688893"], "serviceEntry": [2016]},
     "tb-skytrain-mk5": {**SKYTRAIN, "manufacturer": ["Q309084"]},                            # Alstom
+    # South Africa; Gautrain Management Agency; Bombardier Transportation; EMU; opening 2010
+    "tb-gautrain": {"country": ["Q258"], "operator": ["Q84945092"], "manufacturer": ["Q688893"], "kind": ["Q483373"], "serviceEntry": [2010]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
+    "tb-gautrain": "Country, operator and opening date (2010-06-08) from Wikidata Q1476881 (Gautrain, the system); manufacturer and type (Bombardier Electrostar EMU) from the skytrain lab note docs/notes/gautrain.md (photos and en.wikipedia 'Gautrain', read 2026-10-11).",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -119,6 +126,7 @@ LIVERIES = {
     "southeastern-2025": ({"en": "Southeastern high-speed livery (2025: grey doors and swoosh)", "ja": "Southeastern の高速電車の塗装（2025年から、灰色の扉と弧）"}, "Q1696490"),
     "pkp-ic-ed250": ({"en": "PKP Intercity Pendolino livery (silver with sky blue and cobalt)", "ja": "PKP インターシティのペンドリーノの塗装（銀に空色と紺）"}, "Q590406"),
     "tren-maya-xiinbal": ({"en": "Tren Maya Xiinbal livery (cream, dark teal and green)", "ja": "トレン・マヤ Xiinbal の塗装（クリーム、濃い青緑と緑）"}, "Q59806309"),
+    "gautrain": ({"en": "Gautrain livery (champagne gold, from the 2010 opening)", "ja": "ハウトレインの塗装（シャンパンゴールド、2010年の開業から）"}, "Q84945092"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -146,6 +154,7 @@ MODELS = {
     "class395": ("Q246841", "southeastern-2025", None),
     "ed250": ("Q18331751", "pkp-ic-ed250", None),
     "trenmaya": ("Q140092296", "tren-maya-xiinbal", None),
+    "gautrain": ("tb-gautrain", "gautrain", None),
 }
 
 
@@ -482,6 +491,10 @@ def main():
     wd = fetch("--refresh" in sys.argv)
     add_derived(wd)
     add_labels(wd, COLORS["basic"].values())
+    # hand-entered values and livery operators: a class without a Wikidata item (tb-) triggers no fetch, so its labels
+    # would be missing otherwise
+    add_labels(wd, [v for h in HAND.values() for vs in h.values() for v in vs if isinstance(v, str)]
+               + [op for _, op in LIVERIES.values()])
     IMAGES.update((r["item"], r["image"]) for r in read_tsv("wikidata/facets/_image.tsv") if r["image"])
     items = gallery_items()
     by_class = {}

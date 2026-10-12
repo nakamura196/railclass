@@ -261605,6 +261605,36 @@ cls:Q8078904 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:tb-gautrain a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Gautrain Electrostar"@en,
+        "ハウトレインの電車（Electrostar）"@ja ;
+    dcterms:source "Country, operator and opening date (2010-06-08) from Wikidata Q1476881 (Gautrain, the system); manufacturer and type (Bombardier Electrostar EMU) from the skytrain lab note docs/notes/gautrain.md (photos and en.wikipedia 'Gautrain', read 2026-10-11)."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Gautrain Electrostar"@en,
+        "ハウトレインの電車（Electrostar）"@ja ;
+    wdt:P137 wd:Q84945092 ;
+    wdt:P17 wd:Q258 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2010"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-gautrain#line1> ;
+    tb:usedOn wd:Q1476881 ;
+    schema:subjectOf mdl:gautrain .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-gautrain#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1476881> ;
+    skos:note "the Gautrain system itself; Wikidata has no item for its rolling stock"@en ;
+    tb:line wd:Q1476881 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
 cls:tb-skytrain-mk1 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "SkyTrain Mark I"@en,
@@ -262378,6 +262408,78 @@ mdl:frecciarossa a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color5>,
         <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color6> ;
     tb:liveryOf wd:Q286650 .
+
+mdl:gautrain a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#livery> ;
+    schema:about cls:tb-gautrain ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/gautrain.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "南アフリカ・ハウテン州の空港連絡と通勤の電車。2010年開業時からのシャンパンゴールドの塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ハウトレイン"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/gautrain/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/gautrain.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#gautrain> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color1> a tb:ColorSample ;
+    rdfs:label "champagne" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.8177 ;
+    schema:color "#D6C9A2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color2> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0499 ;
+    schema:color "#242A32" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color3> a tb:ColorSample ;
+    rdfs:label "gold" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0464 ;
+    schema:color "#B08A3E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color4> a tb:ColorSample ;
+    rdfs:label "royal" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0376 ;
+    schema:color "#1F3C9C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color5> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0341 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color6> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0098 ;
+    schema:color "#D8602A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/gautrain#livery> a tb:Livery ;
+    rdfs:label "Gautrain livery (champagne gold, from the 2010 opening)"@en,
+        "ハウトレインの塗装（シャンパンゴールド、2010年の開業から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/gautrain/za_gautrain.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q39338 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color6> ;
+    tb:liveryOf wd:Q84945092 .
 
 mdl:icet_411 a schema:3DModel ;
     tb:galleryGroup "icet" ;
@@ -264284,8 +264386,6 @@ wd:Q1475064 rdfs:label "Furness Line"@en .
 
 wd:Q1475085 rdfs:label "General Motors of Canada"@en,
         "ゼネラルモーターズ・カナダ"@ja .
-
-wd:Q1476881 rdfs:label "Gautrain"@en .
 
 wd:Q14774571 rdfs:label "Sydney Metro"@en .
 
@@ -266847,6 +266947,8 @@ wd:Q847767 rdfs:label "Capital Airport Express"@en .
 
 wd:Q84909919 rdfs:label "2′2′+2′2′+2′2′"@en .
 
+wd:Q84945092 rdfs:label "Gautrain Management Agency"@en .
+
 wd:Q853876 rdfs:label "Wuhan–Guangzhou high-speed railway"@en .
 
 wd:Q854820 rdfs:label "Bharat Heavy Electricals Limited"@en,
@@ -268738,6 +268840,8 @@ wd:Q143861 rdfs:label "Stuttgart Rack Railway"@en .
 
 wd:Q14544114 rdfs:label "Haydarpaşa suburban"@en .
 
+wd:Q1476881 rdfs:label "Gautrain"@en .
+
 wd:Q1478985 rdfs:label "Tricity Rapid Transit Rail Ltd"@en .
 
 wd:Q14956121 rdfs:label "Woojin Industrial Systems"@en,
@@ -269144,9 +269248,6 @@ wd:Q391928 rdfs:label "RegioPanter"@en,
 
 wd:Q3919804 rdfs:label "Düwag GT8"@en,
         "ドゥヴァグGT8"@ja .
-
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
 
 wd:Q3962280 rdfs:label "Sistemi Territoriali"@en .
 
@@ -271160,6 +271261,9 @@ wd:Q39052868 rdfs:label "West Midlands Trains"@en,
 wd:Q392909 rdfs:label "Siemens Velaro"@en,
         "ヴェラロ"@ja .
 
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
+
 wd:Q3963761 rdfs:label "Società Trazione Elettrica Lombarda"@en .
 
 wd:Q4207854 rdfs:label "Kazanskoye line (Moscow Railway)"@en .
@@ -272525,9 +272629,6 @@ wd:Q17098038 rdfs:label "Hellenic State Railways"@en .
 wd:Q18160582 rdfs:label "Holgate Road carriage works"@en,
         "ホルゲート・ロード工場"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q2371310 rdfs:label "articulated tram"@en .
 
 wd:Q24736436 rdfs:label "11 kV, 25 Hz AC railway electrification"@en .
@@ -272592,6 +272693,9 @@ wd:Q1824214 rdfs:label "couchette car"@en,
 
 wd:Q2144723 rdfs:label "open wagon"@en,
         "無蓋車"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q2494589 rdfs:label "Union Gießerei"@en .
 
@@ -272666,9 +272770,6 @@ wd:Q846655 rdfs:label "Israel Railways"@en,
 wd:Q106530472 rdfs:label "25 kV, 60 Hz AC railway electrification"@en,
         "交流25kV 60Hz鉄道電化"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1139703 rdfs:label "Polregio"@en,
         "地域交通"@ja .
 
@@ -272736,6 +272837,9 @@ wd:Q941179 rdfs:label "articulated locomotive"@en,
 
 wd:Q1053992 rdfs:label "Central South African Railways"@en,
         "セントラル・サウス・アフリカン鉄道"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q1548575 rdfs:label "R. & W. Hawthorn, Leslie and Company"@en,
         "ホーソン・レスリー"@ja .
@@ -273429,15 +273533,15 @@ wd:Q1550653 rdfs:label "Soviet Railways"@en .
 wd:Q1817331 rdfs:label "Pesa"@en,
         "PESA"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q503585 rdfs:label "Korea under Japanese rule"@en,
         "日本統治時代の朝鮮"@ja .
 
 wd:Q1964944 rdfs:label "Bundesbahnen Österreich"@en .
 
 wd:Q20656600 rdfs:label "(A1A)(A1A)"@en .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q1162114 rdfs:label "Victorian Railways"@en,
         "ヴィクトリア鉄道"@ja .
@@ -273727,11 +273831,11 @@ wd:Q546769 rdfs:label "Borsig"@en,
 wd:Q391895 rdfs:label "Siemens Mobility"@en,
         "シーメンス・モビリティ"@ja .
 
-wd:Q688893 rdfs:label "ALSTOM Transportation Germany"@en,
-        "ボンバルディア・トランスポーテーション"@ja .
-
 wd:Q6670591 rdfs:label "London Midland Region of British Railways"@en,
         "ロンドン・ミッドランド・リージョン"@ja .
+
+wd:Q688893 rdfs:label "ALSTOM Transportation Germany"@en,
+        "ボンバルディア・トランスポーテーション"@ja .
 
 wd:Q314543 rdfs:label "Maschinenfabrik Esslingen"@en,
         "エスリンゲン (鉄道車両メーカー)"@ja .

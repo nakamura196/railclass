@@ -1,0 +1,43 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:tb-gautrain a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Gautrain Electrostar"@en,
+        "ハウトレインの電車（Electrostar）"@ja ;
+    dcterms:source "Country, operator and opening date (2010-06-08) from Wikidata Q1476881 (Gautrain, the system); manufacturer and type (Bombardier Electrostar EMU) from the skytrain lab note docs/notes/gautrain.md (photos and en.wikipedia 'Gautrain', read 2026-10-11)."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Gautrain Electrostar"@en,
+        "ハウトレインの電車（Electrostar）"@ja ;
+    wdt:P137 wd:Q84945092 ;
+    wdt:P17 wd:Q258 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2010"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-gautrain#line1> ;
+    tb:usedOn wd:Q1476881 ;
+    schema:subjectOf mdl:gautrain .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-gautrain#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1476881> ;
+    skos:note "the Gautrain system itself; Wikidata has no item for its rolling stock"@en ;
+    tb:line wd:Q1476881 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
+wd:Q1476881 rdfs:label "Gautrain"@en .
+
