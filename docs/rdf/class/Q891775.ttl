@@ -1,7 +1,9 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -25,7 +27,8 @@ cls:Q891775 a skos:Concept,
     wdt:P176 wd:Q5684984 ;
     wdt:P279 wd:Q1243337 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Lakeshore%20West%20GO%20Train%20WB%20at%20Roncesvalles%20Pedestrian%20Bridge%20-%201%2C%20April%2027%202026.jpg> ;
-    tb:has3DModel false ;
+    tb:has3DModel true ;
     tb:operatingCountry wd:Q16,
-        wd:Q30 .
+        wd:Q30 ;
+    schema:subjectOf mdl:wce .
 

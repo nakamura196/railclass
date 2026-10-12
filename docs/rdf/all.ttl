@@ -230741,27 +230741,6 @@ cls:Q89045599 a skos:Concept,
         wd:Q36 ;
     tb:usedOn wd:Q875843 .
 
-cls:Q891775 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Bombardier BiLevel Coach"@en,
-        "ボンバルディア・バイレベル・コーチ"@ja ;
-    skos:exactMatch wd:Q891775 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "Bombardier BiLevel Coach"@en,
-        "ボンバルディア・バイレベル・コーチ"@ja ;
-    prov:wasDerivedFrom wd:Q891775 ;
-    wdt:P137 wd:Q1357727,
-        wd:Q166817,
-        wd:Q434302,
-        wd:Q5505779 ;
-    wdt:P17 wd:Q16 ;
-    wdt:P176 wd:Q5684984 ;
-    wdt:P279 wd:Q1243337 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Lakeshore%20West%20GO%20Train%20WB%20at%20Roncesvalles%20Pedestrian%20Bridge%20-%201%2C%20April%2027%202026.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q16,
-        wd:Q30 .
-
 cls:Q891791 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Bombardier Innovia APM 100"@en,
@@ -240846,9 +240825,6 @@ wd:Q1667713 rdfs:label "Ruppiner Eisenbahn"@en,
         "ルピーン鉄道"@ja .
 
 wd:Q16677221 rdfs:label "Société de construction et d'entretien de matériel industriel et agricole"@en .
-
-wd:Q1675085 rdfs:label "West Coast Express"@en,
-        "ウエストコーストエクスプレス"@ja .
 
 wd:Q1676623 rdfs:label "JKP GRAS Sarajevo"@en,
         "JKP GRAS サラエヴォ"@ja .
@@ -260786,6 +260762,28 @@ cls:Q853105 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q891775 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Bombardier BiLevel Coach"@en,
+        "ボンバルディア・バイレベル・コーチ"@ja ;
+    skos:exactMatch wd:Q891775 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Bombardier BiLevel Coach"@en,
+        "ボンバルディア・バイレベル・コーチ"@ja ;
+    prov:wasDerivedFrom wd:Q891775 ;
+    wdt:P137 wd:Q1357727,
+        wd:Q166817,
+        wd:Q434302,
+        wd:Q5505779 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q5684984 ;
+    wdt:P279 wd:Q1243337 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Lakeshore%20West%20GO%20Train%20WB%20at%20Roncesvalles%20Pedestrian%20Bridge%20-%201%2C%20April%2027%202026.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q16,
+        wd:Q30 ;
+    schema:subjectOf mdl:wce .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q891791#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q136483874#P3438> ;
     skos:note "wikidata"@en ;
@@ -266721,6 +266719,65 @@ mdl:waratah a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/waratah#color8> ;
     tb:liveryOf wd:Q7660181 .
 
+mdl:wce a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/wce#livery> ;
+    schema:about cls:Q891775 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/wce.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "バンクーバーの通勤列車の2階建て制御客車。白と紫に金の線の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 46.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ウェストコースト・エクスプレス"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/wce/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/wce.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#wce> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/wce#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.7541 ;
+    schema:color "#EAECEB" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/wce#color2> a tb:ColorSample ;
+    rdfs:label "violet" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.1535 ;
+    schema:color "#3D3B8C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/wce#color3> a tb:ColorSample ;
+    rdfs:label "gold" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0492 ;
+    schema:color "#F0AE1E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/wce#color4> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0353 ;
+    schema:color "#1C1E22" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/wce#livery> a tb:Livery ;
+    rdfs:label "West Coast Express livery (white and violet with gold lines)"@en,
+        "ウェストコースト・エクスプレスの塗装（白と紫に金の線）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/wce/translink_wce.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q39338 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/wce#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/wce#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/wce#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/wce#color4> ;
+    tb:liveryOf wd:Q1675085 .
+
 mdl:x2000 a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/x2000#livery> ;
@@ -267962,6 +268019,9 @@ wd:Q1668797 rdfs:label "Stowarzyszenie Kolejowych Przewozów Lokalnych"@en .
 wd:Q1671384 rdfs:label "Interstate Railroad"@en .
 
 wd:Q167503 rdfs:label "Cercanías Málaga"@en .
+
+wd:Q1675085 rdfs:label "West Coast Express"@en,
+        "ウエストコーストエクスプレス"@ja .
 
 wd:Q167626 rdfs:label "Kongsvinger Line"@en .
 
@@ -276077,9 +276137,6 @@ wd:Q24736436 rdfs:label "11 kV, 25 Hz AC railway electrification"@en .
 wd:Q2842866 rdfs:label "American Car and Foundry Company"@en,
         "アメリカン・カー・アンド・ファウンドリー・カンパニー"@ja .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q45464 rdfs:label "Tatra"@en,
         "タトラ"@ja .
 
@@ -276189,6 +276246,9 @@ wd:Q2891341 rdfs:label "Batignolles-Châtillon"@en .
 wd:Q3077258 rdfs:label "Forges Usines et Fonderies Haine-Saint-Pierre"@en .
 
 wd:Q3928435 rdfs:label "R. & W. Hawthorn"@en .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q393524 rdfs:label "Railways of the Slovak Republic"@en,
         "スロバキア国鉄"@ja .
@@ -276872,9 +276932,6 @@ wd:Q26234622 rdfs:label "2-4-0T"@en .
 wd:Q5600013 rdfs:label "Great Southern Railways"@en,
         "グレート・サザン鉄道"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q392082 rdfs:label "Škoda Vagonka"@en,
         "シュコダ・ヴァゴンカ"@ja .
 
@@ -276895,6 +276952,9 @@ wd:Q534384 rdfs:label "Maschinenbau Kiel"@en,
 
 wd:Q1069376 rdfs:label "Chemins de fer de l'État"@en,
         "国有鉄道"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q319035 rdfs:label "Arnold Jung Lokomotivfabrik"@en,
         "アーノルト・ユンク"@ja .
@@ -276928,9 +276988,6 @@ wd:Q152517 rdfs:label "Hyundai Rotem"@en,
 wd:Q1795087 rdfs:label "Maschinenbau-Gesellschaft Karlsruhe"@en,
         "カールスルーエ機械製造"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q541879 rdfs:label "Chemins de fer du Nord"@en,
         "北部鉄道"@ja .
 
@@ -276948,6 +277005,9 @@ wd:Q212 rdfs:label "Ukraine"@en,
 
 wd:Q218 rdfs:label "Romania"@en,
         "ルーマニア"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q3542526 rdfs:label "4-8-0"@en,
         "車輪配置 4-8-0"@ja .
@@ -277049,9 +277109,6 @@ wd:Q31747 rdfs:label "Irish Free State"@en,
 wd:Q533534 rdfs:label "Cisleithania"@en,
         "ツィスライタニエン"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q186320 rdfs:label "Grand Duchy of Baden"@en,
         "バーデン大公国"@ja .
 
@@ -277066,6 +277123,9 @@ wd:Q633519 rdfs:label "Córas Iompair Éireann"@en,
 
 wd:Q6418354 rdfs:label "Kitson and Company"@en,
         "キットソン (機関車メーカー)"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q1321361 rdfs:label "Société Franco-Belge"@en,
         "ソシエテ・フランコ＝ベルジュ"@ja .

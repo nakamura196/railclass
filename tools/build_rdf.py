@@ -135,6 +135,7 @@ CLASSES = {
     "Q5321494": ("Q5321494", None, None),                     # Melbourne E-class tram (Bombardier Flexity Swift)
     "Q134533452": ("Q134533452", None, None),                 # Siemens SCB-40 (Brightline)
     "Q96407257": ("Q96407257", None, None),                   # Sydney Metro Metropolis Stock (Alstom)
+    "Q891775": ("Q891775", None, None),                       # Bombardier BiLevel Coach (West Coast Express cab car)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -249,6 +250,7 @@ LIVERIES = {
     "ptv-tram": ({"en": "PTV tram livery (green facets, white, yellow doors)", "ja": "PTV の路面電車の塗装（緑の三角形の面、白、黄色の扉）"}, "Q16927551"),
     "brightline-yellow": ({"en": "Brightline yellow livery (since 2022)", "ja": "ブライトラインの黄色の塗装（2022 年から）"}, "Q27012668"),
     "sydney-metro": ({"en": "Sydney Metro livery (charcoal front with teal corner wings, white body, navy window band)", "ja": "シドニーメトロの塗装（濃い灰の前面に青緑の翼、白い車体、紺の窓帯）"}, "Q20861549"),
+    "wce-violet": ({"en": "West Coast Express livery (white and violet with gold lines)", "ja": "ウェストコースト・エクスプレスの塗装（白と紫に金の線）"}, "Q1675085"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -314,6 +316,7 @@ MODELS = {
     "melbourne-e": ("Q5321494", "ptv-tram", None),
     "brightline": ("Q134533452", "brightline-yellow", None),
     "sydneymetro": ("Q96407257", "sydney-metro", None),
+    "wce": ("Q891775", "wce-violet", None),
 }
 
 

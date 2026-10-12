@@ -9,6 +9,138 @@
   },
   "@graph": [
     {
+      "@id": "https://nakamura196.github.io/train-bodies/dataset#allJsonld",
+      "@type": "dcat:Distribution",
+      "dcat:byteSize": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "19681609"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://railclass.ldas.jp/rdf/all.jsonld"
+      },
+      "dcat:mediaType": "application/ld+json",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "dcterms:title": [
+        {
+          "@language": "en",
+          "@value": "All classes and models (JSON-LD)"
+        },
+        {
+          "@language": "ja",
+          "@value": "全形式と 3D モデル（JSON-LD）"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/dataset#allTtl",
+      "@type": "dcat:Distribution",
+      "dcat:byteSize": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "9894522"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://railclass.ldas.jp/rdf/all.ttl"
+      },
+      "dcat:mediaType": "text/turtle",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "dcterms:title": [
+        {
+          "@language": "en",
+          "@value": "All classes and models (Turtle)"
+        },
+        {
+          "@language": "ja",
+          "@value": "全形式と 3D モデル（Turtle）"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/dataset#links-commons",
+      "@type": "void:Linkset",
+      "void:linkPredicate": {
+        "@id": "foaf:depiction"
+      },
+      "void:objectsTarget": {
+        "@id": "http://commons.wikimedia.org/"
+      },
+      "void:subjectsTarget": {
+        "@id": "https://nakamura196.github.io/train-bodies/dataset"
+      },
+      "void:triples": 10402
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/dataset#vocab",
+      "@type": "dcat:Distribution",
+      "dcat:byteSize": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "6068"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://railclass.ldas.jp/rdf/vocab.ttl"
+      },
+      "dcat:mediaType": "text/turtle",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "dcterms:title": [
+        {
+          "@language": "en",
+          "@value": "Terms of our own (tb:)"
+        },
+        {
+          "@language": "ja",
+          "@value": "独自の語彙（tb:）"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/dataset#lines",
+      "@type": "dcat:Distribution",
+      "dcat:byteSize": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1111463"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://railclass.ldas.jp/lines/_all.geojson"
+      },
+      "dcat:mediaType": "application/geo+json",
+      "dcterms:license": {
+        "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
+      },
+      "dcterms:rights": {
+        "@language": "en",
+        "@value": "© OpenStreetMap contributors, ODbL. Only the line IDs (Wikidata items) are in the RDF."
+      },
+      "dcterms:title": [
+        {
+          "@language": "en",
+          "@value": "Line shapes from OpenStreetMap (GeoJSON, one file per line)"
+        },
+        {
+          "@language": "ja",
+          "@value": "路線の線（OpenStreetMap、GeoJSON、路線ごとのファイル）"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/dataset#links-wikidata",
+      "@type": "void:Linkset",
+      "void:linkPredicate": {
+        "@id": "skos:exactMatch"
+      },
+      "void:objectsTarget": {
+        "@id": "http://www.wikidata.org/"
+      },
+      "void:subjectsTarget": {
+        "@id": "https://nakamura196.github.io/train-bodies/dataset"
+      },
+      "void:triples": 14323
+    },
+    {
       "@id": "https://nakamura196.github.io/train-bodies/dataset",
       "@type": [
         "void:Dataset",
@@ -50,16 +182,16 @@
         "@id": "https://railclass.ldas.jp/dataset.html"
       },
       "dcterms:creator": {
-        "@id": "_:N832fd7a6cc0f4b5c8441f6afe0b78c3d"
+        "@id": "_:N84a60f1cc08f4c20b6a037ee423aa842"
       },
       "dcterms:description": [
         {
           "@language": "en",
-          "@value": "14,336 railway vehicle classes outside Japan, taken from Wikidata and linked to it (skos:exactMatch), with operator, manufacturer and other values as Wikidata IRIs, photos for 10,402 classes (Wikimedia Commons), the lines 932 classes run on, and 61 3D-printed vehicle bodies with their liveries. No SPARQL endpoint: every resource is a static file (Turtle and JSON-LD), and the whole dataset is in one dump file."
+          "@value": "14,336 railway vehicle classes outside Japan, taken from Wikidata and linked to it (skos:exactMatch), with operator, manufacturer and other values as Wikidata IRIs, photos for 10,402 classes (Wikimedia Commons), the lines 932 classes run on, and 62 3D-printed vehicle bodies with their liveries. No SPARQL endpoint: every resource is a static file (Turtle and JSON-LD), and the whole dataset is in one dump file."
         },
         {
           "@language": "ja",
-          "@value": "日本を除く世界の鉄道車両の形式 14,336 件。Wikidata から取り出し、skos:exactMatch で結んでいる。運行者・製造者などの値は Wikidata の IRI のまま持つ。写真 10,402 形式（Wikimedia Commons）、走る路線 932 形式、3D プリントで作った車体 61 件とその塗装を含む。SPARQL エンドポイントは無い。資源はすべて静的なファイル（Turtle と JSON-LD）で、全体は一括ファイル 1 つにまとめてある。"
+          "@value": "日本を除く世界の鉄道車両の形式 14,336 件。Wikidata から取り出し、skos:exactMatch で結んでいる。運行者・製造者などの値は Wikidata の IRI のまま持つ。写真 10,402 形式（Wikimedia Commons）、走る路線 932 形式、3D プリントで作った車体 62 件とその塗装を含む。SPARQL エンドポイントは無い。資源はすべて静的なファイル（Turtle と JSON-LD）で、全体は一括ファイル 1 つにまとめてある。"
         }
       ],
       "dcterms:isReferencedBy": {
@@ -73,7 +205,7 @@
         "@value": "2026-10-12"
       },
       "dcterms:publisher": {
-        "@id": "_:N832fd7a6cc0f4b5c8441f6afe0b78c3d"
+        "@id": "_:N84a60f1cc08f4c20b6a037ee423aa842"
       },
       "dcterms:rights": {
         "@language": "en",
@@ -101,34 +233,34 @@
       },
       "void:classPartition": [
         {
-          "@id": "_:Nc0b9641790f746a587237f77b0998949"
+          "@id": "_:N385e1ec4b4cd4359bd7837dce8e5ece7"
         },
         {
-          "@id": "_:Nb96c49ddfa804e6693c206a700ee4942"
+          "@id": "_:N89732a457c7541beb01516141000c471"
         },
         {
-          "@id": "_:N378f8e16a27f4579a6a84dd09e9d6f5a"
+          "@id": "_:N0ba6a3ab848046b0a031eca55ea64554"
         },
         {
-          "@id": "_:N1d1c5b3f636f444faac912d12d078831"
+          "@id": "_:N50950b07f78941168590829dd03ac5ce"
         },
         {
-          "@id": "_:Na651f687626d48d7b0eef92ab4bf2356"
+          "@id": "_:Nd9cca048a30243bd993dce1b4545389b"
         },
         {
-          "@id": "_:Nbe1d937d4b4143758cc4d9f217a7814d"
+          "@id": "_:Naacd776c79114be18daa4da356cd598c"
         },
         {
-          "@id": "_:N5f7bfe7123c44beaae4ff483fdbe6dc5"
+          "@id": "_:N55c7b5cfb1ef431b9ea189466f1b5eb7"
         },
         {
-          "@id": "_:N899075fc991945f881318e61569a7edb"
+          "@id": "_:Nad96ae895e014c49879a8ff59e955af7"
         },
         {
-          "@id": "_:N5d8dd924ca134031a520cc7028eecc06"
+          "@id": "_:N8acbd50e48ab44eb8812f4b34971a27e"
         },
         {
-          "@id": "_:Ncb22ee86494c4c8098d684d355f6e428"
+          "@id": "_:Nbb3a8cdd68e848e18d09db21620d9b1b"
         }
       ],
       "void:dataDump": [
@@ -139,8 +271,8 @@
           "@id": "https://railclass.ldas.jp/rdf/all.jsonld"
         }
       ],
-      "void:distinctSubjects": 17398,
-      "void:entities": 17398,
+      "void:distinctSubjects": 17404,
+      "void:entities": 17404,
       "void:exampleResource": [
         {
           "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q696668"
@@ -166,169 +298,169 @@
       "void:properties": 55,
       "void:propertyPartition": [
         {
-          "@id": "_:N5df3077e4f2a4dc2b41cad9434e8996d"
+          "@id": "_:Ndf854f3adc6046f4a3e9c063873657db"
         },
         {
-          "@id": "_:Na73d11db8bfb42c684efa391b619be5b"
+          "@id": "_:Ne8baaed0749745c0b031fe8c7b1f9fc6"
         },
         {
-          "@id": "_:Nb0b43e2398854eedaac855a836059c25"
+          "@id": "_:Nb43eec0bfd4343989f470f27cf104e38"
         },
         {
-          "@id": "_:N0696f49899274f5eab54276cabf4bb02"
+          "@id": "_:N3798b65faa684e1ebeb4dccd054316a2"
         },
         {
-          "@id": "_:Nc30ef02dcfba49178333d9102478dcf3"
+          "@id": "_:Nbcffaf889c0a4016b8511247b1c7a7d0"
         },
         {
-          "@id": "_:N73c522b6a79b4528945b8ebab7fb0960"
+          "@id": "_:Nfe38fe8f65ef4f27b912b0b9e6351f9b"
         },
         {
-          "@id": "_:N3c90ce6eb1fe41e78fe6f43a38c67e31"
+          "@id": "_:N301dc32f92404929acc55d8cae4547e1"
         },
         {
-          "@id": "_:N7eaeccb067304ad7994a8bd288e17bf3"
+          "@id": "_:Nc2db232ab4cd456885cf505ec0f89833"
         },
         {
-          "@id": "_:N169276c3aaa8495e92c9b3e3900c8817"
+          "@id": "_:Nf2167954f7624f58b4abdaa61877e4b6"
         },
         {
-          "@id": "_:Ndb9ba172407248c782b7f5271c702f40"
+          "@id": "_:N2ef75a4694f54c608232942b9462613b"
         },
         {
-          "@id": "_:Ndda4240a0419450d842a7c2f2a1559d8"
+          "@id": "_:N390bb24814fa4a248e6011c743d8dc9d"
         },
         {
-          "@id": "_:N63d4822382f2415288fa0a26d1af56b5"
+          "@id": "_:N543307bab0a04d5b99a5dd22c552e33c"
         },
         {
-          "@id": "_:Naee2329316de408dbca1b0b749302d84"
+          "@id": "_:N3afb2b47ba394bdd940c593d6801435b"
         },
         {
-          "@id": "_:N2a8840953eef494b9662d837c9411cff"
+          "@id": "_:N8dee38891b9b40a19ea636baa196eb65"
         },
         {
-          "@id": "_:Ne6b1e1fc1cb348bc8d66c6fcf813e1f9"
+          "@id": "_:N48a0175be93b4a2eb0f07ef235a1eebd"
         },
         {
-          "@id": "_:N3fdaaa485b7446d2a96c0606da73eb7d"
+          "@id": "_:Nc4ae64c451c74dbfb1090f5fe71661db"
         },
         {
-          "@id": "_:N96d09227ba394c2fbcdcefbeed98005d"
+          "@id": "_:Nd82c8fb932224af59aac2c21b02924ed"
         },
         {
-          "@id": "_:N99905c1099cc4c99939ae05403072590"
+          "@id": "_:N216b6ba4a51945ea9ebcc3295bf65fcb"
         },
         {
-          "@id": "_:N73d882884786409daa4971285b230d7c"
+          "@id": "_:N856a9ba67fc146129ad8927e92624198"
         },
         {
-          "@id": "_:Nb05b1d0b5e594156bdbfbc43bd093b67"
+          "@id": "_:N3641af8070d04274bc7869ef9bab043c"
         },
         {
-          "@id": "_:N67f3e28541ae48faa8a0bf7a150ab7ec"
+          "@id": "_:Nffba030c9eca4cc88e51905f90a517c5"
         },
         {
-          "@id": "_:Ndb52a1d14c0c4e02bbe98660175d3669"
+          "@id": "_:Ne56a81057cad4805ba07c1f746964132"
         },
         {
-          "@id": "_:N4394fbcfa36f4d95a98812ab40a7293a"
+          "@id": "_:N942e4d34cbfd4e2a97038cf4049a2617"
         },
         {
-          "@id": "_:N9e8287db0ed74ae5b0a24eed14da8962"
+          "@id": "_:N3b4fb7f9bdac457aa1e6d38bd9da632c"
         },
         {
-          "@id": "_:Ne756e4e8fa00488788a7bbbc915a13fe"
+          "@id": "_:N80f5d043107842e7b355929bd786d26b"
         },
         {
-          "@id": "_:N5efb6d1e4e5c4127928a60ab39fd0322"
+          "@id": "_:N8f0e477a39ac4887a6806655f7337c64"
         },
         {
-          "@id": "_:N75c09723536447d2bac97a9f6b30510f"
+          "@id": "_:N16d9fe94a46244b294409aa421b134aa"
         },
         {
-          "@id": "_:N7032ae41a0ad4e4d8223bd67ce220bff"
+          "@id": "_:N0827c42caf4c48d49e033511cb9b679e"
         },
         {
-          "@id": "_:Ne84b6a3a6a4f4c7388b1d96ba8106742"
+          "@id": "_:N3193e9343da9420baa2cf3d220cde054"
         },
         {
-          "@id": "_:N4bc2db340fe742fa8c99df7bb8a4ef7f"
+          "@id": "_:N9218b83c4db8438cb75663121f37f5a5"
         },
         {
-          "@id": "_:N215c5eed2bcb4fe98bdc46bc2dcd834c"
+          "@id": "_:N7612b0da4a6f450b93b87ddede0a86ca"
         },
         {
-          "@id": "_:N2ad6a3d7ae6d4276a0fe849560e81a4b"
+          "@id": "_:N7cf121f6b60b4e0bbbd227bdd91600a7"
         },
         {
-          "@id": "_:N8b65555541ca4d478a697d750d2859d5"
+          "@id": "_:N4afd4c83eba5429fbbbcd82a16ac74a2"
         },
         {
-          "@id": "_:Nc0bd7284ca214c29af2b792c527c4da7"
+          "@id": "_:Nf2c967d5079943bf9bdb15eeaa7c897b"
         },
         {
-          "@id": "_:N73f945367fff46d8ae031373f17b188b"
+          "@id": "_:Nbd0cce331ebc4bb797211d6b704edbbd"
         },
         {
-          "@id": "_:Nfcd2c8e06aba46a3a83627592eada5f6"
+          "@id": "_:Nc9e9b3a2e0d44411a1d5bb48e71732f0"
         },
         {
-          "@id": "_:N2d45c9668fbb4c849ba7be64b0aed3fb"
+          "@id": "_:N42d3a60d0ed24cdd87b6e735ef91f79a"
         },
         {
-          "@id": "_:N6ae604db078a4bf4acb9f37f4c2e45c1"
+          "@id": "_:Naf4a61cfa04c409496c158c9e9fff80c"
         },
         {
-          "@id": "_:Nab433df1b4984fcd88252d3ba3979f99"
+          "@id": "_:Nc00819d606f24d54ab6ff3afd18a9f90"
         },
         {
-          "@id": "_:N10040d74b10145bb9ac903467361f449"
+          "@id": "_:N099ffb84592747dc9cf5e668d9444c78"
         },
         {
-          "@id": "_:N89c4877d482049e1b1b889e95e6bbccd"
+          "@id": "_:Nd385aa1703a846ca86dc0518000fecb8"
         },
         {
-          "@id": "_:Ne5b58bbee05641258d0697649bae6c33"
+          "@id": "_:Nbeba32e2108c4bf1be22d057d6143846"
         },
         {
-          "@id": "_:N6589c1d0f5ea4ea3a475765e69f6ef14"
+          "@id": "_:Nc0686f12920943fcbd2437bd7f5d7f86"
         },
         {
-          "@id": "_:N70281f6ad8344aaf8520c724f6c5524f"
+          "@id": "_:Na97ba1ea92214b7fab0bf1151c622dc1"
         },
         {
-          "@id": "_:N56c9480d5dd847c7952ba35dc5255fca"
+          "@id": "_:Nfe1bc9ee3cc34bb0b0c1eb393218fd11"
         },
         {
-          "@id": "_:Neb84988a4b83465f8232fb7b6a1aacc2"
+          "@id": "_:N9c02cced545640c183d3f873d483c043"
         },
         {
-          "@id": "_:Na0da87d68b244b3a88f84619bbf5dda5"
+          "@id": "_:Na485667594a747a587ee19154e90f5f6"
         },
         {
-          "@id": "_:Ned160631f72b47808f3fe4af650df235"
+          "@id": "_:Nc01fb41a38a0460a85300583acf9acac"
         },
         {
-          "@id": "_:N33589631012c4fe899c5468f550d3bcc"
+          "@id": "_:N94567c7470f34926b9c2a84bf05b8776"
         },
         {
-          "@id": "_:N0c7c924d20cf48599339e0fcf041710f"
+          "@id": "_:N3defbe7d46b548eab2c757bd7ba93608"
         },
         {
-          "@id": "_:N255e233afd284ae4a3324d9b54a3cd52"
+          "@id": "_:N17dd7b2c009b430cbfae8b8d659cb152"
         },
         {
-          "@id": "_:Ne94b8a01df684a2695d7bf47476985c3"
+          "@id": "_:Na841154291fc490d8dc260a8ffac4064"
         },
         {
-          "@id": "_:N199d17ef0a724dbfa68e99677531a2e6"
+          "@id": "_:N1122780be7e442df8f9ecd11a7b7e295"
         },
         {
-          "@id": "_:N37c6fb90fafe4f599fc4962f95317f0d"
+          "@id": "_:Nd5a26182408745039dc2ff548d183bc9"
         },
         {
-          "@id": "_:Nc86cc30db49d4cae8b3ff42fcc7dd5a6"
+          "@id": "_:Naf9b9841e5b64980b049037f6959e1de"
         }
       ],
       "void:rootResource": {
@@ -342,7 +474,7 @@
           "@id": "https://nakamura196.github.io/train-bodies/dataset#links-commons"
         }
       ],
-      "void:triples": 254629,
+      "void:triples": 254686,
       "void:uriSpace": "https://nakamura196.github.io/train-bodies/rdf/",
       "void:vocabulary": [
         {
@@ -375,7 +507,7 @@
       ]
     },
     {
-      "@id": "_:N832fd7a6cc0f4b5c8441f6afe0b78c3d",
+      "@id": "_:N84a60f1cc08f4c20b6a037ee423aa842",
       "@type": "foaf:Person",
       "foaf:name": [
         {
@@ -389,523 +521,484 @@
       ]
     },
     {
-      "@id": "_:Nc0b9641790f746a587237f77b0998949",
+      "@id": "_:N385e1ec4b4cd4359bd7837dce8e5ece7",
       "void:class": {
         "@id": "skos:Concept"
       },
       "void:entities": 14336
     },
     {
-      "@id": "_:Nb96c49ddfa804e6693c206a700ee4942",
+      "@id": "_:N89732a457c7541beb01516141000c471",
       "void:class": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#VehicleClass"
       },
       "void:entities": 14336
     },
     {
-      "@id": "_:N378f8e16a27f4579a6a84dd09e9d6f5a",
+      "@id": "_:N0ba6a3ab848046b0a031eca55ea64554",
       "void:class": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#LineUse"
       },
       "void:entities": 2499
     },
     {
-      "@id": "_:N1d1c5b3f636f444faac912d12d078831",
+      "@id": "_:N50950b07f78941168590829dd03ac5ce",
       "void:class": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#ColorSample"
       },
-      "void:entities": 420
+      "void:entities": 424
     },
     {
-      "@id": "_:Na651f687626d48d7b0eef92ab4bf2356",
+      "@id": "_:Nd9cca048a30243bd993dce1b4545389b",
       "void:class": {
         "@id": "https://schema.org/QuantitativeValue"
       },
-      "void:entities": 183
+      "void:entities": 186
     },
     {
-      "@id": "_:Nbe1d937d4b4143758cc4d9f217a7814d",
+      "@id": "_:Naacd776c79114be18daa4da356cd598c",
       "void:class": {
         "@id": "https://schema.org/3DModel"
       },
-      "void:entities": 61
+      "void:entities": 62
     },
     {
-      "@id": "_:N5f7bfe7123c44beaae4ff483fdbe6dc5",
+      "@id": "_:N55c7b5cfb1ef431b9ea189466f1b5eb7",
       "void:class": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#Livery"
       },
-      "void:entities": 61
+      "void:entities": 62
     },
     {
-      "@id": "_:N899075fc991945f881318e61569a7edb",
+      "@id": "_:Nad96ae895e014c49879a8ff59e955af7",
       "void:class": {
         "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
       },
       "void:entities": 16
     },
     {
-      "@id": "_:N5d8dd924ca134031a520cc7028eecc06",
+      "@id": "_:N8acbd50e48ab44eb8812f4b34971a27e",
       "void:class": {
         "@id": "http://www.w3.org/2000/01/rdf-schema#Class"
       },
       "void:entities": 4
     },
     {
-      "@id": "_:Ncb22ee86494c4c8098d684d355f6e428",
+      "@id": "_:Nbb3a8cdd68e848e18d09db21620d9b1b",
       "void:class": {
         "@id": "skos:ConceptScheme"
       },
       "void:entities": 1
     },
     {
-      "@id": "_:N5df3077e4f2a4dc2b41cad9434e8996d",
+      "@id": "_:Ndf854f3adc6046f4a3e9c063873657db",
       "void:property": {
         "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
       },
-      "void:triples": 31917
+      "void:triples": 31926
     },
     {
-      "@id": "_:Na73d11db8bfb42c684efa391b619be5b",
+      "@id": "_:Ne8baaed0749745c0b031fe8c7b1f9fc6",
       "void:property": {
         "@id": "http://www.w3.org/2000/01/rdf-schema#label"
       },
-      "void:triples": 24425
+      "void:triples": 24431
     },
     {
-      "@id": "_:Nb0b43e2398854eedaac855a836059c25",
+      "@id": "_:Nb43eec0bfd4343989f470f27cf104e38",
       "void:property": {
         "@id": "skos:prefLabel"
       },
       "void:triples": 15887
     },
     {
-      "@id": "_:N0696f49899274f5eab54276cabf4bb02",
+      "@id": "_:N3798b65faa684e1ebeb4dccd054316a2",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P137"
       },
       "void:triples": 15832
     },
     {
-      "@id": "_:Nc30ef02dcfba49178333d9102478dcf3",
+      "@id": "_:Nbcffaf889c0a4016b8511247b1c7a7d0",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P176"
       },
       "void:triples": 14883
     },
     {
-      "@id": "_:N73c522b6a79b4528945b8ebab7fb0960",
-      "void:property": {
-        "@id": "skos:inScheme"
-      },
-      "void:triples": 14336
-    },
-    {
-      "@id": "_:N3c90ce6eb1fe41e78fe6f43a38c67e31",
+      "@id": "_:Nfe38fe8f65ef4f27b912b0b9e6351f9b",
       "void:property": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#has3DModel"
       },
       "void:triples": 14336
     },
     {
-      "@id": "_:N7eaeccb067304ad7994a8bd288e17bf3",
+      "@id": "_:N301dc32f92404929acc55d8cae4547e1",
+      "void:property": {
+        "@id": "skos:inScheme"
+      },
+      "void:triples": 14336
+    },
+    {
+      "@id": "_:Nc2db232ab4cd456885cf505ec0f89833",
       "void:property": {
         "@id": "skos:exactMatch"
       },
       "void:triples": 14323
     },
     {
-      "@id": "_:N169276c3aaa8495e92c9b3e3900c8817",
+      "@id": "_:Nf2167954f7624f58b4abdaa61877e4b6",
       "void:property": {
         "@id": "http://www.w3.org/ns/prov#wasDerivedFrom"
       },
       "void:triples": 14323
     },
     {
-      "@id": "_:Ndb9ba172407248c782b7f5271c702f40",
+      "@id": "_:N2ef75a4694f54c608232942b9462613b",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P279"
       },
       "void:triples": 14100
     },
     {
-      "@id": "_:Ndda4240a0419450d842a7c2f2a1559d8",
+      "@id": "_:N390bb24814fa4a248e6011c743d8dc9d",
       "void:property": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#operatingCountry"
       },
       "void:triples": 12202
     },
     {
-      "@id": "_:N63d4822382f2415288fa0a26d1af56b5",
+      "@id": "_:N543307bab0a04d5b99a5dd22c552e33c",
       "void:property": {
         "@id": "foaf:depiction"
       },
       "void:triples": 10402
     },
     {
-      "@id": "_:Naee2329316de408dbca1b0b749302d84",
+      "@id": "_:N3afb2b47ba394bdd940c593d6801435b",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P1064"
       },
       "void:triples": 10070
     },
     {
-      "@id": "_:N2a8840953eef494b9662d837c9411cff",
+      "@id": "_:N8dee38891b9b40a19ea636baa196eb65",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P17"
       },
       "void:triples": 8799
     },
     {
-      "@id": "_:Ne6b1e1fc1cb348bc8d66c6fcf813e1f9",
+      "@id": "_:N48a0175be93b4a2eb0f07ef235a1eebd",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P2978"
       },
       "void:triples": 7545
     },
     {
-      "@id": "_:N3fdaaa485b7446d2a96c0606da73eb7d",
+      "@id": "_:Nc4ae64c451c74dbfb1090f5fe71661db",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P729"
       },
       "void:triples": 4440
     },
     {
-      "@id": "_:N96d09227ba394c2fbcdcefbeed98005d",
+      "@id": "_:Nd82c8fb932224af59aac2c21b02924ed",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P2052"
       },
       "void:triples": 3840
     },
     {
-      "@id": "_:N99905c1099cc4c99939ae05403072590",
+      "@id": "_:N216b6ba4a51945ea9ebcc3295bf65fcb",
       "void:property": {
         "@id": "dcterms:source"
       },
-      "void:triples": 2573
+      "void:triples": 2574
     },
     {
-      "@id": "_:N73d882884786409daa4971285b230d7c",
-      "void:property": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab#usedOn"
-      },
-      "void:triples": 2499
-    },
-    {
-      "@id": "_:Nb05b1d0b5e594156bdbfbc43bd093b67",
-      "void:property": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab#line"
-      },
-      "void:triples": 2499
-    },
-    {
-      "@id": "_:N67f3e28541ae48faa8a0bf7a150ab7ec",
-      "void:property": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab#sourceSection"
-      },
-      "void:triples": 2499
-    },
-    {
-      "@id": "_:Ndb52a1d14c0c4e02bbe98660175d3669",
+      "@id": "_:N856a9ba67fc146129ad8927e92624198",
       "void:property": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#useStatus"
       },
       "void:triples": 2499
     },
     {
-      "@id": "_:N4394fbcfa36f4d95a98812ab40a7293a",
+      "@id": "_:N3641af8070d04274bc7869ef9bab043c",
+      "void:property": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab#line"
+      },
+      "void:triples": 2499
+    },
+    {
+      "@id": "_:Nffba030c9eca4cc88e51905f90a517c5",
       "void:property": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#lineUse"
       },
       "void:triples": 2499
     },
     {
-      "@id": "_:N9e8287db0ed74ae5b0a24eed14da8962",
+      "@id": "_:Ne56a81057cad4805ba07c1f746964132",
+      "void:property": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab#sourceSection"
+      },
+      "void:triples": 2499
+    },
+    {
+      "@id": "_:N942e4d34cbfd4e2a97038cf4049a2617",
       "void:property": {
         "@id": "skos:note"
       },
       "void:triples": 2499
     },
     {
-      "@id": "_:Ne756e4e8fa00488788a7bbbc915a13fe",
+      "@id": "_:N3b4fb7f9bdac457aa1e6d38bd9da632c",
+      "void:property": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab#usedOn"
+      },
+      "void:triples": 2499
+    },
+    {
+      "@id": "_:N80f5d043107842e7b355929bd786d26b",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P930"
       },
       "void:triples": 1924
     },
     {
-      "@id": "_:N5efb6d1e4e5c4127928a60ab39fd0322",
+      "@id": "_:N8f0e477a39ac4887a6806655f7337c64",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P462"
       },
-      "void:triples": 556
+      "void:triples": 563
     },
     {
-      "@id": "_:N75c09723536447d2bac97a9f6b30510f",
+      "@id": "_:N16d9fe94a46244b294409aa421b134aa",
       "void:property": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#colorSample"
       },
-      "void:triples": 420
+      "void:triples": 424
     },
     {
-      "@id": "_:N7032ae41a0ad4e4d8223bd67ce220bff",
-      "void:property": {
-        "@id": "https://schema.org/color"
-      },
-      "void:triples": 420
-    },
-    {
-      "@id": "_:Ne84b6a3a6a4f4c7388b1d96ba8106742",
+      "@id": "_:N0827c42caf4c48d49e033511cb9b679e",
       "void:property": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#areaShare"
       },
-      "void:triples": 420
+      "void:triples": 424
     },
     {
-      "@id": "_:N4bc2db340fe742fa8c99df7bb8a4ef7f",
+      "@id": "_:N3193e9343da9420baa2cf3d220cde054",
+      "void:property": {
+        "@id": "https://schema.org/color"
+      },
+      "void:triples": 424
+    },
+    {
+      "@id": "_:N9218b83c4db8438cb75663121f37f5a5",
       "void:property": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#usedUntil"
       },
       "void:triples": 192
     },
     {
-      "@id": "_:N215c5eed2bcb4fe98bdc46bc2dcd834c",
+      "@id": "_:N7612b0da4a6f450b93b87ddede0a86ca",
       "void:property": {
         "@id": "https://schema.org/value"
       },
-      "void:triples": 183
+      "void:triples": 186
     },
     {
-      "@id": "_:N2ad6a3d7ae6d4276a0fe849560e81a4b",
+      "@id": "_:N7cf121f6b60b4e0bbbd227bdd91600a7",
       "void:property": {
         "@id": "https://schema.org/unitCode"
       },
-      "void:triples": 183
+      "void:triples": 186
     },
     {
-      "@id": "_:N8b65555541ca4d478a697d750d2859d5",
+      "@id": "_:N4afd4c83eba5429fbbbcd82a16ac74a2",
       "void:property": {
         "@id": "https://schema.org/subjectOf"
       },
-      "void:triples": 122
+      "void:triples": 124
     },
     {
-      "@id": "_:Nc0bd7284ca214c29af2b792c527c4da7",
-      "void:property": {
-        "@id": "https://schema.org/depth"
-      },
-      "void:triples": 61
-    },
-    {
-      "@id": "_:N73f945367fff46d8ae031373f17b188b",
-      "void:property": {
-        "@id": "https://schema.org/url"
-      },
-      "void:triples": 61
-    },
-    {
-      "@id": "_:Nfcd2c8e06aba46a3a83627592eada5f6",
-      "void:property": {
-        "@id": "https://schema.org/contentUrl"
-      },
-      "void:triples": 61
-    },
-    {
-      "@id": "_:N2d45c9668fbb4c849ba7be64b0aed3fb",
-      "void:property": {
-        "@id": "https://schema.org/height"
-      },
-      "void:triples": 61
-    },
-    {
-      "@id": "_:N6ae604db078a4bf4acb9f37f4c2e45c1",
-      "void:property": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab#livery"
-      },
-      "void:triples": 61
-    },
-    {
-      "@id": "_:Nab433df1b4984fcd88252d3ba3979f99",
-      "void:property": {
-        "@id": "https://schema.org/width"
-      },
-      "void:triples": 61
-    },
-    {
-      "@id": "_:N10040d74b10145bb9ac903467361f449",
-      "void:property": {
-        "@id": "https://schema.org/name"
-      },
-      "void:triples": 61
-    },
-    {
-      "@id": "_:N89c4877d482049e1b1b889e95e6bbccd",
-      "void:property": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab#liveryOf"
-      },
-      "void:triples": 61
-    },
-    {
-      "@id": "_:Ne5b58bbee05641258d0697649bae6c33",
+      "@id": "_:Nf2c967d5079943bf9bdb15eeaa7c897b",
       "void:property": {
         "@id": "https://schema.org/license"
       },
-      "void:triples": 61
+      "void:triples": 62
     },
     {
-      "@id": "_:N6589c1d0f5ea4ea3a475765e69f6ef14",
+      "@id": "_:Nbd0cce331ebc4bb797211d6b704edbbd",
       "void:property": {
-        "@id": "https://schema.org/about"
+        "@id": "https://schema.org/height"
       },
-      "void:triples": 61
+      "void:triples": 62
     },
     {
-      "@id": "_:N70281f6ad8344aaf8520c724f6c5524f",
+      "@id": "_:Nc9e9b3a2e0d44411a1d5bb48e71732f0",
       "void:property": {
-        "@id": "https://schema.org/description"
+        "@id": "https://schema.org/depth"
       },
-      "void:triples": 61
+      "void:triples": 62
     },
     {
-      "@id": "_:N56c9480d5dd847c7952ba35dc5255fca",
-      "void:property": {
-        "@id": "https://nakamura196.github.io/train-bodies/vocab#galleryGroup"
-      },
-      "void:triples": 61
-    },
-    {
-      "@id": "_:Neb84988a4b83465f8232fb7b6a1aacc2",
+      "@id": "_:N42d3a60d0ed24cdd87b6e735ef91f79a",
       "void:property": {
         "@id": "https://schema.org/thumbnailUrl"
       },
-      "void:triples": 61
+      "void:triples": 62
     },
     {
-      "@id": "_:Na0da87d68b244b3a88f84619bbf5dda5",
+      "@id": "_:Naf4a61cfa04c409496c158c9e9fff80c",
+      "void:property": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab#livery"
+      },
+      "void:triples": 62
+    },
+    {
+      "@id": "_:Nc00819d606f24d54ab6ff3afd18a9f90",
+      "void:property": {
+        "@id": "https://schema.org/about"
+      },
+      "void:triples": 62
+    },
+    {
+      "@id": "_:N099ffb84592747dc9cf5e668d9444c78",
+      "void:property": {
+        "@id": "https://schema.org/url"
+      },
+      "void:triples": 62
+    },
+    {
+      "@id": "_:Nd385aa1703a846ca86dc0518000fecb8",
+      "void:property": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab#liveryOf"
+      },
+      "void:triples": 62
+    },
+    {
+      "@id": "_:Nbeba32e2108c4bf1be22d057d6143846",
+      "void:property": {
+        "@id": "https://schema.org/name"
+      },
+      "void:triples": 62
+    },
+    {
+      "@id": "_:Nc0686f12920943fcbd2437bd7f5d7f86",
       "void:property": {
         "@id": "https://schema.org/encodingFormat"
       },
-      "void:triples": 61
+      "void:triples": 62
     },
     {
-      "@id": "_:Ned160631f72b47808f3fe4af650df235",
+      "@id": "_:Na97ba1ea92214b7fab0bf1151c622dc1",
+      "void:property": {
+        "@id": "https://schema.org/contentUrl"
+      },
+      "void:triples": 62
+    },
+    {
+      "@id": "_:Nfe1bc9ee3cc34bb0b0c1eb393218fd11",
+      "void:property": {
+        "@id": "https://nakamura196.github.io/train-bodies/vocab#galleryGroup"
+      },
+      "void:triples": 62
+    },
+    {
+      "@id": "_:N9c02cced545640c183d3f873d483c043",
+      "void:property": {
+        "@id": "https://schema.org/description"
+      },
+      "void:triples": 62
+    },
+    {
+      "@id": "_:Na485667594a747a587ee19154e90f5f6",
+      "void:property": {
+        "@id": "https://schema.org/width"
+      },
+      "void:triples": 62
+    },
+    {
+      "@id": "_:Nc01fb41a38a0460a85300583acf9acac",
       "void:property": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#handEntered"
       },
       "void:triples": 56
     },
     {
-      "@id": "_:N33589631012c4fe899c5468f550d3bcc",
+      "@id": "_:N94567c7470f34926b9c2a84bf05b8776",
       "void:property": {
         "@id": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
       },
       "void:triples": 20
     },
     {
-      "@id": "_:N0c7c924d20cf48599339e0fcf041710f",
+      "@id": "_:N3defbe7d46b548eab2c757bd7ba93608",
       "void:property": {
         "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
       },
       "void:triples": 20
     },
     {
-      "@id": "_:N255e233afd284ae4a3324d9b54a3cd52",
+      "@id": "_:N17dd7b2c009b430cbfae8b8d659cb152",
       "void:property": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#inferred"
       },
       "void:triples": 16
     },
     {
-      "@id": "_:Ne94b8a01df684a2695d7bf47476985c3",
+      "@id": "_:Na841154291fc490d8dc260a8ffac4064",
       "void:property": {
         "@id": "skos:broader"
       },
       "void:triples": 7
     },
     {
-      "@id": "_:N199d17ef0a724dbfa68e99677531a2e6",
+      "@id": "_:N1122780be7e442df8f9ecd11a7b7e295",
       "void:property": {
         "@id": "https://nakamura196.github.io/train-bodies/vocab#part"
       },
       "void:triples": 4
     },
     {
-      "@id": "_:N37c6fb90fafe4f599fc4962f95317f0d",
+      "@id": "_:Nd5a26182408745039dc2ff548d183bc9",
       "void:property": {
         "@id": "skos:broadMatch"
       },
       "void:triples": 4
     },
     {
-      "@id": "_:Nc86cc30db49d4cae8b3ff42fcc7dd5a6",
+      "@id": "_:Naf9b9841e5b64980b049037f6959e1de",
       "void:property": {
         "@id": "dcterms:license"
       },
       "void:triples": 1
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/dataset#vocab",
+      "@id": "https://nakamura196.github.io/train-bodies/dataset#models",
       "@type": "dcat:Distribution",
       "dcat:byteSize": {
         "@type": "xsd:nonNegativeInteger",
-        "@value": "6068"
+        "@value": "29898"
       },
       "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/rdf/vocab.ttl"
+        "@id": "https://railclass.ldas.jp/data/models.json"
       },
-      "dcat:mediaType": "text/turtle",
+      "dcat:mediaType": "application/json",
       "dcterms:license": {
-        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
       },
       "dcterms:title": [
         {
           "@language": "en",
-          "@value": "Terms of our own (tb:)"
+          "@value": "List of the 3D models (JSON)"
         },
         {
           "@language": "ja",
-          "@value": "独自の語彙（tb:）"
+          "@value": "3D モデルの一覧（JSON）"
         }
       ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/dataset#allJsonld",
-      "@type": "dcat:Distribution",
-      "dcat:byteSize": {
-        "@type": "xsd:nonNegativeInteger",
-        "@value": "19676672"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/rdf/all.jsonld"
-      },
-      "dcat:mediaType": "application/ld+json",
-      "dcterms:license": {
-        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
-      },
-      "dcterms:title": [
-        {
-          "@language": "en",
-          "@value": "All classes and models (JSON-LD)"
-        },
-        {
-          "@language": "ja",
-          "@value": "全形式と 3D モデル（JSON-LD）"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/dataset#links-commons",
-      "@type": "void:Linkset",
-      "void:linkPredicate": {
-        "@id": "foaf:depiction"
-      },
-      "void:objectsTarget": {
-        "@id": "http://commons.wikimedia.org/"
-      },
-      "void:subjectsTarget": {
-        "@id": "https://nakamura196.github.io/train-bodies/dataset"
-      },
-      "void:triples": 10402
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/dataset#eratv",
@@ -937,50 +1030,11 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/dataset#links-wikidata",
-      "@type": "void:Linkset",
-      "void:linkPredicate": {
-        "@id": "skos:exactMatch"
-      },
-      "void:objectsTarget": {
-        "@id": "http://www.wikidata.org/"
-      },
-      "void:subjectsTarget": {
-        "@id": "https://nakamura196.github.io/train-bodies/dataset"
-      },
-      "void:triples": 14323
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/dataset#allTtl",
-      "@type": "dcat:Distribution",
-      "dcat:byteSize": {
-        "@type": "xsd:nonNegativeInteger",
-        "@value": "9891632"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/rdf/all.ttl"
-      },
-      "dcat:mediaType": "text/turtle",
-      "dcterms:license": {
-        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
-      },
-      "dcterms:title": [
-        {
-          "@language": "en",
-          "@value": "All classes and models (Turtle)"
-        },
-        {
-          "@language": "ja",
-          "@value": "全形式と 3D モデル（Turtle）"
-        }
-      ]
-    },
-    {
       "@id": "https://nakamura196.github.io/train-bodies/dataset#iiif",
       "@type": "dcat:Distribution",
       "dcat:byteSize": {
         "@type": "xsd:nonNegativeInteger",
-        "@value": "24246"
+        "@value": "24682"
       },
       "dcat:downloadURL": {
         "@id": "https://railclass.ldas.jp/iiif/collection.json"
@@ -997,60 +1051,6 @@
         {
           "@language": "ja",
           "@value": "3D モデルの IIIF Collection（Presentation 4.0）"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/dataset#models",
-      "@type": "dcat:Distribution",
-      "dcat:byteSize": {
-        "@type": "xsd:nonNegativeInteger",
-        "@value": "29402"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/data/models.json"
-      },
-      "dcat:mediaType": "application/json",
-      "dcterms:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      "dcterms:title": [
-        {
-          "@language": "en",
-          "@value": "List of the 3D models (JSON)"
-        },
-        {
-          "@language": "ja",
-          "@value": "3D モデルの一覧（JSON）"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/dataset#lines",
-      "@type": "dcat:Distribution",
-      "dcat:byteSize": {
-        "@type": "xsd:nonNegativeInteger",
-        "@value": "1111463"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/lines/_all.geojson"
-      },
-      "dcat:mediaType": "application/geo+json",
-      "dcterms:license": {
-        "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
-      },
-      "dcterms:rights": {
-        "@language": "en",
-        "@value": "© OpenStreetMap contributors, ODbL. Only the line IDs (Wikidata items) are in the RDF."
-      },
-      "dcterms:title": [
-        {
-          "@language": "en",
-          "@value": "Line shapes from OpenStreetMap (GeoJSON, one file per line)"
-        },
-        {
-          "@language": "ja",
-          "@value": "路線の線（OpenStreetMap、GeoJSON、路線ごとのファイル）"
         }
       ]
     }
