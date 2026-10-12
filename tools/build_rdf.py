@@ -134,6 +134,7 @@ CLASSES = {
     "Q6138251": ("Q6138251", None, {"en": "Talgo 350 SRO (Haramain High Speed Railway)", "ja": "ハラマイン高速鉄道 Talgo 350 SRO"}),  # Talgo 350 SRO (Haramain High Speed Railway; Wikidata has es/mul labels only)
     "Q5321494": ("Q5321494", None, None),                     # Melbourne E-class tram (Bombardier Flexity Swift)
     "Q134533452": ("Q134533452", None, None),                 # Siemens SCB-40 (Brightline)
+    "Q96407257": ("Q96407257", None, None),                   # Sydney Metro Metropolis Stock (Alstom)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -189,7 +190,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q117538222": "チリ国鉄 SFB-500",
             "Q423578": "ベトナム鉄道 D19E形",
             "Q55614147": "カナダ・ライン（現代ロテム製）",
-            "Q134533452": "ブライトライン SCB-40"}
+            "Q134533452": "ブライトライン SCB-40",
+            "Q96407257": "シドニーメトロ（アルストム メトロポリス）"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -246,6 +248,7 @@ LIVERIES = {
     "sar-haramain": ({"en": "Haramain High Speed Railway livery (white with gold and green lines)", "ja": "ハラマイン高速鉄道の塗装（白地に金と緑の線）"}, "Q843548"),
     "ptv-tram": ({"en": "PTV tram livery (green facets, white, yellow doors)", "ja": "PTV の路面電車の塗装（緑の三角形の面、白、黄色の扉）"}, "Q16927551"),
     "brightline-yellow": ({"en": "Brightline yellow livery (since 2022)", "ja": "ブライトラインの黄色の塗装（2022 年から）"}, "Q27012668"),
+    "sydney-metro": ({"en": "Sydney Metro livery (charcoal front with teal corner wings, white body, navy window band)", "ja": "シドニーメトロの塗装（濃い灰の前面に青緑の翼、白い車体、紺の窓帯）"}, "Q20861549"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -310,6 +313,7 @@ MODELS = {
     "haramain": ("Q6138251", "sar-haramain", None),
     "melbourne-e": ("Q5321494", "ptv-tram", None),
     "brightline": ("Q134533452", "brightline-yellow", None),
+    "sydneymetro": ("Q96407257", "sydney-metro", None),
 }
 
 

@@ -1,0 +1,110 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:sydneymetro a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#livery> ;
+    schema:about cls:Q96407257 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/sydneymetro.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "オーストラリア・シドニーの運転士のいない地下鉄電車（アルストム製）。濃い灰の前面に青緑の翼。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "シドニーメトロ"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/sydneymetro/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/sydneymetro.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#sydneymetro> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color1> a tb:ColorSample ;
+    rdfs:label "charcoal" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.5236 ;
+    schema:color "#50565B" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color10> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0103 ;
+    schema:color "#26323E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1317 ;
+    schema:color "#B9BCBF" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color3> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0963 ;
+    schema:color "#E4E6E8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color4> a tb:ColorSample ;
+    rdfs:label "pane" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0766 ;
+    schema:color "#556270" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color5> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0557 ;
+    schema:color "#2C2E3E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color6> a tb:ColorSample ;
+    rdfs:label "teal" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0365 ;
+    schema:color "#20B4D8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color7> a tb:ColorSample ;
+    rdfs:label "under" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0266 ;
+    schema:color "#3C3F42" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color8> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0211 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color9> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0195 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#livery> a tb:Livery ;
+    rdfs:label "Sydney Metro livery (charcoal front with teal corner wings, white body, navy window band)"@en,
+        "シドニーメトロの塗装（濃い灰の前面に青緑の翼、白い車体、紺の窓帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/sydneymetro/sydmetro_sydneymetro.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/sydneymetro#color9> ;
+    tb:liveryOf wd:Q20861549 .
+
