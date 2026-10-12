@@ -1,8 +1,10 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -22,7 +24,7 @@ cls:Q5122977 a skos:Concept,
     wdt:P279 wd:Q1243337,
         wd:Q483373 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/B%20set%20departing%20Panania%2020180919%2001%20%28Nimed%29.jpg> ;
-    tb:has3DModel false ;
+    tb:has3DModel true ;
     tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line1>,
         <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line2>,
         <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line3>,
@@ -33,7 +35,8 @@ cls:Q5122977 a skos:Concept,
         wd:Q63653326,
         wd:Q7331054,
         wd:Q7660181,
-        wd:Q979843 .
+        wd:Q979843 ;
+    schema:subjectOf mdl:waratah .
 
 <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q4663585#P3438> ;

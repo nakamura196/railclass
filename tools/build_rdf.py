@@ -114,6 +114,7 @@ CLASSES = {
     # own; the system is linked in tools/class_lines.tsv.
     "tb-addis": (None, None, {"en": "Addis Ababa Light Rail tram (CNR Changchun)", "ja": "アディスアベバ・ライトレールの路面電車（CNR 長春）"}),
     "Q56394168": ("Q56394168", None, None),                    # MRTJ 1000 series (Jakarta MRT, Nippon Sharyo)
+    "Q5122977": ("Q5122977", None, None),                     # Sydney Trains A & B sets (Waratah)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -201,6 +202,7 @@ LIVERIES = {
     "carris-yellow": ({"en": "Carris tram livery (yellow and white)", "ja": "Carris の路面電車の塗装（黄と白）"}, "Q1045108"),
     "aalrt-green": ({"en": "Addis Ababa Light Rail East-West (green) line livery (white and green)", "ja": "アディスアベバ・ライトレール東西線（緑線）の塗装（白と緑）"}, "Q55639671"),
     "mrtj-standard": ({"en": "Jakarta MRT standard livery (navy and blue face, stainless with a sky-blue line; 2019-)", "ja": "ジャカルタ MRT の標準の塗装（紺と青の顔、ステンレスに水色の線。2019年から）"}, "Q137969581"),
+    "sydney-trains-waratah": ({"en": "Sydney Trains Waratah livery (yellow face, orange cab sides, bare stainless, yellow doors)", "ja": "シドニー・トレインズのワラタの塗装（黄色の顔、橙色の運転室、ステンレス、黄色の扉）"}, "Q7660181"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -249,6 +251,7 @@ MODELS = {
     "lisbon28": ("tb-lisbon28", "carris-yellow", None),
     "addis": ("tb-addis", "aalrt-green", None),
     "jakartamrt": ("Q56394168", "mrtj-standard", None),
+    "waratah": ("Q5122977", "sydney-trains-waratah", None),
 }
 
 

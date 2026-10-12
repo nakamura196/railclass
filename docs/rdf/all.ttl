@@ -165930,32 +165930,6 @@ cls:Q5122976 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q408 .
 
-cls:Q5122977 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Sydney Trains A & B sets"@en,
-        "シドニー・トレインズA形電車"@ja ;
-    skos:exactMatch wd:Q5122977 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "Sydney Trains A & B sets"@en,
-        "シドニー・トレインズA形電車"@ja ;
-    prov:wasDerivedFrom wd:Q5122977 ;
-    wdt:P137 wd:Q7660181 ;
-    wdt:P279 wd:Q1243337,
-        wd:Q483373 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/B%20set%20departing%20Panania%2020180919%2001%20%28Nimed%29.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line1>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line2>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line3>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line4>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line5> ;
-    tb:operatingCountry wd:Q408 ;
-    tb:usedOn wd:Q4663585,
-        wd:Q63653326,
-        wd:Q7331054,
-        wd:Q7660181,
-        wd:Q979843 .
-
 cls:Q5122978 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "H set"@en,
@@ -254160,6 +254134,33 @@ cls:Q370895 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q5122977 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Sydney Trains A & B sets"@en,
+        "シドニー・トレインズA形電車"@ja ;
+    skos:exactMatch wd:Q5122977 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Sydney Trains A & B sets"@en,
+        "シドニー・トレインズA形電車"@ja ;
+    prov:wasDerivedFrom wd:Q5122977 ;
+    wdt:P137 wd:Q7660181 ;
+    wdt:P279 wd:Q1243337,
+        wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/B%20set%20departing%20Panania%2020180919%2001%20%28Nimed%29.jpg> ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line5> ;
+    tb:operatingCountry wd:Q408 ;
+    tb:usedOn wd:Q4663585,
+        wd:Q63653326,
+        wd:Q7331054,
+        wd:Q7660181,
+        wd:Q979843 ;
+    schema:subjectOf mdl:waratah .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q5122977#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q4663585#P3438> ;
     skos:note "wikidata"@en ;
@@ -265127,6 +265128,92 @@ mdl:vistadome a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color6> ;
     tb:liveryOf wd:Q1407952 .
 
+mdl:waratah a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/waratah#livery> ;
+    schema:about cls:Q5122977 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/waratah.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "シドニーの2階建て近郊電車。黄色の顔と橙の運転室、ステンレスの車体。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 45.9 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ワラタ（シドニー・トレインズ A 編成）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/waratah/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/waratah.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#waratah> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/waratah#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7146 ;
+    schema:color "#B4B8BB" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/waratah#color2> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0908 ;
+    schema:color "#F4B400" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/waratah#color3> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0538 ;
+    schema:color "#1E2022" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/waratah#color4> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0450 ;
+    schema:color "#C4C7C9" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/waratah#color5> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0376 ;
+    schema:color "#E87422" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/waratah#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0305 ;
+    schema:color "#4A5660" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/waratah#color7> a tb:ColorSample ;
+    rdfs:label "box" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0142 ;
+    schema:color "#D6D9DB" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/waratah#color8> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0065 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/waratah#livery> a tb:Livery ;
+    rdfs:label "Sydney Trains Waratah livery (yellow face, orange cab sides, bare stainless, yellow doors)"@en,
+        "シドニー・トレインズのワラタの塗装（黄色の顔、橙色の運転室、ステンレス、黄色の扉）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/waratah/sydney_waratah.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q39338,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/waratah#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/waratah#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/waratah#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/waratah#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/waratah#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/waratah#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/waratah#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/waratah#color8> ;
+    tb:liveryOf wd:Q7660181 .
+
 mdl:x2000 a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/x2000#livery> ;
@@ -274043,9 +274130,6 @@ wd:Q2990265 rdfs:label "Compagnie Électro-Mécanique"@en .
 
 wd:Q3300038 rdfs:label "Matériel de Traction Electrique"@en .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q393549 rdfs:label "Železničná spoločnosť Cargo Slovakia"@en,
         "鉄道企業体カーゴ・スロバキア"@ja .
 
@@ -274258,6 +274342,9 @@ wd:Q3487579 rdfs:label "Société J. F Cail & Cie"@en .
 wd:Q384011 rdfs:label "Japanese National Railways"@en,
         "日本国有鉄道"@ja .
 
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
+
 wd:Q3997890 rdfs:label "Caledonian Railway"@en,
         "カレドニアン鉄道"@ja .
 
@@ -274323,9 +274410,6 @@ wd:Q5599675 rdfs:label "Great Northern Railway (Ireland)"@en,
 
 wd:Q7533680 rdfs:label "Skabo Jernbanevognfabrikk"@en,
         "スカボ鉄道車両工場"@ja .
-
-wd:Q7660181 rdfs:label "Sydney Trains"@en,
-        "シドニー・トレインズ"@ja .
 
 wd:Q766622 rdfs:label "Newag"@en,
         "ネヴァグ"@ja .
@@ -274397,6 +274481,9 @@ wd:Q7267923 rdfs:label "CRRC Qishuyan Co., Ltd."@en,
 
 wd:Q7585945 rdfs:label "Sri Lanka Railways"@en,
         "スリランカ鉄道局"@ja .
+
+wd:Q7660181 rdfs:label "Sydney Trains"@en,
+        "シドニー・トレインズ"@ja .
 
 wd:Q7799189 rdfs:label "Thunes mekaniske verksted"@en .
 
@@ -275087,9 +275174,6 @@ wd:Q1128687 rdfs:label "Fablok"@en .
 wd:Q143609 rdfs:label "Lima Locomotive Works"@en,
         "ライマ・ロコモティブ・ワークス"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q26086670 rdfs:label "4-6-4T"@en .
 
 wd:Q290188 rdfs:label "Ansaldo"@en,
@@ -275097,6 +275181,9 @@ wd:Q290188 rdfs:label "Ansaldo"@en,
 
 wd:Q5014252 rdfs:label "CRRC Qingdao Sifang Co., Ltd."@en,
         "中車青島四方機車車輛股份有限公司"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q29638944 rdfs:label "2′2′"@en .
 
@@ -275669,9 +275756,6 @@ wd:Q884 rdfs:label "South Korea"@en,
 wd:Q3407658 rdfs:label "tram"@en,
         "路面電車"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q546769 rdfs:label "Borsig"@en,
         "ボルジッヒ"@ja .
 
@@ -275686,6 +275770,9 @@ wd:Q688893 rdfs:label "ALSTOM Transportation Germany"@en,
 
 wd:Q314543 rdfs:label "Maschinenfabrik Esslingen"@en,
         "エスリンゲン (鉄道車両メーカー)"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q664 rdfs:label "New Zealand"@en,
         "ニュージーランド"@ja .
