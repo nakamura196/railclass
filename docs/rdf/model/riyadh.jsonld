@@ -1,0 +1,247 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color8",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0061"
+      },
+      "rdfs:label": "frame",
+      "schema:color": "#8A9096",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q2284320"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/riyadh.glb"
+      },
+      "schema:depth": {
+        "@id": "_:riyadh-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "サウジアラビアの無人運転の地下鉄。シーメンス製、白と黒の車体に青の帯のブルーライン車両。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:riyadh-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "リヤド・メトロ 1号線"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/riyadh/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/riyadh.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#riyadh"
+      },
+      "schema:width": {
+        "@id": "_:riyadh-width"
+      }
+    },
+    {
+      "@id": "_:riyadh-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.5"
+      }
+    },
+    {
+      "@id": "_:riyadh-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:riyadh-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "37.7"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0244"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#2E3A46",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0969"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#16181B",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color6"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color7"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color8"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/riyadh/riyadh_riyadh.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q12194736"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Riyadh Metro Line 1 (Blue Line) livery (white lower side, black window band, blue band)"
+        },
+        {
+          "@language": "ja",
+          "@value": "リヤド・メトロ 1 号線（ブルーライン）の塗装（白い下回り、黒い窓帯、青い帯）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q1088"
+        },
+        {
+          "@id": "wd:Q23444"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.5767"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#308CDA",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0902"
+      },
+      "rdfs:label": "cream",
+      "schema:color": "#E8E9EA",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0258"
+      },
+      "rdfs:label": "sill",
+      "schema:color": "#BFC2C4",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1562"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#D9DCDE",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0177"
+      },
+      "rdfs:label": "pocket",
+      "schema:color": "#0C0D0F",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    }
+  ]
+}

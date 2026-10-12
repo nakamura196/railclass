@@ -101,6 +101,7 @@ CLASSES = {
     "tb-tanzania": (None, None, {"en": "Tanzania SGR class E6800 electric locomotive", "ja": "タンザニア SGR E6800 形電気機関車"}),
     "Q20926238": ("Q20926238", None, None),                    # TCDD E32000 (Marmaray, Hyundai Rotem)
     "Q104216528": ("Q104216528", None, None),                   # KTX-Eum (Korail EMU-260, Hyundai Rotem)
+    "Q2284320": ("Q2284320", None, None),                     # Siemens Inspiro (family; no item for the Riyadh trains)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -170,6 +171,7 @@ LIVERIES = {
     "trc-sgr": ({"en": "Tanzania Railways Corporation SGR livery (cream with orange arches, maroon lower body)", "ja": "タンザニア鉄道公社 SGR の塗装（クリームにオレンジの弧、えんじの裾）"}, "Q2393276"),
     "tcdd-marmaray": ({"en": "Marmaray livery (white cab front with a black face, stainless with teal and red lines; 2024-)", "ja": "マルマライの塗装（白い前頭部に黒い顔、ステンレスに青緑と赤の線。2024年以降の写真）"}, "Q28220824"),
     "korail-ktx-eum": ({"en": "KTX-Eum livery (steel blue with a charcoal window band and a champagne line)", "ja": "KTX-이음の塗装（青い車体に濃い灰の窓帯と金色の細い線）"}, "Q18169"),
+    "riyadh-metro-line1": ({"en": "Riyadh Metro Line 1 (Blue Line) livery (white lower side, black window band, blue band)", "ja": "リヤド・メトロ 1 号線（ブルーライン）の塗装（白い下回り、黒い窓帯、青い帯）"}, "Q12194736"),   # Royal Commission for Riyadh City (owner)
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -209,6 +211,7 @@ MODELS = {
     "tanzania": ("tb-tanzania", "trc-sgr", None),
     "marmaray": ("Q20926238", "tcdd-marmaray", None),
     "ktxeum": ("Q104216528", "korail-ktx-eum", None),
+    "riyadh": ("Q2284320", "riyadh-metro-line1", None),
 }
 
 
