@@ -81,7 +81,8 @@ def main():
            "neutral": sorted(NEUTRAL), "notPaint": sorted(NOT_PAINT),
            "basic": BASIC, "models": {}}
     for mid in MODELS:
-        objs = glob.glob(os.path.join(sky, "out", mid, "*.obj"))
+        # the --no-logo build (<stem>_nologo.obj) sits beside the published one: same paint, so it is left out
+        objs = [o for o in glob.glob(os.path.join(sky, "out", mid, "*.obj")) if not o.endswith("_nologo.obj")]
         if len(objs) != 1:
             print("skip (no single OBJ):", mid, objs); continue
         area, rgb = measure(objs[0])
