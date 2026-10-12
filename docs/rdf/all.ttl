@@ -205081,25 +205081,6 @@ cls:Q7274437 a skos:Concept,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/NYC%20Subway%20R1%20100.jpg> ;
     tb:has3DModel false .
 
-cls:Q7274448 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "R211"@en,
-        "ニューヨーク市地下鉄R211形電車"@ja ;
-    skos:exactMatch wd:Q7274448 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "R211"@en,
-        "ニューヨーク市地下鉄R211形電車"@ja ;
-    prov:wasDerivedFrom wd:Q7274448 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q1146109 ;
-    wdt:P17 wd:Q30 ;
-    wdt:P176 wd:Q6379763 ;
-    wdt:P279 wd:Q4102249 ;
-    wdt:P729 "2023"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/R211%20A%20train%20approaching%2080th%20Street%20August%202025.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q30 .
-
 cls:Q7274450 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "R21"@en,
@@ -258253,6 +258234,26 @@ cls:Q706345 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q7274448 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "R211"@en,
+        "ニューヨーク市地下鉄R211形電車"@ja ;
+    skos:exactMatch wd:Q7274448 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "R211"@en,
+        "ニューヨーク市地下鉄R211形電車"@ja ;
+    prov:wasDerivedFrom wd:Q7274448 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1146109 ;
+    wdt:P17 wd:Q30 ;
+    wdt:P176 wd:Q6379763 ;
+    wdt:P279 wd:Q4102249 ;
+    wdt:P729 "2023"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/R211%20A%20train%20approaching%2080th%20Street%20August%202025.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q30 ;
+    schema:subjectOf mdl:r211 .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q7274838#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q126698#P3438> ;
     skos:note "wikidata"@en ;
@@ -264827,6 +264828,71 @@ mdl:mk5 a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2> ;
     tb:liveryOf wd:Q1142140 .
 
+mdl:r211 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/r211#livery> ;
+    schema:about cls:Q7274448 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/r211.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "ニューヨーク市地下鉄の新しい電車（川崎車両製、2023年から）。青い顔と斜めの帯の R211A。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ニューヨーク地下鉄 R211"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/r211/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/r211.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#r211> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/r211#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.9042 ;
+    schema:color "#B2B7BE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/r211#color2> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0355 ;
+    schema:color "#2A3A85" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/r211#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0233 ;
+    schema:color "#16181E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/r211#color4> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0146 ;
+    schema:color "#2E3640" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/r211#color5> a tb:ColorSample ;
+    rdfs:label "mta" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0141 ;
+    schema:color "#2355B0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/r211#livery> a tb:Livery ;
+    rdfs:label "MTA R211 livery (blue face, stainless with a diagonal blue band)"@en,
+        "MTA の R211 の塗装（青い顔、ステンレスに斜めの青い帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/r211/nyct_r211.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/r211#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/r211#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/r211#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/r211#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/r211#color5> ;
+    tb:liveryOf wd:Q1146109 .
+
 mdl:riyadh a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#livery> ;
@@ -269797,9 +269863,6 @@ wd:Q114018 rdfs:label "Stettiner Straßen-Eisenbahn-Gesellschaft"@en .
 wd:Q1143763 rdfs:label "Cumbres and Toltec Scenic Railroad"@en,
         "クンブレス・アンド・トルテック・シーニック鉄道"@ja .
 
-wd:Q1146109 rdfs:label "Metropolitan Transportation Authority"@en,
-        "メトロポリタン・トランスポーテーション・オーソリティ"@ja .
-
 wd:Q115 rdfs:label "Ethiopia"@en,
         "エチオピア"@ja .
 
@@ -271099,6 +271162,9 @@ wd:Q1141120 rdfs:label "CrossCountry"@en,
         "クロスカントリー"@ja .
 
 wd:Q114314010 rdfs:label "İstanbul–Eskişehir high-speed train"@en .
+
+wd:Q1146109 rdfs:label "Metropolitan Transportation Authority"@en,
+        "メトロポリタン・トランスポーテーション・オーソリティ"@ja .
 
 wd:Q114705490 rdfs:label "RB 82 (Bavaria)"@en .
 
@@ -275775,9 +275841,6 @@ wd:Q900778 rdfs:label "Yugoslav Railways"@en,
 wd:Q917028 rdfs:label "dining car"@en,
         "食堂車"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q333498 rdfs:label "Bombardier"@en,
         "ボンバルディア"@ja .
 
@@ -275794,6 +275857,9 @@ wd:Q933787 rdfs:label "Škoda Transportation"@en,
         "シュコダ・トランスポーテーション"@ja .
 
 wd:Q19960466 rdfs:label "Finnish State Railways"@en .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q2373726 rdfs:label "Werkspoor"@en,
         "ヴェルクスプール"@ja .
@@ -275950,9 +276016,6 @@ wd:Q212 rdfs:label "Ukraine"@en,
 wd:Q218 rdfs:label "Romania"@en,
         "ルーマニア"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q3542526 rdfs:label "4-8-0"@en,
         "車輪配置 4-8-0"@ja .
 
@@ -275976,6 +276039,9 @@ wd:Q1130022 rdfs:label "London and South Western Railway"@en,
 
 wd:Q289728 rdfs:label "Luhanskteplovoz"@en,
         "ヴォロシロフグラード機関車工場"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q1121154 rdfs:label "Compagnie des chemins de fer de Paris à Lyon et à la Méditerranée"@en,
         "パリ＝リヨン＝地中海鉄道"@ja .
@@ -276330,9 +276396,6 @@ wd:Q15180 rdfs:label "Soviet Union"@en,
 wd:Q25857994 rdfs:label "750 V DC railway electrification"@en,
         "直流750V鉄道電化"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q843251 rdfs:label "Great Western Railway"@en,
         "グレート・ウェスタン鉄道"@ja .
 
@@ -276341,6 +276404,9 @@ wd:Q2994663 rdfs:label "2-8-0"@en,
 
 wd:Q713750 rdfs:label "West Germany"@en,
         "西ドイツ"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q17 rdfs:label "Japan"@en,
         "日本"@ja .
