@@ -130,6 +130,7 @@ CLASSES = {
     "Q55614147": ("Q55614147", None, None),                   # Hyundai Rotem EMU (SkyTrain Canada Line)
     "Q324870": ("Q324870", None, None),                       # ICE 4 (DB Class 412)
     "Q727577": ("Q727577", None, None),                       # SNCF TGV 2N2 (Euroduplex; Al Boraq is the ONCF service Q60539878)
+    "Q16798908": ("Q16798908", None, None),                   # SBB RABe 501 Giruno (Stadler SMILE)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -237,6 +238,7 @@ LIVERIES = {
     "ncrtc-namobharat": ({"en": "NCRTC Namo Bharat livery (bare stainless with a red arrow on the cab)", "ja": "NCRTC のナモ・バーラトの塗装（ステンレスの地に、運転室の赤い矢印）"}, "Q17077649"),
     "translink-canadaline": ({"en": "Canada Line livery (stainless, blue cab with a black shield face, white and blue swooshes, blue fading to green)", "ja": "カナダ・ラインの塗装（ステンレス、黒い盾形の顔の青い運転台、白と青の流れ模様、青から緑への移り）"}, "Q141170779"),
     "oncf-alboraq": ({"en": "ONCF Al Boraq livery (silver with Moroccan red and green)", "ja": "ONCF のアル・ボラクの塗装（銀地に、モロッコの赤と緑）"}, "Q1815809"),
+    "sbb-giruno": ({"en": "SBB Giruno livery (white body, red nose, black roof)", "ja": "スイス国鉄のギルノの塗装（白い車体、赤い鼻、黒い屋根）"}, "Q83835"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -297,6 +299,7 @@ MODELS = {
     "canadaline": ("Q55614147", "translink-canadaline", None),
     "ice4": ("Q324870", "db", None),
     "alboraq": ("Q727577", "oncf-alboraq", None),
+    "giruno": ("Q16798908", "sbb-giruno", None),
 }
 
 

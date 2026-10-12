@@ -74075,29 +74075,6 @@ cls:Q16787414 a skos:Concept,
     wdt:P2978 wd:Q1014107 ;
     tb:has3DModel false .
 
-cls:Q16798908 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "SBB RABe 501"@en,
-        "スイス国鉄RABe501形電車"@ja ;
-    skos:exactMatch wd:Q16798908 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "SBB RABe 501"@en,
-        "スイス国鉄RABe501形電車"@ja ;
-    prov:wasDerivedFrom wd:Q16798908 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q266280,
-        wd:Q83835 ;
-    wdt:P176 wd:Q666703 ;
-    wdt:P2052 250.0 ;
-    wdt:P279 wd:Q483373 ;
-    wdt:P729 "2019"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Stadler%20EC250%20Innotrans%202016%2009.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q16798908#line1> ;
-    tb:operatingCountry wd:Q39,
-        wd:Q40 ;
-    tb:usedOn wd:Q46048144 .
-
 cls:Q16800 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Re 450"@en,
@@ -246218,6 +246195,30 @@ cls:Q140611223 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q16798908 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SBB RABe 501"@en,
+        "スイス国鉄RABe501形電車"@ja ;
+    skos:exactMatch wd:Q16798908 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "SBB RABe 501"@en,
+        "スイス国鉄RABe501形電車"@ja ;
+    prov:wasDerivedFrom wd:Q16798908 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q266280,
+        wd:Q83835 ;
+    wdt:P176 wd:Q666703 ;
+    wdt:P2052 250.0 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2019"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Stadler%20EC250%20Innotrans%202016%2009.jpg> ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q16798908#line1> ;
+    tb:operatingCountry wd:Q39,
+        wd:Q40 ;
+    tb:usedOn wd:Q46048144 ;
+    schema:subjectOf mdl:giruno .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q16798908#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q46048144#P3438> ;
     skos:note "wikidata"@en ;
@@ -263662,6 +263663,86 @@ mdl:gautrain a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color6> ;
     tb:liveryOf wd:Q84945092 .
 
+mdl:giruno a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/giruno#livery> ;
+    schema:about cls:Q16798908 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/giruno.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "スイス国鉄 RABe 501 形。アルプスを越えてミラノへ行く高速電車で、白い車体に赤い鼻と黒い屋根。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.5 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ギルノ"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/giruno/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/giruno.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#giruno> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.6704 ;
+    schema:color "#EEEFEE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color2> a tb:ColorSample ;
+    rdfs:label "cap" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.1763 ;
+    schema:color "#1E2126" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color3> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0632 ;
+    schema:color "#D81616" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color4> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0415 ;
+    schema:color "#181A1E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color5> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0234 ;
+    schema:color "#2C2F34" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0170 ;
+    schema:color "#2C3642" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0054 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#livery> a tb:Livery ;
+    rdfs:label "SBB Giruno livery (white body, red nose, black roof)"@en,
+        "スイス国鉄のギルノの塗装（白い車体、赤い鼻、黒い屋根）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/giruno/sbb_giruno.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3142 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color7> ;
+    tb:liveryOf wd:Q83835 .
+
 mdl:ic125 a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ic125#livery> ;
@@ -276080,9 +276161,6 @@ wd:Q27943246 rdfs:label "0-4-0ST"@en .
 
 wd:Q30106213 rdfs:label "1445 mm track gauge"@en .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q3488304 rdfs:label "Société française de constructions mécaniques"@en .
 
 wd:Q518101 rdfs:label "First Republic of Austria"@en,
@@ -276123,6 +276201,9 @@ wd:Q26233895 rdfs:label "2-4-2T"@en .
 
 wd:Q298969 rdfs:label "Imperial Royal Privileged Austrian State Railway Company"@en,
         "国営鉄道会社 (オーストリア)"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q600414 rdfs:label "La Brugeoise et Nivelles"@en,
         "ラ・ブルジョワーズ・エ・ニヴェル"@ja .
@@ -276279,9 +276360,6 @@ wd:Q1180332 rdfs:label "MÁV Passenger Transport Co."@en .
 wd:Q1486303 rdfs:label "London and North Western Railway"@en,
         "ロンドン・アンド・ノース・ウェスタン鉄道"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q756271 rdfs:label "4-4-2"@en,
         "車輪配置 4-4-2"@ja .
 
@@ -276307,6 +276385,9 @@ wd:Q933787 rdfs:label "Škoda Transportation"@en,
         "シュコダ・トランスポーテーション"@ja .
 
 wd:Q19960466 rdfs:label "Finnish State Railways"@en .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q2373726 rdfs:label "Werkspoor"@en,
         "ヴェルクスプール"@ja .
@@ -276378,9 +276459,6 @@ wd:Q3401256 rdfs:label "2-6-2"@en,
 wd:Q461289 rdfs:label "Grand Duchy of Baden State Railway"@en,
         "バーデン大公国邦有鉄道"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q2449525 rdfs:label "Transnet Freight Rail"@en,
         "スポールネット"@ja .
 
@@ -276403,6 +276481,9 @@ wd:Q414 rdfs:label "Argentina"@en,
 
 wd:Q1982888 rdfs:label "New South Wales Government Railways"@en,
         "ニューサウスウェールズ鉄道"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q286650 rdfs:label "Trenitalia"@en,
         "トレニタリア"@ja .
@@ -276887,13 +276968,13 @@ wd:Q666703 rdfs:label "Stadler Rail"@en,
 wd:Q83822 rdfs:label "Austrian Federal Railways"@en,
         "オーストリア連邦鉄道"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q26234727 rdfs:label "0-4-0T"@en .
 
 wd:Q214 rdfs:label "Slovakia"@en,
         "スロバキア"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q7318 rdfs:label "Nazi Germany"@en,
         "ナチス・ドイツ"@ja .

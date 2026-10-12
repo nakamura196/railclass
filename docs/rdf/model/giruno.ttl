@@ -1,0 +1,90 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:giruno a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/giruno#livery> ;
+    schema:about cls:Q16798908 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/giruno.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "スイス国鉄 RABe 501 形。アルプスを越えてミラノへ行く高速電車で、白い車体に赤い鼻と黒い屋根。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.5 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ギルノ"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/giruno/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/giruno.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#giruno> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.6704 ;
+    schema:color "#EEEFEE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color2> a tb:ColorSample ;
+    rdfs:label "cap" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.1763 ;
+    schema:color "#1E2126" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color3> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0632 ;
+    schema:color "#D81616" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color4> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0415 ;
+    schema:color "#181A1E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color5> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0234 ;
+    schema:color "#2C2F34" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0170 ;
+    schema:color "#2C3642" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0054 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/giruno#livery> a tb:Livery ;
+    rdfs:label "SBB Giruno livery (white body, red nose, black roof)"@en,
+        "スイス国鉄のギルノの塗装（白い車体、赤い鼻、黒い屋根）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/giruno/sbb_giruno.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q23445,
+        wd:Q3142 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/giruno#color7> ;
+    tb:liveryOf wd:Q83835 .
+
