@@ -1,0 +1,81 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:canadian a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/canadian#livery> ;
+    schema:about cls:Q19877282 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/canadian.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "VIA鉄道の大陸横断列車の最後尾につく、丸い展望室とドームのステンレス車。今の帯なしの塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 48.1 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "カナディアン（パーク・カー）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/canadian/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/canadian.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#canadian> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7668 ;
+    schema:color "#B4B9BE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color2> a tb:ColorSample ;
+    rdfs:label "flute" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0930 ;
+    schema:color "#80868C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color3> a tb:ColorSample ;
+    rdfs:label "dome" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0622 ;
+    schema:color "#1E2830" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color4> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0341 ;
+    schema:color "#3A3E42" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color5> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0180 ;
+    schema:color "#555A5F" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color6> a tb:ColorSample ;
+    rdfs:label "plate" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0053 ;
+    schema:color "#CACED2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#livery> a tb:Livery ;
+    rdfs:label "VIA Rail livery (bare stainless steel, unstriped)"@en,
+        "VIA鉄道の塗装（帯なしのステンレス）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/canadian/via_canadian.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color6> ;
+    tb:liveryOf wd:Q876720 .
+

@@ -73,6 +73,7 @@ CLASSES = {
     "Q370895": ("Q370895", None, None),                         # FS ETR 400 (Frecciarossa 1000)
     "Q289090": ("Q289090", None, None),                         # Transrapid 08 (Shanghai Maglev vehicles)
     "Q119775864": ("Q119775864", None, None),                   # Vande Bharat
+    "Q19877282": ("Q19877282", None, None),                     # Park series (Budd dome-observation sleepers of The Canadian)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -108,6 +109,7 @@ LIVERIES = {
     # Wikidata has no item for the operating company, so the livery points to the line (Shanghai maglev train)
     "shanghai-maglev": ({"en": "Shanghai Maglev livery", "ja": "上海リニアの塗装"}, "Q769591"),
     "ir-vande-bharat": ({"en": "Vande Bharat livery (saffron and grey, from 2023)", "ja": "ヴァンデ・バーラトの塗装（サフランと灰、2023年から）"}, "Q819425"),
+    "via-stainless": ({"en": "VIA Rail livery (bare stainless steel, unstriped)", "ja": "VIA鉄道の塗装（帯なしのステンレス）"}, "Q876720"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -130,6 +132,7 @@ MODELS = {
     "frecciarossa": ("Q370895", "trenitalia-fr", None),
     "maglev": ("Q289090", "shanghai-maglev", None),
     "vandebharat": ("Q119775864", "ir-vande-bharat", None),
+    "canadian": ("Q19877282", "via-stainless", None),
 }
 
 
@@ -150,11 +153,19 @@ def qid(u):
 
 
 def fetch(refresh):
-    if os.path.exists(CACHE) and not refresh:
-        return json.load(open(CACHE, encoding="utf-8"))
     items = [w for w, _, _ in CLASSES.values() if w]
+    if os.path.exists(CACHE) and not refresh:
+        out = json.load(open(CACHE, encoding="utf-8"))
+        # A class added to CLASSES after the last fetch (a new model): fetch only that one, so the values of the
+        # other classes stay as cached (a --refresh would also take every change made on Wikidata since)
+        items = [q for q in items if q not in out["classes"]]
+        if not items:
+            return out
+        print("fetch: new classes", " ".join(items))
+        out["classes"].update({q: {} for q in items})
+    else:
+        out = {"fetched": time.strftime("%Y-%m-%d"), "classes": {q: {} for q in items}, "labels": {}}
     vals = " ".join("wd:" + q for q in items)
-    out = {"fetched": time.strftime("%Y-%m-%d"), "classes": {q: {} for q in items}, "labels": {}}
     for f in WD_FACETS:
         if "wd" in f:   # derived: added from the facet table in main(), not cached
             continue
@@ -190,7 +201,7 @@ def fetch(refresh):
         for k, vs in h.items():
             used.update(v for v in vs if isinstance(v, str))
     used.update(op for _, op in LIVERIES.values())
-    used = sorted(used)
+    used = sorted(u for u in used if u not in out["labels"])   # all of them on a fresh fetch; only new ones otherwise
     for i in range(0, len(used), 200):
         vals2 = " ".join("wd:" + q for q in used[i:i + 200])
         for b in sparql(f"""SELECT ?i ?l WHERE {{ VALUES ?i {{ {vals2} }} ?i rdfs:label ?l FILTER(lang(?l) IN ("ja","en")) }}"""):

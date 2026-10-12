@@ -92908,29 +92908,6 @@ cls:Q19876844 a skos:Concept,
     tb:operatingCountry wd:Q16,
         wd:Q30 .
 
-cls:Q19877282 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Park series"@en,
-        "パーク・カー"@ja ;
-    skos:exactMatch wd:Q19877282 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "Park series"@en,
-        "パーク・カー"@ja ;
-    prov:wasDerivedFrom wd:Q19877282 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q46974,
-        wd:Q876720 ;
-    wdt:P17 wd:Q16 ;
-    wdt:P176 wd:Q960308 ;
-    wdt:P279 wd:Q1691845,
-        wd:Q830565 ;
-    wdt:P2978 wd:Q29638944 ;
-    wdt:P729 "1955"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Via%20Rail%20Park%20sleeper.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q16,
-        wd:Q30 .
-
 cls:Q19877405 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "VicRail R type carriage"@en ;
@@ -247835,6 +247812,30 @@ cls:Q140611223 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q19877282 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Park series"@en,
+        "パーク・カー"@ja ;
+    skos:exactMatch wd:Q19877282 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Park series"@en,
+        "パーク・カー"@ja ;
+    prov:wasDerivedFrom wd:Q19877282 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q46974,
+        wd:Q876720 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q960308 ;
+    wdt:P279 wd:Q1691845,
+        wd:Q830565 ;
+    wdt:P2978 wd:Q29638944 ;
+    wdt:P729 "1955"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Via%20Rail%20Park%20sleeper.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q16,
+        wd:Q30 ;
+    schema:subjectOf mdl:canadian .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q19896241#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1790833#P3438> ;
     skos:note "wikidata"@en ;
@@ -262048,6 +262049,77 @@ mdl:bus49_rear a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4> ;
     tb:liveryOf wd:Q1142140 .
 
+mdl:canadian a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/canadian#livery> ;
+    schema:about cls:Q19877282 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/canadian.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "VIA鉄道の大陸横断列車の最後尾につく、丸い展望室とドームのステンレス車。今の帯なしの塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 48.1 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "カナディアン（パーク・カー）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/canadian/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/canadian.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#canadian> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7668 ;
+    schema:color "#B4B9BE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color2> a tb:ColorSample ;
+    rdfs:label "flute" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0930 ;
+    schema:color "#80868C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color3> a tb:ColorSample ;
+    rdfs:label "dome" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0622 ;
+    schema:color "#1E2830" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color4> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0341 ;
+    schema:color "#3A3E42" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color5> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0180 ;
+    schema:color "#555A5F" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#color6> a tb:ColorSample ;
+    rdfs:label "plate" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0053 ;
+    schema:color "#CACED2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadian#livery> a tb:Livery ;
+    rdfs:label "VIA Rail livery (bare stainless steel, unstriped)"@en,
+        "VIA鉄道の塗装（帯なしのステンレス）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/canadian/via_canadian.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color6> ;
+    tb:liveryOf wd:Q876720 .
+
 mdl:frecciarossa a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> ;
@@ -271632,9 +271704,6 @@ wd:Q8030528 rdfs:label "Wolverhampton railway works"@en .
 
 wd:Q809087 rdfs:label "Barry Railway Company"@en .
 
-wd:Q876720 rdfs:label "Via Rail"@en,
-        "VIA鉄道"@ja .
-
 wd:Q883462 rdfs:label "Rügensche Kleinbahn"@en .
 
 wd:Q929645 rdfs:label "Line 7"@en .
@@ -271712,6 +271781,9 @@ wd:Q7945549 rdfs:label "W. G. Bagnall Ltd."@en,
 
 wd:Q805757 rdfs:label "Baltimore and Ohio Railroad"@en,
         "ボルチモア・アンド・オハイオ鉄道"@ja .
+
+wd:Q876720 rdfs:label "Via Rail"@en,
+        "VIA鉄道"@ja .
 
 wd:Q98137582 rdfs:label "Lokomotivfabrik Krauss & Comp. Linz"@en .
 
@@ -272712,9 +272784,6 @@ wd:Q1932006 rdfs:label "Midland Railway"@en,
 
 wd:Q26185325 rdfs:label "0-10-0T"@en .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q4931035 rdfs:label "Bo′Bo′Bo′"@en .
 
 wd:Q840960 rdfs:label "CRRC Zhuzhou Locomotive Co., Ltd."@en,
@@ -272796,6 +272865,9 @@ wd:Q1180332 rdfs:label "MÁV Passenger Transport Co."@en .
 
 wd:Q1486303 rdfs:label "London and North Western Railway"@en,
         "ロンドン・アンド・ノース・ウェスタン鉄道"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q756271 rdfs:label "4-4-2"@en,
         "車輪配置 4-4-2"@ja .

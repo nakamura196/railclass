@@ -177,3 +177,38 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
       路線を選んだとき、または拡大 9 以上で画面内の路線（一度に 40 本まで）だけ `lines/<Q>.geojson` の詳しい線に差し替える。
       ODbL の表示は集まり全体に 1 回。`python3 tools/osm_lines.py --all` で作り直せる。間引きを約 1 km にすると gzip 0.12 MB だが都市の線が崩れるので取らなかった。
       目で確かめたのはヘッドレスの Chromium（Chrome 拡張のタブは裏に回って地図が描かれなかった））
+
+## 新しいモデルを足す手順（2026-10-11、canadian で通した手順を書き起こした）
+
+次の 6 両（gautrain・dubaimetro・trenmaya・tilttrain・ed250・class395）はこの順で足す。`<id>` は gallery の模型の名前、`<Q>` は Wikidata の形式。
+始める前に、train-bodies で `git status` を見る。ほかのセッションが動いていたら（未コミットの変更、数分以内に書き換わったファイル、`pgrep -fl 'astro build'`）待つ。
+
+1. skytrain で、台座なしの版を作る: `/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python build.py -- <id> --no-mount`（out/<id>/nomount/ に入る）
+2. skytrain の `tools/gallery.py` の MODELS（日本語の名前・1 行・`<Q>`・足した日）と EN（英語の名前・1 行）に 1 行ずつ足す
+3. skytrain で `python3 tools/gallery.py --no-mount --out ~/git/3d/train-bodies/docs` を走らせる（全模型を書き直す）
+4. train-bodies で `git status --short docs/models docs/thumbs docs/data` を見る。変わるのは models.json と、新しい glb・jpg だけのはず
+5. train-bodies の `tools/build_rdf.py` に 3 か所足す: CLASSES（`"<Q>": ("<Q>", None, None)`）、LIVERIES（塗装の名前 ja/en と、その塗装の運行会社の Q）、MODELS（`"<id>": ("<Q>", "<塗装>", None)`）
+6. Wikidata に形式の日本語の名前が無ければ、LABEL_JA にも足す
+7. 色: `python3 tools/extract_colors.py`（build_rdf.py の MODELS を読む。ほかの模型の行が変わっていないことを、出力の一覧と `git diff tools/livery_colors.json` で見る）
+8. RDF: `python3 tools/build_rdf.py`（1 分半ほど。新しい形式だけを Wikidata から取る。`--refresh` は付けない。付けるとほかの形式の値も今の Wikidata に変わる）
+9. 並び順だけ変わった .jsonld を戻す: `python3 tools/rdf_order_only.py`（「real」と出るのは all.jsonld・新しい形式・void.jsonld だけのはず）
+10. 部位の注釈 `annotations/<id>.json` を書く（skytrain の models/<id>.py の座標と実験ノートから。14 か所前後。形は annotations/canadian.json を手本に）
+11. `python3 tools/build_iiif.py <id>`（どの部位も、狙った色の面に当たったかが表に出る。外れると止まる）
+12. ダウンロード: skytrain で `python3 tools/export_formats.py <id> ~/git/3d/train-bodies/docs/downloads/<id> --no-mount`（git には入らない。公開の手順でだけ配る）
+13. Manifest をダウンロード込みで作り直す: `python3 tools/build_iiif.py <id>`（「5 downloads」と出る）、続けて `python3 tools/build_iiif.py --collection`
+14. 検索の索引: `python3 tools/build_search.py`（変わるのは新しい形式の行だけのはず。stats.json の models が 1 つ増える）
+15. データセットの説明: `python3 tools/build_void.py`（docs/rdf/void.* と docs/data/dataset.json）
+16. 路線: 形式に Wikidata の P3438 が無ければ何もしない（地図には出ない）。手で足すなら tools/class_lines.tsv と `tools/osm_lines.py`
+17. サイト: `cd web && npm run build && npm test`
+18. コミット（ファイルを 1 つずつ `git add`）: train-bodies は annotations/<id>.json・docs/models/<id>.glb・docs/thumbs/<id>.jpg・docs/data/models.json・docs/data/dataset.json・docs/iiif/<id>/manifest.json・docs/iiif/collection.json・docs/rdf/all.*・docs/rdf/void.*・docs/rdf/class/<Q>.*・docs/rdf/model/<id>.*・docs/search/index.json・docs/search/stats.json・tools/build_rdf.py・tools/livery_colors.json。skytrain は tools/gallery.py
+19. 本人の了承のあとで: train-bodies で `git push` と `zsh scripts/deploy-pages.zsh`（main で走らせる。中で build と npm test をもう一度走らせ、通ったときだけ gh-pages に出す）
+
+## カナディアン（パーク・カー）を足した（2026-10-11）
+
+- [x] 模型 canadian（skytrain の models/canadian.py、実験ノート skytrain/docs/notes/canadian.md）。形式 Q19877282（パーク・カー）、塗装 via-stainless（VIA鉄道 Q876720 の帯なしのステンレス）。gallery は skytrain 48faddc
+- [x] 色は灰 98.4% だけ（地のステンレス）。ほかの 18 模型の色は変わらず
+- [x] v2 の車体（skytrain ad74687、屋根 40・全高 48.1 mm）で作り直した。RDF: 形式 18 + 14,307、模型 19、251,043 トリプル。build_rdf.py は、キャッシュに無い形式だけを Wikidata から取るようにした（それまでは新しい形式があると止まり、`--refresh` で全部を取り直すしかなかった）
+- [x] 注釈 14 か所（推測 1・模型の都合 1）、Manifest（ダウンロード 5 件）、Collection 19 本、索引（変わったのは Q19877282 の行だけ）、VoID
+- 路線: Q19877282 に P3438 が無いので、地図には出ない。列車のカナディアン（Q1069301）の路線を形式に結ぶかは未決
+- 2026-10-11 23:00 ごろ、別のセッション（OG 画像の作業）が同じチェックアウトで `astro build` を走らせ、こちらのビルドとぶつかって落ちた。向こうが終わってから作り直し、`npm run build && npm test` は通った（28,650 形式のページ・19 模型）。ビルドの前に `pgrep -fl 'astro build'` を見ること
+- 注釈は v2 で高さが最大 2.5 mm 動いたので、狙う点を直した（尾の窓・VIA の板・帯・ドームの 3 か所）。14 か所とも狙った色に当たる
