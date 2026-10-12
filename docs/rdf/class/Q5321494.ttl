@@ -1,8 +1,10 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -23,10 +25,11 @@ cls:Q5321494 a skos:Concept,
     wdt:P279 wd:Q5063597,
         wd:Q564428 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/E%206001%20and%20E%206002%20%28Melbourne%20trams%29%20in%20Bourke%20St%20on%20route%2096%2C%202013.JPG> ;
-    tb:has3DModel false ;
+    tb:has3DModel true ;
     tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q5321494#line1> ;
     tb:operatingCountry wd:Q408 ;
-    tb:usedOn wd:Q12061652 .
+    tb:usedOn wd:Q12061652 ;
+    schema:subjectOf mdl:melbourne-e .
 
 <https://nakamura196.github.io/train-bodies/rdf/class/Q5321494#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q12061652#P3438> ;
