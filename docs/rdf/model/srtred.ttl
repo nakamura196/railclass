@@ -1,0 +1,89 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:srtred a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/srtred#livery> ;
+    schema:about cls:tb-srtred ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/srtred.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.4 ] ;
+    schema:description "バンコクの通勤電車（日立 AT100）。2021年開業。白い車体に赤い帯と黒い前面。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.5 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "SRTレッドライン"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/srtred/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/srtred.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#srtred> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color1> a tb:ColorSample ;
+    rdfs:label "srtwhite" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.7200 ;
+    schema:color "#E9EBEC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color2> a tb:ColorSample ;
+    rdfs:label "roofgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1159 ;
+    schema:color "#9AA0A6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color3> a tb:ColorSample ;
+    rdfs:label "srtred" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.1015 ;
+    schema:color "#D41A2C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0226 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color5> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0221 ;
+    schema:color "#16181C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0068 ;
+    schema:color "#3A444E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0066 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#livery> a tb:Livery ;
+    rdfs:label "SRT Red Lines livery (white with a red band, black front mask)"@en,
+        "SRTレッドラインの塗装（白に赤い帯、黒い前面）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/srtred/srt_srtred.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3142 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color7> ;
+    tb:liveryOf wd:Q2165702 .
+

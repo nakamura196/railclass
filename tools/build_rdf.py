@@ -86,6 +86,9 @@ CLASSES = {
     # Dubai Metro: as for the Gautrain, Wikidata has no item for the Kinki Sharyo rolling stock (Q83787 is the system)
     "tb-dubaimetro": (None, None, {"en": "Dubai Metro Kinki Sharyo train", "ja": "ドバイメトロの電車（近畿車輛）"}),
     "Q65054413": ("Q65054413", None, None),                     # Taiwan Railway EMU3000 (Hitachi)
+    # SRT Red Lines (Bangkok): Wikidata has no item for the Hitachi AT100 rolling stock (Q2542280 is the line system), so a class
+    # of our own; the system is linked as the line it runs on (tools/class_lines.tsv). Not under Hitachi A-train (Q1066003): too broad a family.
+    "tb-srtred": (None, None, {"en": "SRT Red Lines Hitachi AT100", "ja": "SRTレッドラインの電車（日立 AT100）"}),
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -99,11 +102,14 @@ HAND = {
     "tb-gautrain": {"country": ["Q258"], "operator": ["Q84945092"], "manufacturer": ["Q688893"], "kind": ["Q483373"], "serviceEntry": [2010]},
     # United Arab Emirates; Serco (Wikidata P137 of Q83787); Kinki Sharyo; EMU; opening 2009
     "tb-dubaimetro": {"country": ["Q878"], "operator": ["Q499104"], "manufacturer": ["Q1592306"], "kind": ["Q483373"], "serviceEntry": [2009]},
+    # Thailand; State Railway of Thailand (its subsidiary SRTET runs the line and has no item); Hitachi; EMU; opening 2021
+    "tb-srtred": {"country": ["Q869"], "operator": ["Q2165702"], "manufacturer": ["Q53238"], "kind": ["Q483373"], "serviceEntry": [2021]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
     "tb-gautrain": "Country, operator and opening date (2010-06-08) from Wikidata Q1476881 (Gautrain, the system); manufacturer and type (Bombardier Electrostar EMU) from the skytrain lab note docs/notes/gautrain.md (photos and en.wikipedia 'Gautrain', read 2026-10-11).",
     "tb-dubaimetro": "Country, operator and opening date (2009-09-09) from Wikidata Q83787 (Dubai Metro, the system); manufacturer (Kinki Sharyo, cars 5001-5079) from en.wikipedia 'Dubai Metro' (rolling stock, read 2026-10-11) via the skytrain lab note docs/notes/dubaimetro.md.",
+    "tb-srtred": "Country from Wikidata Q2542280 (SRT Red Lines, the system); operator (State Railway of Thailand, through its subsidiary SRT Electrified Train), manufacturer and type (Hitachi AT100 EMU) and opening year (2021) from en.wikipedia and ja.wikipedia (read 2026-10-12) via the skytrain lab note docs/notes/srtred.md.",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -135,6 +141,7 @@ LIVERIES = {
     "gautrain": ({"en": "Gautrain livery (champagne gold, from the 2010 opening)", "ja": "ハウトレインの塗装（シャンパンゴールド、2010年の開業から）"}, "Q84945092"),
     "dubai-metro": ({"en": "Dubai Metro livery (silver and light blue)", "ja": "ドバイメトロの塗装（銀と水色）"}, "Q22101985"),   # RTA (Roads and Transport Authority, Dubai)
     "tr-emu3000-red": ({"en": "Taiwan Railway EMU3000 livery (white with a black nose, red stripe at the coupled end)", "ja": "台湾鉄路 EMU3000型の塗装（白い車体に黒い先頭部、連結側に赤い帯）"}, "Q697926"),
+    "srt-red-line": ({"en": "SRT Red Lines livery (white with a red band, black front mask)", "ja": "SRTレッドラインの塗装（白に赤い帯、黒い前面）"}, "Q2165702"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -165,6 +172,7 @@ MODELS = {
     "gautrain": ("tb-gautrain", "gautrain", None),
     "dubaimetro": ("tb-dubaimetro", "dubai-metro", None),
     "emu3000": ("Q65054413", "tr-emu3000-red", None),
+    "srtred": ("tb-srtred", "srt-red-line", None),
 }
 
 

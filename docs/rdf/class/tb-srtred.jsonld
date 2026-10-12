@@ -1,0 +1,117 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "wd:Q2542280",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SRT Red Lines"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-srtred#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2542280"
+      },
+      "line": {
+        "@id": "wd:Q2542280"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "the SRT Red Lines system itself; Wikidata has no item for its Hitachi AT100 rolling stock"
+      },
+      "sourceSection": "Wikidata (the system)",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-srtred",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Country from Wikidata Q2542280 (SRT Red Lines, the system); operator (State Railway of Thailand, through its subsidiary SRT Electrified Train), manufacturer and type (Hitachi AT100 EMU) and opening year (2021) from en.wikipedia and ja.wikipedia (read 2026-10-12) via the skytrain lab note docs/notes/srtred.md."
+      },
+      "handEntered": [
+        {
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P137"
+        },
+        {
+          "@id": "wdt:P176"
+        },
+        {
+          "@id": "wdt:P279"
+        },
+        {
+          "@id": "wdt:P729"
+        }
+      ],
+      "has3DModel": true,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-srtred#line1"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "SRT Red Lines Hitachi AT100"
+        },
+        {
+          "@language": "ja",
+          "@value": "SRTレッドラインの電車（日立 AT100）"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/srtred"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SRT Red Lines Hitachi AT100"
+        },
+        {
+          "@language": "ja",
+          "@value": "SRTレッドラインの電車（日立 AT100）"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q2542280"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q2165702"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q869"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q53238"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2021"
+      }
+    }
+  ]
+}

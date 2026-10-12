@@ -261754,6 +261754,36 @@ cls:tb-skytrain-mk5 a skos:Concept,
     tb:has3DModel true ;
     schema:subjectOf mdl:mk5 .
 
+cls:tb-srtred a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SRT Red Lines Hitachi AT100"@en,
+        "SRTレッドラインの電車（日立 AT100）"@ja ;
+    dcterms:source "Country from Wikidata Q2542280 (SRT Red Lines, the system); operator (State Railway of Thailand, through its subsidiary SRT Electrified Train), manufacturer and type (Hitachi AT100 EMU) and opening year (2021) from en.wikipedia and ja.wikipedia (read 2026-10-12) via the skytrain lab note docs/notes/srtred.md."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "SRT Red Lines Hitachi AT100"@en,
+        "SRTレッドラインの電車（日立 AT100）"@ja ;
+    wdt:P137 wd:Q2165702 ;
+    wdt:P17 wd:Q869 ;
+    wdt:P176 wd:Q53238 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2021"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-srtred#line1> ;
+    tb:usedOn wd:Q2542280 ;
+    schema:subjectOf mdl:srtred .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-srtred#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2542280> ;
+    skos:note "the SRT Red Lines system itself; Wikidata has no item for its Hitachi AT100 rolling stock"@en ;
+    tb:line wd:Q2542280 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
 mdl:airo a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/airo#livery> ;
@@ -263332,6 +263362,85 @@ mdl:mk5 a schema:3DModel ;
     tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1>,
         <https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2> ;
     tb:liveryOf wd:Q1142140 .
+
+mdl:srtred a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/srtred#livery> ;
+    schema:about cls:tb-srtred ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/srtred.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.4 ] ;
+    schema:description "バンコクの通勤電車（日立 AT100）。2021年開業。白い車体に赤い帯と黒い前面。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.5 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "SRTレッドライン"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/srtred/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/srtred.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#srtred> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color1> a tb:ColorSample ;
+    rdfs:label "srtwhite" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.7200 ;
+    schema:color "#E9EBEC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color2> a tb:ColorSample ;
+    rdfs:label "roofgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1159 ;
+    schema:color "#9AA0A6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color3> a tb:ColorSample ;
+    rdfs:label "srtred" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.1015 ;
+    schema:color "#D41A2C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0226 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color5> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0221 ;
+    schema:color "#16181C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0068 ;
+    schema:color "#3A444E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0066 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/srtred#livery> a tb:Livery ;
+    rdfs:label "SRT Red Lines livery (white with a red band, black front mask)"@en,
+        "SRTレッドラインの塗装（白に赤い帯、黒い前面）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/srtred/srt_srtred.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3142 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color7> ;
+    tb:liveryOf wd:Q2165702 .
 
 mdl:tilttrain a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -265287,6 +265396,8 @@ wd:Q2534873 rdfs:label "Blue Line"@en .
 wd:Q2541548 rdfs:label "Haaglanden tram line 12"@en .
 
 wd:Q25420888 rdfs:label "Panama Metro Line 1"@en .
+
+wd:Q2542280 rdfs:label "SRT Red Lines"@en .
 
 wd:Q2555693 rdfs:label "Weimar-Werk"@en .
 
@@ -272065,9 +272176,6 @@ wd:Q26197695 rdfs:label "2-8-4T"@en .
 wd:Q3055404 rdfs:label "St. Louis Southwestern Railway"@en,
         "セントルイス・サウスウェスタン鉄道"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q318652 rdfs:label "Heidenau–Altenberg railway"@en .
 
 wd:Q3243209 rdfs:label "SMRT Trains"@en,
@@ -272284,6 +272392,9 @@ wd:Q27597 rdfs:label "Fiat"@en,
         "フィアット"@ja .
 
 wd:Q2842994 rdfs:label "Renfe Regionales"@en .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q376511 rdfs:label "SBB Cargo"@en,
         "SBBカーゴ"@ja .
@@ -272560,9 +272671,6 @@ wd:Q171985 rdfs:label "Massachusetts Bay Transportation Authority"@en,
 wd:Q2010680 rdfs:label "Brush Traction"@en,
         "ブラッシュトラクション"@ja .
 
-wd:Q2165702 rdfs:label "State Railway of Thailand"@en,
-        "タイ国有鉄道"@ja .
-
 wd:Q232 rdfs:label "Kazakhstan"@en,
         "カザフスタン"@ja .
 
@@ -272689,6 +272797,9 @@ wd:Q2002710 rdfs:label "Pullman Company"@en,
 
 wd:Q209658 rdfs:label "draisine"@en,
         "軌道自転車"@ja .
+
+wd:Q2165702 rdfs:label "State Railway of Thailand"@en,
+        "タイ国有鉄道"@ja .
 
 wd:Q23955641 rdfs:label "Épernay Works"@en .
 
@@ -272852,9 +272963,6 @@ wd:Q1824214 rdfs:label "couchette car"@en,
 wd:Q2144723 rdfs:label "open wagon"@en,
         "無蓋車"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q2494589 rdfs:label "Union Gießerei"@en .
 
 wd:Q26196936 rdfs:label "2-10-2T"@en .
@@ -272939,8 +273047,8 @@ wd:Q1666820 rdfs:label "Natal Government Railways"@en .
 wd:Q225 rdfs:label "Bosnia and Herzegovina"@en,
         "ボスニア・ヘルツェゴビナ"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q260105 rdfs:label "covered goods wagon"@en,
         "有蓋車"@ja .
@@ -273008,6 +273116,9 @@ wd:Q1779703 rdfs:label "Lancashire and Yorkshire Railway"@en,
 wd:Q232962 rdfs:label "electro-diesel locomotive"@en,
         "電気・ディーゼル両用車両"@ja .
 
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
+
 wd:Q2407588 rdfs:label "2-10-4"@en,
         "2-10-4"@ja .
 
@@ -273035,9 +273146,6 @@ wd:Q766616 rdfs:label "Slovenske železnice"@en,
 
 wd:Q77877230 rdfs:label "ŽOS Vrútky"@en .
 
-wd:Q869 rdfs:label "Thailand"@en,
-        "タイ王国"@ja .
-
 wd:Q1079190 rdfs:label "switcher"@en,
         "入換機関車"@ja .
 
@@ -273064,6 +273172,9 @@ wd:Q7880037 rdfs:label "Ulster Transport Authority"@en,
         "アルスター交通局"@ja .
 
 wd:Q814947 rdfs:label "trailer car"@en .
+
+wd:Q869 rdfs:label "Thailand"@en,
+        "タイ王国"@ja .
 
 wd:Q1088 rdfs:label "blue"@en,
         "青"@ja .
@@ -273423,9 +273534,6 @@ wd:Q29638944 rdfs:label "2′2′"@en .
 wd:Q3428923 rdfs:label "John Cockerill & Cie."@en,
         "コッカリル"@ja .
 
-wd:Q53238 rdfs:label "Hitachi"@en,
-        "日立製作所"@ja .
-
 wd:Q826750 rdfs:label "Chemins de fer d'Alsace et de Lorraine"@en,
         "アルザス＝ロレーヌ鉄道"@ja .
 
@@ -273443,6 +273551,9 @@ wd:Q2076679 rdfs:label "Montreal Locomotive Works"@en,
 
 wd:Q5224013 rdfs:label "Darlington Works"@en,
         "ダーリントン工場"@ja .
+
+wd:Q53238 rdfs:label "Hitachi"@en,
+        "日立製作所"@ja .
 
 wd:Q917079 rdfs:label "Norfolk and Western Railway"@en,
         "ノーフォーク・アンド・ウェスタン鉄道"@ja .
@@ -273734,9 +273845,6 @@ wd:Q819425 rdfs:label "Indian Railways"@en,
 wd:Q822381 rdfs:label "DÜWAG"@en,
         "DUEWAG"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q764728 rdfs:label "2-10-0"@en,
         "車輪配置 2-10-0"@ja .
 
@@ -273762,6 +273870,9 @@ wd:Q31747 rdfs:label "Irish Free State"@en,
 
 wd:Q533534 rdfs:label "Cisleithania"@en,
         "ツィスライタニエン"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q186320 rdfs:label "Grand Duchy of Baden"@en,
         "バーデン大公国"@ja .
