@@ -75,6 +75,7 @@ CLASSES = {
     "Q119775864": ("Q119775864", None, None),                   # Vande Bharat
     "Q19877282": ("Q19877282", None, None),                     # Park series (Budd dome-observation sleepers of The Canadian)
     "Q23641827": ("Q23641827", None, None),                     # Electric Tilt Train (Queensland Rail)
+    "Q246841": ("Q246841", None, None),                         # British Rail Class 395 (Javelin)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -112,6 +113,7 @@ LIVERIES = {
     "ir-vande-bharat": ({"en": "Vande Bharat livery (saffron and grey, from 2023)", "ja": "ヴァンデ・バーラトの塗装（サフランと灰、2023年から）"}, "Q819425"),
     "via-stainless": ({"en": "VIA Rail livery (bare stainless steel, unstriped)", "ja": "VIA鉄道の塗装（帯なしのステンレス）"}, "Q876720"),
     "qr-tilt": ({"en": "Queensland Rail Tilt Train livery (yellow cab end and stainless, since the 2015–17 refurbishment)", "ja": "クイーンズランド鉄道のティルト・トレインの塗装（黄色の先頭部とステンレス、2015〜17年の更新から）"}, "Q379439"),
+    "southeastern-2025": ({"en": "Southeastern high-speed livery (2025: grey doors and swoosh)", "ja": "Southeastern の高速電車の塗装（2025年から、灰色の扉と弧）"}, "Q1696490"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -136,6 +138,7 @@ MODELS = {
     "vandebharat": ("Q119775864", "ir-vande-bharat", None),
     "canadian": ("Q19877282", "via-stainless", None),
     "tilttrain": ("Q23641827", "qr-tilt", None),
+    "class395": ("Q246841", "southeastern-2025", None),
 }
 
 

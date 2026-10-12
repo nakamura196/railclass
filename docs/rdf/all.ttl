@@ -110007,28 +110007,6 @@ cls:Q2467690 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q30 .
 
-cls:Q246841 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "British Rail Class 395"@en,
-        "イギリス鉄道395形電車"@ja ;
-    skos:exactMatch wd:Q246841 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "British Rail Class 395"@en,
-        "イギリス鉄道395形電車"@ja ;
-    prov:wasDerivedFrom wd:Q246841 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q1696490 ;
-    wdt:P176 wd:Q53238 ;
-    wdt:P2052 225.0 ;
-    wdt:P279 wd:Q1066003,
-        wd:Q483373 ;
-    wdt:P729 "2009"^^xsd:gYear ;
-    wdt:P930 wd:Q106530439,
-        wd:Q25857994 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/395023%20at%20Dover%20Priory.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q145 .
-
 cls:Q2469544 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "La Brugeoise et Nivelles S1/S2"@en,
@@ -248976,6 +248954,29 @@ cls:Q23641827 a skos:Concept,
     tb:useStatus "historical" ;
     tb:usedUntil "2017"^^xsd:gYear .
 
+cls:Q246841 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 395"@en,
+        "イギリス鉄道395形電車"@ja ;
+    skos:exactMatch wd:Q246841 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "British Rail Class 395"@en,
+        "イギリス鉄道395形電車"@ja ;
+    prov:wasDerivedFrom wd:Q246841 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1696490 ;
+    wdt:P176 wd:Q53238 ;
+    wdt:P2052 225.0 ;
+    wdt:P279 wd:Q1066003,
+        wd:Q483373 ;
+    wdt:P729 "2009"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439,
+        wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/395023%20at%20Dover%20Priory.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q145 ;
+    schema:subjectOf mdl:class395 .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q24769235#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1132660#P3438> ;
     skos:note "wikidata"@en ;
@@ -262118,6 +262119,93 @@ mdl:canadian a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/canadian#color6> ;
     tb:liveryOf wd:Q876720 .
 
+mdl:class395 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/class395#livery> ;
+    schema:about cls:Q246841 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/class395.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "英国の高速電車。日立製。2025年からの新塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "クラス395「ジャベリン」"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/class395/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/class395.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#class395> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color1> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.7835 ;
+    schema:color "#242C58" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0887 ;
+    schema:color "#343740" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0415 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color4> a tb:ColorSample ;
+    rdfs:label "door" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0307 ;
+    schema:color "#8F959C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color5> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0182 ;
+    schema:color "#E86A1E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color6> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0168 ;
+    schema:color "#F0C41A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0069 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color8> a tb:ColorSample ;
+    rdfs:label "swoosh" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0066 ;
+    schema:color "#A8AEB6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#livery> a tb:Livery ;
+    rdfs:label "Southeastern high-speed livery (2025: grey doors and swoosh)"@en,
+        "Southeastern の高速電車の塗装（2025年から、灰色の扉と弧）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/class395/se_class395.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q39338,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/class395#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color8> ;
+    tb:liveryOf wd:Q1696490 .
+
 mdl:frecciarossa a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> ;
@@ -265293,9 +265381,6 @@ wd:Q39081226 rdfs:label "Salta Regional Service"@en .
 
 wd:Q39111397 rdfs:label "Line 2, Chengdu Tram"@en .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q3943572 rdfs:label "SEPSA"@en,
         "SEPSA"@ja .
 
@@ -266722,9 +266807,6 @@ wd:Q9401 rdfs:label "BASF"@en,
         "BASF SE"@ja .
 
 wd:Q940957 rdfs:label "Rome–Naples high-speed railway"@en .
-
-wd:Q943 rdfs:label "yellow"@en,
-        "黄色"@ja .
 
 wd:Q943113 rdfs:label "Chicago and Eastern Illinois Railroad"@en,
         "シカゴ・アンド・イースタン・イリノイ鉄道"@ja .
@@ -268885,6 +268967,9 @@ wd:Q391928 rdfs:label "RegioPanter"@en,
 wd:Q3919804 rdfs:label "Düwag GT8"@en,
         "ドゥヴァグGT8"@ja .
 
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
+
 wd:Q3962280 rdfs:label "Sistemi Territoriali"@en .
 
 wd:Q39773382 rdfs:label "The Canada Works"@en .
@@ -269344,6 +269429,9 @@ wd:Q928708 rdfs:label "PCC streetcar"@en,
 wd:Q931127 rdfs:label "Beijing–Tianjin intercity railway"@en .
 
 wd:Q9395021 rdfs:label "Łódź Regional Tram"@en .
+
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
 
 wd:Q96252601 rdfs:label "RB 33"@en .
 
@@ -270501,9 +270589,6 @@ wd:Q16828302 rdfs:label "Cowlairs railway works"@en .
 wd:Q16946492 rdfs:label "Transwerk"@en,
         "トランスウェルク"@ja .
 
-wd:Q1696490 rdfs:label "Southeastern"@en,
-        "サウスイースタン"@ja .
-
 wd:Q171221 rdfs:label "Washington Metro"@en,
         "ワシントンメトロ"@ja .
 
@@ -270781,6 +270866,9 @@ wd:Q168331 rdfs:label "Esko Prague"@en .
 
 wd:Q16934076 rdfs:label "North Western Railway"@en,
         "ノース・ウェスタン鉄道"@ja .
+
+wd:Q1696490 rdfs:label "Southeastern"@en,
+        "サウスイースタン"@ja .
 
 wd:Q174852 rdfs:label "Siemens EuroSprinter"@en,
         "ユーロスプリンター"@ja .
@@ -272089,9 +272177,6 @@ wd:Q2146117 rdfs:label "Rete Adriatica"@en .
 wd:Q23444 rdfs:label "white"@en,
         "白"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q262 rdfs:label "Algeria"@en,
         "アルジェリア"@ja .
 
@@ -272135,9 +272220,6 @@ wd:Q918156 rdfs:label "Petersburg Tram Mechanical Factory"@en,
 wd:Q1069374 rdfs:label "Chemins de fer de l'Ouest"@en,
         "西部鉄道 (フランス)"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1100969 rdfs:label "Talgo"@en,
         "タルゴ"@ja .
 
@@ -272165,6 +272247,9 @@ wd:Q2002710 rdfs:label "Pullman Company"@en,
 
 wd:Q209658 rdfs:label "draisine"@en,
         "軌道自転車"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q23955641 rdfs:label "Épernay Works"@en .
 
@@ -272252,6 +272337,9 @@ wd:Q870024 rdfs:label "Gmeinder"@en,
 
 wd:Q93301 rdfs:label "locomotive"@en,
         "機関車"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q1230042 rdfs:label "tram in Frankfurt"@en,
         "フランクフルト市電の車両"@ja .
@@ -273025,9 +273113,6 @@ wd:Q168082 rdfs:label "Hungarian State Railways"@en,
 wd:Q27306 rdfs:label "Kingdom of Prussia"@en,
         "プロイセン王国"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q56240475 rdfs:label "B"@en .
 
 wd:Q683873 rdfs:label "Prussian state railways"@en,
@@ -273064,6 +273149,9 @@ wd:Q392082 rdfs:label "Škoda Vagonka"@en,
 
 wd:Q414 rdfs:label "Argentina"@en,
         "アルゼンチン"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q1982888 rdfs:label "New South Wales Government Railways"@en,
         "ニューサウスウェールズ鉄道"@ja .

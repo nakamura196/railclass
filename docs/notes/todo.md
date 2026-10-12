@@ -213,3 +213,4 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - 2026-10-11 23:00 ごろ、別のセッション（OG 画像の作業）が同じチェックアウトで `astro build` を走らせ、こちらのビルドとぶつかって落ちた。向こうが終わってから作り直し、`npm run build && npm test` は通った（28,650 形式のページ・19 模型）。ビルドの前に `pgrep -fl 'astro build'` を見ること
 - 注釈は v2 で高さが最大 2.5 mm 動いたので、狙う点を直した（尾の窓・VIA の板・帯・ドームの 3 か所）。14 か所とも狙った色に当たる
 - [x] 2026-10-11 電気式ティルト・トレイン（tilttrain、Q23641827、塗装 qr-tilt）を足した。色は黄・灰、注釈 14 か所（推測 1・模型の都合 1）。npm test 通過。gallery は skytrain ce1a3a9
+- [x] 2026-10-11 クラス395「ジャベリン」（class395、Q246841、塗装 southeastern-2025、運行 Southeastern Q1696490）を足した。色は青（紺）・橙・黄、注釈 15 か所（推測 1・模型の都合 1）。npm test 通過。gallery は skytrain 5db1e42

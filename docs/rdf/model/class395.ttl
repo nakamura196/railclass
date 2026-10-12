@@ -1,0 +1,97 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:class395 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/class395#livery> ;
+    schema:about cls:Q246841 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/class395.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "英国の高速電車。日立製。2025年からの新塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "クラス395「ジャベリン」"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/class395/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/class395.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#class395> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color1> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.7835 ;
+    schema:color "#242C58" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0887 ;
+    schema:color "#343740" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0415 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color4> a tb:ColorSample ;
+    rdfs:label "door" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0307 ;
+    schema:color "#8F959C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color5> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0182 ;
+    schema:color "#E86A1E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color6> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0168 ;
+    schema:color "#F0C41A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0069 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#color8> a tb:ColorSample ;
+    rdfs:label "swoosh" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0066 ;
+    schema:color "#A8AEB6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/class395#livery> a tb:Livery ;
+    rdfs:label "Southeastern high-speed livery (2025: grey doors and swoosh)"@en,
+        "Southeastern の高速電車の塗装（2025年から、灰色の扉と弧）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/class395/se_class395.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q39338,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/class395#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/class395#color8> ;
+    tb:liveryOf wd:Q1696490 .
+
