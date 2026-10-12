@@ -136,6 +136,7 @@ CLASSES = {
     "Q134533452": ("Q134533452", None, None),                 # Siemens SCB-40 (Brightline)
     "Q96407257": ("Q96407257", None, None),                   # Sydney Metro Metropolis Stock (Alstom)
     "Q891775": ("Q891775", None, None),                       # Bombardier BiLevel Coach (West Coast Express cab car)
+    "Q125350160": ("Q125350160", None, None),                 # Railjet 1 (OEBB, 1st generation)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -192,7 +193,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q423578": "ベトナム鉄道 D19E形",
             "Q55614147": "カナダ・ライン（現代ロテム製）",
             "Q134533452": "ブライトライン SCB-40",
-            "Q96407257": "シドニーメトロ（アルストム メトロポリス）"}
+            "Q96407257": "シドニーメトロ（アルストム メトロポリス）",
+            "Q125350160": "レールジェット（第1世代）"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -251,6 +253,7 @@ LIVERIES = {
     "brightline-yellow": ({"en": "Brightline yellow livery (since 2022)", "ja": "ブライトラインの黄色の塗装（2022 年から）"}, "Q27012668"),
     "sydney-metro": ({"en": "Sydney Metro livery (charcoal front with teal corner wings, white body, navy window band)", "ja": "シドニーメトロの塗装（濃い灰の前面に青緑の翼、白い車体、紺の窓帯）"}, "Q20861549"),
     "wce-violet": ({"en": "West Coast Express livery (white and violet with gold lines)", "ja": "ウェストコースト・エクスプレスの塗装（白と紫に金の線）"}, "Q1675085"),
+    "oebb-railjet": ({"en": "ÖBB Railjet livery (wine red and grey)", "ja": "ÖBB のレールジェットの塗装（ワインレッドと灰）"}, "Q83822"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -317,6 +320,7 @@ MODELS = {
     "brightline": ("Q134533452", "brightline-yellow", None),
     "sydneymetro": ("Q96407257", "sydney-metro", None),
     "wce": ("Q891775", "wce-violet", None),
+    "railjet": ("Q125350160", "oebb-railjet", None),
 }
 
 

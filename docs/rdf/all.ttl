@@ -245273,6 +245273,30 @@ cls:Q120801969 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q125350160 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Railjet 1"@en,
+        "レールジェット（第1世代）"@ja ;
+    skos:exactMatch wd:Q125350160 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Railjet 1"@en,
+        "レールジェット（第1世代）"@ja ;
+    prov:wasDerivedFrom wd:Q125350160 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q304944,
+        wd:Q83822 ;
+    wdt:P17 wd:Q183,
+        wd:Q213,
+        wd:Q214,
+        wd:Q28,
+        wd:Q38,
+        wd:Q40 ;
+    wdt:P176 wd:Q81230 ;
+    wdt:P2052 230.0 ;
+    wdt:P279 wd:Q13402959 ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:railjet .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q125920831#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q5430578#P3438> ;
     skos:note "wikidata"@en ;
@@ -265724,6 +265748,99 @@ mdl:r211 a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/r211#color5> ;
     tb:liveryOf wd:Q1146109 .
 
+mdl:railjet a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/railjet#livery> ;
+    schema:about cls:Q125350160 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/railjet.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "オーストリア連邦鉄道（ÖBB）の高速客車列車の制御客車。2008年からの第1世代、赤と灰の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "レールジェット"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/railjet/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/railjet.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#railjet> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/railjet#color1> a tb:ColorSample ;
+    rdfs:label "wine" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.6645 ;
+    schema:color "#E82C34" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/railjet#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1465 ;
+    schema:color "#B8BCBE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/railjet#color3> a tb:ColorSample ;
+    rdfs:label "slate" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0601 ;
+    schema:color "#4A4E54" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/railjet#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0442 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/railjet#color5> a tb:ColorSample ;
+    rdfs:label "bright" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0254 ;
+    schema:color "#FF5A45" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/railjet#color6> a tb:ColorSample ;
+    rdfs:label "cap" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0181 ;
+    schema:color "#3A3D42" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/railjet#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0131 ;
+    schema:color "#4E5C68" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/railjet#color8> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0123 ;
+    schema:color "#B4B7BA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/railjet#color9> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0064 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/railjet#livery> a tb:Livery ;
+    rdfs:label "ÖBB Railjet livery (wine red and grey)"@en,
+        "ÖBB のレールジェットの塗装（ワインレッドと灰）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/railjet/oebb_railjet.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/railjet#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/railjet#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/railjet#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/railjet#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/railjet#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/railjet#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/railjet#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/railjet#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/railjet#color9> ;
+    tb:liveryOf wd:Q83822 .
+
 mdl:riyadh a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#livery> ;
@@ -273853,8 +273970,6 @@ wd:Q1244599 rdfs:label "Nizam's Guaranteed State Railway"@en .
 
 wd:Q124629866 rdfs:label "Siemens Vectron AC"@en .
 
-wd:Q125350160 rdfs:label "Railjet 1"@en .
-
 wd:Q1257968 rdfs:label "DreiLänderBahn"@en .
 
 wd:Q126678444 rdfs:label "Light Rail Route 720"@en .
@@ -274620,6 +274735,8 @@ wd:Q1204480 rdfs:label "Deutsche Waggonbau"@en,
         "ドイツ・ワゴンバウ"@ja .
 
 wd:Q124567903 rdfs:label "Siemens Vectron MS"@en .
+
+wd:Q125350160 rdfs:label "Railjet 1"@en .
 
 wd:Q125808266 rdfs:label "Paducah Shops"@en .
 
@@ -276664,9 +276781,6 @@ wd:Q26233895 rdfs:label "2-4-2T"@en .
 wd:Q298969 rdfs:label "Imperial Royal Privileged Austrian State Railway Company"@en,
         "国営鉄道会社 (オーストリア)"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q600414 rdfs:label "La Brugeoise et Nivelles"@en,
         "ラ・ブルジョワーズ・エ・ニヴェル"@ja .
 
@@ -276739,6 +276853,9 @@ wd:Q1932006 rdfs:label "Midland Railway"@en,
         "ミッドランド鉄道"@ja .
 
 wd:Q26185325 rdfs:label "0-10-0T"@en .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q4931035 rdfs:label "Bo′Bo′Bo′"@en .
 
@@ -276906,9 +277023,6 @@ wd:Q697926 rdfs:label "Taiwan Railways Administration"@en,
 wd:Q83824 rdfs:label "DSB"@en,
         "デンマーク国鉄"@ja .
 
-wd:Q13402959 rdfs:label "high-speed train"@en,
-        "高速列車"@ja .
-
 wd:Q303212 rdfs:label "Elsässische Maschinenbau-Gesellschaft Grafenstaden"@en,
         "グラフェンスタデン・アルザス工業"@ja .
 
@@ -276917,6 +277031,9 @@ wd:Q3401256 rdfs:label "2-6-2"@en,
 
 wd:Q461289 rdfs:label "Grand Duchy of Baden State Railway"@en,
         "バーデン大公国邦有鉄道"@ja .
+
+wd:Q13402959 rdfs:label "high-speed train"@en,
+        "高速列車"@ja .
 
 wd:Q2449525 rdfs:label "Transnet Freight Rail"@en,
         "スポールネット"@ja .
@@ -277018,14 +277135,14 @@ wd:Q660770 rdfs:label "Russian Railways"@en,
 wd:Q7055281 rdfs:label "North Eastern Region of British Railways"@en,
         "ノース・イースタン・リージョン"@ja .
 
-wd:Q81230 rdfs:label "Siemens"@en,
-        "シーメンス"@ja .
-
 wd:Q32 rdfs:label "Luxembourg"@en,
         "ルクセンブルク"@ja .
 
 wd:Q7566134 rdfs:label "South Australian Railways"@en,
         "南オーストラリア鉄道"@ja .
+
+wd:Q81230 rdfs:label "Siemens"@en,
+        "シーメンス"@ja .
 
 wd:Q1130022 rdfs:label "London and South Western Railway"@en,
         "ロンドン・アンド・サウス・ウェスタン鉄道"@ja .
@@ -277427,10 +277544,10 @@ wd:Q16283636 rdfs:label "Lokomotivfabrik Krauss & Comp."@en .
 wd:Q666703 rdfs:label "Stadler Rail"@en,
         "シュタッドラー・レール"@ja .
 
+wd:Q26234727 rdfs:label "0-4-0T"@en .
+
 wd:Q83822 rdfs:label "Austrian Federal Railways"@en,
         "オーストリア連邦鉄道"@ja .
-
-wd:Q26234727 rdfs:label "0-4-0T"@en .
 
 wd:Q214 rdfs:label "Slovakia"@en,
         "スロバキア"@ja .
@@ -277452,10 +277569,10 @@ wd:Q159 rdfs:label "Russia"@en,
 
 wd:Q24686956 rdfs:label "B′B′"@en .
 
+wd:Q24233938 rdfs:label "South African Railways and Harbours Administration"@en .
+
 wd:Q42519 rdfs:label "grey"@en,
         "灰色"@ja .
-
-wd:Q24233938 rdfs:label "South African Railways and Harbours Administration"@en .
 
 wd:Q853110 rdfs:label "Beyer, Peacock and Company"@en,
         "ベイヤー・ピーコック"@ja .
