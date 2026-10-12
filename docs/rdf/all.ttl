@@ -261693,6 +261693,34 @@ cls:tb-gautrain a skos:Concept,
     tb:sourceSection "Wikidata (the system)" ;
     tb:useStatus "current" .
 
+cls:tb-lisbon28 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Lisbon Remodelado tram (Carris 541-585)"@en,
+        "リスボン市電の Remodelado（Carris 541〜585）"@ja ;
+    dcterms:source "Country and operator (Carris) from Wikidata Q149629 (trams in Lisbon); type and the 1995-96 rebuild of the 1930s standard bodies (cars 541-585) from the skytrain lab note docs/notes/lisbon28.md."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Lisbon Remodelado tram (Carris 541-585)"@en,
+        "リスボン市電の Remodelado（Carris 541〜585）"@ja ;
+    wdt:P137 wd:Q1045108 ;
+    wdt:P17 wd:Q45 ;
+    wdt:P279 wd:Q3407658 ;
+    wdt:P729 "1995"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-lisbon28#line1> ;
+    tb:usedOn wd:Q149629 ;
+    schema:subjectOf mdl:lisbon28 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-lisbon28#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q149629> ;
+    skos:note "the Lisbon tram system itself (the cars run on route 28); Wikidata has no item for the Remodelado trams"@en ;
+    tb:line wd:Q149629 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
 cls:tb-skytrain-mk1 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "SkyTrain Mark I"@en,
@@ -263748,6 +263776,72 @@ mdl:ktxeum a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color6> ;
     tb:liveryOf wd:Q18169 .
 
+mdl:lisbon28 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#livery> ;
+    schema:about cls:tb-lisbon28 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/lisbon28.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "リスボンの坂を走る2軸の路面電車（Remodelado）。黄と白の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 46.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "リスボン市電 28番線"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/lisbon28/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/lisbon28.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#lisbon28> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color1> a tb:ColorSample ;
+    rdfs:label "cream" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.6013 ;
+    schema:color "#EEEBE2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1894 ;
+    schema:color "#8C968A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color3> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.1295 ;
+    schema:color "#F2B200" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color4> a tb:ColorSample ;
+    rdfs:label "wood" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0429 ;
+    schema:color "#7A3C1C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color5> a tb:ColorSample ;
+    rdfs:label "maroon" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0275 ;
+    schema:color "#5E221E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#livery> a tb:Livery ;
+    rdfs:label "Carris tram livery (yellow and white)"@en,
+        "Carris の路面電車の塗装（黄と白）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/lisbon28/carris_lisbon28.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q39338,
+        wd:Q47071 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color5> ;
+    tb:liveryOf wd:Q1045108 .
+
 mdl:madaraka a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/madaraka#livery> ;
@@ -265036,6 +265130,9 @@ wd:Q104432945 rdfs:label "Z30"@en .
 
 wd:Q104433413 rdfs:label "North Rail"@en .
 
+wd:Q1045108 rdfs:label "Carris"@en,
+        "CCFL (企業)"@ja .
+
 wd:Q104622931 rdfs:label "2-4-4-2T"@en .
 
 wd:Q1047610 rdfs:label "Arlanda Line"@en .
@@ -265945,6 +266042,8 @@ wd:Q1487409 rdfs:label "Schweizerische Nationalbahn"@en,
 wd:Q1492513 rdfs:label "Pilatus-Bahnen AG"@en .
 
 wd:Q14953694 rdfs:label "Oxted Line"@en .
+
+wd:Q149629 rdfs:label "trams in Lisbon"@en .
 
 wd:Q14992650 rdfs:label "Gloucester to Newport Line"@en .
 
@@ -272828,9 +272927,6 @@ wd:Q4596837 rdfs:label "2-6-0+0-6-2"@en .
 
 wd:Q4596841 rdfs:label "2-6-6-0"@en .
 
-wd:Q47071 rdfs:label "brown"@en,
-        "茶色"@ja .
-
 wd:Q479062 rdfs:label "UIC-Y car"@en .
 
 wd:Q4828161 rdfs:label "Alstom Aventra"@en,
@@ -273195,6 +273291,9 @@ wd:Q3752590 rdfs:label "Freccia della Versilia"@en .
 
 wd:Q459508 rdfs:label "Salzburg S-Bahn"@en .
 
+wd:Q47071 rdfs:label "brown"@en,
+        "茶色"@ja .
+
 wd:Q4756279 rdfs:label "Andrew Barclay Sons & Co."@en,
         "バークレー"@ja .
 
@@ -273469,9 +273568,6 @@ wd:Q3630552 rdfs:label "Automotore"@en .
 
 wd:Q3633141 rdfs:label "East Indian Railway Company"@en,
         "東インド鉄道会社"@ja .
-
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
 
 wd:Q4157597 rdfs:label "Demikhovsky Machine-building Plant"@en,
         "デミホヴォ機械製造工場"@ja .
@@ -273755,6 +273851,9 @@ wd:Q2909773 rdfs:label "Schenectady Locomotive Works"@en,
 wd:Q2990265 rdfs:label "Compagnie Électro-Mécanique"@en .
 
 wd:Q3300038 rdfs:label "Matériel de Traction Electrique"@en .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q393549 rdfs:label "Železničná spoločnosť Cargo Slovakia"@en,
         "鉄道企業体カーゴ・スロバキア"@ja .
@@ -274628,9 +274727,6 @@ wd:Q378181 rdfs:label "Chemins de fer du Midi"@en,
 wd:Q7885459 rdfs:label "Union Carriage & Wagon"@en,
         "ユニオン・キャリッジ・アンド・ワゴン"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q3077673 rdfs:label "0-4-4T"@en,
         "車輪配置 0-4-4T"@ja .
 
@@ -274663,6 +274759,9 @@ wd:Q725793 rdfs:label "Union Pacific Railroad"@en,
 
 wd:Q10676739 rdfs:label "600 mm track gauge"@en,
         "600mm軌間"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q610143 rdfs:label "Bulgarian State Railways"@en,
         "ブルガリア国鉄"@ja .
@@ -275373,14 +275472,14 @@ wd:Q23076 rdfs:label "Nederlandse Spoorwegen"@en,
 wd:Q21855034 rdfs:label "600 V DC railway electrification"@en,
         "直流600V鉄道電化"@ja .
 
-wd:Q3407658 rdfs:label "tram"@en,
-        "路面電車"@ja .
-
 wd:Q5330408 rdfs:label "Eastern Region of British Railways"@en,
         "イースタン・リージョン"@ja .
 
 wd:Q884 rdfs:label "South Korea"@en,
         "大韓民国"@ja .
+
+wd:Q3407658 rdfs:label "tram"@en,
+        "路面電車"@ja .
 
 wd:Q546769 rdfs:label "Borsig"@en,
         "ボルジッヒ"@ja .

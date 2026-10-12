@@ -1,0 +1,41 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:tb-lisbon28 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Lisbon Remodelado tram (Carris 541-585)"@en,
+        "リスボン市電の Remodelado（Carris 541〜585）"@ja ;
+    dcterms:source "Country and operator (Carris) from Wikidata Q149629 (trams in Lisbon); type and the 1995-96 rebuild of the 1930s standard bodies (cars 541-585) from the skytrain lab note docs/notes/lisbon28.md."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Lisbon Remodelado tram (Carris 541-585)"@en,
+        "リスボン市電の Remodelado（Carris 541〜585）"@ja ;
+    wdt:P137 wd:Q1045108 ;
+    wdt:P17 wd:Q45 ;
+    wdt:P279 wd:Q3407658 ;
+    wdt:P729 "1995"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-lisbon28#line1> ;
+    tb:usedOn wd:Q149629 ;
+    schema:subjectOf mdl:lisbon28 .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-lisbon28#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q149629> ;
+    skos:note "the Lisbon tram system itself (the cars run on route 28); Wikidata has no item for the Remodelado trams"@en ;
+    tb:line wd:Q149629 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
+wd:Q149629 rdfs:label "trams in Lisbon"@en .
+

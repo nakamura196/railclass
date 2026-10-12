@@ -107,6 +107,9 @@ CLASSES = {
     "Q26724167": ("Q26724167", None, None),                    # Avelia Liberty (new Acela, Alstom)
     "Q1080162": ("Q1080162", None, None),                     # British Rail Class 43 (HST power car)
     "Q120801969": ("Q120801969", None, None),                   # Corcovado rack railcars, 4th generation (Stadler Bhe 4/8)
+    # Lisbon 'Remodelado' trams (Carris 541-585): Wikidata has no item for them (Q149629 is the tram system), so a class of
+    # our own; the system is linked in tools/class_lines.tsv. Route 28 itself is Q63034669 (a line, not a vehicle).
+    "tb-lisbon28": (None, None, {"en": "Lisbon Remodelado tram (Carris 541-585)", "ja": "リスボン市電の Remodelado（Carris 541〜585）"}),
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -126,6 +129,8 @@ HAND = {
     "tb-vistadome": {"country": ["Q419"], "operator": ["Q1407952"], "manufacturer": ["Q2729224"], "kind": ["Q752392"]},
     # Tanzania; Tanzania Railways Corporation (P137 of Q60744141); Hyundai Rotem; electric locomotive; passenger service from 2024
     "tb-tanzania": {"country": ["Q924"], "operator": ["Q2393276"], "manufacturer": ["Q152517"], "kind": ["Q625151"], "serviceEntry": [2024]},
+    # Portugal; Carris; tram; rebuilt 1995-96 (no manufacturer: 1930s bodies rebuilt with new running gear and electrics)
+    "tb-lisbon28": {"country": ["Q45"], "operator": ["Q1045108"], "kind": ["Q3407658"], "serviceEntry": [1995]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
@@ -134,6 +139,7 @@ HAND_SOURCE = {
     "tb-srtred": "Country from Wikidata Q2542280 (SRT Red Lines, the system); operator (State Railway of Thailand, through its subsidiary SRT Electrified Train), manufacturer and type (Hitachi AT100 EMU) and opening year (2021) from en.wikipedia and ja.wikipedia (read 2026-10-12) via the skytrain lab note docs/notes/srtred.md.",
     "tb-vistadome": "Country and operator from Wikidata Q100145062 (Tramo Sur Oriente del Ferrocarril del Sur, the line); builder (Macosa/MAN, 1984, cars 220-225; Macosa is today Stadler Rail Valencia, Q2729224) and type (single-cab diesel railcar) from en.wikipedia 'List of stock used by PeruRail' (read 2026-10-12) via the skytrain lab note docs/notes/vistadome.md.",
     "tb-tanzania": "Country and operator from Wikidata Q60744141 (Tanzania Standard Gauge Railway); manufacturer and type (Hyundai Rotem electric locomotive, class E6800) from Railvolution 'New locomotives for Tanzania'; passenger service from 2024-06-14 (Railway Journal, The Citizen), read 2026-10-12 via the skytrain lab note docs/notes/tanzania.md.",
+    "tb-lisbon28": "Country and operator (Carris) from Wikidata Q149629 (trams in Lisbon); type and the 1995-96 rebuild of the 1930s standard bodies (cars 541-585) from the skytrain lab note docs/notes/lisbon28.md.",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -184,6 +190,7 @@ LIVERIES = {
     "amtrak-acela-2025": ({"en": "Acela livery (white and silver with Acela blue and a red band; 2025-)", "ja": "アセラの塗装（白と銀にアセラの青と赤い帯。2025年から）"}, "Q23239"),
     "scotrail-inter7city": ({"en": "ScotRail Inter7City livery (navy with a yellow front and a city skyline)", "ja": "スコットレールの Inter7City の塗装（紺に黄色の顔、町並みの絵）"}, "Q107980329"),
     "corcovado-2019": ({"en": "Trem do Corcovado livery (red with a black front mask, white lower panel; 2019-)", "ja": "コルコバード登山鉄道の塗装（赤に黒い顔、白い腰板。2019年から）"}, "Q1132053"),
+    "carris-yellow": ({"en": "Carris tram livery (yellow and white)", "ja": "Carris の路面電車の塗装（黄と白）"}, "Q1045108"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -229,6 +236,7 @@ MODELS = {
     "acela": ("Q26724167", "amtrak-acela-2025", None),
     "ic125": ("Q1080162", "scotrail-inter7city", None),
     "corcovado": ("Q120801969", "corcovado-2019", None),
+    "lisbon28": ("tb-lisbon28", "carris-yellow", None),
 }
 
 
