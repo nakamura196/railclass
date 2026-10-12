@@ -176891,22 +176891,6 @@ cls:Q55612207 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q27 .
 
-cls:Q55614147 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Hyundai Rotem EMU"@en ;
-    skos:exactMatch wd:Q55614147 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "Hyundai Rotem EMU"@en ;
-    prov:wasDerivedFrom wd:Q55614147 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q1142140 ;
-    wdt:P176 wd:Q152517 ;
-    wdt:P279 wd:Q483373 ;
-    wdt:P729 "2009"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Hyundai%20Rotem%20EMU.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q16 .
-
 cls:Q55637097 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Victorian Railways Narrow Gauge Passenger carriages"@en ;
@@ -240759,6 +240743,8 @@ wd:Q1408210 rdfs:label "Fertagus"@en,
 wd:Q141170531 rdfs:label "Chugoku Railway"@en,
         "中国鉄道"@ja .
 
+wd:Q141170779 rdfs:label "ProTrans BC"@en .
+
 wd:Q141221192 rdfs:label "Ostsächsische Eisenbahnfreunde e. V."@en .
 
 wd:Q1418281 rdfs:label "centre car"@en .
@@ -254887,6 +254873,25 @@ cls:Q5122977 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q55614147 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Hyundai Rotem EMU"@en,
+        "カナダ・ライン（現代ロテム製）"@ja ;
+    skos:exactMatch wd:Q55614147 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Hyundai Rotem EMU"@en,
+        "カナダ・ライン（現代ロテム製）"@ja ;
+    prov:wasDerivedFrom wd:Q55614147 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1142140 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2009"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Hyundai%20Rotem%20EMU.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q16 ;
+    schema:subjectOf mdl:canadaline .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q558185#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q64520536#P3438> ;
     skos:note "wikidata"@en ;
@@ -262711,6 +262716,78 @@ mdl:cairo a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color6>,
         <https://nakamura196.github.io/train-bodies/rdf/model/cairo#color7> ;
     tb:liveryOf wd:Q64744683 .
+
+mdl:canadaline a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/canadaline#livery> ;
+    schema:about cls:Q55614147 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/canadaline.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "バンクーバーの SkyTrain カナダ・ラインの電車。ステンレスの車体に青い運転台と緑への移り。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "カナダ・ライン（現代ロテム製）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/canadaline/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/canadaline.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#canadaline> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.8286 ;
+    schema:color "#A9AEB2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0556 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color3> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0420 ;
+    schema:color "#1B4FCF" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color4> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0243 ;
+    schema:color "#EEF0F0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0216 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0112 ;
+    schema:color "#5E7080" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/canadaline#livery> a tb:Livery ;
+    rdfs:label "Canada Line livery (stainless, blue cab with a black shield face, white and blue swooshes, blue fading to green)"@en,
+        "カナダ・ラインの塗装（ステンレス、黒い盾形の顔の青い運転台、白と青の流れ模様、青から緑への移り）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/canadaline/translink_canadaline.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/canadaline#color6> ;
+    tb:liveryOf wd:Q141170779 .
 
 mdl:canadian a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -275980,9 +276057,6 @@ wd:Q53238 rdfs:label "Hitachi"@en,
 wd:Q917079 rdfs:label "Norfolk and Western Railway"@en,
         "ノーフォーク・アンド・ウェスタン鉄道"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q4228338 rdfs:label "Kolomna Locomotive Works"@en,
         "コロムナ工場"@ja .
 
@@ -275991,6 +276065,9 @@ wd:Q753942 rdfs:label "Atchison, Topeka and Santa Fe Railway"@en,
 
 wd:Q215 rdfs:label "Slovenia"@en,
         "スロベニア"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q25414300 rdfs:label "C′C′"@en .
 
@@ -276065,14 +276142,14 @@ wd:Q1038182 rdfs:label "Ministry of Railways of the People's Republic of China"@
 wd:Q129286 rdfs:label "British Raj"@en,
         "イギリス領インド帝国"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q5013176 rdfs:label "CRRC Dalian Co., Ltd."@en,
         "中国中車大連機車車輛"@ja .
 
 wd:Q692083 rdfs:label "SIG Group"@en,
         "シグ"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q499967 rdfs:label "Turkish State Railways"@en,
         "トルコ国鉄"@ja .
@@ -276249,9 +276326,6 @@ wd:Q1473764 rdfs:label "Southern Pacific Transportation Company"@en,
 wd:Q1034433 rdfs:label "Cape Government Railways"@en,
         "ケープ植民地鉄道"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q219 rdfs:label "Bulgaria"@en,
         "ブルガリア"@ja .
 
@@ -276275,6 +276349,9 @@ wd:Q819425 rdfs:label "Indian Railways"@en,
 
 wd:Q822381 rdfs:label "DÜWAG"@en,
         "DUEWAG"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q764728 rdfs:label "2-10-0"@en,
         "車輪配置 2-10-0"@ja .
@@ -276597,9 +276674,6 @@ wd:Q629139 rdfs:label "London, Midland and Scottish Railway"@en,
 wd:Q4102249 rdfs:label "subway car"@en,
         "地下鉄車両"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q277030 rdfs:label "Imperial Royal Austrian State Railways"@en,
         "帝立王立オーストリア国鉄"@ja .
 
@@ -276611,6 +276685,9 @@ wd:Q16 rdfs:label "Canada"@en,
 
 wd:Q33 rdfs:label "Finland"@en,
         "フィンランド"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q249591 rdfs:label "Polish State Railways"@en,
         "ポーランド国鉄"@ja .

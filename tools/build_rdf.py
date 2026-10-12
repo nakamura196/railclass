@@ -127,6 +127,7 @@ CLASSES = {
     "Q7274448": ("Q7274448", None, None),                     # R211 (New York City Subway, Kawasaki)
     "Q18619244": ("Q18619244", None, None),                    # KTM Class 93 (ETS, CRRC Zhuzhou)
     "Q119438293": ("Q119438293", None, None),                  # Namo Bharat (NCRTC RRTS trainset; P31 is Q870 train)
+    "Q55614147": ("Q55614147", None, None),                   # Hyundai Rotem EMU (SkyTrain Canada Line)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -180,7 +181,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q120801969": "コルコバード登山鉄道 4 代目電車",
             "Q56394168": "ジャカルタ MRT 1000系",
             "Q117538222": "チリ国鉄 SFB-500",
-            "Q423578": "ベトナム鉄道 D19E形"}
+            "Q423578": "ベトナム鉄道 D19E形",
+            "Q55614147": "カナダ・ライン（現代ロテム製）"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -231,6 +233,7 @@ LIVERIES = {
     "mta-r211": ({"en": "MTA R211 livery (blue face, stainless with a diagonal blue band)", "ja": "MTA の R211 の塗装（青い顔、ステンレスに斜めの青い帯）"}, "Q1146109"),
     "ktm-ets2": ({"en": "KTM ETS2 livery (yellow nose, silver with a red band)", "ja": "KTM の ETS2 の塗装（黄色の鼻、銀に赤い帯）"}, "Q1187590"),
     "ncrtc-namobharat": ({"en": "NCRTC Namo Bharat livery (bare stainless with a red arrow on the cab)", "ja": "NCRTC のナモ・バーラトの塗装（ステンレスの地に、運転室の赤い矢印）"}, "Q17077649"),
+    "translink-canadaline": ({"en": "Canada Line livery (stainless, blue cab with a black shield face, white and blue swooshes, blue fading to green)", "ja": "カナダ・ラインの塗装（ステンレス、黒い盾形の顔の青い運転台、白と青の流れ模様、青から緑への移り）"}, "Q141170779"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -288,6 +291,7 @@ MODELS = {
     "r211": ("Q7274448", "mta-r211", None),
     "ets": ("Q18619244", "ktm-ets2", None),
     "namobharat": ("Q119438293", "ncrtc-namobharat", None),
+    "canadaline": ("Q55614147", "translink-canadaline", None),
 }
 
 

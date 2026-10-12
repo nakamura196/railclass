@@ -1,7 +1,9 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -10,10 +12,12 @@
 
 cls:Q55614147 a skos:Concept,
         tb:VehicleClass ;
-    rdfs:label "Hyundai Rotem EMU"@en ;
+    rdfs:label "Hyundai Rotem EMU"@en,
+        "カナダ・ライン（現代ロテム製）"@ja ;
     skos:exactMatch wd:Q55614147 ;
     skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "Hyundai Rotem EMU"@en ;
+    skos:prefLabel "Hyundai Rotem EMU"@en,
+        "カナダ・ライン（現代ロテム製）"@ja ;
     prov:wasDerivedFrom wd:Q55614147 ;
     wdt:P1064 wd:Q1999572 ;
     wdt:P137 wd:Q1142140 ;
@@ -21,6 +25,7 @@ cls:Q55614147 a skos:Concept,
     wdt:P279 wd:Q483373 ;
     wdt:P729 "2009"^^xsd:gYear ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Hyundai%20Rotem%20EMU.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q16 .
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q16 ;
+    schema:subjectOf mdl:canadaline .
 
