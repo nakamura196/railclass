@@ -1,0 +1,97 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:tranzalpine a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#livery> ;
+    schema:about cls:Q7015181 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/tranzalpine.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.4 ] ;
+    schema:description "ニュージーランド南島横断の観光列車。大きな窓と屋根窓の客車、銀に黄・橙・赤の炎の帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "トランツアルパイン（AK形パノラマ客車）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/tranzalpine/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/tranzalpine.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#tranzalpine> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.6455 ;
+    schema:color "#D6D9DC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1513 ;
+    schema:color "#BFC3C7" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0666 ;
+    schema:color "#1A1C1F" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color4> a tb:ColorSample ;
+    rdfs:label "rglass" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0444 ;
+    schema:color "#5F7C9A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color5> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0333 ;
+    schema:color "#2A2E32" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color6> a tb:ColorSample ;
+    rdfs:label "line" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0187 ;
+    schema:color "#6E7277" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color7> a tb:ColorSample ;
+    rdfs:label "line2" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0161 ;
+    schema:color "#9CA0A5" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color8> a tb:ColorSample ;
+    rdfs:label "plate" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0062 ;
+    schema:color "#3A3E40" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#livery> a tb:Livery ;
+    rdfs:label "KiwiRail Great Journeys AK carriage livery (silver with a grey line and yellow, orange and red flames)"@en,
+        "キウイレイルの AK 形客車の塗装（銀に灰色の線と黄・橙・赤の炎の帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/tranzalpine/kr_tranzalpine.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color8> ;
+    tb:liveryOf wd:Q956508 .
+

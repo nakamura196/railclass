@@ -202419,22 +202419,6 @@ cls:Q7015053 a skos:Concept,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/MAN%20T4%20N%C3%BCrnberg%20247%20090579.jpg> ;
     tb:has3DModel false .
 
-cls:Q7015181 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "New Zealand AK class carriage"@en,
-        "ニュージーランド鉄道AKクラス客車"@ja ;
-    skos:exactMatch wd:Q7015181 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "New Zealand AK class carriage"@en,
-        "ニュージーランド鉄道AKクラス客車"@ja ;
-    prov:wasDerivedFrom wd:Q7015181 ;
-    wdt:P137 wd:Q956508 ;
-    wdt:P17 wd:Q664 ;
-    wdt:P176 wd:Q5763918 ;
-    wdt:P279 wd:Q753779 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Coastal%20Pacific%2001.JPG> ;
-    tb:has3DModel false .
-
 cls:Q7015247 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "New Zealand British Rail Mark 2 carriage"@en,
@@ -243557,8 +243541,6 @@ wd:Q949717 rdfs:label "QIT-Fer et Titane"@en,
 wd:Q952062 rdfs:label "Hawker Siddeley"@en,
         "ホーカー・シドレー"@ja .
 
-wd:Q956508 rdfs:label "KiwiRail Scenic Journeys"@en .
-
 wd:Q956687 rdfs:label "fastline"@en .
 
 wd:Q96129053 rdfs:label "Slovenská plavba a prístavy"@en .
@@ -258076,6 +258058,23 @@ cls:Q671805 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q7015181 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "New Zealand AK class carriage"@en,
+        "ニュージーランド鉄道AKクラス客車"@ja ;
+    skos:exactMatch wd:Q7015181 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "New Zealand AK class carriage"@en,
+        "ニュージーランド鉄道AKクラス客車"@ja ;
+    prov:wasDerivedFrom wd:Q7015181 ;
+    wdt:P137 wd:Q956508 ;
+    wdt:P17 wd:Q664 ;
+    wdt:P176 wd:Q5763918 ;
+    wdt:P279 wd:Q753779 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Coastal%20Pacific%2001.JPG> ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:tranzalpine .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q7015247#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q96407872#P3438> ;
     skos:note "wikidata"@en ;
@@ -263522,6 +263521,93 @@ mdl:tilttrain a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color7> ;
     tb:liveryOf wd:Q379439 .
 
+mdl:tranzalpine a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#livery> ;
+    schema:about cls:Q7015181 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/tranzalpine.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.4 ] ;
+    schema:description "ニュージーランド南島横断の観光列車。大きな窓と屋根窓の客車、銀に黄・橙・赤の炎の帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "トランツアルパイン（AK形パノラマ客車）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/tranzalpine/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/tranzalpine.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#tranzalpine> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.6455 ;
+    schema:color "#D6D9DC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1513 ;
+    schema:color "#BFC3C7" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0666 ;
+    schema:color "#1A1C1F" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color4> a tb:ColorSample ;
+    rdfs:label "rglass" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0444 ;
+    schema:color "#5F7C9A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color5> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0333 ;
+    schema:color "#2A2E32" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color6> a tb:ColorSample ;
+    rdfs:label "line" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0187 ;
+    schema:color "#6E7277" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color7> a tb:ColorSample ;
+    rdfs:label "line2" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0161 ;
+    schema:color "#9CA0A5" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color8> a tb:ColorSample ;
+    rdfs:label "plate" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0062 ;
+    schema:color "#3A3E40" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#livery> a tb:Livery ;
+    rdfs:label "KiwiRail Great Journeys AK carriage livery (silver with a grey line and yellow, orange and red flames)"@en,
+        "キウイレイルの AK 形客車の塗装（銀に灰色の線と黄・橙・赤の炎の帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/tranzalpine/kr_tranzalpine.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tranzalpine#color8> ;
+    tb:liveryOf wd:Q956508 .
+
 mdl:trenmaya a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/trenmaya#livery> ;
@@ -267485,6 +267571,8 @@ wd:Q95186801 rdfs:label "RE 7 (Berlin/Brandenburg)"@en .
 
 wd:Q955604 rdfs:label "Niigata Transys"@en,
         "新潟トランシス"@ja .
+
+wd:Q956508 rdfs:label "KiwiRail Scenic Journeys"@en .
 
 wd:Q95685 rdfs:label "Cologne Stadtbahn"@en .
 
@@ -273154,9 +273242,6 @@ wd:Q1666820 rdfs:label "Natal Government Railways"@en .
 wd:Q225 rdfs:label "Bosnia and Herzegovina"@en,
         "ボスニア・ヘルツェゴビナ"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q260105 rdfs:label "covered goods wagon"@en,
         "有蓋車"@ja .
 
@@ -273223,6 +273308,9 @@ wd:Q1779703 rdfs:label "Lancashire and Yorkshire Railway"@en,
 wd:Q232962 rdfs:label "electro-diesel locomotive"@en,
         "電気・ディーゼル両用車両"@ja .
 
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
 wd:Q2407588 rdfs:label "2-10-4"@en,
         "2-10-4"@ja .
 
@@ -273256,9 +273344,6 @@ wd:Q1079190 rdfs:label "switcher"@en,
 wd:Q1089278 rdfs:label "Riga Railway Carriage Building Factory"@en,
         "リガ車両製作工場"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q37 rdfs:label "Lithuania"@en,
         "リトアニア"@ja .
 
@@ -273283,9 +273368,6 @@ wd:Q814947 rdfs:label "trailer car"@en .
 wd:Q869 rdfs:label "Thailand"@en,
         "タイ王国"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1142179 rdfs:label "Orange River Colony"@en,
         "オレンジ川植民地"@ja .
 
@@ -273297,6 +273379,9 @@ wd:Q13634023 rdfs:label "Società per le Strade Ferrate del Mediterraneo"@en,
 
 wd:Q184 rdfs:label "Belarus"@en,
         "ベラルーシ"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q26233074 rdfs:label "4-4-2T"@en .
 
@@ -273335,6 +273420,9 @@ wd:Q7621999 rdfs:label "Stratford Works"@en .
 
 wd:Q9166501 rdfs:label "freight car"@en,
         "貨車"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q2304446 rdfs:label "South Eastern and Chatham Railway"@en,
         "サウス・イースタン・アンド・チャタム鉄道"@ja .
@@ -274031,9 +274119,6 @@ wd:Q682656 rdfs:label "760 mm track gauge"@en,
 wd:Q664420 rdfs:label "Brown, Boveri & Cie"@en,
         "ブラウン・ボベリ"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q4032352 rdfs:label "750 mm track gauge"@en,
         "750 mm軌間"@ja .
 
@@ -274069,6 +274154,9 @@ wd:Q2756040 rdfs:label "Société Alsacienne de Constructions Mécaniques"@en,
 
 wd:Q423 rdfs:label "North Korea"@en,
         "朝鮮民主主義人民共和国"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q393557 rdfs:label "Železničná spoločnosť Slovensko"@en,
         "鉄道企業体スロバキア"@ja .
