@@ -74,6 +74,7 @@ CLASSES = {
     "Q289090": ("Q289090", None, None),                         # Transrapid 08 (Shanghai Maglev vehicles)
     "Q119775864": ("Q119775864", None, None),                   # Vande Bharat
     "Q19877282": ("Q19877282", None, None),                     # Park series (Budd dome-observation sleepers of The Canadian)
+    "Q23641827": ("Q23641827", None, None),                     # Electric Tilt Train (Queensland Rail)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -110,6 +111,7 @@ LIVERIES = {
     "shanghai-maglev": ({"en": "Shanghai Maglev livery", "ja": "上海リニアの塗装"}, "Q769591"),
     "ir-vande-bharat": ({"en": "Vande Bharat livery (saffron and grey, from 2023)", "ja": "ヴァンデ・バーラトの塗装（サフランと灰、2023年から）"}, "Q819425"),
     "via-stainless": ({"en": "VIA Rail livery (bare stainless steel, unstriped)", "ja": "VIA鉄道の塗装（帯なしのステンレス）"}, "Q876720"),
+    "qr-tilt": ({"en": "Queensland Rail Tilt Train livery (yellow cab end and stainless, since the 2015–17 refurbishment)", "ja": "クイーンズランド鉄道のティルト・トレインの塗装（黄色の先頭部とステンレス、2015〜17年の更新から）"}, "Q379439"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -133,6 +135,7 @@ MODELS = {
     "maglev": ("Q289090", "shanghai-maglev", None),
     "vandebharat": ("Q119775864", "ir-vande-bharat", None),
     "canadian": ("Q19877282", "via-stainless", None),
+    "tilttrain": ("Q23641827", "qr-tilt", None),
 }
 
 

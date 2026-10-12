@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0336"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color6"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color7"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/tilttrain/qr_tilttrain.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q379439"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Queensland Rail Tilt Train livery (yellow cab end and stainless, since the 2015–17 refurbishment)"
+        },
+        {
+          "@language": "ja",
+          "@value": "クイーンズランド鉄道のティルト・トレインの塗装（黄色の先頭部とステンレス、2015〜17年の更新から）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q943"
+        },
+        {
+          "@id": "wd:Q42519"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q23641827"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/tilttrain.glb"
+      },
+      "schema:depth": {
+        "@id": "_:tilttrain-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "オーストラリア・クイーンズランド州の振り子式電車。2015〜17年の更新後の、黄色の先頭部とステンレスの塗装。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:tilttrain-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "電気式ティルト・トレイン"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/tilttrain/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/tilttrain.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#tilttrain"
+      },
+      "schema:width": {
+        "@id": "_:tilttrain-width"
+      }
+    },
+    {
+      "@id": "_:tilttrain-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "150.0"
+      }
+    },
+    {
+      "@id": "_:tilttrain-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:tilttrain-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0840"
+      },
+      "rdfs:label": "roofgrey",
+      "schema:color": "#8E9398",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0114"
+      },
+      "rdfs:label": "rib",
+      "schema:color": "#7A8086",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1235"
+      },
+      "rdfs:label": "steel",
+      "schema:color": "#A8ADB2",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7162"
+      },
+      "rdfs:label": "qryellow",
+      "schema:color": "#F8C400",
+      "wdt:P462": {
+        "@id": "wd:Q943"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0068"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0155"
+      },
+      "rdfs:label": "under",
+      "schema:color": "#45484C",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    }
+  ]
+}

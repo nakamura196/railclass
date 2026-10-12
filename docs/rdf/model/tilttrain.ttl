@@ -1,0 +1,89 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:tilttrain a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#livery> ;
+    schema:about cls:Q23641827 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/tilttrain.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "オーストラリア・クイーンズランド州の振り子式電車。2015〜17年の更新後の、黄色の先頭部とステンレスの塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "電気式ティルト・トレイン"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/tilttrain/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/tilttrain.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#tilttrain> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color1> a tb:ColorSample ;
+    rdfs:label "qryellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.7162 ;
+    schema:color "#F8C400" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color2> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1235 ;
+    schema:color "#A8ADB2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color3> a tb:ColorSample ;
+    rdfs:label "roofgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0840 ;
+    schema:color "#8E9398" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0336 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color5> a tb:ColorSample ;
+    rdfs:label "under" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0155 ;
+    schema:color "#45484C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color6> a tb:ColorSample ;
+    rdfs:label "rib" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0114 ;
+    schema:color "#7A8086" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0068 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#livery> a tb:Livery ;
+    rdfs:label "Queensland Rail Tilt Train livery (yellow cab end and stainless, since the 2015–17 refurbishment)"@en,
+        "クイーンズランド鉄道のティルト・トレインの塗装（黄色の先頭部とステンレス、2015〜17年の更新から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/tilttrain/qr_tilttrain.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q42519,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tilttrain#color7> ;
+    tb:liveryOf wd:Q379439 .
+
