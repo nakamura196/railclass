@@ -1,0 +1,104 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:ic125 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ic125#livery> ;
+    schema:about cls:Q1080162 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ic125.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "イギリスの高速ディーゼル列車HSTの先頭動力車。スコットレールのInter7City塗装（2026年も運行）。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "インターシティ125（43形動力車）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ic125/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ic125.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#ic125> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color1> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.6457 ;
+    schema:color "#1C2A4A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1272 ;
+    schema:color "#A9AEB3" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color3> a tb:ColorSample ;
+    rdfs:label "pale" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1010 ;
+    schema:color "#C3CDD8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0388 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color5> a tb:ColorSample ;
+    rdfs:label "louvre" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0328 ;
+    schema:color "#5E6268" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color6> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0193 ;
+    schema:color "#F0BE22" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color7> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0165 ;
+    schema:color "#2B3245" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color8> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0053 ;
+    schema:color "#B8BEC4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color9> a tb:ColorSample ;
+    rdfs:label "skyblue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0053 ;
+    schema:color "#7F92AE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#livery> a tb:Livery ;
+    rdfs:label "ScotRail Inter7City livery (navy with a yellow front and a city skyline)"@en,
+        "スコットレールの Inter7City の塗装（紺に黄色の顔、町並みの絵）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/ic125/br_ic125.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color9> ;
+    tb:liveryOf wd:Q107980329 .
+

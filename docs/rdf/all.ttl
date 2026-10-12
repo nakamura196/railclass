@@ -7759,49 +7759,6 @@ cls:Q108001288 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q55 .
 
-cls:Q1080162 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "British Rail Class 43"@en,
-        "イギリス国鉄クラス43ディーゼル機関車 (HST)"@ja ;
-    skos:exactMatch wd:Q1080162 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "British Rail Class 43"@en,
-        "イギリス国鉄クラス43ディーゼル機関車 (HST)"@ja ;
-    prov:wasDerivedFrom wd:Q1080162 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q107980329,
-        wd:Q12858578,
-        wd:Q5330408,
-        wd:Q7988225 ;
-    wdt:P17 wd:Q145 ;
-    wdt:P176 wd:Q5184831 ;
-    wdt:P2052 201.0 ;
-    wdt:P279 wd:Q1567915,
-        wd:Q19842071 ;
-    wdt:P2978 wd:Q1014107 ;
-    wdt:P729 "1976"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Slittingmill%20Crossing%20%282974843231%29.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line1>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line2>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line3>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line4>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line5>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line6>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line7>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line8>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line9> ;
-    tb:operatingCountry wd:Q145 ;
-    tb:usedOn wd:Q1141069,
-        wd:Q14992650,
-        wd:Q15262624,
-        wd:Q1617936,
-        wd:Q1903208,
-        wd:Q1931975,
-        wd:Q4816379,
-        wd:Q4969129,
-        wd:Q5175485 .
-
 cls:Q108044597 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "GE 25-ton locomotive"@en ;
@@ -243895,6 +243852,51 @@ cls:Q104216528 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q1080162 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 43"@en,
+        "イギリス国鉄クラス43ディーゼル機関車 (HST)"@ja ;
+    skos:exactMatch wd:Q1080162 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "British Rail Class 43"@en,
+        "イギリス国鉄クラス43ディーゼル機関車 (HST)"@ja ;
+    prov:wasDerivedFrom wd:Q1080162 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q107980329,
+        wd:Q12858578,
+        wd:Q5330408,
+        wd:Q7988225 ;
+    wdt:P17 wd:Q145 ;
+    wdt:P176 wd:Q5184831 ;
+    wdt:P2052 200.0,
+        201.0 ;
+    wdt:P279 wd:Q1567915,
+        wd:Q19842071 ;
+    wdt:P2978 wd:Q1014107 ;
+    wdt:P729 "1976"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Slittingmill%20Crossing%20%282974843231%29.jpg> ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line1>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line2>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line3>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line4>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line5>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line6>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line7>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line8>,
+        <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line9> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q1141069,
+        wd:Q14992650,
+        wd:Q15262624,
+        wd:Q1617936,
+        wd:Q1903208,
+        wd:Q1931975,
+        wd:Q4816379,
+        wd:Q4969129,
+        wd:Q5175485 ;
+    schema:subjectOf mdl:ic125 .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q1080162#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1141069#P3438> ;
     skos:note "wikidata"@en ;
@@ -262917,6 +262919,100 @@ mdl:gautrain a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/gautrain#color6> ;
     tb:liveryOf wd:Q84945092 .
 
+mdl:ic125 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ic125#livery> ;
+    schema:about cls:Q1080162 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ic125.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "イギリスの高速ディーゼル列車HSTの先頭動力車。スコットレールのInter7City塗装（2026年も運行）。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "インターシティ125（43形動力車）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ic125/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ic125.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#ic125> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color1> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.6457 ;
+    schema:color "#1C2A4A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1272 ;
+    schema:color "#A9AEB3" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color3> a tb:ColorSample ;
+    rdfs:label "pale" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1010 ;
+    schema:color "#C3CDD8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0388 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color5> a tb:ColorSample ;
+    rdfs:label "louvre" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0328 ;
+    schema:color "#5E6268" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color6> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0193 ;
+    schema:color "#F0BE22" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color7> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0165 ;
+    schema:color "#2B3245" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color8> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0053 ;
+    schema:color "#B8BEC4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#color9> a tb:ColorSample ;
+    rdfs:label "skyblue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0053 ;
+    schema:color "#7F92AE" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ic125#livery> a tb:Livery ;
+    rdfs:label "ScotRail Inter7City livery (navy with a yellow front and a city skyline)"@en,
+        "スコットレールの Inter7City の塗装（紺に黄色の顔、町並みの絵）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/ic125/br_ic125.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ic125#color9> ;
+    tb:liveryOf wd:Q107980329 .
+
 mdl:ic3 a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ic3#livery> ;
@@ -272725,9 +272821,6 @@ wd:Q9361097 rdfs:label "Tramwaje Śląskie"@en,
 
 wd:Q93874 rdfs:label "Line P"@en .
 
-wd:Q943 rdfs:label "yellow"@en,
-        "黄色"@ja .
-
 wd:Q980395 rdfs:label "Gardermoen Line"@en .
 
 wd:Q10602972 rdfs:label "Norrtåg"@en .
@@ -273075,6 +273168,9 @@ wd:Q911344 rdfs:label "Pyongyang tram system"@en .
 wd:Q918096 rdfs:label "Pakistan Railways"@en,
         "パキスタン鉄道"@ja .
 
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
+
 wd:Q95709 rdfs:label "Cologne S-Bahn"@en .
 
 wd:Q964851 rdfs:label "steam turbine locomotive"@en,
@@ -273221,9 +273317,6 @@ wd:Q10685071 rdfs:label "Svenska Järnvägsverkstäderna"@en .
 wd:Q1070560 rdfs:label "Chesapeake and Ohio Railway"@en,
         "チェサピーク・アンド・オハイオ鉄道"@ja .
 
-wd:Q107980329 rdfs:label "ScotRail Trains (2022-)"@en,
-        "スコットレール・トレインズ"@ja .
-
 wd:Q10902012 rdfs:label "CRRC Beijing Locomotive Co., Ltd."@en,
         "中車北京二七機車有限公司"@ja .
 
@@ -273335,6 +273428,9 @@ wd:Q10676742 rdfs:label "800 mm track gauge"@en,
 
 wd:Q1072021 rdfs:label "Chicago and North Western Transportation Company"@en,
         "シカゴ・アンド・ノース・ウェスタン・トランスポーテーション・カンパニー"@ja .
+
+wd:Q107980329 rdfs:label "ScotRail Trains (2022-)"@en,
+        "スコットレール・トレインズ"@ja .
 
 wd:Q11217544 rdfs:label "Siemens Desiro Classic"@en .
 
@@ -274473,13 +274569,13 @@ wd:Q725793 rdfs:label "Union Pacific Railroad"@en,
 wd:Q10676739 rdfs:label "600 mm track gauge"@en,
         "600mm軌間"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q610143 rdfs:label "Bulgarian State Railways"@en,
         "ブルガリア国鉄"@ja .
 
 wd:Q665793 rdfs:label "Maatschappij tot Exploitatie van Staatsspoorwegen"@en .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q27943246 rdfs:label "0-4-0ST"@en .
 
@@ -274676,9 +274772,6 @@ wd:Q52665 rdfs:label "ASEA"@en,
 wd:Q663187 rdfs:label "Chemins de fer de l'Est"@en,
         "東鉄道"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1180332 rdfs:label "MÁV Passenger Transport Co."@en .
 
 wd:Q1486303 rdfs:label "London and North Western Railway"@en,
@@ -274717,6 +274810,9 @@ wd:Q24730842 rdfs:label "Bo′Bo′+Bo′Bo′"@en .
 
 wd:Q6379763 rdfs:label "Kawasaki Railcar Manufacturing"@en,
         "川崎車両"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q249654 rdfs:label "Ministry of Railways"@en,
         "鉄道省"@ja .
@@ -275155,9 +275251,6 @@ wd:Q26203877 rdfs:label "0-8-0T"@en .
 wd:Q35 rdfs:label "Denmark"@en,
         "デンマーク"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q3843040 rdfs:label "Maffei"@en,
         "J.A.マッファイ"@ja .
 
@@ -275168,6 +275261,9 @@ wd:Q54173 rdfs:label "General Electric"@en,
         "ゼネラル・エレクトリック"@ja .
 
 wd:Q477501 rdfs:label "Lokomotivfabrik der StEG"@en .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q656940 rdfs:label "0-8-0"@en .
 

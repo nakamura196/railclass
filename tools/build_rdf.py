@@ -105,6 +105,7 @@ CLASSES = {
     "Q706345": ("Q706345", None, None),                       # IC3 (DSB MF, ABB Scandia)
     "Q18349836": ("Q18349836", None, None),                    # DHR B class (0-4-0ST steam)
     "Q26724167": ("Q26724167", None, None),                    # Avelia Liberty (new Acela, Alstom)
+    "Q1080162": ("Q1080162", None, None),                     # British Rail Class 43 (HST power car)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -179,6 +180,7 @@ LIVERIES = {
     "dsb-ic3": ({"en": "DSB livery (silver aluminium with a navy window band)", "ja": "デンマーク国鉄の塗装（銀のアルミに紺の窓帯）"}, "Q83824"),
     "dhr-blue": ({"en": "Darjeeling Himalayan Railway blue livery (blue tank, bunker and cab with white lining)", "ja": "ダージリン・ヒマラヤ鉄道の青の塗装（青いタンク・炭庫・運転室に白線）"}, "Q463874"),
     "amtrak-acela-2025": ({"en": "Acela livery (white and silver with Acela blue and a red band; 2025-)", "ja": "アセラの塗装（白と銀にアセラの青と赤い帯。2025年から）"}, "Q23239"),
+    "scotrail-inter7city": ({"en": "ScotRail Inter7City livery (navy with a yellow front and a city skyline)", "ja": "スコットレールの Inter7City の塗装（紺に黄色の顔、町並みの絵）"}, "Q107980329"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -222,6 +224,7 @@ MODELS = {
     "ic3": ("Q706345", "dsb-ic3", None),
     "darjeeling": ("Q18349836", "dhr-blue", None),
     "acela": ("Q26724167", "amtrak-acela-2025", None),
+    "ic125": ("Q1080162", "scotrail-inter7city", None),
 }
 
 
