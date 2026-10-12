@@ -1,0 +1,178 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0834"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#C4C7C9",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1343"
+      },
+      "rdfs:label": "mask",
+      "schema:color": "#17191C",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0199"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#7D8995",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7517"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#F0F1F0",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q65054413"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/emu3000.glb"
+      },
+      "schema:depth": {
+        "@id": "_:emu3000-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "台湾の日立製の特急電車（新自強号）。白い車体に黒い先頭部、連結側に赤い帯。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:emu3000-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "台湾鉄路 EMU3000型"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/emu3000/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/emu3000.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#emu3000"
+      },
+      "schema:width": {
+        "@id": "_:emu3000-width"
+      }
+    },
+    {
+      "@id": "_:emu3000-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:emu3000-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:emu3000-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "37.6"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color4"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/emu3000/tr_emu3000.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q697926"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Taiwan Railway EMU3000 livery (white with a black nose, red stripe at the coupled end)"
+        },
+        {
+          "@language": "ja",
+          "@value": "台湾鉄路 EMU3000型の塗装（白い車体に黒い先頭部、連結側に赤い帯）"
+        }
+      ],
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    }
+  ]
+}

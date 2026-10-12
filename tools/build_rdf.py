@@ -85,6 +85,7 @@ CLASSES = {
     "tb-gautrain": (None, None, {"en": "Gautrain Electrostar", "ja": "ハウトレインの電車（Electrostar）"}),
     # Dubai Metro: as for the Gautrain, Wikidata has no item for the Kinki Sharyo rolling stock (Q83787 is the system)
     "tb-dubaimetro": (None, None, {"en": "Dubai Metro Kinki Sharyo train", "ja": "ドバイメトロの電車（近畿車輛）"}),
+    "Q65054413": ("Q65054413", None, None),                     # Taiwan Railway EMU3000 (Hitachi)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -133,6 +134,7 @@ LIVERIES = {
     "tren-maya-xiinbal": ({"en": "Tren Maya Xiinbal livery (cream, dark teal and green)", "ja": "トレン・マヤ Xiinbal の塗装（クリーム、濃い青緑と緑）"}, "Q59806309"),
     "gautrain": ({"en": "Gautrain livery (champagne gold, from the 2010 opening)", "ja": "ハウトレインの塗装（シャンパンゴールド、2010年の開業から）"}, "Q84945092"),
     "dubai-metro": ({"en": "Dubai Metro livery (silver and light blue)", "ja": "ドバイメトロの塗装（銀と水色）"}, "Q22101985"),   # RTA (Roads and Transport Authority, Dubai)
+    "tr-emu3000-red": ({"en": "Taiwan Railway EMU3000 livery (white with a black nose, red stripe at the coupled end)", "ja": "台湾鉄路 EMU3000型の塗装（白い車体に黒い先頭部、連結側に赤い帯）"}, "Q697926"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -162,6 +164,7 @@ MODELS = {
     "trenmaya": ("Q140092296", "tren-maya-xiinbal", None),
     "gautrain": ("tb-gautrain", "gautrain", None),
     "dubaimetro": ("tb-dubaimetro", "dubai-metro", None),
+    "emu3000": ("Q65054413", "tr-emu3000-red", None),
 }
 
 

@@ -192303,25 +192303,6 @@ cls:Q65053068 a skos:Concept,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/WDS-6AD%20locomotive%20used%20in%20Indian%20Railways.jpg> ;
     tb:has3DModel false .
 
-cls:Q65054413 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Taiwan Railway EMU3000 series"@en,
-        "台湾鉄路管理局EMU3000型電車"@ja ;
-    skos:exactMatch wd:Q65054413 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "Taiwan Railway EMU3000 series"@en,
-        "台湾鉄路管理局EMU3000型電車"@ja ;
-    prov:wasDerivedFrom wd:Q65054413 ;
-    wdt:P1064 wd:Q1193463 ;
-    wdt:P137 wd:Q697926 ;
-    wdt:P17 wd:Q17 ;
-    wdt:P176 wd:Q53238 ;
-    wdt:P279 wd:Q483373 ;
-    wdt:P930 wd:Q106530472 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TRA%20EMU3000%20image.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q865 .
-
 cls:Q65058872 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "R262"@en ;
@@ -256948,6 +256929,26 @@ cls:Q370895 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q65054413 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Taiwan Railway EMU3000 series"@en,
+        "台湾鉄路管理局EMU3000型電車"@ja ;
+    skos:exactMatch wd:Q65054413 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Taiwan Railway EMU3000 series"@en,
+        "台湾鉄路管理局EMU3000型電車"@ja ;
+    prov:wasDerivedFrom wd:Q65054413 ;
+    wdt:P1064 wd:Q1193463 ;
+    wdt:P137 wd:Q697926 ;
+    wdt:P17 wd:Q17 ;
+    wdt:P176 wd:Q53238 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P930 wd:Q106530472 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TRA%20EMU3000%20image.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q865 ;
+    schema:subjectOf mdl:emu3000 .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q65246930#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q322058#P3438> ;
     skos:note "wikidata"@en ;
@@ -262437,6 +262438,63 @@ mdl:ed250 a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color8>,
         <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color9> ;
     tb:liveryOf wd:Q590406 .
+
+mdl:emu3000 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/emu3000#livery> ;
+    schema:about cls:Q65054413 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/emu3000.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "台湾の日立製の特急電車（新自強号）。白い車体に黒い先頭部、連結側に赤い帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "台湾鉄路 EMU3000型"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/emu3000/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/emu3000.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#emu3000> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.7517 ;
+    schema:color "#F0F1F0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color2> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.1343 ;
+    schema:color "#17191C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color3> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0834 ;
+    schema:color "#C4C7C9" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color4> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0199 ;
+    schema:color "#7D8995" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/emu3000#livery> a tb:Livery ;
+    rdfs:label "Taiwan Railway EMU3000 livery (white with a black nose, red stripe at the coupled end)"@en,
+        "台湾鉄路 EMU3000型の塗装（白い車体に黒い先頭部、連結側に赤い帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/emu3000/tr_emu3000.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/emu3000#color4> ;
+    tb:liveryOf wd:Q697926 .
 
 mdl:frecciarossa a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -272681,9 +272739,6 @@ wd:Q1640765 rdfs:label "Small locomotive"@en,
 
 wd:Q221186 rdfs:label "レギオジェット"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q26162489 rdfs:label "Co′Co′+Co′Co′"@en .
 
 wd:Q3707399 rdfs:label "railbus"@en,
@@ -272797,6 +272852,9 @@ wd:Q1824214 rdfs:label "couchette car"@en,
 wd:Q2144723 rdfs:label "open wagon"@en,
         "無蓋車"@ja .
 
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
 wd:Q2494589 rdfs:label "Union Gießerei"@en .
 
 wd:Q26196936 rdfs:label "2-10-2T"@en .
@@ -272840,9 +272898,6 @@ wd:Q1553328 rdfs:label "Lyudinovsky Locomotive Plant"@en,
 wd:Q181697 rdfs:label "Raaberbahn"@en,
         "ラーバーバーン"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q2891341 rdfs:label "Batignolles-Châtillon"@en .
 
 wd:Q3077258 rdfs:label "Forges Usines et Fonderies Haine-Saint-Pierre"@en .
@@ -272883,6 +272938,9 @@ wd:Q1666820 rdfs:label "Natal Government Railways"@en .
 
 wd:Q225 rdfs:label "Bosnia and Herzegovina"@en,
         "ボスニア・ヘルツェゴビナ"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q260105 rdfs:label "covered goods wagon"@en,
         "有蓋車"@ja .
@@ -273485,9 +273543,6 @@ wd:Q5063597 rdfs:label "low-floor tram"@en,
 
 wd:Q52323406 rdfs:label "0-6-0dh"@en .
 
-wd:Q697926 rdfs:label "Taiwan Railways Administration"@en,
-        "台湾鉄路管理局"@ja .
-
 wd:Q83824 rdfs:label "DSB"@en,
         "デンマーク国鉄"@ja .
 
@@ -273504,6 +273559,9 @@ wd:Q56240475 rdfs:label "B"@en .
 
 wd:Q683873 rdfs:label "Prussian state railways"@en,
         "プロイセン邦有鉄道"@ja .
+
+wd:Q697926 rdfs:label "Taiwan Railways Administration"@en,
+        "台湾鉄路管理局"@ja .
 
 wd:Q13402959 rdfs:label "high-speed train"@en,
         "高速列車"@ja .
@@ -273661,9 +273719,6 @@ wd:Q881184 rdfs:label "Imperial Railways in Alsace-Lorraine"@en,
 wd:Q422111 rdfs:label "Hohenzollern Locomotive Works"@en,
         "ホーエンツォレルン機関車製造"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q188161 rdfs:label "Dutch East Indies"@en,
         "オランダ領東インド"@ja .
 
@@ -273678,6 +273733,9 @@ wd:Q819425 rdfs:label "Indian Railways"@en,
 
 wd:Q822381 rdfs:label "DÜWAG"@en,
         "DUEWAG"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q764728 rdfs:label "2-10-0"@en,
         "車輪配置 2-10-0"@ja .
