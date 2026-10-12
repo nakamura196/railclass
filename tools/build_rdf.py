@@ -76,6 +76,7 @@ CLASSES = {
     "Q19877282": ("Q19877282", None, None),                     # Park series (Budd dome-observation sleepers of The Canadian)
     "Q23641827": ("Q23641827", None, None),                     # Electric Tilt Train (Queensland Rail)
     "Q246841": ("Q246841", None, None),                         # British Rail Class 395 (Javelin)
+    "Q18331751": ("Q18331751", None, None),                     # PKP class ED250 (Alstom New Pendolino)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -95,7 +96,7 @@ for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
 # Japanese labels for Wikidata classes that have none (hand-entered; Wikidata's own labels win when they exist)
 LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q8078904": "ÖBB 4011形",
             "Q140611223": "Amtrak Airo", "Q137921671": "New Flyer XD60",
-            "Q289090": "トランスラピッド 08"}
+            "Q289090": "トランスラピッド 08", "Q18331751": "ED250 ペンドリーノ"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -114,6 +115,7 @@ LIVERIES = {
     "via-stainless": ({"en": "VIA Rail livery (bare stainless steel, unstriped)", "ja": "VIA鉄道の塗装（帯なしのステンレス）"}, "Q876720"),
     "qr-tilt": ({"en": "Queensland Rail Tilt Train livery (yellow cab end and stainless, since the 2015–17 refurbishment)", "ja": "クイーンズランド鉄道のティルト・トレインの塗装（黄色の先頭部とステンレス、2015〜17年の更新から）"}, "Q379439"),
     "southeastern-2025": ({"en": "Southeastern high-speed livery (2025: grey doors and swoosh)", "ja": "Southeastern の高速電車の塗装（2025年から、灰色の扉と弧）"}, "Q1696490"),
+    "pkp-ic-ed250": ({"en": "PKP Intercity Pendolino livery (silver with sky blue and cobalt)", "ja": "PKP インターシティのペンドリーノの塗装（銀に空色と紺）"}, "Q590406"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -139,6 +141,7 @@ MODELS = {
     "canadian": ("Q19877282", "via-stainless", None),
     "tilttrain": ("Q23641827", "qr-tilt", None),
     "class395": ("Q246841", "southeastern-2025", None),
+    "ed250": ("Q18331751", "pkp-ic-ed250", None),
 }
 
 

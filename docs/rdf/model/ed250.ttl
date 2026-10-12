@@ -1,0 +1,103 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:ed250 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ed250#livery> ;
+    schema:about cls:Q18331751 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ed250.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "ポーランドの高速電車（PKP インターシティ）。銀に空色と紺の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ED250 ペンドリーノ"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ed250/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ed250.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#ed250> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ed250#color1> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7635 ;
+    schema:color "#BCC2C8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ed250#color2> a tb:ColorSample ;
+    rdfs:label "cobalt" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0534 ;
+    schema:color "#1B4C9C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ed250#color3> a tb:ColorSample ;
+    rdfs:label "sky" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0517 ;
+    schema:color "#5CB3E6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ed250#color4> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0373 ;
+    schema:color "#2C3339" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ed250#color5> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0294 ;
+    schema:color "#3A3D40" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ed250#color6> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0234 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ed250#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0194 ;
+    schema:color "#4E5E6C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ed250#color8> a tb:ColorSample ;
+    rdfs:label "seam" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0097 ;
+    schema:color "#7C848C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ed250#color9> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0070 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ed250#livery> a tb:Livery ;
+    rdfs:label "PKP Intercity Pendolino livery (silver with sky blue and cobalt)"@en,
+        "PKP インターシティのペンドリーノの塗装（銀に空色と紺）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/ed250/pkp_ed250.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ed250#color9> ;
+    tb:liveryOf wd:Q590406 .
+

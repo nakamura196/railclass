@@ -214,3 +214,4 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - 注釈は v2 で高さが最大 2.5 mm 動いたので、狙う点を直した（尾の窓・VIA の板・帯・ドームの 3 か所）。14 か所とも狙った色に当たる
 - [x] 2026-10-11 電気式ティルト・トレイン（tilttrain、Q23641827、塗装 qr-tilt）を足した。色は黄・灰、注釈 14 か所（推測 1・模型の都合 1）。npm test 通過。gallery は skytrain ce1a3a9
 - [x] 2026-10-11 クラス395「ジャベリン」（class395、Q246841、塗装 southeastern-2025、運行 Southeastern Q1696490）を足した。色は青（紺）・橙・黄、注釈 15 か所（推測 1・模型の都合 1）。npm test 通過。gallery は skytrain 5db1e42
+- [x] 2026-10-11 ED250 ペンドリーノ（ed250、Q18331751、塗装 pkp-ic-ed250、運行 PKP Intercity Q590406）を足した。Wikidata に日本語の名前が無いので LABEL_JA に「ED250 ペンドリーノ」。色は灰（銀）・青、注釈 13 か所（推測 1・模型の都合 1）。npm test 通過。gallery は skytrain 54e8d48
