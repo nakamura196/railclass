@@ -20,6 +20,7 @@ remote=$(git remote get-url origin)
 
 (cd web && npm run build && npm test)   # npm test: the built pages against the data (web/scripts/check-dist.mjs); stops here on a failure
 touch web/dist/.nojekyll
+print railclass.ldas.jp > web/dist/CNAME   # custom domain; public/ is wiped by sync-public, so write it here
 
 tmp=$(mktemp -d)
 cp -R web/dist/. "$tmp"

@@ -18,7 +18,7 @@ from build_rdf import BASE, CC0, CC_BY, CLS, DOCS as RDF_DIR, MDL, SCHEME, SDO, 
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(HERE, "docs")
-SITE = "https://nakamura196.github.io/railclass/"   # where the files are served; the URIs (BASE) move to w3id.org later
+SITE = "https://railclass.ldas.jp/"   # where the files are served; the URIs (BASE) move to w3id.org later
 VOID = Namespace("http://rdfs.org/ns/void#")
 ODBL = URIRef("https://opendatacommons.org/licenses/odbl/1-0/")
 DS = URIRef(BASE + "dataset")

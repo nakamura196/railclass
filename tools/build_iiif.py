@@ -19,7 +19,7 @@ import json, os, re, struct, sys
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = "https://nakamura196.github.io/railclass/"
+BASE = "https://railclass.ldas.jp/"
 CONTEXT = "http://iiif.io/api/presentation/4/context.json"
 PROVIDER = {"id": "https://github.com/nakamura196", "type": "Agent",
             "label": {"ja": ["中村 覚"], "en": ["Satoru Nakamura"]}}
