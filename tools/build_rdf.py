@@ -83,6 +83,8 @@ CLASSES = {
     # is linked as the line it runs on (tools/class_lines.tsv). No skos:broader: Electrostar (Q841722) is the UK series
     # item, and the facets marked "inherit" would carry its values over.
     "tb-gautrain": (None, None, {"en": "Gautrain Electrostar", "ja": "ハウトレインの電車（Electrostar）"}),
+    # Dubai Metro: as for the Gautrain, Wikidata has no item for the Kinki Sharyo rolling stock (Q83787 is the system)
+    "tb-dubaimetro": (None, None, {"en": "Dubai Metro Kinki Sharyo train", "ja": "ドバイメトロの電車（近畿車輛）"}),
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -94,10 +96,13 @@ HAND = {
     "tb-skytrain-mk5": {**SKYTRAIN, "manufacturer": ["Q309084"]},                            # Alstom
     # South Africa; Gautrain Management Agency; Bombardier Transportation; EMU; opening 2010
     "tb-gautrain": {"country": ["Q258"], "operator": ["Q84945092"], "manufacturer": ["Q688893"], "kind": ["Q483373"], "serviceEntry": [2010]},
+    # United Arab Emirates; Serco (Wikidata P137 of Q83787); Kinki Sharyo; EMU; opening 2009
+    "tb-dubaimetro": {"country": ["Q878"], "operator": ["Q499104"], "manufacturer": ["Q1592306"], "kind": ["Q483373"], "serviceEntry": [2009]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
     "tb-gautrain": "Country, operator and opening date (2010-06-08) from Wikidata Q1476881 (Gautrain, the system); manufacturer and type (Bombardier Electrostar EMU) from the skytrain lab note docs/notes/gautrain.md (photos and en.wikipedia 'Gautrain', read 2026-10-11).",
+    "tb-dubaimetro": "Country, operator and opening date (2009-09-09) from Wikidata Q83787 (Dubai Metro, the system); manufacturer (Kinki Sharyo, cars 5001-5079) from en.wikipedia 'Dubai Metro' (rolling stock, read 2026-10-11) via the skytrain lab note docs/notes/dubaimetro.md.",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -127,6 +132,7 @@ LIVERIES = {
     "pkp-ic-ed250": ({"en": "PKP Intercity Pendolino livery (silver with sky blue and cobalt)", "ja": "PKP インターシティのペンドリーノの塗装（銀に空色と紺）"}, "Q590406"),
     "tren-maya-xiinbal": ({"en": "Tren Maya Xiinbal livery (cream, dark teal and green)", "ja": "トレン・マヤ Xiinbal の塗装（クリーム、濃い青緑と緑）"}, "Q59806309"),
     "gautrain": ({"en": "Gautrain livery (champagne gold, from the 2010 opening)", "ja": "ハウトレインの塗装（シャンパンゴールド、2010年の開業から）"}, "Q84945092"),
+    "dubai-metro": ({"en": "Dubai Metro livery (silver and light blue)", "ja": "ドバイメトロの塗装（銀と水色）"}, "Q22101985"),   # RTA (Roads and Transport Authority, Dubai)
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -155,6 +161,7 @@ MODELS = {
     "ed250": ("Q18331751", "pkp-ic-ed250", None),
     "trenmaya": ("Q140092296", "tren-maya-xiinbal", None),
     "gautrain": ("tb-gautrain", "gautrain", None),
+    "dubaimetro": ("tb-dubaimetro", "dubai-metro", None),
 }
 
 

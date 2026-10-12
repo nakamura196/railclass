@@ -241836,6 +241836,9 @@ wd:Q2208780 rdfs:label "SWK MOBIL"@en .
 
 wd:Q2209114 rdfs:label "Saarbahn GmbH"@en .
 
+wd:Q22101985 rdfs:label "Roads and Transport Authority"@en,
+        "ドバイ政府道路交通局"@ja .
+
 wd:Q2216121 rdfs:label "Salzkammergut-Lokalbahn"@en,
         "ザルツカンマーグート地方鉄道"@ja .
 
@@ -242657,6 +242660,9 @@ wd:Q4985553 rdfs:label "Buenos Aires and Rosario Railway"@en,
 
 wd:Q498930 rdfs:label "Hokkaido Railway Company"@en,
         "北海道旅客鉄道"@ja .
+
+wd:Q499104 rdfs:label "Serco Group"@en,
+        "セルコ"@ja .
 
 wd:Q4993464 rdfs:label "Dalslands Järnväg"@en .
 
@@ -261605,6 +261611,36 @@ cls:Q8078904 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:tb-dubaimetro a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Dubai Metro Kinki Sharyo train"@en,
+        "ドバイメトロの電車（近畿車輛）"@ja ;
+    dcterms:source "Country, operator and opening date (2009-09-09) from Wikidata Q83787 (Dubai Metro, the system); manufacturer (Kinki Sharyo, cars 5001-5079) from en.wikipedia 'Dubai Metro' (rolling stock, read 2026-10-11) via the skytrain lab note docs/notes/dubaimetro.md."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Dubai Metro Kinki Sharyo train"@en,
+        "ドバイメトロの電車（近畿車輛）"@ja ;
+    wdt:P137 wd:Q499104 ;
+    wdt:P17 wd:Q878 ;
+    wdt:P176 wd:Q1592306 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2009"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-dubaimetro#line1> ;
+    tb:usedOn wd:Q83787 ;
+    schema:subjectOf mdl:dubaimetro .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-dubaimetro#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q83787> ;
+    skos:note "the Dubai Metro system itself; Wikidata has no item for its Kinki Sharyo rolling stock"@en ;
+    tb:line wd:Q83787 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
 cls:tb-gautrain a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Gautrain Electrostar"@en,
@@ -262243,6 +262279,71 @@ mdl:class395 a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/class395#color7>,
         <https://nakamura196.github.io/train-bodies/rdf/model/class395#color8> ;
     tb:liveryOf wd:Q1696490 .
+
+mdl:dubaimetro a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#livery> ;
+    schema:about cls:tb-dubaimetro ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/dubaimetro.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "ドバイの無人運転の地下鉄・高架鉄道。近畿車輛製の、銀と水色の標準塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ドバイメトロ"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/dubaimetro/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/dubaimetro.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#dubaimetro> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7779 ;
+    schema:color "#C9CED3" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color2> a tb:ColorSample ;
+    rdfs:label "sky" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.1476 ;
+    schema:color "#4F9FD6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color3> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0464 ;
+    schema:color "#1B222A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color4> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0193 ;
+    schema:color "#344658" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0062 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#livery> a tb:Livery ;
+    rdfs:label "Dubai Metro livery (silver and light blue)"@en,
+        "ドバイメトロの塗装（銀と水色）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/dubaimetro/rta_dubaimetro.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color5> ;
+    tb:liveryOf wd:Q22101985 .
 
 mdl:ed250 a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -266908,6 +267009,8 @@ wd:Q836547 rdfs:label "guided bus"@en,
 
 wd:Q836612 rdfs:label "Line 2"@en .
 
+wd:Q83787 rdfs:label "Dubai Metro"@en .
+
 wd:Q838436 rdfs:label "Kowloon–Canton Railway Corporation"@en,
         "九広鉄道公司"@ja .
 
@@ -266982,9 +267085,6 @@ wd:Q874 rdfs:label "Turkmenistan"@en,
         "トルクメニスタン"@ja .
 
 wd:Q875748 rdfs:label "ICE International"@en .
-
-wd:Q878 rdfs:label "United Arab Emirates"@en,
-        "アラブ首長国連邦"@ja .
 
 wd:Q882263 rdfs:label "Regentalbahn"@en .
 
@@ -268453,6 +268553,9 @@ wd:Q872275 rdfs:label "Prater Liliputbahn"@en,
 wd:Q874494 rdfs:label "TX Logistik"@en .
 
 wd:Q877616 rdfs:label "Eisenbahn Pilsen–Priesen(–Komotau)"@en .
+
+wd:Q878 rdfs:label "United Arab Emirates"@en,
+        "アラブ首長国連邦"@ja .
 
 wd:Q884368 rdfs:label "Schöma"@en,
         "シェーマ"@ja .
@@ -271730,9 +271833,6 @@ wd:Q1258373 rdfs:label "Southern"@en,
 wd:Q1419438 rdfs:label "Great Western Railway"@en,
         "グレート・ウェスタン・レールウェイ"@ja .
 
-wd:Q1592306 rdfs:label "Kinki Sharyo"@en,
-        "近畿車輛"@ja .
-
 wd:Q159631 rdfs:label "Kingdom of Württemberg"@en,
         "ヴュルテンベルク王国"@ja .
 
@@ -271886,6 +271986,9 @@ wd:Q1415097 rdfs:label "London Post Office Railway"@en,
 
 wd:Q1509724 rdfs:label "baggage car"@en,
         "荷物車"@ja .
+
+wd:Q1592306 rdfs:label "Kinki Sharyo"@en,
+        "近畿車輛"@ja .
 
 wd:Q18208626 rdfs:label "Abellio ScotRail (2015-2022)"@en,
         "アベリオ・スコットレール"@ja .
@@ -272694,9 +272797,6 @@ wd:Q1824214 rdfs:label "couchette car"@en,
 wd:Q2144723 rdfs:label "open wagon"@en,
         "無蓋車"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q2494589 rdfs:label "Union Gießerei"@en .
 
 wd:Q26196936 rdfs:label "2-10-2T"@en .
@@ -272739,6 +272839,9 @@ wd:Q1553328 rdfs:label "Lyudinovsky Locomotive Plant"@en,
 
 wd:Q181697 rdfs:label "Raaberbahn"@en,
         "ラーバーバーン"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q2891341 rdfs:label "Batignolles-Châtillon"@en .
 
@@ -272838,9 +272941,6 @@ wd:Q941179 rdfs:label "articulated locomotive"@en,
 wd:Q1053992 rdfs:label "Central South African Railways"@en,
         "セントラル・サウス・アフリカン鉄道"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1548575 rdfs:label "R. & W. Hawthorn, Leslie and Company"@en,
         "ホーソン・レスリー"@ja .
 
@@ -272906,6 +273006,9 @@ wd:Q7880037 rdfs:label "Ulster Transport Authority"@en,
         "アルスター交通局"@ja .
 
 wd:Q814947 rdfs:label "trailer car"@en .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q1142179 rdfs:label "Orange River Colony"@en,
         "オレンジ川植民地"@ja .
@@ -273540,9 +273643,6 @@ wd:Q1964944 rdfs:label "Bundesbahnen Österreich"@en .
 
 wd:Q20656600 rdfs:label "(A1A)(A1A)"@en .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q1162114 rdfs:label "Victorian Railways"@en,
         "ヴィクトリア鉄道"@ja .
 
@@ -273560,6 +273660,9 @@ wd:Q881184 rdfs:label "Imperial Railways in Alsace-Lorraine"@en,
 
 wd:Q422111 rdfs:label "Hohenzollern Locomotive Works"@en,
         "ホーエンツォレルン機関車製造"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q188161 rdfs:label "Dutch East Indies"@en,
         "オランダ領東インド"@ja .

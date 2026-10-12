@@ -189,6 +189,11 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 4. train-bodies で `git status --short docs/models docs/thumbs docs/data` を見る。変わるのは models.json と、新しい glb・jpg だけのはず
 5. train-bodies の `tools/build_rdf.py` に 3 か所足す: CLASSES（`"<Q>": ("<Q>", None, None)`）、LIVERIES（塗装の名前 ja/en と、その塗装の運行会社の Q）、MODELS（`"<id>": ("<Q>", "<塗装>", None)`）
 6. Wikidata に形式の日本語の名前が無ければ、LABEL_JA にも足す
+   （2026-10-12 追記）Wikidata の名前が mul だけのとき（en も無い）は、CLASSES の 3 番目に en・ja の名前を入れる（trenmaya）。
+   Wikidata に車両の形式の項目が無く、路線網の項目しか無いときは、形式 `tb-<短い英字>` を立てる（gautrain・dubaimetro）:
+   CLASSES `"tb-x": (None, None, {"en": …, "ja": …})`、HAND（国・運行・製造・種類・開業年）と HAND_SOURCE、
+   路線網は tools/class_lines.tsv に「走る路線」として 1 行（`tb-x	<Q>	<名前>	current	https://www.wikidata.org/wiki/<Q>	Wikidata (the system)	…`）。
+   注釈の "class" は tb-x にし、"wikidata" は書かない（書くと IIIF で「上位の形式」と表示される）。コミットに docs/rdf/class/tb-x.* と tools/class_lines.tsv も入れる
 7. 色: `python3 tools/extract_colors.py`（build_rdf.py の MODELS を読む。ほかの模型の行が変わっていないことを、出力の一覧と `git diff tools/livery_colors.json` で見る）
 8. RDF: `python3 tools/build_rdf.py`（1 分半ほど。新しい形式だけを Wikidata から取る。`--refresh` は付けない。付けるとほかの形式の値も今の Wikidata に変わる）
 9. 並び順だけ変わった .jsonld を戻す: `python3 tools/rdf_order_only.py`（「real」と出るのは all.jsonld・新しい形式・void.jsonld だけのはず）
@@ -217,3 +222,4 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [x] 2026-10-11 ED250 ペンドリーノ（ed250、Q18331751、塗装 pkp-ic-ed250、運行 PKP Intercity Q590406）を足した。Wikidata に日本語の名前が無いので LABEL_JA に「ED250 ペンドリーノ」。色は灰（銀）・青、注釈 13 か所（推測 1・模型の都合 1）。npm test 通過。gallery は skytrain 54e8d48
 - [x] 2026-10-12 トレン・マヤ（trenmaya、Q140092296、塗装 tren-maya-xiinbal、事業 Q59806309）を足した。Wikidata の名前が mul だけ（en・ja が無い）なので、CLASSES に en・ja の名前を手で入れた。色は白（クリーム）・緑、注釈 15 か所（推測 1・模型の都合 2）。npm test 通過。gallery は skytrain d4606cb
 - [x] 2026-10-12 ハウトレイン（gautrain、形式 tb-gautrain、塗装 gautrain）を足した。Q1476881 は路線網の項目なので形式にせず、tools/class_lines.tsv で「走る路線」（tb:usedOn）として結んだ。国・運行・製造・種類・開業年は HAND（出典は HAND_SOURCE）。Electrostar（Q841722）を skos:broader にしなかったのは、引き継ぐ値（電化方式など）が英国の系列のものになるため。build_rdf.py は HAND と塗装の運行会社の名前も取るようにした。色はシャンパンが「橙」に分けられた（87%）。注釈 16 か所（推測 1・模型の都合 1）。npm test 通過。gallery は skytrain 9951604
+- [x] 2026-10-12 ドバイメトロ（dubaimetro、形式 tb-dubaimetro、塗装 dubai-metro は RTA Q22101985 のもの）を足した。ハウトレインと同じく、路線網 Q83787 は tools/class_lines.tsv で結んだ。色は灰（銀）・青、注釈 13 か所（推測 1・模型の都合 2）。npm test 通過（28,654 形式のページ・25 模型）。gallery は skytrain 0b14780。上の手順の 6 に、mul だけの名前と tb- の形式の足し方を書き足した
