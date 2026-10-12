@@ -261633,6 +261633,36 @@ cls:Q853105 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:tb-addis a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Addis Ababa Light Rail tram (CNR Changchun)"@en,
+        "アディスアベバ・ライトレールの路面電車（CNR 長春）"@ja ;
+    dcterms:source "Country and opening date (2015-09-21) from Wikidata Q16250141 (Addis Ababa Light Rail, the system); operator (Ethiopian Railway Corporation), manufacturer (CNR Changchun, now CRRC Changchun) and type (three-section 70 % low-floor tram) from the skytrain lab note docs/notes/addis.md (2026-10-12)."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Addis Ababa Light Rail tram (CNR Changchun)"@en,
+        "アディスアベバ・ライトレールの路面電車（CNR 長春）"@ja ;
+    wdt:P137 wd:Q55639671 ;
+    wdt:P17 wd:Q115 ;
+    wdt:P176 wd:Q848225 ;
+    wdt:P279 wd:Q3407658 ;
+    wdt:P729 "2015"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-addis#line1> ;
+    tb:usedOn wd:Q16250141 ;
+    schema:subjectOf mdl:addis .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-addis#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16250141> ;
+    skos:note "the Addis Ababa Light Rail system itself; Wikidata has no item for its CNR Changchun trams"@en ;
+    tb:line wd:Q16250141 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
 cls:tb-dubaimetro a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Dubai Metro Kinki Sharyo train"@en,
@@ -261990,6 +262020,57 @@ mdl:acela a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/acela#color8>,
         <https://nakamura196.github.io/train-bodies/rdf/model/acela#color9> ;
     tb:liveryOf wd:Q23239 .
+
+mdl:addis a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/addis#livery> ;
+    schema:about cls:tb-addis ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/addis.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "エチオピアの路面電車。2015年開業、東西線の白と緑の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "アディスアベバ・ライトレール"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/addis/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/addis.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#addis> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/addis#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.7946 ;
+    schema:color "#F2F4F2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/addis#color2> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    tb:areaShare 0.1478 ;
+    schema:color "#1F9A60" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/addis#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0467 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/addis#livery> a tb:Livery ;
+    rdfs:label "Addis Ababa Light Rail East-West (green) line livery (white and green)"@en,
+        "アディスアベバ・ライトレール東西線（緑線）の塗装（白と緑）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/addis/aalrt_addis.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/addis#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/addis#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/addis#color3> ;
+    tb:liveryOf wd:Q55639671 .
 
 mdl:airo a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -265395,9 +265476,6 @@ wd:Q114877244 rdfs:label "IC line 61"@en .
 
 wd:Q114973464 rdfs:label "RB 62 (Bavaria)"@en .
 
-wd:Q115 rdfs:label "Ethiopia"@en,
-        "エチオピア"@ja .
-
 wd:Q115131940 rdfs:label "(1Bo)+(Bo1)"@en .
 
 wd:Q115171353 rdfs:label "S74"@en .
@@ -266141,6 +266219,8 @@ wd:Q16058236 rdfs:label "Agra–Bhopal section"@en .
 wd:Q16153950 rdfs:label "1963 Chualar bus crash"@en .
 
 wd:Q16243809 rdfs:label "Bhusawal–Kalyan section"@en .
+
+wd:Q16250141 rdfs:label "Addis Ababa Light Rail"@en .
 
 wd:Q16266 rdfs:label "Bundang Line"@en .
 
@@ -267736,6 +267816,9 @@ wd:Q5555390 rdfs:label "Ghana Railway Corporation"@en,
 
 wd:Q555854 rdfs:label "Companhia do Caminho de Ferro do Porto à Póvoa e Famalicão"@en .
 
+wd:Q55639671 rdfs:label "Ethiopian Railway Corporation"@en,
+        "エチオピア鉄道"@ja .
+
 wd:Q5566325 rdfs:label "Gladstone Branch"@en .
 
 wd:Q5566985 rdfs:label "Glasgow to Edinburgh via Carstairs Line"@en .
@@ -269004,6 +269087,9 @@ wd:Q1143763 rdfs:label "Cumbres and Toltec Scenic Railroad"@en,
 
 wd:Q1146109 rdfs:label "Metropolitan Transportation Authority"@en,
         "メトロポリタン・トランスポーテーション・オーソリティ"@ja .
+
+wd:Q115 rdfs:label "Ethiopia"@en,
+        "エチオピア"@ja .
 
 wd:Q1158881 rdfs:label "Thomas-type steam railcar"@en,
         "トーマス式蒸気動車"@ja .
@@ -273099,9 +273185,6 @@ wd:Q2868905 rdfs:label "Alstom Crespin"@en,
 wd:Q3041137 rdfs:label "Duluth, Missabe and Iron Range Railway"@en,
         "ダルース・ミセーベ・アンド・アイアン・レンジ鉄道"@ja .
 
-wd:Q3133 rdfs:label "green"@en,
-        "緑"@ja .
-
 wd:Q3322605 rdfs:label "Banaras Locomotive Works"@en,
         "ディーゼル・ロコモーティブ・ワークス"@ja .
 
@@ -273437,6 +273520,9 @@ wd:Q2901670 rdfs:label "4-2-2"@en .
 wd:Q30116186 rdfs:label "Broadstone Works"@en .
 
 wd:Q30398528 rdfs:label "Bo′2′Bo′"@en .
+
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
 
 wd:Q318679 rdfs:label "Greater Anglia"@en,
         "グレーター・アングリア"@ja .
@@ -274760,9 +274846,6 @@ wd:Q725793 rdfs:label "Union Pacific Railroad"@en,
 wd:Q10676739 rdfs:label "600 mm track gauge"@en,
         "600mm軌間"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q610143 rdfs:label "Bulgarian State Railways"@en,
         "ブルガリア国鉄"@ja .
 
@@ -274791,6 +274874,9 @@ wd:Q18853 rdfs:label "DB Regio"@en,
 
 wd:Q2105117 rdfs:label "Hollandsche IJzeren Spoorweg-Maatschappij"@en,
         "ホラント鉄道"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q4736953 rdfs:label "Altoona Works"@en,
         "アルトゥーナ工場"@ja .
@@ -274830,9 +274916,6 @@ wd:Q1906878 rdfs:label "Oerlikon Works"@en,
 
 wd:Q20970690 rdfs:label "2140 mm track gauge"@en .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q2539159 rdfs:label "Waggonbau Bautzen"@en .
 
 wd:Q2738829 rdfs:label "Fiat Ferroviaria"@en,
@@ -274858,6 +274941,9 @@ wd:Q1272318 rdfs:label "Great Northern Railway"@en,
 
 wd:Q23239 rdfs:label "Amtrak"@en,
         "アムトラック"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q26198128 rdfs:label "2-8-2T"@en .
 
@@ -274907,9 +274993,6 @@ wd:Q290188 rdfs:label "Ansaldo"@en,
 wd:Q5014252 rdfs:label "CRRC Qingdao Sifang Co., Ltd."@en,
         "中車青島四方機車車輛股份有限公司"@ja .
 
-wd:Q848225 rdfs:label "CRRC Changchun Railway Vehicles Co., Ltd."@en,
-        "中車長春軌道客車股份有限公司"@ja .
-
 wd:Q29638944 rdfs:label "2′2′"@en .
 
 wd:Q3428923 rdfs:label "John Cockerill & Cie."@en,
@@ -274917,6 +275000,9 @@ wd:Q3428923 rdfs:label "John Cockerill & Cie."@en,
 
 wd:Q826750 rdfs:label "Chemins de fer d'Alsace et de Lorraine"@en,
         "アルザス＝ロレーヌ鉄道"@ja .
+
+wd:Q848225 rdfs:label "CRRC Changchun Railway Vehicles Co., Ltd."@en,
+        "中車長春軌道客車股份有限公司"@ja .
 
 wd:Q864803 rdfs:label "Korean State Railway"@en,
         "朝鮮民主主義人民共和国鉄道省"@ja .

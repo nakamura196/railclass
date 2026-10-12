@@ -1,0 +1,43 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:tb-addis a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Addis Ababa Light Rail tram (CNR Changchun)"@en,
+        "アディスアベバ・ライトレールの路面電車（CNR 長春）"@ja ;
+    dcterms:source "Country and opening date (2015-09-21) from Wikidata Q16250141 (Addis Ababa Light Rail, the system); operator (Ethiopian Railway Corporation), manufacturer (CNR Changchun, now CRRC Changchun) and type (three-section 70 % low-floor tram) from the skytrain lab note docs/notes/addis.md (2026-10-12)."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Addis Ababa Light Rail tram (CNR Changchun)"@en,
+        "アディスアベバ・ライトレールの路面電車（CNR 長春）"@ja ;
+    wdt:P137 wd:Q55639671 ;
+    wdt:P17 wd:Q115 ;
+    wdt:P176 wd:Q848225 ;
+    wdt:P279 wd:Q3407658 ;
+    wdt:P729 "2015"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-addis#line1> ;
+    tb:usedOn wd:Q16250141 ;
+    schema:subjectOf mdl:addis .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-addis#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16250141> ;
+    skos:note "the Addis Ababa Light Rail system itself; Wikidata has no item for its CNR Changchun trams"@en ;
+    tb:line wd:Q16250141 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
+wd:Q16250141 rdfs:label "Addis Ababa Light Rail"@en .
+
