@@ -178186,20 +178186,6 @@ cls:Q56393635 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q252 .
 
-cls:Q56394168 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "MRTJ 1000 series"@en ;
-    skos:exactMatch wd:Q56394168 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "MRTJ 1000 series"@en ;
-    prov:wasDerivedFrom wd:Q56394168 ;
-    wdt:P1064 wd:Q1193463 ;
-    wdt:P17 wd:Q252 ;
-    wdt:P176 wd:Q682174 ;
-    wdt:P279 wd:Q483373 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/MRTset3.jpg> ;
-    tb:has3DModel false .
-
 cls:Q56394434 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "NIS 351 class"@en ;
@@ -240866,6 +240852,8 @@ wd:Q1377135 rdfs:label "Tokyo Metropolitan Bureau of Transportation"@en,
 
 wd:Q137735594 rdfs:label "conference coach"@en .
 
+wd:Q137969581 rdfs:label "PT Mass Rapid Transit Jakarta (Perseroda)"@en .
+
 wd:Q1389487 rdfs:label "Alsen"@en,
         "アルセン"@ja .
 
@@ -254954,6 +254942,23 @@ cls:Q370895 a skos:Concept,
     tb:useStatus "historical" ;
     tb:usedUntil "2018"^^xsd:gYear .
 
+cls:Q56394168 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "MRTJ 1000 series"@en,
+        "ジャカルタ MRT 1000系"@ja ;
+    skos:exactMatch wd:Q56394168 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "MRTJ 1000 series"@en,
+        "ジャカルタ MRT 1000系"@ja ;
+    prov:wasDerivedFrom wd:Q56394168 ;
+    wdt:P1064 wd:Q1193463 ;
+    wdt:P17 wd:Q252 ;
+    wdt:P176 wd:Q682174 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/MRTset3.jpg> ;
+    tb:has3DModel true ;
+    schema:subjectOf mdl:jakartamrt .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q564855#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1093774#P3438> ;
     skos:note "wikidata"@en ;
@@ -263785,6 +263790,106 @@ mdl:icng a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/icng#color6>,
         <https://nakamura196.github.io/train-bodies/rdf/model/icng#color7> ;
     tb:liveryOf wd:Q23076 .
+
+mdl:jakartamrt a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#livery> ;
+    schema:about cls:Q56394168 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/jakartamrt.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "インドネシア初の地下鉄、南北線の日本車輌製の電車。2019年開業時からの紺と青の顔とステンレスの車体。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ジャカルタMRT 1000系"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/jakartamrt/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/jakartamrt.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#jakartamrt> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7005 ;
+    schema:color "#C2C5C9" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color10> a tb:ColorSample ;
+    rdfs:label "royal" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0058 ;
+    schema:color "#2640C8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color2> a tb:ColorSample ;
+    rdfs:label "rooftop" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1534 ;
+    schema:color "#BCC0C4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color3> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0449 ;
+    schema:color "#6A6F75" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color4> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0210 ;
+    schema:color "#1A2036" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color5> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0176 ;
+    schema:color "#15181C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color6> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0171 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color7> a tb:ColorSample ;
+    rdfs:label "stripe" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0170 ;
+    schema:color "#3AA6E8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color8> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0122 ;
+    schema:color "#445566" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color9> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0069 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#livery> a tb:Livery ;
+    rdfs:label "Jakarta MRT standard livery (navy and blue face, stainless with a sky-blue line; 2019-)"@en,
+        "ジャカルタ MRT の標準の塗装（紺と青の顔、ステンレスに水色の線。2019年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/jakartamrt/mrtj_jakartamrt.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color9> ;
+    tb:liveryOf wd:Q137969581 .
 
 mdl:ktxeum a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -274942,9 +275047,6 @@ wd:Q1272318 rdfs:label "Great Northern Railway"@en,
 wd:Q23239 rdfs:label "Amtrak"@en,
         "アムトラック"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q26198128 rdfs:label "2-8-2T"@en .
 
 wd:Q378767 rdfs:label "Adtranz"@en,
@@ -274984,6 +275086,9 @@ wd:Q1128687 rdfs:label "Fablok"@en .
 
 wd:Q143609 rdfs:label "Lima Locomotive Works"@en,
         "ライマ・ロコモティブ・ワークス"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q26086670 rdfs:label "4-6-4T"@en .
 
@@ -275091,9 +275196,6 @@ wd:Q24730842 rdfs:label "Bo′Bo′+Bo′Bo′"@en .
 wd:Q6379763 rdfs:label "Kawasaki Railcar Manufacturing"@en,
         "川崎車両"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q249654 rdfs:label "Ministry of Railways"@en,
         "鉄道省"@ja .
 
@@ -275143,6 +275245,9 @@ wd:Q697926 rdfs:label "Taiwan Railways Administration"@en,
 
 wd:Q83824 rdfs:label "DSB"@en,
         "デンマーク国鉄"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q13402959 rdfs:label "high-speed train"@en,
         "高速列車"@ja .
@@ -275547,9 +275652,6 @@ wd:Q656940 rdfs:label "0-8-0"@en .
 wd:Q29041 rdfs:label "Hanomag"@en,
         "ハノマーグ"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q462362 rdfs:label "Wiener Neustädter Lokomotivfabrik"@en .
 
 wd:Q23076 rdfs:label "Nederlandse Spoorwegen"@en,
@@ -275566,6 +275668,9 @@ wd:Q884 rdfs:label "South Korea"@en,
 
 wd:Q3407658 rdfs:label "tram"@en,
         "路面電車"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q546769 rdfs:label "Borsig"@en,
         "ボルジッヒ"@ja .

@@ -1,0 +1,110 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:jakartamrt a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#livery> ;
+    schema:about cls:Q56394168 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/jakartamrt.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "インドネシア初の地下鉄、南北線の日本車輌製の電車。2019年開業時からの紺と青の顔とステンレスの車体。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ジャカルタMRT 1000系"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/jakartamrt/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/jakartamrt.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#jakartamrt> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7005 ;
+    schema:color "#C2C5C9" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color10> a tb:ColorSample ;
+    rdfs:label "royal" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0058 ;
+    schema:color "#2640C8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color2> a tb:ColorSample ;
+    rdfs:label "rooftop" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1534 ;
+    schema:color "#BCC0C4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color3> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0449 ;
+    schema:color "#6A6F75" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color4> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0210 ;
+    schema:color "#1A2036" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color5> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0176 ;
+    schema:color "#15181C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color6> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0171 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color7> a tb:ColorSample ;
+    rdfs:label "stripe" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0170 ;
+    schema:color "#3AA6E8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color8> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0122 ;
+    schema:color "#445566" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color9> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0069 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#livery> a tb:Livery ;
+    rdfs:label "Jakarta MRT standard livery (navy and blue face, stainless with a sky-blue line; 2019-)"@en,
+        "ジャカルタ MRT の標準の塗装（紺と青の顔、ステンレスに水色の線。2019年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/jakartamrt/mrtj_jakartamrt.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color10>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/jakartamrt#color9> ;
+    tb:liveryOf wd:Q137969581 .
+

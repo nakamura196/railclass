@@ -113,6 +113,7 @@ CLASSES = {
     # Addis Ababa Light Rail: Wikidata has no item for the CNR Changchun trams (Q16250141 is the system), so a class of our
     # own; the system is linked in tools/class_lines.tsv.
     "tb-addis": (None, None, {"en": "Addis Ababa Light Rail tram (CNR Changchun)", "ja": "アディスアベバ・ライトレールの路面電車（CNR 長春）"}),
+    "Q56394168": ("Q56394168", None, None),                    # MRTJ 1000 series (Jakarta MRT, Nippon Sharyo)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -157,7 +158,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q26158722": "ICNG（新世代インターシティ）",
             "Q20926238": "TCDD E32000形",
             "Q18349836": "ダージリン・ヒマラヤ鉄道 B形",
-            "Q120801969": "コルコバード登山鉄道 4 代目電車"}
+            "Q120801969": "コルコバード登山鉄道 4 代目電車",
+            "Q56394168": "ジャカルタ MRT 1000系"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -198,6 +200,7 @@ LIVERIES = {
     "corcovado-2019": ({"en": "Trem do Corcovado livery (red with a black front mask, white lower panel; 2019-)", "ja": "コルコバード登山鉄道の塗装（赤に黒い顔、白い腰板。2019年から）"}, "Q1132053"),
     "carris-yellow": ({"en": "Carris tram livery (yellow and white)", "ja": "Carris の路面電車の塗装（黄と白）"}, "Q1045108"),
     "aalrt-green": ({"en": "Addis Ababa Light Rail East-West (green) line livery (white and green)", "ja": "アディスアベバ・ライトレール東西線（緑線）の塗装（白と緑）"}, "Q55639671"),
+    "mrtj-standard": ({"en": "Jakarta MRT standard livery (navy and blue face, stainless with a sky-blue line; 2019-)", "ja": "ジャカルタ MRT の標準の塗装（紺と青の顔、ステンレスに水色の線。2019年から）"}, "Q137969581"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -245,6 +248,7 @@ MODELS = {
     "corcovado": ("Q120801969", "corcovado-2019", None),
     "lisbon28": ("tb-lisbon28", "carris-yellow", None),
     "addis": ("tb-addis", "aalrt-green", None),
+    "jakartamrt": ("Q56394168", "mrtj-standard", None),
 }
 
 

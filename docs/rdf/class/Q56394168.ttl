@@ -1,7 +1,9 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -10,15 +12,18 @@
 
 cls:Q56394168 a skos:Concept,
         tb:VehicleClass ;
-    rdfs:label "MRTJ 1000 series"@en ;
+    rdfs:label "MRTJ 1000 series"@en,
+        "ジャカルタ MRT 1000系"@ja ;
     skos:exactMatch wd:Q56394168 ;
     skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "MRTJ 1000 series"@en ;
+    skos:prefLabel "MRTJ 1000 series"@en,
+        "ジャカルタ MRT 1000系"@ja ;
     prov:wasDerivedFrom wd:Q56394168 ;
     wdt:P1064 wd:Q1193463 ;
     wdt:P17 wd:Q252 ;
     wdt:P176 wd:Q682174 ;
     wdt:P279 wd:Q483373 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/MRTset3.jpg> ;
-    tb:has3DModel false .
+    tb:has3DModel true ;
+    schema:subjectOf mdl:jakartamrt .
 
