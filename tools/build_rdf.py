@@ -91,6 +91,9 @@ CLASSES = {
     "tb-srtred": (None, None, {"en": "SRT Red Lines Hitachi AT100", "ja": "SRTレッドラインの電車（日立 AT100）"}),
     "Q853105": ("Q853105", None, None),                       # SJ X2 (X2000 power car)
     "Q7015181": ("Q7015181", None, None),                     # New Zealand AK class carriage (TranzAlpine)
+    # PeruRail Vistadome railcar (Macosa/MAN 1984, 220-225): Wikidata has no item for it, so a class of our own; the line it
+    # runs on (Q100145062, Cusco - Machu Picchu) is linked in tools/class_lines.tsv.
+    "tb-vistadome": (None, None, {"en": "PeruRail Vistadome railcar (Macosa/MAN)", "ja": "ペルーレイルのビスタドーム気動車（Macosa/MAN）"}),
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -106,12 +109,15 @@ HAND = {
     "tb-dubaimetro": {"country": ["Q878"], "operator": ["Q499104"], "manufacturer": ["Q1592306"], "kind": ["Q483373"], "serviceEntry": [2009]},
     # Thailand; State Railway of Thailand (its subsidiary SRTET runs the line and has no item); Hitachi; EMU; opening 2021
     "tb-srtred": {"country": ["Q869"], "operator": ["Q2165702"], "manufacturer": ["Q53238"], "kind": ["Q483373"], "serviceEntry": [2021]},
+    # Peru; PeruRail (P137 of Q100145062); Macosa (today Stadler Rail Valencia); railcar. No service-entry year: built 1984, Vistadome use not dated
+    "tb-vistadome": {"country": ["Q419"], "operator": ["Q1407952"], "manufacturer": ["Q2729224"], "kind": ["Q752392"]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
     "tb-gautrain": "Country, operator and opening date (2010-06-08) from Wikidata Q1476881 (Gautrain, the system); manufacturer and type (Bombardier Electrostar EMU) from the skytrain lab note docs/notes/gautrain.md (photos and en.wikipedia 'Gautrain', read 2026-10-11).",
     "tb-dubaimetro": "Country, operator and opening date (2009-09-09) from Wikidata Q83787 (Dubai Metro, the system); manufacturer (Kinki Sharyo, cars 5001-5079) from en.wikipedia 'Dubai Metro' (rolling stock, read 2026-10-11) via the skytrain lab note docs/notes/dubaimetro.md.",
     "tb-srtred": "Country from Wikidata Q2542280 (SRT Red Lines, the system); operator (State Railway of Thailand, through its subsidiary SRT Electrified Train), manufacturer and type (Hitachi AT100 EMU) and opening year (2021) from en.wikipedia and ja.wikipedia (read 2026-10-12) via the skytrain lab note docs/notes/srtred.md.",
+    "tb-vistadome": "Country and operator from Wikidata Q100145062 (Tramo Sur Oriente del Ferrocarril del Sur, the line); builder (Macosa/MAN, 1984, cars 220-225; Macosa is today Stadler Rail Valencia, Q2729224) and type (single-cab diesel railcar) from en.wikipedia 'List of stock used by PeruRail' (read 2026-10-12) via the skytrain lab note docs/notes/vistadome.md.",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -146,6 +152,7 @@ LIVERIES = {
     "srt-red-line": ({"en": "SRT Red Lines livery (white with a red band, black front mask)", "ja": "SRTレッドラインの塗装（白に赤い帯、黒い前面）"}, "Q2165702"),
     "sj-x2000-2021": ({"en": "SJ X2000 refurbished livery (dark grey nose and swoosh, light grey, stainless; from 2021)", "ja": "SJ X2000 の更新車の塗装（濃い灰の前頭部と帯、明るい灰、ステンレス。2021年から）"}, "Q8301325"),
     "kiwirail-ak-flames": ({"en": "KiwiRail Great Journeys AK carriage livery (silver with a grey line and yellow, orange and red flames)", "ja": "キウイレイルの AK 形客車の塗装（銀に灰色の線と黄・橙・赤の炎の帯）"}, "Q956508"),
+    "perurail-vistadome": ({"en": "PeruRail livery (blue with yellow stripes, silver roof; seen in photos up to 2023)", "ja": "ペルーレイルの塗装（青に黄の線、銀の屋根。2023年の写真まで確認）"}, "Q1407952"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -179,6 +186,7 @@ MODELS = {
     "srtred": ("tb-srtred", "srt-red-line", None),
     "x2000": ("Q853105", "sj-x2000-2021", None),
     "tranzalpine": ("Q7015181", "kiwirail-ak-flames", None),
+    "vistadome": ("tb-vistadome", "perurail-vistadome", None),
 }
 
 

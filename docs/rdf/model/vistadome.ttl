@@ -1,0 +1,83 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:vistadome a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#livery> ;
+    schema:about cls:tb-vistadome ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/vistadome.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "マチュピチュへ向かう観光列車の、屋根に天窓が並ぶ気動車。青に黄の線の塗装（2023年の写真まで確認）。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 39.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ペルーレイル ビスタドーム"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/vistadome/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/vistadome.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#vistadome> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color1> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.6794 ;
+    schema:color "#264EBC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color2> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1631 ;
+    schema:color "#C4C8CC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color3> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0548 ;
+    schema:color "#F2C21A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color4> a tb:ColorSample ;
+    rdfs:label "skylight" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0397 ;
+    schema:color "#7E93A3" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color5> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0395 ;
+    schema:color "#9CA2A8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0142 ;
+    schema:color "#5E7080" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#livery> a tb:Livery ;
+    rdfs:label "PeruRail livery (blue with yellow stripes, silver roof; seen in photos up to 2023)"@en,
+        "ペルーレイルの塗装（青に黄の線、銀の屋根。2023年の写真まで確認）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/vistadome/perurail_vistadome.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color6> ;
+    tb:liveryOf wd:Q1407952 .
+

@@ -261784,6 +261784,34 @@ cls:tb-srtred a skos:Concept,
     tb:sourceSection "Wikidata (the system)" ;
     tb:useStatus "current" .
 
+cls:tb-vistadome a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "PeruRail Vistadome railcar (Macosa/MAN)"@en,
+        "ペルーレイルのビスタドーム気動車（Macosa/MAN）"@ja ;
+    dcterms:source "Country and operator from Wikidata Q100145062 (Tramo Sur Oriente del Ferrocarril del Sur, the line); builder (Macosa/MAN, 1984, cars 220-225; Macosa is today Stadler Rail Valencia, Q2729224) and type (single-cab diesel railcar) from en.wikipedia 'List of stock used by PeruRail' (read 2026-10-12) via the skytrain lab note docs/notes/vistadome.md."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "PeruRail Vistadome railcar (Macosa/MAN)"@en,
+        "ペルーレイルのビスタドーム気動車（Macosa/MAN）"@ja ;
+    wdt:P137 wd:Q1407952 ;
+    wdt:P17 wd:Q419 ;
+    wdt:P176 wd:Q2729224 ;
+    wdt:P279 wd:Q752392 ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-vistadome#line1> ;
+    tb:usedOn wd:Q100145062 ;
+    schema:subjectOf mdl:vistadome .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-vistadome#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q100145062> ;
+    skos:note "the Cusco - Machu Picchu line the Vistadome railcars run on; Wikidata has no item for the railcars"@en ;
+    tb:line wd:Q100145062 ;
+    tb:sourceSection "Wikidata (the line)" ;
+    tb:useStatus "current" .
+
 mdl:airo a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/airo#livery> ;
@@ -263767,6 +263795,79 @@ mdl:vandebharat a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/vandebharat#color7> ;
     tb:liveryOf wd:Q819425 .
 
+mdl:vistadome a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#livery> ;
+    schema:about cls:tb-vistadome ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/vistadome.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "マチュピチュへ向かう観光列車の、屋根に天窓が並ぶ気動車。青に黄の線の塗装（2023年の写真まで確認）。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 39.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ペルーレイル ビスタドーム"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/vistadome/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/vistadome.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#vistadome> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color1> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.6794 ;
+    schema:color "#264EBC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color2> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1631 ;
+    schema:color "#C4C8CC" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color3> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0548 ;
+    schema:color "#F2C21A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color4> a tb:ColorSample ;
+    rdfs:label "skylight" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0397 ;
+    schema:color "#7E93A3" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color5> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0395 ;
+    schema:color "#9CA2A8" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0142 ;
+    schema:color "#5E7080" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/vistadome#livery> a tb:Livery ;
+    rdfs:label "PeruRail livery (blue with yellow stripes, silver roof; seen in photos up to 2023)"@en,
+        "ペルーレイルの塗装（青に黄の線、銀の屋根。2023年の写真まで確認）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/vistadome/perurail_vistadome.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color6> ;
+    tb:liveryOf wd:Q1407952 .
+
 mdl:x2000 a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/x2000#livery> ;
@@ -263872,6 +263973,8 @@ mdl:x2000 a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/x2000#color8>,
         <https://nakamura196.github.io/train-bodies/rdf/model/x2000#color9> ;
     tb:liveryOf wd:Q8301325 .
+
+wd:Q100145062 rdfs:label "Tramo Sur Oriente del Ferrocarril del Sur"@en .
 
 wd:Q100456656 rdfs:label "RE 10"@en .
 
@@ -264778,6 +264881,9 @@ wd:Q139899592 rdfs:label "ICE Berlin–Oslo"@en .
 wd:Q1402593 rdfs:label "Stendaler Kleinbahn"@en .
 
 wd:Q140610574 rdfs:label "AYBAN"@en .
+
+wd:Q1407952 rdfs:label "PeruRail"@en,
+        "ペルー・レイル"@ja .
 
 wd:Q1408003 rdfs:label "Circumetnea Railway"@en .
 
@@ -270178,9 +270284,6 @@ wd:Q931127 rdfs:label "Beijing–Tianjin intercity railway"@en .
 
 wd:Q9395021 rdfs:label "Łódź Regional Tram"@en .
 
-wd:Q943 rdfs:label "yellow"@en,
-        "黄色"@ja .
-
 wd:Q96252601 rdfs:label "RB 33"@en .
 
 wd:Q96792137 rdfs:label "Siemens Desiro City"@en .
@@ -270559,9 +270662,6 @@ wd:Q4046174 rdfs:label "Pesa Twist"@en,
 
 wd:Q4102254 rdfs:label "Vagonmash"@en,
         "ワゴンマッシュ"@ja .
-
-wd:Q419 rdfs:label "Peru"@en,
-        "ペルー"@ja .
 
 wd:Q429389 rdfs:label "Bodensee-Toggenburg-Bahn"@en .
 
@@ -271034,6 +271134,9 @@ wd:Q4048297 rdfs:label "Richmond Locomotive Works"@en,
 
 wd:Q41280203 rdfs:label "Électrique Lille Roubaix Tourcoing"@en .
 
+wd:Q419 rdfs:label "Peru"@en,
+        "ペルー"@ja .
+
 wd:Q42062659 rdfs:label "コラディア・ストリーム"@ja .
 
 wd:Q4243191 rdfs:label "Kriukiv Railway Car Building Works"@en .
@@ -271251,6 +271354,9 @@ wd:Q921442 rdfs:label "Železnici na Republika Severna Makedonija Transport"@en,
 
 wd:Q933795 rdfs:label "Alstom Coradia Continental"@en,
         "コラディア・コンチネンタル"@ja .
+
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
 
 wd:Q945935 rdfs:label "Line 3"@en .
 
@@ -273421,9 +273527,6 @@ wd:Q7621999 rdfs:label "Stratford Works"@en .
 wd:Q9166501 rdfs:label "freight car"@en,
         "貨車"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q2304446 rdfs:label "South Eastern and Chatham Railway"@en,
         "サウス・イースタン・アンド・チャタム鉄道"@ja .
 
@@ -273490,8 +273593,6 @@ wd:Q1544279 rdfs:label "Great Eastern Railway"@en,
 
 wd:Q26242916 rdfs:label "0-4-4-0T"@en .
 
-wd:Q2729224 rdfs:label "Stadler Rail Valencia"@en .
-
 wd:Q3487558 rdfs:label "Société Anonyme la Métallurgique"@en .
 
 wd:Q3517951 rdfs:label "0-10-0"@en,
@@ -273505,6 +273606,9 @@ wd:Q525359 rdfs:label "Société Nationale des Chemins de Fer Luxembourgeois"@en
 
 wd:Q6842345 rdfs:label "Midland Great Western Railway"@en .
 
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
+
 wd:Q1301901 rdfs:label "Colony of Natal"@en,
         "ナタール植民地"@ja .
 
@@ -273513,6 +273617,8 @@ wd:Q153015 rdfs:label "Kingdom of Saxony"@en,
 
 wd:Q177598 rdfs:label "Rhaetian Railway"@en,
         "レーティッシュ鉄道"@ja .
+
+wd:Q2729224 rdfs:label "Stadler Rail Valencia"@en .
 
 wd:Q3303533 rdfs:label "British Rail Engineering Limited"@en,
         "ブリティッシュ・レール・エンジニアリング"@ja .
@@ -274128,14 +274234,14 @@ wd:Q83910 rdfs:label "Red Nacional de los Ferrocarriles Españoles"@en,
 wd:Q1548721 rdfs:label "open coach"@en,
         "開放座席車"@ja .
 
-wd:Q752392 rdfs:label "railcar"@en,
-        "自走客車"@ja .
-
 wd:Q7987516 rdfs:label "Western Australian Government Railways"@en,
         "西豪州国営鉄道"@ja .
 
 wd:Q36704 rdfs:label "Yugoslavia"@en,
         "ユーゴスラビア"@ja .
+
+wd:Q752392 rdfs:label "railcar"@en,
+        "自走客車"@ja .
 
 wd:Q2814117 rdfs:label "Robert Stephenson and Company"@en,
         "ロバート・スチーブンソン・アンド・カンパニー"@ja .
@@ -274155,13 +274261,13 @@ wd:Q2756040 rdfs:label "Société Alsacienne de Constructions Mécaniques"@en,
 wd:Q423 rdfs:label "North Korea"@en,
         "朝鮮民主主義人民共和国"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q393557 rdfs:label "Železničná spoločnosť Slovensko"@en,
         "鉄道企業体スロバキア"@ja .
 
 wd:Q7061278 rdfs:label "Norges Statsbaner"@en .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q476988 rdfs:label "Sharp, Stewart and Company"@en,
         "シャープ・スチュアート"@ja .
