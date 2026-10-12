@@ -50246,23 +50246,6 @@ cls:Q134530878 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q16 .
 
-cls:Q134533452 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Siemens SCB-40"@en ;
-    skos:exactMatch wd:Q134533452 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "Siemens SCB-40"@en ;
-    prov:wasDerivedFrom wd:Q134533452 ;
-    wdt:P137 wd:Q27012668 ;
-    wdt:P176 wd:Q391895 ;
-    wdt:P279 wd:Q18148915 ;
-    wdt:P729 "2018"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/BrightLine%20train%20test.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q134533452#line1> ;
-    tb:operatingCountry wd:Q30 ;
-    tb:usedOn wd:Q27012668 .
-
 cls:Q134533647 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "GE P42DC"@en ;
@@ -245484,6 +245467,26 @@ cls:Q120801969 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q134533452 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Siemens SCB-40"@en,
+        "ブライトライン SCB-40"@ja ;
+    skos:exactMatch wd:Q134533452 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Siemens SCB-40"@en,
+        "ブライトライン SCB-40"@ja ;
+    prov:wasDerivedFrom wd:Q134533452 ;
+    wdt:P137 wd:Q27012668 ;
+    wdt:P176 wd:Q391895 ;
+    wdt:P279 wd:Q18148915 ;
+    wdt:P729 "2018"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/BrightLine%20train%20test.jpg> ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q134533452#line1> ;
+    tb:operatingCountry wd:Q30 ;
+    tb:usedOn wd:Q27012668 ;
+    schema:subjectOf mdl:brightline .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q134533452#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q27012668#P3438> ;
     skos:note "wikidata"@en ;
@@ -262524,6 +262527,101 @@ mdl:ave102 a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6> ;
     tb:liveryOf wd:Q2476154 .
 
+mdl:brightline a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/brightline#livery> ;
+    schema:about cls:Q134533452 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/brightline.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 148.9 ] ;
+    schema:description "フロリダの民間特急の機関車。2022年からの黄色い塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.5 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ブライトライン SCB-40"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/brightline/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/brightline.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#brightline> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.5393 ;
+    schema:color "#E9EAE6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color2> a tb:ColorSample ;
+    rdfs:label "roofgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1851 ;
+    schema:color "#4A4E54" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color3> a tb:ColorSample ;
+    rdfs:label "byellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0909 ;
+    schema:color "#F6CF1E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color4> a tb:ColorSample ;
+    rdfs:label "midgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0633 ;
+    schema:color "#8E9194" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color5> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0361 ;
+    schema:color "#1B2233" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color6> a tb:ColorSample ;
+    rdfs:label "louvre" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0279 ;
+    schema:color "#7A6422" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color7> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0092 ;
+    schema:color "#A9ADB1" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color8> a tb:ColorSample ;
+    rdfs:label "ink" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0062 ;
+    schema:color "#4B4A58" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color9> a tb:ColorSample ;
+    rdfs:label "lightgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0051 ;
+    schema:color "#BCBEC0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#livery> a tb:Livery ;
+    rdfs:label "Brightline yellow livery (since 2022)"@en,
+        "ブライトラインの黄色の塗装（2022 年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/brightline/brightline_brightline.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q42519,
+        wd:Q47071,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color9> ;
+    tb:liveryOf wd:Q27012668 .
+
 mdl:bus49_front a schema:3DModel ;
     tb:galleryGroup "bus" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/bus49_front#livery> ;
@@ -273243,9 +273341,6 @@ wd:Q26836339 rdfs:label "Siemens Mireo"@en,
 wd:Q2693051 rdfs:label "rotary snowplow"@en,
         "ロータリー車"@ja .
 
-wd:Q27012668 rdfs:label "Brightline"@en,
-        "ブライトライン"@ja .
-
 wd:Q2707736 rdfs:label "West Anglia Great Northern"@en,
         "ウェストアングリア・グレートノーザン"@ja .
 
@@ -273731,6 +273826,9 @@ wd:Q266280 rdfs:label "WESTbahn"@en,
         "ウェストバーン鉄道"@ja .
 
 wd:Q2689944 rdfs:label "Cercanías Valencia"@en .
+
+wd:Q27012668 rdfs:label "Brightline"@en,
+        "ブライトライン"@ja .
 
 wd:Q27186048 rdfs:label "Upper Austria S-Bahn"@en .
 
@@ -275265,9 +275363,6 @@ wd:Q34266 rdfs:label "Russian Empire"@en,
 wd:Q4647719 rdfs:label "A. E. Goodwin"@en,
         "A.E.グッドウィン"@ja .
 
-wd:Q47071 rdfs:label "brown"@en,
-        "茶色"@ja .
-
 wd:Q5572075 rdfs:label "Gloucester Railway Carriage and Wagon Company"@en,
         "グロースター客貨車製造"@ja .
 
@@ -275388,9 +275483,6 @@ wd:Q883462 rdfs:label "Rügensche Kleinbahn"@en .
 
 wd:Q929645 rdfs:label "Line 7"@en .
 
-wd:Q943 rdfs:label "yellow"@en,
-        "黄色"@ja .
-
 wd:Q96474187 rdfs:label "RB 23"@en .
 
 wd:Q98104051 rdfs:label "RE 25"@en .
@@ -275443,6 +275535,9 @@ wd:Q452140 rdfs:label "DB Fernverkehr"@en,
         "DB長距離交通"@ja .
 
 wd:Q4681188 rdfs:label "Addington Railway Workshops"@en .
+
+wd:Q47071 rdfs:label "brown"@en,
+        "茶色"@ja .
 
 wd:Q473921 rdfs:label "UIC-Z car"@en .
 
@@ -275544,6 +275639,9 @@ wd:Q83878 rdfs:label "Serbian Railways"@en,
         "セルビア鉄道"@ja .
 
 wd:Q917515 rdfs:label "Kambarka Engineering Works"@en .
+
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
 
 wd:Q11137489 rdfs:label "Kisha Seizo"@en,
         "汽車製造"@ja .
@@ -276636,9 +276734,6 @@ wd:Q83824 rdfs:label "DSB"@en,
 wd:Q13402959 rdfs:label "high-speed train"@en,
         "高速列車"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q303212 rdfs:label "Elsässische Maschinenbau-Gesellschaft Grafenstaden"@en,
         "グラフェンスタデン・アルザス工業"@ja .
 
@@ -276653,6 +276748,9 @@ wd:Q2449525 rdfs:label "Transnet Freight Rail"@en,
 
 wd:Q5261524 rdfs:label "Derby Works"@en,
         "ダービー鉄道製作所"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q2476154 rdfs:label "Renfe Operadora"@en,
         "レンフェ"@ja .
@@ -277165,9 +277263,6 @@ wd:Q214 rdfs:label "Slovakia"@en,
 wd:Q7318 rdfs:label "Nazi Germany"@en,
         "ナチス・ドイツ"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q871174 rdfs:label "Československé státní dráhy"@en,
         "チェコスロバキア国鉄"@ja .
 
@@ -277176,6 +277271,9 @@ wd:Q568501 rdfs:label "Electro-Motive Diesel"@en,
 
 wd:Q1043481 rdfs:label "4-6-2"@en,
         "4-6-2"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q159 rdfs:label "Russia"@en,
         "ロシア"@ja .

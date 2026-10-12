@@ -1,8 +1,10 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -11,20 +13,23 @@
 
 cls:Q134533452 a skos:Concept,
         tb:VehicleClass ;
-    rdfs:label "Siemens SCB-40"@en ;
+    rdfs:label "Siemens SCB-40"@en,
+        "ブライトライン SCB-40"@ja ;
     skos:exactMatch wd:Q134533452 ;
     skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "Siemens SCB-40"@en ;
+    skos:prefLabel "Siemens SCB-40"@en,
+        "ブライトライン SCB-40"@ja ;
     prov:wasDerivedFrom wd:Q134533452 ;
     wdt:P137 wd:Q27012668 ;
     wdt:P176 wd:Q391895 ;
     wdt:P279 wd:Q18148915 ;
     wdt:P729 "2018"^^xsd:gYear ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/BrightLine%20train%20test.jpg> ;
-    tb:has3DModel false ;
+    tb:has3DModel true ;
     tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q134533452#line1> ;
     tb:operatingCountry wd:Q30 ;
-    tb:usedOn wd:Q27012668 .
+    tb:usedOn wd:Q27012668 ;
+    schema:subjectOf mdl:brightline .
 
 <https://nakamura196.github.io/train-bodies/rdf/class/Q134533452#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q27012668#P3438> ;

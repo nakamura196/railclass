@@ -1,0 +1,105 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:brightline a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/brightline#livery> ;
+    schema:about cls:Q134533452 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/brightline.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 148.9 ] ;
+    schema:description "フロリダの民間特急の機関車。2022年からの黄色い塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.5 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ブライトライン SCB-40"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/brightline/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/brightline.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#brightline> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.5393 ;
+    schema:color "#E9EAE6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color2> a tb:ColorSample ;
+    rdfs:label "roofgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1851 ;
+    schema:color "#4A4E54" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color3> a tb:ColorSample ;
+    rdfs:label "byellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0909 ;
+    schema:color "#F6CF1E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color4> a tb:ColorSample ;
+    rdfs:label "midgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0633 ;
+    schema:color "#8E9194" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color5> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0361 ;
+    schema:color "#1B2233" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color6> a tb:ColorSample ;
+    rdfs:label "louvre" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0279 ;
+    schema:color "#7A6422" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color7> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0092 ;
+    schema:color "#A9ADB1" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color8> a tb:ColorSample ;
+    rdfs:label "ink" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0062 ;
+    schema:color "#4B4A58" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#color9> a tb:ColorSample ;
+    rdfs:label "lightgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0051 ;
+    schema:color "#BCBEC0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/brightline#livery> a tb:Livery ;
+    rdfs:label "Brightline yellow livery (since 2022)"@en,
+        "ブライトラインの黄色の塗装（2022 年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/brightline/brightline_brightline.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q42519,
+        wd:Q47071,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/brightline#color9> ;
+    tb:liveryOf wd:Q27012668 .
+
