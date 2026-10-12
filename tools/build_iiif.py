@@ -20,6 +20,7 @@ import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://railclass.ldas.jp/"
+DL_BASE = "https://github.com/nakamura196/railclass/releases/download/downloads/"   # same as tools/upload_downloads.py
 CONTEXT = "http://iiif.io/api/presentation/4/context.json"
 PROVIDER = {"id": "https://github.com/nakamura196", "type": "Agent",
             "label": {"ja": ["中村 覚"], "en": ["Satoru Nakamura"]}}
@@ -175,7 +176,7 @@ def build(model):
                   "label": {"ja": ["glTF（色つき）"], "en": ["glTF binary (colour)"]},
                   "fileSize": os.path.getsize(os.path.join(ROOT, "docs", "models", model + ".glb"))}]
     for f in formats["files"]:
-        rendering.append({"id": f"{BASE}downloads/{model}/{f['file']}",
+        rendering.append({"id": DL_BASE + f["file"],   # a GitHub release asset, not on Pages (tools/upload_downloads.py)
                           "type": "Dataset" if f["key"] == "mtl" else "Model",   # the mtl holds only the colours of the obj
                           "format": f["format"], "label": f["label"], "fileSize": f["bytes"]})
 

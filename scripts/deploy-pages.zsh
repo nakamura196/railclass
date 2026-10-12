@@ -5,7 +5,7 @@
 #
 # Prerequisites: run from the main checkout with main up to date and docs/ regenerated; npm ci done in web/.
 # Usage: zsh scripts/deploy-pages.zsh
-# What it does: npm run build in web/, checks the result (npm test; nothing is published when it fails), keeps downloads/ (not in git, made by ~/git/3d/skytrain/tools/export_formats.py;
+# What it does: npm run build in web/, checks the result (npm test; nothing is published when it fails), uploads the download files (not in git, made by ~/git/3d/skytrain/tools/export_formats.py) to the GitHub release "downloads" and leaves them out of the Pages build;
 # npm test fails when a model's files are missing),
 # adds .nojekyll (so _astro/ is served), and force-pushes web/dist as one commit to origin/gh-pages.
 # The branch keeps no history: it is a build output, and the GLBs would otherwise pile up in the repository.
@@ -18,8 +18,10 @@ if [[ $branch != main ]]; then print -u2 "deploy-pages: run on main (now on $bra
 rev=$(git rev-parse --short HEAD)
 remote=$(git remote get-url origin)
 
+python3 tools/upload_downloads.py   # STL/OBJ/MTL/USDZ go to the GitHub release "downloads", only the changed ones
 (cd web && npm run build && npm test)   # npm test: the built pages against the data (web/scripts/check-dist.mjs); stops here on a failure
 touch web/dist/.nojekyll
+rm -rf web/dist/downloads   # on the release instead (the Pages site has a 1 GB limit); sync-public still copies them for local previews
 print railclass.ldas.jp > web/dist/CNAME   # custom domain; public/ is wiped by sync-public, so write it here
 
 tmp=$(mktemp -d)

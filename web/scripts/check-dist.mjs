@@ -87,13 +87,12 @@ for (const pre of ["", "en/"]) for (const m of models) {
   const c = classes.find(c => modelsOf(c).includes(m));
   if (c && !h.includes(`rdf/class/${c}.html#${m}`)) fail(p, `no link to its class page ${c}`);
   for (const f of [`rdf/model/${m}.ttl`, `rdf/model/${m}.jsonld`, `models/${m}.glb`]) if (!h.includes(`/${f}"`)) fail(p, `no link to ${f}`);
-  // ... and its download files, one per format, which must be in the build (downloads/ is not in git: made locally)
+  // ... and its download files, one per format, linked on the GitHub release (tools/upload_downloads.py puts them there)
   const fj = `${docs}downloads/${m}/formats.json`;
   if (!existsSync(fj)) fail(p, `no docs/downloads/${m}/formats.json (run export_formats.py)`);
   else for (const x of JSON.parse(readFileSync(fj, "utf8")).files) {
-    const f = `downloads/${m}/${x.file}`;
-    if (!h.includes(`/${f}"`)) fail(p, `no link to ${f}`);
-    if (!existsSync(dist + f)) fail(p, `${f} not in the build`);
+    const f = `https://github.com/nakamura196/railclass/releases/download/downloads/${x.file}`;
+    if (!h.includes(`"${f}"`)) fail(p, `no link to ${f}`);
   }
   if (/<pre>/.test(h)) fail(p, "still the page build_rdf.py wrote");
 }

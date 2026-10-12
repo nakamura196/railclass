@@ -187,7 +187,7 @@ const mapped = lines.filter(l => l.map);
             <a href={file(`models/${m.id}.${M.ext}`)} download>{mods.length > 1 ? `${T.glb} (${m.title})` : T.glb}</a>
           ))}
           {mods.flatMap(m => downloads(m.id, lang).map(d => (
-            <a href={file(d.href)} download title={d.label}>{mods.length > 1 ? `${d.key.toUpperCase()} (${m.title})` : d.key.toUpperCase()}</a>
+            <a href={d.href} download title={d.label}>{mods.length > 1 ? `${d.key.toUpperCase()} (${m.title})` : d.key.toUpperCase()}</a>
           )))}
         </div>
         {mods.some(m => downloads(m.id, lang).length) && <p class="dlnote">{ui.model.objNote} {ui.model.meshNote}</p>}

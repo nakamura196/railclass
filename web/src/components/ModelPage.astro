@@ -53,7 +53,7 @@ const dl = downloads(id, lang);
         <h2>{T.download}</h2>
         <ul class="dl">
           <li><a href={file(`models/${id}.${M.ext}`)} download>{T.glb}</a> <span>{fmtBytes(docsBytes(`models/${id}.${M.ext}`))}</span></li>
-          {dl.map(d => <li><a href={file(d.href)} download>{d.label}</a> <span>{fmtBytes(d.bytes)}</span></li>)}
+          {dl.map(d => <li><a href={d.href} download>{d.label}</a> <span>{fmtBytes(d.bytes)}</span></li>)}
         </ul>
         {dl.some(d => d.key === "mtl") && <p class="note">{T.objNote}</p>}
         <p class="note">{T.meshNote}</p>

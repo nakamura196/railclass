@@ -79,12 +79,14 @@ export const hasManifest = (id: string) => existsSync(docsPath(`iiif/${id}/manif
 
 // The download files of a model, one per format (docs/downloads/<id>/formats.json, by ~/git/3d/skytrain/tools/export_formats.py).
 // The GLB is not among them: it is docs/models/<id>.glb, linked on its own.
+// The files are assets of the GitHub release "downloads" (tools/upload_downloads.py), not on Pages: href is absolute.
+export const DL_BASE = "https://github.com/nakamura196/railclass/releases/download/downloads/";
 export type Download = { key: string; label: string; href: string; bytes: number };
 export function downloads(id: string, lang: Lang): Download[] {
   const p = docsPath(`downloads/${id}/formats.json`);
   if (!existsSync(p)) return [];
   return JSON.parse(readFileSync(p, "utf8")).files.map((f: any) => ({
-    key: f.key, label: (f.label[lang] ?? f.label.en)[0], href: `downloads/${id}/${f.file}`, bytes: f.bytes }));
+    key: f.key, label: (f.label[lang] ?? f.label.en)[0], href: DL_BASE + f.file, bytes: f.bytes }));
 }
 export const docsBytes = (p: string) => statSync(docsPath(p)).size;
 export const fmtBytes = (n: number) => n >= 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(n / 1e3))} KB`;
