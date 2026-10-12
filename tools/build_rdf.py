@@ -106,6 +106,7 @@ CLASSES = {
     "Q18349836": ("Q18349836", None, None),                    # DHR B class (0-4-0ST steam)
     "Q26724167": ("Q26724167", None, None),                    # Avelia Liberty (new Acela, Alstom)
     "Q1080162": ("Q1080162", None, None),                     # British Rail Class 43 (HST power car)
+    "Q120801969": ("Q120801969", None, None),                   # Corcovado rack railcars, 4th generation (Stadler Bhe 4/8)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -143,7 +144,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q289090": "トランスラピッド 08", "Q18331751": "ED250 ペンドリーノ",
             "Q26158722": "ICNG（新世代インターシティ）",
             "Q20926238": "TCDD E32000形",
-            "Q18349836": "ダージリン・ヒマラヤ鉄道 B形"}
+            "Q18349836": "ダージリン・ヒマラヤ鉄道 B形",
+            "Q120801969": "コルコバード登山鉄道 4 代目電車"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -181,6 +183,7 @@ LIVERIES = {
     "dhr-blue": ({"en": "Darjeeling Himalayan Railway blue livery (blue tank, bunker and cab with white lining)", "ja": "ダージリン・ヒマラヤ鉄道の青の塗装（青いタンク・炭庫・運転室に白線）"}, "Q463874"),
     "amtrak-acela-2025": ({"en": "Acela livery (white and silver with Acela blue and a red band; 2025-)", "ja": "アセラの塗装（白と銀にアセラの青と赤い帯。2025年から）"}, "Q23239"),
     "scotrail-inter7city": ({"en": "ScotRail Inter7City livery (navy with a yellow front and a city skyline)", "ja": "スコットレールの Inter7City の塗装（紺に黄色の顔、町並みの絵）"}, "Q107980329"),
+    "corcovado-2019": ({"en": "Trem do Corcovado livery (red with a black front mask, white lower panel; 2019-)", "ja": "コルコバード登山鉄道の塗装（赤に黒い顔、白い腰板。2019年から）"}, "Q1132053"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -225,6 +228,7 @@ MODELS = {
     "darjeeling": ("Q18349836", "dhr-blue", None),
     "acela": ("Q26724167", "amtrak-acela-2025", None),
     "ic125": ("Q1080162", "scotrail-inter7city", None),
+    "corcovado": ("Q120801969", "corcovado-2019", None),
 }
 
 

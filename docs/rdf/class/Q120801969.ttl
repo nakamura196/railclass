@@ -1,8 +1,10 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -11,10 +13,12 @@
 
 cls:Q120801969 a skos:Concept,
         tb:VehicleClass ;
-    rdfs:label "Corcovado Rack railcars, 4th generation"@en ;
+    rdfs:label "Corcovado Rack railcars, 4th generation"@en,
+        "コルコバード登山鉄道 4 代目電車"@ja ;
     skos:exactMatch wd:Q120801969 ;
     skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "Corcovado Rack railcars, 4th generation"@en ;
+    skos:prefLabel "Corcovado Rack railcars, 4th generation"@en,
+        "コルコバード登山鉄道 4 代目電車"@ja ;
     prov:wasDerivedFrom wd:Q120801969 ;
     wdt:P1064 wd:Q24609 ;
     wdt:P137 wd:Q1132053 ;
@@ -22,10 +26,11 @@ cls:Q120801969 a skos:Concept,
     wdt:P279 wd:Q50398146 ;
     wdt:P729 "2019"^^xsd:gYear ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Novo%20Trem%20do%20Corcovado.jpg> ;
-    tb:has3DModel false ;
+    tb:has3DModel true ;
     tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q120801969#line1> ;
     tb:operatingCountry wd:Q155 ;
-    tb:usedOn wd:Q1132053 .
+    tb:usedOn wd:Q1132053 ;
+    schema:subjectOf mdl:corcovado .
 
 <https://nakamura196.github.io/train-bodies/rdf/class/Q120801969#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1132053#P3438> ;
