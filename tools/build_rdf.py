@@ -103,6 +103,7 @@ CLASSES = {
     "Q104216528": ("Q104216528", None, None),                   # KTX-Eum (Korail EMU-260, Hyundai Rotem)
     "Q2284320": ("Q2284320", None, None),                     # Siemens Inspiro (family; no item for the Riyadh trains)
     "Q706345": ("Q706345", None, None),                       # IC3 (DSB MF, ABB Scandia)
+    "Q18349836": ("Q18349836", None, None),                    # DHR B class (0-4-0ST steam)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -139,7 +140,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q140611223": "Amtrak Airo", "Q137921671": "New Flyer XD60",
             "Q289090": "トランスラピッド 08", "Q18331751": "ED250 ペンドリーノ",
             "Q26158722": "ICNG（新世代インターシティ）",
-            "Q20926238": "TCDD E32000形"}
+            "Q20926238": "TCDD E32000形",
+            "Q18349836": "ダージリン・ヒマラヤ鉄道 B形"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -174,6 +176,7 @@ LIVERIES = {
     "korail-ktx-eum": ({"en": "KTX-Eum livery (steel blue with a charcoal window band and a champagne line)", "ja": "KTX-이음の塗装（青い車体に濃い灰の窓帯と金色の細い線）"}, "Q18169"),
     "riyadh-metro-line1": ({"en": "Riyadh Metro Line 1 (Blue Line) livery (white lower side, black window band, blue band)", "ja": "リヤド・メトロ 1 号線（ブルーライン）の塗装（白い下回り、黒い窓帯、青い帯）"}, "Q12194736"),   # Royal Commission for Riyadh City (owner)
     "dsb-ic3": ({"en": "DSB livery (silver aluminium with a navy window band)", "ja": "デンマーク国鉄の塗装（銀のアルミに紺の窓帯）"}, "Q83824"),
+    "dhr-blue": ({"en": "Darjeeling Himalayan Railway blue livery (blue tank, bunker and cab with white lining)", "ja": "ダージリン・ヒマラヤ鉄道の青の塗装（青いタンク・炭庫・運転室に白線）"}, "Q463874"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -215,6 +218,7 @@ MODELS = {
     "ktxeum": ("Q104216528", "korail-ktx-eum", None),
     "riyadh": ("Q2284320", "riyadh-metro-line1", None),
     "ic3": ("Q706345", "dsb-ic3", None),
+    "darjeeling": ("Q18349836", "dhr-blue", None),
 }
 
 

@@ -87645,28 +87645,6 @@ cls:Q18347872 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q222 .
 
-cls:Q18349836 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "DHR B Class"@en ;
-    skos:exactMatch wd:Q18349836 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "DHR B Class"@en ;
-    prov:wasDerivedFrom wd:Q18349836 ;
-    wdt:P1064 wd:Q52330097 ;
-    wdt:P137 wd:Q463874 ;
-    wdt:P17 wd:Q129286,
-        wd:Q668 ;
-    wdt:P176 wd:Q476988,
-        wd:Q751494,
-        wd:Q804868 ;
-    wdt:P279 wd:Q3461107,
-        wd:Q81923759 ;
-    wdt:P2978 wd:Q27943246 ;
-    wdt:P729 "1889"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/DHR%20Siliguri%20Shed%2005-02-18%2011.jpeg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q668 .
-
 cls:Q18357225 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Glasgows Tram 1245"@en ;
@@ -247193,6 +247171,31 @@ cls:Q18331751 a skos:Concept,
     tb:operatingCountry wd:Q36 ;
     schema:subjectOf mdl:ed250 .
 
+cls:Q18349836 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "DHR B Class"@en,
+        "ダージリン・ヒマラヤ鉄道 B形"@ja ;
+    skos:exactMatch wd:Q18349836 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "DHR B Class"@en,
+        "ダージリン・ヒマラヤ鉄道 B形"@ja ;
+    prov:wasDerivedFrom wd:Q18349836 ;
+    wdt:P1064 wd:Q52330097 ;
+    wdt:P137 wd:Q463874 ;
+    wdt:P17 wd:Q129286,
+        wd:Q668 ;
+    wdt:P176 wd:Q476988,
+        wd:Q751494,
+        wd:Q804868 ;
+    wdt:P279 wd:Q3461107,
+        wd:Q81923759 ;
+    wdt:P2978 wd:Q27943246 ;
+    wdt:P729 "1889"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/DHR%20Siliguri%20Shed%2005-02-18%2011.jpeg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q668 ;
+    schema:subjectOf mdl:darjeeling .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q18381093#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1431592#P3438> ;
     skos:note "wikidata"@en ;
@@ -262381,6 +262384,79 @@ mdl:class395 a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/class395#color8> ;
     tb:liveryOf wd:Q1696490 .
 
+mdl:darjeeling a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#livery> ;
+    schema:about cls:Q18349836 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/darjeeling.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "世界遺産「トイ・トレイン」の小さな蒸気機関車。青に白線の塗装（782号機）。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 46.3 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ダージリン・ヒマラヤ鉄道 B形"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/darjeeling/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/darjeeling.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#darjeeling> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color1> a tb:ColorSample ;
+    rdfs:label "iron" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7464 ;
+    schema:color "#2C2E32" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color2> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.1325 ;
+    schema:color "#1E559A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color3> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0423 ;
+    schema:color "#A82A2A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color4> a tb:ColorSample ;
+    rdfs:label "dark" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0395 ;
+    schema:color "#0E0F12" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color5> a tb:ColorSample ;
+    rdfs:label "wheel" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0092 ;
+    schema:color "#8C2E26" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color6> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0088 ;
+    schema:color "#A8ADB2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#livery> a tb:Livery ;
+    rdfs:label "Darjeeling Himalayan Railway blue livery (blue tank, bunker and cab with white lining)"@en,
+        "ダージリン・ヒマラヤ鉄道の青の塗装（青いタンク・炭庫・運転室に白線）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/darjeeling/dhr_darjeeling.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color6> ;
+    tb:liveryOf wd:Q463874 .
+
 mdl:dubaimetro a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#livery> ;
@@ -269273,9 +269349,6 @@ wd:Q4637075 rdfs:label "4-2-2-0"@en .
 
 wd:Q4637093 rdfs:label "4-8-4+4-8-4"@en .
 
-wd:Q463874 rdfs:label "Darjeeling Himalayan Railway"@en,
-        "ダージリン・ヒマラヤ鉄道"@ja .
-
 wd:Q4652278 rdfs:label "ALCO DL531"@en .
 
 wd:Q4652293 rdfs:label "ALCO RSC-3"@en,
@@ -270485,6 +270558,9 @@ wd:Q4596827 rdfs:label "2-2-2-0"@en .
 wd:Q4596847 rdfs:label "2-8-2+2-8-2"@en .
 
 wd:Q46048144 rdfs:label "EuroCity-Express"@en .
+
+wd:Q463874 rdfs:label "Darjeeling Himalayan Railway"@en,
+        "ダージリン・ヒマラヤ鉄道"@ja .
 
 wd:Q4652277 rdfs:label "ALCO DL500B"@en .
 
@@ -273595,9 +273671,6 @@ wd:Q28455463 rdfs:label "electro-diesel multiple unit"@en .
 
 wd:Q2990395 rdfs:label "Compañía de los Caminos de Hierro del Norte de España"@en .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q3487579 rdfs:label "Société J. F Cail & Cie"@en .
 
 wd:Q384011 rdfs:label "Japanese National Railways"@en,
@@ -273768,6 +273841,9 @@ wd:Q1640765 rdfs:label "Small locomotive"@en,
 wd:Q221186 rdfs:label "レギオジェット"@ja .
 
 wd:Q26162489 rdfs:label "Co′Co′+Co′Co′"@en .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q3707399 rdfs:label "railbus"@en,
         "レールバス"@ja .
@@ -274263,9 +274339,6 @@ wd:Q378181 rdfs:label "Chemins de fer du Midi"@en,
 wd:Q7885459 rdfs:label "Union Carriage & Wagon"@en,
         "ユニオン・キャリッジ・アンド・ワゴン"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q3077673 rdfs:label "0-4-4T"@en,
         "車輪配置 0-4-4T"@ja .
 
@@ -274282,6 +274355,9 @@ wd:Q833 rdfs:label "Malaysia"@en,
 
 wd:Q218671 rdfs:label "GE Transportation"@en,
         "GEトランスポーテーション・システム"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q26208546 rdfs:label "0-6-4T"@en .
 
@@ -274427,9 +274503,6 @@ wd:Q4931035 rdfs:label "Bo′Bo′Bo′"@en .
 wd:Q840960 rdfs:label "CRRC Zhuzhou Locomotive Co., Ltd."@en,
         "中車株洲電力機車有限公司"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1128687 rdfs:label "Fablok"@en .
 
 wd:Q143609 rdfs:label "Lima Locomotive Works"@en,
@@ -274459,6 +274532,9 @@ wd:Q864803 rdfs:label "Korean State Railway"@en,
 
 wd:Q10298933 rdfs:label "Hunslet Engine Company"@en,
         "ハンスレット・エンジン"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q131964 rdfs:label "Austrian Empire"@en,
         "オーストリア帝国"@ja .
@@ -274959,9 +275035,6 @@ wd:Q749311 rdfs:label "tender"@en,
 wd:Q155 rdfs:label "Brazil"@en,
         "ブラジル"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q477493 rdfs:label "Lokomotivfabrik Floridsdorf"@en .
 
 wd:Q524255 rdfs:label "SNCB/NMBS"@en,
@@ -274969,6 +275042,9 @@ wd:Q524255 rdfs:label "SNCB/NMBS"@en,
 
 wd:Q16936947 rdfs:label "electric rail motor coach"@en,
         "電動車"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q865 rdfs:label "Taiwan"@en,
         "中華民国"@ja .

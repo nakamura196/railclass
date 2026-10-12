@@ -1,7 +1,9 @@
 @prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -10,10 +12,12 @@
 
 cls:Q18349836 a skos:Concept,
         tb:VehicleClass ;
-    rdfs:label "DHR B Class"@en ;
+    rdfs:label "DHR B Class"@en,
+        "ダージリン・ヒマラヤ鉄道 B形"@ja ;
     skos:exactMatch wd:Q18349836 ;
     skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "DHR B Class"@en ;
+    skos:prefLabel "DHR B Class"@en,
+        "ダージリン・ヒマラヤ鉄道 B形"@ja ;
     prov:wasDerivedFrom wd:Q18349836 ;
     wdt:P1064 wd:Q52330097 ;
     wdt:P137 wd:Q463874 ;
@@ -27,6 +31,7 @@ cls:Q18349836 a skos:Concept,
     wdt:P2978 wd:Q27943246 ;
     wdt:P729 "1889"^^xsd:gYear ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/DHR%20Siliguri%20Shed%2005-02-18%2011.jpeg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q668 .
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q668 ;
+    schema:subjectOf mdl:darjeeling .
 

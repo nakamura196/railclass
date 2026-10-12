@@ -1,0 +1,83 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:darjeeling a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#livery> ;
+    schema:about cls:Q18349836 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/darjeeling.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "世界遺産「トイ・トレイン」の小さな蒸気機関車。青に白線の塗装（782号機）。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 46.3 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ダージリン・ヒマラヤ鉄道 B形"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/darjeeling/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/darjeeling.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#darjeeling> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color1> a tb:ColorSample ;
+    rdfs:label "iron" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.7464 ;
+    schema:color "#2C2E32" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color2> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.1325 ;
+    schema:color "#1E559A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color3> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0423 ;
+    schema:color "#A82A2A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color4> a tb:ColorSample ;
+    rdfs:label "dark" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0395 ;
+    schema:color "#0E0F12" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color5> a tb:ColorSample ;
+    rdfs:label "wheel" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.0092 ;
+    schema:color "#8C2E26" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color6> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0088 ;
+    schema:color "#A8ADB2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#livery> a tb:Livery ;
+    rdfs:label "Darjeeling Himalayan Railway blue livery (blue tank, bunker and cab with white lining)"@en,
+        "ダージリン・ヒマラヤ鉄道の青の塗装（青いタンク・炭庫・運転室に白線）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/darjeeling/dhr_darjeeling.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/darjeeling#color6> ;
+    tb:liveryOf wd:Q463874 .
+
