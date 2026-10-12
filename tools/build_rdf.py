@@ -96,6 +96,9 @@ CLASSES = {
     "tb-vistadome": (None, None, {"en": "PeruRail Vistadome railcar (Macosa/MAN)", "ja": "ペルーレイルのビスタドーム気動車（Macosa/MAN）"}),
     "Q10871152": ("Q10871152", None, None),                    # China Railway DF8B (the Kenyan SGR export version has no item of its own)
     "Q26158722": ("Q26158722", None, None),                    # Intercity Nieuwe Generatie (NS ICNG, Alstom Coradia Stream)
+    # Tanzania SGR E6800: Wikidata has no item for the Hyundai Rotem locomotive (Q60744141 is the railway), so a class of our
+    # own; the railway is linked in tools/class_lines.tsv. Not under TCDD E68000 (Q28444692), its design ancestor: another class.
+    "tb-tanzania": (None, None, {"en": "Tanzania SGR class E6800 electric locomotive", "ja": "タンザニア SGR E6800 形電気機関車"}),
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -113,6 +116,8 @@ HAND = {
     "tb-srtred": {"country": ["Q869"], "operator": ["Q2165702"], "manufacturer": ["Q53238"], "kind": ["Q483373"], "serviceEntry": [2021]},
     # Peru; PeruRail (P137 of Q100145062); Macosa (today Stadler Rail Valencia); railcar. No service-entry year: built 1984, Vistadome use not dated
     "tb-vistadome": {"country": ["Q419"], "operator": ["Q1407952"], "manufacturer": ["Q2729224"], "kind": ["Q752392"]},
+    # Tanzania; Tanzania Railways Corporation (P137 of Q60744141); Hyundai Rotem; electric locomotive; passenger service from 2024
+    "tb-tanzania": {"country": ["Q924"], "operator": ["Q2393276"], "manufacturer": ["Q152517"], "kind": ["Q625151"], "serviceEntry": [2024]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
@@ -120,6 +125,7 @@ HAND_SOURCE = {
     "tb-dubaimetro": "Country, operator and opening date (2009-09-09) from Wikidata Q83787 (Dubai Metro, the system); manufacturer (Kinki Sharyo, cars 5001-5079) from en.wikipedia 'Dubai Metro' (rolling stock, read 2026-10-11) via the skytrain lab note docs/notes/dubaimetro.md.",
     "tb-srtred": "Country from Wikidata Q2542280 (SRT Red Lines, the system); operator (State Railway of Thailand, through its subsidiary SRT Electrified Train), manufacturer and type (Hitachi AT100 EMU) and opening year (2021) from en.wikipedia and ja.wikipedia (read 2026-10-12) via the skytrain lab note docs/notes/srtred.md.",
     "tb-vistadome": "Country and operator from Wikidata Q100145062 (Tramo Sur Oriente del Ferrocarril del Sur, the line); builder (Macosa/MAN, 1984, cars 220-225; Macosa is today Stadler Rail Valencia, Q2729224) and type (single-cab diesel railcar) from en.wikipedia 'List of stock used by PeruRail' (read 2026-10-12) via the skytrain lab note docs/notes/vistadome.md.",
+    "tb-tanzania": "Country and operator from Wikidata Q60744141 (Tanzania Standard Gauge Railway); manufacturer and type (Hyundai Rotem electric locomotive, class E6800) from Railvolution 'New locomotives for Tanzania'; passenger service from 2024-06-14 (Railway Journal, The Citizen), read 2026-10-12 via the skytrain lab note docs/notes/tanzania.md.",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -158,6 +164,7 @@ LIVERIES = {
     "perurail-vistadome": ({"en": "PeruRail livery (blue with yellow stripes, silver roof; seen in photos up to 2023)", "ja": "ペルーレイルの塗装（青に黄の線、銀の屋根。2023年の写真まで確認）"}, "Q1407952"),
     "kr-sgr-df8b": ({"en": "Kenya Railways SGR livery (red cabs and roof, white body, orange and yellow lines, Kenyan flag)", "ja": "ケニア鉄道 SGR の塗装（赤い運転室と屋根、白い車体、オレンジと黄色の線、ケニアの国旗）"}, "Q1663639"),
     "ns-icng": ({"en": "NS livery (yellow and blue, dark grey round the cab)", "ja": "オランダ鉄道の塗装（黄と青、運転室のまわりは濃い灰）"}, "Q23076"),
+    "trc-sgr": ({"en": "Tanzania Railways Corporation SGR livery (cream with orange arches, maroon lower body)", "ja": "タンザニア鉄道公社 SGR の塗装（クリームにオレンジの弧、えんじの裾）"}, "Q2393276"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -194,6 +201,7 @@ MODELS = {
     "vistadome": ("tb-vistadome", "perurail-vistadome", None),
     "madaraka": ("Q10871152", "kr-sgr-df8b", None),
     "icng": ("Q26158722", "ns-icng", None),
+    "tanzania": ("tb-tanzania", "trc-sgr", None),
 }
 
 

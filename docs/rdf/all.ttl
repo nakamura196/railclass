@@ -241810,9 +241810,6 @@ wd:Q2389196 rdfs:label "Takargo Rail"@en,
 wd:Q23925184 rdfs:label "battery electric bus"@en,
         "二次電池式電気バス"@ja .
 
-wd:Q2393276 rdfs:label "Tanzania Railways Corporation"@en,
-        "タンザニア鉄道会社"@ja .
-
 wd:Q23979144 rdfs:label "Bane NOR"@en .
 
 wd:Q24005025 rdfs:label "Société Anonyme des Ateliers Gilly"@en .
@@ -261791,6 +261788,36 @@ cls:tb-srtred a skos:Concept,
     tb:sourceSection "Wikidata (the system)" ;
     tb:useStatus "current" .
 
+cls:tb-tanzania a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Tanzania SGR class E6800 electric locomotive"@en,
+        "タンザニア SGR E6800 形電気機関車"@ja ;
+    dcterms:source "Country and operator from Wikidata Q60744141 (Tanzania Standard Gauge Railway); manufacturer and type (Hyundai Rotem electric locomotive, class E6800) from Railvolution 'New locomotives for Tanzania'; passenger service from 2024-06-14 (Railway Journal, The Citizen), read 2026-10-12 via the skytrain lab note docs/notes/tanzania.md."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Tanzania SGR class E6800 electric locomotive"@en,
+        "タンザニア SGR E6800 形電気機関車"@ja ;
+    wdt:P137 wd:Q2393276 ;
+    wdt:P17 wd:Q924 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q625151 ;
+    wdt:P729 "2024"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-tanzania#line1> ;
+    tb:usedOn wd:Q60744141 ;
+    schema:subjectOf mdl:tanzania .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-tanzania#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q60744141> ;
+    skos:note "the Tanzania Standard Gauge Railway itself; Wikidata has no item for its Hyundai Rotem E6800 locomotives"@en ;
+    tb:line wd:Q60744141 ;
+    tb:sourceSection "Wikidata (the railway)" ;
+    tb:useStatus "current" .
+
 cls:tb-vistadome a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "PeruRail Vistadome railcar (Macosa/MAN)"@en,
@@ -263627,6 +263654,72 @@ mdl:srtred a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color6>,
         <https://nakamura196.github.io/train-bodies/rdf/model/srtred#color7> ;
     tb:liveryOf wd:Q2165702 .
+
+mdl:tanzania a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#livery> ;
+    schema:about cls:tb-tanzania ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/tanzania.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "タンザニアの標準軌新線の電気機関車（Hyundai Rotem製）。クリームにオレンジの弧の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "タンザニアSGR E6800形電気機関車"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/tanzania/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/tanzania.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#tanzania> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color1> a tb:ColorSample ;
+    rdfs:label "cream" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.7972 ;
+    schema:color "#E4DFD4" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color2> a tb:ColorSample ;
+    rdfs:label "maroon" ;
+    wdt:P462 wd:Q47071 ;
+    tb:areaShare 0.0704 ;
+    schema:color "#7A2824" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color3> a tb:ColorSample ;
+    rdfs:label "roofgrey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0546 ;
+    schema:color "#9A9C9E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color4> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0532 ;
+    schema:color "#E86E26" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color5> a tb:ColorSample ;
+    rdfs:label "seam" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0081 ;
+    schema:color "#6E6A64" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#livery> a tb:Livery ;
+    rdfs:label "Tanzania Railways Corporation SGR livery (cream with orange arches, maroon lower body)"@en,
+        "タンザニア鉄道公社 SGR の塗装（クリームにオレンジの弧、えんじの裾）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/tanzania/trc_tanzania.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q39338,
+        wd:Q47071 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color5> ;
+    tb:liveryOf wd:Q2393276 .
 
 mdl:tilttrain a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -266967,6 +267060,8 @@ wd:Q603805 rdfs:label "Pittsburgh Light Rail"@en .
 
 wd:Q6063769 rdfs:label "Polatlı–Menemen higher-speed railway"@en .
 
+wd:Q60744141 rdfs:label "Tanzania Standard Gauge Railway"@en .
+
 wd:Q6092815 rdfs:label "Italian Libya Railways"@en,
         "イタリア領リビアの鉄道"@ja .
 
@@ -267770,9 +267865,6 @@ wd:Q910209 rdfs:label "Guangzhou–Shenzhen–Hong Kong Express Rail Link"@en .
 
 wd:Q913275 rdfs:label "Beijing–Shanghai high-speed railway"@en .
 
-wd:Q924 rdfs:label "Tanzania"@en,
-        "タンザニア"@ja .
-
 wd:Q924052 rdfs:label "Kakhovskaya Line"@en .
 
 wd:Q9249971 rdfs:label "Operail"@en .
@@ -268435,6 +268527,9 @@ wd:Q2371092 rdfs:label "RVZ–6"@en,
 wd:Q2375752 rdfs:label "Pesa Atribo"@en .
 
 wd:Q2383361 rdfs:label "Vossloh G6"@en .
+
+wd:Q2393276 rdfs:label "Tanzania Railways Corporation"@en,
+        "タンザニア鉄道会社"@ja .
 
 wd:Q23933033 rdfs:label "Škoda ForCity"@en,
         "シュコダ15T"@ja .
@@ -269214,6 +269309,9 @@ wd:Q915775 rdfs:label "articulated car"@en,
 
 wd:Q9212 rdfs:label "United States Army"@en,
         "アメリカ陸軍"@ja .
+
+wd:Q924 rdfs:label "Tanzania"@en,
+        "タンザニア"@ja .
 
 wd:Q925233 rdfs:label "Brohltalbahn"@en .
 
@@ -271316,9 +271414,6 @@ wd:Q4637086 rdfs:label "4-6-2+2-6-4"@en .
 
 wd:Q46973401 rdfs:label "RE 9 (Mecklenburg-Vorpommern)"@en .
 
-wd:Q47071 rdfs:label "brown"@en,
-        "茶色"@ja .
-
 wd:Q4735854 rdfs:label "Alstom Prima diesel locomotives"@en .
 
 wd:Q481551 rdfs:label "Potsdam Tramway"@en .
@@ -272005,6 +272100,9 @@ wd:Q4596837 rdfs:label "2-6-0+0-6-2"@en .
 
 wd:Q4596841 rdfs:label "2-6-6-0"@en .
 
+wd:Q47071 rdfs:label "brown"@en,
+        "茶色"@ja .
+
 wd:Q479062 rdfs:label "UIC-Y car"@en .
 
 wd:Q4828161 rdfs:label "Alstom Aventra"@en,
@@ -272372,9 +272470,6 @@ wd:Q3660349 rdfs:label "Carminati & Toselli"@en .
 
 wd:Q3752590 rdfs:label "Freccia della Versilia"@en .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q459508 rdfs:label "Salzburg S-Bahn"@en .
 
 wd:Q4756279 rdfs:label "Andrew Barclay Sons & Co."@en,
@@ -272652,6 +272747,9 @@ wd:Q3630552 rdfs:label "Automotore"@en .
 
 wd:Q3633141 rdfs:label "East Indian Railway Company"@en,
         "東インド鉄道会社"@ja .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q4157597 rdfs:label "Demikhovsky Machine-building Plant"@en,
         "デミホヴォ機械製造工場"@ja .
@@ -273592,9 +273690,6 @@ wd:Q923337 rdfs:label "Ukrainian Railways"@en,
 
 wd:Q93090957 rdfs:label "SNCF Voyageurs"@en .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q3112900 rdfs:label "Goša FOM"@en .
 
 wd:Q766616 rdfs:label "Slovenske železnice"@en,
@@ -273643,6 +273738,9 @@ wd:Q13634023 rdfs:label "Società per le Strade Ferrate del Mediterraneo"@en,
 
 wd:Q184 rdfs:label "Belarus"@en,
         "ベラルーシ"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q26233074 rdfs:label "4-4-2T"@en .
 
@@ -274189,9 +274287,6 @@ wd:Q376055 rdfs:label "Garratt locomotive"@en,
 wd:Q1073489 rdfs:label "China State Railway Group"@en,
         "中国国家鉄路集団"@ja .
 
-wd:Q152517 rdfs:label "Hyundai Rotem"@en,
-        "現代ロテム"@ja .
-
 wd:Q16814621 rdfs:label "railway coach"@en,
         "座席車 (客車)"@ja .
 
@@ -274208,6 +274303,9 @@ wd:Q819150 rdfs:label "KraussMaffei"@en,
 
 wd:Q1073100 rdfs:label "Nydqvist och Holm AB"@en,
         "NOHAB"@ja .
+
+wd:Q152517 rdfs:label "Hyundai Rotem"@en,
+        "現代ロテム"@ja .
 
 wd:Q1795087 rdfs:label "Maschinenbau-Gesellschaft Karlsruhe"@en,
         "カールスルーエ機械製造"@ja .
@@ -274455,13 +274553,13 @@ wd:Q1092174 rdfs:label "Neilson and Company"@en,
 
 wd:Q26208746 rdfs:label "0-6-2T"@en .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q336811 rdfs:label "ČKD社"@ja .
 
 wd:Q34336 rdfs:label "diesel locomotive"@en,
         "ディーゼル機関車"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q26000795 rdfs:label "2-6-2T"@en .
 

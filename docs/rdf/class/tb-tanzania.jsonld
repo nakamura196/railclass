@@ -1,0 +1,117 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-tanzania",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Country and operator from Wikidata Q60744141 (Tanzania Standard Gauge Railway); manufacturer and type (Hyundai Rotem electric locomotive, class E6800) from Railvolution 'New locomotives for Tanzania'; passenger service from 2024-06-14 (Railway Journal, The Citizen), read 2026-10-12 via the skytrain lab note docs/notes/tanzania.md."
+      },
+      "handEntered": [
+        {
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P137"
+        },
+        {
+          "@id": "wdt:P176"
+        },
+        {
+          "@id": "wdt:P279"
+        },
+        {
+          "@id": "wdt:P729"
+        }
+      ],
+      "has3DModel": true,
+      "lineUse": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-tanzania#line1"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Tanzania SGR class E6800 electric locomotive"
+        },
+        {
+          "@language": "ja",
+          "@value": "タンザニア SGR E6800 形電気機関車"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/tanzania"
+      },
+      "skos:inScheme": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Tanzania SGR class E6800 electric locomotive"
+        },
+        {
+          "@language": "ja",
+          "@value": "タンザニア SGR E6800 形電気機関車"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q60744141"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q2393276"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q924"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q152517"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q625151"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2024"
+      }
+    },
+    {
+      "@id": "wd:Q60744141",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Tanzania Standard Gauge Railway"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-tanzania#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q60744141"
+      },
+      "line": {
+        "@id": "wd:Q60744141"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "the Tanzania Standard Gauge Railway itself; Wikidata has no item for its Hyundai Rotem E6800 locomotives"
+      },
+      "sourceSection": "Wikidata (the railway)",
+      "useStatus": "current"
+    }
+  ]
+}
