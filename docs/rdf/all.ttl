@@ -2838,23 +2838,6 @@ cls:Q104092012 a skos:Concept,
     wdt:P279 wd:Q24294815 ;
     tb:has3DModel false .
 
-cls:Q104216528 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "KTX-Eum"@en,
-        "韓国鉄道公社150000系電車"@ja ;
-    skos:exactMatch wd:Q104216528 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "KTX-Eum"@en,
-        "韓国鉄道公社150000系電車"@ja ;
-    prov:wasDerivedFrom wd:Q104216528 ;
-    wdt:P137 wd:Q18169 ;
-    wdt:P17 wd:Q884 ;
-    wdt:P176 wd:Q152517 ;
-    wdt:P279 wd:Q483373 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/KTX-Eum%20517%20Jeongdongjin%20Station%2020230430.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q884 .
-
 cls:Q104233194 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Stadler TINA"@en,
@@ -243770,6 +243753,24 @@ wd:Q998731 rdfs:label "Salzburger Stadtwerke"@en .
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q104216528 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "KTX-Eum"@en,
+        "韓国鉄道公社150000系電車"@ja ;
+    skos:exactMatch wd:Q104216528 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "KTX-Eum"@en,
+        "韓国鉄道公社150000系電車"@ja ;
+    prov:wasDerivedFrom wd:Q104216528 ;
+    wdt:P137 wd:Q18169 ;
+    wdt:P17 wd:Q884 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/KTX-Eum%20517%20Jeongdongjin%20Station%2020230430.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q884 ;
+    schema:subjectOf mdl:ktxeum .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q104902404#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q6553080#P3438> ;
     skos:note "wikidata"@en ;
@@ -263204,6 +263205,77 @@ mdl:icng a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/icng#color7> ;
     tb:liveryOf wd:Q23076 .
 
+mdl:ktxeum a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#livery> ;
+    schema:about cls:Q104216528 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ktxeum.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "韓国の高速電車。2021年から走る、青い車体と濃い灰の窓帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "KTX-이음"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ktxeum/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ktxeum.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#ktxeum> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.7819 ;
+    schema:color "#8AB2DA" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color2> a tb:ColorSample ;
+    rdfs:label "dark" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0769 ;
+    schema:color "#3C4652" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color3> a tb:ColorSample ;
+    rdfs:label "canopy" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0467 ;
+    schema:color "#5A6674" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0404 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.0176 ;
+    schema:color "#5E7080" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0158 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#livery> a tb:Livery ;
+    rdfs:label "KTX-Eum livery (steel blue with a charcoal window band and a champagne line)"@en,
+        "KTX-이음の塗装（青い車体に濃い灰の窓帯と金色の細い線）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/ktxeum/korail_ktxeum.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ktxeum#color6> ;
+    tb:liveryOf wd:Q18169 .
+
 mdl:madaraka a schema:3DModel ;
     tb:galleryGroup "world" ;
     tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/madaraka#livery> ;
@@ -273881,9 +273953,6 @@ wd:Q2304446 rdfs:label "South Eastern and Chatham Railway"@en,
 wd:Q23444 rdfs:label "white"@en,
         "白"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q2539150 rdfs:label "Waggon- und Maschinenbau Görlitz"@en,
         "ゲルリッツ車両・機械工場"@ja .
 
@@ -273906,6 +273975,9 @@ wd:Q864841 rdfs:label "2-10-2"@en,
         "車輪配置 2-10-2"@ja .
 
 wd:Q1985988 rdfs:label "4-2-0"@en .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q2905881 rdfs:label "Blanc-Misseron"@en .
 
@@ -274037,9 +274109,6 @@ wd:Q725793 rdfs:label "Union Pacific Railroad"@en,
 wd:Q10676739 rdfs:label "600 mm track gauge"@en,
         "600mm軌間"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q610143 rdfs:label "Bulgarian State Railways"@en,
         "ブルガリア国鉄"@ja .
 
@@ -274078,13 +274147,13 @@ wd:Q685792 rdfs:label "Austrian Southern Railway Company"@en,
 wd:Q1028 rdfs:label "Morocco"@en,
         "モロッコ"@ja .
 
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
+
 wd:Q1187978 rdfs:label "Transvaal Colony"@en,
         "トランスヴァール植民地"@ja .
 
 wd:Q16951036 rdfs:label "Belgian State Railways"@en .
-
-wd:Q18169 rdfs:label "Korea Railroad Corporation"@en,
-        "韓国鉄道公社"@ja .
 
 wd:Q26233816 rdfs:label "4-4-0T"@en .
 
@@ -274101,6 +274170,9 @@ wd:Q7038300 rdfs:label "Nine Elms Locomotive Works"@en,
 
 wd:Q787383 rdfs:label "North Eastern Railway"@en,
         "ノース・イースタン鉄道"@ja .
+
+wd:Q18169 rdfs:label "Korea Railroad Corporation"@en,
+        "韓国鉄道公社"@ja .
 
 wd:Q1906878 rdfs:label "Oerlikon Works"@en,
         "エリコン機械製造"@ja .
@@ -274669,9 +274741,6 @@ wd:Q1493335 rdfs:label "1676 mm track gauge"@en,
 
 wd:Q10915943 rdfs:label "diesel railcar"@en .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q529531 rdfs:label "ベルリン機械製造"@ja .
 
 wd:Q7570387 rdfs:label "Southern Region of British Railways"@en,
@@ -274682,6 +274751,9 @@ wd:Q922964 rdfs:label "Swindon Works"@en,
 
 wd:Q391795 rdfs:label "Škoda Works"@en,
         "シュコダ財閥"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q838212 rdfs:label "CAF"@ja .
 

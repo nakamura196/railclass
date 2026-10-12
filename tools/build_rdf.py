@@ -100,6 +100,7 @@ CLASSES = {
     # own; the railway is linked in tools/class_lines.tsv. Not under TCDD E68000 (Q28444692), its design ancestor: another class.
     "tb-tanzania": (None, None, {"en": "Tanzania SGR class E6800 electric locomotive", "ja": "タンザニア SGR E6800 形電気機関車"}),
     "Q20926238": ("Q20926238", None, None),                    # TCDD E32000 (Marmaray, Hyundai Rotem)
+    "Q104216528": ("Q104216528", None, None),                   # KTX-Eum (Korail EMU-260, Hyundai Rotem)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -168,6 +169,7 @@ LIVERIES = {
     "ns-icng": ({"en": "NS livery (yellow and blue, dark grey round the cab)", "ja": "オランダ鉄道の塗装（黄と青、運転室のまわりは濃い灰）"}, "Q23076"),
     "trc-sgr": ({"en": "Tanzania Railways Corporation SGR livery (cream with orange arches, maroon lower body)", "ja": "タンザニア鉄道公社 SGR の塗装（クリームにオレンジの弧、えんじの裾）"}, "Q2393276"),
     "tcdd-marmaray": ({"en": "Marmaray livery (white cab front with a black face, stainless with teal and red lines; 2024-)", "ja": "マルマライの塗装（白い前頭部に黒い顔、ステンレスに青緑と赤の線。2024年以降の写真）"}, "Q28220824"),
+    "korail-ktx-eum": ({"en": "KTX-Eum livery (steel blue with a charcoal window band and a champagne line)", "ja": "KTX-이음の塗装（青い車体に濃い灰の窓帯と金色の細い線）"}, "Q18169"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -206,6 +208,7 @@ MODELS = {
     "icng": ("Q26158722", "ns-icng", None),
     "tanzania": ("tb-tanzania", "trc-sgr", None),
     "marmaray": ("Q20926238", "tcdd-marmaray", None),
+    "ktxeum": ("Q104216528", "korail-ktx-eum", None),
 }
 
 
