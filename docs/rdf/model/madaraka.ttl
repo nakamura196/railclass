@@ -1,0 +1,82 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:madaraka a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/madaraka#livery> ;
+    schema:about cls:Q10871152 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/madaraka.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "ケニアの標準軌鉄道の DF8B 形ディーゼル機関車。2025 年にナイロビ〜モンバサの旅客列車マダラカ・エクスプレスの先頭で見られた。赤と白に国旗。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "DF8B 形（ケニア SGR）"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/madaraka/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/madaraka.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#madaraka> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color1> a tb:ColorSample ;
+    rdfs:label "kred" ;
+    wdt:P462 wd:Q3142 ;
+    tb:areaShare 0.7113 ;
+    schema:color "#B81A26" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color2> a tb:ColorSample ;
+    rdfs:label "kwhite" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.1320 ;
+    schema:color "#EEEDE6" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color3> a tb:ColorSample ;
+    rdfs:label "slat" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0620 ;
+    schema:color "#3C4044" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color4> a tb:ColorSample ;
+    rdfs:label "louvre" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0412 ;
+    schema:color "#8C9094" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color5> a tb:ColorSample ;
+    rdfs:label "kyellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0164 ;
+    schema:color "#F2C21A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color6> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0101 ;
+    schema:color "#24262A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/madaraka#livery> a tb:Livery ;
+    rdfs:label "Kenya Railways SGR livery (red cabs and roof, white body, orange and yellow lines, Kenyan flag)"@en,
+        "ケニア鉄道 SGR の塗装（赤い運転室と屋根、白い車体、オレンジと黄色の線、ケニアの国旗）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/madaraka/kr_madaraka.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/madaraka#color6> ;
+    tb:liveryOf wd:Q1663639 .
+

@@ -94,6 +94,7 @@ CLASSES = {
     # PeruRail Vistadome railcar (Macosa/MAN 1984, 220-225): Wikidata has no item for it, so a class of our own; the line it
     # runs on (Q100145062, Cusco - Machu Picchu) is linked in tools/class_lines.tsv.
     "tb-vistadome": (None, None, {"en": "PeruRail Vistadome railcar (Macosa/MAN)", "ja": "ペルーレイルのビスタドーム気動車（Macosa/MAN）"}),
+    "Q10871152": ("Q10871152", None, None),                    # China Railway DF8B (the Kenyan SGR export version has no item of its own)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -153,6 +154,7 @@ LIVERIES = {
     "sj-x2000-2021": ({"en": "SJ X2000 refurbished livery (dark grey nose and swoosh, light grey, stainless; from 2021)", "ja": "SJ X2000 の更新車の塗装（濃い灰の前頭部と帯、明るい灰、ステンレス。2021年から）"}, "Q8301325"),
     "kiwirail-ak-flames": ({"en": "KiwiRail Great Journeys AK carriage livery (silver with a grey line and yellow, orange and red flames)", "ja": "キウイレイルの AK 形客車の塗装（銀に灰色の線と黄・橙・赤の炎の帯）"}, "Q956508"),
     "perurail-vistadome": ({"en": "PeruRail livery (blue with yellow stripes, silver roof; seen in photos up to 2023)", "ja": "ペルーレイルの塗装（青に黄の線、銀の屋根。2023年の写真まで確認）"}, "Q1407952"),
+    "kr-sgr-df8b": ({"en": "Kenya Railways SGR livery (red cabs and roof, white body, orange and yellow lines, Kenyan flag)", "ja": "ケニア鉄道 SGR の塗装（赤い運転室と屋根、白い車体、オレンジと黄色の線、ケニアの国旗）"}, "Q1663639"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -187,6 +189,7 @@ MODELS = {
     "x2000": ("Q853105", "sj-x2000-2021", None),
     "tranzalpine": ("Q7015181", "kiwirail-ak-flames", None),
     "vistadome": ("tb-vistadome", "perurail-vistadome", None),
+    "madaraka": ("Q10871152", "kr-sgr-df8b", None),
 }
 
 
