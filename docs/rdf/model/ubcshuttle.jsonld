@@ -14,53 +14,82 @@
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color6"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/ubcshuttle/ubc_ubcshuttle.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6698"
       },
-      "liveryOf": {
-        "@id": "wd:Q7863809"
+      "rdfs:label": "white",
+      "schema:color": "#F2F4F5",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1012"
       },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "UBC Thunderbirds \"TAKE FLIGHT\" wrap (navy and blue with a gold line, white roof)"
-        },
-        {
-          "@language": "ja",
-          "@value": "UBC サンダーバーズの「TAKE FLIGHT」の塗装（紺と青に金の線、白い屋根）"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q1088"
-        }
-      ]
+      "rdfs:label": "tblue",
+      "schema:color": "#3E6B9E",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0199"
+      },
+      "rdfs:label": "chrome",
+      "schema:color": "#C9CDD2",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1443"
+      },
+      "rdfs:label": "navy",
+      "schema:color": "#1E2D4C",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0076"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0062"
+      },
+      "rdfs:label": "sky",
+      "schema:color": "#8CB9E3",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle",
@@ -144,81 +173,68 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.6737"
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color6"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color7"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/ubcshuttle/ubc_ubcshuttle.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
       },
-      "rdfs:label": "white",
-      "schema:color": "#F2F4F5",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0200"
+      "liveryOf": {
+        "@id": "wd:Q7863809"
       },
-      "rdfs:label": "chrome",
-      "schema:color": "#C9CDD2",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "UBC Thunderbirds \"TAKE FLIGHT\" wrap (navy and blue with a gold line, white roof)"
+        },
+        {
+          "@language": "ja",
+          "@value": "UBC サンダーバーズの「TAKE FLIGHT」の塗装（紺と青に金の線、白い屋根）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
     },
     {
       "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color4",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0450"
+        "@value": "0.0454"
       },
       "rdfs:label": "black",
       "schema:color": "#14161A",
       "wdt:P462": {
         "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1022"
-      },
-      "rdfs:label": "tblue",
-      "schema:color": "#3E6B9E",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1437"
-      },
-      "rdfs:label": "navy",
-      "schema:color": "#1E2D4C",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0076"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
       }
     }
   ]
