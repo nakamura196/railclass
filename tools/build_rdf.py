@@ -137,6 +137,8 @@ CLASSES = {
     "Q96407257": ("Q96407257", None, None),                   # Sydney Metro Metropolis Stock (Alstom)
     "Q891775": ("Q891775", None, None),                       # Bombardier BiLevel Coach (West Coast Express cab car)
     "Q125350160": ("Q125350160", None, None),                 # Railjet 1 (OEBB, 1st generation)
+    "tb-bluetrain": (None, None, {"en": "Blue Train observation car", "ja": "ブルートレイン（南アフリカ）の展望車"}),# Blue Train observation car (no Wikidata item for the coaches; the service Q885923 is linked in tools/class_lines.tsv)
+    "Q1436723": ("Q1436723", None, None),                     # Ford E-Series (the E-450 cutaway chassis under the UBC shuttle; a road vehicle, not rolling stock)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -164,6 +166,8 @@ HAND = {
     "tb-cablecar": {"country": ["Q30"], "operator": ["Q1140138"], "kind": ["Q5609555"]},
     # Egypt; National Authority for Tunnels (owner); Kinki Sharyo (with Mitsubishi Corporation and Toshiba); EMU; opening 1996
     "tb-cairo": {"country": ["Q79"], "operator": ["Q64744683"], "manufacturer": ["Q1592306"], "kind": ["Q483373"], "serviceEntry": [1996]},
+    # South Africa; Transnet (owner of the Blue Train); observation car; service as the refurbished Blue Train from 1997
+    "tb-bluetrain": {"country": ["Q258"], "operator": ["Q820804"], "kind": ["Q1691845"], "serviceEntry": [1997]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
@@ -176,6 +180,7 @@ HAND_SOURCE = {
     "tb-addis": "Country and opening date (2015-09-21) from Wikidata Q16250141 (Addis Ababa Light Rail, the system); operator (Ethiopian Railway Corporation), manufacturer (CNR Changchun, now CRRC Changchun) and type (three-section 70 % low-floor tram) from the skytrain lab note docs/notes/addis.md (2026-10-12).",
     "tb-cablecar": "Country, operator and type (cable car) from Wikidata Q374956 (San Francisco cable car system); the Powell Street single-ended car and its dimensions from streetcar.org via the skytrain lab note docs/notes/cablecar.md (2026-10-12).",
     "tb-cairo": "Country and opening year (1996) from Wikidata Q5017773 (Cairo Metro Line 2); builders (Mitsubishi Corporation, Kinki Sharyo and Toshiba) and type from the skytrain lab note docs/notes/cairo.md (2026-10-12); operator entered as the National Authority for Tunnels, the owner of the Cairo Metro.",
+    "tb-bluetrain": "Country from Wikidata Q885923 (Blue Train, the service); operator (Transnet), car type (observation car) and the 1997 relaunch with the present coaches from en.wikipedia 'Blue Train (South Africa)' via the skytrain lab note docs/notes/bluetrain.md (2026-10-12).",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -254,6 +259,8 @@ LIVERIES = {
     "sydney-metro": ({"en": "Sydney Metro livery (charcoal front with teal corner wings, white body, navy window band)", "ja": "シドニーメトロの塗装（濃い灰の前面に青緑の翼、白い車体、紺の窓帯）"}, "Q20861549"),
     "wce-violet": ({"en": "West Coast Express livery (white and violet with gold lines)", "ja": "ウェストコースト・エクスプレスの塗装（白と紫に金の線）"}, "Q1675085"),
     "oebb-railjet": ({"en": "ÖBB Railjet livery (wine red and grey)", "ja": "ÖBB のレールジェットの塗装（ワインレッドと灰）"}, "Q83822"),
+    "bluetrain-royal": ({"en": "Blue Train livery (royal blue with gold lines)", "ja": "ブルートレインの塗装（濃い青に金の線）"}, "Q820804"),
+    "ubc-take-flight": ({"en": "UBC Thunderbirds \"TAKE FLIGHT\" wrap (navy and blue with a gold line, white roof)", "ja": "UBC サンダーバーズの「TAKE FLIGHT」の塗装（紺と青に金の線、白い屋根）"}, "Q7863809"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -321,6 +328,8 @@ MODELS = {
     "sydneymetro": ("Q96407257", "sydney-metro", None),
     "wce": ("Q891775", "wce-violet", None),
     "railjet": ("Q125350160", "oebb-railjet", None),
+    "bluetrain": ("tb-bluetrain", "bluetrain-royal", None),
+    "ubcshuttle": ("Q1436723", "ubc-take-flight", {"en": "cutaway minibus body on the Ford E-450 chassis", "ja": "フォード E-450 の車台に載る小型バスの車体"}),
 }
 
 

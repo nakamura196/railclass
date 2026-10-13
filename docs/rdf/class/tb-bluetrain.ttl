@@ -1,0 +1,41 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:tb-bluetrain a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Blue Train observation car"@en,
+        "ブルートレイン（南アフリカ）の展望車"@ja ;
+    dcterms:source "Country from Wikidata Q885923 (Blue Train, the service); operator (Transnet), car type (observation car) and the 1997 relaunch with the present coaches from en.wikipedia 'Blue Train (South Africa)' via the skytrain lab note docs/notes/bluetrain.md (2026-10-12)."@en ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "Blue Train observation car"@en,
+        "ブルートレイン（南アフリカ）の展望車"@ja ;
+    wdt:P137 wd:Q820804 ;
+    wdt:P17 wd:Q258 ;
+    wdt:P279 wd:Q1691845 ;
+    wdt:P729 "1997"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-bluetrain#line1> ;
+    tb:usedOn wd:Q885923 ;
+    schema:subjectOf mdl:bluetrain .
+
+<https://nakamura196.github.io/train-bodies/rdf/class/tb-bluetrain#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q885923> ;
+    skos:note "the Blue Train service itself (Pretoria–Cape Town); Wikidata has no item for its coaches"@en ;
+    tb:line wd:Q885923 ;
+    tb:sourceSection "Wikidata (the service)" ;
+    tb:useStatus "current" .
+
+wd:Q885923 rdfs:label "Blue Train"@en .
+

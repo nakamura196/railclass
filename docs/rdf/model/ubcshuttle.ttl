@@ -1,0 +1,84 @@
+@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:ubcshuttle a schema:3DModel ;
+    tb:galleryGroup "bus" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#livery> ;
+    tb:part "cutaway minibus body on the Ford E-450 chassis"@en,
+        "フォード E-450 の車台に載る小型バスの車体"@ja ;
+    schema:about cls:Q1436723 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ubcshuttle.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 133.2 ] ;
+    schema:description "ブリティッシュ・コロンビア大学の運動部のチームバス。フォード E-450 の小型バスに「TAKE FLIGHT」の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 45.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "UBC サンダーバーズのシャトルバス"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ubcshuttle/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ubcshuttle.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#ubcshuttle> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.6737 ;
+    schema:color "#F2F4F5" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color2> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.1437 ;
+    schema:color "#1E2D4C" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color3> a tb:ColorSample ;
+    rdfs:label "tblue" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.1022 ;
+    schema:color "#3E6B9E" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0450 ;
+    schema:color "#14161A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color5> a tb:ColorSample ;
+    rdfs:label "chrome" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0200 ;
+    schema:color "#C9CDD2" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color6> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0076 ;
+    schema:color "#5A6066" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#livery> a tb:Livery ;
+    rdfs:label "UBC Thunderbirds \"TAKE FLIGHT\" wrap (navy and blue with a gold line, white roof)"@en,
+        "UBC サンダーバーズの「TAKE FLIGHT」の塗装（紺と青に金の線、白い屋根）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/ubcshuttle/ubc_ubcshuttle.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/ubcshuttle#color6> ;
+    tb:liveryOf wd:Q7863809 .
+

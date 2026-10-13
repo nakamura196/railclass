@@ -1,0 +1,218 @@
+{
+  "@context": {
+    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7166"
+      },
+      "rdfs:label": "royal",
+      "schema:color": "#1B2E9A",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0063"
+      },
+      "rdfs:label": "door",
+      "schema:color": "#142270",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color1"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color2"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color3"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color4"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color5"
+        },
+        {
+          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color6"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/bluetrain/za_bluetrain.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q820804"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Blue Train livery (royal blue with gold lines)"
+        },
+        {
+          "@language": "ja",
+          "@value": "ブルートレインの塗装（濃い青に金の線）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q1088"
+        },
+        {
+          "@id": "wd:Q943"
+        },
+        {
+          "@id": "wd:Q39338"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0286"
+      },
+      "rdfs:label": "gold",
+      "schema:color": "#D6B44E",
+      "wdt:P462": {
+        "@id": "wd:Q943"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1789"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#D8D9DB",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0265"
+      },
+      "rdfs:label": "frame",
+      "schema:color": "#D9C7A0",
+      "wdt:P462": {
+        "@id": "wd:Q39338"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0203"
+      },
+      "rdfs:label": "white",
+      "schema:color": "#EEEEEC",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#livery"
+      },
+      "schema:about": {
+        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-bluetrain"
+      },
+      "schema:contentUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/models/bluetrain.glb"
+      },
+      "schema:depth": {
+        "@id": "_:bluetrain-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "プレトリアとケープタウンを結ぶ豪華列車の展望車。青い車体に金の線、端に大きな窓。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:bluetrain-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "ブルートレイン（南アフリカ）"
+      },
+      "schema:subjectOf": {
+        "@id": "https://nakamura196.github.io/train-bodies/iiif/bluetrain/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://nakamura196.github.io/train-bodies/thumbs/bluetrain.jpg"
+      },
+      "schema:url": {
+        "@id": "https://nakamura196.github.io/train-bodies/view.html#bluetrain"
+      },
+      "schema:width": {
+        "@id": "_:bluetrain-width"
+      }
+    },
+    {
+      "@id": "_:bluetrain-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "150.0"
+      }
+    },
+    {
+      "@id": "_:bluetrain-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:bluetrain-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    }
+  ]
+}
