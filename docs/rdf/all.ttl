@@ -245030,6 +245030,25 @@ cls:Q125350160 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q130362331 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Renfe Class 106"@en,
+        "レンフェ106系"@ja ;
+    skos:exactMatch wd:Q130362331 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Renfe Class 106"@en,
+        "レンフェ106系"@ja ;
+    prov:wasDerivedFrom wd:Q130362331 ;
+    wdt:P1064 wd:Q1999572,
+        wd:Q3319112 ;
+    wdt:P137 wd:Q2476154 ;
+    wdt:P17 wd:Q29 ;
+    wdt:P176 wd:Q1100969 ;
+    wdt:P279 wd:Q3819775 ;
+    wdt:P729 "2024"^^xsd:gYear ;
+    schema:subjectOf mdl:avril ;
+    tb:has3DModel true .
+
 <https://w3id.org/railclass/Q130627870#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q5430612#P3438> ;
     skos:note "wikidata"@en ;
@@ -262571,6 +262590,99 @@ mdl:ave102 a schema:3DModel ;
         <https://w3id.org/railclass/model/ave102#color6> ;
     tb:liveryOf wd:Q2476154 .
 
+mdl:avril a schema:3DModel ;
+    schema:about cls:Q130362331 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/avril.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "スペインの高速列車。丸いくちばしと黒い運転台の覆いの AVE 塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "タルゴ・アヴリル（レンフェ106系）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/avril/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/avril.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#avril> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/avril#livery> .
+
+<https://w3id.org/railclass/model/avril#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#ECECE8" ;
+    tb:areaShare 0.8319 .
+
+<https://w3id.org/railclass/model/avril#color2> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2B2D33" ;
+    tb:areaShare 0.0520 .
+
+<https://w3id.org/railclass/model/avril#color3> a tb:ColorSample ;
+    rdfs:label "purple" ;
+    wdt:P462 wd:Q3257809 ;
+    schema:color "#74215F" ;
+    tb:areaShare 0.0290 .
+
+<https://w3id.org/railclass/model/avril#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0257 .
+
+<https://w3id.org/railclass/model/avril#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4E5A68" ;
+    tb:areaShare 0.0186 .
+
+<https://w3id.org/railclass/model/avril#color6> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#36383C" ;
+    tb:areaShare 0.0155 .
+
+<https://w3id.org/railclass/model/avril#color7> a tb:ColorSample ;
+    rdfs:label "avegrey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8E8C92" ;
+    tb:areaShare 0.0085 .
+
+<https://w3id.org/railclass/model/avril#color8> a tb:ColorSample ;
+    rdfs:label "edge" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#9A9EA4" ;
+    tb:areaShare 0.0075 .
+
+<https://w3id.org/railclass/model/avril#color9> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0068 .
+
+<https://w3id.org/railclass/model/avril#livery> a tb:Livery ;
+    rdfs:label "Renfe AVE livery"@en,
+        "Renfe AVE の塗装"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/avril/renfe_avril.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3257809 ;
+    tb:colorSample <https://w3id.org/railclass/model/avril#color1>,
+        <https://w3id.org/railclass/model/avril#color2>,
+        <https://w3id.org/railclass/model/avril#color3>,
+        <https://w3id.org/railclass/model/avril#color4>,
+        <https://w3id.org/railclass/model/avril#color5>,
+        <https://w3id.org/railclass/model/avril#color6>,
+        <https://w3id.org/railclass/model/avril#color7>,
+        <https://w3id.org/railclass/model/avril#color8>,
+        <https://w3id.org/railclass/model/avril#color9> ;
+    tb:liveryOf wd:Q2476154 .
+
 mdl:bart a schema:3DModel ;
     schema:about cls:Q134207119 ;
     schema:contentUrl <https://railclass.ldas.jp/models/bart.glb> ;
@@ -270978,9 +271090,6 @@ wd:Q3239230 rdfs:label "Tram line T1 (Toulouse)"@en .
 
 wd:Q324614 rdfs:label "Arriva RP"@en .
 
-wd:Q3257809 rdfs:label "purple"@en,
-        "紫"@ja .
-
 wd:Q3293620 rdfs:label "Line 6"@en .
 
 wd:Q3307451 rdfs:label "Metrolinx"@en,
@@ -273486,6 +273595,9 @@ wd:Q379668 rdfs:label "Advanced Passenger Train"@en,
 wd:Q381100 rdfs:label "Prague Public Transit Company"@en,
         "プラハ公共交通会社"@ja .
 
+wd:Q3819775 rdfs:label "Talgo AVRIL"@en,
+        "アヴリル"@ja .
+
 wd:Q38203416 rdfs:label "10 kV, 16.7 Hz AC railway electrification system"@en .
 
 wd:Q3836273 rdfs:label "Midland Railway 700 Class"@en .
@@ -274719,6 +274831,9 @@ wd:Q320655 rdfs:label "Trams in Jena"@en .
 wd:Q3239050 rdfs:label "Toulouse Metro Line A"@en .
 
 wd:Q3239056 rdfs:label "Grenoble tram line A"@en .
+
+wd:Q3257809 rdfs:label "purple"@en,
+        "紫"@ja .
 
 wd:Q3259702 rdfs:label "Los Angeles County Metropolitan Transportation Authority"@en,
         "ロサンゼルス郡都市圏交通局"@ja .
@@ -278016,9 +278131,6 @@ wd:Q918156 rdfs:label "Petersburg Tram Mechanical Factory"@en,
 wd:Q1069374 rdfs:label "Chemins de fer de l'Ouest"@en,
         "西部鉄道 (フランス)"@ja .
 
-wd:Q1100969 rdfs:label "Talgo"@en,
-        "タルゴ"@ja .
-
 wd:Q1190006 rdfs:label "Denver and Rio Grande Western Railroad"@en,
         "デンバー・アンド・リオグランデ・ウェスタン鉄道"@ja .
 
@@ -278091,6 +278203,9 @@ wd:Q910157 rdfs:label "control car"@en,
 
 wd:Q10397424 rdfs:label "900 mm track gauge"@en,
         "900ミリ軌間"@ja .
+
+wd:Q1100969 rdfs:label "Talgo"@en,
+        "タルゴ"@ja .
 
 wd:Q1428642 rdfs:label "Penn Central Transportation Company"@en,
         "ペン・セントラル鉄道"@ja .
@@ -278947,9 +279062,6 @@ wd:Q2449525 rdfs:label "Transnet Freight Rail"@en,
 wd:Q5261524 rdfs:label "Derby Works"@en,
         "ダービー鉄道製作所"@ja .
 
-wd:Q2476154 rdfs:label "Renfe Operadora"@en,
-        "レンフェ"@ja .
-
 wd:Q26234622 rdfs:label "2-4-0T"@en .
 
 wd:Q5600013 rdfs:label "Great Southern Railways"@en,
@@ -278963,6 +279075,9 @@ wd:Q414 rdfs:label "Argentina"@en,
 
 wd:Q1982888 rdfs:label "New South Wales Government Railways"@en,
         "ニューサウスウェールズ鉄道"@ja .
+
+wd:Q2476154 rdfs:label "Renfe Operadora"@en,
+        "レンフェ"@ja .
 
 wd:Q286650 rdfs:label "Trenitalia"@en,
         "トレニタリア"@ja .
@@ -279176,11 +279291,11 @@ wd:Q652491 rdfs:label "Orenstein & Koppel"@en,
 wd:Q682656 rdfs:label "760 mm track gauge"@en,
         "ボスニアゲージ"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q664420 rdfs:label "Brown, Boveri & Cie"@en,
         "ブラウン・ボベリ"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q4032352 rdfs:label "750 mm track gauge"@en,
         "750 mm軌間"@ja .
@@ -279191,11 +279306,11 @@ wd:Q83910 rdfs:label "Red Nacional de los Ferrocarriles Españoles"@en,
 wd:Q1548721 rdfs:label "open coach"@en,
         "開放座席車"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q7987516 rdfs:label "Western Australian Government Railways"@en,
         "西豪州国営鉄道"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q36704 rdfs:label "Yugoslavia"@en,
         "ユーゴスラビア"@ja .
@@ -279397,11 +279512,11 @@ wd:Q45 rdfs:label "Portugal"@en,
 wd:Q687175 rdfs:label "Deutsche Bundesbahn"@en,
         "ドイツ連邦鉄道"@ja .
 
-wd:Q3319112 rdfs:label "1668 mm track gauge"@en,
-        "イベリア軌間"@ja .
-
 wd:Q700563 rdfs:label "Deutsche Reichsbahn (GDR)"@en,
         "ドイツ国営鉄道"@ja .
+
+wd:Q3319112 rdfs:label "1668 mm track gauge"@en,
+        "イベリア軌間"@ja .
 
 wd:Q668 rdfs:label "India"@en,
         "インド"@ja .
@@ -279519,11 +279634,11 @@ wd:Q33946 rdfs:label "Czechoslovakia"@en,
 wd:Q753779 rdfs:label "passenger railroad car"@en,
         "客車"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q6071527 rdfs:label "5 ft 3 in gauge"@en,
         "5フィート3インチ軌間"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q213 rdfs:label "Czech Republic"@en,
         "チェコ共和国"@ja .

@@ -161,6 +161,7 @@ CLASSES = {
     "Q25197235": ("Q25197235", None, None),                   # CTA 7000-series (CRRC Sifang America)
     "Q21017008": ("Q21017008", None, None),                   # Taipei Metro C381 (Kawasaki / TRSC)
     "Q17183109": ("Q17183109", None, None),                   # Nippon Sharyo DMU (UP Express, SMART)
+    "Q130362331": ("Q130362331", None, None),                 # Renfe Class 106 (Talgo Avril)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -396,6 +397,7 @@ MODELS = {
     "cta7000": ("Q25197235", "cta-7000", None),
     "taipei-c381": ("Q21017008", "trtc-c381", None),
     "upexpress": ("Q17183109", "up-express", None),
+    "avril": ("Q130362331", "renfe-ave", None),
 }
 
 
