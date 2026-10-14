@@ -1,8 +1,10 @@
 @prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -28,7 +30,8 @@ cls:Q4970771 a skos:Concept,
     wdt:P729 "2017"^^xsd:gYear ;
     wdt:P930 wd:Q106530439 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Elizabeth%20Line%20Class%20345%20at%20Reading%20%28cropped%29.jpg> ;
-    tb:has3DModel false ;
+    schema:subjectOf mdl:elizabeth ;
+    tb:has3DModel true ;
     tb:lineUse <https://w3id.org/railclass/Q4970771#line1>,
         <https://w3id.org/railclass/Q4970771#line2> ;
     tb:operatingCountry wd:Q145 ;

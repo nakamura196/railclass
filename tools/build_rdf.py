@@ -147,6 +147,7 @@ CLASSES = {
     "Q50318679": ("Q50318679", None, None),                   # China Railway CR400AF Fuxing
     "Q134207119": ("Q134207119", None, None),                 # BART Fleet of the Future (D car)
     "tb-insurgente": (None, None, {"en": "El Insurgente CAF EMU", "ja": "エル・インスルヘンテの電車（CAF 製）"}),  # El Insurgente CAF EMU (no Wikidata item for the trains; the line Q16642463 is linked in tools/class_lines.tsv)
+    "Q4970771": ("Q4970771", None, None),                     # British Rail Class 345 (Elizabeth line Aventra)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -278,6 +279,7 @@ LIVERIES = {
     "cr-fuxing": ({"en": "China Railway Fuxing standard livery (silver with the red sweep)", "ja": "復興号の標準の塗装（銀に赤い流線）"}, "Q1073489"),
     "bart-fotf": ({"en": "BART Fleet of the Future livery (white front cap, blue band on aluminium)", "ja": "BART の新型車の塗装（白い顔、アルミに青い帯）"}, "Q610120"),
     "insurgente-flag": ({"en": "El Insurgente livery (white with a red nose and stripes in the Mexican flag colours)", "ja": "エル・インスルヘンテの塗装（白地に赤い先頭と国旗の三色の帯）"}, "Q139837508"),
+    "tfl-elizabeth": ({"en": "Elizabeth line livery (white, black window band, purple stripes)", "ja": "エリザベス線の塗装（白、黒い窓帯、紫の帯）"}, "Q113577377"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -352,6 +354,7 @@ MODELS = {
     "cr400af": ("Q50318679", "cr-fuxing", None),
     "bart": ("Q134207119", "bart-fotf", None),
     "insurgente": ("tb-insurgente", "insurgente-flag", None),
+    "elizabeth": ("Q4970771", "tfl-elizabeth", None),
 }
 
 
