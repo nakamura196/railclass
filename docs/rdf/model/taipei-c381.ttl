@@ -1,0 +1,89 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:taipei-c381 a schema:3DModel ;
+    schema:about cls:Q21017008 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/taipei-c381.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "台北捷運の高運量の電車。川崎重工と台湾車輛が2010年から作った、ステンレスに青い帯の先頭車。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "台北捷運 C381 型"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/taipei-c381/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/taipei-c381.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#taipei-c381> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/taipei-c381#livery> .
+
+<https://w3id.org/railclass/model/taipei-c381#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C4C7CC" ;
+    tb:areaShare 0.7497 .
+
+<https://w3id.org/railclass/model/taipei-c381#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A8ACB2" ;
+    tb:areaShare 0.1400 .
+
+<https://w3id.org/railclass/model/taipei-c381#color3> a tb:ColorSample ;
+    rdfs:label "stripe" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#2F6ECE" ;
+    tb:areaShare 0.0439 .
+
+<https://w3id.org/railclass/model/taipei-c381#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0206 .
+
+<https://w3id.org/railclass/model/taipei-c381#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3E4C5C" ;
+    tb:areaShare 0.0166 .
+
+<https://w3id.org/railclass/model/taipei-c381#color6> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#262A31" ;
+    tb:areaShare 0.0116 .
+
+<https://w3id.org/railclass/model/taipei-c381#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0074 .
+
+<https://w3id.org/railclass/model/taipei-c381#livery> a tb:Livery ;
+    rdfs:label "Taipei Metro C381 livery (stainless with blue wing and stripe)"@en,
+        "台北捷運 C381 型の塗装（ステンレスに青い翼と帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/taipei-c381/trtc_taipei-c381.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/taipei-c381#color1>,
+        <https://w3id.org/railclass/model/taipei-c381#color2>,
+        <https://w3id.org/railclass/model/taipei-c381#color3>,
+        <https://w3id.org/railclass/model/taipei-c381#color4>,
+        <https://w3id.org/railclass/model/taipei-c381#color5>,
+        <https://w3id.org/railclass/model/taipei-c381#color6>,
+        <https://w3id.org/railclass/model/taipei-c381#color7> ;
+    tb:liveryOf wd:Q11411921 .
+

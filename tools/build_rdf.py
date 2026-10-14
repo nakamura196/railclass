@@ -159,6 +159,7 @@ CLASSES = {
     "Q2805042": ("Q2805042", None, {"en": "Glacier Express panoramic coach (Stadler)", "ja": "氷河特急のパノラマ客車（シュタッドラー製）"}),  # Panoramawagen Glacier-Express (Stadler Bp); German label only
     "Q4033502": ("Q4033502", None, None),                     # Afrosiyob (Talgo 250, Uzbekistan Railways)
     "Q25197235": ("Q25197235", None, None),                   # CTA 7000-series (CRRC Sifang America)
+    "Q21017008": ("Q21017008", None, None),                   # Taipei Metro C381 (Kawasaki / TRSC)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -304,6 +305,7 @@ LIVERIES = {
     "glacier-express": ({"en": "Glacier Express livery (red ends with white Swiss-cross pieces)", "ja": "氷河特急の塗装（赤い端に白い十字のかけら）"}, "Q666922"),
     "uty-afrosiyob": ({"en": "Afrosiyob livery (white with an azure roof and flag-colour stripes)", "ja": "アフロシヨブの塗装（白地に空色の屋根と国旗の色の帯）"}, "Q2093569"),
     "cta-7000": ({"en": "CTA 7000-series livery (stainless with a blue end cap)", "ja": "CTA 7000 系の塗装（ステンレスに青い顔）"}, "Q117309"),
+    "trtc-c381": ({"en": "Taipei Metro C381 livery (stainless with blue wing and stripe)", "ja": "台北捷運 C381 型の塗装（ステンレスに青い翼と帯）"}, "Q11411921"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -390,6 +392,7 @@ MODELS = {
     "glacier": ("Q2805042", "glacier-express", None),
     "afrosiyob": ("Q4033502", "uty-afrosiyob", None),
     "cta7000": ("Q25197235", "cta-7000", None),
+    "taipei-c381": ("Q21017008", "trtc-c381", None),
 }
 
 

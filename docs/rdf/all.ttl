@@ -96752,29 +96752,6 @@ cls:Q21013275 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q31 .
 
-cls:Q21017008 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Taipei Metro C381"@en,
-        "台北捷運381型電車"@ja ;
-    skos:exactMatch wd:Q21017008 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Taipei Metro C381"@en,
-        "台北捷運381型電車"@ja ;
-    prov:wasDerivedFrom wd:Q21017008 ;
-    wdt:P137 wd:Q714810 ;
-    wdt:P176 wd:Q11412031,
-        wd:Q6379763 ;
-    wdt:P279 wd:Q4102249,
-        wd:Q483373 ;
-    wdt:P930 wd:Q25857994 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TRTC381%20in%20Beitou%20Station.JPG> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q21017008#line1>,
-        <https://w3id.org/railclass/Q21017008#line2> ;
-    tb:operatingCountry wd:Q865 ;
-    tb:usedOn wd:Q697140,
-        wd:Q697192 .
-
 cls:Q2102348 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "DBAG Class 646"@en ;
@@ -247762,6 +247739,30 @@ cls:Q20988527 a skos:Concept,
     tb:useStatus "historical" ;
     tb:usedUntil "2011"^^xsd:gYear .
 
+cls:Q21017008 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Taipei Metro C381"@en,
+        "台北捷運381型電車"@ja ;
+    skos:exactMatch wd:Q21017008 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Taipei Metro C381"@en,
+        "台北捷運381型電車"@ja ;
+    prov:wasDerivedFrom wd:Q21017008 ;
+    wdt:P137 wd:Q714810 ;
+    wdt:P176 wd:Q11412031,
+        wd:Q6379763 ;
+    wdt:P279 wd:Q4102249,
+        wd:Q483373 ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TRTC381%20in%20Beitou%20Station.JPG> ;
+    schema:subjectOf mdl:taipei-c381 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q21017008#line1>,
+        <https://w3id.org/railclass/Q21017008#line2> ;
+    tb:operatingCountry wd:Q865 ;
+    tb:usedOn wd:Q697140,
+        wd:Q697192 .
+
 <https://w3id.org/railclass/Q21017008#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q697140#P3438> ;
     skos:note "wikidata"@en ;
@@ -267169,6 +267170,85 @@ mdl:sydneymetro a schema:3DModel ;
         <https://w3id.org/railclass/model/sydneymetro#color9> ;
     tb:liveryOf wd:Q20861549 .
 
+mdl:taipei-c381 a schema:3DModel ;
+    schema:about cls:Q21017008 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/taipei-c381.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "台北捷運の高運量の電車。川崎重工と台湾車輛が2010年から作った、ステンレスに青い帯の先頭車。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "台北捷運 C381 型"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/taipei-c381/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/taipei-c381.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#taipei-c381> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/taipei-c381#livery> .
+
+<https://w3id.org/railclass/model/taipei-c381#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C4C7CC" ;
+    tb:areaShare 0.7497 .
+
+<https://w3id.org/railclass/model/taipei-c381#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A8ACB2" ;
+    tb:areaShare 0.1400 .
+
+<https://w3id.org/railclass/model/taipei-c381#color3> a tb:ColorSample ;
+    rdfs:label "stripe" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#2F6ECE" ;
+    tb:areaShare 0.0439 .
+
+<https://w3id.org/railclass/model/taipei-c381#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0206 .
+
+<https://w3id.org/railclass/model/taipei-c381#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3E4C5C" ;
+    tb:areaShare 0.0166 .
+
+<https://w3id.org/railclass/model/taipei-c381#color6> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#262A31" ;
+    tb:areaShare 0.0116 .
+
+<https://w3id.org/railclass/model/taipei-c381#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0074 .
+
+<https://w3id.org/railclass/model/taipei-c381#livery> a tb:Livery ;
+    rdfs:label "Taipei Metro C381 livery (stainless with blue wing and stripe)"@en,
+        "台北捷運 C381 型の塗装（ステンレスに青い翼と帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/taipei-c381/trtc_taipei-c381.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/taipei-c381#color1>,
+        <https://w3id.org/railclass/model/taipei-c381#color2>,
+        <https://w3id.org/railclass/model/taipei-c381#color3>,
+        <https://w3id.org/railclass/model/taipei-c381#color4>,
+        <https://w3id.org/railclass/model/taipei-c381#color5>,
+        <https://w3id.org/railclass/model/taipei-c381#color6>,
+        <https://w3id.org/railclass/model/taipei-c381#color7> ;
+    tb:liveryOf wd:Q11411921 .
+
 mdl:tanzania a schema:3DModel ;
     schema:about cls:tb-tanzania ;
     schema:contentUrl <https://railclass.ldas.jp/models/tanzania.glb> ;
@@ -269037,9 +269117,6 @@ wd:Q1137818 rdfs:label "F Market & Wharves"@en .
 wd:Q1137886 rdfs:label "South London Line"@en .
 
 wd:Q1141069 rdfs:label "Cross Country Route"@en .
-
-wd:Q11411921 rdfs:label "Taipei Rapid Transit Corporation"@en,
-        "台北捷運公司"@ja .
 
 wd:Q114312991 rdfs:label "Red Line"@en .
 
@@ -272680,6 +272757,9 @@ wd:Q1140138 rdfs:label "San Francisco Municipal Railway"@en,
         "サンフランシスコ市営鉄道"@ja .
 
 wd:Q114018 rdfs:label "Stettiner Straßen-Eisenbahn-Gesellschaft"@en .
+
+wd:Q11411921 rdfs:label "Taipei Rapid Transit Corporation"@en,
+        "台北捷運公司"@ja .
 
 wd:Q1143763 rdfs:label "Cumbres and Toltec Scenic Railroad"@en,
         "クンブレス・アンド・トルテック・シーニック鉄道"@ja .
@@ -279094,11 +279174,11 @@ wd:Q7570387 rdfs:label "Southern Region of British Railways"@en,
 wd:Q922964 rdfs:label "Swindon Works"@en,
         "グレート・ウェスタン鉄道スウィンドン工場"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q391795 rdfs:label "Škoda Works"@en,
         "シュコダ財閥"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q838212 rdfs:label "CAF"@ja .
 
