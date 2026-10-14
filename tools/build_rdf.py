@@ -162,6 +162,7 @@ CLASSES = {
     "Q21017008": ("Q21017008", None, None),                   # Taipei Metro C381 (Kawasaki / TRSC)
     "Q17183109": ("Q17183109", None, None),                   # Nippon Sharyo DMU (UP Express, SMART)
     "Q130362331": ("Q130362331", None, None),                 # Renfe Class 106 (Talgo Avril)
+    "Q19896241": ("Q19896241", None, None),                   # Scomi SUTRA (KL Monorail)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -309,6 +310,7 @@ LIVERIES = {
     "cta-7000": ({"en": "CTA 7000-series livery (stainless with a blue end cap)", "ja": "CTA 7000 系の塗装（ステンレスに青い顔）"}, "Q117309"),
     "trtc-c381": ({"en": "Taipei Metro C381 livery (stainless with blue wing and stripe)", "ja": "台北捷運 C381 型の塗装（ステンレスに青い翼と帯）"}, "Q11411921"),
     "up-express": ({"en": "UP Express livery (stainless with olive and orange bands)", "ja": "UP エクスプレスの塗装（ステンレスにオリーブと橙の帯）"}, "Q3307451"),
+    "rapidkl-monorail": ({"en": "Rapid KL monorail livery (red and white)", "ja": "Rapid KL のモノレールの塗装（赤と白）"}, "Q3271384"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -398,6 +400,7 @@ MODELS = {
     "taipei-c381": ("Q21017008", "trtc-c381", None),
     "upexpress": ("Q17183109", "up-express", None),
     "avril": ("Q130362331", "renfe-ave", None),
+    "klmonorail": ("Q19896241", "rapidkl-monorail", None),
 }
 
 

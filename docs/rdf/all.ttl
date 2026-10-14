@@ -92687,25 +92687,6 @@ cls:Q19891894 a skos:Concept,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Pune%20Karjat%20passenger%20Indian%20Railways.jpg> ;
     tb:has3DModel false .
 
-cls:Q19896241 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Scomi SUTRA"@en,
-        "スコミSUTRA"@ja ;
-    skos:exactMatch wd:Q19896241 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Scomi SUTRA"@en,
-        "スコミSUTRA"@ja ;
-    prov:wasDerivedFrom wd:Q19896241 ;
-    wdt:P1064 wd:Q10676742 ;
-    wdt:P176 wd:Q7434334 ;
-    wdt:P279 wd:Q483373 ;
-    wdt:P930 wd:Q25857994 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SCOMI%20Sutra%20for%20Rapid%20Rail.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q19896241#line1> ;
-    tb:operatingCountry wd:Q833 ;
-    tb:usedOn wd:Q1790833 .
-
 cls:Q19898793 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "DE class 428"@en ;
@@ -241277,6 +241258,9 @@ wd:Q326013 rdfs:label "Neoplan"@en,
 wd:Q3267863 rdfs:label "SMRT Corporation"@en,
         "SMRTコーポレーション"@ja .
 
+wd:Q3271384 rdfs:label "Rapid KL"@en,
+        "ラピドKL"@ja .
+
 wd:Q3272877 rdfs:label "4-14-4"@en .
 
 wd:Q3276327 rdfs:label "Ohmi Railway"@en,
@@ -247284,6 +247268,26 @@ cls:Q19877282 a skos:Concept,
     tb:has3DModel true ;
     tb:operatingCountry wd:Q16,
         wd:Q30 .
+
+cls:Q19896241 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Scomi SUTRA"@en,
+        "スコミSUTRA"@ja ;
+    skos:exactMatch wd:Q19896241 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Scomi SUTRA"@en,
+        "スコミSUTRA"@ja ;
+    prov:wasDerivedFrom wd:Q19896241 ;
+    wdt:P1064 wd:Q10676742 ;
+    wdt:P176 wd:Q7434334 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SCOMI%20Sutra%20for%20Rapid%20Rail.jpg> ;
+    schema:subjectOf mdl:klmonorail ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q19896241#line1> ;
+    tb:operatingCountry wd:Q833 ;
+    tb:usedOn wd:Q1790833 .
 
 <https://w3id.org/railclass/Q19896241#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1790833#P3438> ;
@@ -265637,6 +265641,86 @@ mdl:jakartamrt a schema:3DModel ;
         <https://w3id.org/railclass/model/jakartamrt#color9> ;
     tb:liveryOf wd:Q137969581 .
 
+mdl:klmonorail a schema:3DModel ;
+    schema:about cls:Q19896241 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/klmonorail.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "クアラルンプールの跨座式モノレール。Rapid KL の赤と白の塗装、4両編成の端の車。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 39.8 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "KL モノレール（スコミ SUTRA）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/klmonorail/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/klmonorail.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#klmonorail> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/klmonorail#livery> .
+
+<https://w3id.org/railclass/model/klmonorail#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#F0F1EF" ;
+    tb:areaShare 0.7236 .
+
+<https://w3id.org/railclass/model/klmonorail#color2> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#CC1424" ;
+    tb:areaShare 0.1716 .
+
+<https://w3id.org/railclass/model/klmonorail#color3> a tb:ColorSample ;
+    rdfs:label "roofgrey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C4C8CC" ;
+    tb:areaShare 0.0302 .
+
+<https://w3id.org/railclass/model/klmonorail#color4> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#1F3C9C" ;
+    tb:areaShare 0.0287 .
+
+<https://w3id.org/railclass/model/klmonorail#color5> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0262 .
+
+<https://w3id.org/railclass/model/klmonorail#color6> a tb:ColorSample ;
+    rdfs:label "cavity" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#1C1E22" ;
+    tb:areaShare 0.0095 .
+
+<https://w3id.org/railclass/model/klmonorail#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0093 .
+
+<https://w3id.org/railclass/model/klmonorail#livery> a tb:Livery ;
+    rdfs:label "Rapid KL monorail livery (red and white)"@en,
+        "Rapid KL のモノレールの塗装（赤と白）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/klmonorail/rapidkl_klmonorail.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q3142 ;
+    tb:colorSample <https://w3id.org/railclass/model/klmonorail#color1>,
+        <https://w3id.org/railclass/model/klmonorail#color2>,
+        <https://w3id.org/railclass/model/klmonorail#color3>,
+        <https://w3id.org/railclass/model/klmonorail#color4>,
+        <https://w3id.org/railclass/model/klmonorail#color5>,
+        <https://w3id.org/railclass/model/klmonorail#color6>,
+        <https://w3id.org/railclass/model/klmonorail#color7> ;
+    tb:liveryOf wd:Q3271384 .
+
 mdl:ktxeum a schema:3DModel ;
     schema:about cls:Q104216528 ;
     schema:contentUrl <https://railclass.ldas.jp/models/ktxeum.glb> ;
@@ -278966,9 +279050,6 @@ wd:Q900778 rdfs:label "Yugoslav Railways"@en,
 wd:Q917028 rdfs:label "dining car"@en,
         "食堂車"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q333498 rdfs:label "Bombardier"@en,
         "ボンバルディア"@ja .
 
@@ -278996,6 +279077,9 @@ wd:Q6379763 rdfs:label "Kawasaki Railcar Manufacturing"@en,
 
 wd:Q249654 rdfs:label "Ministry of Railways"@en,
         "鉄道省"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q370736 rdfs:label "Cape Colony"@en,
         "ケープ植民地"@ja .
@@ -279294,9 +279378,6 @@ wd:Q682656 rdfs:label "760 mm track gauge"@en,
 wd:Q664420 rdfs:label "Brown, Boveri & Cie"@en,
         "ブラウン・ボベリ"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q4032352 rdfs:label "750 mm track gauge"@en,
         "750 mm軌間"@ja .
 
@@ -279309,8 +279390,8 @@ wd:Q1548721 rdfs:label "open coach"@en,
 wd:Q7987516 rdfs:label "Western Australian Government Railways"@en,
         "西豪州国営鉄道"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q36704 rdfs:label "Yugoslavia"@en,
         "ユーゴスラビア"@ja .
@@ -279320,6 +279401,9 @@ wd:Q752392 rdfs:label "railcar"@en,
 
 wd:Q2814117 rdfs:label "Robert Stephenson and Company"@en,
         "ロバート・スチーブンソン・アンド・カンパニー"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q252 rdfs:label "Indonesia"@en,
         "インドネシア"@ja .

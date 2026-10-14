@@ -1,0 +1,234 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/model/klmonorail#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0287"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#1F3C9C",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/klmonorail",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/klmonorail#livery"
+      },
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/Q19896241"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass.ldas.jp/models/klmonorail.glb"
+      },
+      "schema:depth": {
+        "@id": "_:klmonorail-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "クアラルンプールの跨座式モノレール。Rapid KL の赤と白の塗装、4両編成の端の車。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:klmonorail-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "KL モノレール（スコミ SUTRA）"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/klmonorail/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/klmonorail.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#klmonorail"
+      },
+      "schema:width": {
+        "@id": "_:klmonorail-width"
+      }
+    },
+    {
+      "@id": "_:klmonorail-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:klmonorail-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:klmonorail-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "39.8"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/klmonorail#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0302"
+      },
+      "rdfs:label": "roofgrey",
+      "schema:color": "#C4C8CC",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/klmonorail#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1716"
+      },
+      "rdfs:label": "red",
+      "schema:color": "#CC1424",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/klmonorail#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/klmonorail#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/klmonorail#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/klmonorail#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/klmonorail#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/klmonorail#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/klmonorail#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/klmonorail#color7"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/klmonorail/rapidkl_klmonorail.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q3271384"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Rapid KL monorail livery (red and white)"
+        },
+        {
+          "@language": "ja",
+          "@value": "Rapid KL のモノレールの塗装（赤と白）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3142"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/klmonorail#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0095"
+      },
+      "rdfs:label": "cavity",
+      "schema:color": "#1C1E22",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/klmonorail#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0093"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/klmonorail#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7236"
+      },
+      "rdfs:label": "white",
+      "schema:color": "#F0F1EF",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/klmonorail#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0262"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    }
+  ]
+}
