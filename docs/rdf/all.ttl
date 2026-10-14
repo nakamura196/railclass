@@ -234333,24 +234333,6 @@ cls:Q9358626 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q36 .
 
-cls:Q935909 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "VR Class Sm3"@en,
-        "VRSm3電車"@ja ;
-    skos:exactMatch wd:Q935909 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "VR Class Sm3"@en,
-        "VRSm3電車"@ja ;
-    prov:wasDerivedFrom wd:Q935909 ;
-    wdt:P1064 wd:Q19750814 ;
-    wdt:P137 wd:Q913248 ;
-    wdt:P17 wd:Q33 ;
-    wdt:P176 wd:Q309084 ;
-    wdt:P279 wd:Q3757636 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Green%20Finnish%20Pendolino.JPG> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q33 .
-
 cls:Q936039 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "SNCF TGV Iris 320"@en,
@@ -261457,6 +261439,25 @@ cls:Q891775 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q935909 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "VR Class Sm3"@en,
+        "VRSm3電車"@ja ;
+    skos:exactMatch wd:Q935909 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "VR Class Sm3"@en,
+        "VRSm3電車"@ja ;
+    prov:wasDerivedFrom wd:Q935909 ;
+    wdt:P1064 wd:Q19750814 ;
+    wdt:P137 wd:Q913248 ;
+    wdt:P17 wd:Q33 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q3757636 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Green%20Finnish%20Pendolino.JPG> ;
+    schema:subjectOf mdl:sm3 ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q33 .
+
 <https://w3id.org/railclass/Q938723#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1317105#P3438> ;
     skos:note "wikidata"@en ;
@@ -267386,6 +267387,99 @@ mdl:sg-tel a schema:3DModel ;
         <https://w3id.org/railclass/model/sg-tel#color8>,
         <https://w3id.org/railclass/model/sg-tel#color9> ;
     tb:liveryOf wd:Q3243209 .
+
+mdl:sm3 a schema:3DModel ;
+    schema:about cls:Q935909 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/sm3.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "フィンランドの振り子式電車。白に緑の帯、森の絵と前に突き出た連結器の箱。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "VR Sm3 ペンドリーノ"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/sm3/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/sm3.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#sm3> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/sm3#livery> .
+
+<https://w3id.org/railclass/model/sm3#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#F2F4F3" ;
+    tb:areaShare 0.7375 .
+
+<https://w3id.org/railclass/model/sm3#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#16181B" ;
+    tb:areaShare 0.0617 .
+
+<https://w3id.org/railclass/model/sm3#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#6E7478" ;
+    tb:areaShare 0.0469 .
+
+<https://w3id.org/railclass/model/sm3#color4> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#4FB838" ;
+    tb:areaShare 0.0459 .
+
+<https://w3id.org/railclass/model/sm3#color5> a tb:ColorSample ;
+    rdfs:label "roofgrey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C4C8CA" ;
+    tb:areaShare 0.0300 .
+
+<https://w3id.org/railclass/model/sm3#color6> a tb:ColorSample ;
+    rdfs:label "leaf" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#3CC46E" ;
+    tb:areaShare 0.0280 .
+
+<https://w3id.org/railclass/model/sm3#color7> a tb:ColorSample ;
+    rdfs:label "plate" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A9B1B6" ;
+    tb:areaShare 0.0151 .
+
+<https://w3id.org/railclass/model/sm3#color8> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2E3A44" ;
+    tb:areaShare 0.0151 .
+
+<https://w3id.org/railclass/model/sm3#color9> a tb:ColorSample ;
+    rdfs:label "forest" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#0C9C6C" ;
+    tb:areaShare 0.0070 .
+
+<https://w3id.org/railclass/model/sm3#livery> a tb:Livery ;
+    rdfs:label "VR Sm3 livery (white with a green band and a forest-art panel)"@en,
+        "VR の Sm3 の塗装（白に緑の帯と森の絵）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/sm3/vr_sm3.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://w3id.org/railclass/model/sm3#color1>,
+        <https://w3id.org/railclass/model/sm3#color2>,
+        <https://w3id.org/railclass/model/sm3#color3>,
+        <https://w3id.org/railclass/model/sm3#color4>,
+        <https://w3id.org/railclass/model/sm3#color5>,
+        <https://w3id.org/railclass/model/sm3#color6>,
+        <https://w3id.org/railclass/model/sm3#color7>,
+        <https://w3id.org/railclass/model/sm3#color8>,
+        <https://w3id.org/railclass/model/sm3#color9> ;
+    tb:liveryOf wd:Q913248 .
 
 mdl:srtred a schema:3DModel ;
     schema:about cls:tb-srtred ;
@@ -278837,9 +278931,6 @@ wd:Q184 rdfs:label "Belarus"@en,
 
 wd:Q26233074 rdfs:label "4-4-2T"@en .
 
-wd:Q3133 rdfs:label "green"@en,
-        "緑"@ja .
-
 wd:Q573094 rdfs:label "Schichau-Werke"@en,
         "シーヒャウ・ヴェルケ"@ja .
 
@@ -278916,6 +279007,9 @@ wd:Q5955751 rdfs:label "Nasmyth, Wilson and Company"@en,
         "ナスミス・ウィルソン"@ja .
 
 wd:Q26234694 rdfs:label "0-4-2T"@en .
+
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
 
 wd:Q336717 rdfs:label "ČD Cargo"@en .
 
@@ -279261,9 +279355,6 @@ wd:Q5295523 rdfs:label "Doncaster Works"@en,
 wd:Q830565 rdfs:label "sleeping car"@en,
         "寝台車"@ja .
 
-wd:Q913248 rdfs:label "VR Group"@en,
-        "VRグループ"@ja .
-
 wd:Q933787 rdfs:label "Škoda Transportation"@en,
         "シュコダ・トランスポーテーション"@ja .
 
@@ -279276,6 +279367,9 @@ wd:Q24730842 rdfs:label "Bo′Bo′+Bo′Bo′"@en .
 
 wd:Q6379763 rdfs:label "Kawasaki Railcar Manufacturing"@en,
         "川崎車両"@ja .
+
+wd:Q913248 rdfs:label "VR Group"@en,
+        "VRグループ"@ja .
 
 wd:Q249654 rdfs:label "Ministry of Railways"@en,
         "鉄道省"@ja .
@@ -279598,9 +279692,6 @@ wd:Q36704 rdfs:label "Yugoslavia"@en,
 wd:Q752392 rdfs:label "railcar"@en,
         "自走客車"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q2814117 rdfs:label "Robert Stephenson and Company"@en,
         "ロバート・スチーブンソン・アンド・カンパニー"@ja .
 
@@ -279613,17 +279704,20 @@ wd:Q379439 rdfs:label "Queensland Rail"@en,
 wd:Q432790 rdfs:label "Linke-Hofmann"@en,
         "リンケ・ホフマン・ブッシュ"@ja .
 
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
 wd:Q2756040 rdfs:label "Société Alsacienne de Constructions Mécaniques"@en,
         "アルザス機械工業協会"@ja .
 
 wd:Q423 rdfs:label "North Korea"@en,
         "朝鮮民主主義人民共和国"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q393557 rdfs:label "Železničná spoločnosť Slovensko"@en,
         "鉄道企業体スロバキア"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q7061278 rdfs:label "Norges Statsbaner"@en .
 

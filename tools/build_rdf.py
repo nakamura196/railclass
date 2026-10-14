@@ -165,6 +165,7 @@ CLASSES = {
     "Q19896241": ("Q19896241", None, None),                   # Scomi SUTRA (KL Monorail)
     "Q7585955": ("Q7585955", None, None),                     # Sri Lanka Railways S12 (CSR Sifang DMU)
     "Q6955219": ("Q6955219", None, None),                     # NR class (Indian Pacific livery, NR86)
+    "Q935909": ("Q935909", None, None),                       # VR Class Sm3 Pendolino
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -317,6 +318,7 @@ LIVERIES = {
     "rapidkl-monorail": ({"en": "Rapid KL monorail livery (red and white)", "ja": "Rapid KL のモノレールの塗装（赤と白）"}, "Q3271384"),
     "slr-s12": ({"en": "Sri Lanka Railways S12 livery (blue, 2012-)", "ja": "スリランカ鉄道 S12 形の塗装（青、2012 年から）"}, "Q7585945"),
     "indian-pacific": ({"en": "Indian Pacific livery (yellow cab, blue hood, wedge-tailed eagle)", "ja": "インディアン・パシフィックの塗装（黄色の運転台、青い車体、オナガイヌワシ）"}, "Q1544385"),
+    "vr-sm3": ({"en": "VR Sm3 livery (white with a green band and a forest-art panel)", "ja": "VR の Sm3 の塗装（白に緑の帯と森の絵）"}, "Q913248"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -409,6 +411,7 @@ MODELS = {
     "klmonorail": ("Q19896241", "rapidkl-monorail", None),
     "lanka-s12": ("Q7585955", "slr-s12", None),
     "indianpacific": ("Q6955219", "indian-pacific", None),
+    "sm3": ("Q935909", "vr-sm3", None),
 }
 
 

@@ -1,0 +1,103 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:sm3 a schema:3DModel ;
+    schema:about cls:Q935909 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/sm3.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "フィンランドの振り子式電車。白に緑の帯、森の絵と前に突き出た連結器の箱。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "VR Sm3 ペンドリーノ"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/sm3/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/sm3.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#sm3> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/sm3#livery> .
+
+<https://w3id.org/railclass/model/sm3#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#F2F4F3" ;
+    tb:areaShare 0.7375 .
+
+<https://w3id.org/railclass/model/sm3#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#16181B" ;
+    tb:areaShare 0.0617 .
+
+<https://w3id.org/railclass/model/sm3#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#6E7478" ;
+    tb:areaShare 0.0469 .
+
+<https://w3id.org/railclass/model/sm3#color4> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#4FB838" ;
+    tb:areaShare 0.0459 .
+
+<https://w3id.org/railclass/model/sm3#color5> a tb:ColorSample ;
+    rdfs:label "roofgrey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C4C8CA" ;
+    tb:areaShare 0.0300 .
+
+<https://w3id.org/railclass/model/sm3#color6> a tb:ColorSample ;
+    rdfs:label "leaf" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#3CC46E" ;
+    tb:areaShare 0.0280 .
+
+<https://w3id.org/railclass/model/sm3#color7> a tb:ColorSample ;
+    rdfs:label "plate" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A9B1B6" ;
+    tb:areaShare 0.0151 .
+
+<https://w3id.org/railclass/model/sm3#color8> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2E3A44" ;
+    tb:areaShare 0.0151 .
+
+<https://w3id.org/railclass/model/sm3#color9> a tb:ColorSample ;
+    rdfs:label "forest" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#0C9C6C" ;
+    tb:areaShare 0.0070 .
+
+<https://w3id.org/railclass/model/sm3#livery> a tb:Livery ;
+    rdfs:label "VR Sm3 livery (white with a green band and a forest-art panel)"@en,
+        "VR の Sm3 の塗装（白に緑の帯と森の絵）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/sm3/vr_sm3.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://w3id.org/railclass/model/sm3#color1>,
+        <https://w3id.org/railclass/model/sm3#color2>,
+        <https://w3id.org/railclass/model/sm3#color3>,
+        <https://w3id.org/railclass/model/sm3#color4>,
+        <https://w3id.org/railclass/model/sm3#color5>,
+        <https://w3id.org/railclass/model/sm3#color6>,
+        <https://w3id.org/railclass/model/sm3#color7>,
+        <https://w3id.org/railclass/model/sm3#color8>,
+        <https://w3id.org/railclass/model/sm3#color9> ;
+    tb:liveryOf wd:Q913248 .
+
