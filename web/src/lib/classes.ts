@@ -23,7 +23,7 @@ export type FacetRow = { label: string; values: { text: string; search?: string 
 export type ClassPage = {
   id: string; name: string; other: string | null; wikidata: string | null; derivedFrom: string | null;
   broader: { id: string; name: string }[]; narrower: { id: string; name: string }[];
-  facets: FacetRow[]; models: string[]; photo: { src: string; page: string; who: string | null; lic: string | null; licUrl: string | null } | null;
+  facets: FacetRow[]; models: string[]; photo: { src: string; page: string; who: string | null; lic: string | null; licUrl: string | null; size: [number, number] | null } | null;
   ttl: string;
 };
 
@@ -34,6 +34,20 @@ function index() {
     INDEX = existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : null;
   }
   return INDEX;
+}
+
+/** Width and height of each local photo copy (data/photos/_photos.tsv from tools/fetch_photos.py), for og:image. */
+let SIZES: Map<string, [number, number]>;
+function photoSize(key: string) {
+  if (!SIZES) {
+    SIZES = new Map();
+    const p = resolve(DOCS, "../data/photos/_photos.tsv");
+    if (existsSync(p)) for (const line of readFileSync(p, "utf8").split("\n").slice(1)) {
+      const c = line.split("\t");
+      if (c.length > 4) SIZES.set(c[1], [+c[3], +c[4]]);
+    }
+  }
+  return SIZES.get(key) ?? null;
 }
 
 /** The ids of the classes that have an RDF file (and so a page). Since 2026-10-10 every class of the search has one
@@ -117,7 +131,7 @@ export function classPage(id: string, lang: Lang, fmtN: (n: number) => string, y
       const src = k ? `photos/${k}.webp` : t.length > 4 ? t : t ? `${THUMB}${t}/${u}/330px-${u}` : `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=330`;
       const c = D.credit?.[row];
       const [lic, licUrl] = c ? D.licenses[c[1]] : [null, null];
-      photo = { src, page: FILEPAGE + u, who: c ? D.artists[c[0]] || null : null, lic: lic || null, licUrl: licUrl || null };
+      photo = { src, page: FILEPAGE + u, who: c ? D.artists[c[0]] || null : null, lic: lic || null, licUrl: licUrl || null, size: k ? photoSize(k) : null };
     }
   }
 

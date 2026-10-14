@@ -38,10 +38,14 @@ const uri = `https://w3id.org/railclass/${id}`;
 const here = `rdf/class/${id}.html`;
 const cite = `${c.name}. ${ui.site.name}. ${uri}`;
 const cls = (x: string) => page(lang, `rdf/class/${x}.html`);
+// Share image: the class's photo when the site has a local copy (photos/<key>.webp); a Wikimedia address is not used,
+// because Wikimedia refuses Facebook's fetcher (403, checked 2026-10-14). Otherwise the site-wide image.
+const share = c.photo && !c.photo.src.startsWith("http") ? { src: c.photo.src, alt: c.name, size: c.photo.size, type: "image/webp" } : undefined;
 const lines = classLines(id);
 const mapped = lines.filter(l => l.map);
 ---
-<Base lang={lang} path={here} current="search" title={`${c.name} — ${ui.site.name}`} description={`${T.kicker}: ${c.name}${c.other ? ` (${c.other})` : ""}`}>
+<Base lang={lang} path={here} current="search" title={`${c.name} — ${ui.site.name}`} description={`${T.kicker}: ${c.name}${c.other ? ` (${c.other})` : ""}`}
+  image={share}>
 {mods.length > 0 && <script slot="head" type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>}
 {mapped.length > 0 && <link slot="head" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.css">}
 {mapped.length > 0 && <script slot="head" is:inline src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>}

@@ -11,13 +11,16 @@ interface Props {
   title?: string;        // full <title>; the site name alone when omitted
   description?: string;
   current?: string;      // nav key shown as the current page
+  image?: { src: string; alt: string; size: [number, number] | null; type: string };  // share image under the site (class pages: the photo)
 }
-const { lang, path, title, description, current } = Astro.props;
+const { lang, path, title, description, current, image } = Astro.props;
 const ui = t(lang);
 const canonical = new URL(page(lang, path), Astro.site).href;
 // Icon and share image are made by ~/git/tools/og-image from og-image.json into docs/site/ (copied by sync-public).
 const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
-const ogImage = new URL(`${base}site/og-${lang}.jpg`, Astro.site).href;
+const og = image
+  ? { url: new URL(base + image.src, Astro.site).href, size: image.size, alt: image.alt, type: image.type }
+  : { url: new URL(`${base}site/og-${lang}.jpg`, Astro.site).href, size: [1200, 630], alt: `${ui.site.name} — ${ui.site.description}`, type: "image/jpeg" };
 ---
 <!doctype html>
 <html lang={lang}>
@@ -33,10 +36,11 @@ const ogImage = new URL(`${base}site/og-${lang}.jpg`, Astro.site).href;
 <meta property="og:type" content="website">
 <meta property="og:url" content={canonical}>
 <meta property="og:locale" content={lang === "en" ? "en_US" : "ja_JP"}>
-<meta property="og:image" content={ogImage}>
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content={`${ui.site.name} — ${ui.site.description}`}>
+<meta property="og:image" content={og.url}>
+<meta property="og:image:type" content={og.type}>
+{og.size && <meta property="og:image:width" content={String(og.size[0])}>}
+{og.size && <meta property="og:image:height" content={String(og.size[1])}>}
+<meta property="og:image:alt" content={og.alt}>
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href={`${base}site/favicon.ico`} sizes="32x32">
 <link rel="icon" href={`${base}site/icon.svg`} type="image/svg+xml">
