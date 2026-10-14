@@ -170,6 +170,7 @@ CLASSES = {
     "tb-hktram": (None, None, {"en": "Hong Kong Tramways double-deck tram (7th generation)", "ja": "香港の路面電車（第 7 世代、2 階建て）"}),  # Hong Kong Tramways 7th-generation double-deck tram (no Wikidata item for the cars; the system Q385245 is linked in tools/class_lines.tsv)
     "Q95613096": ("Q95613096", None, None),                   # LRTA 13000 class (Manila LRT Line 1, CAF/Mitsubishi)
     "tb-delhimetro": (None, None, {"en": "Delhi Metro Magenta Line car (Hyundai Rotem)", "ja": "デリーメトロ マゼンタ線の電車（現代ロテム製）"}),  # Delhi Metro Magenta Line Hyundai Rotem car (no Wikidata item for the cars; the line Q19893471 is linked in tools/class_lines.tsv)
+    "Q18632551": ("Q18632551", None, None),                   # Wuppertal Schwebebahn GTW Generation 15
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -245,7 +246,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q25197235": "シカゴ「L」CTA 7000系",
             "Q7585955": "スリランカ鉄道 S12 形",
             "Q6955219": "NR 形",
-            "Q57469448": "フリートーゲ 78 形"}
+            "Q57469448": "フリートーゲ 78 形",
+            "Q18632551": "ヴッパータール空中鉄道 GTW 15"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -334,6 +336,7 @@ LIVERIES = {
     "hktramways-green": ({"en": "Hong Kong Tramways plain green livery (with the smiling bumper)", "ja": "香港トラムの緑一色の塗装（笑顔のバンパー）"}, "Q15902782"),
     "lrmc-13000": ({"en": "LRT Line 1 13000 class livery (red and stainless with a black forehead)", "ja": "LRT 1 号線 13000 形の塗装（赤とステンレスに黒い額）"}, "Q65087474"),
     "dmrc-magenta": ({"en": "Delhi Metro Magenta Line livery (stainless with magenta bands, black helmet nose)", "ja": "デリーメトロ マゼンタ線の塗装（ステンレスにマゼンタの帯、黒いヘルメットの鼻）"}, "Q1029339"),
+    "wsw-gtw15": ({"en": "WSW Schwebebahn livery (pale sky blue)", "ja": "ヴッパータール空中鉄道の塗装（淡い空色）"}, "Q2537722"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -431,6 +434,7 @@ MODELS = {
     "hktram": ("tb-hktram", "hktramways-green", None),
     "manila-lrt1": ("Q95613096", "lrmc-13000", None),
     "delhimetro": ("tb-delhimetro", "dmrc-magenta", None),
+    "schwebebahn": ("Q18632551", "wsw-gtw15", None),
 }
 
 

@@ -88414,23 +88414,6 @@ cls:Q18630401 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q39 .
 
-cls:Q18632551 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "GTW Generation 15"@en ;
-    skos:exactMatch wd:Q18632551 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "GTW Generation 15"@en ;
-    prov:wasDerivedFrom wd:Q18632551 ;
-    wdt:P176 wd:Q7942066 ;
-    wdt:P2052 65.0 ;
-    wdt:P279 wd:Q125920856 ;
-    wdt:P930 wd:Q25857994 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/%C2%A9-WSW-th-160114-GTW01-03.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q18632551#line1> ;
-    tb:operatingCountry wd:Q183 ;
-    tb:usedOn wd:Q256964 .
-
 cls:Q1863306 a skos:Concept,
         tb:VehicleClass ;
     skos:exactMatch wd:Q1863306 ;
@@ -240900,6 +240883,8 @@ wd:Q2516140 rdfs:label "Verkehrsbetriebe Brandenburg an der Havel"@en,
 
 wd:Q253577 rdfs:label "Chemin de Fer du Cambrésis"@en .
 
+wd:Q2537722 rdfs:label "WSW Wuppertaler Stadtwerke"@en .
+
 wd:Q25383062 rdfs:label "Mauri Bus System"@en .
 
 wd:Q25469036 rdfs:label "Directorate General of Railways"@en .
@@ -246865,6 +246850,26 @@ cls:Q18619244 a skos:Concept,
     tb:line wd:Q7428218 ;
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
+
+cls:Q18632551 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "GTW Generation 15"@en,
+        "ヴッパータール空中鉄道 GTW 15"@ja ;
+    skos:exactMatch wd:Q18632551 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "GTW Generation 15"@en,
+        "ヴッパータール空中鉄道 GTW 15"@ja ;
+    prov:wasDerivedFrom wd:Q18632551 ;
+    wdt:P176 wd:Q7942066 ;
+    wdt:P2052 65.0 ;
+    wdt:P279 wd:Q125920856 ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/%C2%A9-WSW-th-160114-GTW01-03.jpg> ;
+    schema:subjectOf mdl:schwebebahn ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q18632551#line1> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q256964 .
 
 <https://w3id.org/railclass/Q18632551#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q256964#P3438> ;
@@ -267620,6 +267625,77 @@ mdl:santiago-chillan a schema:3DModel ;
         <https://w3id.org/railclass/model/santiago-chillan#color8> ;
     tb:liveryOf wd:Q679910 .
 
+mdl:schwebebahn a schema:3DModel ;
+    schema:about cls:Q18632551 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/schwebebahn.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.2 ] ;
+    schema:description "ドイツの懸垂式モノレール（1901年開業）の2016年からの車両。淡い空色、扉は片側だけ。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ヴッパータール空中鉄道 GTW 15"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/schwebebahn/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/schwebebahn.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#schwebebahn> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/schwebebahn#livery> .
+
+<https://w3id.org/railclass/model/schwebebahn#color1> a tb:ColorSample ;
+    rdfs:label "sky" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#AECCDD" ;
+    tb:areaShare 0.8713 .
+
+<https://w3id.org/railclass/model/schwebebahn#color2> a tb:ColorSample ;
+    rdfs:label "seal" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#101215" ;
+    tb:areaShare 0.0727 .
+
+<https://w3id.org/railclass/model/schwebebahn#color3> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#303C48" ;
+    tb:areaShare 0.0184 .
+
+<https://w3id.org/railclass/model/schwebebahn#color4> a tb:ColorSample ;
+    rdfs:label "face" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#101215" ;
+    tb:areaShare 0.0144 .
+
+<https://w3id.org/railclass/model/schwebebahn#color5> a tb:ColorSample ;
+    rdfs:label "grille" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2A2D30" ;
+    tb:areaShare 0.0106 .
+
+<https://w3id.org/railclass/model/schwebebahn#color6> a tb:ColorSample ;
+    rdfs:label "under" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4A5056" ;
+    tb:areaShare 0.0074 .
+
+<https://w3id.org/railclass/model/schwebebahn#livery> a tb:Livery ;
+    rdfs:label "WSW Schwebebahn livery (pale sky blue)"@en,
+        "ヴッパータール空中鉄道の塗装（淡い空色）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/schwebebahn/wsw_schwebebahn.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088 ;
+    tb:colorSample <https://w3id.org/railclass/model/schwebebahn#color1>,
+        <https://w3id.org/railclass/model/schwebebahn#color2>,
+        <https://w3id.org/railclass/model/schwebebahn#color3>,
+        <https://w3id.org/railclass/model/schwebebahn#color4>,
+        <https://w3id.org/railclass/model/schwebebahn#color5>,
+        <https://w3id.org/railclass/model/schwebebahn#color6> ;
+    tb:liveryOf wd:Q2537722 .
+
 mdl:sg-tel a schema:3DModel ;
     schema:about cls:Q17051139 ;
     schema:contentUrl <https://railclass.ldas.jp/models/sg-tel.glb> ;
@@ -280125,9 +280201,6 @@ wd:Q2036496 rdfs:label "2-2-2"@en,
 wd:Q3959904 rdfs:label "multiple unit"@en,
         "動力分散方式の列車編成"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q52912 rdfs:label "Statens Järnvägar"@en .
 
 wd:Q1399767 rdfs:label "Sächsische Maschinenfabrik"@en,
@@ -280135,6 +280208,9 @@ wd:Q1399767 rdfs:label "Sächsische Maschinenfabrik"@en,
 
 wd:Q41 rdfs:label "Greece"@en,
         "ギリシャ"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q1092174 rdfs:label "Neilson and Company"@en,
         "ニールソン"@ja .
@@ -280178,9 +280254,6 @@ wd:Q188712 rdfs:label "Empire of Japan"@en,
 wd:Q741266 rdfs:label "Southern Railway"@en,
         "サザン鉄道"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q2011495 rdfs:label "Vulcan Foundry"@en,
         "バルカン・ファウンドリー"@ja .
 
@@ -280189,6 +280262,9 @@ wd:Q749311 rdfs:label "tender"@en,
 
 wd:Q155 rdfs:label "Brazil"@en,
         "ブラジル"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q477493 rdfs:label "Lokomotivfabrik Floridsdorf"@en .
 
