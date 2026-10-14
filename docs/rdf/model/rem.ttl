@@ -1,0 +1,96 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:rem a schema:3DModel ;
+    schema:about cls:Q121749358 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/rem.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "カナダ・モントリオールの自動運転の電車。黒い前面を黄緑の輪が囲む。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "REM（モントリオール）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/rem/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/rem.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#rem> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/rem#livery> .
+
+<https://w3id.org/railclass/model/rem#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#E8EAEC" ;
+    tb:areaShare 0.6169 .
+
+<https://w3id.org/railclass/model/rem#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#E0E3E5" ;
+    tb:areaShare 0.1087 .
+
+<https://w3id.org/railclass/model/rem#color3> a tb:ColorSample ;
+    rdfs:label "dkgreen" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#175040" ;
+    tb:areaShare 0.0961 .
+
+<https://w3id.org/railclass/model/rem#color4> a tb:ColorSample ;
+    rdfs:label "pane" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3E4E5C" ;
+    tb:areaShare 0.0654 .
+
+<https://w3id.org/railclass/model/rem#color5> a tb:ColorSample ;
+    rdfs:label "lime" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#8CC81A" ;
+    tb:areaShare 0.0468 .
+
+<https://w3id.org/railclass/model/rem#color6> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#1C2227" ;
+    tb:areaShare 0.0269 .
+
+<https://w3id.org/railclass/model/rem#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0193 .
+
+<https://w3id.org/railclass/model/rem#color8> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#34424E" ;
+    tb:areaShare 0.0131 .
+
+<https://w3id.org/railclass/model/rem#livery> a tb:Livery ;
+    rdfs:label "REM livery (black front mask in a lime-green ring, silver body)"@en,
+        "REM の塗装（黄緑の輪に囲まれた黒い前面、銀の車体）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/rem/mtl_rem.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://w3id.org/railclass/model/rem#color1>,
+        <https://w3id.org/railclass/model/rem#color2>,
+        <https://w3id.org/railclass/model/rem#color3>,
+        <https://w3id.org/railclass/model/rem#color4>,
+        <https://w3id.org/railclass/model/rem#color5>,
+        <https://w3id.org/railclass/model/rem#color6>,
+        <https://w3id.org/railclass/model/rem#color7>,
+        <https://w3id.org/railclass/model/rem#color8> ;
+    tb:liveryOf wd:Q23938011 .
+

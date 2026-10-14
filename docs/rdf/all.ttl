@@ -241172,6 +241172,8 @@ wd:Q2389196 rdfs:label "Takargo Rail"@en,
 wd:Q23925184 rdfs:label "battery electric bus"@en,
         "二次電池式電気バス"@ja .
 
+wd:Q23938011 rdfs:label "CDPQ Infra"@en .
+
 wd:Q23979144 rdfs:label "Bane NOR"@en .
 
 wd:Q24005025 rdfs:label "Société Anonyme des Ateliers Gilly"@en .
@@ -244914,6 +244916,19 @@ cls:Q120801969 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "historical" ;
     tb:usedUntil "2002"^^xsd:gYear .
+
+cls:Q121749358 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Alstom Metropolis Saint-Laurent (REM)"@en,
+        "REM（モントリオール）の電車（アルストム メトロポリス）"@ja ;
+    skos:exactMatch wd:Q121749358 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Alstom Metropolis Saint-Laurent (REM)"@en,
+        "REM（モントリオール）の電車（アルストム メトロポリス）"@ja ;
+    prov:wasDerivedFrom wd:Q121749358 ;
+    wdt:P279 wd:Q662195 ;
+    schema:subjectOf mdl:rem ;
+    tb:has3DModel true .
 
 <https://w3id.org/railclass/Q1227404#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q833824#P3438> ;
@@ -266017,6 +266032,92 @@ mdl:railjet a schema:3DModel ;
         <https://w3id.org/railclass/model/railjet#color9> ;
     tb:liveryOf wd:Q83822 .
 
+mdl:rem a schema:3DModel ;
+    schema:about cls:Q121749358 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/rem.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "カナダ・モントリオールの自動運転の電車。黒い前面を黄緑の輪が囲む。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "REM（モントリオール）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/rem/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/rem.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#rem> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/rem#livery> .
+
+<https://w3id.org/railclass/model/rem#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#E8EAEC" ;
+    tb:areaShare 0.6169 .
+
+<https://w3id.org/railclass/model/rem#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#E0E3E5" ;
+    tb:areaShare 0.1087 .
+
+<https://w3id.org/railclass/model/rem#color3> a tb:ColorSample ;
+    rdfs:label "dkgreen" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#175040" ;
+    tb:areaShare 0.0961 .
+
+<https://w3id.org/railclass/model/rem#color4> a tb:ColorSample ;
+    rdfs:label "pane" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3E4E5C" ;
+    tb:areaShare 0.0654 .
+
+<https://w3id.org/railclass/model/rem#color5> a tb:ColorSample ;
+    rdfs:label "lime" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#8CC81A" ;
+    tb:areaShare 0.0468 .
+
+<https://w3id.org/railclass/model/rem#color6> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#1C2227" ;
+    tb:areaShare 0.0269 .
+
+<https://w3id.org/railclass/model/rem#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0193 .
+
+<https://w3id.org/railclass/model/rem#color8> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#34424E" ;
+    tb:areaShare 0.0131 .
+
+<https://w3id.org/railclass/model/rem#livery> a tb:Livery ;
+    rdfs:label "REM livery (black front mask in a lime-green ring, silver body)"@en,
+        "REM の塗装（黄緑の輪に囲まれた黒い前面、銀の車体）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/rem/mtl_rem.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://w3id.org/railclass/model/rem#color1>,
+        <https://w3id.org/railclass/model/rem#color2>,
+        <https://w3id.org/railclass/model/rem#color3>,
+        <https://w3id.org/railclass/model/rem#color4>,
+        <https://w3id.org/railclass/model/rem#color5>,
+        <https://w3id.org/railclass/model/rem#color6>,
+        <https://w3id.org/railclass/model/rem#color7>,
+        <https://w3id.org/railclass/model/rem#color8> ;
+    tb:liveryOf wd:Q23938011 .
+
 mdl:riyadh a schema:3DModel ;
     schema:about cls:Q2284320 ;
     schema:contentUrl <https://railclass.ldas.jp/models/riyadh.glb> ;
@@ -276584,8 +276685,6 @@ wd:Q568840 rdfs:label "Hitachi Rail Italy"@en,
 wd:Q5878090 rdfs:label "Hokkaido Colliery and Railway Company"@en,
         "北海道炭礦鉄道"@ja .
 
-wd:Q662195 rdfs:label "メトロポリス (鉄道車両)"@ja .
-
 wd:Q671188 rdfs:label "tilting train"@en,
         "車体傾斜式車両"@ja .
 
@@ -276664,6 +276763,8 @@ wd:Q47071 rdfs:label "brown"@en,
 wd:Q473921 rdfs:label "UIC-Z car"@en .
 
 wd:Q63226316 rdfs:label "Gateshead Works"@en .
+
+wd:Q662195 rdfs:label "メトロポリス (鉄道車両)"@ja .
 
 wd:Q6963679 rdfs:label "CRRC Nanjing Puzhen Co., Ltd."@en,
         "中国中車南京浦鎮車輛"@ja .
@@ -277155,9 +277256,6 @@ wd:Q2904527 rdfs:label "Birmingham Railway Carriage and Wagon Company"@en,
 wd:Q298 rdfs:label "Chile"@en,
         "チリ"@ja .
 
-wd:Q3133 rdfs:label "green"@en,
-        "緑"@ja .
-
 wd:Q334 rdfs:label "Singapore"@en,
         "シンガポール"@ja .
 
@@ -277259,6 +277357,9 @@ wd:Q117270765 rdfs:label "Government Railway Works Bureau"@en,
 wd:Q17147097 rdfs:label "950 mm track gauge"@en .
 
 wd:Q3109506 rdfs:label "Media Distancia Renfe"@en .
+
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
 
 wd:Q4354109 rdfs:label "cab unit"@en,
         "キャブ・ユニット"@ja .
@@ -278042,12 +278143,6 @@ wd:Q904589 rdfs:label "Breda"@en,
 wd:Q9322 rdfs:label "Deutsche Bahn"@en,
         "ドイツ鉄道"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q26251835 rdfs:label "diesel-mechanical locomotive"@en .
 
 wd:Q31747 rdfs:label "Irish Free State"@en,
@@ -278055,6 +278150,9 @@ wd:Q31747 rdfs:label "Irish Free State"@en,
 
 wd:Q533534 rdfs:label "Cisleithania"@en,
         "ツィスライタニエン"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q186320 rdfs:label "Grand Duchy of Baden"@en,
         "バーデン大公国"@ja .
@@ -278070,6 +278168,9 @@ wd:Q633519 rdfs:label "Córas Iompair Éireann"@en,
 
 wd:Q6418354 rdfs:label "Kitson and Company"@en,
         "キットソン (機関車メーカー)"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q1321361 rdfs:label "Société Franco-Belge"@en,
         "ソシエテ・フランコ＝ベルジュ"@ja .
