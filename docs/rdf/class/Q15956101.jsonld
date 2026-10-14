@@ -14,20 +14,11 @@
   },
   "@graph": [
     {
-      "@id": "https://w3id.org/railclass/Q15956101#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q1617936#P3438"
-      },
-      "line": {
-        "@id": "wd:Q1617936"
-      },
-      "skos:note": {
+      "@id": "wd:Q1617936",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
+        "@value": "Highland Main Line"
+      }
     },
     {
       "@id": "wd:Q5758708",
@@ -61,7 +52,7 @@
       "foaf:depiction": {
         "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/800105%20at%20Arbroath%20260523%20%2852927192017%29.jpg"
       },
-      "has3DModel": false,
+      "has3DModel": true,
       "lineUse": [
         {
           "@id": "https://w3id.org/railclass/Q15956101#line1"
@@ -86,6 +77,9 @@
           "@value": "イギリス鉄道800形"
         }
       ],
+      "schema:subjectOf": {
+        "@id": "https://w3id.org/railclass/model/class800"
+      },
       "skos:exactMatch": {
         "@id": "wd:Q15956101"
       },
@@ -115,10 +109,10 @@
       },
       "wdt:P137": [
         {
-          "@id": "wd:Q53649859"
+          "@id": "wd:Q1419438"
         },
         {
-          "@id": "wd:Q1419438"
+          "@id": "wd:Q53649859"
         }
       ],
       "wdt:P17": {
@@ -127,10 +121,16 @@
       "wdt:P176": {
         "@id": "wd:Q53238"
       },
-      "wdt:P2052": {
-        "@type": "xsd:decimal",
-        "@value": "201"
-      },
+      "wdt:P2052": [
+        {
+          "@type": "xsd:decimal",
+          "@value": "200"
+        },
+        {
+          "@type": "xsd:decimal",
+          "@value": "201"
+        }
+      ],
       "wdt:P279": [
         {
           "@id": "wd:Q1066003"
@@ -151,11 +151,20 @@
       }
     },
     {
-      "@id": "wd:Q1617936",
-      "rdfs:label": {
+      "@id": "https://w3id.org/railclass/Q15956101#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q1617936#P3438"
+      },
+      "line": {
+        "@id": "wd:Q1617936"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "Highland Main Line"
-      }
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     }
   ]
 }

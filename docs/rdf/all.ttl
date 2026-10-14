@@ -36,6 +36,8 @@ tb:VehicleClass a rdfs:Class ;
     rdfs:comment "A class (type) of railway vehicle or road vehicle; one record per class."@en ;
     rdfs:isDefinedBy cls:vocab .
 
+wd:Q5600044 rdfs:label "Great Storm"@en .
+
 cls:Q100140515 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Transitio ER1"@en ;
@@ -69458,34 +69460,6 @@ cls:Q1593543 a skos:Concept,
     wdt:P2978 wd:Q656940 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/69901%20Mauterndorf.jpg> ;
     tb:has3DModel false .
-
-cls:Q15956101 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "British Rail Class 800"@en,
-        "イギリス鉄道800形"@ja ;
-    skos:exactMatch wd:Q15956101 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "British Rail Class 800"@en,
-        "イギリス鉄道800形"@ja ;
-    prov:wasDerivedFrom wd:Q15956101 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q1419438,
-        wd:Q53649859 ;
-    wdt:P17 wd:Q145 ;
-    wdt:P176 wd:Q53238 ;
-    wdt:P2052 201.0 ;
-    wdt:P279 wd:Q1066003,
-        wd:Q13402959,
-        wd:Q28455463 ;
-    wdt:P729 "2017"^^xsd:gYear ;
-    wdt:P930 wd:Q106530439 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/800105%20at%20Arbroath%20260523%20%2852927192017%29.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q15956101#line1>,
-        <https://w3id.org/railclass/Q15956101#line2> ;
-    tb:operatingCountry wd:Q145 ;
-    tb:usedOn wd:Q1617936,
-        wd:Q5758708 .
 
 cls:Q1596438 a skos:Concept,
         tb:VehicleClass ;
@@ -245878,6 +245852,36 @@ cls:Q1436723 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q15956101 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 800"@en,
+        "イギリス鉄道800形"@ja ;
+    skos:exactMatch wd:Q15956101 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "British Rail Class 800"@en,
+        "イギリス鉄道800形"@ja ;
+    prov:wasDerivedFrom wd:Q15956101 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1419438,
+        wd:Q53649859 ;
+    wdt:P17 wd:Q145 ;
+    wdt:P176 wd:Q53238 ;
+    wdt:P2052 200.0,
+        201.0 ;
+    wdt:P279 wd:Q1066003,
+        wd:Q13402959,
+        wd:Q28455463 ;
+    wdt:P729 "2017"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/800105%20at%20Arbroath%20260523%20%2852927192017%29.jpg> ;
+    schema:subjectOf mdl:class800 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q15956101#line1>,
+        <https://w3id.org/railclass/Q15956101#line2> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q1617936,
+        wd:Q5758708 .
+
 <https://w3id.org/railclass/Q15956101#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1617936#P3438> ;
     skos:note "wikidata"@en ;
@@ -263232,6 +263236,85 @@ mdl:class395 a schema:3DModel ;
         <https://w3id.org/railclass/model/class395#color8> ;
     tb:liveryOf wd:Q1696490 .
 
+mdl:class800 a schema:3DModel ;
+    schema:about cls:Q15956101 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/class800.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "英国グレート・ウェスタン鉄道の日立製の都市間列車。緑の車体に黄色の鼻。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "Class 800 IET（GWR）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/class800/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/class800.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#class800> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/class800#livery> .
+
+<https://w3id.org/railclass/model/class800#color1> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#12423A" ;
+    tb:areaShare 0.8097 .
+
+<https://w3id.org/railclass/model/class800#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8E9396" ;
+    tb:areaShare 0.0866 .
+
+<https://w3id.org/railclass/model/class800#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0356 .
+
+<https://w3id.org/railclass/model/class800#color4> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#F2B21C" ;
+    tb:areaShare 0.0152 .
+
+<https://w3id.org/railclass/model/class800#color5> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B8BEC4" ;
+    tb:areaShare 0.0121 .
+
+<https://w3id.org/railclass/model/class800#color6> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#E8792A" ;
+    tb:areaShare 0.0111 .
+
+<https://w3id.org/railclass/model/class800#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0067 .
+
+<https://w3id.org/railclass/model/class800#livery> a tb:Livery ;
+    rdfs:label "GWR green livery (with a yellow nose)"@en,
+        "GWR の緑の塗装（黄色の鼻）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/class800/gwr_class800.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3133,
+        wd:Q39338 ;
+    tb:colorSample <https://w3id.org/railclass/model/class800#color1>,
+        <https://w3id.org/railclass/model/class800#color2>,
+        <https://w3id.org/railclass/model/class800#color3>,
+        <https://w3id.org/railclass/model/class800#color4>,
+        <https://w3id.org/railclass/model/class800#color5>,
+        <https://w3id.org/railclass/model/class800#color6>,
+        <https://w3id.org/railclass/model/class800#color7> ;
+    tb:liveryOf wd:Q1419438 .
+
 mdl:corcovado a schema:3DModel ;
     schema:about cls:Q120801969 ;
     schema:contentUrl <https://railclass.ldas.jp/models/corcovado.glb> ;
@@ -276525,9 +276608,6 @@ wd:Q116914082 rdfs:label "Saar Railways"@en .
 wd:Q1258373 rdfs:label "Southern"@en,
         "サザン"@ja .
 
-wd:Q1419438 rdfs:label "Great Western Railway"@en,
-        "グレート・ウェスタン・レールウェイ"@ja .
-
 wd:Q159631 rdfs:label "Kingdom of Württemberg"@en,
         "ヴュルテンベルク王国"@ja .
 
@@ -276672,6 +276752,9 @@ wd:Q13882327 rdfs:label "Nederlandsche Rhijnspoorweg-Maatschappij"@en,
 
 wd:Q1415097 rdfs:label "London Post Office Railway"@en,
         "ロンドン郵便局鉄道"@ja .
+
+wd:Q1419438 rdfs:label "Great Western Railway"@en,
+        "グレート・ウェスタン・レールウェイ"@ja .
 
 wd:Q1509724 rdfs:label "baggage car"@en,
         "荷物車"@ja .
@@ -277606,9 +277689,6 @@ wd:Q17147097 rdfs:label "950 mm track gauge"@en .
 
 wd:Q3109506 rdfs:label "Media Distancia Renfe"@en .
 
-wd:Q3133 rdfs:label "green"@en,
-        "緑"@ja .
-
 wd:Q4354109 rdfs:label "cab unit"@en,
         "キャブ・ユニット"@ja .
 
@@ -277668,6 +277748,9 @@ wd:Q923337 rdfs:label "Ukrainian Railways"@en,
 wd:Q93090957 rdfs:label "SNCF Voyageurs"@en .
 
 wd:Q3112900 rdfs:label "Goša FOM"@en .
+
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
 
 wd:Q766616 rdfs:label "Slovenske železnice"@en,
         "スロベニア鉄道"@ja .
@@ -277785,9 +277868,6 @@ wd:Q2905881 rdfs:label "Blanc-Misseron"@en .
 wd:Q381955 rdfs:label "ATM"@en,
         "アジエンダ・トラスポルティ・ミラネージ"@ja .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q52323373 rdfs:label "0-6-0de"@en .
 
 wd:Q5955751 rdfs:label "Nasmyth, Wilson and Company"@en,
@@ -277849,6 +277929,9 @@ wd:Q2729224 rdfs:label "Stadler Rail Valencia"@en .
 
 wd:Q3303533 rdfs:label "British Rail Engineering Limited"@en,
         "ブリティッシュ・レール・エンジニアリング"@ja .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q5330761 rdfs:label "Eastleigh Locomotive, Carriage and Wagon Works"@en,
         "イーストレイ工場"@ja .
@@ -278423,11 +278506,11 @@ wd:Q1321361 rdfs:label "Société Franco-Belge"@en,
 wd:Q23444 rdfs:label "white"@en,
         "白"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q1473477 rdfs:label "4-8-2"@en,
         "車軸配置 4-8-2"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q35953 rdfs:label "MAN SE"@en,
         "MAN"@ja .
