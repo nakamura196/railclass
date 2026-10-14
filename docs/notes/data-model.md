@@ -619,9 +619,10 @@ ERATV の型名には、製品名の後ろに版・編成・保安装置が付�
   > 典拠からの再生成は約 3 分で、手作業を挟みません。
   > データは CC0、3D モデルと画像は CC BY 4.0、路線の線データは OpenStreetMap に従い ODbL、写真は各ファイルの Commons の条件です。
   > 中身は、同時に応募する LD Browser（https://browser.ldas.jp/ ）でも見られます。
+  > URI は https://w3id.org/railclass/ で、置き場所が変わっても残ります。
   > 件数・ファイル・ライセンスの一覧は https://railclass.ldas.jp/dataset.html にあります。
 
-  【条件】URI を w3id に移せたら「URI は https://w3id.org/railclass/ で、置き場所が変わっても残ります。」を足す。
+  URI の 1 文は、2026-10-13 に URI を w3id に移したので入れた（下の「RDF の URI を w3id に差し替えた」）。
   データセットの説明の頁は 2026-10-13 時点で https://railclass.ldas.jp/dataset.html で公開中。上の最後の 1 文に入れた
   （w3id の転送は dataset.html を扱わないので、railclass.ldas.jp の URL で書く）
 - 応募者名: 中村 覚
@@ -779,9 +780,12 @@ ERATV の型名には、製品名の後ろに版・編成・保安装置が付�
   w3id の URI を Turtle・JSON-LD・HTML で引き、形式・独自 ID の形式（tb-）・モデル・語彙・全体の行き先がすべて期待どおり
 - **データセット自体の URI は `https://w3id.org/railclass/dataset` にした。w3id にこの転送はまだ無い**（引くと 404）。
   概念体系と同じ URI（ルート）にする案は、ルートを Turtle で引くと all.ttl が返り、VoID が入っていないのでやめた。
-  w3id に `dataset` → `rdf/void.ttl`・`void.jsonld`・`dataset.html` の 3 行を足す PR が要る（未提出）
+  w3id に `dataset` → `rdf/void.ttl`・`void.jsonld`・`dataset.html` の転送を足す PR を出した（perma-id/w3id.org#6896、2026-10-13。README も「`/` は概念体系、`/dataset` はデータセットの説明」に直した）
 - 途中で見つけた別の不具合（未修正）: Wikidata の「値が不明」（`.well-known/genid/…`）が、`wd:` を前に付けた
   `http://www.wikidata.org/entity/http://www.wikidata.org/.well-known/genid/…` という IRI で 13 形式の電化方式などに入っている。
   検索の道具はこれを剥がして読んでいる（今回の書き換えで一度壊し、元に戻した）
 - 進め方の記録: 別のセッションが同時に車両を足していた（avanti390、続いて sg-tel）。`build_rdf.py` と全 RDF が両方の作業で書き換わるため、
   avanti390 のコミットを待ってから始めた。sg-tel は途中で重なり、作り直した RDF に sg-tel の分も入っている
+- コミット: sg-tel の追加（0814dcc。`build_rdf.py` は sg-tel の 3 行だけを先に入れた）→ URI の差し替えと RDF・検索の作り直し（c66ab5c）→ IIIF のコレクションに sg-tel（1f6add4）。
+  sg-tel のダウンロード用ファイルは `skytrain/tools/export_formats.py sg-tel … --no-mount` で作った（公開前の検査に要る）
+- 応募の下書きの RailClass の概要に「URI は https://w3id.org/railclass/ で…」の 1 文を入れた。残る【条件】はパートナーリソースだけ
