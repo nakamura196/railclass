@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/model/alishan#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0524"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#262323",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/alishan#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0361"
+      },
+      "rdfs:label": "white",
+      "schema:color": "#F0EEE8",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/alishan#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/alishan#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/alishan#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/alishan#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/alishan#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/alishan#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/alishan#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/alishan#color7"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/alishan/afr_alishan.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q55695198"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Alishan Forest Railway livery (red with a white band and white V chevrons)"
+        },
+        {
+          "@language": "ja",
+          "@value": "阿里山林業鉄路の塗装（赤い車体に白い帯と V 字）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q3142"
+        },
+        {
+          "@id": "wd:Q47071"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/alishan#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0553"
+      },
+      "rdfs:label": "gap",
+      "schema:color": "#701418",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/alishan",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/alishan#livery"
+      },
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/tb-alishan"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass.ldas.jp/models/alishan.glb"
+      },
+      "schema:depth": {
+        "@id": "_:alishan-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "台湾の森林鉄道のディーゼル機関車。赤い車体に白い帯とV字。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:alishan-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "阿里山林業鉄路 DL-45形"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/alishan/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/alishan.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#alishan"
+      },
+      "schema:width": {
+        "@id": "_:alishan-width"
+      }
+    },
+    {
+      "@id": "_:alishan-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "150.2"
+      }
+    },
+    {
+      "@id": "_:alishan-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "39.2"
+      }
+    },
+    {
+      "@id": "_:alishan-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "46.5"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/alishan#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7763"
+      },
+      "rdfs:label": "afrred",
+      "schema:color": "#D01E24",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/alishan#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0054"
+      },
+      "rdfs:label": "sash",
+      "schema:color": "#B8BCC0",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/alishan#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0094"
+      },
+      "rdfs:label": "grille",
+      "schema:color": "#D6D2CC",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/alishan#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0497"
+      },
+      "rdfs:label": "slat",
+      "schema:color": "#5A0E12",
+      "wdt:P462": {
+        "@id": "wd:Q47071"
+      }
+    }
+  ]
+}

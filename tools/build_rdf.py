@@ -175,6 +175,7 @@ CLASSES = {
     "Q16908552": ("Q16908552", None, None),                   # Korail Class 210000 (ITX-Saemaeul)
     "Q117911780": ("Q117911780", None, {"en": "Class 388 (TRAXX MS3)", "ja": "388 形（TRAXX MS3）"}),  # Lokomotiva 388 (Bombardier/Alstom TRAXX MS3); mul label only
     "Q11680376": ("Q11680376", None, None),                   # CP 4000 Series (Alfa Pendular)
+    "tb-alishan": (None, None, {"en": "Alishan Forest Railway DL-45 class diesel locomotive", "ja": "阿里山林業鉄路 DL-45 形ディーゼル機関車"}),  # Alishan Forest Railway DL-45 class (no Wikidata item; the system Q708937 is linked in tools/class_lines.tsv)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -210,6 +211,8 @@ HAND = {
     "tb-hktram": {"country": ["Q8646"], "operator": ["Q15902782"], "kind": ["Q3407658"], "serviceEntry": [2011]},
     # India; DMRC (P137 of Q19893471); Hyundai Rotem; EMU; Magenta Line opened 2017-12-25 (driverless from 2020-12-28)
     "tb-delhimetro": {"country": ["Q668"], "operator": ["Q1029339"], "manufacturer": ["Q152517"], "kind": ["Q483373"], "serviceEntry": [2017]},
+    # Taiwan; Alishan Forest Railway and Cultural Heritage Office (P137 of Q708937); Nippon Sharyo; diesel locomotive; DL-45 delivered 2006
+    "tb-alishan": {"country": ["Q865"], "operator": ["Q55695198"], "manufacturer": ["Q682174"], "kind": ["Q34336"], "serviceEntry": [2006]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
@@ -226,6 +229,7 @@ HAND_SOURCE = {
     "tb-insurgente": "Country and operator from Wikidata Q16642463 (El Insurgente, the line); manufacturer and type (CAF EMU) and the opening of the first section (2023-09-15) from en.wikipedia 'El Insurgente' via the skytrain lab note docs/notes/insurgente.md (2026-10-12).",
     "tb-hktram": "Country and operator from Wikidata Q385245 (Hong Kong Tramways, the system) and Q15902782 (the company); the 7th-generation body (2011-) from en.wikipedia 'Hong Kong Tramways' via the skytrain lab note docs/notes/hktram.md (2026-10-13).",
     "tb-delhimetro": "Country and operator from Wikidata Q19893471 (Magenta Line) and Q271195 (Delhi Metro); manufacturer (Hyundai Rotem) and type (EMU) and the opening of the line (2017-12-25) from en.wikipedia 'Magenta Line (Delhi Metro)' via the skytrain lab note docs/notes/delhimetro.md (2026-10-13).",
+    "tb-alishan": "Country and operator from Wikidata Q708937 (Alishan Forest Railway, the system); manufacturer (Nippon Sharyo, DL-47 on assembled by Taiwan Rolling Stock), type and the 2006 delivery of DL-45 from zh.wikipedia '阿里山林業鐵路柴油機車' via the skytrain lab note docs/notes/alishan.md (2026-10-13).",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -347,6 +351,7 @@ LIVERIES = {
     "korail-itx": ({"en": "ITX-Saemaeul livery (red and charcoal)", "ja": "ITX-セマウルの塗装（赤と濃い灰）"}, "Q18169"),
     "regiojet-yellow": ({"en": "RegioJet livery (yellow with silver cab tops edged by a red line)", "ja": "RegioJet の塗装（黄色、運転台の上の銀と赤い縁取り）"}, "Q221186"),
     "cp-alfa": ({"en": "CP Alfa Pendular livery (silver and slate with a lime line, 2017-)", "ja": "CP のアルファ・ペンドゥラールの塗装（銀とスレート、黄緑の線、2017 年から）"}, "Q81123"),
+    "afr-red": ({"en": "Alishan Forest Railway livery (red with a white band and white V chevrons)", "ja": "阿里山林業鉄路の塗装（赤い車体に白い帯と V 字）"}, "Q55695198"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -449,6 +454,7 @@ MODELS = {
     "itx-saemaeul": ("Q16908552", "korail-itx", None),
     "regiojet": ("Q117911780", "regiojet-yellow", None),
     "alfapendular": ("Q11680376", "cp-alfa", None),
+    "alishan": ("tb-alishan", "afr-red", None),
 }
 
 

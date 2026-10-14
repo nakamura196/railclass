@@ -262391,6 +262391,85 @@ mdl:alfapendular a schema:3DModel ;
         <https://w3id.org/railclass/model/alfapendular#color9> ;
     tb:liveryOf wd:Q81123 .
 
+mdl:alishan a schema:3DModel ;
+    schema:about cls:tb-alishan ;
+    schema:contentUrl <https://railclass.ldas.jp/models/alishan.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.2 ] ;
+    schema:description "台湾の森林鉄道のディーゼル機関車。赤い車体に白い帯とV字。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 46.5 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "阿里山林業鉄路 DL-45形"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/alishan/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/alishan.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#alishan> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 39.2 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/alishan#livery> .
+
+<https://w3id.org/railclass/model/alishan#color1> a tb:ColorSample ;
+    rdfs:label "afrred" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#D01E24" ;
+    tb:areaShare 0.7763 .
+
+<https://w3id.org/railclass/model/alishan#color2> a tb:ColorSample ;
+    rdfs:label "gap" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#701418" ;
+    tb:areaShare 0.0553 .
+
+<https://w3id.org/railclass/model/alishan#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#262323" ;
+    tb:areaShare 0.0524 .
+
+<https://w3id.org/railclass/model/alishan#color4> a tb:ColorSample ;
+    rdfs:label "slat" ;
+    wdt:P462 wd:Q47071 ;
+    schema:color "#5A0E12" ;
+    tb:areaShare 0.0497 .
+
+<https://w3id.org/railclass/model/alishan#color5> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#F0EEE8" ;
+    tb:areaShare 0.0361 .
+
+<https://w3id.org/railclass/model/alishan#color6> a tb:ColorSample ;
+    rdfs:label "grille" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#D6D2CC" ;
+    tb:areaShare 0.0094 .
+
+<https://w3id.org/railclass/model/alishan#color7> a tb:ColorSample ;
+    rdfs:label "sash" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B8BCC0" ;
+    tb:areaShare 0.0054 .
+
+<https://w3id.org/railclass/model/alishan#livery> a tb:Livery ;
+    rdfs:label "Alishan Forest Railway livery (red with a white band and white V chevrons)"@en,
+        "阿里山林業鉄路の塗装（赤い車体に白い帯と V 字）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/alishan/afr_alishan.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q47071 ;
+    tb:colorSample <https://w3id.org/railclass/model/alishan#color1>,
+        <https://w3id.org/railclass/model/alishan#color2>,
+        <https://w3id.org/railclass/model/alishan#color3>,
+        <https://w3id.org/railclass/model/alishan#color4>,
+        <https://w3id.org/railclass/model/alishan#color5>,
+        <https://w3id.org/railclass/model/alishan#color6>,
+        <https://w3id.org/railclass/model/alishan#color7> ;
+    tb:liveryOf wd:Q55695198 .
+
 mdl:allegra a schema:3DModel ;
     schema:about cls:Q671805 ;
     schema:contentUrl <https://railclass.ldas.jp/models/allegra.glb> ;
@@ -269783,6 +269862,36 @@ cls:tb-addis a skos:Concept,
     tb:sourceSection "Wikidata (the system)" ;
     tb:useStatus "current" .
 
+cls:tb-alishan a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Alishan Forest Railway DL-45 class diesel locomotive"@en,
+        "阿里山林業鉄路 DL-45 形ディーゼル機関車"@ja ;
+    dcterms:source "Country and operator from Wikidata Q708937 (Alishan Forest Railway, the system); manufacturer (Nippon Sharyo, DL-47 on assembled by Taiwan Rolling Stock), type and the 2006 delivery of DL-45 from zh.wikipedia '阿里山林業鐵路柴油機車' via the skytrain lab note docs/notes/alishan.md (2026-10-13)."@en ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Alishan Forest Railway DL-45 class diesel locomotive"@en,
+        "阿里山林業鉄路 DL-45 形ディーゼル機関車"@ja ;
+    wdt:P137 wd:Q55695198 ;
+    wdt:P17 wd:Q865 ;
+    wdt:P176 wd:Q682174 ;
+    wdt:P279 wd:Q34336 ;
+    wdt:P729 "2006"^^xsd:gYear ;
+    schema:subjectOf mdl:alishan ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/tb-alishan#line1> ;
+    tb:usedOn wd:Q708937 .
+
+<https://w3id.org/railclass/tb-alishan#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q708937> ;
+    skos:note "the Alishan Forest Railway itself; Wikidata has no item for the DL-45 to DL-51 diesel locomotives"@en ;
+    tb:line wd:Q708937 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
 cls:tb-bluetrain a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Blue Train observation car"@en,
@@ -272925,6 +273034,8 @@ wd:Q5566985 rdfs:label "Glasgow to Edinburgh via Carstairs Line"@en .
 
 wd:Q5568092 rdfs:label "Glen Waverley railway line"@en .
 
+wd:Q55695198 rdfs:label "Alishan Forest Railway and Cultural Heritage Office"@en .
+
 wd:Q5578678 rdfs:label "Brisbane–Gold Coast railway line"@en .
 
 wd:Q558389 rdfs:label "Saarbahn"@en .
@@ -273428,9 +273539,6 @@ wd:Q706198 rdfs:label "Taiwan High Speed Rail"@en .
 wd:Q7063727 rdfs:label "Nottingham to Grantham Line"@en .
 
 wd:Q7073894 rdfs:label "Oakham–Kettering line"@en .
-
-wd:Q708937 rdfs:label "Alishan Forest Railway"@en,
-        "阿里山森林鉄路"@ja .
 
 wd:Q7099668 rdfs:label "Orange Line"@en .
 
@@ -276431,6 +276539,9 @@ wd:Q707644 rdfs:label "Wenhu line"@en .
 
 wd:Q708378 rdfs:label "Bannan line"@en .
 
+wd:Q708937 rdfs:label "Alishan Forest Railway"@en,
+        "阿里山森林鉄路"@ja .
+
 wd:Q7155111 rdfs:label "Pauling & Co."@en .
 
 wd:Q7158740 rdfs:label "Peckett and Sons"@en,
@@ -279211,9 +279322,6 @@ wd:Q4596842 rdfs:label "2-6-2+2-6-2"@en,
 
 wd:Q4596843 rdfs:label "2-6-6-2"@en .
 
-wd:Q47071 rdfs:label "brown"@en,
-        "茶色"@ja .
-
 wd:Q5965211 rdfs:label "Manning, Wardle and Company"@en,
         "マニング・ワードル"@ja .
 
@@ -279313,6 +279421,9 @@ wd:Q29530903 rdfs:label "Duncan & Fraser"@en .
 
 wd:Q372974 rdfs:label "Kaiser Ferdinands-Nordbahn"@en,
         "カイザー・フェルディナント・北部鉄道"@ja .
+
+wd:Q47071 rdfs:label "brown"@en,
+        "茶色"@ja .
 
 wd:Q52325058 rdfs:label "0-8-0dh"@en .
 
@@ -280036,9 +280147,6 @@ wd:Q403 rdfs:label "Serbia"@en,
 wd:Q627503 rdfs:label "4-8-4"@en,
         "車輪配置 4-8-4"@ja .
 
-wd:Q682174 rdfs:label "Nippon Sharyo"@en,
-        "日本車輌製造"@ja .
-
 wd:Q960308 rdfs:label "Budd Company"@en,
         "バッド社"@ja .
 
@@ -280072,6 +280180,9 @@ wd:Q629334 rdfs:label "departmental vehicle"@en .
 
 wd:Q668935 rdfs:label "Stadler FLIRT"@en,
         "シュタッドラー・FLIRT"@ja .
+
+wd:Q682174 rdfs:label "Nippon Sharyo"@en,
+        "日本車輌製造"@ja .
 
 wd:Q171150 rdfs:label "Kingdom of Hungary"@en,
         "ハンガリー王国"@ja .
@@ -280297,9 +280408,6 @@ wd:Q534384 rdfs:label "Maschinenbau Kiel"@en,
 wd:Q1069376 rdfs:label "Chemins de fer de l'État"@en,
         "国有鉄道"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q319035 rdfs:label "Arnold Jung Lokomotivfabrik"@en,
         "アーノルト・ユンク"@ja .
 
@@ -280349,6 +280457,9 @@ wd:Q212 rdfs:label "Ukraine"@en,
 
 wd:Q218 rdfs:label "Romania"@en,
         "ルーマニア"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q3542526 rdfs:label "4-8-0"@en,
         "車輪配置 4-8-0"@ja .
@@ -280542,10 +280653,10 @@ wd:Q423 rdfs:label "North Korea"@en,
 wd:Q393557 rdfs:label "Železničná spoločnosť Slovensko"@en,
         "鉄道企業体スロバキア"@ja .
 
+wd:Q7061278 rdfs:label "Norges Statsbaner"@en .
+
 wd:Q23444 rdfs:label "white"@en,
         "白"@ja .
-
-wd:Q7061278 rdfs:label "Norges Statsbaner"@en .
 
 wd:Q476988 rdfs:label "Sharp, Stewart and Company"@en,
         "シャープ・スチュアート"@ja .
@@ -280580,16 +280691,16 @@ wd:Q26208746 rdfs:label "0-6-2T"@en .
 
 wd:Q336811 rdfs:label "ČKD社"@ja .
 
+wd:Q26000795 rdfs:label "2-6-2T"@en .
+
 wd:Q34336 rdfs:label "diesel locomotive"@en,
         "ディーゼル機関車"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
-wd:Q26000795 rdfs:label "2-6-2T"@en .
-
 wd:Q538101 rdfs:label "New Zealand Railways Department"@en,
         "ニュージーランド国鉄"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q7988225 rdfs:label "Western Region of British Railways"@en,
         "西部局"@ja .
@@ -280638,11 +280749,11 @@ wd:Q1088 rdfs:label "blue"@en,
 wd:Q16936947 rdfs:label "electric rail motor coach"@en,
         "電動車"@ja .
 
-wd:Q865 rdfs:label "Taiwan"@en,
-        "中華民国"@ja .
-
 wd:Q43 rdfs:label "Turkey"@en,
         "トルコ"@ja .
+
+wd:Q865 rdfs:label "Taiwan"@en,
+        "中華民国"@ja .
 
 wd:Q26203877 rdfs:label "0-8-0T"@en .
 

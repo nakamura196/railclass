@@ -1,0 +1,89 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:alishan a schema:3DModel ;
+    schema:about cls:tb-alishan ;
+    schema:contentUrl <https://railclass.ldas.jp/models/alishan.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.2 ] ;
+    schema:description "台湾の森林鉄道のディーゼル機関車。赤い車体に白い帯とV字。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 46.5 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "阿里山林業鉄路 DL-45形"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/alishan/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/alishan.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#alishan> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 39.2 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/alishan#livery> .
+
+<https://w3id.org/railclass/model/alishan#color1> a tb:ColorSample ;
+    rdfs:label "afrred" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#D01E24" ;
+    tb:areaShare 0.7763 .
+
+<https://w3id.org/railclass/model/alishan#color2> a tb:ColorSample ;
+    rdfs:label "gap" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#701418" ;
+    tb:areaShare 0.0553 .
+
+<https://w3id.org/railclass/model/alishan#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#262323" ;
+    tb:areaShare 0.0524 .
+
+<https://w3id.org/railclass/model/alishan#color4> a tb:ColorSample ;
+    rdfs:label "slat" ;
+    wdt:P462 wd:Q47071 ;
+    schema:color "#5A0E12" ;
+    tb:areaShare 0.0497 .
+
+<https://w3id.org/railclass/model/alishan#color5> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#F0EEE8" ;
+    tb:areaShare 0.0361 .
+
+<https://w3id.org/railclass/model/alishan#color6> a tb:ColorSample ;
+    rdfs:label "grille" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#D6D2CC" ;
+    tb:areaShare 0.0094 .
+
+<https://w3id.org/railclass/model/alishan#color7> a tb:ColorSample ;
+    rdfs:label "sash" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B8BCC0" ;
+    tb:areaShare 0.0054 .
+
+<https://w3id.org/railclass/model/alishan#livery> a tb:Livery ;
+    rdfs:label "Alishan Forest Railway livery (red with a white band and white V chevrons)"@en,
+        "阿里山林業鉄路の塗装（赤い車体に白い帯と V 字）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/alishan/afr_alishan.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q47071 ;
+    tb:colorSample <https://w3id.org/railclass/model/alishan#color1>,
+        <https://w3id.org/railclass/model/alishan#color2>,
+        <https://w3id.org/railclass/model/alishan#color3>,
+        <https://w3id.org/railclass/model/alishan#color4>,
+        <https://w3id.org/railclass/model/alishan#color5>,
+        <https://w3id.org/railclass/model/alishan#color6>,
+        <https://w3id.org/railclass/model/alishan#color7> ;
+    tb:liveryOf wd:Q55695198 .
+
