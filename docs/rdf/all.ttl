@@ -74625,26 +74625,6 @@ cls:Q1689881 a skos:Concept,
     wdt:P2978 wd:Q24686956 ;
     tb:has3DModel false .
 
-cls:Q16908552 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Korail Class 210000"@en,
-        "韓国鉄道公社210000系電車"@ja ;
-    skos:exactMatch wd:Q16908552 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Korail Class 210000"@en,
-        "韓国鉄道公社210000系電車"@ja ;
-    prov:wasDerivedFrom wd:Q16908552 ;
-    wdt:P137 wd:Q18169 ;
-    wdt:P176 wd:Q152517 ;
-    wdt:P279 wd:Q483373 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/ITX-Saemaeul.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q16908552#line1>,
-        <https://w3id.org/railclass/Q16908552#line2> ;
-    tb:operatingCountry wd:Q884 ;
-    tb:usedOn wd:Q125404068,
-        wd:Q134342376 .
-
 cls:Q1691455 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "OSE class 460"@en ;
@@ -245857,6 +245837,27 @@ cls:Q16798908 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q16908552 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Korail Class 210000"@en,
+        "韓国鉄道公社210000系電車"@ja ;
+    skos:exactMatch wd:Q16908552 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Korail Class 210000"@en,
+        "韓国鉄道公社210000系電車"@ja ;
+    prov:wasDerivedFrom wd:Q16908552 ;
+    wdt:P137 wd:Q18169 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/ITX-Saemaeul.jpg> ;
+    schema:subjectOf mdl:itx-saemaeul ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q16908552#line1>,
+        <https://w3id.org/railclass/Q16908552#line2> ;
+    tb:operatingCountry wd:Q884 ;
+    tb:usedOn wd:Q125404068,
+        wd:Q134342376 .
+
 <https://w3id.org/railclass/Q16908552#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q125404068#P3438> ;
     skos:note "wikidata"@en ;
@@ -265912,6 +265913,106 @@ mdl:italo a schema:3DModel ;
         <https://w3id.org/railclass/model/italo#color7> ;
     tb:liveryOf wd:Q580786 .
 
+mdl:itx-saemaeul a schema:3DModel ;
+    schema:about cls:Q16908552 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/itx-saemaeul.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "韓国鉄道公社の都市間電車（210000系）。赤と濃い灰の今の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 39.2 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ITX-セマウル"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/itx-saemaeul/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/itx-saemaeul.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#itx-saemaeul> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/itx-saemaeul#livery> .
+
+<https://w3id.org/railclass/model/itx-saemaeul#color1> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#D0202F" ;
+    tb:areaShare 0.6676 .
+
+<https://w3id.org/railclass/model/itx-saemaeul#color10> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0060 .
+
+<https://w3id.org/railclass/model/itx-saemaeul#color2> a tb:ColorSample ;
+    rdfs:label "charcoal" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#34383D" ;
+    tb:areaShare 0.1736 .
+
+<https://w3id.org/railclass/model/itx-saemaeul#color3> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A8ACAF" ;
+    tb:areaShare 0.0446 .
+
+<https://w3id.org/railclass/model/itx-saemaeul#color4> a tb:ColorSample ;
+    rdfs:label "under" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3C3E42" ;
+    tb:areaShare 0.0285 .
+
+<https://w3id.org/railclass/model/itx-saemaeul#color5> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0171 .
+
+<https://w3id.org/railclass/model/itx-saemaeul#color6> a tb:ColorSample ;
+    rdfs:label "rib" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#80868B" ;
+    tb:areaShare 0.0167 .
+
+<https://w3id.org/railclass/model/itx-saemaeul#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4E5C68" ;
+    tb:areaShare 0.0144 .
+
+<https://w3id.org/railclass/model/itx-saemaeul#color8> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5C6066" ;
+    tb:areaShare 0.0109 .
+
+<https://w3id.org/railclass/model/itx-saemaeul#color9> a tb:ColorSample ;
+    rdfs:label "lens" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#262C32" ;
+    tb:areaShare 0.0105 .
+
+<https://w3id.org/railclass/model/itx-saemaeul#livery> a tb:Livery ;
+    rdfs:label "ITX-Saemaeul livery (red and charcoal)"@en,
+        "ITX-セマウルの塗装（赤と濃い灰）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/itx-saemaeul/korail_itx-saemaeul.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/itx-saemaeul#color1>,
+        <https://w3id.org/railclass/model/itx-saemaeul#color10>,
+        <https://w3id.org/railclass/model/itx-saemaeul#color2>,
+        <https://w3id.org/railclass/model/itx-saemaeul#color3>,
+        <https://w3id.org/railclass/model/itx-saemaeul#color4>,
+        <https://w3id.org/railclass/model/itx-saemaeul#color5>,
+        <https://w3id.org/railclass/model/itx-saemaeul#color6>,
+        <https://w3id.org/railclass/model/itx-saemaeul#color7>,
+        <https://w3id.org/railclass/model/itx-saemaeul#color8>,
+        <https://w3id.org/railclass/model/itx-saemaeul#color9> ;
+    tb:liveryOf wd:Q18169 .
+
 mdl:jakartamrt a schema:3DModel ;
     schema:about cls:Q56394168 ;
     schema:contentUrl <https://railclass.ldas.jp/models/jakartamrt.glb> ;
@@ -279728,9 +279829,6 @@ wd:Q7038300 rdfs:label "Nine Elms Locomotive Works"@en,
 wd:Q787383 rdfs:label "North Eastern Railway"@en,
         "ノース・イースタン鉄道"@ja .
 
-wd:Q18169 rdfs:label "Korea Railroad Corporation"@en,
-        "韓国鉄道公社"@ja .
-
 wd:Q1906878 rdfs:label "Oerlikon Works"@en,
         "エリコン機械製造"@ja .
 
@@ -279758,6 +279856,9 @@ wd:Q960308 rdfs:label "Budd Company"@en,
 
 wd:Q1272318 rdfs:label "Great Northern Railway"@en,
         "グレート・ノーザン鉄道"@ja .
+
+wd:Q18169 rdfs:label "Korea Railroad Corporation"@en,
+        "韓国鉄道公社"@ja .
 
 wd:Q23239 rdfs:label "Amtrak"@en,
         "アムトラック"@ja .
@@ -279976,9 +280077,6 @@ wd:Q13402959 rdfs:label "high-speed train"@en,
 wd:Q2449525 rdfs:label "Transnet Freight Rail"@en,
         "スポールネット"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q5261524 rdfs:label "Derby Works"@en,
         "ダービー鉄道製作所"@ja .
 
@@ -279986,6 +280084,9 @@ wd:Q26234622 rdfs:label "2-4-0T"@en .
 
 wd:Q5600013 rdfs:label "Great Southern Railways"@en,
         "グレート・サザン鉄道"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q392082 rdfs:label "Škoda Vagonka"@en,
         "シュコダ・ヴァゴンカ"@ja .
@@ -280287,10 +280388,10 @@ wd:Q41 rdfs:label "Greece"@en,
 wd:Q1092174 rdfs:label "Neilson and Company"@en,
         "ニールソン"@ja .
 
+wd:Q26208746 rdfs:label "0-6-2T"@en .
+
 wd:Q23445 rdfs:label "black"@en,
         "黒"@ja .
-
-wd:Q26208746 rdfs:label "0-6-2T"@en .
 
 wd:Q336811 rdfs:label "ČKD社"@ja .
 
@@ -280587,11 +280688,11 @@ wd:Q1415234 rdfs:label "15 kV, 16.7 Hz AC railway electrification"@en .
 wd:Q163580 rdfs:label "Henschel & Sohn"@en,
         "ヘンシェル"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q16957 rdfs:label "East Germany"@en,
         "ドイツ民主共和国"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q617792 rdfs:label "compound locomotive"@en,
         "複式機関"@ja .

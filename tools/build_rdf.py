@@ -172,6 +172,7 @@ CLASSES = {
     "tb-delhimetro": (None, None, {"en": "Delhi Metro Magenta Line car (Hyundai Rotem)", "ja": "デリーメトロ マゼンタ線の電車（現代ロテム製）"}),  # Delhi Metro Magenta Line Hyundai Rotem car (no Wikidata item for the cars; the line Q19893471 is linked in tools/class_lines.tsv)
     "Q18632551": ("Q18632551", None, None),                   # Wuppertal Schwebebahn GTW Generation 15
     "Q22344403": ("Q22344403", None, None),                   # DB Classes 483 and 484 (Berlin S-Bahn)
+    "Q16908552": ("Q16908552", None, None),                   # Korail Class 210000 (ITX-Saemaeul)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -340,6 +341,7 @@ LIVERIES = {
     "dmrc-magenta": ({"en": "Delhi Metro Magenta Line livery (stainless with magenta bands, black helmet nose)", "ja": "デリーメトロ マゼンタ線の塗装（ステンレスにマゼンタの帯、黒いヘルメットの鼻）"}, "Q1029339"),
     "wsw-gtw15": ({"en": "WSW Schwebebahn livery (pale sky blue)", "ja": "ヴッパータール空中鉄道の塗装（淡い空色）"}, "Q2537722"),
     "sbahn-berlin": ({"en": "Berlin S-Bahn livery (traditional red and ochre)", "ja": "ベルリン S バーンの塗装（伝統の赤と黄土色）"}, "Q12374454"),
+    "korail-itx": ({"en": "ITX-Saemaeul livery (red and charcoal)", "ja": "ITX-セマウルの塗装（赤と濃い灰）"}, "Q18169"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -439,6 +441,7 @@ MODELS = {
     "delhimetro": ("tb-delhimetro", "dmrc-magenta", None),
     "schwebebahn": ("Q18632551", "wsw-gtw15", None),
     "sbahn483": ("Q22344403", "sbahn-berlin", None),
+    "itx-saemaeul": ("Q16908552", "korail-itx", None),
 }
 
 
