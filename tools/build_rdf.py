@@ -160,6 +160,7 @@ CLASSES = {
     "Q4033502": ("Q4033502", None, None),                     # Afrosiyob (Talgo 250, Uzbekistan Railways)
     "Q25197235": ("Q25197235", None, None),                   # CTA 7000-series (CRRC Sifang America)
     "Q21017008": ("Q21017008", None, None),                   # Taipei Metro C381 (Kawasaki / TRSC)
+    "Q17183109": ("Q17183109", None, None),                   # Nippon Sharyo DMU (UP Express, SMART)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -306,6 +307,7 @@ LIVERIES = {
     "uty-afrosiyob": ({"en": "Afrosiyob livery (white with an azure roof and flag-colour stripes)", "ja": "アフロシヨブの塗装（白地に空色の屋根と国旗の色の帯）"}, "Q2093569"),
     "cta-7000": ({"en": "CTA 7000-series livery (stainless with a blue end cap)", "ja": "CTA 7000 系の塗装（ステンレスに青い顔）"}, "Q117309"),
     "trtc-c381": ({"en": "Taipei Metro C381 livery (stainless with blue wing and stripe)", "ja": "台北捷運 C381 型の塗装（ステンレスに青い翼と帯）"}, "Q11411921"),
+    "up-express": ({"en": "UP Express livery (stainless with olive and orange bands)", "ja": "UP エクスプレスの塗装（ステンレスにオリーブと橙の帯）"}, "Q3307451"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -393,6 +395,7 @@ MODELS = {
     "afrosiyob": ("Q4033502", "uty-afrosiyob", None),
     "cta7000": ("Q25197235", "cta-7000", None),
     "taipei-c381": ("Q21017008", "trtc-c381", None),
+    "upexpress": ("Q17183109", "up-express", None),
 }
 
 

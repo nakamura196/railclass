@@ -81816,29 +81816,6 @@ cls:Q1718261 a skos:Concept,
     wdt:P2978 wd:Q26203877 ;
     tb:has3DModel false .
 
-cls:Q17183109 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Nippon Sharyo DMU"@en,
-        "日本車両製造製北アメリカ向け気動車"@ja ;
-    skos:exactMatch wd:Q17183109 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Nippon Sharyo DMU"@en,
-        "日本車両製造製北アメリカ向け気動車"@ja ;
-    prov:wasDerivedFrom wd:Q17183109 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q3307451,
-        wd:Q7562166 ;
-    wdt:P176 wd:Q682174 ;
-    wdt:P279 wd:Q1567915 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/UPXatMimico.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q17183109#line1>,
-        <https://w3id.org/railclass/Q17183109#line2> ;
-    tb:operatingCountry wd:Q16,
-        wd:Q30 ;
-    tb:usedOn wd:Q497520,
-        wd:Q7562166 .
-
 cls:Q1718371 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Talbot Class Eifel II"@en ;
@@ -241317,9 +241294,6 @@ wd:Q3304288 rdfs:label "British United Traction"@en,
 wd:Q3307442 rdfs:label "Metro Transit"@en,
         "メトロ・トランジット (ミネソタ州)"@ja .
 
-wd:Q3307451 rdfs:label "Metrolinx"@en,
-        "メトロリンクス"@ja .
-
 wd:Q331380 rdfs:label "Schenectady"@en,
         "スケネクタディ"@ja .
 
@@ -246177,6 +246151,30 @@ cls:Q17051139 a skos:Concept,
     tb:line wd:Q7795883 ;
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
+
+cls:Q17183109 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Nippon Sharyo DMU"@en,
+        "日本車両製造製北アメリカ向け気動車"@ja ;
+    skos:exactMatch wd:Q17183109 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Nippon Sharyo DMU"@en,
+        "日本車両製造製北アメリカ向け気動車"@ja ;
+    prov:wasDerivedFrom wd:Q17183109 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q3307451,
+        wd:Q7562166 ;
+    wdt:P176 wd:Q682174 ;
+    wdt:P279 wd:Q1567915 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/UPXatMimico.jpg> ;
+    schema:subjectOf mdl:upexpress ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q17183109#line1>,
+        <https://w3id.org/railclass/Q17183109#line2> ;
+    tb:operatingCountry wd:Q16,
+        wd:Q30 ;
+    tb:usedOn wd:Q497520,
+        wd:Q7562166 .
 
 <https://w3id.org/railclass/Q17183109#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q497520#P3438> ;
@@ -267742,6 +267740,114 @@ mdl:ubcshuttle a schema:3DModel ;
         <https://w3id.org/railclass/model/ubcshuttle#color7> ;
     tb:liveryOf wd:Q7863809 .
 
+mdl:upexpress a schema:3DModel ;
+    schema:about cls:Q17183109 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/upexpress.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "トロントの空港連絡線を走る日本車輌製の気動車。ステンレスにオリーブと橙の帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "UPエクスプレス"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/upexpress/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/upexpress.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#upexpress> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/upexpress#livery> .
+
+<https://w3id.org/railclass/model/upexpress#color1> a tb:ColorSample ;
+    rdfs:label "stainless" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B9BCC0" ;
+    tb:areaShare 0.5945 .
+
+<https://w3id.org/railclass/model/upexpress#color10> a tb:ColorSample ;
+    rdfs:label "cap" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#555756" ;
+    tb:areaShare 0.0119 .
+
+<https://w3id.org/railclass/model/upexpress#color11> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0063 .
+
+<https://w3id.org/railclass/model/upexpress#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q943 ;
+    schema:color "#85845E" ;
+    tb:areaShare 0.1843 .
+
+<https://w3id.org/railclass/model/upexpress#color3> a tb:ColorSample ;
+    rdfs:label "khaki" ;
+    wdt:P462 wd:Q943 ;
+    schema:color "#B8B662" ;
+    tb:areaShare 0.0616 .
+
+<https://w3id.org/railclass/model/upexpress#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0380 .
+
+<https://w3id.org/railclass/model/upexpress#color5> a tb:ColorSample ;
+    rdfs:label "olive" ;
+    wdt:P462 wd:Q943 ;
+    schema:color "#6F6A41" ;
+    tb:areaShare 0.0370 .
+
+<https://w3id.org/railclass/model/upexpress#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#48505C" ;
+    tb:areaShare 0.0184 .
+
+<https://w3id.org/railclass/model/upexpress#color7> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#C8721C" ;
+    tb:areaShare 0.0175 .
+
+<https://w3id.org/railclass/model/upexpress#color8> a tb:ColorSample ;
+    rdfs:label "grille" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3E3F36" ;
+    tb:areaShare 0.0137 .
+
+<https://w3id.org/railclass/model/upexpress#color9> a tb:ColorSample ;
+    rdfs:label "door" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A6AAAE" ;
+    tb:areaShare 0.0126 .
+
+<https://w3id.org/railclass/model/upexpress#livery> a tb:Livery ;
+    rdfs:label "UP Express livery (stainless with olive and orange bands)"@en,
+        "UP エクスプレスの塗装（ステンレスにオリーブと橙の帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/upexpress/upx_upexpress.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q39338,
+        wd:Q42519,
+        wd:Q943 ;
+    tb:colorSample <https://w3id.org/railclass/model/upexpress#color1>,
+        <https://w3id.org/railclass/model/upexpress#color10>,
+        <https://w3id.org/railclass/model/upexpress#color11>,
+        <https://w3id.org/railclass/model/upexpress#color2>,
+        <https://w3id.org/railclass/model/upexpress#color3>,
+        <https://w3id.org/railclass/model/upexpress#color4>,
+        <https://w3id.org/railclass/model/upexpress#color5>,
+        <https://w3id.org/railclass/model/upexpress#color6>,
+        <https://w3id.org/railclass/model/upexpress#color7>,
+        <https://w3id.org/railclass/model/upexpress#color8>,
+        <https://w3id.org/railclass/model/upexpress#color9> ;
+    tb:liveryOf wd:Q3307451 .
+
 mdl:vandebharat a schema:3DModel ;
     schema:about cls:Q119775864 ;
     schema:contentUrl <https://railclass.ldas.jp/models/vandebharat.glb> ;
@@ -270876,6 +270982,9 @@ wd:Q3257809 rdfs:label "purple"@en,
         "紫"@ja .
 
 wd:Q3293620 rdfs:label "Line 6"@en .
+
+wd:Q3307451 rdfs:label "Metrolinx"@en,
+        "メトロリンクス"@ja .
 
 wd:Q3308457 rdfs:label "Line 4"@en .
 
@@ -278244,9 +278353,6 @@ wd:Q801 rdfs:label "Israel"@en,
 wd:Q941179 rdfs:label "articulated locomotive"@en,
         "関節式機関車"@ja .
 
-wd:Q943 rdfs:label "yellow"@en,
-        "黄色"@ja .
-
 wd:Q1053992 rdfs:label "Central South African Railways"@en,
         "セントラル・サウス・アフリカン鉄道"@ja .
 
@@ -278343,6 +278449,9 @@ wd:Q689256 rdfs:label "Vossloh"@en,
         "フォスロ"@ja .
 
 wd:Q875494 rdfs:label "Palatinate Railway"@en .
+
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
 
 wd:Q1071804 rdfs:label "Chicago, Milwaukee, St. Paul and Pacific Railroad"@en,
         "ミルウォーキー鉄道"@ja .
@@ -278495,9 +278604,6 @@ wd:Q7885459 rdfs:label "Union Carriage & Wagon"@en,
 wd:Q3077673 rdfs:label "0-4-4T"@en,
         "車輪配置 0-4-4T"@ja .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q4967763 rdfs:label "Brighton Works"@en,
         "ブライトン鉄道工場"@ja .
 
@@ -278527,6 +278633,9 @@ wd:Q725793 rdfs:label "Union Pacific Railroad"@en,
 
 wd:Q10676739 rdfs:label "600 mm track gauge"@en,
         "600mm軌間"@ja .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q610143 rdfs:label "Bulgarian State Railways"@en,
         "ブルガリア国鉄"@ja .
@@ -279073,9 +279182,6 @@ wd:Q23444 rdfs:label "white"@en,
 wd:Q664420 rdfs:label "Brown, Boveri & Cie"@en,
         "ブラウン・ボベリ"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q4032352 rdfs:label "750 mm track gauge"@en,
         "750 mm軌間"@ja .
 
@@ -279084,6 +279190,9 @@ wd:Q83910 rdfs:label "Red Nacional de los Ferrocarriles Españoles"@en,
 
 wd:Q1548721 rdfs:label "open coach"@en,
         "開放座席車"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q7987516 rdfs:label "Western Australian Government Railways"@en,
         "西豪州国営鉄道"@ja .
@@ -279407,11 +279516,11 @@ wd:Q1197451 rdfs:label "1520 mm track gauge"@en,
 wd:Q33946 rdfs:label "Czechoslovakia"@en,
         "チェコスロバキア"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q753779 rdfs:label "passenger railroad car"@en,
         "客車"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q6071527 rdfs:label "5 ft 3 in gauge"@en,
         "5フィート3インチ軌間"@ja .

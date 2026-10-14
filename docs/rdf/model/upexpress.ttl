@@ -1,0 +1,118 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:upexpress a schema:3DModel ;
+    schema:about cls:Q17183109 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/upexpress.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "トロントの空港連絡線を走る日本車輌製の気動車。ステンレスにオリーブと橙の帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "UPエクスプレス"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/upexpress/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/upexpress.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#upexpress> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/upexpress#livery> .
+
+<https://w3id.org/railclass/model/upexpress#color1> a tb:ColorSample ;
+    rdfs:label "stainless" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B9BCC0" ;
+    tb:areaShare 0.5945 .
+
+<https://w3id.org/railclass/model/upexpress#color10> a tb:ColorSample ;
+    rdfs:label "cap" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#555756" ;
+    tb:areaShare 0.0119 .
+
+<https://w3id.org/railclass/model/upexpress#color11> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0063 .
+
+<https://w3id.org/railclass/model/upexpress#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q943 ;
+    schema:color "#85845E" ;
+    tb:areaShare 0.1843 .
+
+<https://w3id.org/railclass/model/upexpress#color3> a tb:ColorSample ;
+    rdfs:label "khaki" ;
+    wdt:P462 wd:Q943 ;
+    schema:color "#B8B662" ;
+    tb:areaShare 0.0616 .
+
+<https://w3id.org/railclass/model/upexpress#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0380 .
+
+<https://w3id.org/railclass/model/upexpress#color5> a tb:ColorSample ;
+    rdfs:label "olive" ;
+    wdt:P462 wd:Q943 ;
+    schema:color "#6F6A41" ;
+    tb:areaShare 0.0370 .
+
+<https://w3id.org/railclass/model/upexpress#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#48505C" ;
+    tb:areaShare 0.0184 .
+
+<https://w3id.org/railclass/model/upexpress#color7> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#C8721C" ;
+    tb:areaShare 0.0175 .
+
+<https://w3id.org/railclass/model/upexpress#color8> a tb:ColorSample ;
+    rdfs:label "grille" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3E3F36" ;
+    tb:areaShare 0.0137 .
+
+<https://w3id.org/railclass/model/upexpress#color9> a tb:ColorSample ;
+    rdfs:label "door" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A6AAAE" ;
+    tb:areaShare 0.0126 .
+
+<https://w3id.org/railclass/model/upexpress#livery> a tb:Livery ;
+    rdfs:label "UP Express livery (stainless with olive and orange bands)"@en,
+        "UP エクスプレスの塗装（ステンレスにオリーブと橙の帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/upexpress/upx_upexpress.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q39338,
+        wd:Q42519,
+        wd:Q943 ;
+    tb:colorSample <https://w3id.org/railclass/model/upexpress#color1>,
+        <https://w3id.org/railclass/model/upexpress#color10>,
+        <https://w3id.org/railclass/model/upexpress#color11>,
+        <https://w3id.org/railclass/model/upexpress#color2>,
+        <https://w3id.org/railclass/model/upexpress#color3>,
+        <https://w3id.org/railclass/model/upexpress#color4>,
+        <https://w3id.org/railclass/model/upexpress#color5>,
+        <https://w3id.org/railclass/model/upexpress#color6>,
+        <https://w3id.org/railclass/model/upexpress#color7>,
+        <https://w3id.org/railclass/model/upexpress#color8>,
+        <https://w3id.org/railclass/model/upexpress#color9> ;
+    tb:liveryOf wd:Q3307451 .
+
