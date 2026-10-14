@@ -151326,37 +151326,6 @@ cls:Q432763 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q34 .
 
-cls:Q432769 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Alstom Coradia Polyvalent"@en,
-        "レジョリス"@ja ;
-    skos:exactMatch wd:Q432769 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Alstom Coradia Polyvalent"@en,
-        "レジョリス"@ja ;
-    prov:wasDerivedFrom wd:Q432769 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q13646 ;
-    wdt:P176 wd:Q309084 ;
-    wdt:P279 wd:Q28455463,
-        wd:Q7468057 ;
-    wdt:P930 wd:Q106530439,
-        wd:Q1415234,
-        wd:Q21253457 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/B84549%20%C3%A0%20Montreuil-Bellay%20%282%29%20par%20Cramos.JPG> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q432769#line1>,
-        <https://w3id.org/railclass/Q432769#line2>,
-        <https://w3id.org/railclass/Q432769#line3>,
-        <https://w3id.org/railclass/Q432769#line4> ;
-    tb:operatingCountry wd:Q142,
-        wd:Q183,
-        wd:Q39 ;
-    tb:usedOn wd:Q1023113,
-        wd:Q133798419,
-        wd:Q3239085,
-        wd:Q7885274 .
-
 cls:Q432773 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "SL X60"@en,
@@ -252784,6 +252753,38 @@ cls:Q432478 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q432769 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Alstom Coradia Polyvalent"@en,
+        "レジョリス"@ja ;
+    skos:exactMatch wd:Q432769 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Alstom Coradia Polyvalent"@en,
+        "レジョリス"@ja ;
+    prov:wasDerivedFrom wd:Q432769 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q13646 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q28455463,
+        wd:Q7468057 ;
+    wdt:P930 wd:Q106530439,
+        wd:Q1415234,
+        wd:Q21253457 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/B84549%20%C3%A0%20Montreuil-Bellay%20%282%29%20par%20Cramos.JPG> ;
+    schema:subjectOf mdl:ter-dakar ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q432769#line1>,
+        <https://w3id.org/railclass/Q432769#line2>,
+        <https://w3id.org/railclass/Q432769#line3>,
+        <https://w3id.org/railclass/Q432769#line4> ;
+    tb:operatingCountry wd:Q142,
+        wd:Q183,
+        wd:Q39 ;
+    tb:usedOn wd:Q1023113,
+        wd:Q133798419,
+        wd:Q3239085,
+        wd:Q7885274 .
+
 <https://w3id.org/railclass/Q432769#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1023113#P3438> ;
     skos:note "wikidata"@en ;
@@ -266999,6 +267000,107 @@ mdl:tanzania a schema:3DModel ;
         <https://w3id.org/railclass/model/tanzania#color5> ;
     tb:liveryOf wd:Q2393276 .
 
+mdl:ter-dakar a schema:3DModel ;
+    schema:about cls:Q432769 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/ter-dakar.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.8 ] ;
+    schema:description "セネガルの空港連絡の通勤電車。白地に銅色の帽子と国旗の三色の矢。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 41.5 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "TER ダカール"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/ter-dakar/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/ter-dakar.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#ter-dakar> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/ter-dakar#livery> .
+
+<https://w3id.org/railclass/model/ter-dakar#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#E8E9E6" ;
+    tb:areaShare 0.7141 .
+
+<https://w3id.org/railclass/model/ter-dakar#color10> a tb:ColorSample ;
+    rdfs:label "grille" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C4C7C9" ;
+    tb:areaShare 0.0065 .
+
+<https://w3id.org/railclass/model/ter-dakar#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8E9397" ;
+    tb:areaShare 0.1114 .
+
+<https://w3id.org/railclass/model/ter-dakar#color3> a tb:ColorSample ;
+    rdfs:label "pale" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B4B8BB" ;
+    tb:areaShare 0.0418 .
+
+<https://w3id.org/railclass/model/ter-dakar#color4> a tb:ColorSample ;
+    rdfs:label "bronze" ;
+    wdt:P462 wd:Q47071 ;
+    schema:color "#6B4E3A" ;
+    tb:areaShare 0.0334 .
+
+<https://w3id.org/railclass/model/ter-dakar#color5> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0287 .
+
+<https://w3id.org/railclass/model/ter-dakar#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3A444E" ;
+    tb:areaShare 0.0161 .
+
+<https://w3id.org/railclass/model/ter-dakar#color7> a tb:ColorSample ;
+    rdfs:label "cream" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#D6C9AC" ;
+    tb:areaShare 0.0158 .
+
+<https://w3id.org/railclass/model/ter-dakar#color8> a tb:ColorSample ;
+    rdfs:label "door" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#9CA0A4" ;
+    tb:areaShare 0.0143 .
+
+<https://w3id.org/railclass/model/ter-dakar#color9> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0068 .
+
+<https://w3id.org/railclass/model/ter-dakar#livery> a tb:Livery ;
+    rdfs:label "TER Dakar livery (white with a bronze cap and a flag-coloured swoosh)"@en,
+        "TER ダカールの塗装（白地に銅色の帽子と国旗の三色の矢）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/ter-dakar/seter_ter-dakar.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q39338,
+        wd:Q47071 ;
+    tb:colorSample <https://w3id.org/railclass/model/ter-dakar#color1>,
+        <https://w3id.org/railclass/model/ter-dakar#color10>,
+        <https://w3id.org/railclass/model/ter-dakar#color2>,
+        <https://w3id.org/railclass/model/ter-dakar#color3>,
+        <https://w3id.org/railclass/model/ter-dakar#color4>,
+        <https://w3id.org/railclass/model/ter-dakar#color5>,
+        <https://w3id.org/railclass/model/ter-dakar#color6>,
+        <https://w3id.org/railclass/model/ter-dakar#color7>,
+        <https://w3id.org/railclass/model/ter-dakar#color8>,
+        <https://w3id.org/railclass/model/ter-dakar#color9> ;
+    tb:liveryOf wd:Q138332202 .
+
 mdl:tilttrain a schema:3DModel ;
     schema:about cls:Q23641827 ;
     schema:contentUrl <https://railclass.ldas.jp/models/tilttrain.glb> ;
@@ -277204,9 +277306,6 @@ wd:Q452140 rdfs:label "DB Fernverkehr"@en,
 
 wd:Q4681188 rdfs:label "Addington Railway Workshops"@en .
 
-wd:Q47071 rdfs:label "brown"@en,
-        "茶色"@ja .
-
 wd:Q473921 rdfs:label "UIC-Z car"@en .
 
 wd:Q63226316 rdfs:label "Gateshead Works"@en .
@@ -277363,6 +277462,9 @@ wd:Q4596842 rdfs:label "2-6-2+2-6-2"@en,
         "2-6-2+2-6-2 \"ダブル プレイリー\""@ja .
 
 wd:Q4596843 rdfs:label "2-6-6-2"@en .
+
+wd:Q47071 rdfs:label "brown"@en,
+        "茶色"@ja .
 
 wd:Q5965211 rdfs:label "Manning, Wardle and Company"@en,
         "マニング・ワードル"@ja .
@@ -278045,9 +278147,6 @@ wd:Q2729224 rdfs:label "Stadler Rail Valencia"@en .
 wd:Q3303533 rdfs:label "British Rail Engineering Limited"@en,
         "ブリティッシュ・レール・エンジニアリング"@ja .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q5330761 rdfs:label "Eastleigh Locomotive, Carriage and Wagon Works"@en,
         "イーストレイ工場"@ja .
 
@@ -278080,6 +278179,9 @@ wd:Q7885459 rdfs:label "Union Carriage & Wagon"@en,
 
 wd:Q3077673 rdfs:label "0-4-4T"@en,
         "車輪配置 0-4-4T"@ja .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q4967763 rdfs:label "Brighton Works"@en,
         "ブライトン鉄道工場"@ja .
@@ -278636,22 +278738,22 @@ wd:Q158276 rdfs:label "AEG"@en,
 wd:Q1868564 rdfs:label "Lokomotiv- und Waggonbaufabrik Krupp"@en,
         "クルップ機関車車両製作所"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q154195 rdfs:label "Kingdom of Bavaria"@en,
         "バイエルン王国"@ja .
 
 wd:Q5184831 rdfs:label "Crewe Works"@en,
         "クルー鉄道製作所"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q26208367 rdfs:label "2-6-0T"@en .
 
 wd:Q652491 rdfs:label "Orenstein & Koppel"@en,
         "オーレンシュタイン・ウント・コッペル"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q682656 rdfs:label "760 mm track gauge"@en,
         "ボスニアゲージ"@ja .
@@ -278975,9 +279077,6 @@ wd:Q383589 rdfs:label "American Locomotive Company"@en,
 wd:Q20 rdfs:label "Norway"@en,
         "ノルウェー王国"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q21253457 rdfs:label "1500 V DC railway electrification"@en,
         "直流1500V鉄道電化"@ja .
 
@@ -278986,6 +279085,9 @@ wd:Q483711 rdfs:label "4-6-0"@en,
 
 wd:Q41304 rdfs:label "Weimar Republic"@en,
         "ヴァイマル共和政"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q1197451 rdfs:label "1520 mm track gauge"@en,
         "5フィート軌間"@ja .

@@ -1,0 +1,282 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/ter-dakar#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ter-dakar#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ter-dakar#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ter-dakar#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ter-dakar#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ter-dakar#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ter-dakar#color7"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ter-dakar#color8"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ter-dakar#color9"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ter-dakar#color10"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/ter-dakar/seter_ter-dakar.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q138332202"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "TER Dakar livery (white with a bronze cap and a flag-coloured swoosh)"
+        },
+        {
+          "@language": "ja",
+          "@value": "TER ダカールの塗装（白地に銅色の帽子と国旗の三色の矢）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q47071"
+        },
+        {
+          "@id": "wd:Q39338"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/ter-dakar#livery"
+      },
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/Q432769"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass.ldas.jp/models/ter-dakar.glb"
+      },
+      "schema:depth": {
+        "@id": "_:ter-dakar-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "セネガルの空港連絡の通勤電車。白地に銅色の帽子と国旗の三色の矢。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:ter-dakar-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "TER ダカール"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/ter-dakar/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/ter-dakar.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#ter-dakar"
+      },
+      "schema:width": {
+        "@id": "_:ter-dakar-width"
+      }
+    },
+    {
+      "@id": "_:ter-dakar-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.8"
+      }
+    },
+    {
+      "@id": "_:ter-dakar-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:ter-dakar-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "41.5"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0287"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7141"
+      },
+      "rdfs:label": "white",
+      "schema:color": "#E8E9E6",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0158"
+      },
+      "rdfs:label": "cream",
+      "schema:color": "#D6C9AC",
+      "wdt:P462": {
+        "@id": "wd:Q39338"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#color10",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0065"
+      },
+      "rdfs:label": "grille",
+      "schema:color": "#C4C7C9",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#color9",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0068"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#color8",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0143"
+      },
+      "rdfs:label": "door",
+      "schema:color": "#9CA0A4",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0418"
+      },
+      "rdfs:label": "pale",
+      "schema:color": "#B4B8BB",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0334"
+      },
+      "rdfs:label": "bronze",
+      "schema:color": "#6B4E3A",
+      "wdt:P462": {
+        "@id": "wd:Q47071"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0161"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#3A444E",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ter-dakar#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1114"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#8E9397",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    }
+  ]
+}
