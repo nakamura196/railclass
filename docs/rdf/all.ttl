@@ -165209,33 +165209,6 @@ cls:Q50311056 a skos:Concept,
     tb:operatingCountry wd:Q213,
         wd:Q214 .
 
-cls:Q50318679 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "China Railway CR400AF series"@en,
-        "中国高速鉄道CR400AF型電車"@ja ;
-    skos:exactMatch wd:Q50318679 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "China Railway CR400AF series"@en,
-        "中国高速鉄道CR400AF型電車"@ja ;
-    prov:wasDerivedFrom wd:Q50318679 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q1073489 ;
-    wdt:P176 wd:Q15900874,
-        wd:Q5014252 ;
-    wdt:P2052 420.0 ;
-    wdt:P279 wd:Q22100858 ;
-    wdt:P930 wd:Q106530439 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/CR400AF-2007%20at%20Guangnan%20%2820181107092901%29.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q50318679#line1>,
-        <https://w3id.org/railclass/Q50318679#line2>,
-        <https://w3id.org/railclass/Q50318679#line3> ;
-    tb:operatingCountry wd:Q148,
-        wd:Q252 ;
-    tb:usedOn wd:Q10902104,
-        wd:Q22712677,
-        wd:Q85886652 .
-
 cls:Q50324434 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "China Railway CR400BF series"@en,
@@ -253973,6 +253946,34 @@ cls:Q423578 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q50318679 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "China Railway CR400AF series"@en,
+        "中国高速鉄道CR400AF型電車"@ja ;
+    skos:exactMatch wd:Q50318679 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "China Railway CR400AF series"@en,
+        "中国高速鉄道CR400AF型電車"@ja ;
+    prov:wasDerivedFrom wd:Q50318679 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1073489 ;
+    wdt:P176 wd:Q15900874,
+        wd:Q5014252 ;
+    wdt:P2052 420.0 ;
+    wdt:P279 wd:Q22100858 ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/CR400AF-2007%20at%20Guangnan%20%2820181107092901%29.jpg> ;
+    schema:subjectOf mdl:cr400af ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q50318679#line1>,
+        <https://w3id.org/railclass/Q50318679#line2>,
+        <https://w3id.org/railclass/Q50318679#line3> ;
+    tb:operatingCountry wd:Q148,
+        wd:Q252 ;
+    tb:usedOn wd:Q10902104,
+        wd:Q22712677,
+        wd:Q85886652 .
+
 <https://w3id.org/railclass/Q50318679#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q10902104#P3438> ;
     skos:note "wikidata"@en ;
@@ -263131,6 +263132,93 @@ mdl:corcovado a schema:3DModel ;
         <https://w3id.org/railclass/model/corcovado#color8>,
         <https://w3id.org/railclass/model/corcovado#color9> ;
     tb:liveryOf wd:Q1132053 .
+
+mdl:cr400af a schema:3DModel ;
+    schema:about cls:Q50318679 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/cr400af.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "中国の高速電車。銀の車体に赤い流線を引いた標準の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "復興号 CR400AF"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/cr400af/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/cr400af.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#cr400af> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/cr400af#livery> .
+
+<https://w3id.org/railclass/model/cr400af#color1> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C8CCD2" ;
+    tb:areaShare 0.7995 .
+
+<https://w3id.org/railclass/model/cr400af#color2> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2A2E38" ;
+    tb:areaShare 0.0574 .
+
+<https://w3id.org/railclass/model/cr400af#color3> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#D82A45" ;
+    tb:areaShare 0.0372 .
+
+<https://w3id.org/railclass/model/cr400af#color4> a tb:ColorSample ;
+    rdfs:label "panel" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8C919B" ;
+    tb:areaShare 0.0357 .
+
+<https://w3id.org/railclass/model/cr400af#color5> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0214 .
+
+<https://w3id.org/railclass/model/cr400af#color6> a tb:ColorSample ;
+    rdfs:label "winglass" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#404654" ;
+    tb:areaShare 0.0211 .
+
+<https://w3id.org/railclass/model/cr400af#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#3E5468" ;
+    tb:areaShare 0.0206 .
+
+<https://w3id.org/railclass/model/cr400af#color8> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0070 .
+
+<https://w3id.org/railclass/model/cr400af#livery> a tb:Livery ;
+    rdfs:label "China Railway Fuxing standard livery (silver with the red sweep)"@en,
+        "復興号の標準の塗装（銀に赤い流線）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/cr400af/cr_cr400af.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/cr400af#color1>,
+        <https://w3id.org/railclass/model/cr400af#color2>,
+        <https://w3id.org/railclass/model/cr400af#color3>,
+        <https://w3id.org/railclass/model/cr400af#color4>,
+        <https://w3id.org/railclass/model/cr400af#color5>,
+        <https://w3id.org/railclass/model/cr400af#color6>,
+        <https://w3id.org/railclass/model/cr400af#color7>,
+        <https://w3id.org/railclass/model/cr400af#color8> ;
+    tb:liveryOf wd:Q1073489 .
 
 mdl:darjeeling a schema:3DModel ;
     schema:about cls:Q18349836 ;
@@ -277247,9 +277335,6 @@ wd:Q1932006 rdfs:label "Midland Railway"@en,
 
 wd:Q26185325 rdfs:label "0-10-0T"@en .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q4931035 rdfs:label "Bo′Bo′Bo′"@en .
 
 wd:Q840960 rdfs:label "CRRC Zhuzhou Locomotive Co., Ltd."@en,
@@ -277269,6 +277354,9 @@ wd:Q5014252 rdfs:label "CRRC Qingdao Sifang Co., Ltd."@en,
         "中車青島四方機車車輛股份有限公司"@ja .
 
 wd:Q29638944 rdfs:label "2′2′"@en .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q3428923 rdfs:label "John Cockerill & Cie."@en,
         "コッカリル"@ja .
@@ -277469,9 +277557,6 @@ wd:Q319035 rdfs:label "Arnold Jung Lokomotivfabrik"@en,
 wd:Q376055 rdfs:label "Garratt locomotive"@en,
         "ガーラット式機関車"@ja .
 
-wd:Q1073489 rdfs:label "China State Railway Group"@en,
-        "中国国家鉄路集団"@ja .
-
 wd:Q16814621 rdfs:label "railway coach"@en,
         "座席車 (客車)"@ja .
 
@@ -277488,6 +277573,9 @@ wd:Q819150 rdfs:label "KraussMaffei"@en,
 
 wd:Q1073100 rdfs:label "Nydqvist och Holm AB"@en,
         "NOHAB"@ja .
+
+wd:Q1073489 rdfs:label "China State Railway Group"@en,
+        "中国国家鉄路集団"@ja .
 
 wd:Q152517 rdfs:label "Hyundai Rotem"@en,
         "現代ロテム"@ja .
@@ -277569,11 +277657,11 @@ wd:Q1034433 rdfs:label "Cape Government Railways"@en,
 wd:Q219 rdfs:label "Bulgaria"@en,
         "ブルガリア"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q881184 rdfs:label "Imperial Railways in Alsace-Lorraine"@en,
         "帝国アルザス＝ロレーヌ鉄道総局"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q422111 rdfs:label "Hohenzollern Locomotive Works"@en,
         "ホーエンツォレルン機関車製造"@ja .
@@ -277678,9 +277766,6 @@ wd:Q4032352 rdfs:label "750 mm track gauge"@en,
 wd:Q83910 rdfs:label "Red Nacional de los Ferrocarriles Españoles"@en,
         "レンフェ"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1548721 rdfs:label "open coach"@en,
         "開放座席車"@ja .
 
@@ -277692,6 +277777,9 @@ wd:Q36704 rdfs:label "Yugoslavia"@en,
 
 wd:Q752392 rdfs:label "railcar"@en,
         "自走客車"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q2814117 rdfs:label "Robert Stephenson and Company"@en,
         "ロバート・スチーブンソン・アンド・カンパニー"@ja .

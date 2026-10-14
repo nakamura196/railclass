@@ -144,6 +144,7 @@ CLASSES = {
     "Q1436723": ("Q1436723", None, None),                     # Ford E-Series (the E-450 cutaway chassis under the UBC shuttle; a road vehicle, not rolling stock)
     "Q681896": ("Q681896", None, None),                       # British Rail Class 390 Pendolino (Avanti West Coast)
     "Q17051139": ("Q17051139", None, None),                   # Kawasaki / CRRC Sifang T251 (Thomson-East Coast Line)
+    "Q50318679": ("Q50318679", None, None),                   # China Railway CR400AF Fuxing
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -268,6 +269,7 @@ LIVERIES = {
     "ubc-take-flight": ({"en": "UBC Thunderbirds \"TAKE FLIGHT\" wrap (navy and blue with a gold line, white roof)", "ja": "UBC サンダーバーズの「TAKE FLIGHT」の塗装（紺と青に金の線、白い屋根）"}, "Q7863809"),
     "avanti-teal": ({"en": "Avanti West Coast livery (teal with a yellow nose, 2019-)", "ja": "アヴァンティ・ウェスト・コーストの塗装（青緑に黄色の鼻、2019 年から）"}, "Q68441695"),
     "smrt-tel": ({"en": "Thomson-East Coast Line livery (white body, black face, orange-brown and gold stripe)", "ja": "トムソン・イーストコースト線の塗装（白い車体、黒い顔、橙茶と金の帯）"}, "Q3243209"),
+    "cr-fuxing": ({"en": "China Railway Fuxing standard livery (silver with the red sweep)", "ja": "復興号の標準の塗装（銀に赤い流線）"}, "Q1073489"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -339,6 +341,7 @@ MODELS = {
     "ubcshuttle": ("Q1436723", "ubc-take-flight", {"en": "cutaway minibus body on the Ford E-450 chassis", "ja": "フォード E-450 の車台に載る小型バスの車体"}),
     "avanti390": ("Q681896", "avanti-teal", None),
     "sg-tel": ("Q17051139", "smrt-tel", None),
+    "cr400af": ("Q50318679", "cr-fuxing", None),
 }
 
 
