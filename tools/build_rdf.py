@@ -166,6 +166,7 @@ CLASSES = {
     "Q7585955": ("Q7585955", None, None),                     # Sri Lanka Railways S12 (CSR Sifang DMU)
     "Q6955219": ("Q6955219", None, None),                     # NR class (Indian Pacific livery, NR86)
     "Q935909": ("Q935909", None, None),                       # VR Class Sm3 Pendolino
+    "Q57469448": ("Q57469448", None, None),                   # Flytoget Class 78 (CAF Oaris)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -234,7 +235,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q4033502": "アフロシヨブ（Talgo 250）",
             "Q25197235": "シカゴ「L」CTA 7000系",
             "Q7585955": "スリランカ鉄道 S12 形",
-            "Q6955219": "NR 形"}
+            "Q6955219": "NR 形",
+            "Q57469448": "フリートーゲ 78 形"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -319,6 +321,7 @@ LIVERIES = {
     "slr-s12": ({"en": "Sri Lanka Railways S12 livery (blue, 2012-)", "ja": "スリランカ鉄道 S12 形の塗装（青、2012 年から）"}, "Q7585945"),
     "indian-pacific": ({"en": "Indian Pacific livery (yellow cab, blue hood, wedge-tailed eagle)", "ja": "インディアン・パシフィックの塗装（黄色の運転台、青い車体、オナガイヌワシ）"}, "Q1544385"),
     "vr-sm3": ({"en": "VR Sm3 livery (white with a green band and a forest-art panel)", "ja": "VR の Sm3 の塗装（白に緑の帯と森の絵）"}, "Q913248"),
+    "flytoget-grey": ({"en": "Flytoget livery (metallic grey with an orange line round the cab)", "ja": "フリートーゲの塗装（金属の灰色に、運転室を囲むオレンジの線）"}, "Q18325550"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -412,6 +415,7 @@ MODELS = {
     "lanka-s12": ("Q7585955", "slr-s12", None),
     "indianpacific": ("Q6955219", "indian-pacific", None),
     "sm3": ("Q935909", "vr-sm3", None),
+    "flytoget": ("Q57469448", "flytoget-grey", None),
 }
 
 

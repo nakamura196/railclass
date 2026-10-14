@@ -36,6 +36,9 @@ tb:VehicleClass a rdfs:Class ;
     rdfs:comment "A class (type) of railway vehicle or road vehicle; one record per class."@en ;
     rdfs:isDefinedBy cls:vocab .
 
+wd:Q2167417 rdfs:label "Flytoget"@en,
+        "フリートーゲ"@ja .
+
 wd:Q5600044 rdfs:label "Great Storm"@en .
 
 cls:Q100140515 a skos:Concept,
@@ -179180,24 +179183,6 @@ cls:Q574649 a skos:Concept,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/%D0%A2%D1%80%D0%B0%D0%BC%D0%B2%D0%B0%D0%B9%20%22%D0%A5%22.jpg> ;
     tb:has3DModel false .
 
-cls:Q57469448 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Flytoget Class 78"@en ;
-    skos:exactMatch wd:Q57469448 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Flytoget Class 78"@en ;
-    prov:wasDerivedFrom wd:Q57469448 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q18325550 ;
-    wdt:P17 wd:Q20 ;
-    wdt:P176 wd:Q838212 ;
-    wdt:P2052 245.0 ;
-    wdt:P279 wd:Q752962 ;
-    wdt:P729 "2021"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Flytoget%20Oaris%20auf%20dem%20Eisenbahnversuchsring%20Velim%20%28CZ%29.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q20 .
-
 cls:Q5750270 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Hi-V"@en ;
@@ -255051,6 +255036,27 @@ cls:Q56394168 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q57469448 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Flytoget Class 78"@en,
+        "フリートーゲ 78 形"@ja ;
+    skos:exactMatch wd:Q57469448 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Flytoget Class 78"@en,
+        "フリートーゲ 78 形"@ja ;
+    prov:wasDerivedFrom wd:Q57469448 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q18325550 ;
+    wdt:P17 wd:Q20 ;
+    wdt:P176 wd:Q838212 ;
+    wdt:P2052 245.0 ;
+    wdt:P279 wd:Q752962 ;
+    wdt:P729 "2021"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Flytoget%20Oaris%20auf%20dem%20Eisenbahnversuchsring%20Velim%20%28CZ%29.jpg> ;
+    schema:subjectOf mdl:flytoget ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q20 .
+
 <https://w3id.org/railclass/Q575495#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q694029#P3438> ;
     skos:note "wikidata"@en ;
@@ -264260,6 +264266,99 @@ mdl:ets a schema:3DModel ;
         <https://w3id.org/railclass/model/ets#color8> ;
     tb:liveryOf wd:Q1187590 .
 
+mdl:flytoget a schema:3DModel ;
+    schema:about cls:Q57469448 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/flytoget.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "オスロ空港特急の電車（CAF Oaris）。2023年から営業。金属の灰色に、運転室を囲むオレンジの線。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "フリートーゲ 78 形（オスロ空港特急）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/flytoget/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/flytoget.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#flytoget> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/flytoget#livery> .
+
+<https://w3id.org/railclass/model/flytoget#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8A867F" ;
+    tb:areaShare 0.7685 .
+
+<https://w3id.org/railclass/model/flytoget#color2> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#BAB9B4" ;
+    tb:areaShare 0.0632 .
+
+<https://w3id.org/railclass/model/flytoget#color3> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#55575B" ;
+    tb:areaShare 0.0458 .
+
+<https://w3id.org/railclass/model/flytoget#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0302 .
+
+<https://w3id.org/railclass/model/flytoget#color5> a tb:ColorSample ;
+    rdfs:label "dark" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3A3C40" ;
+    tb:areaShare 0.0263 .
+
+<https://w3id.org/railclass/model/flytoget#color6> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#F26522" ;
+    tb:areaShare 0.0245 .
+
+<https://w3id.org/railclass/model/flytoget#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4A5866" ;
+    tb:areaShare 0.0211 .
+
+<https://w3id.org/railclass/model/flytoget#color8> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2E2F31" ;
+    tb:areaShare 0.0134 .
+
+<https://w3id.org/railclass/model/flytoget#color9> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0069 .
+
+<https://w3id.org/railclass/model/flytoget#livery> a tb:Livery ;
+    rdfs:label "Flytoget livery (metallic grey with an orange line round the cab)"@en,
+        "フリートーゲの塗装（金属の灰色に、運転室を囲むオレンジの線）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/flytoget/flytoget_flytoget.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q39338,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/flytoget#color1>,
+        <https://w3id.org/railclass/model/flytoget#color2>,
+        <https://w3id.org/railclass/model/flytoget#color3>,
+        <https://w3id.org/railclass/model/flytoget#color4>,
+        <https://w3id.org/railclass/model/flytoget#color5>,
+        <https://w3id.org/railclass/model/flytoget#color6>,
+        <https://w3id.org/railclass/model/flytoget#color7>,
+        <https://w3id.org/railclass/model/flytoget#color8>,
+        <https://w3id.org/railclass/model/flytoget#color9> ;
+    tb:liveryOf wd:Q18325550 .
+
 mdl:frecciarossa a schema:3DModel ;
     schema:about cls:Q370895 ;
     schema:contentUrl <https://railclass.ldas.jp/models/frecciarossa.glb> ;
@@ -270685,8 +270784,6 @@ wd:Q1824805 rdfs:label "R-net"@en .
 
 wd:Q1826681 rdfs:label "Île-de-France tramway Line 4"@en .
 
-wd:Q18325550 rdfs:label "Flytoget AS"@en .
-
 wd:Q18327073 rdfs:label "Ayacucho Tram"@en .
 
 wd:Q183275 rdfs:label "Mitsubishi"@en,
@@ -273616,6 +273713,8 @@ wd:Q1817151 rdfs:label "Société de transport de Montréal"@en,
         "STM公社"@ja .
 
 wd:Q18290464 rdfs:label "Halmstad–Nässjö Järnväg"@en .
+
+wd:Q18325550 rdfs:label "Flytoget AS"@en .
 
 wd:Q18353320 rdfs:label "Toowoomba Foundry"@en .
 
@@ -279158,9 +279257,6 @@ wd:Q18853 rdfs:label "DB Regio"@en,
 wd:Q2105117 rdfs:label "Hollandsche IJzeren Spoorweg-Maatschappij"@en,
         "ホラント鉄道"@ja .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q4736953 rdfs:label "Altoona Works"@en,
         "アルトゥーナ工場"@ja .
 
@@ -279206,6 +279302,9 @@ wd:Q2738829 rdfs:label "Fiat Ferroviaria"@en,
 
 wd:Q2806492 rdfs:label "0-4-2"@en,
         "車輪配置 0-4-2"@ja .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q403 rdfs:label "Serbia"@en,
         "セルビア"@ja .
@@ -279716,10 +279815,10 @@ wd:Q423 rdfs:label "North Korea"@en,
 wd:Q393557 rdfs:label "Železničná spoločnosť Slovensko"@en,
         "鉄道企業体スロバキア"@ja .
 
+wd:Q7061278 rdfs:label "Norges Statsbaner"@en .
+
 wd:Q23445 rdfs:label "black"@en,
         "黒"@ja .
-
-wd:Q7061278 rdfs:label "Norges Statsbaner"@en .
 
 wd:Q476988 rdfs:label "Sharp, Stewart and Company"@en,
         "シャープ・スチュアート"@ja .
@@ -280028,11 +280127,11 @@ wd:Q309084 rdfs:label "アルストム"@ja .
 wd:Q804868 rdfs:label "Baldwin Locomotive Works"@en,
         "ボールドウィン・ロコモティブ・ワークス"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q258 rdfs:label "South Africa"@en,
         "南アフリカ共和国"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q31 rdfs:label "Belgium"@en,
         "ベルギー"@ja .

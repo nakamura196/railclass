@@ -1,0 +1,103 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:flytoget a schema:3DModel ;
+    schema:about cls:Q57469448 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/flytoget.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "オスロ空港特急の電車（CAF Oaris）。2023年から営業。金属の灰色に、運転室を囲むオレンジの線。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "フリートーゲ 78 形（オスロ空港特急）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/flytoget/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/flytoget.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#flytoget> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/flytoget#livery> .
+
+<https://w3id.org/railclass/model/flytoget#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8A867F" ;
+    tb:areaShare 0.7685 .
+
+<https://w3id.org/railclass/model/flytoget#color2> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#BAB9B4" ;
+    tb:areaShare 0.0632 .
+
+<https://w3id.org/railclass/model/flytoget#color3> a tb:ColorSample ;
+    rdfs:label "band" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#55575B" ;
+    tb:areaShare 0.0458 .
+
+<https://w3id.org/railclass/model/flytoget#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0302 .
+
+<https://w3id.org/railclass/model/flytoget#color5> a tb:ColorSample ;
+    rdfs:label "dark" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3A3C40" ;
+    tb:areaShare 0.0263 .
+
+<https://w3id.org/railclass/model/flytoget#color6> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#F26522" ;
+    tb:areaShare 0.0245 .
+
+<https://w3id.org/railclass/model/flytoget#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4A5866" ;
+    tb:areaShare 0.0211 .
+
+<https://w3id.org/railclass/model/flytoget#color8> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2E2F31" ;
+    tb:areaShare 0.0134 .
+
+<https://w3id.org/railclass/model/flytoget#color9> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0069 .
+
+<https://w3id.org/railclass/model/flytoget#livery> a tb:Livery ;
+    rdfs:label "Flytoget livery (metallic grey with an orange line round the cab)"@en,
+        "フリートーゲの塗装（金属の灰色に、運転室を囲むオレンジの線）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/flytoget/flytoget_flytoget.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q39338,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/flytoget#color1>,
+        <https://w3id.org/railclass/model/flytoget#color2>,
+        <https://w3id.org/railclass/model/flytoget#color3>,
+        <https://w3id.org/railclass/model/flytoget#color4>,
+        <https://w3id.org/railclass/model/flytoget#color5>,
+        <https://w3id.org/railclass/model/flytoget#color6>,
+        <https://w3id.org/railclass/model/flytoget#color7>,
+        <https://w3id.org/railclass/model/flytoget#color8>,
+        <https://w3id.org/railclass/model/flytoget#color9> ;
+    tb:liveryOf wd:Q18325550 .
+

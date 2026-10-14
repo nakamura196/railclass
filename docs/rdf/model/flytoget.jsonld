@@ -1,0 +1,263 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0632"
+      },
+      "rdfs:label": "silver",
+      "schema:color": "#BAB9B4",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/flytoget#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/flytoget#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/flytoget#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/flytoget#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/flytoget#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/flytoget#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/flytoget#color7"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/flytoget#color8"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/flytoget#color9"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/flytoget/flytoget_flytoget.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q18325550"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Flytoget livery (metallic grey with an orange line round the cab)"
+        },
+        {
+          "@language": "ja",
+          "@value": "フリートーゲの塗装（金属の灰色に、運転室を囲むオレンジの線）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q39338"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0458"
+      },
+      "rdfs:label": "band",
+      "schema:color": "#55575B",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0245"
+      },
+      "rdfs:label": "orange",
+      "schema:color": "#F26522",
+      "wdt:P462": {
+        "@id": "wd:Q39338"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0263"
+      },
+      "rdfs:label": "dark",
+      "schema:color": "#3A3C40",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget#color8",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0134"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#2E2F31",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/flytoget#livery"
+      },
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/Q57469448"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass.ldas.jp/models/flytoget.glb"
+      },
+      "schema:depth": {
+        "@id": "_:flytoget-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "オスロ空港特急の電車（CAF Oaris）。2023年から営業。金属の灰色に、運転室を囲むオレンジの線。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:flytoget-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "フリートーゲ 78 形（オスロ空港特急）"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/flytoget/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/flytoget.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#flytoget"
+      },
+      "schema:width": {
+        "@id": "_:flytoget-width"
+      }
+    },
+    {
+      "@id": "_:flytoget-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:flytoget-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:flytoget-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0302"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0211"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#4A5866",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget#color9",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0069"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/flytoget#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7685"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#8A867F",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    }
+  ]
+}
