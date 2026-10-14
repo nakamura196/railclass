@@ -1,0 +1,250 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/model/regiojet#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0592"
+      },
+      "rdfs:label": "sole",
+      "schema:color": "#3A3E43",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/regiojet#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0308"
+      },
+      "rdfs:label": "rjred",
+      "schema:color": "#D43A5C",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/regiojet#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/regiojet#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/regiojet#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/regiojet#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/regiojet#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/regiojet#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/regiojet#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/regiojet#color7"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/regiojet#color8"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/regiojet/rj_regiojet.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q221186"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "RegioJet livery (yellow with silver cab tops edged by a red line)"
+        },
+        {
+          "@language": "ja",
+          "@value": "RegioJet の塗装（黄色、運転台の上の銀と赤い縁取り）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q39338"
+        },
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q3142"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/regiojet#color8",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0091"
+      },
+      "rdfs:label": "rail",
+      "schema:color": "#A8ACB0",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/regiojet#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0977"
+      },
+      "rdfs:label": "hatch",
+      "schema:color": "#8E9398",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/regiojet#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0785"
+      },
+      "rdfs:label": "silver",
+      "schema:color": "#C6CACE",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/regiojet#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0205"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#4E5C68",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/regiojet",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/regiojet#livery"
+      },
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/Q117911780"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass.ldas.jp/models/regiojet.glb"
+      },
+      "schema:depth": {
+        "@id": "_:regiojet-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "チェコの民間会社 RegioJet の黄色い列車を牽く電気機関車。運転台の上が銀色で、赤い線が縁取る。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:regiojet-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "RegioJet 388形（TRAXX MS3）"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/regiojet/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/regiojet.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#regiojet"
+      },
+      "schema:width": {
+        "@id": "_:regiojet-width"
+      }
+    },
+    {
+      "@id": "_:regiojet-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:regiojet-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:regiojet-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "37.6"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/regiojet#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6688"
+      },
+      "rdfs:label": "rjyellow",
+      "schema:color": "#FFA800",
+      "wdt:P462": {
+        "@id": "wd:Q39338"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/regiojet#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0263"
+      },
+      "rdfs:label": "cap",
+      "schema:color": "#222529",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    }
+  ]
+}

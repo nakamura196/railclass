@@ -1,0 +1,97 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:regiojet a schema:3DModel ;
+    schema:about cls:Q117911780 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/regiojet.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "チェコの民間会社 RegioJet の黄色い列車を牽く電気機関車。運転台の上が銀色で、赤い線が縁取る。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "RegioJet 388形（TRAXX MS3）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/regiojet/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/regiojet.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#regiojet> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/regiojet#livery> .
+
+<https://w3id.org/railclass/model/regiojet#color1> a tb:ColorSample ;
+    rdfs:label "rjyellow" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#FFA800" ;
+    tb:areaShare 0.6688 .
+
+<https://w3id.org/railclass/model/regiojet#color2> a tb:ColorSample ;
+    rdfs:label "hatch" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8E9398" ;
+    tb:areaShare 0.0977 .
+
+<https://w3id.org/railclass/model/regiojet#color3> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C6CACE" ;
+    tb:areaShare 0.0785 .
+
+<https://w3id.org/railclass/model/regiojet#color4> a tb:ColorSample ;
+    rdfs:label "sole" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3A3E43" ;
+    tb:areaShare 0.0592 .
+
+<https://w3id.org/railclass/model/regiojet#color5> a tb:ColorSample ;
+    rdfs:label "rjred" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#D43A5C" ;
+    tb:areaShare 0.0308 .
+
+<https://w3id.org/railclass/model/regiojet#color6> a tb:ColorSample ;
+    rdfs:label "cap" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#222529" ;
+    tb:areaShare 0.0263 .
+
+<https://w3id.org/railclass/model/regiojet#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4E5C68" ;
+    tb:areaShare 0.0205 .
+
+<https://w3id.org/railclass/model/regiojet#color8> a tb:ColorSample ;
+    rdfs:label "rail" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A8ACB0" ;
+    tb:areaShare 0.0091 .
+
+<https://w3id.org/railclass/model/regiojet#livery> a tb:Livery ;
+    rdfs:label "RegioJet livery (yellow with silver cab tops edged by a red line)"@en,
+        "RegioJet の塗装（黄色、運転台の上の銀と赤い縁取り）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/regiojet/rj_regiojet.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q39338,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/regiojet#color1>,
+        <https://w3id.org/railclass/model/regiojet#color2>,
+        <https://w3id.org/railclass/model/regiojet#color3>,
+        <https://w3id.org/railclass/model/regiojet#color4>,
+        <https://w3id.org/railclass/model/regiojet#color5>,
+        <https://w3id.org/railclass/model/regiojet#color6>,
+        <https://w3id.org/railclass/model/regiojet#color7>,
+        <https://w3id.org/railclass/model/regiojet#color8> ;
+    tb:liveryOf wd:Q221186 .
+

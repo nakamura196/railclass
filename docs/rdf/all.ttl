@@ -28111,25 +28111,6 @@ cls:Q11790904 a skos:Concept,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/126N-RY899%2C%20Krak%C3%B3w%2C%202016-11-30.jpg> ;
     tb:has3DModel false .
 
-cls:Q117911780 a skos:Concept,
-        tb:VehicleClass ;
-    skos:exactMatch wd:Q117911780 ;
-    skos:inScheme cls: ;
-    prov:wasDerivedFrom wd:Q117911780 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q221186,
-        wd:Q336717 ;
-    wdt:P176 wd:Q309084,
-        wd:Q688893 ;
-    wdt:P279 wd:Q136803040,
-        wd:Q625151 ;
-    wdt:P2978 wd:Q1014107 ;
-    wdt:P930 wd:Q106530439,
-        wd:Q21251675 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/388%20008%20CZ-CDC%20Kutna%20Hora%20hlavni%20nadrazi.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q213 .
-
 cls:Q11792867 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Bremen trams (Szczecin)"@en ;
@@ -244141,6 +244122,30 @@ cls:Q117538222 a skos:Concept,
     tb:has3DModel true ;
     tb:operatingCountry wd:Q298 .
 
+cls:Q117911780 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Class 388 (TRAXX MS3)"@en,
+        "388 形（TRAXX MS3）"@ja ;
+    skos:exactMatch wd:Q117911780 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Class 388 (TRAXX MS3)"@en,
+        "388 形（TRAXX MS3）"@ja ;
+    prov:wasDerivedFrom wd:Q117911780 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q221186,
+        wd:Q336717 ;
+    wdt:P176 wd:Q309084,
+        wd:Q688893 ;
+    wdt:P279 wd:Q136803040,
+        wd:Q625151 ;
+    wdt:P2978 wd:Q1014107 ;
+    wdt:P930 wd:Q106530439,
+        wd:Q21251675 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/388%20008%20CZ-CDC%20Kutna%20Hora%20hlavni%20nadrazi.jpg> ;
+    schema:subjectOf mdl:regiojet ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q213 .
+
 <https://w3id.org/railclass/Q11801801#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q112600701#P3438> ;
     skos:note "wikidata"@en ;
@@ -267470,6 +267475,93 @@ mdl:railjet a schema:3DModel ;
         <https://w3id.org/railclass/model/railjet#color9> ;
     tb:liveryOf wd:Q83822 .
 
+mdl:regiojet a schema:3DModel ;
+    schema:about cls:Q117911780 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/regiojet.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "チェコの民間会社 RegioJet の黄色い列車を牽く電気機関車。運転台の上が銀色で、赤い線が縁取る。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "RegioJet 388形（TRAXX MS3）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/regiojet/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/regiojet.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#regiojet> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/regiojet#livery> .
+
+<https://w3id.org/railclass/model/regiojet#color1> a tb:ColorSample ;
+    rdfs:label "rjyellow" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#FFA800" ;
+    tb:areaShare 0.6688 .
+
+<https://w3id.org/railclass/model/regiojet#color2> a tb:ColorSample ;
+    rdfs:label "hatch" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8E9398" ;
+    tb:areaShare 0.0977 .
+
+<https://w3id.org/railclass/model/regiojet#color3> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C6CACE" ;
+    tb:areaShare 0.0785 .
+
+<https://w3id.org/railclass/model/regiojet#color4> a tb:ColorSample ;
+    rdfs:label "sole" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3A3E43" ;
+    tb:areaShare 0.0592 .
+
+<https://w3id.org/railclass/model/regiojet#color5> a tb:ColorSample ;
+    rdfs:label "rjred" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#D43A5C" ;
+    tb:areaShare 0.0308 .
+
+<https://w3id.org/railclass/model/regiojet#color6> a tb:ColorSample ;
+    rdfs:label "cap" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#222529" ;
+    tb:areaShare 0.0263 .
+
+<https://w3id.org/railclass/model/regiojet#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4E5C68" ;
+    tb:areaShare 0.0205 .
+
+<https://w3id.org/railclass/model/regiojet#color8> a tb:ColorSample ;
+    rdfs:label "rail" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A8ACB0" ;
+    tb:areaShare 0.0091 .
+
+<https://w3id.org/railclass/model/regiojet#livery> a tb:Livery ;
+    rdfs:label "RegioJet livery (yellow with silver cab tops edged by a red line)"@en,
+        "RegioJet の塗装（黄色、運転台の上の銀と赤い縁取り）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/regiojet/rj_regiojet.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q39338,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/regiojet#color1>,
+        <https://w3id.org/railclass/model/regiojet#color2>,
+        <https://w3id.org/railclass/model/regiojet#color3>,
+        <https://w3id.org/railclass/model/regiojet#color4>,
+        <https://w3id.org/railclass/model/regiojet#color5>,
+        <https://w3id.org/railclass/model/regiojet#color6>,
+        <https://w3id.org/railclass/model/regiojet#color7>,
+        <https://w3id.org/railclass/model/regiojet#color8> ;
+    tb:liveryOf wd:Q221186 .
+
 mdl:rem a schema:3DModel ;
     schema:about cls:Q121749358 ;
     schema:contentUrl <https://railclass.ldas.jp/models/rem.glb> ;
@@ -279233,8 +279325,6 @@ wd:Q1571759 rdfs:label "Tecnomasio"@en .
 wd:Q1640765 rdfs:label "Small locomotive"@en,
         "小型機関車"@ja .
 
-wd:Q221186 rdfs:label "レギオジェット"@ja .
-
 wd:Q26162489 rdfs:label "Co′Co′+Co′Co′"@en .
 
 wd:Q3707399 rdfs:label "railbus"@en,
@@ -279282,6 +279372,8 @@ wd:Q17098038 rdfs:label "Hellenic State Railways"@en .
 
 wd:Q18160582 rdfs:label "Holgate Road carriage works"@en,
         "ホルゲート・ロード工場"@ja .
+
+wd:Q221186 rdfs:label "レギオジェット"@ja .
 
 wd:Q2371310 rdfs:label "articulated tram"@en .
 
@@ -279893,9 +279985,6 @@ wd:Q1932006 rdfs:label "Midland Railway"@en,
 
 wd:Q26185325 rdfs:label "0-10-0T"@en .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q4931035 rdfs:label "Bo′Bo′Bo′"@en .
 
 wd:Q840960 rdfs:label "CRRC Zhuzhou Locomotive Co., Ltd."@en,
@@ -279918,6 +280007,9 @@ wd:Q29638944 rdfs:label "2′2′"@en .
 
 wd:Q3428923 rdfs:label "John Cockerill & Cie."@en,
         "コッカリル"@ja .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q826750 rdfs:label "Chemins de fer d'Alsace et de Lorraine"@en,
         "アルザス＝ロレーヌ鉄道"@ja .
@@ -280085,9 +280177,6 @@ wd:Q26234622 rdfs:label "2-4-0T"@en .
 wd:Q5600013 rdfs:label "Great Southern Railways"@en,
         "グレート・サザン鉄道"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q392082 rdfs:label "Škoda Vagonka"@en,
         "シュコダ・ヴァゴンカ"@ja .
 
@@ -280111,6 +280200,9 @@ wd:Q534384 rdfs:label "Maschinenbau Kiel"@en,
 
 wd:Q1069376 rdfs:label "Chemins de fer de l'État"@en,
         "国有鉄道"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q319035 rdfs:label "Arnold Jung Lokomotivfabrik"@en,
         "アーノルト・ユンク"@ja .
@@ -280691,9 +280783,6 @@ wd:Q163580 rdfs:label "Henschel & Sohn"@en,
 wd:Q16957 rdfs:label "East Germany"@en,
         "ドイツ民主共和国"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q617792 rdfs:label "compound locomotive"@en,
         "複式機関"@ja .
 
@@ -280705,6 +280794,9 @@ wd:Q698082 rdfs:label "Deutsche Reichsbahn"@en,
 
 wd:Q28513 rdfs:label "Austria–Hungary"@en,
         "オーストリア＝ハンガリー帝国"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q24294815 rdfs:label "diesel-hydraulic locomotive"@en,
         "液体式ディーゼル機関車"@ja .

@@ -173,6 +173,7 @@ CLASSES = {
     "Q18632551": ("Q18632551", None, None),                   # Wuppertal Schwebebahn GTW Generation 15
     "Q22344403": ("Q22344403", None, None),                   # DB Classes 483 and 484 (Berlin S-Bahn)
     "Q16908552": ("Q16908552", None, None),                   # Korail Class 210000 (ITX-Saemaeul)
+    "Q117911780": ("Q117911780", None, {"en": "Class 388 (TRAXX MS3)", "ja": "388 形（TRAXX MS3）"}),  # Lokomotiva 388 (Bombardier/Alstom TRAXX MS3); mul label only
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -342,6 +343,7 @@ LIVERIES = {
     "wsw-gtw15": ({"en": "WSW Schwebebahn livery (pale sky blue)", "ja": "ヴッパータール空中鉄道の塗装（淡い空色）"}, "Q2537722"),
     "sbahn-berlin": ({"en": "Berlin S-Bahn livery (traditional red and ochre)", "ja": "ベルリン S バーンの塗装（伝統の赤と黄土色）"}, "Q12374454"),
     "korail-itx": ({"en": "ITX-Saemaeul livery (red and charcoal)", "ja": "ITX-セマウルの塗装（赤と濃い灰）"}, "Q18169"),
+    "regiojet-yellow": ({"en": "RegioJet livery (yellow with silver cab tops edged by a red line)", "ja": "RegioJet の塗装（黄色、運転台の上の銀と赤い縁取り）"}, "Q221186"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -442,6 +444,7 @@ MODELS = {
     "schwebebahn": ("Q18632551", "wsw-gtw15", None),
     "sbahn483": ("Q22344403", "sbahn-berlin", None),
     "itx-saemaeul": ("Q16908552", "korail-itx", None),
+    "regiojet": ("Q117911780", "regiojet-yellow", None),
 }
 
 
