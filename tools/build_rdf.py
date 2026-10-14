@@ -150,6 +150,7 @@ CLASSES = {
     "Q4970771": ("Q4970771", None, None),                     # British Rail Class 345 (Elizabeth line Aventra)
     "Q20988527": ("Q20988527", None, None),                   # TCDD HT80000 (Siemens Velaro TR)
     "Q121749358": ("Q121749358", None, {"en": "Alstom Metropolis Saint-Laurent (REM)", "ja": "REM（モントリオール）の電車（アルストム メトロポリス）"}),# Alstom Metropolis Saint-Laurent (REM, Montreal); en label only
+    "Q432478": ("Q432478", None, None),                       # Alstom AGV (Italo AGV 575)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -284,6 +285,7 @@ LIVERIES = {
     "tfl-elizabeth": ({"en": "Elizabeth line livery (white, black window band, purple stripes)", "ja": "エリザベス線の塗装（白、黒い窓帯、紫の帯）"}, "Q113577377"),
     "tcdd-yht": ({"en": "TCDD YHT livery (white with turquoise roof and bands)", "ja": "TCDD の YHT の塗装（白にターコイズの屋根と帯）"}, "Q28220824"),
     "rem-lime": ({"en": "REM livery (black front mask in a lime-green ring, silver body)", "ja": "REM の塗装（黄緑の輪に囲まれた黒い前面、銀の車体）"}, "Q23938011"),
+    "italo-2026": ({"en": "Italo livery from 2026 (red and gold)", "ja": "イタロの 2026 年からの塗装（赤と金）"}, "Q580786"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -361,6 +363,7 @@ MODELS = {
     "elizabeth": ("Q4970771", "tfl-elizabeth", None),
     "yht": ("Q20988527", "tcdd-yht", None),
     "rem": ("Q121749358", "rem-lime", None),
+    "italo": ("Q432478", "italo-2026", None),
 }
 
 

@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/model/italo#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0071"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/italo#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0373"
+      },
+      "rdfs:label": "canopy",
+      "schema:color": "#45494D",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/italo#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0767"
+      },
+      "rdfs:label": "gold",
+      "schema:color": "#C9A41E",
+      "wdt:P462": {
+        "@id": "wd:Q943"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/italo#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8005"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#C4263A",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/italo#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0246"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#2A3440",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/italo#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0153"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#2B2B2D",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/italo#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0351"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/italo#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/italo#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/italo#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/italo#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/italo#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/italo#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/italo#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/italo#color7"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/italo/ntv_italo.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q580786"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Italo livery from 2026 (red and gold)"
+        },
+        {
+          "@language": "ja",
+          "@value": "イタロの 2026 年からの塗装（赤と金）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q3142"
+        },
+        {
+          "@id": "wd:Q943"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/italo",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/italo#livery"
+      },
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/Q432478"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass.ldas.jp/models/italo.glb"
+      },
+      "schema:depth": {
+        "@id": "_:italo-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "イタリアの民間高速列車。2026年からの赤と金の新塗装。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:italo-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "イタロ AGV 575"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/italo/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/italo.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#italo"
+      },
+      "schema:width": {
+        "@id": "_:italo-width"
+      }
+    },
+    {
+      "@id": "_:italo-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "151.0"
+      }
+    },
+    {
+      "@id": "_:italo-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:italo-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    }
+  ]
+}

@@ -151022,24 +151022,6 @@ cls:Q4311083 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q55 .
 
-cls:Q432478 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Automotrice à grande vitesse"@en,
-        "Automotrice à Grande Vitesse"@ja ;
-    skos:exactMatch wd:Q432478 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Automotrice à grande vitesse"@en,
-        "Automotrice à Grande Vitesse"@ja ;
-    prov:wasDerivedFrom wd:Q432478 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q580786 ;
-    wdt:P176 wd:Q309084 ;
-    wdt:P2052 360.0 ;
-    wdt:P279 wd:Q13402959 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Alstom%20AGV%20Cerhenice%20img%200365.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q38 .
-
 cls:Q432553 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "kkStB 29"@en ;
@@ -252371,6 +252353,25 @@ cls:Q423578 a skos:Concept,
     tb:useStatus "historical" ;
     tb:usedUntil "2011"^^xsd:gYear .
 
+cls:Q432478 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Automotrice à grande vitesse"@en,
+        "Automotrice à Grande Vitesse"@ja ;
+    skos:exactMatch wd:Q432478 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Automotrice à grande vitesse"@en,
+        "Automotrice à Grande Vitesse"@ja ;
+    prov:wasDerivedFrom wd:Q432478 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q580786 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P2052 360.0 ;
+    wdt:P279 wd:Q13402959 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Alstom%20AGV%20Cerhenice%20img%200365.jpg> ;
+    schema:subjectOf mdl:italo ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q38 .
+
 <https://w3id.org/railclass/Q432706#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q7055732#P3438> ;
     skos:note "wikidata"@en ;
@@ -264914,6 +264915,85 @@ mdl:insurgente a schema:3DModel ;
         <https://w3id.org/railclass/model/insurgente#color7> ;
     tb:liveryOf wd:Q139837508 .
 
+mdl:italo a schema:3DModel ;
+    schema:about cls:Q432478 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/italo.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 151.0 ] ;
+    schema:description "イタリアの民間高速列車。2026年からの赤と金の新塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "イタロ AGV 575"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/italo/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/italo.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#italo> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/italo#livery> .
+
+<https://w3id.org/railclass/model/italo#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#C4263A" ;
+    tb:areaShare 0.8005 .
+
+<https://w3id.org/railclass/model/italo#color2> a tb:ColorSample ;
+    rdfs:label "gold" ;
+    wdt:P462 wd:Q943 ;
+    schema:color "#C9A41E" ;
+    tb:areaShare 0.0767 .
+
+<https://w3id.org/railclass/model/italo#color3> a tb:ColorSample ;
+    rdfs:label "canopy" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#45494D" ;
+    tb:areaShare 0.0373 .
+
+<https://w3id.org/railclass/model/italo#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0351 .
+
+<https://w3id.org/railclass/model/italo#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2A3440" ;
+    tb:areaShare 0.0246 .
+
+<https://w3id.org/railclass/model/italo#color6> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2B2B2D" ;
+    tb:areaShare 0.0153 .
+
+<https://w3id.org/railclass/model/italo#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0071 .
+
+<https://w3id.org/railclass/model/italo#livery> a tb:Livery ;
+    rdfs:label "Italo livery from 2026 (red and gold)"@en,
+        "イタロの 2026 年からの塗装（赤と金）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/italo/ntv_italo.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q943 ;
+    tb:colorSample <https://w3id.org/railclass/model/italo#color1>,
+        <https://w3id.org/railclass/model/italo#color2>,
+        <https://w3id.org/railclass/model/italo#color3>,
+        <https://w3id.org/railclass/model/italo#color4>,
+        <https://w3id.org/railclass/model/italo#color5>,
+        <https://w3id.org/railclass/model/italo#color6>,
+        <https://w3id.org/railclass/model/italo#color7> ;
+    tb:liveryOf wd:Q580786 .
+
 mdl:jakartamrt a schema:3DModel ;
     schema:about cls:Q56394168 ;
     schema:contentUrl <https://railclass.ldas.jp/models/jakartamrt.glb> ;
@@ -270715,9 +270795,6 @@ wd:Q5758708 rdfs:label "Highland Chieftain"@en .
 
 wd:Q5789769 rdfs:label "Corto de Loja"@en .
 
-wd:Q580786 rdfs:label "Italo - Nuovo Trasporto Viaggiatori"@en,
-        "ヌオーヴォ・トラスポルト・ヴィアッジャトーリ"@ja .
-
 wd:Q583732 rdfs:label "Line C-10"@en .
 
 wd:Q585219 rdfs:label "LGV Sud-Est"@en .
@@ -272780,6 +272857,9 @@ wd:Q575754 rdfs:label "Bombardier Double-deck Coach"@en,
 wd:Q576541 rdfs:label "Henschel DH 500 Ca"@en .
 
 wd:Q58045847 rdfs:label "Dispo-Tf Rail"@en .
+
+wd:Q580786 rdfs:label "Italo - Nuovo Trasporto Viaggiatori"@en,
+        "ヌオーヴォ・トラスポルト・ヴィアッジャトーリ"@ja .
 
 wd:Q583305 rdfs:label "Compagnie des Chemins de Fer de Grande Banlieue"@en,
         "グランデ・バンリユ鉄道"@ja .
@@ -277114,9 +277194,6 @@ wd:Q881 rdfs:label "Vietnam"@en,
 wd:Q910157 rdfs:label "control car"@en,
         "制御車"@ja .
 
-wd:Q943 rdfs:label "yellow"@en,
-        "黄色"@ja .
-
 wd:Q10397424 rdfs:label "900 mm track gauge"@en,
         "900ミリ軌間"@ja .
 
@@ -277210,6 +277287,9 @@ wd:Q873605 rdfs:label "Qinhuangdao–Shenyang high-speed railway"@en .
 
 wd:Q920625 rdfs:label "Strømmens Værksted"@en,
         "ストレンメン"@ja .
+
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
 
 wd:Q970639 rdfs:label "Tatra trams"@en,
         "タトラカー"@ja .
@@ -277835,9 +277915,6 @@ wd:Q53238 rdfs:label "Hitachi"@en,
 wd:Q917079 rdfs:label "Norfolk and Western Railway"@en,
         "ノーフォーク・アンド・ウェスタン鉄道"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q4228338 rdfs:label "Kolomna Locomotive Works"@en,
         "コロムナ工場"@ja .
 
@@ -277855,6 +277932,9 @@ wd:Q13622547 rdfs:label "road switcher"@en,
         "ロード・スイッチャー"@ja .
 
 wd:Q1951373 rdfs:label "Chemin de fer de Paris à Orléans et du Midi"@en .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q369524 rdfs:label "Ganz Works"@en,
         "ガンツ"@ja .
@@ -278151,11 +278231,11 @@ wd:Q31747 rdfs:label "Irish Free State"@en,
 wd:Q533534 rdfs:label "Cisleithania"@en,
         "ツィスライタニエン"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q186320 rdfs:label "Grand Duchy of Baden"@en,
         "バーデン大公国"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q25657 rdfs:label "MÁVAG"@en,
         "マーバグ"@ja .
@@ -278520,14 +278600,14 @@ wd:Q2036617 rdfs:label "2-4-0"@en,
 wd:Q27 rdfs:label "Ireland"@en,
         "アイルランド"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q383589 rdfs:label "American Locomotive Company"@en,
         "アメリカン・ロコモティブ"@ja .
 
 wd:Q20 rdfs:label "Norway"@en,
         "ノルウェー王国"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q21253457 rdfs:label "1500 V DC railway electrification"@en,
         "直流1500V鉄道電化"@ja .
