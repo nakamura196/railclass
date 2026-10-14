@@ -240695,6 +240695,9 @@ wd:Q1746348 rdfs:label "Kleinbahn Wesel–Rees–Emmerich"@en,
 
 wd:Q1746351 rdfs:label "Wittingen–Oebisfelde Light Railway Company"@en .
 
+wd:Q1747944 rdfs:label "Île-de-France Mobilités"@en,
+        "イル・ド・フランス地域圏交通連合"@ja .
+
 wd:Q17496248 rdfs:label "Creusot-Loire"@en,
         "クルゾー＝ロワール"@ja .
 
@@ -248043,6 +248046,24 @@ cls:Q20988527 a skos:Concept,
     tb:line wd:Q99654 ;
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
+
+cls:Q2244813 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "MP 14"@en,
+        "パリ地下鉄MP14電車"@ja ;
+    skos:exactMatch wd:Q2244813 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "MP 14"@en,
+        "パリ地下鉄MP14電車"@ja ;
+    prov:wasDerivedFrom wd:Q2244813 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q643290 ;
+    wdt:P17 wd:Q142 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q108875699 ;
+    wdt:P930 wd:Q25857994 ;
+    schema:subjectOf mdl:mp14 ;
+    tb:has3DModel true .
 
 <https://w3id.org/railclass/Q225062#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q10593896#P3438> ;
@@ -266050,6 +266071,100 @@ mdl:mk5 a schema:3DModel ;
         <https://w3id.org/railclass/model/mk5#color2> ;
     tb:liveryOf wd:Q1142140 .
 
+mdl:mp14 a schema:3DModel ;
+    schema:about cls:Q2244813 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/mp14.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "パリの自動運転のゴムタイヤ式地下鉄（14号線・4号線）。2020年からのイル＝ド＝フランス・モビリテの塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "パリ地下鉄 MP 14"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/mp14/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/mp14.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#mp14> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/mp14#livery> .
+
+<https://w3id.org/railclass/model/mp14#color1> a tb:ColorSample ;
+    rdfs:label "front" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#1C1E22" ;
+    tb:areaShare 0.5225 .
+
+<https://w3id.org/railclass/model/mp14#color2> a tb:ColorSample ;
+    rdfs:label "lower" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A4A9AE" ;
+    tb:areaShare 0.1043 .
+
+<https://w3id.org/railclass/model/mp14#color3> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8E959C" ;
+    tb:areaShare 0.0830 .
+
+<https://w3id.org/railclass/model/mp14#color4> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#E6E8EA" ;
+    tb:areaShare 0.0780 .
+
+<https://w3id.org/railclass/model/mp14#color5> a tb:ColorSample ;
+    rdfs:label "pane" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4E5A68" ;
+    tb:areaShare 0.0776 .
+
+<https://w3id.org/railclass/model/mp14#color6> a tb:ColorSample ;
+    rdfs:label "sky" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#2A96DC" ;
+    tb:areaShare 0.0601 .
+
+<https://w3id.org/railclass/model/mp14#color7> a tb:ColorSample ;
+    rdfs:label "edge" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#18191C" ;
+    tb:areaShare 0.0531 .
+
+<https://w3id.org/railclass/model/mp14#color8> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#26323E" ;
+    tb:areaShare 0.0125 .
+
+<https://w3id.org/railclass/model/mp14#color9> a tb:ColorSample ;
+    rdfs:label "led" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#F0F0E6" ;
+    tb:areaShare 0.0078 .
+
+<https://w3id.org/railclass/model/mp14#livery> a tb:Livery ;
+    rdfs:label "Île-de-France Mobilités livery (2020-)"@en,
+        "イル＝ド＝フランス・モビリテの塗装（2020 年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/mp14/ratp_mp14.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23445,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/mp14#color1>,
+        <https://w3id.org/railclass/model/mp14#color2>,
+        <https://w3id.org/railclass/model/mp14#color3>,
+        <https://w3id.org/railclass/model/mp14#color4>,
+        <https://w3id.org/railclass/model/mp14#color5>,
+        <https://w3id.org/railclass/model/mp14#color6>,
+        <https://w3id.org/railclass/model/mp14#color7>,
+        <https://w3id.org/railclass/model/mp14#color8>,
+        <https://w3id.org/railclass/model/mp14#color9> ;
+    tb:liveryOf wd:Q1747944 .
+
 mdl:namobharat a schema:3DModel ;
     schema:about cls:Q119438293 ;
     schema:contentUrl <https://railclass.ldas.jp/models/namobharat.glb> ;
@@ -276189,9 +276304,6 @@ wd:Q617732 rdfs:label "Montreux Oberland Bernois Railway"@en,
 wd:Q623503 rdfs:label "William Beardmore and Company"@en,
         "ベアドモア"@ja .
 
-wd:Q643290 rdfs:label "RATP"@en,
-        "パリ交通公団"@ja .
-
 wd:Q651686 rdfs:label "Tram line 1"@en .
 
 wd:Q668417 rdfs:label "Chemins de fer du Jura"@en .
@@ -276370,6 +276482,9 @@ wd:Q555837 rdfs:label "Caminhos de Ferro do Estado"@en .
 
 wd:Q630075 rdfs:label "EMD F-unit"@en,
         "EMD Fシリーズ"@ja .
+
+wd:Q643290 rdfs:label "RATP"@en,
+        "パリ交通公団"@ja .
 
 wd:Q664327 rdfs:label "シュタイアーマルク鉄道・バス会社"@ja .
 
@@ -277042,8 +277157,6 @@ wd:Q96474187 rdfs:label "RB 23"@en .
 
 wd:Q98104051 rdfs:label "RE 25"@en .
 
-wd:Q108875699 rdfs:label "rubber-tyred metro vehicle"@en .
-
 wd:Q11973820 rdfs:label "Hamar Jernstøperi"@en .
 
 wd:Q124357728 rdfs:label "HŽ Putnički prijevoz"@en .
@@ -277120,6 +277233,8 @@ wd:Q805757 rdfs:label "Baltimore and Ohio Railroad"@en,
 wd:Q98137582 rdfs:label "Lokomotivfabrik Krauss & Comp. Linz"@en .
 
 wd:Q1084446 rdfs:label "Christoph & Unmack"@en .
+
+wd:Q108875699 rdfs:label "rubber-tyred metro vehicle"@en .
 
 wd:Q1093332 rdfs:label "Illinois Central Railroad"@en,
         "イリノイ・セントラル鉄道"@ja .
@@ -278503,14 +278618,8 @@ wd:Q6418354 rdfs:label "Kitson and Company"@en,
 wd:Q1321361 rdfs:label "Société Franco-Belge"@en,
         "ソシエテ・フランコ＝ベルジュ"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q1473477 rdfs:label "4-8-2"@en,
         "車軸配置 4-8-2"@ja .
-
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
 
 wd:Q35953 rdfs:label "MAN SE"@en,
         "MAN"@ja .
@@ -278527,11 +278636,17 @@ wd:Q158276 rdfs:label "AEG"@en,
 wd:Q1868564 rdfs:label "Lokomotiv- und Waggonbaufabrik Krupp"@en,
         "クルップ機関車車両製作所"@ja .
 
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
 wd:Q154195 rdfs:label "Kingdom of Bavaria"@en,
         "バイエルン王国"@ja .
 
 wd:Q5184831 rdfs:label "Crewe Works"@en,
         "クルー鉄道製作所"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q26208367 rdfs:label "2-6-0T"@en .
 
@@ -278611,13 +278726,13 @@ wd:Q1399767 rdfs:label "Sächsische Maschinenfabrik"@en,
 wd:Q41 rdfs:label "Greece"@en,
         "ギリシャ"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1092174 rdfs:label "Neilson and Company"@en,
         "ニールソン"@ja .
 
 wd:Q26208746 rdfs:label "0-6-2T"@en .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q336811 rdfs:label "ČKD社"@ja .
 

@@ -154,6 +154,7 @@ CLASSES = {
     "Q16927058": ("Q16927058", None, None),                   # New Zealand AM class EMU (CAF, Auckland)
     "Q96106536": ("Q96106536", None, None),                   # Siemens Venture (VIA Rail cab car)
     "Q15956101": ("Q15956101", None, None),                   # British Rail Class 800 (GWR IET)
+    "Q2244813": ("Q2244813", None, None),                     # Paris Metro MP 14
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -292,6 +293,7 @@ LIVERIES = {
     "at-metro": ({"en": "AT Metro livery (silver and navy with a yellow front)", "ja": "AT Metro の塗装（銀と紺、黄色の顔）"}, "Q4819567"),
     "via-venture": ({"en": "VIA Rail Venture livery (grey, charcoal and yellow)", "ja": "VIA 鉄道のベンチャーの塗装（灰、濃い灰、黄）"}, "Q876720"),
     "gwr-green": ({"en": "GWR green livery (with a yellow nose)", "ja": "GWR の緑の塗装（黄色の鼻）"}, "Q1419438"),
+    "idfm-metro": ({"en": "Île-de-France Mobilités livery (2020-)", "ja": "イル＝ド＝フランス・モビリテの塗装（2020 年から）"}, "Q1747944"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -373,6 +375,7 @@ MODELS = {
     "auckland-am": ("Q16927058", "at-metro", None),
     "venture": ("Q96106536", "via-venture", None),
     "class800": ("Q15956101", "gwr-green", None),
+    "mp14": ("Q2244813", "idfm-metro", None),
 }
 
 
