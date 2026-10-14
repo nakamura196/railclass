@@ -139,6 +139,7 @@ CLASSES = {
     "Q125350160": ("Q125350160", None, None),                 # Railjet 1 (OEBB, 1st generation)
     "tb-bluetrain": (None, None, {"en": "Blue Train observation car", "ja": "ブルートレイン（南アフリカ）の展望車"}),# Blue Train observation car (no Wikidata item for the coaches; the service Q885923 is linked in tools/class_lines.tsv)
     "Q1436723": ("Q1436723", None, None),                     # Ford E-Series (the E-450 cutaway chassis under the UBC shuttle; a road vehicle, not rolling stock)
+    "Q681896": ("Q681896", None, None),                       # British Rail Class 390 Pendolino (Avanti West Coast)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -261,6 +262,7 @@ LIVERIES = {
     "oebb-railjet": ({"en": "ÖBB Railjet livery (wine red and grey)", "ja": "ÖBB のレールジェットの塗装（ワインレッドと灰）"}, "Q83822"),
     "bluetrain-royal": ({"en": "Blue Train livery (royal blue with gold lines)", "ja": "ブルートレインの塗装（濃い青に金の線）"}, "Q820804"),
     "ubc-take-flight": ({"en": "UBC Thunderbirds \"TAKE FLIGHT\" wrap (navy and blue with a gold line, white roof)", "ja": "UBC サンダーバーズの「TAKE FLIGHT」の塗装（紺と青に金の線、白い屋根）"}, "Q7863809"),
+    "avanti-teal": ({"en": "Avanti West Coast livery (teal with a yellow nose, 2019-)", "ja": "アヴァンティ・ウェスト・コーストの塗装（青緑に黄色の鼻、2019 年から）"}, "Q68441695"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -330,6 +332,7 @@ MODELS = {
     "railjet": ("Q125350160", "oebb-railjet", None),
     "bluetrain": ("tb-bluetrain", "bluetrain-royal", None),
     "ubcshuttle": ("Q1436723", "ubc-take-flight", {"en": "cutaway minibus body on the Ford E-450 chassis", "ja": "フォード E-450 の車台に載る小型バスの車体"}),
+    "avanti390": ("Q681896", "avanti-teal", None),
 }
 
 

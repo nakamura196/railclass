@@ -196818,28 +196818,6 @@ cls:Q680985 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q39 .
 
-cls:Q681896 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "British Rail Class 390"@en,
-        "イギリス鉄道390形電車"@ja ;
-    skos:exactMatch wd:Q681896 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
-    skos:prefLabel "British Rail Class 390"@en,
-        "イギリス鉄道390形電車"@ja ;
-    prov:wasDerivedFrom wd:Q681896 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q68441695,
-        wd:Q843431 ;
-    wdt:P17 wd:Q145 ;
-    wdt:P176 wd:Q309084 ;
-    wdt:P2052 201.0 ;
-    wdt:P279 wd:Q483373 ;
-    wdt:P729 "2002"^^xsd:gYear ;
-    wdt:P930 wd:Q106530439 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/390%20011%20City%20of%20Lichfield%20Avanti%20Pendolino%20unit.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q145 .
-
 cls:Q681965 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "FS Vivalto carriages"@en ;
@@ -257764,6 +257742,30 @@ cls:Q671805 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q681896 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 390"@en,
+        "イギリス鉄道390形電車"@ja ;
+    skos:exactMatch wd:Q681896 ;
+    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:prefLabel "British Rail Class 390"@en,
+        "イギリス鉄道390形電車"@ja ;
+    prov:wasDerivedFrom wd:Q681896 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q68441695,
+        wd:Q843431 ;
+    wdt:P17 wd:Q145 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P2052 200.0,
+        201.0 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2002"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/390%20011%20City%20of%20Lichfield%20Avanti%20Pendolino%20unit.jpg> ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q145 ;
+    schema:subjectOf mdl:avanti390 .
+
 <https://nakamura196.github.io/train-bodies/rdf/class/Q681965#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1159300#P3438> ;
     skos:note "wikidata"@en ;
@@ -262538,6 +262540,100 @@ mdl:allegra a schema:3DModel ;
         <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6>,
         <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7> ;
     tb:liveryOf wd:Q177598 .
+
+mdl:avanti390 a schema:3DModel ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/avanti390#livery> ;
+    schema:about cls:Q681896 ;
+    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/avanti390.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.2 ] ;
+    schema:description "英国西海岸本線の振り子式電車。2019年からの青緑と黄色の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "アヴァンティ・ウェスト・コースト 390形ペンドリーノ"@ja ;
+    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/avanti390/manifest.json> ;
+    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/avanti390.jpg> ;
+    schema:url <https://nakamura196.github.io/train-bodies/view.html#avanti390> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color1> a tb:ColorSample ;
+    rdfs:label "teal" ;
+    wdt:P462 wd:Q1088 ;
+    tb:areaShare 0.6010 ;
+    schema:color "#1F4A5A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.1412 ;
+    schema:color "#3E4246" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color3> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    tb:areaShare 0.0716 ;
+    schema:color "#EEF0F0" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color4> a tb:ColorSample ;
+    rdfs:label "cap" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0597 ;
+    schema:color "#1C1E22" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color5> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0403 ;
+    schema:color "#33363A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color6> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q23445 ;
+    tb:areaShare 0.0360 ;
+    schema:color "#182431" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color7> a tb:ColorSample ;
+    rdfs:label "orange" ;
+    wdt:P462 wd:Q39338 ;
+    tb:areaShare 0.0197 ;
+    schema:color "#F05A28" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color8> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q943 ;
+    tb:areaShare 0.0175 ;
+    schema:color "#F2BE00" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color9> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    tb:areaShare 0.0123 ;
+    schema:color "#4E5E6A" .
+
+<https://nakamura196.github.io/train-bodies/rdf/model/avanti390#livery> a tb:Livery ;
+    rdfs:label "Avanti West Coast livery (teal with a yellow nose, 2019-)"@en,
+        "アヴァンティ・ウェスト・コーストの塗装（青緑に黄色の鼻、2019 年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/avanti390/awc_avanti390.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q39338,
+        wd:Q943 ;
+    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color1>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color2>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color3>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color4>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color5>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color6>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color7>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color8>,
+        <https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color9> ;
+    tb:liveryOf wd:Q68441695 .
 
 mdl:ave102 a schema:3DModel ;
     tb:galleryGroup "world" ;
@@ -270352,9 +270448,6 @@ wd:Q6840748 rdfs:label "Mid-Kent line"@en .
 
 wd:Q6842474 rdfs:label "Midland Line"@en .
 
-wd:Q68441695 rdfs:label "Avanti West Coast"@en,
-        "ファースト・ウェスト・コースト"@ja .
-
 wd:Q685279 rdfs:label "Brussels tram route 23"@en .
 
 wd:Q68646 rdfs:label "Berlin U-Bahn"@en,
@@ -272124,6 +272217,9 @@ wd:Q673320 rdfs:label "Kharkiv Metro"@en,
 
 wd:Q678872 rdfs:label "Basler Verkehrs-Betriebe"@en,
         "バスラー交通局"@ja .
+
+wd:Q68441695 rdfs:label "Avanti West Coast"@en,
+        "ファースト・ウェスト・コースト"@ja .
 
 wd:Q685601 rdfs:label "Dopravný podnik Bratislava"@en,
         "ブラチスラヴァ交通企業会社"@ja .
@@ -276254,9 +276350,6 @@ wd:Q896047 rdfs:label "Grand Duchy of Mecklenburg Friedrich-Franz Railway"@en,
 wd:Q935330 rdfs:label "push–pull train"@en,
         "プッシュプル列車"@ja .
 
-wd:Q943 rdfs:label "yellow"@en,
-        "黄色"@ja .
-
 wd:Q9676 rdfs:label "Isle of Man"@en,
         "マン島"@ja .
 
@@ -276388,6 +276481,9 @@ wd:Q881 rdfs:label "Vietnam"@en,
 
 wd:Q910157 rdfs:label "control car"@en,
         "制御車"@ja .
+
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
 
 wd:Q10397424 rdfs:label "900 mm track gauge"@en,
         "900ミリ軌間"@ja .
@@ -276633,9 +276729,6 @@ wd:Q17147097 rdfs:label "950 mm track gauge"@en .
 
 wd:Q3109506 rdfs:label "Media Distancia Renfe"@en .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q4354109 rdfs:label "cab unit"@en,
         "キャブ・ユニット"@ja .
 
@@ -276692,6 +276785,9 @@ wd:Q923337 rdfs:label "Ukrainian Railways"@en,
 wd:Q93090957 rdfs:label "SNCF Voyageurs"@en .
 
 wd:Q3112900 rdfs:label "Goša FOM"@en .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q766616 rdfs:label "Slovenske železnice"@en,
         "スロベニア鉄道"@ja .
@@ -277323,9 +277419,6 @@ wd:Q212 rdfs:label "Ukraine"@en,
 wd:Q218 rdfs:label "Romania"@en,
         "ルーマニア"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q3542526 rdfs:label "4-8-0"@en,
         "車輪配置 4-8-0"@ja .
 
@@ -277335,8 +277428,8 @@ wd:Q660770 rdfs:label "Russian Railways"@en,
 wd:Q7055281 rdfs:label "North Eastern Region of British Railways"@en,
         "ノース・イースタン・リージョン"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q32 rdfs:label "Luxembourg"@en,
         "ルクセンブルク"@ja .
@@ -277362,6 +277455,9 @@ wd:Q1550653 rdfs:label "Soviet Railways"@en .
 
 wd:Q1817331 rdfs:label "Pesa"@en,
         "PESA"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q503585 rdfs:label "Korea under Japanese rule"@en,
         "日本統治時代の朝鮮"@ja .
@@ -277482,14 +277578,14 @@ wd:Q682656 rdfs:label "760 mm track gauge"@en,
 wd:Q664420 rdfs:label "Brown, Boveri & Cie"@en,
         "ブラウン・ボベリ"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q4032352 rdfs:label "750 mm track gauge"@en,
         "750 mm軌間"@ja .
 
 wd:Q83910 rdfs:label "Red Nacional de los Ferrocarriles Españoles"@en,
         "レンフェ"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q1548721 rdfs:label "open coach"@en,
         "開放座席車"@ja .
@@ -277780,11 +277876,11 @@ wd:Q853110 rdfs:label "Beyer, Peacock and Company"@en,
 wd:Q83823 rdfs:label "Ferrovie dello Stato Italiane"@en,
         "フェッロヴィーエ・デッロ・スタート"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q28 rdfs:label "Hungary"@en,
         "ハンガリー"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q669606 rdfs:label "Swiss Locomotive and Machine Works"@en,
         "スイス・ロコモティブ・アンド・マシン・ワークス"@ja .
