@@ -235610,22 +235610,6 @@ cls:Q956119 a skos:Concept,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/PrT15.jpg> ;
     tb:has3DModel false .
 
-cls:Q95613096 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "LRTA 13000 class"@en,
-        "マニラ・ライトレール13000形電車"@ja ;
-    skos:exactMatch wd:Q95613096 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "LRTA 13000 class"@en,
-        "マニラ・ライトレール13000形電車"@ja ;
-    prov:wasDerivedFrom wd:Q95613096 ;
-    wdt:P137 wd:Q6546068 ;
-    wdt:P176 wd:Q650745,
-        wd:Q838212 ;
-    wdt:P279 wd:Q15825863 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/4G%20set%2016%20departs%20EDSA.jpg> ;
-    tb:has3DModel false .
-
 cls:Q956835 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "SJ X6"@en ;
@@ -242018,6 +242002,8 @@ wd:Q6500181 rdfs:label "Yongin Rapid Transit"@en,
 
 wd:Q650745 rdfs:label "Mitsubishi Corporation"@en,
         "三菱商事"@ja .
+
+wd:Q65087474 rdfs:label "Light Rail Manila Corporation"@en .
 
 wd:Q65127226 rdfs:label "Tramways de Roubaix et de Tourcoing"@en .
 
@@ -261576,6 +261562,23 @@ cls:Q935909 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q95613096 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "LRTA 13000 class"@en,
+        "マニラ・ライトレール13000形電車"@ja ;
+    skos:exactMatch wd:Q95613096 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "LRTA 13000 class"@en,
+        "マニラ・ライトレール13000形電車"@ja ;
+    prov:wasDerivedFrom wd:Q95613096 ;
+    wdt:P137 wd:Q6546068 ;
+    wdt:P176 wd:Q650745,
+        wd:Q838212 ;
+    wdt:P279 wd:Q15825863 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/4G%20set%2016%20departs%20EDSA.jpg> ;
+    schema:subjectOf mdl:manila-lrt1 ;
+    tb:has3DModel true .
+
 <https://w3id.org/railclass/Q9592962#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q113960973#P3438> ;
     skos:note "wikidata"@en ;
@@ -266447,6 +266450,85 @@ mdl:maglev a schema:3DModel ;
         <https://w3id.org/railclass/model/maglev#color5>,
         <https://w3id.org/railclass/model/maglev#color6> ;
     tb:liveryOf wd:Q769591 .
+
+mdl:manila-lrt1 a schema:3DModel ;
+    schema:about cls:Q95613096 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/manila-lrt1.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "フィリピン・マニラの高架ライトレール。2023年からの第4世代車、赤とステンレスに黒い額。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 43.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "マニラLRT 1号線 13000形"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/manila-lrt1/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/manila-lrt1.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#manila-lrt1> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/manila-lrt1#livery> .
+
+<https://w3id.org/railclass/model/manila-lrt1#color1> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B0B4B8" ;
+    tb:areaShare 0.6914 .
+
+<https://w3id.org/railclass/model/manila-lrt1#color2> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#D81E1E" ;
+    tb:areaShare 0.1220 .
+
+<https://w3id.org/railclass/model/manila-lrt1#color3> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B4B9BC" ;
+    tb:areaShare 0.0962 .
+
+<https://w3id.org/railclass/model/manila-lrt1#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#121316" ;
+    tb:areaShare 0.0466 .
+
+<https://w3id.org/railclass/model/manila-lrt1#color5> a tb:ColorSample ;
+    rdfs:label "panel" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C4C8CB" ;
+    tb:areaShare 0.0188 .
+
+<https://w3id.org/railclass/model/manila-lrt1#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4E5C66" ;
+    tb:areaShare 0.0107 .
+
+<https://w3id.org/railclass/model/manila-lrt1#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0076 .
+
+<https://w3id.org/railclass/model/manila-lrt1#livery> a tb:Livery ;
+    rdfs:label "LRT Line 1 13000 class livery (red and stainless with a black forehead)"@en,
+        "LRT 1 号線 13000 形の塗装（赤とステンレスに黒い額）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/manila-lrt1/lrt1_manila-lrt1.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/manila-lrt1#color1>,
+        <https://w3id.org/railclass/model/manila-lrt1#color2>,
+        <https://w3id.org/railclass/model/manila-lrt1#color3>,
+        <https://w3id.org/railclass/model/manila-lrt1#color4>,
+        <https://w3id.org/railclass/model/manila-lrt1#color5>,
+        <https://w3id.org/railclass/model/manila-lrt1#color6>,
+        <https://w3id.org/railclass/model/manila-lrt1#color7> ;
+    tb:liveryOf wd:Q65087474 .
 
 mdl:marmaray a schema:3DModel ;
     schema:about cls:Q20926238 ;
@@ -279567,9 +279649,6 @@ wd:Q913248 rdfs:label "VR Group"@en,
 wd:Q249654 rdfs:label "Ministry of Railways"@en,
         "鉄道省"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q370736 rdfs:label "Cape Colony"@en,
         "ケープ植民地"@ja .
 
@@ -279588,6 +279667,9 @@ wd:Q5013176 rdfs:label "CRRC Dalian Co., Ltd."@en,
 
 wd:Q692083 rdfs:label "SIG Group"@en,
         "シグ"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q499967 rdfs:label "Turkish State Railways"@en,
         "トルコ国鉄"@ja .
@@ -279917,9 +279999,6 @@ wd:Q476988 rdfs:label "Sharp, Stewart and Company"@en,
 wd:Q120319 rdfs:label "Mallet locomotive"@en,
         "マレー式機関車"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q171043 rdfs:label "steam locomotive"@en,
         "蒸気機関車"@ja .
 
@@ -279928,6 +280007,9 @@ wd:Q19750814 rdfs:label "1524 mm track gauge"@en,
 
 wd:Q2036496 rdfs:label "2-2-2"@en,
         "車輪配置 2-2-2"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q3959904 rdfs:label "multiple unit"@en,
         "動力分散方式の列車編成"@ja .
@@ -280227,13 +280309,13 @@ wd:Q258 rdfs:label "South Africa"@en,
 wd:Q31 rdfs:label "Belgium"@en,
         "ベルギー"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q2037045 rdfs:label "4-4-0"@en,
         "車軸配置 4-4-0"@ja .
 
 wd:Q26212271 rdfs:label "0-6-0T"@en .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q2922269 rdfs:label "0-6-0"@en,
         "車輪配置 0-6-0"@ja .

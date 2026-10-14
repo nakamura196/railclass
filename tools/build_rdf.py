@@ -168,6 +168,7 @@ CLASSES = {
     "Q935909": ("Q935909", None, None),                       # VR Class Sm3 Pendolino
     "Q57469448": ("Q57469448", None, None),                   # Flytoget Class 78 (CAF Oaris)
     "tb-hktram": (None, None, {"en": "Hong Kong Tramways double-deck tram (7th generation)", "ja": "香港の路面電車（第 7 世代、2 階建て）"}),  # Hong Kong Tramways 7th-generation double-deck tram (no Wikidata item for the cars; the system Q385245 is linked in tools/class_lines.tsv)
+    "Q95613096": ("Q95613096", None, None),                   # LRTA 13000 class (Manila LRT Line 1, CAF/Mitsubishi)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -327,6 +328,7 @@ LIVERIES = {
     "vr-sm3": ({"en": "VR Sm3 livery (white with a green band and a forest-art panel)", "ja": "VR の Sm3 の塗装（白に緑の帯と森の絵）"}, "Q913248"),
     "flytoget-grey": ({"en": "Flytoget livery (metallic grey with an orange line round the cab)", "ja": "フリートーゲの塗装（金属の灰色に、運転室を囲むオレンジの線）"}, "Q18325550"),
     "hktramways-green": ({"en": "Hong Kong Tramways plain green livery (with the smiling bumper)", "ja": "香港トラムの緑一色の塗装（笑顔のバンパー）"}, "Q15902782"),
+    "lrmc-13000": ({"en": "LRT Line 1 13000 class livery (red and stainless with a black forehead)", "ja": "LRT 1 号線 13000 形の塗装（赤とステンレスに黒い額）"}, "Q65087474"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -422,6 +424,7 @@ MODELS = {
     "sm3": ("Q935909", "vr-sm3", None),
     "flytoget": ("Q57469448", "flytoget-grey", None),
     "hktram": ("tb-hktram", "hktramways-green", None),
+    "manila-lrt1": ("Q95613096", "lrmc-13000", None),
 }
 
 
