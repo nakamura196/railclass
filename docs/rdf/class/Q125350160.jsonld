@@ -12,83 +12,116 @@
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "@id": "https://w3id.org/railclass/Q125350160",
-  "@type": [
-    "VehicleClass",
-    "skos:Concept"
-  ],
-  "has3DModel": true,
-  "prov:wasDerivedFrom": {
-    "@id": "wd:Q125350160"
-  },
-  "rdfs:label": [
+  "@graph": [
     {
-      "@language": "en",
-      "@value": "Railjet 1"
+      "@id": "https://w3id.org/railclass/Q125350160#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q327051#P3438"
+      },
+      "line": {
+        "@id": "wd:Q327051"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
     },
     {
-      "@language": "ja",
-      "@value": "レールジェット（第1世代）"
+      "@id": "wd:Q327051",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Railjet"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q125350160",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "has3DModel": true,
+      "lineUse": {
+        "@id": "https://w3id.org/railclass/Q125350160#line1"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q125350160"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Railjet 1"
+        },
+        {
+          "@language": "ja",
+          "@value": "レールジェット（第1世代）"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://w3id.org/railclass/model/railjet"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q125350160"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/railclass/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Railjet 1"
+        },
+        {
+          "@language": "ja",
+          "@value": "レールジェット（第1世代）"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q327051"
+      },
+      "wdt:P1064": {
+        "@id": "wd:Q1999572"
+      },
+      "wdt:P137": [
+        {
+          "@id": "wd:Q83822"
+        },
+        {
+          "@id": "wd:Q304944"
+        }
+      ],
+      "wdt:P17": [
+        {
+          "@id": "wd:Q28"
+        },
+        {
+          "@id": "wd:Q38"
+        },
+        {
+          "@id": "wd:Q40"
+        },
+        {
+          "@id": "wd:Q183"
+        },
+        {
+          "@id": "wd:Q213"
+        },
+        {
+          "@id": "wd:Q214"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q81230"
+      },
+      "wdt:P2052": {
+        "@type": "xsd:decimal",
+        "@value": "230"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q13402959"
+      }
     }
-  ],
-  "schema:subjectOf": {
-    "@id": "https://w3id.org/railclass/model/railjet"
-  },
-  "skos:exactMatch": {
-    "@id": "wd:Q125350160"
-  },
-  "skos:inScheme": {
-    "@id": "https://w3id.org/railclass/"
-  },
-  "skos:prefLabel": [
-    {
-      "@language": "en",
-      "@value": "Railjet 1"
-    },
-    {
-      "@language": "ja",
-      "@value": "レールジェット（第1世代）"
-    }
-  ],
-  "wdt:P1064": {
-    "@id": "wd:Q1999572"
-  },
-  "wdt:P137": [
-    {
-      "@id": "wd:Q83822"
-    },
-    {
-      "@id": "wd:Q304944"
-    }
-  ],
-  "wdt:P17": [
-    {
-      "@id": "wd:Q28"
-    },
-    {
-      "@id": "wd:Q38"
-    },
-    {
-      "@id": "wd:Q40"
-    },
-    {
-      "@id": "wd:Q183"
-    },
-    {
-      "@id": "wd:Q213"
-    },
-    {
-      "@id": "wd:Q214"
-    }
-  ],
-  "wdt:P176": {
-    "@id": "wd:Q81230"
-  },
-  "wdt:P2052": {
-    "@type": "xsd:decimal",
-    "@value": "230"
-  },
-  "wdt:P279": {
-    "@id": "wd:Q13402959"
-  }
+  ]
 }

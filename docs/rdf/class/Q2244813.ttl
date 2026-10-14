@@ -1,4 +1,5 @@
 @prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -25,5 +26,27 @@ cls:Q2244813 a skos:Concept,
     wdt:P279 wd:Q108875699 ;
     wdt:P930 wd:Q25857994 ;
     schema:subjectOf mdl:mp14 ;
-    tb:has3DModel true .
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q2244813#line1>,
+        <https://w3id.org/railclass/Q2244813#line2> ;
+    tb:usedOn wd:Q50756,
+        wd:Q50761 .
+
+<https://w3id.org/railclass/Q2244813#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q50756#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q50756 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q2244813#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q50761#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q50761 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q50756 rdfs:label "Paris Métro Line 11"@en .
+
+wd:Q50761 rdfs:label "Paris Métro Line 14"@en .
 
