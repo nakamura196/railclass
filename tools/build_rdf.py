@@ -174,6 +174,7 @@ CLASSES = {
     "Q22344403": ("Q22344403", None, None),                   # DB Classes 483 and 484 (Berlin S-Bahn)
     "Q16908552": ("Q16908552", None, None),                   # Korail Class 210000 (ITX-Saemaeul)
     "Q117911780": ("Q117911780", None, {"en": "Class 388 (TRAXX MS3)", "ja": "388 形（TRAXX MS3）"}),  # Lokomotiva 388 (Bombardier/Alstom TRAXX MS3); mul label only
+    "Q11680376": ("Q11680376", None, None),                   # CP 4000 Series (Alfa Pendular)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -251,7 +252,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q6955219": "NR 形",
             "Q57469448": "フリートーゲ 78 形",
             "Q18632551": "ヴッパータール空中鉄道 GTW 15",
-            "Q22344403": "ベルリン S バーン 483/484 形"}
+            "Q22344403": "ベルリン S バーン 483/484 形",
+            "Q11680376": "ポルトガル鉄道 4000 系（アルファ・ペンドゥラール）"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -344,6 +346,7 @@ LIVERIES = {
     "sbahn-berlin": ({"en": "Berlin S-Bahn livery (traditional red and ochre)", "ja": "ベルリン S バーンの塗装（伝統の赤と黄土色）"}, "Q12374454"),
     "korail-itx": ({"en": "ITX-Saemaeul livery (red and charcoal)", "ja": "ITX-セマウルの塗装（赤と濃い灰）"}, "Q18169"),
     "regiojet-yellow": ({"en": "RegioJet livery (yellow with silver cab tops edged by a red line)", "ja": "RegioJet の塗装（黄色、運転台の上の銀と赤い縁取り）"}, "Q221186"),
+    "cp-alfa": ({"en": "CP Alfa Pendular livery (silver and slate with a lime line, 2017-)", "ja": "CP のアルファ・ペンドゥラールの塗装（銀とスレート、黄緑の線、2017 年から）"}, "Q81123"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -445,6 +448,7 @@ MODELS = {
     "sbahn483": ("Q22344403", "sbahn-berlin", None),
     "itx-saemaeul": ("Q16908552", "korail-itx", None),
     "regiojet": ("Q117911780", "regiojet-yellow", None),
+    "alfapendular": ("Q11680376", "cp-alfa", None),
 }
 
 

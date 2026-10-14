@@ -1,8 +1,10 @@
 @prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -11,10 +13,12 @@
 
 cls:Q11680376 a skos:Concept,
         tb:VehicleClass ;
-    rdfs:label "CP 4000 Series"@en ;
+    rdfs:label "CP 4000 Series"@en,
+        "ポルトガル鉄道 4000 系（アルファ・ペンドゥラール）"@ja ;
     skos:exactMatch wd:Q11680376 ;
     skos:inScheme cls: ;
-    skos:prefLabel "CP 4000 Series"@en ;
+    skos:prefLabel "CP 4000 Series"@en,
+        "ポルトガル鉄道 4000 系（アルファ・ペンドゥラール）"@ja ;
     prov:wasDerivedFrom wd:Q11680376 ;
     wdt:P137 wd:Q81123 ;
     wdt:P17 wd:Q45 ;
@@ -22,7 +26,8 @@ cls:Q11680376 a skos:Concept,
     wdt:P279 wd:Q483373 ;
     wdt:P930 wd:Q106530439 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Flickr%20-%20nmorao%20-%20Alfa%20Pendular%20182%2C%20Lousal%2C%202009.05.19.jpg> ;
-    tb:has3DModel false ;
+    schema:subjectOf mdl:alfapendular ;
+    tb:has3DModel true ;
     tb:lineUse <https://w3id.org/railclass/Q11680376#line1> ;
     tb:operatingCountry wd:Q45 ;
     tb:usedOn wd:Q223386 .

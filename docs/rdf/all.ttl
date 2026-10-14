@@ -26626,24 +26626,6 @@ cls:Q116786030 a skos:Concept,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SBB%20Historic%20-%20F%20112%2000048%20047%20-%20Achsen%20zu%20L6%20kriegsbeschaedigt%20vom%20Elsass%20eingetroffen.tif> ;
     tb:has3DModel false .
 
-cls:Q11680376 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "CP 4000 Series"@en ;
-    skos:exactMatch wd:Q11680376 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "CP 4000 Series"@en ;
-    prov:wasDerivedFrom wd:Q11680376 ;
-    wdt:P137 wd:Q81123 ;
-    wdt:P17 wd:Q45 ;
-    wdt:P176 wd:Q2738829 ;
-    wdt:P279 wd:Q483373 ;
-    wdt:P930 wd:Q106530439 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Flickr%20-%20nmorao%20-%20Alfa%20Pendular%20182%2C%20Lousal%2C%202009.05.19.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q11680376#line1> ;
-    tb:operatingCountry wd:Q45 ;
-    tb:usedOn wd:Q223386 .
-
 cls:Q116808236 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "SR Diagram 3141 Special Cattle Van"@en ;
@@ -244097,6 +244079,27 @@ cls:Q1087710 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q11680376 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "CP 4000 Series"@en,
+        "ポルトガル鉄道 4000 系（アルファ・ペンドゥラール）"@ja ;
+    skos:exactMatch wd:Q11680376 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "CP 4000 Series"@en,
+        "ポルトガル鉄道 4000 系（アルファ・ペンドゥラール）"@ja ;
+    prov:wasDerivedFrom wd:Q11680376 ;
+    wdt:P137 wd:Q81123 ;
+    wdt:P17 wd:Q45 ;
+    wdt:P176 wd:Q2738829 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Flickr%20-%20nmorao%20-%20Alfa%20Pendular%20182%2C%20Lousal%2C%202009.05.19.jpg> ;
+    schema:subjectOf mdl:alfapendular ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q11680376#line1> ;
+    tb:operatingCountry wd:Q45 ;
+    tb:usedOn wd:Q223386 .
+
 <https://w3id.org/railclass/Q11680376#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q223386#P3438> ;
     skos:note "wikidata"@en ;
@@ -262295,6 +262298,99 @@ mdl:alboraq a schema:3DModel ;
         <https://w3id.org/railclass/model/alboraq#color9> ;
     tb:liveryOf wd:Q1815809 .
 
+mdl:alfapendular a schema:3DModel ;
+    schema:about cls:Q11680376 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/alfapendular.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.8 ] ;
+    schema:description "ポルトガル鉄道の振り子式電車。2017年からの銀とスレートの塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 39.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "アルファ・ペンドゥラール"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/alfapendular/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/alfapendular.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#alfapendular> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/alfapendular#livery> .
+
+<https://w3id.org/railclass/model/alfapendular#color1> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#BCC0C4" ;
+    tb:areaShare 0.8186 .
+
+<https://w3id.org/railclass/model/alfapendular#color2> a tb:ColorSample ;
+    rdfs:label "slate" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3A414A" ;
+    tb:areaShare 0.0554 .
+
+<https://w3id.org/railclass/model/alfapendular#color3> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#1E2125" ;
+    tb:areaShare 0.0341 .
+
+<https://w3id.org/railclass/model/alfapendular#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0238 .
+
+<https://w3id.org/railclass/model/alfapendular#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#5E7080" ;
+    tb:areaShare 0.0203 .
+
+<https://w3id.org/railclass/model/alfapendular#color6> a tb:ColorSample ;
+    rdfs:label "dome" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6068" ;
+    tb:areaShare 0.0094 .
+
+<https://w3id.org/railclass/model/alfapendular#color7> a tb:ColorSample ;
+    rdfs:label "doorline" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#6A7078" ;
+    tb:areaShare 0.0082 .
+
+<https://w3id.org/railclass/model/alfapendular#color8> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0076 .
+
+<https://w3id.org/railclass/model/alfapendular#color9> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2A3038" ;
+    tb:areaShare 0.0058 .
+
+<https://w3id.org/railclass/model/alfapendular#livery> a tb:Livery ;
+    rdfs:label "CP Alfa Pendular livery (silver and slate with a lime line, 2017-)"@en,
+        "CP のアルファ・ペンドゥラールの塗装（銀とスレート、黄緑の線、2017 年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/alfapendular/cp_alfapendular.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/alfapendular#color1>,
+        <https://w3id.org/railclass/model/alfapendular#color2>,
+        <https://w3id.org/railclass/model/alfapendular#color3>,
+        <https://w3id.org/railclass/model/alfapendular#color4>,
+        <https://w3id.org/railclass/model/alfapendular#color5>,
+        <https://w3id.org/railclass/model/alfapendular#color6>,
+        <https://w3id.org/railclass/model/alfapendular#color7>,
+        <https://w3id.org/railclass/model/alfapendular#color8>,
+        <https://w3id.org/railclass/model/alfapendular#color9> ;
+    tb:liveryOf wd:Q81123 .
+
 mdl:allegra a schema:3DModel ;
     schema:about cls:Q671805 ;
     schema:contentUrl <https://railclass.ldas.jp/models/allegra.glb> ;
@@ -280112,8 +280208,6 @@ wd:Q370736 rdfs:label "Cape Colony"@en,
 
 wd:Q50398146 rdfs:label "rack railcar"@en .
 
-wd:Q81123 rdfs:label "ポルトガル鉄道"@ja .
-
 wd:Q1038182 rdfs:label "Ministry of Railways of the People's Republic of China"@en,
         "中華人民共和国鉄道部"@ja .
 
@@ -280125,6 +280219,8 @@ wd:Q5013176 rdfs:label "CRRC Dalian Co., Ltd."@en,
 
 wd:Q692083 rdfs:label "SIG Group"@en,
         "シグ"@ja .
+
+wd:Q81123 rdfs:label "ポルトガル鉄道"@ja .
 
 wd:Q499967 rdfs:label "Turkish State Railways"@en,
         "トルコ国鉄"@ja .
@@ -280482,13 +280578,13 @@ wd:Q1092174 rdfs:label "Neilson and Company"@en,
 
 wd:Q26208746 rdfs:label "0-6-2T"@en .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q336811 rdfs:label "ČKD社"@ja .
 
 wd:Q34336 rdfs:label "diesel locomotive"@en,
         "ディーゼル機関車"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q26000795 rdfs:label "2-6-2T"@en .
 
@@ -280531,13 +280627,13 @@ wd:Q749311 rdfs:label "tender"@en,
 wd:Q155 rdfs:label "Brazil"@en,
         "ブラジル"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q477493 rdfs:label "Lokomotivfabrik Floridsdorf"@en .
 
 wd:Q524255 rdfs:label "SNCB/NMBS"@en,
         "ベルギー国鉄"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q16936947 rdfs:label "electric rail motor coach"@en,
         "電動車"@ja .
@@ -280795,11 +280891,11 @@ wd:Q698082 rdfs:label "Deutsche Reichsbahn"@en,
 wd:Q28513 rdfs:label "Austria–Hungary"@en,
         "オーストリア＝ハンガリー帝国"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q24294815 rdfs:label "diesel-hydraulic locomotive"@en,
         "液体式ディーゼル機関車"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q34 rdfs:label "Sweden"@en,
         "スウェーデン"@ja .
