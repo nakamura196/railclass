@@ -158,6 +158,7 @@ CLASSES = {
     "Q432769": ("Q432769", None, None),                       # Alstom Coradia Polyvalent (TER Dakar)
     "Q2805042": ("Q2805042", None, {"en": "Glacier Express panoramic coach (Stadler)", "ja": "氷河特急のパノラマ客車（シュタッドラー製）"}),  # Panoramawagen Glacier-Express (Stadler Bp); German label only
     "Q4033502": ("Q4033502", None, None),                     # Afrosiyob (Talgo 250, Uzbekistan Railways)
+    "Q25197235": ("Q25197235", None, None),                   # CTA 7000-series (CRRC Sifang America)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -223,7 +224,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q96407257": "シドニーメトロ（アルストム メトロポリス）",
             "Q125350160": "レールジェット（第1世代）",
             "Q134207119": "BART フリート・オブ・ザ・フューチャー",
-            "Q4033502": "アフロシヨブ（Talgo 250）"}
+            "Q4033502": "アフロシヨブ（Talgo 250）",
+            "Q25197235": "シカゴ「L」CTA 7000系"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -301,6 +303,7 @@ LIVERIES = {
     "seter-dakar": ({"en": "TER Dakar livery (white with a bronze cap and a flag-coloured swoosh)", "ja": "TER ダカールの塗装（白地に銅色の帽子と国旗の三色の矢）"}, "Q138332202"),
     "glacier-express": ({"en": "Glacier Express livery (red ends with white Swiss-cross pieces)", "ja": "氷河特急の塗装（赤い端に白い十字のかけら）"}, "Q666922"),
     "uty-afrosiyob": ({"en": "Afrosiyob livery (white with an azure roof and flag-colour stripes)", "ja": "アフロシヨブの塗装（白地に空色の屋根と国旗の色の帯）"}, "Q2093569"),
+    "cta-7000": ({"en": "CTA 7000-series livery (stainless with a blue end cap)", "ja": "CTA 7000 系の塗装（ステンレスに青い顔）"}, "Q117309"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -386,6 +389,7 @@ MODELS = {
     "ter-dakar": ("Q432769", "seter-dakar", None),
     "glacier": ("Q2805042", "glacier-express", None),
     "afrosiyob": ("Q4033502", "uty-afrosiyob", None),
+    "cta7000": ("Q25197235", "cta-7000", None),
 }
 
 
