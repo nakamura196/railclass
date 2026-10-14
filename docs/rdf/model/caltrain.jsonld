@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/model/caltrain#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1389"
+      },
+      "rdfs:label": "red",
+      "schema:color": "#F0161C",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/caltrain#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0172"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#5E666A",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/caltrain#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0399"
+      },
+      "rdfs:label": "frame",
+      "schema:color": "#16181C",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/caltrain#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/caltrain#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/caltrain#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/caltrain#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/caltrain#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/caltrain#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/caltrain#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/caltrain#color7"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/caltrain/caltrain_caltrain.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q107126073"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Caltrain electric livery (red and white, 2024-)"
+        },
+        {
+          "@language": "ja",
+          "@value": "カルトレインの電化の塗装（赤と白、2024 年から）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3142"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/caltrain",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/caltrain#livery"
+      },
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/Q130240621"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass.ldas.jp/models/caltrain.glb"
+      },
+      "schema:depth": {
+        "@id": "_:caltrain-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "サンフランシスコ半島の通勤鉄道の2階建て電車。2024年の電化で入った赤と白の塗装。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:caltrain-height"
+      },
+      "schema:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "カルトレイン KISS"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/caltrain/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/caltrain.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#caltrain"
+      },
+      "schema:width": {
+        "@id": "_:caltrain-width"
+      }
+    },
+    {
+      "@id": "_:caltrain-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:caltrain-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:caltrain-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "45.6"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/caltrain#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0578"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#2A333E",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/caltrain#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0074"
+      },
+      "rdfs:label": "cap",
+      "schema:color": "#2B2F34",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/caltrain#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6740"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#F4F6F6",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/caltrain#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0537"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#6A7076",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    }
+  ]
+}

@@ -1,8 +1,10 @@
 @prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -25,7 +27,8 @@ cls:Q130240621 a skos:Concept,
     wdt:P279 wd:Q672992 ;
     wdt:P729 "2024"^^xsd:gYear ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Caltrain%20306%20at%20Caltrain%20Electric%20Train%20Tour%2C%20San%20Jose%2C%20California.jpg> ;
-    tb:has3DModel false ;
+    schema:subjectOf mdl:caltrain ;
+    tb:has3DModel true ;
     tb:lineUse <https://w3id.org/railclass/Q130240621#line1> ;
     tb:operatingCountry wd:Q30 ;
     tb:usedOn wd:Q166817 .

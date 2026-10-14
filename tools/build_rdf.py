@@ -176,6 +176,7 @@ CLASSES = {
     "Q117911780": ("Q117911780", None, {"en": "Class 388 (TRAXX MS3)", "ja": "388 形（TRAXX MS3）"}),  # Lokomotiva 388 (Bombardier/Alstom TRAXX MS3); mul label only
     "Q11680376": ("Q11680376", None, None),                   # CP 4000 Series (Alfa Pendular)
     "tb-alishan": (None, None, {"en": "Alishan Forest Railway DL-45 class diesel locomotive", "ja": "阿里山林業鉄路 DL-45 形ディーゼル機関車"}),  # Alishan Forest Railway DL-45 class (no Wikidata item; the system Q708937 is linked in tools/class_lines.tsv)
+    "Q130240621": ("Q130240621", None, None),                 # Stadler KISS of Caltrain
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -352,6 +353,7 @@ LIVERIES = {
     "regiojet-yellow": ({"en": "RegioJet livery (yellow with silver cab tops edged by a red line)", "ja": "RegioJet の塗装（黄色、運転台の上の銀と赤い縁取り）"}, "Q221186"),
     "cp-alfa": ({"en": "CP Alfa Pendular livery (silver and slate with a lime line, 2017-)", "ja": "CP のアルファ・ペンドゥラールの塗装（銀とスレート、黄緑の線、2017 年から）"}, "Q81123"),
     "afr-red": ({"en": "Alishan Forest Railway livery (red with a white band and white V chevrons)", "ja": "阿里山林業鉄路の塗装（赤い車体に白い帯と V 字）"}, "Q55695198"),
+    "caltrain-kiss": ({"en": "Caltrain electric livery (red and white, 2024-)", "ja": "カルトレインの電化の塗装（赤と白、2024 年から）"}, "Q107126073"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -455,6 +457,7 @@ MODELS = {
     "regiojet": ("Q117911780", "regiojet-yellow", None),
     "alfapendular": ("Q11680376", "cp-alfa", None),
     "alishan": ("tb-alishan", "afr-red", None),
+    "caltrain": ("Q130240621", "caltrain-kiss", None),
 }
 
 

@@ -1,0 +1,89 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:caltrain a schema:3DModel ;
+    schema:about cls:Q130240621 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/caltrain.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "サンフランシスコ半島の通勤鉄道の2階建て電車。2024年の電化で入った赤と白の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 45.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "カルトレイン KISS"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/caltrain/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/caltrain.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#caltrain> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/caltrain#livery> .
+
+<https://w3id.org/railclass/model/caltrain#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#F4F6F6" ;
+    tb:areaShare 0.6740 .
+
+<https://w3id.org/railclass/model/caltrain#color2> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#F0161C" ;
+    tb:areaShare 0.1389 .
+
+<https://w3id.org/railclass/model/caltrain#color3> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2A333E" ;
+    tb:areaShare 0.0578 .
+
+<https://w3id.org/railclass/model/caltrain#color4> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#6A7076" ;
+    tb:areaShare 0.0537 .
+
+<https://w3id.org/railclass/model/caltrain#color5> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#16181C" ;
+    tb:areaShare 0.0399 .
+
+<https://w3id.org/railclass/model/caltrain#color6> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5E666A" ;
+    tb:areaShare 0.0172 .
+
+<https://w3id.org/railclass/model/caltrain#color7> a tb:ColorSample ;
+    rdfs:label "cap" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2B2F34" ;
+    tb:areaShare 0.0074 .
+
+<https://w3id.org/railclass/model/caltrain#livery> a tb:Livery ;
+    rdfs:label "Caltrain electric livery (red and white, 2024-)"@en,
+        "カルトレインの電化の塗装（赤と白、2024 年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/caltrain/caltrain_caltrain.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3142 ;
+    tb:colorSample <https://w3id.org/railclass/model/caltrain#color1>,
+        <https://w3id.org/railclass/model/caltrain#color2>,
+        <https://w3id.org/railclass/model/caltrain#color3>,
+        <https://w3id.org/railclass/model/caltrain#color4>,
+        <https://w3id.org/railclass/model/caltrain#color5>,
+        <https://w3id.org/railclass/model/caltrain#color6>,
+        <https://w3id.org/railclass/model/caltrain#color7> ;
+    tb:liveryOf wd:Q107126073 .
+

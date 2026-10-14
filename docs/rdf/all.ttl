@@ -45186,27 +45186,6 @@ cls:Q1302394 a skos:Concept,
     wdt:P2978 wd:Q2036617 ;
     tb:has3DModel false .
 
-cls:Q130240621 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Stadler KISS of Caltrain"@en,
-        "KISS"@ja ;
-    skos:exactMatch wd:Q130240621 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Stadler KISS of Caltrain"@en,
-        "KISS"@ja ;
-    prov:wasDerivedFrom wd:Q130240621 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q166817 ;
-    wdt:P17 wd:Q30 ;
-    wdt:P176 wd:Q666703 ;
-    wdt:P279 wd:Q672992 ;
-    wdt:P729 "2024"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Caltrain%20306%20at%20Caltrain%20Electric%20Train%20Tour%2C%20San%20Jose%2C%20California.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q130240621#line1> ;
-    tb:operatingCountry wd:Q30 ;
-    tb:usedOn wd:Q166817 .
-
 cls:Q130242729 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "CAF Type 10 LRV"@en,
@@ -239526,6 +239505,8 @@ wd:Q1070640 rdfs:label "Chessie System"@en,
 
 wd:Q10710280 rdfs:label "Uppsala–Gävle Järnväg"@en .
 
+wd:Q107126073 rdfs:label "Peninsula Corridor Joint Powers Board"@en .
+
 wd:Q107138918 rdfs:label "Dessau-Wörlitzer Eisenbahn-Gesellschaft"@en .
 
 wd:Q107167020 rdfs:label "Humboldt-Deutzmotoren"@en,
@@ -244871,6 +244852,28 @@ cls:Q125350160 a skos:Concept,
     tb:line wd:Q4178843 ;
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
+
+cls:Q130240621 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Stadler KISS of Caltrain"@en,
+        "KISS"@ja ;
+    skos:exactMatch wd:Q130240621 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Stadler KISS of Caltrain"@en,
+        "KISS"@ja ;
+    prov:wasDerivedFrom wd:Q130240621 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q166817 ;
+    wdt:P17 wd:Q30 ;
+    wdt:P176 wd:Q666703 ;
+    wdt:P279 wd:Q672992 ;
+    wdt:P729 "2024"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Caltrain%20306%20at%20Caltrain%20Electric%20Train%20Tour%2C%20San%20Jose%2C%20California.jpg> ;
+    schema:subjectOf mdl:caltrain ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q130240621#line1> ;
+    tb:operatingCountry wd:Q30 ;
+    tb:usedOn wd:Q166817 .
 
 <https://w3id.org/railclass/Q130240621#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q166817#P3438> ;
@@ -263449,6 +263452,85 @@ mdl:cairo a schema:3DModel ;
         <https://w3id.org/railclass/model/cairo#color7> ;
     tb:liveryOf wd:Q64744683 .
 
+mdl:caltrain a schema:3DModel ;
+    schema:about cls:Q130240621 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/caltrain.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "サンフランシスコ半島の通勤鉄道の2階建て電車。2024年の電化で入った赤と白の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 45.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "カルトレイン KISS"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/caltrain/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/caltrain.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#caltrain> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/caltrain#livery> .
+
+<https://w3id.org/railclass/model/caltrain#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#F4F6F6" ;
+    tb:areaShare 0.6740 .
+
+<https://w3id.org/railclass/model/caltrain#color2> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#F0161C" ;
+    tb:areaShare 0.1389 .
+
+<https://w3id.org/railclass/model/caltrain#color3> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2A333E" ;
+    tb:areaShare 0.0578 .
+
+<https://w3id.org/railclass/model/caltrain#color4> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#6A7076" ;
+    tb:areaShare 0.0537 .
+
+<https://w3id.org/railclass/model/caltrain#color5> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#16181C" ;
+    tb:areaShare 0.0399 .
+
+<https://w3id.org/railclass/model/caltrain#color6> a tb:ColorSample ;
+    rdfs:label "skirt" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5E666A" ;
+    tb:areaShare 0.0172 .
+
+<https://w3id.org/railclass/model/caltrain#color7> a tb:ColorSample ;
+    rdfs:label "cap" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2B2F34" ;
+    tb:areaShare 0.0074 .
+
+<https://w3id.org/railclass/model/caltrain#livery> a tb:Livery ;
+    rdfs:label "Caltrain electric livery (red and white, 2024-)"@en,
+        "カルトレインの電化の塗装（赤と白、2024 年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/caltrain/caltrain_caltrain.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3142 ;
+    tb:colorSample <https://w3id.org/railclass/model/caltrain#color1>,
+        <https://w3id.org/railclass/model/caltrain#color2>,
+        <https://w3id.org/railclass/model/caltrain#color3>,
+        <https://w3id.org/railclass/model/caltrain#color4>,
+        <https://w3id.org/railclass/model/caltrain#color5>,
+        <https://w3id.org/railclass/model/caltrain#color6>,
+        <https://w3id.org/railclass/model/caltrain#color7> ;
+    tb:liveryOf wd:Q107126073 .
+
 mdl:canadaline a schema:3DModel ;
     schema:about cls:Q55614147 ;
     schema:contentUrl <https://railclass.ldas.jp/models/canadaline.glb> ;
@@ -280458,9 +280540,6 @@ wd:Q212 rdfs:label "Ukraine"@en,
 wd:Q218 rdfs:label "Romania"@en,
         "ルーマニア"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q3542526 rdfs:label "4-8-0"@en,
         "車輪配置 4-8-0"@ja .
 
@@ -280469,6 +280548,9 @@ wd:Q660770 rdfs:label "Russian Railways"@en,
 
 wd:Q7055281 rdfs:label "North Eastern Region of British Railways"@en,
         "ノース・イースタン・リージョン"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q32 rdfs:label "Luxembourg"@en,
         "ルクセンブルク"@ja .
@@ -280655,9 +280737,6 @@ wd:Q393557 rdfs:label "Železničná spoločnosť Slovensko"@en,
 
 wd:Q7061278 rdfs:label "Norges Statsbaner"@en .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q476988 rdfs:label "Sharp, Stewart and Company"@en,
         "シャープ・スチュアート"@ja .
 
@@ -280672,6 +280751,9 @@ wd:Q19750814 rdfs:label "1524 mm track gauge"@en,
 
 wd:Q2036496 rdfs:label "2-2-2"@en,
         "車輪配置 2-2-2"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q3959904 rdfs:label "multiple unit"@en,
         "動力分散方式の列車編成"@ja .
