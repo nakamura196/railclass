@@ -1,0 +1,97 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:auckland-am a schema:3DModel ;
+    schema:about cls:Q16927058 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/auckland-am.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "ニュージーランド・オークランドの近郊電車（CAF 製）。AT Metro の銀と紺、黄色の顔。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "オークランド AM 形"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/auckland-am/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/auckland-am.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#auckland-am> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/auckland-am#livery> .
+
+<https://w3id.org/railclass/model/auckland-am#color1> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C3C7CB" ;
+    tb:areaShare 0.7468 .
+
+<https://w3id.org/railclass/model/auckland-am#color2> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#1E2B58" ;
+    tb:areaShare 0.0853 .
+
+<https://w3id.org/railclass/model/auckland-am#color3> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q943 ;
+    schema:color "#F5C00A" ;
+    tb:areaShare 0.0465 .
+
+<https://w3id.org/railclass/model/auckland-am#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0313 .
+
+<https://w3id.org/railclass/model/auckland-am#color5> a tb:ColorSample ;
+    rdfs:label "lines" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#80868E" ;
+    tb:areaShare 0.0269 .
+
+<https://w3id.org/railclass/model/auckland-am#color6> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#EEF0F2" ;
+    tb:areaShare 0.0266 .
+
+<https://w3id.org/railclass/model/auckland-am#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#34404C" ;
+    tb:areaShare 0.0167 .
+
+<https://w3id.org/railclass/model/auckland-am#color8> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0060 .
+
+<https://w3id.org/railclass/model/auckland-am#livery> a tb:Livery ;
+    rdfs:label "AT Metro livery (silver and navy with a yellow front)"@en,
+        "AT Metro の塗装（銀と紺、黄色の顔）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/auckland-am/at_auckland-am.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519,
+        wd:Q943 ;
+    tb:colorSample <https://w3id.org/railclass/model/auckland-am#color1>,
+        <https://w3id.org/railclass/model/auckland-am#color2>,
+        <https://w3id.org/railclass/model/auckland-am#color3>,
+        <https://w3id.org/railclass/model/auckland-am#color4>,
+        <https://w3id.org/railclass/model/auckland-am#color5>,
+        <https://w3id.org/railclass/model/auckland-am#color6>,
+        <https://w3id.org/railclass/model/auckland-am#color7>,
+        <https://w3id.org/railclass/model/auckland-am#color8> ;
+    tb:liveryOf wd:Q4819567 .
+

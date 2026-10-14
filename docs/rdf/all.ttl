@@ -75412,37 +75412,6 @@ cls:Q16927054 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q664 .
 
-cls:Q16927058 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "New Zealand AM class electric multiple unit"@en,
-        "ニュージーランド鉄道AM形電車"@ja ;
-    skos:exactMatch wd:Q16927058 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "New Zealand AM class electric multiple unit"@en,
-        "ニュージーランド鉄道AM形電車"@ja ;
-    prov:wasDerivedFrom wd:Q16927058 ;
-    wdt:P137 wd:Q108501777,
-        wd:Q7920687 ;
-    wdt:P17 wd:Q29 ;
-    wdt:P176 wd:Q838212 ;
-    wdt:P279 wd:Q483373,
-        wd:Q5197274 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/AMA%20103%20at%20Puhinui.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q16927058#line1>,
-        <https://w3id.org/railclass/Q16927058#line2>,
-        <https://w3id.org/railclass/Q16927058#line3>,
-        <https://w3id.org/railclass/Q16927058#line4>,
-        <https://w3id.org/railclass/Q16927058#line5>,
-        <https://w3id.org/railclass/Q16927058#line6> ;
-    tb:operatingCountry wd:Q664 ;
-    tb:usedOn wd:Q141485466,
-        wd:Q28180487,
-        wd:Q5330260,
-        wd:Q6753141,
-        wd:Q7570091,
-        wd:Q7988020 .
-
 cls:Q16927080 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Commonwealth Railways CN class"@en ;
@@ -241836,6 +241805,9 @@ wd:Q480161 rdfs:label "Abkhazian railway"@en,
 wd:Q4804686 rdfs:label "Ashbury Railway Carriage and Iron Company Ltd"@en,
         "アシュベリー鉄道車両・鉄工所"@ja .
 
+wd:Q4819567 rdfs:label "Auckland Transport"@en,
+        "オークランド・トランスポート"@ja .
+
 wd:Q4824767 rdfs:label "Australian Transport Network"@en,
         "オーストラリアン・トランスポート・ネットワーク"@ja .
 
@@ -246179,6 +246151,38 @@ cls:Q16798908 a skos:Concept,
     tb:line wd:Q65060500 ;
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
+
+cls:Q16927058 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "New Zealand AM class electric multiple unit"@en,
+        "ニュージーランド鉄道AM形電車"@ja ;
+    skos:exactMatch wd:Q16927058 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "New Zealand AM class electric multiple unit"@en,
+        "ニュージーランド鉄道AM形電車"@ja ;
+    prov:wasDerivedFrom wd:Q16927058 ;
+    wdt:P137 wd:Q108501777,
+        wd:Q7920687 ;
+    wdt:P17 wd:Q29 ;
+    wdt:P176 wd:Q838212 ;
+    wdt:P279 wd:Q483373,
+        wd:Q5197274 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/AMA%20103%20at%20Puhinui.jpg> ;
+    schema:subjectOf mdl:auckland-am ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q16927058#line1>,
+        <https://w3id.org/railclass/Q16927058#line2>,
+        <https://w3id.org/railclass/Q16927058#line3>,
+        <https://w3id.org/railclass/Q16927058#line4>,
+        <https://w3id.org/railclass/Q16927058#line5>,
+        <https://w3id.org/railclass/Q16927058#line6> ;
+    tb:operatingCountry wd:Q664 ;
+    tb:usedOn wd:Q141485466,
+        wd:Q28180487,
+        wd:Q5330260,
+        wd:Q6753141,
+        wd:Q7570091,
+        wd:Q7988020 .
 
 <https://w3id.org/railclass/Q16927058#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q141485466#P3438> ;
@@ -262190,6 +262194,93 @@ mdl:allegra a schema:3DModel ;
         <https://w3id.org/railclass/model/allegra#color7> ;
     tb:liveryOf wd:Q177598 .
 
+mdl:auckland-am a schema:3DModel ;
+    schema:about cls:Q16927058 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/auckland-am.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "ニュージーランド・オークランドの近郊電車（CAF 製）。AT Metro の銀と紺、黄色の顔。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "オークランド AM 形"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/auckland-am/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/auckland-am.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#auckland-am> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/auckland-am#livery> .
+
+<https://w3id.org/railclass/model/auckland-am#color1> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C3C7CB" ;
+    tb:areaShare 0.7468 .
+
+<https://w3id.org/railclass/model/auckland-am#color2> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#1E2B58" ;
+    tb:areaShare 0.0853 .
+
+<https://w3id.org/railclass/model/auckland-am#color3> a tb:ColorSample ;
+    rdfs:label "yellow" ;
+    wdt:P462 wd:Q943 ;
+    schema:color "#F5C00A" ;
+    tb:areaShare 0.0465 .
+
+<https://w3id.org/railclass/model/auckland-am#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0313 .
+
+<https://w3id.org/railclass/model/auckland-am#color5> a tb:ColorSample ;
+    rdfs:label "lines" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#80868E" ;
+    tb:areaShare 0.0269 .
+
+<https://w3id.org/railclass/model/auckland-am#color6> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#EEF0F2" ;
+    tb:areaShare 0.0266 .
+
+<https://w3id.org/railclass/model/auckland-am#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#34404C" ;
+    tb:areaShare 0.0167 .
+
+<https://w3id.org/railclass/model/auckland-am#color8> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0060 .
+
+<https://w3id.org/railclass/model/auckland-am#livery> a tb:Livery ;
+    rdfs:label "AT Metro livery (silver and navy with a yellow front)"@en,
+        "AT Metro の塗装（銀と紺、黄色の顔）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/auckland-am/at_auckland-am.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519,
+        wd:Q943 ;
+    tb:colorSample <https://w3id.org/railclass/model/auckland-am#color1>,
+        <https://w3id.org/railclass/model/auckland-am#color2>,
+        <https://w3id.org/railclass/model/auckland-am#color3>,
+        <https://w3id.org/railclass/model/auckland-am#color4>,
+        <https://w3id.org/railclass/model/auckland-am#color5>,
+        <https://w3id.org/railclass/model/auckland-am#color6>,
+        <https://w3id.org/railclass/model/auckland-am#color7>,
+        <https://w3id.org/railclass/model/auckland-am#color8> ;
+    tb:liveryOf wd:Q4819567 .
+
 mdl:avanti390 a schema:3DModel ;
     schema:about cls:Q681896 ;
     schema:contentUrl <https://railclass.ldas.jp/models/avanti390.glb> ;
@@ -277288,9 +277379,6 @@ wd:Q873605 rdfs:label "Qinhuangdao–Shenyang high-speed railway"@en .
 wd:Q920625 rdfs:label "Strømmens Værksted"@en,
         "ストレンメン"@ja .
 
-wd:Q943 rdfs:label "yellow"@en,
-        "黄色"@ja .
-
 wd:Q970639 rdfs:label "Tatra trams"@en,
         "タトラカー"@ja .
 
@@ -277392,6 +277480,9 @@ wd:Q7350044 rdfs:label "Robert Stephenson and Hawthorns"@en,
 
 wd:Q846655 rdfs:label "Israel Railways"@en,
         "イスラエル鉄道"@ja .
+
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
 
 wd:Q106530472 rdfs:label "25 kV, 60 Hz AC railway electrification"@en,
         "交流25kV 60Hz鉄道電化"@ja .
@@ -278234,9 +278325,6 @@ wd:Q533534 rdfs:label "Cisleithania"@en,
 wd:Q186320 rdfs:label "Grand Duchy of Baden"@en,
         "バーデン大公国"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q25657 rdfs:label "MÁVAG"@en,
         "マーバグ"@ja .
 
@@ -278249,11 +278337,14 @@ wd:Q633519 rdfs:label "Córas Iompair Éireann"@en,
 wd:Q6418354 rdfs:label "Kitson and Company"@en,
         "キットソン (機関車メーカー)"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q1321361 rdfs:label "Société Franco-Belge"@en,
         "ソシエテ・フランコ＝ベルジュ"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q1473477 rdfs:label "4-8-2"@en,
         "車軸配置 4-8-2"@ja .
@@ -278351,14 +278442,14 @@ wd:Q3959904 rdfs:label "multiple unit"@en,
 
 wd:Q52912 rdfs:label "Statens Järnvägar"@en .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q1399767 rdfs:label "Sächsische Maschinenfabrik"@en,
         "ザクセン機械工場"@ja .
 
 wd:Q41 rdfs:label "Greece"@en,
         "ギリシャ"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q1092174 rdfs:label "Neilson and Company"@en,
         "ニールソン"@ja .

@@ -151,6 +151,7 @@ CLASSES = {
     "Q20988527": ("Q20988527", None, None),                   # TCDD HT80000 (Siemens Velaro TR)
     "Q121749358": ("Q121749358", None, {"en": "Alstom Metropolis Saint-Laurent (REM)", "ja": "REM（モントリオール）の電車（アルストム メトロポリス）"}),# Alstom Metropolis Saint-Laurent (REM, Montreal); en label only
     "Q432478": ("Q432478", None, None),                       # Alstom AGV (Italo AGV 575)
+    "Q16927058": ("Q16927058", None, None),                   # New Zealand AM class EMU (CAF, Auckland)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -286,6 +287,7 @@ LIVERIES = {
     "tcdd-yht": ({"en": "TCDD YHT livery (white with turquoise roof and bands)", "ja": "TCDD の YHT の塗装（白にターコイズの屋根と帯）"}, "Q28220824"),
     "rem-lime": ({"en": "REM livery (black front mask in a lime-green ring, silver body)", "ja": "REM の塗装（黄緑の輪に囲まれた黒い前面、銀の車体）"}, "Q23938011"),
     "italo-2026": ({"en": "Italo livery from 2026 (red and gold)", "ja": "イタロの 2026 年からの塗装（赤と金）"}, "Q580786"),
+    "at-metro": ({"en": "AT Metro livery (silver and navy with a yellow front)", "ja": "AT Metro の塗装（銀と紺、黄色の顔）"}, "Q4819567"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -364,6 +366,7 @@ MODELS = {
     "yht": ("Q20988527", "tcdd-yht", None),
     "rem": ("Q121749358", "rem-lime", None),
     "italo": ("Q432478", "italo-2026", None),
+    "auckland-am": ("Q16927058", "at-metro", None),
 }
 
 
