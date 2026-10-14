@@ -1,11 +1,11 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -15,7 +15,7 @@ cls:Q140092296 a skos:Concept,
     rdfs:label "Alstom X'Trapolis Tsíimin K'áak (Tren Maya)"@en,
         "トレン・マヤの電車（X'Trapolis Tsíimin K'áak）"@ja ;
     skos:exactMatch wd:Q140092296 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:inScheme cls: ;
     skos:prefLabel "Alstom X'Trapolis Tsíimin K'áak (Tren Maya)"@en,
         "トレン・マヤの電車（X'Trapolis Tsíimin K'áak）"@ja ;
     prov:wasDerivedFrom wd:Q140092296 ;
@@ -23,7 +23,7 @@ cls:Q140092296 a skos:Concept,
     wdt:P176 wd:Q309084 ;
     wdt:P279 wd:Q3570298 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Tren%20X%27Trapolis%20Ts%C3%ADimin%20K%E2%80%99%C3%A1ak%20arribando%20a%20la%20estaci%C3%B3n%20M%C3%A9rida%20Teya.jpg> ;
+    schema:subjectOf mdl:trenmaya ;
     tb:has3DModel true ;
-    tb:operatingCountry wd:Q96 ;
-    schema:subjectOf mdl:trenmaya .
+    tb:operatingCountry wd:Q96 .
 

@@ -1,20 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:bus49_rear a schema:3DModel ;
-    tb:galleryGroup "bus" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery> ;
-    tb:part "rear half of the articulated bus"@en,
-        "連節バスの後ろ半分"@ja ;
     schema:about cls:Q137921671 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/bus49_rear.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/bus49_rear.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 143.5 ] ;
@@ -25,45 +21,49 @@ mdl:bus49_rear a schema:3DModel ;
             schema:value 46.0 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "49番バス（後ろ）"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/bus49_rear/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/bus49_rear.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#bus49_rear> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/bus49_rear/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/bus49_rear.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#bus49_rear> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "bus" ;
+    tb:livery <https://w3id.org/railclass/model/bus49_rear#livery> ;
+    tb:part "rear half of the articulated bus"@en,
+        "連節バスの後ろ半分"@ja .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/bus49_rear#color1> a tb:ColorSample ;
     rdfs:label "blue" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.8247 ;
-    schema:color "#006FD6" .
+    schema:color "#006FD6" ;
+    tb:areaShare 0.8247 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/bus49_rear#color2> a tb:ColorSample ;
     rdfs:label "grey" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0783 ;
-    schema:color "#A9AEB3" .
+    schema:color "#A9AEB3" ;
+    tb:areaShare 0.0783 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/bus49_rear#color3> a tb:ColorSample ;
     rdfs:label "black" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0500 ;
-    schema:color "#14161A" .
+    schema:color "#14161A" ;
+    tb:areaShare 0.0500 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/bus49_rear#color4> a tb:ColorSample ;
     rdfs:label "charcoal" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0282 ;
-    schema:color "#3A3E42" .
+    schema:color "#3A3E42" ;
+    tb:areaShare 0.0282 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/bus49_rear#livery> a tb:Livery ;
     rdfs:label "TransLink livery"@en,
         "TransLink の塗装"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/bus49_rear/translink_bus49_rear.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q1088 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/bus49_rear#color4> ;
+    tb:colorSample <https://w3id.org/railclass/model/bus49_rear#color1>,
+        <https://w3id.org/railclass/model/bus49_rear#color2>,
+        <https://w3id.org/railclass/model/bus49_rear#color3>,
+        <https://w3id.org/railclass/model/bus49_rear#color4> ;
     tb:liveryOf wd:Q1142140 .
 

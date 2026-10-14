@@ -1,33 +1,20 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0502"
-      },
-      "rdfs:label": "red",
-      "schema:color": "#D82428",
-      "wdt:P462": {
-        "@id": "wd:Q3142"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color2",
+      "@id": "https://w3id.org/railclass/model/vietnam#color2",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -40,88 +27,17 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color7",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0225"
-      },
-      "rdfs:label": "slat",
-      "schema:color": "#1C2A36",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color6"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color7"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color8"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color9"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/vietnam/vnr_vietnam.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q501329"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Vietnam Railways Hanoi depot livery (sky blue, cream cab front, red band)"
-        },
-        {
-          "@language": "ja",
-          "@value": "ベトナム鉄道ハノイ機関区の塗装（空色、クリーム色の運転室の正面、赤い帯）"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q1088"
-        },
-        {
-          "@id": "wd:Q3142"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam",
+      "@id": "https://w3id.org/railclass/model/vietnam",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#livery"
+        "@id": "https://w3id.org/railclass/model/vietnam#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q423578"
+        "@id": "https://w3id.org/railclass/Q423578"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/vietnam.glb"
+        "@id": "https://railclass.ldas.jp/models/vietnam.glb"
       },
       "schema:depth": {
         "@id": "_:vietnam-depth"
@@ -142,13 +58,13 @@
         "@value": "ベトナム鉄道 D19E 形"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/vietnam/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/vietnam/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/vietnam.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/vietnam.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#vietnam"
+        "@id": "https://railclass.ldas.jp/view.html#vietnam"
       },
       "schema:width": {
         "@id": "_:vietnam-width"
@@ -182,59 +98,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color9",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0074"
-      },
-      "rdfs:label": "steel",
-      "schema:color": "#4A4E52",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0539"
-      },
-      "rdfs:label": "cream",
-      "schema:color": "#E8E3CC",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color8",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0199"
-      },
-      "rdfs:label": "seam",
-      "schema:color": "#1E5C86",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0593"
-      },
-      "rdfs:label": "frame",
-      "schema:color": "#34383C",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color1",
+      "@id": "https://w3id.org/railclass/model/vietnam#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -247,7 +111,130 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vietnam#color6",
+      "@id": "https://w3id.org/railclass/model/vietnam#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0539"
+      },
+      "rdfs:label": "cream",
+      "schema:color": "#E8E3CC",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vietnam#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0593"
+      },
+      "rdfs:label": "frame",
+      "schema:color": "#34383C",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vietnam#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/vietnam#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vietnam#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vietnam#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vietnam#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vietnam#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vietnam#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vietnam#color7"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vietnam#color8"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vietnam#color9"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/vietnam/vnr_vietnam.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q501329"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Vietnam Railways Hanoi depot livery (sky blue, cream cab front, red band)"
+        },
+        {
+          "@language": "ja",
+          "@value": "ベトナム鉄道ハノイ機関区の塗装（空色、クリーム色の運転室の正面、赤い帯）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q1088"
+        },
+        {
+          "@id": "wd:Q3142"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vietnam#color8",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0199"
+      },
+      "rdfs:label": "seam",
+      "schema:color": "#1E5C86",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vietnam#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0502"
+      },
+      "rdfs:label": "red",
+      "schema:color": "#D82428",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vietnam#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0225"
+      },
+      "rdfs:label": "slat",
+      "schema:color": "#1C2A36",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vietnam#color6",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -257,6 +244,19 @@
       "schema:color": "#14161A",
       "wdt:P462": {
         "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vietnam#color9",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0074"
+      },
+      "rdfs:label": "steel",
+      "schema:color": "#4A4E52",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
       }
     }
   ]

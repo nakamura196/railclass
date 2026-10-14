@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:dubaimetro a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#livery> ;
     schema:about cls:tb-dubaimetro ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/dubaimetro.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/dubaimetro.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.9 ] ;
@@ -23,53 +21,55 @@ mdl:dubaimetro a schema:3DModel ;
             schema:value 38.0 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "ドバイメトロ"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/dubaimetro/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/dubaimetro.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#dubaimetro> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/dubaimetro/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/dubaimetro.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#dubaimetro> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/dubaimetro#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/dubaimetro#color1> a tb:ColorSample ;
     rdfs:label "body" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.7779 ;
-    schema:color "#C9CED3" .
+    schema:color "#C9CED3" ;
+    tb:areaShare 0.7779 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/dubaimetro#color2> a tb:ColorSample ;
     rdfs:label "sky" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.1476 ;
-    schema:color "#4F9FD6" .
+    schema:color "#4F9FD6" ;
+    tb:areaShare 0.1476 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/dubaimetro#color3> a tb:ColorSample ;
     rdfs:label "mask" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0464 ;
-    schema:color "#1B222A" .
+    schema:color "#1B222A" ;
+    tb:areaShare 0.0464 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/dubaimetro#color4> a tb:ColorSample ;
     rdfs:label "screen" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.0193 ;
-    schema:color "#344658" .
+    schema:color "#344658" ;
+    tb:areaShare 0.0193 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/dubaimetro#color5> a tb:ColorSample ;
     rdfs:label "grey" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0062 ;
-    schema:color "#5A6066" .
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0062 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/dubaimetro#livery> a tb:Livery ;
     rdfs:label "Dubai Metro livery (silver and light blue)"@en,
         "ドバイメトロの塗装（銀と水色）"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/dubaimetro/rta_dubaimetro.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q1088,
         wd:Q42519 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/dubaimetro#color5> ;
+    tb:colorSample <https://w3id.org/railclass/model/dubaimetro#color1>,
+        <https://w3id.org/railclass/model/dubaimetro#color2>,
+        <https://w3id.org/railclass/model/dubaimetro#color3>,
+        <https://w3id.org/railclass/model/dubaimetro#color4>,
+        <https://w3id.org/railclass/model/dubaimetro#color5> ;
     tb:liveryOf wd:Q22101985 .
 

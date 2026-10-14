@@ -7,8 +7,8 @@ Usage: python3 tools/build_rdf.py [--refresh]
   the facet tables data/wikidata/facets/<id>.tsv (tools/fetch_facets.py) and the labels from data/classes.tsv and
   data/wikidata/class-labels-ja.tsv, so every class URI resolves (decided 2026-10-10).
 Writes:
-  docs/rdf/class/<cid>.ttl|.jsonld        one class each (URI https://nakamura196.github.io/train-bodies/rdf/class/<cid>)
-  docs/rdf/model/<model-id>.ttl|.jsonld        one 3D model each (URI .../rdf/model/<model-id>)
+  docs/rdf/class/<cid>.ttl|.jsonld        one class each (URI https://w3id.org/railclass/<cid>)
+  docs/rdf/model/<model-id>.ttl|.jsonld        one 3D model each (URI https://w3id.org/railclass/model/<model-id>)
   docs/rdf/all.ttl|.jsonld   everything, plus rdfs:label @ja/@en of every Wikidata item used as a value
   docs/rdf/vocab.ttl   the few terms of our own (tb:)
 The facet properties are the ones in docs/rdf/facets.json. Livery colours come from tools/livery_colors.json
@@ -25,14 +25,17 @@ from rdflib.namespace import DCTERMS, FOAF, OWL, PROV, RDF, RDFS, SKOS, XSD
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(HERE, "docs", "rdf")
 CACHE = os.path.join(HERE, "data", "wikidata", "rdf-cache.json")
-BASE = "https://nakamura196.github.io/train-bodies/"
+# The URIs are on w3id.org (perma-id/w3id.org ids/railclass/.htaccess, merged 2026-10-12): it sends each URI to the
+# file or page on SITE by the Accept header. A class is right under BASE (no class/), a model under model/.
+BASE = "https://w3id.org/railclass/"
+SITE = "https://railclass.ldas.jp/"   # where the files are served (file links: models, thumbnails, IIIF, viewer)
 TB = Namespace(BASE + "vocab#")
 WD = Namespace("http://www.wikidata.org/entity/")
 WDT = Namespace("http://www.wikidata.org/prop/direct/")
 SDO = Namespace("https://schema.org/")
-CLS = Namespace(BASE + "rdf/class/")
-MDL = Namespace(BASE + "rdf/model/")
-SCHEME = URIRef(BASE + "rdf/")
+CLS = Namespace(BASE)
+MDL = Namespace(BASE + "model/")
+SCHEME = URIRef(BASE)
 CC0 = URIRef("https://creativecommons.org/publicdomain/zero/1.0/")
 CC_BY = URIRef("https://creativecommons.org/licenses/by/4.0/")
 UA = "railclass-build/1.0 (https://github.com/nakamura196/railclass)"
@@ -570,11 +573,11 @@ def add_model(g, mid, item):
     g.add((s, SDO.name, Literal(item["title"], lang="ja")))
     g.add((s, SDO.description, Literal(item["line"], lang="ja")))
     g.add((s, SDO.about, CLS[cid]))
-    g.add((s, SDO.contentUrl, URIRef(f"{BASE}models/{mid}.glb")))
+    g.add((s, SDO.contentUrl, URIRef(f"{SITE}models/{mid}.glb")))
     g.add((s, SDO.encodingFormat, Literal("model/gltf-binary")))
-    g.add((s, SDO.thumbnailUrl, URIRef(f"{BASE}thumbs/{mid}.jpg")))
-    g.add((s, SDO.subjectOf, URIRef(f"{BASE}iiif/{mid}/manifest.json")))   # IIIF Manifest (担当 B)
-    g.add((s, SDO.url, URIRef(f"{BASE}view.html#{mid}")))
+    g.add((s, SDO.thumbnailUrl, URIRef(f"{SITE}thumbs/{mid}.jpg")))
+    g.add((s, SDO.subjectOf, URIRef(f"{SITE}iiif/{mid}/manifest.json")))   # IIIF Manifest (担当 B)
+    g.add((s, SDO.url, URIRef(f"{SITE}view.html#{mid}")))
     for prop, v in zip((SDO.depth, SDO.width, SDO.height), item["size"]):   # x = length, y = width, z = height, in mm
         q = BNode(f"{mid}-{prop.rsplit('/', 1)[-1]}")
         g.add((s, prop, q)); g.add((q, RDF.type, SDO.QuantitativeValue))
@@ -622,7 +625,7 @@ def vocab():
     terms = [
         (TB.VehicleClass, RDFS.Class, "Vehicle class", "形式", "A class (type) of railway vehicle or road vehicle; one record per class."),
         (TB.Livery, RDFS.Class, "Livery", "塗装", "A paint scheme that a 3D model reproduces."),
-        (TB.has3DModel, RDF.Property, "has 3D model", "3D モデルあり", "True when at least one 3D model in train-bodies depicts this class."),
+        (TB.has3DModel, RDF.Property, "has 3D model", "3D モデルあり", "True when at least one 3D model in RailClass depicts this class."),
         (TB.handEntered, RDF.Property, "hand-entered property", "手入力の項目", "A property whose values on this class were entered by hand (see dcterms:source), not copied from Wikidata."),
         (TB.livery, RDF.Property, "livery", "塗装", "The livery a 3D model reproduces."),
         (TB.liveryOf, RDF.Property, "livery of", "塗装の持ち主", "The operator whose livery this is."),
@@ -646,8 +649,8 @@ def vocab():
         g.add((t, RDFS.comment, Literal(c, lang="en"))); g.add((t, RDFS.isDefinedBy, URIRef(BASE + "vocab")))
     g.add((SCHEME, RDF.type, SKOS.ConceptScheme))
     g.add((SCHEME, DCTERMS.license, CC0))
-    g.add((SCHEME, RDFS.label, Literal("train-bodies: vehicle classes", lang="en")))
-    g.add((SCHEME, RDFS.label, Literal("train-bodies: 車両の形式", lang="ja")))
+    g.add((SCHEME, RDFS.label, Literal("RailClass: vehicle classes", lang="en")))
+    g.add((SCHEME, RDFS.label, Literal("RailClass: 車両の形式", lang="ja")))
     return g
 
 

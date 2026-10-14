@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:allegra a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery> ;
     schema:about cls:Q671805 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/allegra.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/allegra.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.9 ] ;
@@ -23,67 +21,69 @@ mdl:allegra a schema:3DModel ;
             schema:value 37.7 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "Allegra（レーティッシュ鉄道）"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/allegra/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/allegra.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#allegra> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/allegra/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/allegra.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#allegra> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/allegra#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/allegra#color1> a tb:ColorSample ;
     rdfs:label "rhbred" ;
     wdt:P462 wd:Q3142 ;
-    tb:areaShare 0.7200 ;
-    schema:color "#C4121C" .
+    schema:color "#C4121C" ;
+    tb:areaShare 0.7200 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/allegra#color2> a tb:ColorSample ;
     rdfs:label "roof" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.1844 ;
-    schema:color "#C0C4C8" .
+    schema:color "#C0C4C8" ;
+    tb:areaShare 0.1844 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/allegra#color3> a tb:ColorSample ;
     rdfs:label "black" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0399 ;
-    schema:color "#14161A" .
+    schema:color "#14161A" ;
+    tb:areaShare 0.0399 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/allegra#color4> a tb:ColorSample ;
     rdfs:label "door" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0216 ;
-    schema:color "#B4B8BC" .
+    schema:color "#B4B8BC" ;
+    tb:areaShare 0.0216 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/allegra#color5> a tb:ColorSample ;
     rdfs:label "stripe" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.0181 ;
-    schema:color "#DCDEE0" .
+    schema:color "#DCDEE0" ;
+    tb:areaShare 0.0181 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6> a tb:ColorSample ;
+<https://w3id.org/railclass/model/allegra#color6> a tb:ColorSample ;
     rdfs:label "grey" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0065 ;
-    schema:color "#5A6066" .
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0065 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7> a tb:ColorSample ;
+<https://w3id.org/railclass/model/allegra#color7> a tb:ColorSample ;
     rdfs:label "white" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.0063 ;
-    schema:color "#F2F4F5" .
+    schema:color "#F2F4F5" ;
+    tb:areaShare 0.0063 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/allegra#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/allegra#livery> a tb:Livery ;
     rdfs:label "Rhaetian Railway livery"@en,
         "レーティッシュ鉄道の塗装"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/allegra/rhb_allegra.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q3142,
         wd:Q42519 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color5>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color6>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/allegra#color7> ;
+    tb:colorSample <https://w3id.org/railclass/model/allegra#color1>,
+        <https://w3id.org/railclass/model/allegra#color2>,
+        <https://w3id.org/railclass/model/allegra#color3>,
+        <https://w3id.org/railclass/model/allegra#color4>,
+        <https://w3id.org/railclass/model/allegra#color5>,
+        <https://w3id.org/railclass/model/allegra#color6>,
+        <https://w3id.org/railclass/model/allegra#color7> ;
     tb:liveryOf wd:Q177598 .
 

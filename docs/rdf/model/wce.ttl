@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:wce a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/wce#livery> ;
     schema:about cls:Q891775 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/wce.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/wce.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 150.0 ] ;
@@ -23,47 +21,49 @@ mdl:wce a schema:3DModel ;
             schema:value 46.0 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "ウェストコースト・エクスプレス"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/wce/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/wce.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#wce> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/wce/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/wce.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#wce> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/wce#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/wce#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/wce#color1> a tb:ColorSample ;
     rdfs:label "body" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.7541 ;
-    schema:color "#EAECEB" .
+    schema:color "#EAECEB" ;
+    tb:areaShare 0.7541 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/wce#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/wce#color2> a tb:ColorSample ;
     rdfs:label "violet" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.1535 ;
-    schema:color "#3D3B8C" .
+    schema:color "#3D3B8C" ;
+    tb:areaShare 0.1535 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/wce#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/wce#color3> a tb:ColorSample ;
     rdfs:label "gold" ;
     wdt:P462 wd:Q39338 ;
-    tb:areaShare 0.0492 ;
-    schema:color "#F0AE1E" .
+    schema:color "#F0AE1E" ;
+    tb:areaShare 0.0492 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/wce#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/wce#color4> a tb:ColorSample ;
     rdfs:label "frame" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0353 ;
-    schema:color "#1C1E22" .
+    schema:color "#1C1E22" ;
+    tb:areaShare 0.0353 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/wce#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/wce#livery> a tb:Livery ;
     rdfs:label "West Coast Express livery (white and violet with gold lines)"@en,
         "ウェストコースト・エクスプレスの塗装（白と紫に金の線）"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/wce/translink_wce.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q1088,
         wd:Q23444,
         wd:Q39338 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/wce#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/wce#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/wce#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/wce#color4> ;
+    tb:colorSample <https://w3id.org/railclass/model/wce#color1>,
+        <https://w3id.org/railclass/model/wce#color2>,
+        <https://w3id.org/railclass/model/wce#color3>,
+        <https://w3id.org/railclass/model/wce#color4> ;
     tb:liveryOf wd:Q1675085 .
 

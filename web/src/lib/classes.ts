@@ -8,12 +8,15 @@ import type { Lang } from "../i18n";
 
 const DOCS = resolve(process.cwd(), "../docs");
 const CLASS_DIR = resolve(DOCS, "rdf/class");
-const BASE = "https://nakamura196.github.io/train-bodies/rdf/";
+const BASE = "https://w3id.org/railclass/";   // a class is right under it, a model under model/
 const WD = "http://www.wikidata.org/entity/";
 
 const many = (v: any) => (v == null ? [] : Array.isArray(v) ? v : [v]);
 const iri = (v: any) => String(v?.["@id"] ?? v).replace(/^wd:/, WD);
-const local = (u: string, kind: "class" | "model") => u.startsWith(BASE + kind + "/") ? u.slice(BASE.length + kind.length + 1) : null;
+const local = (u: string, kind: "class" | "model") => {
+  const pre = kind === "model" ? BASE + "model/" : BASE;
+  return u.startsWith(pre) && !u.slice(pre.length).includes("/") ? u.slice(pre.length) : null;
+};
 const qid = (u: string) => u.startsWith(WD) ? u.slice(WD.length) : null;
 
 export type FacetRow = { label: string; values: { text: string; search?: string }[] };
@@ -48,7 +51,7 @@ function readClass(c: string): any {
   let n = NODES.get(c);
   if (n === undefined) {
     const d = JSON.parse(readFileSync(resolve(CLASS_DIR, c + ".jsonld"), "utf8"));
-    n = !d["@graph"] ? d : d["@graph"].find((x: any) => typeof x["@id"] === "string" && x["@id"].endsWith(`/rdf/class/${c}`)) ?? {};
+    n = !d["@graph"] ? d : d["@graph"].find((x: any) => typeof x["@id"] === "string" && x["@id"] === BASE + c) ?? {};
     NODES.set(c, n);
   }
   return n;

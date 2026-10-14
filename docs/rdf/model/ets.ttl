@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:ets a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ets#livery> ;
     schema:about cls:Q18619244 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ets.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/ets.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.6 ] ;
@@ -23,62 +21,64 @@ mdl:ets a schema:3DModel ;
             schema:value 38.0 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "KTM ETS クラス93"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ets/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ets.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#ets> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/ets/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/ets.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#ets> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/ets#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ets#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ets#color1> a tb:ColorSample ;
     rdfs:label "silver" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.7015 ;
-    schema:color "#D6DADE" .
+    schema:color "#D6DADE" ;
+    tb:areaShare 0.7015 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ets#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ets#color2> a tb:ColorSample ;
     rdfs:label "ktmred" ;
     wdt:P462 wd:Q3142 ;
-    tb:areaShare 0.0890 ;
-    schema:color "#C2262C" .
+    schema:color "#C2262C" ;
+    tb:areaShare 0.0890 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ets#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ets#color3> a tb:ColorSample ;
     rdfs:label "midgrey" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0561 ;
-    schema:color "#9CA3AB" .
+    schema:color "#9CA3AB" ;
+    tb:areaShare 0.0561 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ets#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ets#color4> a tb:ColorSample ;
     rdfs:label "mask" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0497 ;
-    schema:color "#1A1D21" .
+    schema:color "#1A1D21" ;
+    tb:areaShare 0.0497 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ets#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ets#color5> a tb:ColorSample ;
     rdfs:label "ktmyellow" ;
     wdt:P462 wd:Q943 ;
-    tb:areaShare 0.0453 ;
-    schema:color "#F4C018" .
+    schema:color "#F4C018" ;
+    tb:areaShare 0.0453 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ets#color6> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ets#color6> a tb:ColorSample ;
     rdfs:label "ktmblue" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.0217 ;
-    schema:color "#1F3C96" .
+    schema:color "#1F3C96" ;
+    tb:areaShare 0.0217 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ets#color7> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ets#color7> a tb:ColorSample ;
     rdfs:label "screen" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.0214 ;
-    schema:color "#4E5E6E" .
+    schema:color "#4E5E6E" ;
+    tb:areaShare 0.0214 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ets#color8> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ets#color8> a tb:ColorSample ;
     rdfs:label "swoosh" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.0134 ;
-    schema:color "#E4E6E8" .
+    schema:color "#E4E6E8" ;
+    tb:areaShare 0.0134 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ets#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/ets#livery> a tb:Livery ;
     rdfs:label "KTM ETS2 livery (yellow nose, silver with a red band)"@en,
         "KTM の ETS2 の塗装（黄色の鼻、銀に赤い帯）"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/ets/ktm_ets.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
@@ -86,13 +86,13 @@ mdl:ets a schema:3DModel ;
         wd:Q23444,
         wd:Q3142,
         wd:Q943 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ets#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color5>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color6>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color7>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ets#color8> ;
+    tb:colorSample <https://w3id.org/railclass/model/ets#color1>,
+        <https://w3id.org/railclass/model/ets#color2>,
+        <https://w3id.org/railclass/model/ets#color3>,
+        <https://w3id.org/railclass/model/ets#color4>,
+        <https://w3id.org/railclass/model/ets#color5>,
+        <https://w3id.org/railclass/model/ets#color6>,
+        <https://w3id.org/railclass/model/ets#color7>,
+        <https://w3id.org/railclass/model/ets#color8> ;
     tb:liveryOf wd:Q1187590 .
 

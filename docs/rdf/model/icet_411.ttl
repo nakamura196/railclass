@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:icet_411 a schema:3DModel ;
-    tb:galleryGroup "icet" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery> ;
     schema:about cls:Q115612330 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/icet_411.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/icet_411.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.9 ] ;
@@ -23,53 +21,55 @@ mdl:icet_411 a schema:3DModel ;
             schema:value 38.0 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "411（7両編成）"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/icet_411/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/icet_411.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#icet_411> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/icet_411/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/icet_411.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#icet_411> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "icet" ;
+    tb:livery <https://w3id.org/railclass/model/icet_411#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/icet_411#color1> a tb:ColorSample ;
     rdfs:label "body" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.8665 ;
-    schema:color "#ECEEEC" .
+    schema:color "#ECEEEC" ;
+    tb:areaShare 0.8665 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/icet_411#color2> a tb:ColorSample ;
     rdfs:label "black" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0501 ;
-    schema:color "#14161A" .
+    schema:color "#14161A" ;
+    tb:areaShare 0.0501 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/icet_411#color3> a tb:ColorSample ;
     rdfs:label "skirt" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0410 ;
-    schema:color "#C2C7CA" .
+    schema:color "#C2C7CA" ;
+    tb:areaShare 0.0410 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/icet_411#color4> a tb:ColorSample ;
     rdfs:label "red" ;
     wdt:P462 wd:Q3142 ;
-    tb:areaShare 0.0275 ;
-    schema:color "#CC1014" .
+    schema:color "#CC1014" ;
+    tb:areaShare 0.0275 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/icet_411#color5> a tb:ColorSample ;
     rdfs:label "grey" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0109 ;
-    schema:color "#5A6066" .
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0109 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/icet_411#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/icet_411#livery> a tb:Livery ;
     rdfs:label "Deutsche Bahn livery (red stripe)"@en,
         "DB の塗装（赤い帯）"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/icet_411/icet_411.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q23444,
         wd:Q3142 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/icet_411#color5> ;
+    tb:colorSample <https://w3id.org/railclass/model/icet_411#color1>,
+        <https://w3id.org/railclass/model/icet_411#color2>,
+        <https://w3id.org/railclass/model/icet_411#color3>,
+        <https://w3id.org/railclass/model/icet_411#color4>,
+        <https://w3id.org/railclass/model/icet_411#color5> ;
     tb:liveryOf wd:Q9322 .
 

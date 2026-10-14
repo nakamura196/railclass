@@ -1,10 +1,10 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -14,7 +14,7 @@ cls:Q125350160 a skos:Concept,
     rdfs:label "Railjet 1"@en,
         "レールジェット（第1世代）"@ja ;
     skos:exactMatch wd:Q125350160 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:inScheme cls: ;
     skos:prefLabel "Railjet 1"@en,
         "レールジェット（第1世代）"@ja ;
     prov:wasDerivedFrom wd:Q125350160 ;
@@ -30,6 +30,6 @@ cls:Q125350160 a skos:Concept,
     wdt:P176 wd:Q81230 ;
     wdt:P2052 230.0 ;
     wdt:P279 wd:Q13402959 ;
-    tb:has3DModel true ;
-    schema:subjectOf mdl:railjet .
+    schema:subjectOf mdl:railjet ;
+    tb:has3DModel true .
 

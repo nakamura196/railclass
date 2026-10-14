@@ -1,46 +1,20 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0142"
-      },
-      "rdfs:label": "screen",
-      "schema:color": "#5E7080",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0397"
-      },
-      "rdfs:label": "skylight",
-      "schema:color": "#7E93A3",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color2",
+      "@id": "https://w3id.org/railclass/model/vistadome#color2",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -53,95 +27,17 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color6"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/vistadome/perurail_vistadome.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q1407952"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "PeruRail livery (blue with yellow stripes, silver roof; seen in photos up to 2023)"
-        },
-        {
-          "@language": "ja",
-          "@value": "ペルーレイルの塗装（青に黄の線、銀の屋根。2023年の写真まで確認）"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q1088"
-        },
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q943"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.6794"
-      },
-      "rdfs:label": "blue",
-      "schema:color": "#264EBC",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0395"
-      },
-      "rdfs:label": "frame",
-      "schema:color": "#9CA2A8",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome",
+      "@id": "https://w3id.org/railclass/model/vistadome",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#livery"
+        "@id": "https://w3id.org/railclass/model/vistadome#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-vistadome"
+        "@id": "https://w3id.org/railclass/tb-vistadome"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/vistadome.glb"
+        "@id": "https://railclass.ldas.jp/models/vistadome.glb"
       },
       "schema:depth": {
         "@id": "_:vistadome-depth"
@@ -162,13 +58,13 @@
         "@value": "ペルーレイル ビスタドーム"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/vistadome/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/vistadome/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/vistadome.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/vistadome.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#vistadome"
+        "@id": "https://railclass.ldas.jp/view.html#vistadome"
       },
       "schema:width": {
         "@id": "_:vistadome-width"
@@ -202,7 +98,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/vistadome#color3",
+      "@id": "https://w3id.org/railclass/model/vistadome#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -213,6 +109,110 @@
       "wdt:P462": {
         "@id": "wd:Q943"
       }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vistadome#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6794"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#264EBC",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vistadome#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0142"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#5E7080",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vistadome#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0395"
+      },
+      "rdfs:label": "frame",
+      "schema:color": "#9CA2A8",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vistadome#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0397"
+      },
+      "rdfs:label": "skylight",
+      "schema:color": "#7E93A3",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/vistadome#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/vistadome#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vistadome#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vistadome#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vistadome#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vistadome#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/vistadome#color6"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/vistadome/perurail_vistadome.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1407952"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "PeruRail livery (blue with yellow stripes, silver roof; seen in photos up to 2023)"
+        },
+        {
+          "@language": "ja",
+          "@value": "ペルーレイルの塗装（青に黄の線、銀の屋根。2023年の写真まで確認）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q1088"
+        },
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q943"
+        }
+      ]
     }
   ]
 }

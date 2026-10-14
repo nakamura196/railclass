@@ -1,20 +1,46 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1",
+      "@id": "https://w3id.org/railclass/model/mk2#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0668"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#1E58C0",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/mk2#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0728"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/mk2#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -27,76 +53,17 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0420"
-      },
-      "rdfs:label": "silver",
-      "schema:color": "#B4BAC2",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color5"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/mk2/skytrain_mk2.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q1142140"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "TransLink livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q1088"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2",
+      "@id": "https://w3id.org/railclass/model/mk2",
       "@type": "schema:3DModel",
       "galleryGroup": "skytrain",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery"
+        "@id": "https://w3id.org/railclass/model/mk2#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk2"
+        "@id": "https://w3id.org/railclass/tb-skytrain-mk2"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/mk2.glb"
+        "@id": "https://railclass.ldas.jp/models/mk2.glb"
       },
       "schema:depth": {
         "@id": "_:mk2-depth"
@@ -117,13 +84,13 @@
         "@value": "Mark II"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/mk2/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/mk2/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/mk2.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/mk2.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#mk2"
+        "@id": "https://railclass.ldas.jp/view.html#mk2"
       },
       "schema:width": {
         "@id": "_:mk2-width"
@@ -157,33 +124,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0668"
-      },
-      "rdfs:label": "blue",
-      "schema:color": "#1E58C0",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0728"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2",
+      "@id": "https://w3id.org/railclass/model/mk2#color2",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -194,6 +135,65 @@
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/mk2#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0420"
+      },
+      "rdfs:label": "silver",
+      "schema:color": "#B4BAC2",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/mk2#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/mk2#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/mk2#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/mk2#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/mk2#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/mk2#color5"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/mk2/skytrain_mk2.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "TransLink livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "TransLink の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
     }
   ]
 }

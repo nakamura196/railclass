@@ -17,7 +17,7 @@ const M = models(lang);
 const m = M.items.find(x => x.id === id)!;
 const cid = modelClasses()[id];
 const cname = cid ? classPage(cid, lang, n => String(n), y => String(y)).name : null;
-const uri = `https://nakamura196.github.io/train-bodies/rdf/model/${id}`;
+const uri = `https://w3id.org/railclass/model/${id}`;
 const here = `rdf/model/${id}.html`;
 const dl = downloads(id, lang);
 ---

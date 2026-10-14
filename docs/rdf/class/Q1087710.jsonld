@@ -1,50 +1,20 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "wd:Q949968",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Córdoba–Málaga high-speed rail line"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://en.wikipedia.org/wiki/Talgo_350"
-      },
-      "line": {
-        "@id": "wd:Q1161505"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "main route"
-      },
-      "sourceSection": "Introduction, testing and operations",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q1161505",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Madrid–Barcelona high-speed rail line"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line2",
+      "@id": "https://w3id.org/railclass/Q1087710#line2",
       "@type": "LineUse",
       "dcterms:source": {
         "@id": "https://en.wikipedia.org/wiki/Talgo_350"
@@ -60,30 +30,7 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line3",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q949968"
-      },
-      "line": {
-        "@id": "wd:Q949968"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "from Wikidata only"
-      },
-      "sourceSection": "Wikidata P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q737791",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Haramain high-speed railway"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710",
+      "@id": "https://w3id.org/railclass/Q1087710",
       "@type": [
         "VehicleClass",
         "skos:Concept"
@@ -94,13 +41,13 @@
       "has3DModel": true,
       "lineUse": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line1"
+          "@id": "https://w3id.org/railclass/Q1087710#line1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line2"
+          "@id": "https://w3id.org/railclass/Q1087710#line2"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710#line3"
+          "@id": "https://w3id.org/railclass/Q1087710#line3"
         }
       ],
       "operatingCountry": [
@@ -125,13 +72,13 @@
         }
       ],
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102"
+        "@id": "https://w3id.org/railclass/model/ave102"
       },
       "skos:exactMatch": {
         "@id": "wd:Q1087710"
       },
       "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+        "@id": "https://w3id.org/railclass/"
       },
       "skos:prefLabel": [
         {
@@ -178,6 +125,59 @@
           "@id": "wd:Q13402959"
         }
       ]
+    },
+    {
+      "@id": "wd:Q949968",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Córdoba–Málaga high-speed rail line"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q1087710#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://en.wikipedia.org/wiki/Talgo_350"
+      },
+      "line": {
+        "@id": "wd:Q1161505"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "main route"
+      },
+      "sourceSection": "Introduction, testing and operations",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q737791",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Haramain high-speed railway"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q1087710#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q949968"
+      },
+      "line": {
+        "@id": "wd:Q949968"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "from Wikidata only"
+      },
+      "sourceSection": "Wikidata P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q1161505",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Madrid–Barcelona high-speed rail line"
+      }
     }
   ]
 }

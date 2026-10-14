@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:riyadh a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#livery> ;
     schema:about cls:Q2284320 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/riyadh.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/riyadh.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.5 ] ;
@@ -23,74 +21,76 @@ mdl:riyadh a schema:3DModel ;
             schema:value 37.7 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "リヤド・メトロ 1号線"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/riyadh/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/riyadh.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#riyadh> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/riyadh/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/riyadh.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#riyadh> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/riyadh#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/riyadh#color1> a tb:ColorSample ;
     rdfs:label "blue" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.5767 ;
-    schema:color "#308CDA" .
+    schema:color "#308CDA" ;
+    tb:areaShare 0.5767 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/riyadh#color2> a tb:ColorSample ;
     rdfs:label "roof" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.1562 ;
-    schema:color "#D9DCDE" .
+    schema:color "#D9DCDE" ;
+    tb:areaShare 0.1562 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/riyadh#color3> a tb:ColorSample ;
     rdfs:label "black" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0969 ;
-    schema:color "#16181B" .
+    schema:color "#16181B" ;
+    tb:areaShare 0.0969 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/riyadh#color4> a tb:ColorSample ;
     rdfs:label "cream" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.0902 ;
-    schema:color "#E8E9EA" .
+    schema:color "#E8E9EA" ;
+    tb:areaShare 0.0902 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/riyadh#color5> a tb:ColorSample ;
     rdfs:label "sill" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0258 ;
-    schema:color "#BFC2C4" .
+    schema:color "#BFC2C4" ;
+    tb:areaShare 0.0258 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color6> a tb:ColorSample ;
+<https://w3id.org/railclass/model/riyadh#color6> a tb:ColorSample ;
     rdfs:label "screen" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0244 ;
-    schema:color "#2E3A46" .
+    schema:color "#2E3A46" ;
+    tb:areaShare 0.0244 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color7> a tb:ColorSample ;
+<https://w3id.org/railclass/model/riyadh#color7> a tb:ColorSample ;
     rdfs:label "pocket" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0177 ;
-    schema:color "#0C0D0F" .
+    schema:color "#0C0D0F" ;
+    tb:areaShare 0.0177 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color8> a tb:ColorSample ;
+<https://w3id.org/railclass/model/riyadh#color8> a tb:ColorSample ;
     rdfs:label "frame" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0061 ;
-    schema:color "#8A9096" .
+    schema:color "#8A9096" ;
+    tb:areaShare 0.0061 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/riyadh#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/riyadh#livery> a tb:Livery ;
     rdfs:label "Riyadh Metro Line 1 (Blue Line) livery (white lower side, black window band, blue band)"@en,
         "リヤド・メトロ 1 号線（ブルーライン）の塗装（白い下回り、黒い窓帯、青い帯）"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/riyadh/riyadh_riyadh.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q1088,
         wd:Q23444 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color5>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color6>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color7>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/riyadh#color8> ;
+    tb:colorSample <https://w3id.org/railclass/model/riyadh#color1>,
+        <https://w3id.org/railclass/model/riyadh#color2>,
+        <https://w3id.org/railclass/model/riyadh#color3>,
+        <https://w3id.org/railclass/model/riyadh#color4>,
+        <https://w3id.org/railclass/model/riyadh#color5>,
+        <https://w3id.org/railclass/model/riyadh#color6>,
+        <https://w3id.org/railclass/model/riyadh#color7>,
+        <https://w3id.org/railclass/model/riyadh#color8> ;
     tb:liveryOf wd:Q12194736 .
 

@@ -1,46 +1,20 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color10",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0065"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0199"
-      },
-      "rdfs:label": "brown",
-      "schema:color": "#5C433A",
-      "wdt:P462": {
-        "@id": "wd:Q47071"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color7",
+      "@id": "https://w3id.org/railclass/model/airo#color7",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -53,7 +27,20 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color4",
+      "@id": "https://w3id.org/railclass/model/airo#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0705"
+      },
+      "rdfs:label": "cream",
+      "schema:color": "#E6E3DA",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/airo#color4",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -66,17 +53,169 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo",
+      "@id": "https://w3id.org/railclass/model/airo#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/airo#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/airo#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/airo#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/airo#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/airo#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/airo#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/airo#color7"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/airo#color8"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/airo#color9"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/airo#color10"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/airo/amtrak_airo.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q697217"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Amtrak Cascades livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "Amtrak Cascades の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q3133"
+        },
+        {
+          "@id": "wd:Q47071"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/airo#color8",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0128"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#313537",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/airo#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1312"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#C8CCCE",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/airo#color9",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0072"
+      },
+      "rdfs:label": "teal",
+      "schema:color": "#6FB5A5",
+      "wdt:P462": {
+        "@id": "wd:Q3133"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/airo#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0199"
+      },
+      "rdfs:label": "brown",
+      "schema:color": "#5C433A",
+      "wdt:P462": {
+        "@id": "wd:Q47071"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/airo#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0206"
+      },
+      "rdfs:label": "brown2",
+      "schema:color": "#4A2C24",
+      "wdt:P462": {
+        "@id": "wd:Q47071"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/airo#color10",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0065"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/airo#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6711"
+      },
+      "rdfs:label": "green",
+      "schema:color": "#2E504A",
+      "wdt:P462": {
+        "@id": "wd:Q3133"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/airo",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#livery"
+        "@id": "https://w3id.org/railclass/model/airo#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223"
+        "@id": "https://w3id.org/railclass/Q140611223"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/airo.glb"
+        "@id": "https://railclass.ldas.jp/models/airo.glb"
       },
       "schema:depth": {
         "@id": "_:airo-depth"
@@ -97,13 +236,13 @@
         "@value": "Airo（Amtrak Cascades）"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/airo/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/airo/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/airo.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/airo.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#airo"
+        "@id": "https://railclass.ldas.jp/view.html#airo"
       },
       "schema:width": {
         "@id": "_:airo-width"
@@ -134,145 +273,6 @@
       "schema:value": {
         "@type": "xsd:decimal",
         "@value": "38.0"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.6711"
-      },
-      "rdfs:label": "green",
-      "schema:color": "#2E504A",
-      "wdt:P462": {
-        "@id": "wd:Q3133"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color6"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color7"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color8"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color9"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color10"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/airo/amtrak_airo.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q697217"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Amtrak Cascades livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "Amtrak Cascades の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q3133"
-        },
-        {
-          "@id": "wd:Q47071"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0206"
-      },
-      "rdfs:label": "brown2",
-      "schema:color": "#4A2C24",
-      "wdt:P462": {
-        "@id": "wd:Q47071"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1312"
-      },
-      "rdfs:label": "roof",
-      "schema:color": "#C8CCCE",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color9",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0072"
-      },
-      "rdfs:label": "teal",
-      "schema:color": "#6FB5A5",
-      "wdt:P462": {
-        "@id": "wd:Q3133"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color8",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0128"
-      },
-      "rdfs:label": "skirt",
-      "schema:color": "#313537",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0705"
-      },
-      "rdfs:label": "cream",
-      "schema:color": "#E6E3DA",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
       }
     }
   ]

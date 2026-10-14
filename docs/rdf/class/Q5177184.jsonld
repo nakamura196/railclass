@@ -1,27 +1,43 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "wd:Q126945903",
+      "@id": "https://w3id.org/railclass/Q5177184#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q126945903#P3438"
+      },
+      "line": {
+        "@id": "wd:Q126945903"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q126945827",
       "rdfs:label": {
         "@language": "en",
-        "@value": "Grafton XPT"
+        "@value": "Brisbane XPT"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5177184",
+      "@id": "https://w3id.org/railclass/Q5177184",
       "@type": [
         "VehicleClass",
         "skos:Concept"
@@ -32,13 +48,13 @@
       "has3DModel": false,
       "lineUse": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5177184#line1"
+          "@id": "https://w3id.org/railclass/Q5177184#line1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5177184#line2"
+          "@id": "https://w3id.org/railclass/Q5177184#line2"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5177184#line3"
+          "@id": "https://w3id.org/railclass/Q5177184#line3"
         }
       ],
       "operatingCountry": {
@@ -61,7 +77,7 @@
         "@id": "wd:Q5177184"
       },
       "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+        "@id": "https://w3id.org/railclass/"
       },
       "skos:prefLabel": [
         {
@@ -98,30 +114,7 @@
       }
     },
     {
-      "@id": "wd:Q126945891",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Casino XPT"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5177184#line2",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q126945891#P3438"
-      },
-      "line": {
-        "@id": "wd:Q126945891"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5177184#line1",
+      "@id": "https://w3id.org/railclass/Q5177184#line1",
       "@type": "LineUse",
       "dcterms:source": {
         "@id": "https://www.wikidata.org/wiki/Q126945827#P3438"
@@ -137,20 +130,13 @@
       "useStatus": "current"
     },
     {
-      "@id": "wd:Q126945827",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Brisbane XPT"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q5177184#line3",
+      "@id": "https://w3id.org/railclass/Q5177184#line2",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q126945903#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q126945891#P3438"
       },
       "line": {
-        "@id": "wd:Q126945903"
+        "@id": "wd:Q126945891"
       },
       "skos:note": {
         "@language": "en",
@@ -158,6 +144,20 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q126945891",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Casino XPT"
+      }
+    },
+    {
+      "@id": "wd:Q126945903",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Grafton XPT"
+      }
     }
   ]
 }

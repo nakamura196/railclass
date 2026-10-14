@@ -619,15 +619,16 @@ ERATV の型名には、製品名の後ろに版・編成・保安装置が付�
   > 典拠からの再生成は約 3 分で、手作業を挟みません。
   > データは CC0、3D モデルと画像は CC BY 4.0、路線の線データは OpenStreetMap に従い ODbL、写真は各ファイルの Commons の条件です。
   > 中身は、同時に応募する LD Browser（https://browser.ldas.jp/ ）でも見られます。
+  > 件数・ファイル・ライセンスの一覧は https://railclass.ldas.jp/dataset.html にあります。
 
   【条件】URI を w3id に移せたら「URI は https://w3id.org/railclass/ で、置き場所が変わっても残ります。」を足す。
-  【条件】データセットの説明の頁（dataset.html、2026-10-11 に作成・未配布）を配ったら、
-  「件数・ファイル・ライセンスの一覧は <URL>dataset.html にあります。」を最後に足す（w3id が通ればその URL で）
+  データセットの説明の頁は 2026-10-13 時点で https://railclass.ldas.jp/dataset.html で公開中。上の最後の 1 文に入れた
+  （w3id の転送は dataset.html を扱わないので、railclass.ldas.jp の URL で書く）
 - 応募者名: 中村 覚
 - 応募者のご所属: 東京大学
 - 応募者属性: 社会人
 - エントリー部門: データ作成部門
-- エントリー作品の URL: 【条件】https://w3id.org/railclass/ （PR #6867 が通らなければ https://nakamura196.github.io/railclass/ ）
+- エントリー作品の URL: https://w3id.org/railclass/ （PR #6867 は 2026-10-12 にマージ。ブラウザで開くと https://railclass.ldas.jp/ に転送される）
 - エントリー作品の権利指定: その他 →「データ CC0 1.0、3D モデル・画像 CC BY 4.0、路線の線データ ODbL（© OpenStreetMap contributors）、写真は各ファイルの Wikimedia Commons の利用条件」
 - 利用しているオープンデータ:
 
@@ -750,3 +751,37 @@ ERATV の型名には、製品名の後ろに版・編成・保安装置が付�
 - 公式の色が無い 224 本は、12 色の見本から Q 番号で決めて割り振る（`web/src/lib/data.ts` の lineColor）。どの頁でも同じ路線は同じ色になる
 - 黄色が明るい地図で消えないよう、線の下に地図の背景色の縁取りを敷いた。一覧の見本の線も同じ色にした。形式の頁の地図も同じ扱い
 - 確かめていないこと: 公式の色が同じ街の中で重なる例（同じ赤の路線が並ぶなど）
+
+### 応募の下書きを最新の状態に合わせた（残り作業 2、2026-10-13）
+
+- **w3id の PR #6867 は 2026-10-12 17:12 UTC にマージされた。** 転送の規則は `ids/railclass/.htaccess`。
+  URI の形は `https://w3id.org/railclass/<cid>`（形式。`rdf/class/` は挟まない）、`.../model/<id>`、`.../vocab`、`.../`（データセット全体）。
+  Accept で振り分け、text/turtle → `.ttl`、application/ld+json → `.jsonld`、それ以外 → HTML の頁（いずれも 303、railclass.ldas.jp へ）。
+  形式 Q125966435・モデル railjet・vocab・トップで curl して、すべて期待どおりの転送先になり、転送先が 200 を返すことを確かめた
+- **ただし RDF の中の URI はまだ古い。** `build_rdf.py` の BASE は `https://nakamura196.github.io/train-bodies/`、VoID も同じ。
+  残り作業 1（URI の差し替え）は未着手。w3id の形は `rdf/class/` を挟まないので、BASE を替えるだけでは揃わない（形式の IRI の組み立てを変える必要がある）
+- 使い方の動画は 2 本とも一般公開になった（2026-10-13 に YouTube の頁で isUnlisted・isPrivate がともに false を確かめた）
+- 下書きに反映: データセットの説明の頁の URL（railclass.ldas.jp/dataset.html）を RailClass の概要の最後に足した。応募 URL を w3id に決めた
+- 残る【条件】は 2 つ: 「URI は https://w3id.org/railclass/ で…」の 1 文（残り作業 1 が済んでから）、パートナーリソース（2026-10-13 時点でもパートナー一覧は空）
+
+
+### RDF の URI を w3id に差し替えた（残り作業 1、2026-10-13）
+
+- 形式 `https://w3id.org/railclass/<cid>`、モデル `.../model/<id>`、語彙 `.../vocab#<term>`、概念体系 `https://w3id.org/railclass/`。
+  `build_rdf.py` の BASE を w3id にし、CLS を BASE の直下に（`rdf/class/` を挟まない）。
+  3D ファイル・サムネイル・IIIF・閲覧頁へのリンク（schema:contentUrl など）は**置き場所なので w3id にしない**。新しく足した SITE（`https://railclass.ldas.jp/`）で書く。
+  これまでは旧アドレス（github.io/train-bodies）のままで、開けなかった
+- 合わせて直した所: `build_void.py`（uriSpace、説明文。`dataset.json` に classUri・modelUri・vocab・dataset を明示して持たせた）、
+  `build_search.py`（URI から ID を取り出す所）、サイトの `classes.ts`・形式とモデルの頁・データセットの頁（「URI がまだ古い」という断り書きを外し、例は w3id の URI に直接結んだ）、`facets.json`、`build_eratv_map.py`
+- 確かめたこと: docs/rdf に旧アドレスは 0 件。トリプル数は 255,154（前回 255,068 との差は同時に足されたモデル 1 両分）。
+  検索の索引を値に戻して前回と比べ、違いは同時進行の作業の分（最高速度 2 件、sg-tel の 3 項目）だけ。
+  サイトを手元で組み、形式の頁の上位・モデルの頁から形式への結びが生きていることを見た。
+  w3id の URI を Turtle・JSON-LD・HTML で引き、形式・独自 ID の形式（tb-）・モデル・語彙・全体の行き先がすべて期待どおり
+- **データセット自体の URI は `https://w3id.org/railclass/dataset` にした。w3id にこの転送はまだ無い**（引くと 404）。
+  概念体系と同じ URI（ルート）にする案は、ルートを Turtle で引くと all.ttl が返り、VoID が入っていないのでやめた。
+  w3id に `dataset` → `rdf/void.ttl`・`void.jsonld`・`dataset.html` の 3 行を足す PR が要る（未提出）
+- 途中で見つけた別の不具合（未修正）: Wikidata の「値が不明」（`.well-known/genid/…`）が、`wd:` を前に付けた
+  `http://www.wikidata.org/entity/http://www.wikidata.org/.well-known/genid/…` という IRI で 13 形式の電化方式などに入っている。
+  検索の道具はこれを剥がして読んでいる（今回の書き換えで一度壊し、元に戻した）
+- 進め方の記録: 別のセッションが同時に車両を足していた（avanti390、続いて sg-tel）。`build_rdf.py` と全 RDF が両方の作業で書き換わるため、
+  avanti390 のコミットを待ってから始めた。sg-tel は途中で重なり、作り直した RDF に sg-tel の分も入っている

@@ -1,55 +1,81 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color1",
+      "@id": "https://w3id.org/railclass/model/giruno#color4",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.6704"
+        "@value": "0.0415"
       },
-      "rdfs:label": "white",
-      "schema:color": "#EEEFEE",
+      "rdfs:label": "band",
+      "schema:color": "#181A1E",
       "wdt:P462": {
-        "@id": "wd:Q23444"
+        "@id": "wd:Q23445"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#livery",
+      "@id": "https://w3id.org/railclass/model/giruno#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0234"
+      },
+      "rdfs:label": "skirt",
+      "schema:color": "#2C2F34",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/giruno#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1763"
+      },
+      "rdfs:label": "cap",
+      "schema:color": "#1E2126",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/giruno#livery",
       "@type": "Livery",
       "colorSample": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color1"
+          "@id": "https://w3id.org/railclass/model/giruno#color1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color2"
+          "@id": "https://w3id.org/railclass/model/giruno#color2"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color3"
+          "@id": "https://w3id.org/railclass/model/giruno#color3"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color4"
+          "@id": "https://w3id.org/railclass/model/giruno#color4"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color5"
+          "@id": "https://w3id.org/railclass/model/giruno#color5"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color6"
+          "@id": "https://w3id.org/railclass/model/giruno#color6"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color7"
+          "@id": "https://w3id.org/railclass/model/giruno#color7"
         }
       ],
       "dcterms:source": {
@@ -82,20 +108,20 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color5",
+      "@id": "https://w3id.org/railclass/model/giruno#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0234"
+        "@value": "0.6704"
       },
-      "rdfs:label": "skirt",
-      "schema:color": "#2C2F34",
+      "rdfs:label": "white",
+      "schema:color": "#EEEFEE",
       "wdt:P462": {
-        "@id": "wd:Q42519"
+        "@id": "wd:Q23444"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color3",
+      "@id": "https://w3id.org/railclass/model/giruno#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -108,30 +134,30 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color4",
+      "@id": "https://w3id.org/railclass/model/giruno#color6",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0415"
+        "@value": "0.0170"
       },
-      "rdfs:label": "band",
-      "schema:color": "#181A1E",
+      "rdfs:label": "screen",
+      "schema:color": "#2C3642",
       "wdt:P462": {
-        "@id": "wd:Q23445"
+        "@id": "wd:Q42519"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno",
+      "@id": "https://w3id.org/railclass/model/giruno",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#livery"
+        "@id": "https://w3id.org/railclass/model/giruno#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q16798908"
+        "@id": "https://w3id.org/railclass/Q16798908"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/giruno.glb"
+        "@id": "https://railclass.ldas.jp/models/giruno.glb"
       },
       "schema:depth": {
         "@id": "_:giruno-depth"
@@ -152,13 +178,13 @@
         "@value": "ギルノ"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/giruno/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/giruno/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/giruno.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/giruno.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#giruno"
+        "@id": "https://railclass.ldas.jp/view.html#giruno"
       },
       "schema:width": {
         "@id": "_:giruno-width"
@@ -192,7 +218,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color7",
+      "@id": "https://w3id.org/railclass/model/giruno#color7",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -200,32 +226,6 @@
       },
       "rdfs:label": "grey",
       "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1763"
-      },
-      "rdfs:label": "cap",
-      "schema:color": "#1E2126",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/giruno#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0170"
-      },
-      "rdfs:label": "screen",
-      "schema:color": "#2C3642",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }

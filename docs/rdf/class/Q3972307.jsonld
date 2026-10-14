@@ -1,27 +1,20 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "wd:Q736412",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Kwun Tong line"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3972307#line2",
+      "@id": "https://w3id.org/railclass/Q3972307#line2",
       "@type": "LineUse",
       "dcterms:source": {
         "@id": "https://www.wikidata.org/wiki/Q736412#P3438"
@@ -37,7 +30,23 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3972307",
+      "@id": "https://w3id.org/railclass/Q3972307#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q2041013#P3438"
+      },
+      "line": {
+        "@id": "wd:Q2041013"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q3972307",
       "@type": [
         "VehicleClass",
         "skos:Concept"
@@ -48,10 +57,10 @@
       "has3DModel": false,
       "lineUse": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3972307#line1"
+          "@id": "https://w3id.org/railclass/Q3972307#line1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3972307#line2"
+          "@id": "https://w3id.org/railclass/Q3972307#line2"
         }
       ],
       "operatingCountry": {
@@ -74,7 +83,7 @@
         "@id": "wd:Q3972307"
       },
       "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+        "@id": "https://w3id.org/railclass/"
       },
       "skos:prefLabel": [
         {
@@ -116,26 +125,17 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q3972307#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q2041013#P3438"
-      },
-      "line": {
-        "@id": "wd:Q2041013"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
       "@id": "wd:Q2041013",
       "rdfs:label": {
         "@language": "en",
         "@value": "South Island line"
+      }
+    },
+    {
+      "@id": "wd:Q736412",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Kwun Tong line"
       }
     }
   ]

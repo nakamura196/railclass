@@ -1,57 +1,20 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "wd:Q112905",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "X 2000"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q853105#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q112905#P3438"
-      },
-      "line": {
-        "@id": "wd:Q112905"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "wikidata"
-      },
-      "sourceSection": "P3438",
-      "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q1347104",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Central Line"
-      }
-    },
-    {
-      "@id": "wd:Q802562",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Øresund Line"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q853105#line2",
+      "@id": "https://w3id.org/railclass/Q853105#line2",
       "@type": "LineUse",
       "dcterms:source": {
         "@id": "https://www.wikidata.org/wiki/Q1347104#P3438"
@@ -67,7 +30,23 @@
       "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q853105",
+      "@id": "https://w3id.org/railclass/Q853105#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q802562#P3438"
+      },
+      "line": {
+        "@id": "wd:Q802562"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q853105",
       "@type": [
         "VehicleClass",
         "skos:Concept"
@@ -78,13 +57,13 @@
       "has3DModel": true,
       "lineUse": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q853105#line1"
+          "@id": "https://w3id.org/railclass/Q853105#line1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q853105#line2"
+          "@id": "https://w3id.org/railclass/Q853105#line2"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q853105#line3"
+          "@id": "https://w3id.org/railclass/Q853105#line3"
         }
       ],
       "operatingCountry": [
@@ -109,13 +88,13 @@
         }
       ],
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/x2000"
+        "@id": "https://w3id.org/railclass/model/x2000"
       },
       "skos:exactMatch": {
         "@id": "wd:Q853105"
       },
       "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+        "@id": "https://w3id.org/railclass/"
       },
       "skos:prefLabel": [
         {
@@ -180,13 +159,27 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q853105#line3",
+      "@id": "wd:Q802562",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Øresund Line"
+      }
+    },
+    {
+      "@id": "wd:Q1347104",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Central Line"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q853105#line1",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q802562#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q112905#P3438"
       },
       "line": {
-        "@id": "wd:Q802562"
+        "@id": "wd:Q112905"
       },
       "skos:note": {
         "@language": "en",
@@ -194,6 +187,13 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q112905",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "X 2000"
+      }
     }
   ]
 }

@@ -1,43 +1,27 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://en.wikipedia.org/wiki/Amtrak_Airo"
-      },
-      "line": {
-        "@id": "wd:Q697217"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "service began 30 Sep 2026; only route so far"
-      },
-      "sourceSection": "Development",
-      "useStatus": "current"
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223",
+      "@id": "https://w3id.org/railclass/Q140611223",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
       "has3DModel": true,
       "lineUse": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q140611223#line1"
+        "@id": "https://w3id.org/railclass/Q140611223#line1"
       },
       "operatingCountry": [
         {
@@ -61,13 +45,13 @@
         }
       ],
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/airo"
+        "@id": "https://w3id.org/railclass/model/airo"
       },
       "skos:exactMatch": {
         "@id": "wd:Q140611223"
       },
       "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+        "@id": "https://w3id.org/railclass/"
       },
       "skos:prefLabel": [
         {
@@ -98,6 +82,22 @@
         "@language": "en",
         "@value": "Amtrak Cascades"
       }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q140611223#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://en.wikipedia.org/wiki/Amtrak_Airo"
+      },
+      "line": {
+        "@id": "wd:Q697217"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "service began 30 Sep 2026; only route so far"
+      },
+      "sourceSection": "Development",
+      "useStatus": "current"
     }
   ]
 }

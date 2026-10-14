@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:mk2 a schema:3DModel ;
-    tb:galleryGroup "skytrain" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery> ;
     schema:about cls:tb-skytrain-mk2 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/mk2.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/mk2.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.7 ] ;
@@ -23,53 +21,55 @@ mdl:mk2 a schema:3DModel ;
             schema:value 37.6 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "Mark II"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/mk2/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/mk2.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#mk2> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/mk2/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/mk2.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#mk2> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "skytrain" ;
+    tb:livery <https://w3id.org/railclass/model/mk2#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/mk2#color1> a tb:ColorSample ;
     rdfs:label "charcoal" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.6940 ;
-    schema:color "#30343A" .
+    schema:color "#30343A" ;
+    tb:areaShare 0.6940 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/mk2#color2> a tb:ColorSample ;
     rdfs:label "roof" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.1043 ;
-    schema:color "#A4A9B0" .
+    schema:color "#A4A9B0" ;
+    tb:areaShare 0.1043 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/mk2#color3> a tb:ColorSample ;
     rdfs:label "black" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0728 ;
-    schema:color "#14161A" .
+    schema:color "#14161A" ;
+    tb:areaShare 0.0728 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/mk2#color4> a tb:ColorSample ;
     rdfs:label "blue" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.0668 ;
-    schema:color "#1E58C0" .
+    schema:color "#1E58C0" ;
+    tb:areaShare 0.0668 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/mk2#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/mk2#color5> a tb:ColorSample ;
     rdfs:label "silver" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0420 ;
-    schema:color "#B4BAC2" .
+    schema:color "#B4BAC2" ;
+    tb:areaShare 0.0420 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/mk2#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/mk2#livery> a tb:Livery ;
     rdfs:label "TransLink livery"@en,
         "TransLink の塗装"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/mk2/skytrain_mk2.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q1088,
         wd:Q42519 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/mk2#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/mk2#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/mk2#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/mk2#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/mk2#color5> ;
+    tb:colorSample <https://w3id.org/railclass/model/mk2#color1>,
+        <https://w3id.org/railclass/model/mk2#color2>,
+        <https://w3id.org/railclass/model/mk2#color3>,
+        <https://w3id.org/railclass/model/mk2#color4>,
+        <https://w3id.org/railclass/model/mk2#color5> ;
     tb:liveryOf wd:Q1142140 .
 

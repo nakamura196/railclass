@@ -1,49 +1,62 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5",
+      "@id": "https://w3id.org/railclass/model/icet_oebb#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0111"
+        "@value": "0.0409"
       },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
+      "rdfs:label": "skirt",
+      "schema:color": "#C2C7CA",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery",
+      "@id": "https://w3id.org/railclass/model/icet_oebb#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0500"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/icet_oebb#livery",
       "@type": "Livery",
       "colorSample": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1"
+          "@id": "https://w3id.org/railclass/model/icet_oebb#color1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2"
+          "@id": "https://w3id.org/railclass/model/icet_oebb#color2"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3"
+          "@id": "https://w3id.org/railclass/model/icet_oebb#color3"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4"
+          "@id": "https://w3id.org/railclass/model/icet_oebb#color4"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color5"
+          "@id": "https://w3id.org/railclass/model/icet_oebb#color5"
         }
       ],
       "dcterms:source": {
@@ -73,33 +86,20 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color3",
+      "@id": "https://w3id.org/railclass/model/icet_oebb#color5",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0409"
+        "@value": "0.0111"
       },
-      "rdfs:label": "skirt",
-      "schema:color": "#C2C7CA",
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0500"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color1",
+      "@id": "https://w3id.org/railclass/model/icet_oebb#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -112,7 +112,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#color4",
+      "@id": "https://w3id.org/railclass/model/icet_oebb#color4",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -125,17 +125,17 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb",
+      "@id": "https://w3id.org/railclass/model/icet_oebb",
       "@type": "schema:3DModel",
       "galleryGroup": "icet",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/icet_oebb#livery"
+        "@id": "https://w3id.org/railclass/model/icet_oebb#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q8078904"
+        "@id": "https://w3id.org/railclass/Q8078904"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/icet_oebb.glb"
+        "@id": "https://railclass.ldas.jp/models/icet_oebb.glb"
       },
       "schema:depth": {
         "@id": "_:icet_oebb-depth"
@@ -156,13 +156,13 @@
         "@value": "ÖBB 4011"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/icet_oebb/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/icet_oebb/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/icet_oebb.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/icet_oebb.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#icet_oebb"
+        "@id": "https://railclass.ldas.jp/view.html#icet_oebb"
       },
       "schema:width": {
         "@id": "_:icet_oebb-width"

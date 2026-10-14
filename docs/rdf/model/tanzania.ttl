@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:tanzania a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#livery> ;
     schema:about cls:tb-tanzania ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/tanzania.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/tanzania.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.9 ] ;
@@ -23,54 +21,56 @@ mdl:tanzania a schema:3DModel ;
             schema:value 38.0 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "タンザニアSGR E6800形電気機関車"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/tanzania/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/tanzania.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#tanzania> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/tanzania/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/tanzania.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#tanzania> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/tanzania#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/tanzania#color1> a tb:ColorSample ;
     rdfs:label "cream" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.7972 ;
-    schema:color "#E4DFD4" .
+    schema:color "#E4DFD4" ;
+    tb:areaShare 0.7972 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/tanzania#color2> a tb:ColorSample ;
     rdfs:label "maroon" ;
     wdt:P462 wd:Q47071 ;
-    tb:areaShare 0.0704 ;
-    schema:color "#7A2824" .
+    schema:color "#7A2824" ;
+    tb:areaShare 0.0704 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/tanzania#color3> a tb:ColorSample ;
     rdfs:label "roofgrey" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0546 ;
-    schema:color "#9A9C9E" .
+    schema:color "#9A9C9E" ;
+    tb:areaShare 0.0546 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/tanzania#color4> a tb:ColorSample ;
     rdfs:label "orange" ;
     wdt:P462 wd:Q39338 ;
-    tb:areaShare 0.0532 ;
-    schema:color "#E86E26" .
+    schema:color "#E86E26" ;
+    tb:areaShare 0.0532 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/tanzania#color5> a tb:ColorSample ;
     rdfs:label "seam" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0081 ;
-    schema:color "#6E6A64" .
+    schema:color "#6E6A64" ;
+    tb:areaShare 0.0081 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/tanzania#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/tanzania#livery> a tb:Livery ;
     rdfs:label "Tanzania Railways Corporation SGR livery (cream with orange arches, maroon lower body)"@en,
         "タンザニア鉄道公社 SGR の塗装（クリームにオレンジの弧、えんじの裾）"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/tanzania/trc_tanzania.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q23444,
         wd:Q39338,
         wd:Q47071 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/tanzania#color5> ;
+    tb:colorSample <https://w3id.org/railclass/model/tanzania#color1>,
+        <https://w3id.org/railclass/model/tanzania#color2>,
+        <https://w3id.org/railclass/model/tanzania#color3>,
+        <https://w3id.org/railclass/model/tanzania#color4>,
+        <https://w3id.org/railclass/model/tanzania#color5> ;
     tb:liveryOf wd:Q2393276 .
 

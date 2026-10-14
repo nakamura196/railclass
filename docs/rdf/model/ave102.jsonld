@@ -1,118 +1,30 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0420"
-      },
-      "rdfs:label": "stripe",
-      "schema:color": "#8A2C5A",
-      "wdt:P462": {
-        "@id": "wd:Q3257809"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/ave102/renfe_ave102.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q2476154"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Renfe AVE livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "Renfe AVE の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q23444"
-        },
-        {
-          "@id": "wd:Q3257809"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0326"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8558"
-      },
-      "rdfs:label": "body",
-      "schema:color": "#F0F1F0",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102",
+      "@id": "https://w3id.org/railclass/model/ave102",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery"
+        "@id": "https://w3id.org/railclass/model/ave102#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1087710"
+        "@id": "https://w3id.org/railclass/Q1087710"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/ave102.glb"
+        "@id": "https://railclass.ldas.jp/models/ave102.glb"
       },
       "schema:depth": {
         "@id": "_:ave102-depth"
@@ -133,13 +45,13 @@
         "@value": "AVE 102「Pato」"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/ave102/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/ave102/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/ave102.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/ave102.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#ave102"
+        "@id": "https://railclass.ldas.jp/view.html#ave102"
       },
       "schema:width": {
         "@id": "_:ave102-width"
@@ -173,7 +85,33 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6",
+      "@id": "https://w3id.org/railclass/model/ave102#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0420"
+      },
+      "rdfs:label": "stripe",
+      "schema:color": "#8A2C5A",
+      "wdt:P462": {
+        "@id": "wd:Q3257809"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ave102#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0395"
+      },
+      "rdfs:label": "panel",
+      "schema:color": "#8C949C",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ave102#color6",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -186,7 +124,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color5",
+      "@id": "https://w3id.org/railclass/model/ave102#color5",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -199,17 +137,79 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/ave102#color3",
+      "@id": "https://w3id.org/railclass/model/ave102#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0395"
+        "@value": "0.8558"
       },
-      "rdfs:label": "panel",
-      "schema:color": "#8C949C",
+      "rdfs:label": "body",
+      "schema:color": "#F0F1F0",
       "wdt:P462": {
-        "@id": "wd:Q42519"
+        "@id": "wd:Q23444"
       }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ave102#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0326"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/ave102#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/ave102#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ave102#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ave102#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ave102#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ave102#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/ave102#color6"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/ave102/renfe_ave102.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q2476154"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Renfe AVE livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "Renfe AVE の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q23444"
+        },
+        {
+          "@id": "wd:Q3257809"
+        }
+      ]
     }
   ]
 }

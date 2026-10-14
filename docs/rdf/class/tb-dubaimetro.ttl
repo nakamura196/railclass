@@ -1,10 +1,10 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -14,7 +14,7 @@ cls:tb-dubaimetro a skos:Concept,
     rdfs:label "Dubai Metro Kinki Sharyo train"@en,
         "ドバイメトロの電車（近畿車輛）"@ja ;
     dcterms:source "Country, operator and opening date (2009-09-09) from Wikidata Q83787 (Dubai Metro, the system); manufacturer (Kinki Sharyo, cars 5001-5079) from en.wikipedia 'Dubai Metro' (rolling stock, read 2026-10-11) via the skytrain lab note docs/notes/dubaimetro.md."@en ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:inScheme cls: ;
     skos:prefLabel "Dubai Metro Kinki Sharyo train"@en,
         "ドバイメトロの電車（近畿車輛）"@ja ;
     wdt:P137 wd:Q499104 ;
@@ -22,17 +22,17 @@ cls:tb-dubaimetro a skos:Concept,
     wdt:P176 wd:Q1592306 ;
     wdt:P279 wd:Q483373 ;
     wdt:P729 "2009"^^xsd:gYear ;
+    schema:subjectOf mdl:dubaimetro ;
     tb:handEntered wdt:P137,
         wdt:P17,
         wdt:P176,
         wdt:P279,
         wdt:P729 ;
     tb:has3DModel true ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/tb-dubaimetro#line1> ;
-    tb:usedOn wd:Q83787 ;
-    schema:subjectOf mdl:dubaimetro .
+    tb:lineUse <https://w3id.org/railclass/tb-dubaimetro#line1> ;
+    tb:usedOn wd:Q83787 .
 
-<https://nakamura196.github.io/train-bodies/rdf/class/tb-dubaimetro#line1> a tb:LineUse ;
+<https://w3id.org/railclass/tb-dubaimetro#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q83787> ;
     skos:note "the Dubai Metro system itself; Wikidata has no item for its Kinki Sharyo rolling stock"@en ;
     tb:line wd:Q83787 ;

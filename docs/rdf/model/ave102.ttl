@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:ave102 a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery> ;
     schema:about cls:Q1087710 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/ave102.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/ave102.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.9 ] ;
@@ -23,60 +21,62 @@ mdl:ave102 a schema:3DModel ;
             schema:value 38.0 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "AVE 102「Pato」"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/ave102/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/ave102.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#ave102> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/ave102/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/ave102.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#ave102> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/ave102#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ave102#color1> a tb:ColorSample ;
     rdfs:label "body" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.8558 ;
-    schema:color "#F0F1F0" .
+    schema:color "#F0F1F0" ;
+    tb:areaShare 0.8558 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ave102#color2> a tb:ColorSample ;
     rdfs:label "stripe" ;
     wdt:P462 wd:Q3257809 ;
-    tb:areaShare 0.0420 ;
-    schema:color "#8A2C5A" .
+    schema:color "#8A2C5A" ;
+    tb:areaShare 0.0420 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ave102#color3> a tb:ColorSample ;
     rdfs:label "panel" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0395 ;
-    schema:color "#8C949C" .
+    schema:color "#8C949C" ;
+    tb:areaShare 0.0395 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ave102#color4> a tb:ColorSample ;
     rdfs:label "black" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0326 ;
-    schema:color "#14161A" .
+    schema:color "#14161A" ;
+    tb:areaShare 0.0326 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ave102#color5> a tb:ColorSample ;
     rdfs:label "line" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0196 ;
-    schema:color "#8E949A" .
+    schema:color "#8E949A" ;
+    tb:areaShare 0.0196 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6> a tb:ColorSample ;
+<https://w3id.org/railclass/model/ave102#color6> a tb:ColorSample ;
     rdfs:label "grey" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0074 ;
-    schema:color "#5A6066" .
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0074 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/ave102#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/ave102#livery> a tb:Livery ;
     rdfs:label "Renfe AVE livery"@en,
         "Renfe AVE の塗装"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/ave102/renfe_ave102.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q23444,
         wd:Q3257809 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color5>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/ave102#color6> ;
+    tb:colorSample <https://w3id.org/railclass/model/ave102#color1>,
+        <https://w3id.org/railclass/model/ave102#color2>,
+        <https://w3id.org/railclass/model/ave102#color3>,
+        <https://w3id.org/railclass/model/ave102#color4>,
+        <https://w3id.org/railclass/model/ave102#color5>,
+        <https://w3id.org/railclass/model/ave102#color6> ;
     tb:liveryOf wd:Q2476154 .
 

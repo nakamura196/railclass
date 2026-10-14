@@ -12,7 +12,7 @@ import csv, json, os, sys, time
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(HERE, "docs", "data")
 NAME = "eratv-wikidata.tsv"
-BASE = "https://nakamura196.github.io/train-bodies/"
+BASE = "https://w3id.org/railclass/"
 ARGS = sys.argv[1:]
 exported = ARGS[ARGS.index("--exported") + 1] if "--exported" in ARGS else \
     time.strftime("%Y-%m-%d", time.localtime(os.path.getmtime(os.path.join(HERE, "data", "eratv", "eratv.tsv"))))

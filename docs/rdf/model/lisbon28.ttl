@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:lisbon28 a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#livery> ;
     schema:about cls:tb-lisbon28 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/lisbon28.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/lisbon28.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.5 ] ;
@@ -23,54 +21,56 @@ mdl:lisbon28 a schema:3DModel ;
             schema:value 46.0 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "リスボン市電 28番線"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/lisbon28/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/lisbon28.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#lisbon28> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/lisbon28/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/lisbon28.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#lisbon28> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/lisbon28#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lisbon28#color1> a tb:ColorSample ;
     rdfs:label "cream" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.6013 ;
-    schema:color "#EEEBE2" .
+    schema:color "#EEEBE2" ;
+    tb:areaShare 0.6013 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lisbon28#color2> a tb:ColorSample ;
     rdfs:label "roof" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.1894 ;
-    schema:color "#8C968A" .
+    schema:color "#8C968A" ;
+    tb:areaShare 0.1894 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lisbon28#color3> a tb:ColorSample ;
     rdfs:label "yellow" ;
     wdt:P462 wd:Q39338 ;
-    tb:areaShare 0.1295 ;
-    schema:color "#F2B200" .
+    schema:color "#F2B200" ;
+    tb:areaShare 0.1295 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lisbon28#color4> a tb:ColorSample ;
     rdfs:label "wood" ;
     wdt:P462 wd:Q39338 ;
-    tb:areaShare 0.0429 ;
-    schema:color "#7A3C1C" .
+    schema:color "#7A3C1C" ;
+    tb:areaShare 0.0429 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lisbon28#color5> a tb:ColorSample ;
     rdfs:label "maroon" ;
     wdt:P462 wd:Q47071 ;
-    tb:areaShare 0.0275 ;
-    schema:color "#5E221E" .
+    schema:color "#5E221E" ;
+    tb:areaShare 0.0275 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/lisbon28#livery> a tb:Livery ;
     rdfs:label "Carris tram livery (yellow and white)"@en,
         "Carris の路面電車の塗装（黄と白）"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/lisbon28/carris_lisbon28.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q23444,
         wd:Q39338,
         wd:Q47071 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/lisbon28#color5> ;
+    tb:colorSample <https://w3id.org/railclass/model/lisbon28#color1>,
+        <https://w3id.org/railclass/model/lisbon28#color2>,
+        <https://w3id.org/railclass/model/lisbon28#color3>,
+        <https://w3id.org/railclass/model/lisbon28#color4>,
+        <https://w3id.org/railclass/model/lisbon28#color5> ;
     tb:liveryOf wd:Q1045108 .
 

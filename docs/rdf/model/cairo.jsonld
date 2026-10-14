@@ -1,30 +1,56 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo",
+      "@id": "https://w3id.org/railclass/model/cairo#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0277"
+      },
+      "rdfs:label": "panel",
+      "schema:color": "#16181C",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/cairo#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1527"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#9A9EA2",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/cairo",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#livery"
+        "@id": "https://w3id.org/railclass/model/cairo#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-cairo"
+        "@id": "https://w3id.org/railclass/tb-cairo"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/cairo.glb"
+        "@id": "https://railclass.ldas.jp/models/cairo.glb"
       },
       "schema:depth": {
         "@id": "_:cairo-depth"
@@ -45,13 +71,13 @@
         "@value": "カイロ地下鉄2号線"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/cairo/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/cairo/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/cairo.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/cairo.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#cairo"
+        "@id": "https://railclass.ldas.jp/view.html#cairo"
       },
       "schema:width": {
         "@id": "_:cairo-width"
@@ -85,7 +111,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color7",
+      "@id": "https://w3id.org/railclass/model/cairo#color7",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -98,42 +124,42 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color1",
+      "@id": "https://w3id.org/railclass/model/cairo#color4",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.6714"
+        "@value": "0.0505"
       },
-      "rdfs:label": "steel",
-      "schema:color": "#CCCFD2",
+      "rdfs:label": "orange",
+      "schema:color": "#F27E66",
       "wdt:P462": {
-        "@id": "wd:Q42519"
+        "@id": "wd:Q3142"
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#livery",
+      "@id": "https://w3id.org/railclass/model/cairo#livery",
       "@type": "Livery",
       "colorSample": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color1"
+          "@id": "https://w3id.org/railclass/model/cairo#color1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color2"
+          "@id": "https://w3id.org/railclass/model/cairo#color2"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color3"
+          "@id": "https://w3id.org/railclass/model/cairo#color3"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color4"
+          "@id": "https://w3id.org/railclass/model/cairo#color4"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color5"
+          "@id": "https://w3id.org/railclass/model/cairo#color5"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color6"
+          "@id": "https://w3id.org/railclass/model/cairo#color6"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color7"
+          "@id": "https://w3id.org/railclass/model/cairo#color7"
         }
       ],
       "dcterms:source": {
@@ -166,7 +192,7 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color6",
+      "@id": "https://w3id.org/railclass/model/cairo#color6",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -179,7 +205,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color3",
+      "@id": "https://w3id.org/railclass/model/cairo#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -192,40 +218,14 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color4",
+      "@id": "https://w3id.org/railclass/model/cairo#color1",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0505"
+        "@value": "0.6714"
       },
-      "rdfs:label": "orange",
-      "schema:color": "#F27E66",
-      "wdt:P462": {
-        "@id": "wd:Q3142"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0277"
-      },
-      "rdfs:label": "panel",
-      "schema:color": "#16181C",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cairo#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1527"
-      },
-      "rdfs:label": "roof",
-      "schema:color": "#9A9EA2",
+      "rdfs:label": "steel",
+      "schema:color": "#CCCFD2",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }

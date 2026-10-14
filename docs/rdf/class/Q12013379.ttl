@@ -1,10 +1,10 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,7 +13,7 @@ cls:Q12013379 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Alstom X61"@en ;
     skos:exactMatch wd:Q12013379 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:inScheme cls: ;
     skos:prefLabel "Alstom X61"@en ;
     prov:wasDerivedFrom wd:Q12013379 ;
     wdt:P1064 wd:Q1999572 ;
@@ -27,20 +27,20 @@ cls:Q12013379 a skos:Concept,
     wdt:P930 wd:Q1415234 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Ystad%20railway%20station%20asv2024-07%20img5.jpg> ;
     tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q12013379#line1>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q12013379#line2> ;
+    tb:lineUse <https://w3id.org/railclass/Q12013379#line1>,
+        <https://w3id.org/railclass/Q12013379#line2> ;
     tb:operatingCountry wd:Q34 ;
     tb:usedOn wd:Q10728213,
         wd:Q1433219 .
 
-<https://nakamura196.github.io/train-bodies/rdf/class/Q12013379#line1> a tb:LineUse ;
+<https://w3id.org/railclass/Q12013379#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q10728213#P3438> ;
     skos:note "wikidata"@en ;
     tb:line wd:Q10728213 ;
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
-<https://nakamura196.github.io/train-bodies/rdf/class/Q12013379#line2> a tb:LineUse ;
+<https://w3id.org/railclass/Q12013379#line2> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1433219#P3438> ;
     skos:note "wikidata"@en ;
     tb:line wd:Q1433219 ;

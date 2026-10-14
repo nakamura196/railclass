@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:bluetrain a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#livery> ;
     schema:about cls:tb-bluetrain ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/bluetrain.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/bluetrain.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 150.0 ] ;
@@ -23,61 +21,63 @@ mdl:bluetrain a schema:3DModel ;
             schema:value 38.0 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "ブルートレイン（南アフリカ）"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/bluetrain/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/bluetrain.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#bluetrain> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/bluetrain/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/bluetrain.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#bluetrain> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/bluetrain#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/bluetrain#color1> a tb:ColorSample ;
     rdfs:label "royal" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.7166 ;
-    schema:color "#1B2E9A" .
+    schema:color "#1B2E9A" ;
+    tb:areaShare 0.7166 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/bluetrain#color2> a tb:ColorSample ;
     rdfs:label "roof" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.1789 ;
-    schema:color "#D8D9DB" .
+    schema:color "#D8D9DB" ;
+    tb:areaShare 0.1789 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/bluetrain#color3> a tb:ColorSample ;
     rdfs:label "gold" ;
     wdt:P462 wd:Q943 ;
-    tb:areaShare 0.0286 ;
-    schema:color "#D6B44E" .
+    schema:color "#D6B44E" ;
+    tb:areaShare 0.0286 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/bluetrain#color4> a tb:ColorSample ;
     rdfs:label "frame" ;
     wdt:P462 wd:Q39338 ;
-    tb:areaShare 0.0265 ;
-    schema:color "#D9C7A0" .
+    schema:color "#D9C7A0" ;
+    tb:areaShare 0.0265 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/bluetrain#color5> a tb:ColorSample ;
     rdfs:label "white" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.0203 ;
-    schema:color "#EEEEEC" .
+    schema:color "#EEEEEC" ;
+    tb:areaShare 0.0203 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color6> a tb:ColorSample ;
+<https://w3id.org/railclass/model/bluetrain#color6> a tb:ColorSample ;
     rdfs:label "door" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.0063 ;
-    schema:color "#142270" .
+    schema:color "#142270" ;
+    tb:areaShare 0.0063 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/bluetrain#livery> a tb:Livery ;
     rdfs:label "Blue Train livery (royal blue with gold lines)"@en,
         "ブルートレインの塗装（濃い青に金の線）"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/bluetrain/za_bluetrain.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q1088,
         wd:Q39338,
         wd:Q943 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color5>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/bluetrain#color6> ;
+    tb:colorSample <https://w3id.org/railclass/model/bluetrain#color1>,
+        <https://w3id.org/railclass/model/bluetrain#color2>,
+        <https://w3id.org/railclass/model/bluetrain#color3>,
+        <https://w3id.org/railclass/model/bluetrain#color4>,
+        <https://w3id.org/railclass/model/bluetrain#color5>,
+        <https://w3id.org/railclass/model/bluetrain#color6> ;
     tb:liveryOf wd:Q820804 .
 

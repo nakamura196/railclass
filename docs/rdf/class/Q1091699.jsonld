@@ -1,26 +1,33 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699#line2",
+      "@id": "wd:Q207699",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Waterloo & City line"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q1091699#line1",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q207699#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q205355#P3438"
       },
       "line": {
-        "@id": "wd:Q207699"
+        "@id": "wd:Q205355"
       },
       "skos:note": {
         "@language": "en",
@@ -37,7 +44,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699",
+      "@id": "https://w3id.org/railclass/Q1091699",
       "@type": [
         "VehicleClass",
         "skos:Concept"
@@ -48,10 +55,10 @@
       "has3DModel": false,
       "lineUse": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699#line1"
+          "@id": "https://w3id.org/railclass/Q1091699#line1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699#line2"
+          "@id": "https://w3id.org/railclass/Q1091699#line2"
         }
       ],
       "operatingCountry": {
@@ -74,7 +81,7 @@
         "@id": "wd:Q1091699"
       },
       "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+        "@id": "https://w3id.org/railclass/"
       },
       "skos:prefLabel": [
         {
@@ -125,13 +132,13 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q1091699#line1",
+      "@id": "https://w3id.org/railclass/Q1091699#line2",
       "@type": "LineUse",
       "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q205355#P3438"
+        "@id": "https://www.wikidata.org/wiki/Q207699#P3438"
       },
       "line": {
-        "@id": "wd:Q205355"
+        "@id": "wd:Q207699"
       },
       "skos:note": {
         "@language": "en",
@@ -139,13 +146,6 @@
       },
       "sourceSection": "P3438",
       "useStatus": "current"
-    },
-    {
-      "@id": "wd:Q207699",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Waterloo & City line"
-      }
     }
   ]
 }

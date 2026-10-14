@@ -1,69 +1,30 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/addis#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.7946"
-      },
-      "rdfs:label": "body",
-      "schema:color": "#F2F4F2",
-      "wdt:P462": {
-        "@id": "wd:Q23444"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/addis#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0467"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/addis#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1478"
-      },
-      "rdfs:label": "green",
-      "schema:color": "#1F9A60",
-      "wdt:P462": {
-        "@id": "wd:Q3133"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/addis#livery",
+      "@id": "https://w3id.org/railclass/model/addis#livery",
       "@type": "Livery",
       "colorSample": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/addis#color1"
+          "@id": "https://w3id.org/railclass/model/addis#color1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/addis#color2"
+          "@id": "https://w3id.org/railclass/model/addis#color2"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/addis#color3"
+          "@id": "https://w3id.org/railclass/model/addis#color3"
         }
       ],
       "dcterms:source": {
@@ -93,17 +54,56 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/addis",
+      "@id": "https://w3id.org/railclass/model/addis#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0467"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/addis#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1478"
+      },
+      "rdfs:label": "green",
+      "schema:color": "#1F9A60",
+      "wdt:P462": {
+        "@id": "wd:Q3133"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/addis#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7946"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#F2F4F2",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/addis",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/addis#livery"
+        "@id": "https://w3id.org/railclass/model/addis#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-addis"
+        "@id": "https://w3id.org/railclass/tb-addis"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/addis.glb"
+        "@id": "https://railclass.ldas.jp/models/addis.glb"
       },
       "schema:depth": {
         "@id": "_:addis-depth"
@@ -124,13 +124,13 @@
         "@value": "アディスアベバ・ライトレール"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/addis/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/addis/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/addis.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/addis.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#addis"
+        "@id": "https://railclass.ldas.jp/view.html#addis"
       },
       "schema:width": {
         "@id": "_:addis-width"

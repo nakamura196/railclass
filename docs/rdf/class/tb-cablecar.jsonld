@@ -1,27 +1,36 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "wd:Q374956",
-      "rdfs:label": {
+      "@id": "https://w3id.org/railclass/tb-cablecar#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q374956"
+      },
+      "line": {
+        "@id": "wd:Q374956"
+      },
+      "skos:note": {
         "@language": "en",
-        "@value": "San Francisco cable car system"
-      }
+        "@value": "the San Francisco cable car system itself; Wikidata has no item for the cars"
+      },
+      "sourceSection": "Wikidata (the system)",
+      "useStatus": "current"
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-cablecar",
+      "@id": "https://w3id.org/railclass/tb-cablecar",
       "@type": [
         "VehicleClass",
         "skos:Concept"
@@ -43,7 +52,7 @@
       ],
       "has3DModel": true,
       "lineUse": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-cablecar#line1"
+        "@id": "https://w3id.org/railclass/tb-cablecar#line1"
       },
       "rdfs:label": [
         {
@@ -56,10 +65,10 @@
         }
       ],
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/cablecar"
+        "@id": "https://w3id.org/railclass/model/cablecar"
       },
       "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+        "@id": "https://w3id.org/railclass/"
       },
       "skos:prefLabel": [
         {
@@ -85,20 +94,11 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-cablecar#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q374956"
-      },
-      "line": {
-        "@id": "wd:Q374956"
-      },
-      "skos:note": {
+      "@id": "wd:Q374956",
+      "rdfs:label": {
         "@language": "en",
-        "@value": "the San Francisco cable car system itself; Wikidata has no item for the cars"
-      },
-      "sourceSection": "Wikidata (the system)",
-      "useStatus": "current"
+        "@value": "San Francisco cable car system"
+      }
     }
   ]
 }

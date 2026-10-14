@@ -1,20 +1,60 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17006021#line1",
+      "@id": "https://w3id.org/railclass/Q17006021",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/GlenelgTram%201.jpg"
+      },
+      "has3DModel": false,
+      "lineUse": {
+        "@id": "https://w3id.org/railclass/Q17006021#line1"
+      },
+      "operatingCountry": {
+        "@id": "wd:Q408"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q17006021"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "H class"
+      },
+      "skos:exactMatch": {
+        "@id": "wd:Q17006021"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/railclass/"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "H class"
+      },
+      "usedOn": {
+        "@id": "wd:Q7833209"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q4681753"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q17006021#line1",
       "@type": "LineUse",
       "dcterms:source": {
         "@id": "https://www.wikidata.org/wiki/Q7833209#P3438"
@@ -34,46 +74,6 @@
       "rdfs:label": {
         "@language": "en",
         "@value": "Trams in Adelaide"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17006021",
-      "@type": [
-        "VehicleClass",
-        "skos:Concept"
-      ],
-      "foaf:depiction": {
-        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/GlenelgTram%201.jpg"
-      },
-      "has3DModel": false,
-      "lineUse": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q17006021#line1"
-      },
-      "operatingCountry": {
-        "@id": "wd:Q408"
-      },
-      "prov:wasDerivedFrom": {
-        "@id": "wd:Q17006021"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "H class"
-      },
-      "skos:exactMatch": {
-        "@id": "wd:Q17006021"
-      },
-      "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
-      },
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "H class"
-      },
-      "usedOn": {
-        "@id": "wd:Q7833209"
-      },
-      "wdt:P137": {
-        "@id": "wd:Q4681753"
       }
     }
   ]

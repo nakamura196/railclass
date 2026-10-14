@@ -1,10 +1,10 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,7 +13,7 @@ cls:Q11990750 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "NSB B7"@en ;
     skos:exactMatch wd:Q11990750 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:inScheme cls: ;
     skos:prefLabel "NSB B7"@en ;
     prov:wasDerivedFrom wd:Q11990750 ;
     wdt:P1064 wd:Q1999572 ;
@@ -29,20 +29,20 @@ cls:Q11990750 a skos:Concept,
     wdt:P729 "1981"^^xsd:gYear ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/NSB%20%28Norske%20tog%29%20A7-1%2024722%20in%20Drammen.jpg> ;
     tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q11990750#line1>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q11990750#line2> ;
+    tb:lineUse <https://w3id.org/railclass/Q11990750#line1>,
+        <https://w3id.org/railclass/Q11990750#line2> ;
     tb:operatingCountry wd:Q20 ;
     tb:usedOn wd:Q115328988,
         wd:Q1577458 .
 
-<https://nakamura196.github.io/train-bodies/rdf/class/Q11990750#line1> a tb:LineUse ;
+<https://w3id.org/railclass/Q11990750#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q115328988#P3438> ;
     skos:note "wikidata"@en ;
     tb:line wd:Q115328988 ;
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
-<https://nakamura196.github.io/train-bodies/rdf/class/Q11990750#line2> a tb:LineUse ;
+<https://w3id.org/railclass/Q11990750#line2> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1577458#P3438> ;
     skos:note "wikidata"@en ;
     tb:line wd:Q1577458 ;

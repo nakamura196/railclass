@@ -1,20 +1,36 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-addis",
+      "@id": "https://w3id.org/railclass/tb-addis#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q16250141"
+      },
+      "line": {
+        "@id": "wd:Q16250141"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "the Addis Ababa Light Rail system itself; Wikidata has no item for its CNR Changchun trams"
+      },
+      "sourceSection": "Wikidata (the system)",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://w3id.org/railclass/tb-addis",
       "@type": [
         "VehicleClass",
         "skos:Concept"
@@ -42,7 +58,7 @@
       ],
       "has3DModel": true,
       "lineUse": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-addis#line1"
+        "@id": "https://w3id.org/railclass/tb-addis#line1"
       },
       "rdfs:label": [
         {
@@ -55,10 +71,10 @@
         }
       ],
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/addis"
+        "@id": "https://w3id.org/railclass/model/addis"
       },
       "skos:inScheme": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/"
+        "@id": "https://w3id.org/railclass/"
       },
       "skos:prefLabel": [
         {
@@ -96,22 +112,6 @@
         "@language": "en",
         "@value": "Addis Ababa Light Rail"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-addis#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://www.wikidata.org/wiki/Q16250141"
-      },
-      "line": {
-        "@id": "wd:Q16250141"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "the Addis Ababa Light Rail system itself; Wikidata has no item for its CNR Changchun trams"
-      },
-      "sourceSection": "Wikidata (the system)",
-      "useStatus": "current"
     }
   ]
 }

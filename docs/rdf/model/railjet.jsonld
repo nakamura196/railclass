@@ -1,182 +1,20 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color7",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0131"
-      },
-      "rdfs:label": "screen",
-      "schema:color": "#4E5C68",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0601"
-      },
-      "rdfs:label": "slate",
-      "schema:color": "#4A4E54",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0181"
-      },
-      "rdfs:label": "cap",
-      "schema:color": "#3A3D42",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0442"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color6"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color7"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color8"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color9"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/railjet/oebb_railjet.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q83822"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "ÖBB Railjet livery (wine red and grey)"
-        },
-        {
-          "@language": "ja",
-          "@value": "ÖBB のレールジェットの塗装（ワインレッドと灰）"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q3142"
-        },
-        {
-          "@id": "wd:Q42519"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color9",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0064"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1465"
-      },
-      "rdfs:label": "roof",
-      "schema:color": "#B8BCBE",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0254"
-      },
-      "rdfs:label": "bright",
-      "schema:color": "#FF5A45",
-      "wdt:P462": {
-        "@id": "wd:Q3142"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.6645"
-      },
-      "rdfs:label": "wine",
-      "schema:color": "#E82C34",
-      "wdt:P462": {
-        "@id": "wd:Q3142"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#color8",
+      "@id": "https://w3id.org/railclass/model/railjet#color8",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -189,17 +27,82 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet",
+      "@id": "https://w3id.org/railclass/model/railjet#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0601"
+      },
+      "rdfs:label": "slate",
+      "schema:color": "#4A4E54",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/railjet#color9",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0064"
+      },
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/railjet#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0254"
+      },
+      "rdfs:label": "bright",
+      "schema:color": "#FF5A45",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/railjet#color7",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0131"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#4E5C68",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/railjet#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1465"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#B8BCBE",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/railjet",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/railjet#livery"
+        "@id": "https://w3id.org/railclass/model/railjet#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q125350160"
+        "@id": "https://w3id.org/railclass/Q125350160"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/railjet.glb"
+        "@id": "https://railclass.ldas.jp/models/railjet.glb"
       },
       "schema:depth": {
         "@id": "_:railjet-depth"
@@ -220,13 +123,13 @@
         "@value": "レールジェット"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/railjet/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/railjet/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/railjet.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/railjet.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#railjet"
+        "@id": "https://railclass.ldas.jp/view.html#railjet"
       },
       "schema:width": {
         "@id": "_:railjet-width"
@@ -257,6 +160,103 @@
       "schema:value": {
         "@type": "xsd:decimal",
         "@value": "37.6"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/railjet#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0181"
+      },
+      "rdfs:label": "cap",
+      "schema:color": "#3A3D42",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/railjet#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6645"
+      },
+      "rdfs:label": "wine",
+      "schema:color": "#E82C34",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/railjet#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/railjet#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/railjet#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/railjet#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/railjet#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/railjet#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/railjet#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/railjet#color7"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/railjet#color8"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/railjet#color9"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/railjet/oebb_railjet.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q83822"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "ÖBB Railjet livery (wine red and grey)"
+        },
+        {
+          "@language": "ja",
+          "@value": "ÖBB のレールジェットの塗装（ワインレッドと灰）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q3142"
+        },
+        {
+          "@id": "wd:Q42519"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/railjet#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0442"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
       }
     }
   ]

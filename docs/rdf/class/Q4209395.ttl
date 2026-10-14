@@ -1,10 +1,10 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -14,7 +14,7 @@ cls:Q4209395 a skos:Concept,
     rdfs:label "Tokyo Metro 7000 series"@en,
         "営団7000系電車"@ja ;
     skos:exactMatch wd:Q4209395 ;
-    skos:inScheme <https://nakamura196.github.io/train-bodies/rdf/> ;
+    skos:inScheme cls: ;
     skos:prefLabel "Tokyo Metro 7000 series"@en,
         "営団7000系電車"@ja ;
     prov:wasDerivedFrom wd:Q4209395 ;
@@ -26,21 +26,21 @@ cls:Q4209395 a skos:Concept,
         wd:Q483373 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TokyoMetro%20Type%207134.JPG> ;
     tb:has3DModel false ;
-    tb:lineUse <https://nakamura196.github.io/train-bodies/rdf/class/Q4209395#line1>,
-        <https://nakamura196.github.io/train-bodies/rdf/class/Q4209395#line2> ;
+    tb:lineUse <https://w3id.org/railclass/Q4209395#line1>,
+        <https://w3id.org/railclass/Q4209395#line2> ;
     tb:operatingCountry wd:Q17,
         wd:Q252 ;
     tb:usedOn wd:Q1332908,
         wd:Q787305 .
 
-<https://nakamura196.github.io/train-bodies/rdf/class/Q4209395#line1> a tb:LineUse ;
+<https://w3id.org/railclass/Q4209395#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1332908#P3438> ;
     skos:note "wikidata"@en ;
     tb:line wd:Q1332908 ;
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
-<https://nakamura196.github.io/train-bodies/rdf/class/Q4209395#line2> a tb:LineUse ;
+<https://w3id.org/railclass/Q4209395#line2> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q787305#P3438> ;
     skos:note "wikidata"@en ;
     tb:line wd:Q787305 ;

@@ -17,15 +17,11 @@ const bytes = (b: number) => b >= 1e6 ? `${(b / 1e6).toFixed(1)} MB` : `${Math.m
 const fileOf = (k: string) => [...D.files, ...D.void].find((f: any) => f.key === k);
 const fill = (s: string) => s.replace(/\{(\w+)\}/g, (m, k) =>
   k === "allTtlSize" ? bytes(fileOf("allTtl").bytes) : typeof D[k] === "number" ? fmt(D[k]) : m);
-const cls = D.uriSpace + "class/", mdl = D.uriSpace + "model/";
-const uriText = (s: string) => s.replace("{cls}", cls).replace("{mdl}", mdl);
+const cls = D.classUri, mdl = D.modelUri;
+const uriText = (s: string) => s.replace("{cls}", cls).replace("{mdl}", mdl).replaceAll("{site}", D.site);
 const examples = [cls + "Q696668", cls + "tb-skytrain-mk2", mdl + "icet_411"];
-// Until the URIs move to w3id.org they still name the old repository (train-bodies), which no longer resolves:
-// say so, and link the examples to where the pages are now. Drops out by itself once the URIs and the site agree.
-const uriBase = D.uriSpace.replace(/rdf\/$/, "");
-const moved = uriBase !== D.site;
-const at = (u: string) => u.replace(uriBase, D.site) + ".html";
-const vocab = D.uriSpace.replace(/rdf\/$/, "vocab#");
+// The examples link to the URIs themselves: w3id.org sends a browser on to the page.
+const vocab = D.vocab;
 const query = `PREFIX tb:   <${vocab}>
 PREFIX wdt:  <http://www.wikidata.org/prop/direct/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -39,7 +35,7 @@ const site = new URL(page(lang, "dataset.html"), Astro.site).href;
 const ld = {
   "@context": "https://schema.org", "@type": "Dataset",
   name: lang === "ja" ? "RailClass: 世界の鉄道車両の形式" : "RailClass: railway vehicle classes of the world",
-  description: fill(T.lead), url: site, sameAs: D.uriSpace.replace(/rdf\/$/, "dataset"),
+  description: fill(T.lead), url: site, sameAs: D.dataset,
   license: "https://creativecommons.org/publicdomain/zero/1.0/", dateModified: D.modified, inLanguage: ["ja", "en"],
   creator: { "@type": "Person", name: lang === "ja" ? "中村 覚" : "Satoru Nakamura" },
   isBasedOn: "https://www.wikidata.org/",
@@ -77,8 +73,7 @@ const ld = {
   <section aria-labelledby="uri-h">
     <h2 id="uri-h">{T.uriTitle}</h2>
     {T.uri.map(p => <p>{uriText(p)}</p>)}
-    {moved && <p class="moved">{T.uriMoved.replace("{old}", uriBase).replace("{site}", D.site)}</p>}
-    <p class="ex">{T.examples}: {examples.map((u, i) => <>{i > 0 && " · "}<a href={at(u)}><code>{u}</code></a></>)}</p>
+    <p class="ex">{T.examples}: {examples.map((u, i) => <>{i > 0 && " · "}<a href={u}><code>{u}</code></a></>)}</p>
   </section>
 
   <section aria-labelledby="sparql-h">

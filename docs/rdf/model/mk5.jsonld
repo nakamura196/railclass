@@ -1,43 +1,30 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.8553"
-      },
-      "rdfs:label": "blue",
-      "schema:color": "#0056B8",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5",
+      "@id": "https://w3id.org/railclass/model/mk5",
       "@type": "schema:3DModel",
       "galleryGroup": "skytrain",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery"
+        "@id": "https://w3id.org/railclass/model/mk5#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/tb-skytrain-mk5"
+        "@id": "https://w3id.org/railclass/tb-skytrain-mk5"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/mk5.glb"
+        "@id": "https://railclass.ldas.jp/models/mk5.glb"
       },
       "schema:depth": {
         "@id": "_:mk5-depth"
@@ -58,13 +45,13 @@
         "@value": "Mark V"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/mk5/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/mk5/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/mk5.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/mk5.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#mk5"
+        "@id": "https://railclass.ldas.jp/view.html#mk5"
       },
       "schema:width": {
         "@id": "_:mk5-width"
@@ -98,27 +85,14 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1257"
-      },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#livery",
+      "@id": "https://w3id.org/railclass/model/mk5#livery",
       "@type": "Livery",
       "colorSample": [
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color1"
+          "@id": "https://w3id.org/railclass/model/mk5#color1"
         },
         {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/mk5#color2"
+          "@id": "https://w3id.org/railclass/model/mk5#color2"
         }
       ],
       "dcterms:source": {
@@ -140,6 +114,32 @@
       ],
       "wdt:P462": {
         "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/mk5#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.8553"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#0056B8",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/mk5#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1257"
+      },
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
       }
     }
   ]

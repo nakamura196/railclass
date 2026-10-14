@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:lu1973 a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/lu1973#livery> ;
     schema:about cls:Q1814255 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/lu1973.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/lu1973.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.6 ] ;
@@ -23,68 +21,70 @@ mdl:lu1973 a schema:3DModel ;
             schema:value 39.6 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "ロンドン地下鉄1973形"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/lu1973/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/lu1973.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#lu1973> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/lu1973/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/lu1973.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#lu1973> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/lu1973#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lu1973#color1> a tb:ColorSample ;
     rdfs:label "lwhite" ;
     wdt:P462 wd:Q23444 ;
-    tb:areaShare 0.6894 ;
-    schema:color "#ECEAE2" .
+    schema:color "#ECEAE2" ;
+    tb:areaShare 0.6894 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lu1973#color2> a tb:ColorSample ;
     rdfs:label "roof" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.1303 ;
-    schema:color "#B0B0AA" .
+    schema:color "#B0B0AA" ;
+    tb:areaShare 0.1303 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lu1973#color3> a tb:ColorSample ;
     rdfs:label "lured" ;
     wdt:P462 wd:Q3142 ;
-    tb:areaShare 0.0734 ;
-    schema:color "#DC241F" .
+    schema:color "#DC241F" ;
+    tb:areaShare 0.0734 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lu1973#color4> a tb:ColorSample ;
     rdfs:label "lublue" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.0466 ;
-    schema:color "#1028A0" .
+    schema:color "#1028A0" ;
+    tb:areaShare 0.0466 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lu1973#color5> a tb:ColorSample ;
     rdfs:label "black" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0315 ;
-    schema:color "#14161A" .
+    schema:color "#14161A" ;
+    tb:areaShare 0.0315 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color6> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lu1973#color6> a tb:ColorSample ;
     rdfs:label "screen" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0149 ;
-    schema:color "#6E7A84" .
+    schema:color "#6E7A84" ;
+    tb:areaShare 0.0149 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color7> a tb:ColorSample ;
+<https://w3id.org/railclass/model/lu1973#color7> a tb:ColorSample ;
     rdfs:label "surround" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0112 ;
-    schema:color "#3C3F42" .
+    schema:color "#3C3F42" ;
+    tb:areaShare 0.0112 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/lu1973#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/lu1973#livery> a tb:Livery ;
     rdfs:label "London Underground corporate livery (red cab end and doors, white sides, blue skirt)"@en,
         "ロンドン地下鉄の塗装（赤い運転室の端と扉、白い側面、青い裾）"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/lu1973/lu_lu1973.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q1088,
         wd:Q23444,
         wd:Q3142 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color5>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color6>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/lu1973#color7> ;
+    tb:colorSample <https://w3id.org/railclass/model/lu1973#color1>,
+        <https://w3id.org/railclass/model/lu1973#color2>,
+        <https://w3id.org/railclass/model/lu1973#color3>,
+        <https://w3id.org/railclass/model/lu1973#color4>,
+        <https://w3id.org/railclass/model/lu1973#color5>,
+        <https://w3id.org/railclass/model/lu1973#color6>,
+        <https://w3id.org/railclass/model/lu1973#color7> ;
     tb:liveryOf wd:Q682520 .
 

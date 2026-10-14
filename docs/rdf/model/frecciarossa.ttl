@@ -1,18 +1,16 @@
-@prefix cls: <https://nakamura196.github.io/train-bodies/rdf/class/> .
+@prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix mdl: <https://nakamura196.github.io/train-bodies/rdf/model/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix tb: <https://nakamura196.github.io/train-bodies/vocab#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mdl:frecciarossa a schema:3DModel ;
-    tb:galleryGroup "world" ;
-    tb:livery <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> ;
     schema:about cls:Q370895 ;
-    schema:contentUrl <https://nakamura196.github.io/train-bodies/models/frecciarossa.glb> ;
+    schema:contentUrl <https://railclass.ldas.jp/models/frecciarossa.glb> ;
     schema:depth [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
             schema:value 149.9 ] ;
@@ -23,60 +21,62 @@ mdl:frecciarossa a schema:3DModel ;
             schema:value 38.0 ] ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "フレッチャロッサ 1000"@ja ;
-    schema:subjectOf <https://nakamura196.github.io/train-bodies/iiif/frecciarossa/manifest.json> ;
-    schema:thumbnailUrl <https://nakamura196.github.io/train-bodies/thumbs/frecciarossa.jpg> ;
-    schema:url <https://nakamura196.github.io/train-bodies/view.html#frecciarossa> ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/frecciarossa/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/frecciarossa.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#frecciarossa> ;
     schema:width [ a schema:QuantitativeValue ;
             schema:unitCode "MMT" ;
-            schema:value 40.0 ] .
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/frecciarossa#livery> .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color1> a tb:ColorSample ;
+<https://w3id.org/railclass/model/frecciarossa#color1> a tb:ColorSample ;
     rdfs:label "body" ;
     wdt:P462 wd:Q3142 ;
-    tb:areaShare 0.7786 ;
-    schema:color "#D41E2A" .
+    schema:color "#D41E2A" ;
+    tb:areaShare 0.7786 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color2> a tb:ColorSample ;
+<https://w3id.org/railclass/model/frecciarossa#color2> a tb:ColorSample ;
     rdfs:label "silver" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.1062 ;
-    schema:color "#C8CCD0" .
+    schema:color "#C8CCD0" ;
+    tb:areaShare 0.1062 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color3> a tb:ColorSample ;
+<https://w3id.org/railclass/model/frecciarossa#color3> a tb:ColorSample ;
     rdfs:label "black" ;
     wdt:P462 wd:Q23445 ;
-    tb:areaShare 0.0441 ;
-    schema:color "#14161A" .
+    schema:color "#14161A" ;
+    tb:areaShare 0.0441 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color4> a tb:ColorSample ;
+<https://w3id.org/railclass/model/frecciarossa#color4> a tb:ColorSample ;
     rdfs:label "band" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0328 ;
-    schema:color "#2C3038" .
+    schema:color "#2C3038" ;
+    tb:areaShare 0.0328 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color5> a tb:ColorSample ;
+<https://w3id.org/railclass/model/frecciarossa#color5> a tb:ColorSample ;
     rdfs:label "screen" ;
     wdt:P462 wd:Q1088 ;
-    tb:areaShare 0.0300 ;
-    schema:color "#263048" .
+    schema:color "#263048" ;
+    tb:areaShare 0.0300 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color6> a tb:ColorSample ;
+<https://w3id.org/railclass/model/frecciarossa#color6> a tb:ColorSample ;
     rdfs:label "grey" ;
     wdt:P462 wd:Q42519 ;
-    tb:areaShare 0.0072 ;
-    schema:color "#5A6066" .
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0072 .
 
-<https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#livery> a tb:Livery ;
+<https://w3id.org/railclass/model/frecciarossa#livery> a tb:Livery ;
     rdfs:label "Trenitalia Frecciarossa livery (red to the bottom, from 2022)"@en,
         "Trenitalia フレッチャロッサの塗装（下まで赤、2022年から）"@ja ;
     dcterms:source "Colours taken automatically from the face materials of skytrain/out/frecciarossa/trenitalia_frecciarossa.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
     wdt:P462 wd:Q1088,
         wd:Q3142 ;
-    tb:colorSample <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color1>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color2>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color3>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color4>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color5>,
-        <https://nakamura196.github.io/train-bodies/rdf/model/frecciarossa#color6> ;
+    tb:colorSample <https://w3id.org/railclass/model/frecciarossa#color1>,
+        <https://w3id.org/railclass/model/frecciarossa#color2>,
+        <https://w3id.org/railclass/model/frecciarossa#color3>,
+        <https://w3id.org/railclass/model/frecciarossa#color4>,
+        <https://w3id.org/railclass/model/frecciarossa#color5>,
+        <https://w3id.org/railclass/model/frecciarossa#color6> ;
     tb:liveryOf wd:Q286650 .
 

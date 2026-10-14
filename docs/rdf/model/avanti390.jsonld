@@ -1,20 +1,20 @@
 {
   "@context": {
-    "@vocab": "https://nakamura196.github.io/train-bodies/vocab#",
+    "@vocab": "https://w3id.org/railclass/vocab#",
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "tb": "https://nakamura196.github.io/train-bodies/vocab#",
+    "tb": "https://w3id.org/railclass/vocab#",
     "wd": "http://www.wikidata.org/entity/",
     "wdt": "http://www.wikidata.org/prop/direct/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color3",
+      "@id": "https://w3id.org/railclass/model/avanti390#color3",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -27,20 +27,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.6010"
-      },
-      "rdfs:label": "teal",
-      "schema:color": "#1F4A5A",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color7",
+      "@id": "https://w3id.org/railclass/model/avanti390#color7",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -53,20 +40,68 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color4",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0597"
+      "@id": "https://w3id.org/railclass/model/avanti390#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/avanti390#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/avanti390#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/avanti390#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/avanti390#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/avanti390#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/avanti390#color6"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/avanti390#color7"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/avanti390#color8"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/avanti390#color9"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/avanti390/awc_avanti390.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
       },
-      "rdfs:label": "cap",
-      "schema:color": "#1C1E22",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
+      "liveryOf": {
+        "@id": "wd:Q68441695"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Avanti West Coast livery (teal with a yellow nose, 2019-)"
+        },
+        {
+          "@language": "ja",
+          "@value": "アヴァンティ・ウェスト・コーストの塗装（青緑に黄色の鼻、2019 年から）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q1088"
+        },
+        {
+          "@id": "wd:Q39338"
+        },
+        {
+          "@id": "wd:Q943"
+        }
+      ]
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color6",
+      "@id": "https://w3id.org/railclass/model/avanti390#color6",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -79,17 +114,69 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390",
+      "@id": "https://w3id.org/railclass/model/avanti390#color9",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0123"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#4E5E6A",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/avanti390#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.6010"
+      },
+      "rdfs:label": "teal",
+      "schema:color": "#1F4A5A",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/avanti390#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0597"
+      },
+      "rdfs:label": "cap",
+      "schema:color": "#1C1E22",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/avanti390#color8",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0175"
+      },
+      "rdfs:label": "yellow",
+      "schema:color": "#F2BE00",
+      "wdt:P462": {
+        "@id": "wd:Q943"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/avanti390",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
       "livery": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#livery"
+        "@id": "https://w3id.org/railclass/model/avanti390#livery"
       },
       "schema:about": {
-        "@id": "https://nakamura196.github.io/train-bodies/rdf/class/Q681896"
+        "@id": "https://w3id.org/railclass/Q681896"
       },
       "schema:contentUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/models/avanti390.glb"
+        "@id": "https://railclass.ldas.jp/models/avanti390.glb"
       },
       "schema:depth": {
         "@id": "_:avanti390-depth"
@@ -110,13 +197,13 @@
         "@value": "アヴァンティ・ウェスト・コースト 390形ペンドリーノ"
       },
       "schema:subjectOf": {
-        "@id": "https://nakamura196.github.io/train-bodies/iiif/avanti390/manifest.json"
+        "@id": "https://railclass.ldas.jp/iiif/avanti390/manifest.json"
       },
       "schema:thumbnailUrl": {
-        "@id": "https://nakamura196.github.io/train-bodies/thumbs/avanti390.jpg"
+        "@id": "https://railclass.ldas.jp/thumbs/avanti390.jpg"
       },
       "schema:url": {
-        "@id": "https://nakamura196.github.io/train-bodies/view.html#avanti390"
+        "@id": "https://railclass.ldas.jp/view.html#avanti390"
       },
       "schema:width": {
         "@id": "_:avanti390-width"
@@ -150,7 +237,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color2",
+      "@id": "https://w3id.org/railclass/model/avanti390#color2",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -163,33 +250,7 @@
       }
     },
     {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color9",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0123"
-      },
-      "rdfs:label": "screen",
-      "schema:color": "#4E5E6A",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color8",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0175"
-      },
-      "rdfs:label": "yellow",
-      "schema:color": "#F2BE00",
-      "wdt:P462": {
-        "@id": "wd:Q943"
-      }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color5",
+      "@id": "https://w3id.org/railclass/model/avanti390#color5",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
@@ -200,67 +261,6 @@
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
-    },
-    {
-      "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color1"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color2"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color3"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color4"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color5"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color6"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color7"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color8"
-        },
-        {
-          "@id": "https://nakamura196.github.io/train-bodies/rdf/model/avanti390#color9"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/avanti390/awc_avanti390.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q68441695"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Avanti West Coast livery (teal with a yellow nose, 2019-)"
-        },
-        {
-          "@language": "ja",
-          "@value": "アヴァンティ・ウェスト・コーストの塗装（青緑に黄色の鼻、2019 年から）"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q1088"
-        },
-        {
-          "@id": "wd:Q39338"
-        },
-        {
-          "@id": "wd:Q943"
-        }
-      ]
     }
   ]
 }

@@ -32,7 +32,7 @@ DATA = opt("--data", "data")
 FACETS = opt("--facets", "docs/rdf/facets.json")
 OUT = opt("--out", "docs/search")
 RDF = opt("--rdf", "docs/rdf/all.jsonld")
-BASE = "https://nakamura196.github.io/train-bodies/rdf/"
+BASE = "https://w3id.org/railclass/"
 FP = "http://commons.wikimedia.org/wiki/Special:FilePath/"
 THUMB = "https://thumb.wikimedia.org/wikipedia/commons/thumb/"   # search.js builds THUMB + h + "/" + f + "/330px-" + f
 # The type facet (kind) has ~700 values, many used once. They are folded into these groups, shown as a facet of their
@@ -75,8 +75,9 @@ def load_rdf():
         v = v["@id"] if isinstance(v, dict) and "@id" in v else v["@value"] if isinstance(v, dict) else v
         v = expand(v) if isinstance(v, str) and ":" in v and not v.startswith("http") else v
         if isinstance(v, str):
-            for pre in ("http://www.wikidata.org/entity/", BASE + "class/", BASE + "model/"):
-                if v.startswith(pre): return v[len(pre):]
+            if v.startswith("http://www.wikidata.org/entity/"): return v[31:]
+            for pre in (BASE + "model/", BASE):   # model/ first: a class is right under BASE (not vocab#…)
+                if v.startswith(pre) and not any(ch in v[len(pre):] for ch in "/#"): return v[len(pre):]
         return v
     def many(v):
         return v if isinstance(v, list) else [v]

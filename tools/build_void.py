@@ -14,14 +14,13 @@ from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCAT, DCTERMS, FOAF, RDF, RDFS, SKOS, XSD
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_rdf import BASE, CC0, CC_BY, CLS, DOCS as RDF_DIR, MDL, SCHEME, SDO, TB, WD, WDT
+from build_rdf import BASE, SITE, CC0, CC_BY, CLS, DOCS as RDF_DIR, MDL, SCHEME, SDO, TB, WD, WDT
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(HERE, "docs")
-SITE = "https://railclass.ldas.jp/"   # where the files are served; the URIs (BASE) move to w3id.org later
 VOID = Namespace("http://rdfs.org/ns/void#")
 ODBL = URIRef("https://opendatacommons.org/licenses/odbl/1-0/")
-DS = URIRef(BASE + "dataset")
+DS = URIRef(BASE + "dataset")   # w3id has no rule for dataset yet (ids/railclass/.htaccess); the file is rdf/void.ttl
 COMMONS = "http://commons.wikimedia.org/wiki/Special:FilePath/"
 
 
@@ -108,7 +107,7 @@ def build(n, modified):
     for kw in ("railway", "rolling stock", "vehicle class", "Wikidata", "3D model", "鉄道車両", "形式"):
         g.add((DS, DCAT.keyword, Literal(kw)))
     # VoID: what is in the RDF, and how to get it
-    g.add((DS, VOID.uriSpace, Literal(BASE + "rdf/")))
+    g.add((DS, VOID.uriSpace, Literal(BASE)))
     g.add((DS, VOID.rootResource, SCHEME))
     for r in (CLS.Q696668, CLS.Q115612330, CLS["tb-skytrain-mk2"], MDL.icet_411):
         g.add((DS, VOID.exampleResource, r))
@@ -116,8 +115,9 @@ def build(n, modified):
         g.add((DS, VOID.dataDump, URIRef(SITE + next(f[1] for f in FILES if f[0] == k))))
     g.add((DS, RDFS.comment, Literal(
         "There is no SPARQL endpoint. Load the dump (void:dataDump) into a triple store, or read single resources: "
-        "each URI <…/rdf/class/{id}> has a human page and the files <…/rdf/class/{id}.ttl> and .jsonld next to it "
-        "(GitHub Pages does no content negotiation).", lang="en")))
+        "each URI (a class <https://w3id.org/railclass/{id}>, a model <https://w3id.org/railclass/model/{id}>) is sent by "
+        "w3id.org to its Turtle file, JSON-LD file or human page by the Accept header (text/turtle, application/ld+json, "
+        "anything else).", lang="en")))
     g.add((DS, VOID.feature, URIRef("http://www.w3.org/ns/formats/Turtle")))
     g.add((DS, VOID.feature, URIRef("http://www.w3.org/ns/formats/JSON-LD")))
     for v in n["vocabularies"]:
@@ -163,7 +163,7 @@ def main():
                 context={"void": str(VOID), "dcat": str(DCAT), "dcterms": str(DCTERMS), "foaf": str(FOAF), "skos": str(SKOS), "xsd": str(XSD)})
     files = [{"key": k, "path": rel, "type": mt, "bytes": size(rel)} for k, rel, mt, *_ in FILES]
     out = {k: v for k, v in n.items() if k not in ("topProperties", "typeCounts", "vocabularies")}
-    out.update(modified=modified, uriSpace=BASE + "rdf/", site=SITE, files=files,
+    out.update(modified=modified, uriSpace=BASE, classUri=str(CLS), modelUri=str(MDL), vocab=str(TB), dataset=str(DS), site=SITE, files=files,
                void=[{"key": "voidTtl", "path": "rdf/void.ttl", "bytes": os.path.getsize(os.path.join(RDF_DIR, "void.ttl"))},
                      {"key": "voidJsonld", "path": "rdf/void.jsonld", "bytes": os.path.getsize(os.path.join(RDF_DIR, "void.jsonld"))}])
     with open(os.path.join(DOCS, "data", "dataset.json"), "w", encoding="utf-8") as f:
