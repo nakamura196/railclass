@@ -14,13 +14,6 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q283928",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Northlander"
-      }
-    },
-    {
       "@id": "https://w3id.org/railclass/Q96106536#line1",
       "@type": "LineUse",
       "dcterms:source": {
@@ -37,6 +30,13 @@
       "useStatus": "current"
     },
     {
+      "@id": "wd:Q283928",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Northlander"
+      }
+    },
+    {
       "@id": "https://w3id.org/railclass/Q96106536",
       "@type": [
         "VehicleClass",
@@ -45,7 +45,7 @@
       "foaf:depiction": {
         "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/San%20Joaquin%20train.jpg"
       },
-      "has3DModel": false,
+      "has3DModel": true,
       "lineUse": {
         "@id": "https://w3id.org/railclass/Q96106536#line1"
       },
@@ -70,6 +70,9 @@
           "@value": "シーメンス・ベンチャー"
         }
       ],
+      "schema:subjectOf": {
+        "@id": "https://w3id.org/railclass/model/venture"
+      },
       "skos:exactMatch": {
         "@id": "wd:Q96106536"
       },
@@ -94,13 +97,13 @@
       },
       "wdt:P137": [
         {
+          "@id": "wd:Q23239"
+        },
+        {
           "@id": "wd:Q876720"
         },
         {
           "@id": "wd:Q27012668"
-        },
-        {
-          "@id": "wd:Q23239"
         }
       ],
       "wdt:P17": [

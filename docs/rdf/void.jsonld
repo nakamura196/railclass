@@ -9,6 +9,188 @@
   },
   "@graph": [
     {
+      "@id": "https://w3id.org/railclass/dataset#vocab",
+      "@type": "dcat:Distribution",
+      "dcat:byteSize": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "5223"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://railclass.ldas.jp/rdf/vocab.ttl"
+      },
+      "dcat:mediaType": "text/turtle",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "dcterms:title": [
+        {
+          "@language": "en",
+          "@value": "Terms of our own (tb:)"
+        },
+        {
+          "@language": "ja",
+          "@value": "独自の語彙（tb:）"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/dataset#allJsonld",
+      "@type": "dcat:Distribution",
+      "dcat:byteSize": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "18958636"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://railclass.ldas.jp/rdf/all.jsonld"
+      },
+      "dcat:mediaType": "application/ld+json",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "dcterms:title": [
+        {
+          "@language": "en",
+          "@value": "All classes and models (JSON-LD)"
+        },
+        {
+          "@language": "ja",
+          "@value": "全形式と 3D モデル（JSON-LD）"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/dataset#allTtl",
+      "@type": "dcat:Distribution",
+      "dcat:byteSize": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "9148484"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://railclass.ldas.jp/rdf/all.ttl"
+      },
+      "dcat:mediaType": "text/turtle",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "dcterms:title": [
+        {
+          "@language": "en",
+          "@value": "All classes and models (Turtle)"
+        },
+        {
+          "@language": "ja",
+          "@value": "全形式と 3D モデル（Turtle）"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/dataset#links-wikidata",
+      "@type": "void:Linkset",
+      "void:linkPredicate": {
+        "@id": "skos:exactMatch"
+      },
+      "void:objectsTarget": {
+        "@id": "http://www.wikidata.org/"
+      },
+      "void:subjectsTarget": {
+        "@id": "https://w3id.org/railclass/dataset"
+      },
+      "void:triples": 14326
+    },
+    {
+      "@id": "https://w3id.org/railclass/dataset#lines",
+      "@type": "dcat:Distribution",
+      "dcat:byteSize": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1111463"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://railclass.ldas.jp/lines/_all.geojson"
+      },
+      "dcat:mediaType": "application/geo+json",
+      "dcterms:license": {
+        "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
+      },
+      "dcterms:rights": {
+        "@language": "en",
+        "@value": "© OpenStreetMap contributors, ODbL. Only the line IDs (Wikidata items) are in the RDF."
+      },
+      "dcterms:title": [
+        {
+          "@language": "en",
+          "@value": "Line shapes from OpenStreetMap (GeoJSON, one file per line)"
+        },
+        {
+          "@language": "ja",
+          "@value": "路線の線（OpenStreetMap、GeoJSON、路線ごとのファイル）"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/dataset#links-commons",
+      "@type": "void:Linkset",
+      "void:linkPredicate": {
+        "@id": "foaf:depiction"
+      },
+      "void:objectsTarget": {
+        "@id": "http://commons.wikimedia.org/"
+      },
+      "void:subjectsTarget": {
+        "@id": "https://w3id.org/railclass/dataset"
+      },
+      "void:triples": 10402
+    },
+    {
+      "@id": "https://w3id.org/railclass/dataset#models",
+      "@type": "dcat:Distribution",
+      "dcat:byteSize": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "36909"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://railclass.ldas.jp/data/models.json"
+      },
+      "dcat:mediaType": "application/json",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "dcterms:title": [
+        {
+          "@language": "en",
+          "@value": "List of the 3D models (JSON)"
+        },
+        {
+          "@language": "ja",
+          "@value": "3D モデルの一覧（JSON）"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/dataset#iiif",
+      "@type": "dcat:Distribution",
+      "dcat:byteSize": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "30261"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://railclass.ldas.jp/iiif/collection.json"
+      },
+      "dcat:mediaType": "application/ld+json",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "dcterms:title": [
+        {
+          "@language": "en",
+          "@value": "IIIF Presentation 4.0 Collection of the 3D models"
+        },
+        {
+          "@language": "ja",
+          "@value": "3D モデルの IIIF Collection（Presentation 4.0）"
+        }
+      ]
+    },
+    {
       "@id": "https://w3id.org/railclass/dataset",
       "@type": [
         "void:Dataset",
@@ -50,16 +232,16 @@
         "@id": "https://railclass.ldas.jp/dataset.html"
       },
       "dcterms:creator": {
-        "@id": "_:N0b3e2861ef7a4d35a61aa4ea4557225c"
+        "@id": "_:N7c6d5a2f945c4b438ec676e691f141e7"
       },
       "dcterms:description": [
         {
           "@language": "en",
-          "@value": "14,341 railway vehicle classes outside Japan, taken from Wikidata and linked to it (skos:exactMatch), with operator, manufacturer and other values as Wikidata IRIs, photos for 10,402 classes (Wikimedia Commons), the lines 934 classes run on, and 75 3D-printed vehicle bodies with their liveries. No SPARQL endpoint: every resource is a static file (Turtle and JSON-LD), and the whole dataset is in one dump file."
+          "@value": "14,341 railway vehicle classes outside Japan, taken from Wikidata and linked to it (skos:exactMatch), with operator, manufacturer and other values as Wikidata IRIs, photos for 10,402 classes (Wikimedia Commons), the lines 934 classes run on, and 76 3D-printed vehicle bodies with their liveries. No SPARQL endpoint: every resource is a static file (Turtle and JSON-LD), and the whole dataset is in one dump file."
         },
         {
           "@language": "ja",
-          "@value": "日本を除く世界の鉄道車両の形式 14,341 件。Wikidata から取り出し、skos:exactMatch で結んでいる。運行者・製造者などの値は Wikidata の IRI のまま持つ。写真 10,402 形式（Wikimedia Commons）、走る路線 934 形式、3D プリントで作った車体 75 件とその塗装を含む。SPARQL エンドポイントは無い。資源はすべて静的なファイル（Turtle と JSON-LD）で、全体は一括ファイル 1 つにまとめてある。"
+          "@value": "日本を除く世界の鉄道車両の形式 14,341 件。Wikidata から取り出し、skos:exactMatch で結んでいる。運行者・製造者などの値は Wikidata の IRI のまま持つ。写真 10,402 形式（Wikimedia Commons）、走る路線 934 形式、3D プリントで作った車体 76 件とその塗装を含む。SPARQL エンドポイントは無い。資源はすべて静的なファイル（Turtle と JSON-LD）で、全体は一括ファイル 1 つにまとめてある。"
         }
       ],
       "dcterms:isReferencedBy": {
@@ -73,7 +255,7 @@
         "@value": "2026-10-13"
       },
       "dcterms:publisher": {
-        "@id": "_:N0b3e2861ef7a4d35a61aa4ea4557225c"
+        "@id": "_:N7c6d5a2f945c4b438ec676e691f141e7"
       },
       "dcterms:rights": {
         "@language": "en",
@@ -101,34 +283,34 @@
       },
       "void:classPartition": [
         {
-          "@id": "_:N942cb0c737ea44d69ad86bba70f68d59"
+          "@id": "_:N1e5a205f9a4940b88a5912d7a5b6367e"
         },
         {
-          "@id": "_:N7a2b04b127b54d1694cc902bd51d6f5a"
+          "@id": "_:N5f0867becedc4647b07f55bc99242f52"
         },
         {
-          "@id": "_:Nccf209bbd5ca4843a9c30b55ffde9036"
+          "@id": "_:N432cd60b02e342998a2ad5f84f78931e"
         },
         {
-          "@id": "_:Nca428581ae424b54a081b8cfce11e448"
+          "@id": "_:Nf0b6f1a3aacf44c78de3091071339751"
         },
         {
-          "@id": "_:N10919e188bd9403d9bfea2096ed4c76c"
+          "@id": "_:Nc42a4a6e0f624df1aeea0dad643b4ed1"
         },
         {
-          "@id": "_:Nd3e003aab5e240e8ab5f958a9518c305"
+          "@id": "_:N93cef5eda5f64d30b7f0cca53c0270f7"
         },
         {
-          "@id": "_:Ne9797c399c6246189b6ddaf079cf1a3a"
+          "@id": "_:Nef4ae03e1fcb4f998703f009f11b2a21"
         },
         {
-          "@id": "_:Nb1614bc70ca947b6a2d071973d5bf9f5"
+          "@id": "_:Na1a0e261dbce49c99783fd24567092c3"
         },
         {
-          "@id": "_:Nc81875bad8184ff88e17b414ae2d9689"
+          "@id": "_:N197202fb8a944ab4b41e0748d0004077"
         },
         {
-          "@id": "_:N3dba18e287e94b58a0997dddbeefa27f"
+          "@id": "_:Nb2410d3da05c49908a4bafdbc1a5997e"
         }
       ],
       "void:dataDump": [
@@ -139,8 +321,8 @@
           "@id": "https://railclass.ldas.jp/rdf/all.jsonld"
         }
       ],
-      "void:distinctSubjects": 17535,
-      "void:entities": 17535,
+      "void:distinctSubjects": 17544,
+      "void:entities": 17544,
       "void:exampleResource": [
         {
           "@id": "https://w3id.org/railclass/Q696668"
@@ -166,169 +348,169 @@
       "void:properties": 55,
       "void:propertyPartition": [
         {
-          "@id": "_:N3301c815002d4677b49f1ca50cf307d4"
+          "@id": "_:N8b638445b3fa4279baaa127bb8bcbdf7"
         },
         {
-          "@id": "_:N778ddada913448c6b7340039cb5b7c3a"
+          "@id": "_:Ndb903bbedf954f3cb72ed055152937fb"
         },
         {
-          "@id": "_:N721daccd503645f9a21da19daa6a1a16"
+          "@id": "_:Ne54d6c540aea4b0fa12e20dcba62ff22"
         },
         {
-          "@id": "_:N672c277f091347b8a8aa7139acf3bf82"
+          "@id": "_:Nd3c8f29f1ced4535926882151f1a1360"
         },
         {
-          "@id": "_:N9f595d7473744348baeab74e3fbb855b"
+          "@id": "_:N8885c409edc84e219e5e3191e92e5244"
         },
         {
-          "@id": "_:N666c4ca6285543bebfdaab15a7757a6c"
+          "@id": "_:N1073aeb8877e46848dd50379586c6d83"
         },
         {
-          "@id": "_:Nb5158d0022cf4a81aab64310600797d9"
+          "@id": "_:N0a03a9a240314387b97188c35283cfa5"
         },
         {
-          "@id": "_:N58ae2a0d9b1145d0a3672d28b7f4fd7a"
+          "@id": "_:N6784d263c9f947048a173ed0ac6b2575"
         },
         {
-          "@id": "_:N40ea00fd47c445c69694472bbfde922c"
+          "@id": "_:Ndd516b724a18418dbf87a8adf8e7f540"
         },
         {
-          "@id": "_:N33ea73ae21b74495a2d572c21ba54872"
+          "@id": "_:N5006b440e79c49a98d76a30dd68419aa"
         },
         {
-          "@id": "_:N1c05fea394e649d9888a409d96a8bf38"
+          "@id": "_:N2fa713723aca4b6ea2763f8334e3c424"
         },
         {
-          "@id": "_:Nd0af905bd83e48799e11b85e8e50bd2e"
+          "@id": "_:N30866f46e211479ab6f31899ac3fe051"
         },
         {
-          "@id": "_:N8b6b8fd96cce48d98c60afb4b84de1b8"
+          "@id": "_:N48e58b553a684d67887a8ecb5e33b082"
         },
         {
-          "@id": "_:N02be2e7cceaf478c8e8ad1007f2c1599"
+          "@id": "_:Nc64b98f2c79e4f999f6c6bf8e0bdba74"
         },
         {
-          "@id": "_:N0a8df689f1a546a5bdff9c0b2fc47042"
+          "@id": "_:N76a365f4b86c40a7bde816a86ad4a917"
         },
         {
-          "@id": "_:Nc18fc19f87764ee595b296f1740364da"
+          "@id": "_:Nfa6d3d4d03e3461980a70eef8e0dfe0d"
         },
         {
-          "@id": "_:N29fdaab4f2a74e158f7f9cae755ccb2f"
+          "@id": "_:N5c8075faa16745488d1f52bdabce2018"
         },
         {
-          "@id": "_:N85ed67a7fef745a8a1b427b46d49ed83"
+          "@id": "_:Naa0316a05e674042963d6dd83dbba05b"
         },
         {
-          "@id": "_:N8b8508647b834b9092344a6975a5321c"
+          "@id": "_:Ne32b37a7f8b54b7d9cba3eda71b3ce7b"
         },
         {
-          "@id": "_:N0661827d19fa48c7a8a003a80f697291"
+          "@id": "_:Ne09e7b39ca9348c48e320f50b08e8675"
         },
         {
-          "@id": "_:Nf0b09e3f1213445fb7ad4b2e5b383bb2"
+          "@id": "_:N413b9f02e68b4e828cdefc8ccd0cf6b4"
         },
         {
-          "@id": "_:N1688717e06644bfdb901b76d16ad05ee"
+          "@id": "_:N6570d7617c434ea7a5fdb73ca1dfc262"
         },
         {
-          "@id": "_:Nd6d7a51ca4b940a6a1d687f347ea05bd"
+          "@id": "_:N9fb1331bb5dd4444a0966b398df896bc"
         },
         {
-          "@id": "_:Nf773a9449c5a4681a0a989ff387315ec"
+          "@id": "_:N013b6c115bbb42389a053bdaff65e224"
         },
         {
-          "@id": "_:N3b8a7aabe0514257a5e79cd7f84f2c5b"
+          "@id": "_:N4ab601bac75c4226bde7e31ebbbfbed2"
         },
         {
-          "@id": "_:N2d20c78c3c554925862aca1e624c85f6"
+          "@id": "_:N75583f8eba434ec5988c1b55c29c8f7e"
         },
         {
-          "@id": "_:N2a873366542940cd8f638c0ec3adcfb1"
+          "@id": "_:N7d9eb652e3ec4f579b8a427f32d8cb4e"
         },
         {
-          "@id": "_:N36d096a188f2439aaa2fba4d21f39ba1"
+          "@id": "_:N7a9bfb8a15724809b372bdecc703c1ad"
         },
         {
-          "@id": "_:N1bbe1d62a1e547c29d8ffbcc3716c82f"
+          "@id": "_:N7c1d105a1b5a4e0782620c762fafc7ca"
         },
         {
-          "@id": "_:N27b4bc2c1ed64f34a8d64907f1e9bcd3"
+          "@id": "_:Nb569bfa4ae8a4bf199550ff75a7fc2f3"
         },
         {
-          "@id": "_:Nab9370098b184ddbb1b7700abf31f5bc"
+          "@id": "_:Ne849780e60f5430fa9c12cea3d0479b6"
         },
         {
-          "@id": "_:N783d8c20804243b29e94dbbadda2f085"
+          "@id": "_:Nc1fe038a80c44d01b28369db6d1232f2"
         },
         {
-          "@id": "_:Nd83383fdd3834bb38c7ac0c665327a21"
+          "@id": "_:N5fb6791822ec4a01b7452d5ec1c8a7fb"
         },
         {
-          "@id": "_:N4325b0f8e52b446a85b31d3536374b28"
+          "@id": "_:Nf7ef06fa079242e3b8d5be92f56e0dd6"
         },
         {
-          "@id": "_:N69eb6d03492640449283c7cd5ace140e"
+          "@id": "_:Ne23844421d764f3cb10068c566910b1e"
         },
         {
-          "@id": "_:N76b831dd003e42a2a3a462805f7e5a81"
+          "@id": "_:N276dca62dd0840c98b7d177a20474416"
         },
         {
-          "@id": "_:Nea4ce967af2f4716b2227ee3a5267a7f"
+          "@id": "_:N7e646675c3de483daad1b38a37802937"
         },
         {
-          "@id": "_:N437ea48413894254891e5fe5452e723b"
+          "@id": "_:Ne8d33d3b99874e1facc42f86dc90faad"
         },
         {
-          "@id": "_:N0a0393ed99dd4e68a72f2be83295f213"
+          "@id": "_:N63a5af03c7ab4864b4c39b7b571f7003"
         },
         {
-          "@id": "_:N6bba88b509d244beb2f11f92664d7739"
+          "@id": "_:Nb200b59fe092406495836bb2faf6c880"
         },
         {
-          "@id": "_:N5afe024ce3e7419d8b5e4890574f4952"
+          "@id": "_:Nd1393c18c7624b52b899f56804198702"
         },
         {
-          "@id": "_:N04eb670c64674765a429e3476aa06072"
+          "@id": "_:N8d4d09945fae45068a682f6554e087b8"
         },
         {
-          "@id": "_:Na858d08305a24d4ab6c7c7ff6b0852f1"
+          "@id": "_:N053841056de2480fa0c66331b5299bc6"
         },
         {
-          "@id": "_:Nd4365a08d6044397be81a377ea3a7e1a"
+          "@id": "_:N044a59dd53374f47800caf8392d04712"
         },
         {
-          "@id": "_:Nb7fe0917d1e34523ad22ee1aa0d5a78b"
+          "@id": "_:N6c1f32903a3340daba5123a8aeb9a4b7"
         },
         {
-          "@id": "_:N4afcb3ba3bd94b7bba6659fdf55f9351"
+          "@id": "_:Neeb1cd91bbcd42ef8906838e2289e96c"
         },
         {
-          "@id": "_:Neaa7dd8e33014c6a976ec28e70b6b179"
+          "@id": "_:Nce4c15d9f2b44fd9bcadfc1757b1551c"
         },
         {
-          "@id": "_:N379ad3f6dde6470cb795699487b51431"
+          "@id": "_:N32e8023f790c414ea265b541920c3386"
         },
         {
-          "@id": "_:N862ec246de3943edb1d49c07c66b4316"
+          "@id": "_:N74994d68503842d0898dcabf61fa58c0"
         },
         {
-          "@id": "_:Na4c033657f734ad49f229647c431e236"
+          "@id": "_:N98cafd56752e437c8ff752c2305c8b00"
         },
         {
-          "@id": "_:N75a588bc892341308a6d738d18198b73"
+          "@id": "_:N1c1befe1a1804253acaf77a2d627a514"
         },
         {
-          "@id": "_:N4a6d68f595b44ea8ba916b6f08e3cb17"
+          "@id": "_:Nd52a2d17f4604e6a9730ec1a73c998bb"
         },
         {
-          "@id": "_:N411086b9be3d44029e616c60d731f8ac"
+          "@id": "_:Nf5fec89dedaf4743a6d6afcd5b9761fa"
         },
         {
-          "@id": "_:Nab15ec4f18894f349492e734f2359f79"
+          "@id": "_:N3bbb1833d3db43ebbc028370c6b54321"
         },
         {
-          "@id": "_:N309725e75c5d49a09c407043c9470ce8"
+          "@id": "_:Nca785069798c429eab70489ac58ba7da"
         }
       ],
       "void:rootResource": {
@@ -342,7 +524,7 @@
           "@id": "https://w3id.org/railclass/dataset#links-commons"
         }
       ],
-      "void:triples": 255807,
+      "void:triples": 255881,
       "void:uriSpace": "https://w3id.org/railclass/",
       "void:vocabulary": [
         {
@@ -375,7 +557,7 @@
       ]
     },
     {
-      "@id": "_:N0b3e2861ef7a4d35a61aa4ea4557225c",
+      "@id": "_:N7c6d5a2f945c4b438ec676e691f141e7",
       "@type": "foaf:Person",
       "foaf:name": [
         {
@@ -389,484 +571,459 @@
       ]
     },
     {
-      "@id": "_:N942cb0c737ea44d69ad86bba70f68d59",
+      "@id": "_:N1e5a205f9a4940b88a5912d7a5b6367e",
       "void:class": {
         "@id": "skos:Concept"
       },
       "void:entities": 14341
     },
     {
-      "@id": "_:N7a2b04b127b54d1694cc902bd51d6f5a",
+      "@id": "_:N5f0867becedc4647b07f55bc99242f52",
       "void:class": {
         "@id": "https://w3id.org/railclass/vocab#VehicleClass"
       },
       "void:entities": 14341
     },
     {
-      "@id": "_:Nccf209bbd5ca4843a9c30b55ffde9036",
+      "@id": "_:N432cd60b02e342998a2ad5f84f78931e",
       "void:class": {
         "@id": "https://w3id.org/railclass/vocab#LineUse"
       },
       "void:entities": 2501
     },
     {
-      "@id": "_:Nca428581ae424b54a081b8cfce11e448",
+      "@id": "_:Nf0b6f1a3aacf44c78de3091071339751",
       "void:class": {
         "@id": "https://w3id.org/railclass/vocab#ColorSample"
       },
-      "void:entities": 522
+      "void:entities": 529
     },
     {
-      "@id": "_:N10919e188bd9403d9bfea2096ed4c76c",
+      "@id": "_:Nc42a4a6e0f624df1aeea0dad643b4ed1",
       "void:class": {
         "@id": "https://schema.org/QuantitativeValue"
       },
-      "void:entities": 225
+      "void:entities": 228
     },
     {
-      "@id": "_:Nd3e003aab5e240e8ab5f958a9518c305",
+      "@id": "_:N93cef5eda5f64d30b7f0cca53c0270f7",
       "void:class": {
         "@id": "https://schema.org/3DModel"
       },
-      "void:entities": 75
+      "void:entities": 76
     },
     {
-      "@id": "_:Ne9797c399c6246189b6ddaf079cf1a3a",
+      "@id": "_:Nef4ae03e1fcb4f998703f009f11b2a21",
       "void:class": {
         "@id": "https://w3id.org/railclass/vocab#Livery"
       },
-      "void:entities": 75
+      "void:entities": 76
     },
     {
-      "@id": "_:Nb1614bc70ca947b6a2d071973d5bf9f5",
+      "@id": "_:Na1a0e261dbce49c99783fd24567092c3",
       "void:class": {
         "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
       },
       "void:entities": 16
     },
     {
-      "@id": "_:Nc81875bad8184ff88e17b414ae2d9689",
+      "@id": "_:N197202fb8a944ab4b41e0748d0004077",
       "void:class": {
         "@id": "http://www.w3.org/2000/01/rdf-schema#Class"
       },
       "void:entities": 4
     },
     {
-      "@id": "_:N3dba18e287e94b58a0997dddbeefa27f",
+      "@id": "_:Nb2410d3da05c49908a4bafdbc1a5997e",
       "void:class": {
         "@id": "skos:ConceptScheme"
       },
       "void:entities": 1
     },
     {
-      "@id": "_:N3301c815002d4677b49f1ca50cf307d4",
+      "@id": "_:N8b638445b3fa4279baaa127bb8bcbdf7",
       "void:property": {
         "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
       },
-      "void:triples": 32101
+      "void:triples": 32113
     },
     {
-      "@id": "_:N778ddada913448c6b7340039cb5b7c3a",
+      "@id": "_:Ndb903bbedf954f3cb72ed055152937fb",
       "void:property": {
         "@id": "http://www.w3.org/2000/01/rdf-schema#label"
       },
-      "void:triples": 24575
+      "void:triples": 24584
     },
     {
-      "@id": "_:N721daccd503645f9a21da19daa6a1a16",
+      "@id": "_:Ne54d6c540aea4b0fa12e20dcba62ff22",
       "void:property": {
         "@id": "skos:prefLabel"
       },
       "void:triples": 15898
     },
     {
-      "@id": "_:N672c277f091347b8a8aa7139acf3bf82",
+      "@id": "_:Nd3c8f29f1ced4535926882151f1a1360",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P137"
       },
       "void:triples": 15836
     },
     {
-      "@id": "_:N9f595d7473744348baeab74e3fbb855b",
+      "@id": "_:N8885c409edc84e219e5e3191e92e5244",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P176"
       },
       "void:triples": 14886
     },
     {
-      "@id": "_:N666c4ca6285543bebfdaab15a7757a6c",
+      "@id": "_:N1073aeb8877e46848dd50379586c6d83",
       "void:property": {
         "@id": "https://w3id.org/railclass/vocab#has3DModel"
       },
       "void:triples": 14341
     },
     {
-      "@id": "_:Nb5158d0022cf4a81aab64310600797d9",
+      "@id": "_:N0a03a9a240314387b97188c35283cfa5",
       "void:property": {
         "@id": "skos:inScheme"
       },
       "void:triples": 14341
     },
     {
-      "@id": "_:N58ae2a0d9b1145d0a3672d28b7f4fd7a",
+      "@id": "_:N6784d263c9f947048a173ed0ac6b2575",
       "void:property": {
         "@id": "skos:exactMatch"
       },
       "void:triples": 14326
     },
     {
-      "@id": "_:N40ea00fd47c445c69694472bbfde922c",
+      "@id": "_:Ndd516b724a18418dbf87a8adf8e7f540",
       "void:property": {
         "@id": "http://www.w3.org/ns/prov#wasDerivedFrom"
       },
       "void:triples": 14326
     },
     {
-      "@id": "_:N33ea73ae21b74495a2d572c21ba54872",
+      "@id": "_:N5006b440e79c49a98d76a30dd68419aa",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P279"
       },
       "void:triples": 14104
     },
     {
-      "@id": "_:N1c05fea394e649d9888a409d96a8bf38",
+      "@id": "_:N2fa713723aca4b6ea2763f8334e3c424",
       "void:property": {
         "@id": "https://w3id.org/railclass/vocab#operatingCountry"
       },
       "void:triples": 12202
     },
     {
-      "@id": "_:Nd0af905bd83e48799e11b85e8e50bd2e",
+      "@id": "_:N30866f46e211479ab6f31899ac3fe051",
       "void:property": {
         "@id": "foaf:depiction"
       },
       "void:triples": 10402
     },
     {
-      "@id": "_:N8b6b8fd96cce48d98c60afb4b84de1b8",
+      "@id": "_:N48e58b553a684d67887a8ecb5e33b082",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P1064"
       },
       "void:triples": 10071
     },
     {
-      "@id": "_:N02be2e7cceaf478c8e8ad1007f2c1599",
+      "@id": "_:Nc64b98f2c79e4f999f6c6bf8e0bdba74",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P17"
       },
       "void:triples": 8807
     },
     {
-      "@id": "_:N0a8df689f1a546a5bdff9c0b2fc47042",
+      "@id": "_:N76a365f4b86c40a7bde816a86ad4a917",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P2978"
       },
       "void:triples": 7545
     },
     {
-      "@id": "_:Nc18fc19f87764ee595b296f1740364da",
+      "@id": "_:Nfa6d3d4d03e3461980a70eef8e0dfe0d",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P729"
       },
       "void:triples": 4442
     },
     {
-      "@id": "_:N29fdaab4f2a74e158f7f9cae755ccb2f",
+      "@id": "_:N5c8075faa16745488d1f52bdabce2018",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P2052"
       },
       "void:triples": 3842
     },
     {
-      "@id": "_:N85ed67a7fef745a8a1b427b46d49ed83",
+      "@id": "_:Naa0316a05e674042963d6dd83dbba05b",
       "void:property": {
         "@id": "dcterms:source"
       },
-      "void:triples": 2591
+      "void:triples": 2592
     },
     {
-      "@id": "_:N8b8508647b834b9092344a6975a5321c",
-      "void:property": {
-        "@id": "https://w3id.org/railclass/vocab#usedOn"
-      },
-      "void:triples": 2501
-    },
-    {
-      "@id": "_:N0661827d19fa48c7a8a003a80f697291",
-      "void:property": {
-        "@id": "https://w3id.org/railclass/vocab#line"
-      },
-      "void:triples": 2501
-    },
-    {
-      "@id": "_:Nf0b09e3f1213445fb7ad4b2e5b383bb2",
-      "void:property": {
-        "@id": "https://w3id.org/railclass/vocab#useStatus"
-      },
-      "void:triples": 2501
-    },
-    {
-      "@id": "_:N1688717e06644bfdb901b76d16ad05ee",
+      "@id": "_:Ne32b37a7f8b54b7d9cba3eda71b3ce7b",
       "void:property": {
         "@id": "skos:note"
       },
       "void:triples": 2501
     },
     {
-      "@id": "_:Nd6d7a51ca4b940a6a1d687f347ea05bd",
+      "@id": "_:Ne09e7b39ca9348c48e320f50b08e8675",
+      "void:property": {
+        "@id": "https://w3id.org/railclass/vocab#line"
+      },
+      "void:triples": 2501
+    },
+    {
+      "@id": "_:N413b9f02e68b4e828cdefc8ccd0cf6b4",
+      "void:property": {
+        "@id": "https://w3id.org/railclass/vocab#useStatus"
+      },
+      "void:triples": 2501
+    },
+    {
+      "@id": "_:N6570d7617c434ea7a5fdb73ca1dfc262",
       "void:property": {
         "@id": "https://w3id.org/railclass/vocab#lineUse"
       },
       "void:triples": 2501
     },
     {
-      "@id": "_:Nf773a9449c5a4681a0a989ff387315ec",
+      "@id": "_:N9fb1331bb5dd4444a0966b398df896bc",
       "void:property": {
         "@id": "https://w3id.org/railclass/vocab#sourceSection"
       },
       "void:triples": 2501
     },
     {
-      "@id": "_:N3b8a7aabe0514257a5e79cd7f84f2c5b",
+      "@id": "_:N013b6c115bbb42389a053bdaff65e224",
+      "void:property": {
+        "@id": "https://w3id.org/railclass/vocab#usedOn"
+      },
+      "void:triples": 2501
+    },
+    {
+      "@id": "_:N4ab601bac75c4226bde7e31ebbbfbed2",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P930"
       },
       "void:triples": 1924
     },
     {
-      "@id": "_:N2d20c78c3c554925862aca1e624c85f6",
+      "@id": "_:N75583f8eba434ec5988c1b55c29c8f7e",
       "void:property": {
         "@id": "http://www.wikidata.org/prop/direct/P462"
       },
-      "void:triples": 694
+      "void:triples": 703
     },
     {
-      "@id": "_:N2a873366542940cd8f638c0ec3adcfb1",
-      "void:property": {
-        "@id": "https://w3id.org/railclass/vocab#colorSample"
-      },
-      "void:triples": 522
-    },
-    {
-      "@id": "_:N36d096a188f2439aaa2fba4d21f39ba1",
-      "void:property": {
-        "@id": "https://schema.org/color"
-      },
-      "void:triples": 522
-    },
-    {
-      "@id": "_:N1bbe1d62a1e547c29d8ffbcc3716c82f",
+      "@id": "_:N7d9eb652e3ec4f579b8a427f32d8cb4e",
       "void:property": {
         "@id": "https://w3id.org/railclass/vocab#areaShare"
       },
-      "void:triples": 522
+      "void:triples": 529
     },
     {
-      "@id": "_:N27b4bc2c1ed64f34a8d64907f1e9bcd3",
+      "@id": "_:N7a9bfb8a15724809b372bdecc703c1ad",
+      "void:property": {
+        "@id": "https://w3id.org/railclass/vocab#colorSample"
+      },
+      "void:triples": 529
+    },
+    {
+      "@id": "_:N7c1d105a1b5a4e0782620c762fafc7ca",
+      "void:property": {
+        "@id": "https://schema.org/color"
+      },
+      "void:triples": 529
+    },
+    {
+      "@id": "_:Nb569bfa4ae8a4bf199550ff75a7fc2f3",
       "void:property": {
         "@id": "https://schema.org/value"
       },
-      "void:triples": 225
+      "void:triples": 228
     },
     {
-      "@id": "_:Nab9370098b184ddbb1b7700abf31f5bc",
+      "@id": "_:Ne849780e60f5430fa9c12cea3d0479b6",
       "void:property": {
         "@id": "https://schema.org/unitCode"
       },
-      "void:triples": 225
+      "void:triples": 228
     },
     {
-      "@id": "_:N783d8c20804243b29e94dbbadda2f085",
+      "@id": "_:Nc1fe038a80c44d01b28369db6d1232f2",
       "void:property": {
         "@id": "https://w3id.org/railclass/vocab#usedUntil"
       },
       "void:triples": 192
     },
     {
-      "@id": "_:Nd83383fdd3834bb38c7ac0c665327a21",
+      "@id": "_:N5fb6791822ec4a01b7452d5ec1c8a7fb",
       "void:property": {
         "@id": "https://schema.org/subjectOf"
       },
-      "void:triples": 150
+      "void:triples": 152
     },
     {
-      "@id": "_:N4325b0f8e52b446a85b31d3536374b28",
-      "void:property": {
-        "@id": "https://schema.org/license"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:N69eb6d03492640449283c7cd5ace140e",
-      "void:property": {
-        "@id": "https://schema.org/depth"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:N76b831dd003e42a2a3a462805f7e5a81",
-      "void:property": {
-        "@id": "https://schema.org/encodingFormat"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:Nea4ce967af2f4716b2227ee3a5267a7f",
-      "void:property": {
-        "@id": "https://schema.org/description"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:N437ea48413894254891e5fe5452e723b",
-      "void:property": {
-        "@id": "https://w3id.org/railclass/vocab#liveryOf"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:N0a0393ed99dd4e68a72f2be83295f213",
-      "void:property": {
-        "@id": "https://schema.org/height"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:N6bba88b509d244beb2f11f92664d7739",
-      "void:property": {
-        "@id": "https://w3id.org/railclass/vocab#galleryGroup"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:N5afe024ce3e7419d8b5e4890574f4952",
-      "void:property": {
-        "@id": "https://schema.org/contentUrl"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:N04eb670c64674765a429e3476aa06072",
-      "void:property": {
-        "@id": "https://schema.org/about"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:Na858d08305a24d4ab6c7c7ff6b0852f1",
-      "void:property": {
-        "@id": "https://schema.org/name"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:Nd4365a08d6044397be81a377ea3a7e1a",
-      "void:property": {
-        "@id": "https://schema.org/url"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:Nb7fe0917d1e34523ad22ee1aa0d5a78b",
-      "void:property": {
-        "@id": "https://w3id.org/railclass/vocab#livery"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:N4afcb3ba3bd94b7bba6659fdf55f9351",
-      "void:property": {
-        "@id": "https://schema.org/thumbnailUrl"
-      },
-      "void:triples": 75
-    },
-    {
-      "@id": "_:Neaa7dd8e33014c6a976ec28e70b6b179",
+      "@id": "_:Nf7ef06fa079242e3b8d5be92f56e0dd6",
       "void:property": {
         "@id": "https://schema.org/width"
       },
-      "void:triples": 75
+      "void:triples": 76
     },
     {
-      "@id": "_:N379ad3f6dde6470cb795699487b51431",
+      "@id": "_:Ne23844421d764f3cb10068c566910b1e",
+      "void:property": {
+        "@id": "https://schema.org/height"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:N276dca62dd0840c98b7d177a20474416",
+      "void:property": {
+        "@id": "https://w3id.org/railclass/vocab#livery"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:N7e646675c3de483daad1b38a37802937",
+      "void:property": {
+        "@id": "https://schema.org/license"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:Ne8d33d3b99874e1facc42f86dc90faad",
+      "void:property": {
+        "@id": "https://schema.org/about"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:N63a5af03c7ab4864b4c39b7b571f7003",
+      "void:property": {
+        "@id": "https://schema.org/encodingFormat"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:Nb200b59fe092406495836bb2faf6c880",
+      "void:property": {
+        "@id": "https://schema.org/contentUrl"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:Nd1393c18c7624b52b899f56804198702",
+      "void:property": {
+        "@id": "https://w3id.org/railclass/vocab#galleryGroup"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:N8d4d09945fae45068a682f6554e087b8",
+      "void:property": {
+        "@id": "https://w3id.org/railclass/vocab#liveryOf"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:N053841056de2480fa0c66331b5299bc6",
+      "void:property": {
+        "@id": "https://schema.org/url"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:N044a59dd53374f47800caf8392d04712",
+      "void:property": {
+        "@id": "https://schema.org/thumbnailUrl"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:N6c1f32903a3340daba5123a8aeb9a4b7",
+      "void:property": {
+        "@id": "https://schema.org/name"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:Neeb1cd91bbcd42ef8906838e2289e96c",
+      "void:property": {
+        "@id": "https://schema.org/description"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:Nce4c15d9f2b44fd9bcadfc1757b1551c",
+      "void:property": {
+        "@id": "https://schema.org/depth"
+      },
+      "void:triples": 76
+    },
+    {
+      "@id": "_:N32e8023f790c414ea265b541920c3386",
       "void:property": {
         "@id": "https://w3id.org/railclass/vocab#handEntered"
       },
       "void:triples": 65
     },
     {
-      "@id": "_:N862ec246de3943edb1d49c07c66b4316",
+      "@id": "_:N74994d68503842d0898dcabf61fa58c0",
       "void:property": {
         "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
       },
       "void:triples": 20
     },
     {
-      "@id": "_:Na4c033657f734ad49f229647c431e236",
+      "@id": "_:N98cafd56752e437c8ff752c2305c8b00",
       "void:property": {
         "@id": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
       },
       "void:triples": 20
     },
     {
-      "@id": "_:N75a588bc892341308a6d738d18198b73",
+      "@id": "_:N1c1befe1a1804253acaf77a2d627a514",
       "void:property": {
         "@id": "https://w3id.org/railclass/vocab#inferred"
       },
       "void:triples": 16
     },
     {
-      "@id": "_:N4a6d68f595b44ea8ba916b6f08e3cb17",
+      "@id": "_:Nd52a2d17f4604e6a9730ec1a73c998bb",
       "void:property": {
         "@id": "skos:broader"
       },
       "void:triples": 7
     },
     {
-      "@id": "_:N411086b9be3d44029e616c60d731f8ac",
+      "@id": "_:Nf5fec89dedaf4743a6d6afcd5b9761fa",
       "void:property": {
         "@id": "https://w3id.org/railclass/vocab#part"
       },
       "void:triples": 6
     },
     {
-      "@id": "_:Nab15ec4f18894f349492e734f2359f79",
+      "@id": "_:N3bbb1833d3db43ebbc028370c6b54321",
       "void:property": {
         "@id": "skos:broadMatch"
       },
       "void:triples": 4
     },
     {
-      "@id": "_:N309725e75c5d49a09c407043c9470ce8",
+      "@id": "_:Nca785069798c429eab70489ac58ba7da",
       "void:property": {
         "@id": "dcterms:license"
       },
       "void:triples": 1
-    },
-    {
-      "@id": "https://w3id.org/railclass/dataset#allTtl",
-      "@type": "dcat:Distribution",
-      "dcat:byteSize": {
-        "@type": "xsd:nonNegativeInteger",
-        "@value": "9145151"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/rdf/all.ttl"
-      },
-      "dcat:mediaType": "text/turtle",
-      "dcterms:license": {
-        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
-      },
-      "dcterms:title": [
-        {
-          "@language": "en",
-          "@value": "All classes and models (Turtle)"
-        },
-        {
-          "@language": "ja",
-          "@value": "全形式と 3D モデル（Turtle）"
-        }
-      ]
     },
     {
       "@id": "https://w3id.org/railclass/dataset#eratv",
@@ -894,163 +1051,6 @@
         {
           "@language": "ja",
           "@value": "ERATV の型式と Wikidata の形式の対応表（TSV と CSVW）"
-        }
-      ]
-    },
-    {
-      "@id": "https://w3id.org/railclass/dataset#iiif",
-      "@type": "dcat:Distribution",
-      "dcat:byteSize": {
-        "@type": "xsd:nonNegativeInteger",
-        "@value": "29847"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/iiif/collection.json"
-      },
-      "dcat:mediaType": "application/ld+json",
-      "dcterms:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      "dcterms:title": [
-        {
-          "@language": "en",
-          "@value": "IIIF Presentation 4.0 Collection of the 3D models"
-        },
-        {
-          "@language": "ja",
-          "@value": "3D モデルの IIIF Collection（Presentation 4.0）"
-        }
-      ]
-    },
-    {
-      "@id": "https://w3id.org/railclass/dataset#links-commons",
-      "@type": "void:Linkset",
-      "void:linkPredicate": {
-        "@id": "foaf:depiction"
-      },
-      "void:objectsTarget": {
-        "@id": "http://commons.wikimedia.org/"
-      },
-      "void:subjectsTarget": {
-        "@id": "https://w3id.org/railclass/dataset"
-      },
-      "void:triples": 10402
-    },
-    {
-      "@id": "https://w3id.org/railclass/dataset#lines",
-      "@type": "dcat:Distribution",
-      "dcat:byteSize": {
-        "@type": "xsd:nonNegativeInteger",
-        "@value": "1111463"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/lines/_all.geojson"
-      },
-      "dcat:mediaType": "application/geo+json",
-      "dcterms:license": {
-        "@id": "https://opendatacommons.org/licenses/odbl/1-0/"
-      },
-      "dcterms:rights": {
-        "@language": "en",
-        "@value": "© OpenStreetMap contributors, ODbL. Only the line IDs (Wikidata items) are in the RDF."
-      },
-      "dcterms:title": [
-        {
-          "@language": "en",
-          "@value": "Line shapes from OpenStreetMap (GeoJSON, one file per line)"
-        },
-        {
-          "@language": "ja",
-          "@value": "路線の線（OpenStreetMap、GeoJSON、路線ごとのファイル）"
-        }
-      ]
-    },
-    {
-      "@id": "https://w3id.org/railclass/dataset#allJsonld",
-      "@type": "dcat:Distribution",
-      "dcat:byteSize": {
-        "@type": "xsd:nonNegativeInteger",
-        "@value": "18952828"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/rdf/all.jsonld"
-      },
-      "dcat:mediaType": "application/ld+json",
-      "dcterms:license": {
-        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
-      },
-      "dcterms:title": [
-        {
-          "@language": "en",
-          "@value": "All classes and models (JSON-LD)"
-        },
-        {
-          "@language": "ja",
-          "@value": "全形式と 3D モデル（JSON-LD）"
-        }
-      ]
-    },
-    {
-      "@id": "https://w3id.org/railclass/dataset#links-wikidata",
-      "@type": "void:Linkset",
-      "void:linkPredicate": {
-        "@id": "skos:exactMatch"
-      },
-      "void:objectsTarget": {
-        "@id": "http://www.wikidata.org/"
-      },
-      "void:subjectsTarget": {
-        "@id": "https://w3id.org/railclass/dataset"
-      },
-      "void:triples": 14326
-    },
-    {
-      "@id": "https://w3id.org/railclass/dataset#vocab",
-      "@type": "dcat:Distribution",
-      "dcat:byteSize": {
-        "@type": "xsd:nonNegativeInteger",
-        "@value": "5223"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/rdf/vocab.ttl"
-      },
-      "dcat:mediaType": "text/turtle",
-      "dcterms:license": {
-        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
-      },
-      "dcterms:title": [
-        {
-          "@language": "en",
-          "@value": "Terms of our own (tb:)"
-        },
-        {
-          "@language": "ja",
-          "@value": "独自の語彙（tb:）"
-        }
-      ]
-    },
-    {
-      "@id": "https://w3id.org/railclass/dataset#models",
-      "@type": "dcat:Distribution",
-      "dcat:byteSize": {
-        "@type": "xsd:nonNegativeInteger",
-        "@value": "36404"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://railclass.ldas.jp/data/models.json"
-      },
-      "dcat:mediaType": "application/json",
-      "dcterms:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      "dcterms:title": [
-        {
-          "@language": "en",
-          "@value": "List of the 3D models (JSON)"
-        },
-        {
-          "@language": "ja",
-          "@value": "3D モデルの一覧（JSON）"
         }
       ]
     }

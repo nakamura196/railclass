@@ -236369,30 +236369,6 @@ cls:Q96095981 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q668 .
 
-cls:Q96106536 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Siemens Venture"@en,
-        "シーメンス・ベンチャー"@ja ;
-    skos:exactMatch wd:Q96106536 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Siemens Venture"@en,
-        "シーメンス・ベンチャー"@ja ;
-    prov:wasDerivedFrom wd:Q96106536 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q23239,
-        wd:Q27012668,
-        wd:Q876720 ;
-    wdt:P17 wd:Q16,
-        wd:Q30 ;
-    wdt:P176 wd:Q81230 ;
-    wdt:P279 wd:Q753779 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/San%20Joaquin%20train.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q96106536#line1> ;
-    tb:operatingCountry wd:Q16,
-        wd:Q30 ;
-    tb:usedOn wd:Q283928 .
-
 cls:Q96141596 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "SNCV/NMVB 297-300 type tram"@en ;
@@ -261574,6 +261550,31 @@ cls:Q891775 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q96106536 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Siemens Venture"@en,
+        "シーメンス・ベンチャー"@ja ;
+    skos:exactMatch wd:Q96106536 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Siemens Venture"@en,
+        "シーメンス・ベンチャー"@ja ;
+    prov:wasDerivedFrom wd:Q96106536 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q23239,
+        wd:Q27012668,
+        wd:Q876720 ;
+    wdt:P17 wd:Q16,
+        wd:Q30 ;
+    wdt:P176 wd:Q81230 ;
+    wdt:P279 wd:Q753779 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/San%20Joaquin%20train.jpg> ;
+    schema:subjectOf mdl:venture ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q96106536#line1> ;
+    tb:operatingCountry wd:Q16,
+        wd:Q30 ;
+    tb:usedOn wd:Q283928 .
+
 <https://w3id.org/railclass/Q96106536#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q283928#P3438> ;
     skos:note "wikidata"@en ;
@@ -267205,6 +267206,85 @@ mdl:vandebharat a schema:3DModel ;
         <https://w3id.org/railclass/model/vandebharat#color6>,
         <https://w3id.org/railclass/model/vandebharat#color7> ;
     tb:liveryOf wd:Q819425 .
+
+mdl:venture a schema:3DModel ;
+    schema:about cls:Q96106536 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/venture.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.3 ] ;
+    schema:description "カナダの都市間列車の新しい客車。運転台付きの車で、灰と黄の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.7 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ベンチャー（VIA Rail）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/venture/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/venture.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#venture> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/venture#livery> .
+
+<https://w3id.org/railclass/model/venture#color1> a tb:ColorSample ;
+    rdfs:label "dark" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#454A52" ;
+    tb:areaShare 0.6420 .
+
+<https://w3id.org/railclass/model/venture#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#9CA1A7" ;
+    tb:areaShare 0.1156 .
+
+<https://w3id.org/railclass/model/venture#color3> a tb:ColorSample ;
+    rdfs:label "vgrey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B4B8BD" ;
+    tb:areaShare 0.1049 .
+
+<https://w3id.org/railclass/model/venture#color4> a tb:ColorSample ;
+    rdfs:label "vyellow" ;
+    wdt:P462 wd:Q943 ;
+    schema:color "#F2C01E" ;
+    tb:areaShare 0.0579 .
+
+<https://w3id.org/railclass/model/venture#color5> a tb:ColorSample ;
+    rdfs:label "face" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#232529" ;
+    tb:areaShare 0.0524 .
+
+<https://w3id.org/railclass/model/venture#color6> a tb:ColorSample ;
+    rdfs:label "lampbox" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3A3E44" ;
+    tb:areaShare 0.0112 .
+
+<https://w3id.org/railclass/model/venture#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4A5866" ;
+    tb:areaShare 0.0079 .
+
+<https://w3id.org/railclass/model/venture#livery> a tb:Livery ;
+    rdfs:label "VIA Rail Venture livery (grey, charcoal and yellow)"@en,
+        "VIA 鉄道のベンチャーの塗装（灰、濃い灰、黄）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/venture/via_venture.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q42519,
+        wd:Q943 ;
+    tb:colorSample <https://w3id.org/railclass/model/venture#color1>,
+        <https://w3id.org/railclass/model/venture#color2>,
+        <https://w3id.org/railclass/model/venture#color3>,
+        <https://w3id.org/railclass/model/venture#color4>,
+        <https://w3id.org/railclass/model/venture#color5>,
+        <https://w3id.org/railclass/model/venture#color6>,
+        <https://w3id.org/railclass/model/venture#color7> ;
+    tb:liveryOf wd:Q876720 .
 
 mdl:vietnam a schema:3DModel ;
     schema:about cls:Q423578 ;
@@ -276954,9 +277034,6 @@ wd:Q7945549 rdfs:label "W. G. Bagnall Ltd."@en,
 wd:Q805757 rdfs:label "Baltimore and Ohio Railroad"@en,
         "ボルチモア・アンド・オハイオ鉄道"@ja .
 
-wd:Q876720 rdfs:label "Via Rail"@en,
-        "VIA鉄道"@ja .
-
 wd:Q98137582 rdfs:label "Lokomotivfabrik Krauss & Comp. Linz"@en .
 
 wd:Q1084446 rdfs:label "Christoph & Unmack"@en .
@@ -277031,6 +277108,9 @@ wd:Q7053427 rdfs:label "Norsk Elektrisk & Brown Boveri"@en .
 
 wd:Q83878 rdfs:label "Serbian Railways"@en,
         "セルビア鉄道"@ja .
+
+wd:Q876720 rdfs:label "Via Rail"@en,
+        "VIA鉄道"@ja .
 
 wd:Q917515 rdfs:label "Kambarka Engineering Works"@en .
 
@@ -277481,9 +277561,6 @@ wd:Q7350044 rdfs:label "Robert Stephenson and Hawthorns"@en,
 wd:Q846655 rdfs:label "Israel Railways"@en,
         "イスラエル鉄道"@ja .
 
-wd:Q943 rdfs:label "yellow"@en,
-        "黄色"@ja .
-
 wd:Q106530472 rdfs:label "25 kV, 60 Hz AC railway electrification"@en,
         "交流25kV 60Hz鉄道電化"@ja .
 
@@ -277554,6 +277631,9 @@ wd:Q801 rdfs:label "Israel"@en,
 
 wd:Q941179 rdfs:label "articulated locomotive"@en,
         "関節式機関車"@ja .
+
+wd:Q943 rdfs:label "yellow"@en,
+        "黄色"@ja .
 
 wd:Q1053992 rdfs:label "Central South African Railways"@en,
         "セントラル・サウス・アフリカン鉄道"@ja .
@@ -278337,14 +278417,14 @@ wd:Q633519 rdfs:label "Córas Iompair Éireann"@en,
 wd:Q6418354 rdfs:label "Kitson and Company"@en,
         "キットソン (機関車メーカー)"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q1321361 rdfs:label "Société Franco-Belge"@en,
         "ソシエテ・フランコ＝ベルジュ"@ja .
 
 wd:Q23444 rdfs:label "white"@en,
         "白"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q1473477 rdfs:label "4-8-2"@en,
         "車軸配置 4-8-2"@ja .

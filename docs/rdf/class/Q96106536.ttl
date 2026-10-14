@@ -1,8 +1,10 @@
 @prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -27,7 +29,8 @@ cls:Q96106536 a skos:Concept,
     wdt:P176 wd:Q81230 ;
     wdt:P279 wd:Q753779 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/San%20Joaquin%20train.jpg> ;
-    tb:has3DModel false ;
+    schema:subjectOf mdl:venture ;
+    tb:has3DModel true ;
     tb:lineUse <https://w3id.org/railclass/Q96106536#line1> ;
     tb:operatingCountry wd:Q16,
         wd:Q30 ;
