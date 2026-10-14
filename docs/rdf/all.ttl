@@ -263886,6 +263886,86 @@ mdl:darjeeling a schema:3DModel ;
         <https://w3id.org/railclass/model/darjeeling#color6> ;
     tb:liveryOf wd:Q463874 .
 
+mdl:delhimetro a schema:3DModel ;
+    schema:about cls:tb-delhimetro ;
+    schema:contentUrl <https://railclass.ldas.jp/models/delhimetro.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "インドで最初の無人運転の地下鉄。現代ロテム製、黒い鼻とマゼンタの帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "デリーメトロ マゼンタ線"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/delhimetro/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/delhimetro.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#delhimetro> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/delhimetro#livery> .
+
+<https://w3id.org/railclass/model/delhimetro#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#ECEEF1" ;
+    tb:areaShare 0.5683 .
+
+<https://w3id.org/railclass/model/delhimetro#color2> a tb:ColorSample ;
+    rdfs:label "steel" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B9BDC3" ;
+    tb:areaShare 0.2842 .
+
+<https://w3id.org/railclass/model/delhimetro#color3> a tb:ColorSample ;
+    rdfs:label "magenta" ;
+    wdt:P462 wd:Q3257809 ;
+    schema:color "#B0309C" ;
+    tb:areaShare 0.0713 .
+
+<https://w3id.org/railclass/model/delhimetro#color4> a tb:ColorSample ;
+    rdfs:label "helmet" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#242832" ;
+    tb:areaShare 0.0327 .
+
+<https://w3id.org/railclass/model/delhimetro#color5> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0205 .
+
+<https://w3id.org/railclass/model/delhimetro#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3C4A5A" ;
+    tb:areaShare 0.0130 .
+
+<https://w3id.org/railclass/model/delhimetro#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0080 .
+
+<https://w3id.org/railclass/model/delhimetro#livery> a tb:Livery ;
+    rdfs:label "Delhi Metro Magenta Line livery (stainless with magenta bands, black helmet nose)"@en,
+        "デリーメトロ マゼンタ線の塗装（ステンレスにマゼンタの帯、黒いヘルメットの鼻）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/delhimetro/dmrc_delhimetro.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3257809,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/delhimetro#color1>,
+        <https://w3id.org/railclass/model/delhimetro#color2>,
+        <https://w3id.org/railclass/model/delhimetro#color3>,
+        <https://w3id.org/railclass/model/delhimetro#color4>,
+        <https://w3id.org/railclass/model/delhimetro#color5>,
+        <https://w3id.org/railclass/model/delhimetro#color6>,
+        <https://w3id.org/railclass/model/delhimetro#color7> ;
+    tb:liveryOf wd:Q1029339 .
+
 mdl:dubaimetro a schema:3DModel ;
     schema:about cls:tb-dubaimetro ;
     schema:contentUrl <https://railclass.ldas.jp/models/dubaimetro.glb> ;
@@ -269347,6 +269427,36 @@ cls:tb-cairo a skos:Concept,
     tb:sourceSection "Wikidata (the line)" ;
     tb:useStatus "current" .
 
+cls:tb-delhimetro a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Delhi Metro Magenta Line car (Hyundai Rotem)"@en,
+        "デリーメトロ マゼンタ線の電車（現代ロテム製）"@ja ;
+    dcterms:source "Country and operator from Wikidata Q19893471 (Magenta Line) and Q271195 (Delhi Metro); manufacturer (Hyundai Rotem) and type (EMU) and the opening of the line (2017-12-25) from en.wikipedia 'Magenta Line (Delhi Metro)' via the skytrain lab note docs/notes/delhimetro.md (2026-10-13)."@en ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Delhi Metro Magenta Line car (Hyundai Rotem)"@en,
+        "デリーメトロ マゼンタ線の電車（現代ロテム製）"@ja ;
+    wdt:P137 wd:Q1029339 ;
+    wdt:P17 wd:Q668 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2017"^^xsd:gYear ;
+    schema:subjectOf mdl:delhimetro ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/tb-delhimetro#line1> ;
+    tb:usedOn wd:Q19893471 .
+
+<https://w3id.org/railclass/tb-delhimetro#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19893471> ;
+    skos:note "the Delhi Metro Magenta Line itself (system Q271195); Wikidata has no item for its Hyundai Rotem cars"@en ;
+    tb:line wd:Q19893471 ;
+    tb:sourceSection "Wikidata (the line)" ;
+    tb:useStatus "current" .
+
 cls:tb-dubaimetro a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Dubai Metro Kinki Sharyo train"@en,
@@ -269703,6 +269813,8 @@ wd:Q1023113 rdfs:label "CDG Express"@en .
 
 wd:Q1028212 rdfs:label "Cambrian Railways"@en,
         "カンブリアン鉄道"@ja .
+
+wd:Q1029339 rdfs:label "Delhi Metro Rail Corporation"@en .
 
 wd:Q10318679 rdfs:label "Line D"@en .
 
@@ -271064,6 +271176,8 @@ wd:Q19882 rdfs:label "Watford DC Line"@en .
 wd:Q19883 rdfs:label "Abbey Line"@en .
 
 wd:Q19891207 rdfs:label "Coimbatore - Shoranur railway line"@en .
+
+wd:Q19893471 rdfs:label "Magenta Line"@en .
 
 wd:Q19971429 rdfs:label "Salzburger Eisenbahn Transportlogistik"@en .
 
@@ -275487,9 +275601,6 @@ wd:Q3239050 rdfs:label "Toulouse Metro Line A"@en .
 
 wd:Q3239056 rdfs:label "Grenoble tram line A"@en .
 
-wd:Q3257809 rdfs:label "purple"@en,
-        "紫"@ja .
-
 wd:Q3259702 rdfs:label "Los Angeles County Metropolitan Transportation Authority"@en,
         "ロサンゼルス郡都市圏交通局"@ja .
 
@@ -276823,6 +276934,9 @@ wd:Q3239049 rdfs:label "Line A"@en .
 wd:Q3239085 rdfs:label "C linea"@en .
 
 wd:Q324601 rdfs:label "Trams in Leipzig"@en .
+
+wd:Q3257809 rdfs:label "purple"@en,
+        "紫"@ja .
 
 wd:Q3359730 rdfs:label "PLM Algeria"@en .
 
@@ -279772,9 +279886,6 @@ wd:Q1073100 rdfs:label "Nydqvist och Holm AB"@en,
 wd:Q1073489 rdfs:label "China State Railway Group"@en,
         "中国国家鉄路集団"@ja .
 
-wd:Q152517 rdfs:label "Hyundai Rotem"@en,
-        "現代ロテム"@ja .
-
 wd:Q1795087 rdfs:label "Maschinenbau-Gesellschaft Karlsruhe"@en,
         "カールスルーエ機械製造"@ja .
 
@@ -279789,6 +279900,9 @@ wd:Q117269410 rdfs:label "Imperial Railway Board"@en,
 
 wd:Q1421914 rdfs:label "Fives Group"@en,
         "フィブグループ"@ja .
+
+wd:Q152517 rdfs:label "Hyundai Rotem"@en,
+        "現代ロテム"@ja .
 
 wd:Q212 rdfs:label "Ukraine"@en,
         "ウクライナ"@ja .
@@ -279979,9 +280093,6 @@ wd:Q379439 rdfs:label "Queensland Rail"@en,
 wd:Q432790 rdfs:label "Linke-Hofmann"@en,
         "リンケ・ホフマン・ブッシュ"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q2756040 rdfs:label "Société Alsacienne de Constructions Mécaniques"@en,
         "アルザス機械工業協会"@ja .
 
@@ -279990,6 +280101,9 @@ wd:Q423 rdfs:label "North Korea"@en,
 
 wd:Q393557 rdfs:label "Železničná spoločnosť Slovensko"@en,
         "鉄道企業体スロバキア"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
 
 wd:Q7061278 rdfs:label "Norges Statsbaner"@en .
 
@@ -280008,11 +280122,11 @@ wd:Q19750814 rdfs:label "1524 mm track gauge"@en,
 wd:Q2036496 rdfs:label "2-2-2"@en,
         "車輪配置 2-2-2"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q3959904 rdfs:label "multiple unit"@en,
         "動力分散方式の列車編成"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q52912 rdfs:label "Statens Järnvägar"@en .
 
@@ -280314,9 +280428,6 @@ wd:Q2037045 rdfs:label "4-4-0"@en,
 
 wd:Q26212271 rdfs:label "0-6-0T"@en .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q2922269 rdfs:label "0-6-0"@en,
         "車輪配置 0-6-0"@ja .
 
@@ -280324,6 +280435,9 @@ wd:Q1415234 rdfs:label "15 kV, 16.7 Hz AC railway electrification"@en .
 
 wd:Q163580 rdfs:label "Henschel & Sohn"@en,
         "ヘンシェル"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q16957 rdfs:label "East Germany"@en,
         "ドイツ民主共和国"@ja .

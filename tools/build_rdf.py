@@ -169,6 +169,7 @@ CLASSES = {
     "Q57469448": ("Q57469448", None, None),                   # Flytoget Class 78 (CAF Oaris)
     "tb-hktram": (None, None, {"en": "Hong Kong Tramways double-deck tram (7th generation)", "ja": "香港の路面電車（第 7 世代、2 階建て）"}),  # Hong Kong Tramways 7th-generation double-deck tram (no Wikidata item for the cars; the system Q385245 is linked in tools/class_lines.tsv)
     "Q95613096": ("Q95613096", None, None),                   # LRTA 13000 class (Manila LRT Line 1, CAF/Mitsubishi)
+    "tb-delhimetro": (None, None, {"en": "Delhi Metro Magenta Line car (Hyundai Rotem)", "ja": "デリーメトロ マゼンタ線の電車（現代ロテム製）"}),  # Delhi Metro Magenta Line Hyundai Rotem car (no Wikidata item for the cars; the line Q19893471 is linked in tools/class_lines.tsv)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -202,6 +203,8 @@ HAND = {
     "tb-insurgente": {"country": ["Q96"], "operator": ["Q139837508"], "manufacturer": ["Q838212"], "kind": ["Q483373"], "serviceEntry": [2023]},
     # Hong Kong; Hong Kong Tramways (the company); tram; 7th-generation body from 2011. Bodies built in-house, so no manufacturer
     "tb-hktram": {"country": ["Q8646"], "operator": ["Q15902782"], "kind": ["Q3407658"], "serviceEntry": [2011]},
+    # India; DMRC (P137 of Q19893471); Hyundai Rotem; EMU; Magenta Line opened 2017-12-25 (driverless from 2020-12-28)
+    "tb-delhimetro": {"country": ["Q668"], "operator": ["Q1029339"], "manufacturer": ["Q152517"], "kind": ["Q483373"], "serviceEntry": [2017]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
@@ -217,6 +220,7 @@ HAND_SOURCE = {
     "tb-bluetrain": "Country from Wikidata Q885923 (Blue Train, the service); operator (Transnet), car type (observation car) and the 1997 relaunch with the present coaches from en.wikipedia 'Blue Train (South Africa)' via the skytrain lab note docs/notes/bluetrain.md (2026-10-12).",
     "tb-insurgente": "Country and operator from Wikidata Q16642463 (El Insurgente, the line); manufacturer and type (CAF EMU) and the opening of the first section (2023-09-15) from en.wikipedia 'El Insurgente' via the skytrain lab note docs/notes/insurgente.md (2026-10-12).",
     "tb-hktram": "Country and operator from Wikidata Q385245 (Hong Kong Tramways, the system) and Q15902782 (the company); the 7th-generation body (2011-) from en.wikipedia 'Hong Kong Tramways' via the skytrain lab note docs/notes/hktram.md (2026-10-13).",
+    "tb-delhimetro": "Country and operator from Wikidata Q19893471 (Magenta Line) and Q271195 (Delhi Metro); manufacturer (Hyundai Rotem) and type (EMU) and the opening of the line (2017-12-25) from en.wikipedia 'Magenta Line (Delhi Metro)' via the skytrain lab note docs/notes/delhimetro.md (2026-10-13).",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -329,6 +333,7 @@ LIVERIES = {
     "flytoget-grey": ({"en": "Flytoget livery (metallic grey with an orange line round the cab)", "ja": "フリートーゲの塗装（金属の灰色に、運転室を囲むオレンジの線）"}, "Q18325550"),
     "hktramways-green": ({"en": "Hong Kong Tramways plain green livery (with the smiling bumper)", "ja": "香港トラムの緑一色の塗装（笑顔のバンパー）"}, "Q15902782"),
     "lrmc-13000": ({"en": "LRT Line 1 13000 class livery (red and stainless with a black forehead)", "ja": "LRT 1 号線 13000 形の塗装（赤とステンレスに黒い額）"}, "Q65087474"),
+    "dmrc-magenta": ({"en": "Delhi Metro Magenta Line livery (stainless with magenta bands, black helmet nose)", "ja": "デリーメトロ マゼンタ線の塗装（ステンレスにマゼンタの帯、黒いヘルメットの鼻）"}, "Q1029339"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -425,6 +430,7 @@ MODELS = {
     "flytoget": ("Q57469448", "flytoget-grey", None),
     "hktram": ("tb-hktram", "hktramways-green", None),
     "manila-lrt1": ("Q95613096", "lrmc-13000", None),
+    "delhimetro": ("tb-delhimetro", "dmrc-magenta", None),
 }
 
 

@@ -1,0 +1,43 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:tb-delhimetro a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Delhi Metro Magenta Line car (Hyundai Rotem)"@en,
+        "デリーメトロ マゼンタ線の電車（現代ロテム製）"@ja ;
+    dcterms:source "Country and operator from Wikidata Q19893471 (Magenta Line) and Q271195 (Delhi Metro); manufacturer (Hyundai Rotem) and type (EMU) and the opening of the line (2017-12-25) from en.wikipedia 'Magenta Line (Delhi Metro)' via the skytrain lab note docs/notes/delhimetro.md (2026-10-13)."@en ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Delhi Metro Magenta Line car (Hyundai Rotem)"@en,
+        "デリーメトロ マゼンタ線の電車（現代ロテム製）"@ja ;
+    wdt:P137 wd:Q1029339 ;
+    wdt:P17 wd:Q668 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2017"^^xsd:gYear ;
+    schema:subjectOf mdl:delhimetro ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/tb-delhimetro#line1> ;
+    tb:usedOn wd:Q19893471 .
+
+<https://w3id.org/railclass/tb-delhimetro#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19893471> ;
+    skos:note "the Delhi Metro Magenta Line itself (system Q271195); Wikidata has no item for its Hyundai Rotem cars"@en ;
+    tb:line wd:Q19893471 ;
+    tb:sourceSection "Wikidata (the line)" ;
+    tb:useStatus "current" .
+
+wd:Q19893471 rdfs:label "Magenta Line"@en .
+
