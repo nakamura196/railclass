@@ -146,6 +146,7 @@ CLASSES = {
     "Q17051139": ("Q17051139", None, None),                   # Kawasaki / CRRC Sifang T251 (Thomson-East Coast Line)
     "Q50318679": ("Q50318679", None, None),                   # China Railway CR400AF Fuxing
     "Q134207119": ("Q134207119", None, None),                 # BART Fleet of the Future (D car)
+    "tb-insurgente": (None, None, {"en": "El Insurgente CAF EMU", "ja": "エル・インスルヘンテの電車（CAF 製）"}),  # El Insurgente CAF EMU (no Wikidata item for the trains; the line Q16642463 is linked in tools/class_lines.tsv)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -175,6 +176,8 @@ HAND = {
     "tb-cairo": {"country": ["Q79"], "operator": ["Q64744683"], "manufacturer": ["Q1592306"], "kind": ["Q483373"], "serviceEntry": [1996]},
     # South Africa; Transnet (owner of the Blue Train); observation car; service as the refurbished Blue Train from 1997
     "tb-bluetrain": {"country": ["Q258"], "operator": ["Q820804"], "kind": ["Q1691845"], "serviceEntry": [1997]},
+    # Mexico; operator of El Insurgente (P137 of Q16642463); CAF; EMU; opening of the first section 2023-09-15
+    "tb-insurgente": {"country": ["Q96"], "operator": ["Q139837508"], "manufacturer": ["Q838212"], "kind": ["Q483373"], "serviceEntry": [2023]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
@@ -188,6 +191,7 @@ HAND_SOURCE = {
     "tb-cablecar": "Country, operator and type (cable car) from Wikidata Q374956 (San Francisco cable car system); the Powell Street single-ended car and its dimensions from streetcar.org via the skytrain lab note docs/notes/cablecar.md (2026-10-12).",
     "tb-cairo": "Country and opening year (1996) from Wikidata Q5017773 (Cairo Metro Line 2); builders (Mitsubishi Corporation, Kinki Sharyo and Toshiba) and type from the skytrain lab note docs/notes/cairo.md (2026-10-12); operator entered as the National Authority for Tunnels, the owner of the Cairo Metro.",
     "tb-bluetrain": "Country from Wikidata Q885923 (Blue Train, the service); operator (Transnet), car type (observation car) and the 1997 relaunch with the present coaches from en.wikipedia 'Blue Train (South Africa)' via the skytrain lab note docs/notes/bluetrain.md (2026-10-12).",
+    "tb-insurgente": "Country and operator from Wikidata Q16642463 (El Insurgente, the line); manufacturer and type (CAF EMU) and the opening of the first section (2023-09-15) from en.wikipedia 'El Insurgente' via the skytrain lab note docs/notes/insurgente.md (2026-10-12).",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -273,6 +277,7 @@ LIVERIES = {
     "smrt-tel": ({"en": "Thomson-East Coast Line livery (white body, black face, orange-brown and gold stripe)", "ja": "トムソン・イーストコースト線の塗装（白い車体、黒い顔、橙茶と金の帯）"}, "Q3243209"),
     "cr-fuxing": ({"en": "China Railway Fuxing standard livery (silver with the red sweep)", "ja": "復興号の標準の塗装（銀に赤い流線）"}, "Q1073489"),
     "bart-fotf": ({"en": "BART Fleet of the Future livery (white front cap, blue band on aluminium)", "ja": "BART の新型車の塗装（白い顔、アルミに青い帯）"}, "Q610120"),
+    "insurgente-flag": ({"en": "El Insurgente livery (white with a red nose and stripes in the Mexican flag colours)", "ja": "エル・インスルヘンテの塗装（白地に赤い先頭と国旗の三色の帯）"}, "Q139837508"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -346,6 +351,7 @@ MODELS = {
     "sg-tel": ("Q17051139", "smrt-tel", None),
     "cr400af": ("Q50318679", "cr-fuxing", None),
     "bart": ("Q134207119", "bart-fotf", None),
+    "insurgente": ("tb-insurgente", "insurgente-flag", None),
 }
 
 

@@ -1,0 +1,117 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/tb-insurgente#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q16642463"
+      },
+      "line": {
+        "@id": "wd:Q16642463"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "the Mexico City–Toluca interurban line itself; Wikidata has no item for its CAF trains"
+      },
+      "sourceSection": "Wikidata (the line)",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q16642463",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "El Insurgente"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/tb-insurgente",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Country and operator from Wikidata Q16642463 (El Insurgente, the line); manufacturer and type (CAF EMU) and the opening of the first section (2023-09-15) from en.wikipedia 'El Insurgente' via the skytrain lab note docs/notes/insurgente.md (2026-10-12)."
+      },
+      "handEntered": [
+        {
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P137"
+        },
+        {
+          "@id": "wdt:P176"
+        },
+        {
+          "@id": "wdt:P279"
+        },
+        {
+          "@id": "wdt:P729"
+        }
+      ],
+      "has3DModel": true,
+      "lineUse": {
+        "@id": "https://w3id.org/railclass/tb-insurgente#line1"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "El Insurgente CAF EMU"
+        },
+        {
+          "@language": "ja",
+          "@value": "エル・インスルヘンテの電車（CAF 製）"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://w3id.org/railclass/model/insurgente"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/railclass/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "El Insurgente CAF EMU"
+        },
+        {
+          "@language": "ja",
+          "@value": "エル・インスルヘンテの電車（CAF 製）"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q16642463"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q139837508"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q96"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q838212"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2023"
+      }
+    }
+  ]
+}

@@ -264739,6 +264739,86 @@ mdl:icng a schema:3DModel ;
         <https://w3id.org/railclass/model/icng#color7> ;
     tb:liveryOf wd:Q23076 .
 
+mdl:insurgente a schema:3DModel ;
+    schema:about cls:tb-insurgente ;
+    schema:contentUrl <https://railclass.ldas.jp/models/insurgente.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "メキシコ市とトルーカを結ぶ都市間鉄道のCAF製電車。赤い先頭と国旗の三色の帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "エル・インスルヘンテ"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/insurgente/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/insurgente.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#insurgente> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/insurgente#livery> .
+
+<https://w3id.org/railclass/model/insurgente#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#E8E9E6" ;
+    tb:areaShare 0.6825 .
+
+<https://w3id.org/railclass/model/insurgente#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B4B8BA" ;
+    tb:areaShare 0.1010 .
+
+<https://w3id.org/railclass/model/insurgente#color3> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0733 .
+
+<https://w3id.org/railclass/model/insurgente#color4> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#D9302C" ;
+    tb:areaShare 0.0707 .
+
+<https://w3id.org/railclass/model/insurgente#color5> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#0A6B4E" ;
+    tb:areaShare 0.0517 .
+
+<https://w3id.org/railclass/model/insurgente#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3C4650" ;
+    tb:areaShare 0.0128 .
+
+<https://w3id.org/railclass/model/insurgente#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0068 .
+
+<https://w3id.org/railclass/model/insurgente#livery> a tb:Livery ;
+    rdfs:label "El Insurgente livery (white with a red nose and stripes in the Mexican flag colours)"@en,
+        "エル・インスルヘンテの塗装（白地に赤い先頭と国旗の三色の帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/insurgente/ttm_insurgente.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q23444,
+        wd:Q3133,
+        wd:Q3142 ;
+    tb:colorSample <https://w3id.org/railclass/model/insurgente#color1>,
+        <https://w3id.org/railclass/model/insurgente#color2>,
+        <https://w3id.org/railclass/model/insurgente#color3>,
+        <https://w3id.org/railclass/model/insurgente#color4>,
+        <https://w3id.org/railclass/model/insurgente#color5>,
+        <https://w3id.org/railclass/model/insurgente#color6>,
+        <https://w3id.org/railclass/model/insurgente#color7> ;
+    tb:liveryOf wd:Q139837508 .
+
 mdl:jakartamrt a schema:3DModel ;
     schema:about cls:Q56394168 ;
     schema:contentUrl <https://railclass.ldas.jp/models/jakartamrt.glb> ;
@@ -267365,6 +267445,36 @@ cls:tb-gautrain a skos:Concept,
     tb:sourceSection "Wikidata (the system)" ;
     tb:useStatus "current" .
 
+cls:tb-insurgente a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "El Insurgente CAF EMU"@en,
+        "エル・インスルヘンテの電車（CAF 製）"@ja ;
+    dcterms:source "Country and operator from Wikidata Q16642463 (El Insurgente, the line); manufacturer and type (CAF EMU) and the opening of the first section (2023-09-15) from en.wikipedia 'El Insurgente' via the skytrain lab note docs/notes/insurgente.md (2026-10-12)."@en ;
+    skos:inScheme cls: ;
+    skos:prefLabel "El Insurgente CAF EMU"@en,
+        "エル・インスルヘンテの電車（CAF 製）"@ja ;
+    wdt:P137 wd:Q139837508 ;
+    wdt:P17 wd:Q96 ;
+    wdt:P176 wd:Q838212 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2023"^^xsd:gYear ;
+    schema:subjectOf mdl:insurgente ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/tb-insurgente#line1> ;
+    tb:usedOn wd:Q16642463 .
+
+<https://w3id.org/railclass/tb-insurgente#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16642463> ;
+    skos:note "the Mexico City–Toluca interurban line itself; Wikidata has no item for its CAF trains"@en ;
+    tb:line wd:Q16642463 ;
+    tb:sourceSection "Wikidata (the line)" ;
+    tb:useStatus "current" .
+
 cls:tb-lisbon28 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Lisbon Remodelado tram (Carris 541-585)"@en,
@@ -268684,6 +268794,8 @@ wd:Q1663943 rdfs:label "Downtown Line"@en .
 
 wd:Q1664245 rdfs:label "Innsbrucker Verkehrsbetriebe"@en,
         "インスブルック交通・シュトゥーバイタール鉄道会社"@ja .
+
+wd:Q16642463 rdfs:label "El Insurgente"@en .
 
 wd:Q16655754 rdfs:label "line 5 of Montpellier tramway"@en .
 
@@ -276765,9 +276877,6 @@ wd:Q221186 rdfs:label "レギオジェット"@ja .
 
 wd:Q26162489 rdfs:label "Co′Co′+Co′Co′"@en .
 
-wd:Q3133 rdfs:label "green"@en,
-        "緑"@ja .
-
 wd:Q3707399 rdfs:label "railbus"@en,
         "レールバス"@ja .
 
@@ -276891,6 +277000,9 @@ wd:Q2904527 rdfs:label "Birmingham Railway Carriage and Wagon Company"@en,
 
 wd:Q298 rdfs:label "Chile"@en,
         "チリ"@ja .
+
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
 
 wd:Q334 rdfs:label "Singapore"@en,
         "シンガポール"@ja .
@@ -277438,9 +277550,6 @@ wd:Q5014252 rdfs:label "CRRC Qingdao Sifang Co., Ltd."@en,
 
 wd:Q29638944 rdfs:label "2′2′"@en .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q3428923 rdfs:label "John Cockerill & Cie."@en,
         "コッカリル"@ja .
 
@@ -277470,6 +277579,9 @@ wd:Q53238 rdfs:label "Hitachi"@en,
 
 wd:Q917079 rdfs:label "Norfolk and Western Railway"@en,
         "ノーフォーク・アンド・ウェスタン鉄道"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q4228338 rdfs:label "Kolomna Locomotive Works"@en,
         "コロムナ工場"@ja .
@@ -277567,9 +277679,6 @@ wd:Q5063597 rdfs:label "low-floor tram"@en,
 
 wd:Q52323406 rdfs:label "0-6-0dh"@en .
 
-wd:Q96 rdfs:label "Mexico"@en,
-        "メキシコ"@ja .
-
 wd:Q168082 rdfs:label "Hungarian State Railways"@en,
         "ハンガリー国鉄"@ja .
 
@@ -277586,6 +277695,9 @@ wd:Q697926 rdfs:label "Taiwan Railways Administration"@en,
 
 wd:Q83824 rdfs:label "DSB"@en,
         "デンマーク国鉄"@ja .
+
+wd:Q96 rdfs:label "Mexico"@en,
+        "メキシコ"@ja .
 
 wd:Q303212 rdfs:label "Elsässische Maschinenbau-Gesellschaft Grafenstaden"@en,
         "グラフェンスタデン・アルザス工業"@ja .
@@ -277731,9 +277843,6 @@ wd:Q1162114 rdfs:label "Victorian Railways"@en,
 wd:Q1473764 rdfs:label "Southern Pacific Transportation Company"@en,
         "サザン・パシフィック鉄道"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q1034433 rdfs:label "Cape Government Railways"@en,
         "ケープ植民地鉄道"@ja .
 
@@ -277743,14 +277852,14 @@ wd:Q219 rdfs:label "Bulgaria"@en,
 wd:Q881184 rdfs:label "Imperial Railways in Alsace-Lorraine"@en,
         "帝国アルザス＝ロレーヌ鉄道総局"@ja .
 
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
 wd:Q422111 rdfs:label "Hohenzollern Locomotive Works"@en,
         "ホーエンツォレルン機関車製造"@ja .
 
 wd:Q188161 rdfs:label "Dutch East Indies"@en,
         "オランダ領東インド"@ja .
-
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
 
 wd:Q4037739 rdfs:label "Dübs and Company"@en,
         "ダブス"@ja .
@@ -277763,6 +277872,9 @@ wd:Q819425 rdfs:label "Indian Railways"@en,
 
 wd:Q822381 rdfs:label "DÜWAG"@en,
         "DUEWAG"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q764728 rdfs:label "2-10-0"@en,
         "車輪配置 2-10-0"@ja .
