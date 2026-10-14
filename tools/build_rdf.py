@@ -163,6 +163,7 @@ CLASSES = {
     "Q17183109": ("Q17183109", None, None),                   # Nippon Sharyo DMU (UP Express, SMART)
     "Q130362331": ("Q130362331", None, None),                 # Renfe Class 106 (Talgo Avril)
     "Q19896241": ("Q19896241", None, None),                   # Scomi SUTRA (KL Monorail)
+    "Q7585955": ("Q7585955", None, None),                     # Sri Lanka Railways S12 (CSR Sifang DMU)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -229,7 +230,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q125350160": "レールジェット（第1世代）",
             "Q134207119": "BART フリート・オブ・ザ・フューチャー",
             "Q4033502": "アフロシヨブ（Talgo 250）",
-            "Q25197235": "シカゴ「L」CTA 7000系"}
+            "Q25197235": "シカゴ「L」CTA 7000系",
+            "Q7585955": "スリランカ鉄道 S12 形"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -311,6 +313,7 @@ LIVERIES = {
     "trtc-c381": ({"en": "Taipei Metro C381 livery (stainless with blue wing and stripe)", "ja": "台北捷運 C381 型の塗装（ステンレスに青い翼と帯）"}, "Q11411921"),
     "up-express": ({"en": "UP Express livery (stainless with olive and orange bands)", "ja": "UP エクスプレスの塗装（ステンレスにオリーブと橙の帯）"}, "Q3307451"),
     "rapidkl-monorail": ({"en": "Rapid KL monorail livery (red and white)", "ja": "Rapid KL のモノレールの塗装（赤と白）"}, "Q3271384"),
+    "slr-s12": ({"en": "Sri Lanka Railways S12 livery (blue, 2012-)", "ja": "スリランカ鉄道 S12 形の塗装（青、2012 年から）"}, "Q7585945"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -401,6 +404,7 @@ MODELS = {
     "upexpress": ("Q17183109", "up-express", None),
     "avril": ("Q130362331", "renfe-ave", None),
     "klmonorail": ("Q19896241", "rapidkl-monorail", None),
+    "lanka-s12": ("Q7585955", "slr-s12", None),
 }
 
 

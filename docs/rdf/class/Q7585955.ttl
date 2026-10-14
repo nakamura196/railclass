@@ -1,7 +1,9 @@
 @prefix cls: <https://w3id.org/railclass/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -10,10 +12,12 @@
 
 cls:Q7585955 a skos:Concept,
         tb:VehicleClass ;
-    rdfs:label "Sri Lanka Railways S12"@en ;
+    rdfs:label "Sri Lanka Railways S12"@en,
+        "スリランカ鉄道 S12 形"@ja ;
     skos:exactMatch wd:Q7585955 ;
     skos:inScheme cls: ;
-    skos:prefLabel "Sri Lanka Railways S12"@en ;
+    skos:prefLabel "Sri Lanka Railways S12"@en,
+        "スリランカ鉄道 S12 形"@ja ;
     prov:wasDerivedFrom wd:Q7585955 ;
     wdt:P1064 wd:Q1493335 ;
     wdt:P137 wd:Q7585945 ;
@@ -21,6 +25,7 @@ cls:Q7585955 a skos:Concept,
     wdt:P176 wd:Q997617 ;
     wdt:P279 wd:Q1567915 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Class%20S12.jpg> ;
-    tb:has3DModel false ;
+    schema:subjectOf mdl:lanka-s12 ;
+    tb:has3DModel true ;
     tb:operatingCountry wd:Q854 .
 

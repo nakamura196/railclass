@@ -214176,22 +214176,6 @@ cls:Q7585954 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q854 .
 
-cls:Q7585955 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Sri Lanka Railways S12"@en ;
-    skos:exactMatch wd:Q7585955 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Sri Lanka Railways S12"@en ;
-    prov:wasDerivedFrom wd:Q7585955 ;
-    wdt:P1064 wd:Q1493335 ;
-    wdt:P137 wd:Q7585945 ;
-    wdt:P17 wd:Q854 ;
-    wdt:P176 wd:Q997617 ;
-    wdt:P279 wd:Q1567915 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Class%20S12.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q854 .
-
 cls:Q7585956 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Sri Lanka Railways S11"@en ;
@@ -259164,6 +259148,25 @@ cls:Q727577 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q7585955 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Sri Lanka Railways S12"@en,
+        "スリランカ鉄道 S12 形"@ja ;
+    skos:exactMatch wd:Q7585955 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Sri Lanka Railways S12"@en,
+        "スリランカ鉄道 S12 形"@ja ;
+    prov:wasDerivedFrom wd:Q7585955 ;
+    wdt:P1064 wd:Q1493335 ;
+    wdt:P137 wd:Q7585945 ;
+    wdt:P17 wd:Q854 ;
+    wdt:P176 wd:Q997617 ;
+    wdt:P279 wd:Q1567915 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Class%20S12.jpg> ;
+    schema:subjectOf mdl:lanka-s12 ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q854 .
+
 <https://w3id.org/railclass/Q7667928#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q54371#P3438> ;
     skos:note "wikidata"@en ;
@@ -265791,6 +265794,92 @@ mdl:ktxeum a schema:3DModel ;
         <https://w3id.org/railclass/model/ktxeum#color5>,
         <https://w3id.org/railclass/model/ktxeum#color6> ;
     tb:liveryOf wd:Q18169 .
+
+mdl:lanka-s12 a schema:3DModel ;
+    schema:about cls:Q7585955 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/lanka-s12.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "中国 CSR 四方製の気動車の動力車。2012年からの青い塗装で、山岳区間のナインアーチ橋でおなじみ。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 39.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "スリランカ鉄道 S12 形"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/lanka-s12/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/lanka-s12.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#lanka-s12> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/lanka-s12#livery> .
+
+<https://w3id.org/railclass/model/lanka-s12#color1> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#1470DA" ;
+    tb:areaShare 0.6875 .
+
+<https://w3id.org/railclass/model/lanka-s12#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C9CCCC" ;
+    tb:areaShare 0.1264 .
+
+<https://w3id.org/railclass/model/lanka-s12#color3> a tb:ColorSample ;
+    rdfs:label "louvre" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5E6C78" ;
+    tb:areaShare 0.0599 .
+
+<https://w3id.org/railclass/model/lanka-s12#color4> a tb:ColorSample ;
+    rdfs:label "slat" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#4A5560" ;
+    tb:areaShare 0.0505 .
+
+<https://w3id.org/railclass/model/lanka-s12#color5> a tb:ColorSample ;
+    rdfs:label "mask" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#23272C" ;
+    tb:areaShare 0.0403 .
+
+<https://w3id.org/railclass/model/lanka-s12#color6> a tb:ColorSample ;
+    rdfs:label "sole" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2A2D31" ;
+    tb:areaShare 0.0142 .
+
+<https://w3id.org/railclass/model/lanka-s12#color7> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#4E6070" ;
+    tb:areaShare 0.0077 .
+
+<https://w3id.org/railclass/model/lanka-s12#color8> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0057 .
+
+<https://w3id.org/railclass/model/lanka-s12#livery> a tb:Livery ;
+    rdfs:label "Sri Lanka Railways S12 livery (blue, 2012-)"@en,
+        "スリランカ鉄道 S12 形の塗装（青、2012 年から）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/lanka-s12/slr_lanka-s12.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/lanka-s12#color1>,
+        <https://w3id.org/railclass/model/lanka-s12#color2>,
+        <https://w3id.org/railclass/model/lanka-s12#color3>,
+        <https://w3id.org/railclass/model/lanka-s12#color4>,
+        <https://w3id.org/railclass/model/lanka-s12#color5>,
+        <https://w3id.org/railclass/model/lanka-s12#color6>,
+        <https://w3id.org/railclass/model/lanka-s12#color7>,
+        <https://w3id.org/railclass/model/lanka-s12#color8> ;
+    tb:liveryOf wd:Q7585945 .
 
 mdl:lisbon28 a schema:3DModel ;
     schema:about cls:tb-lisbon28 ;
@@ -278268,9 +278357,6 @@ wd:Q6917118 rdfs:label "Motala Verkstad"@en .
 wd:Q7267923 rdfs:label "CRRC Qishuyan Co., Ltd."@en,
         "中国中車戚墅堰機車"@ja .
 
-wd:Q7585945 rdfs:label "Sri Lanka Railways"@en,
-        "スリランカ鉄道局"@ja .
-
 wd:Q7660181 rdfs:label "Sydney Trains"@en,
         "シドニー・トレインズ"@ja .
 
@@ -278321,6 +278407,9 @@ wd:Q696016 rdfs:label "Gotha"@en,
 
 wd:Q7339806 rdfs:label "Roanoke Shops"@en,
         "ロアノーク工場"@ja .
+
+wd:Q7585945 rdfs:label "Sri Lanka Railways"@en,
+        "スリランカ鉄道局"@ja .
 
 wd:Q795231 rdfs:label "Căile Ferate Române"@en,
         "ルーマニア鉄道"@ja .
@@ -279485,13 +279574,13 @@ wd:Q922964 rdfs:label "Swindon Works"@en,
 wd:Q391795 rdfs:label "Škoda Works"@en,
         "シュコダ財閥"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q838212 rdfs:label "CAF"@ja .
 
 wd:Q188712 rdfs:label "Empire of Japan"@en,
         "大日本帝国"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q741266 rdfs:label "Southern Railway"@en,
         "サザン鉄道"@ja .
@@ -279721,9 +279810,6 @@ wd:Q753779 rdfs:label "passenger railroad car"@en,
 wd:Q6071527 rdfs:label "5 ft 3 in gauge"@en,
         "5フィート3インチ軌間"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q213 rdfs:label "Czech Republic"@en,
         "チェコ共和国"@ja .
 
@@ -279731,6 +279817,9 @@ wd:Q21251675 rdfs:label "3000 V DC railway electrification"@en,
         "直流3000V鉄道電化"@ja .
 
 wd:Q309084 rdfs:label "アルストム"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q804868 rdfs:label "Baldwin Locomotive Works"@en,
         "ボールドウィン・ロコモティブ・ワークス"@ja .
