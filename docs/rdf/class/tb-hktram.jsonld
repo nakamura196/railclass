@@ -1,0 +1,111 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/tb-hktram",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Country and operator from Wikidata Q385245 (Hong Kong Tramways, the system) and Q15902782 (the company); the 7th-generation body (2011-) from en.wikipedia 'Hong Kong Tramways' via the skytrain lab note docs/notes/hktram.md (2026-10-13)."
+      },
+      "handEntered": [
+        {
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P137"
+        },
+        {
+          "@id": "wdt:P279"
+        },
+        {
+          "@id": "wdt:P729"
+        }
+      ],
+      "has3DModel": true,
+      "lineUse": {
+        "@id": "https://w3id.org/railclass/tb-hktram#line1"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Hong Kong Tramways double-deck tram (7th generation)"
+        },
+        {
+          "@language": "ja",
+          "@value": "香港の路面電車（第 7 世代、2 階建て）"
+        }
+      ],
+      "schema:subjectOf": {
+        "@id": "https://w3id.org/railclass/model/hktram"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/railclass/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Hong Kong Tramways double-deck tram (7th generation)"
+        },
+        {
+          "@language": "ja",
+          "@value": "香港の路面電車（第 7 世代、2 階建て）"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q385245"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q15902782"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q8646"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3407658"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2011"
+      }
+    },
+    {
+      "@id": "wd:Q385245",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hong Kong Tramways"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/tb-hktram#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q385245"
+      },
+      "line": {
+        "@id": "wd:Q385245"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "the Hong Kong Tramways system itself; Wikidata has no item for its 7th-generation cars"
+      },
+      "sourceSection": "Wikidata (the system)",
+      "useStatus": "current"
+    }
+  ]
+}

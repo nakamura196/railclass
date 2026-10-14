@@ -167,6 +167,7 @@ CLASSES = {
     "Q6955219": ("Q6955219", None, None),                     # NR class (Indian Pacific livery, NR86)
     "Q935909": ("Q935909", None, None),                       # VR Class Sm3 Pendolino
     "Q57469448": ("Q57469448", None, None),                   # Flytoget Class 78 (CAF Oaris)
+    "tb-hktram": (None, None, {"en": "Hong Kong Tramways double-deck tram (7th generation)", "ja": "香港の路面電車（第 7 世代、2 階建て）"}),  # Hong Kong Tramways 7th-generation double-deck tram (no Wikidata item for the cars; the system Q385245 is linked in tools/class_lines.tsv)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -198,6 +199,8 @@ HAND = {
     "tb-bluetrain": {"country": ["Q258"], "operator": ["Q820804"], "kind": ["Q1691845"], "serviceEntry": [1997]},
     # Mexico; operator of El Insurgente (P137 of Q16642463); CAF; EMU; opening of the first section 2023-09-15
     "tb-insurgente": {"country": ["Q96"], "operator": ["Q139837508"], "manufacturer": ["Q838212"], "kind": ["Q483373"], "serviceEntry": [2023]},
+    # Hong Kong; Hong Kong Tramways (the company); tram; 7th-generation body from 2011. Bodies built in-house, so no manufacturer
+    "tb-hktram": {"country": ["Q8646"], "operator": ["Q15902782"], "kind": ["Q3407658"], "serviceEntry": [2011]},
 }
 HAND_SOURCE = {
     "tb-skytrain-mk1": "Country and operator from Wikidata Q876780 (SkyTrain (Vancouver)); manufacturer from English Wikipedia 'SkyTrain (Vancouver)' (rolling stock section, read 2026-10-09); service entry year from the train-bodies gallery text.",
@@ -212,6 +215,7 @@ HAND_SOURCE = {
     "tb-cairo": "Country and opening year (1996) from Wikidata Q5017773 (Cairo Metro Line 2); builders (Mitsubishi Corporation, Kinki Sharyo and Toshiba) and type from the skytrain lab note docs/notes/cairo.md (2026-10-12); operator entered as the National Authority for Tunnels, the owner of the Cairo Metro.",
     "tb-bluetrain": "Country from Wikidata Q885923 (Blue Train, the service); operator (Transnet), car type (observation car) and the 1997 relaunch with the present coaches from en.wikipedia 'Blue Train (South Africa)' via the skytrain lab note docs/notes/bluetrain.md (2026-10-12).",
     "tb-insurgente": "Country and operator from Wikidata Q16642463 (El Insurgente, the line); manufacturer and type (CAF EMU) and the opening of the first section (2023-09-15) from en.wikipedia 'El Insurgente' via the skytrain lab note docs/notes/insurgente.md (2026-10-12).",
+    "tb-hktram": "Country and operator from Wikidata Q385245 (Hong Kong Tramways, the system) and Q15902782 (the company); the 7th-generation body (2011-) from en.wikipedia 'Hong Kong Tramways' via the skytrain lab note docs/notes/hktram.md (2026-10-13).",
 }
 for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
@@ -322,6 +326,7 @@ LIVERIES = {
     "indian-pacific": ({"en": "Indian Pacific livery (yellow cab, blue hood, wedge-tailed eagle)", "ja": "インディアン・パシフィックの塗装（黄色の運転台、青い車体、オナガイヌワシ）"}, "Q1544385"),
     "vr-sm3": ({"en": "VR Sm3 livery (white with a green band and a forest-art panel)", "ja": "VR の Sm3 の塗装（白に緑の帯と森の絵）"}, "Q913248"),
     "flytoget-grey": ({"en": "Flytoget livery (metallic grey with an orange line round the cab)", "ja": "フリートーゲの塗装（金属の灰色に、運転室を囲むオレンジの線）"}, "Q18325550"),
+    "hktramways-green": ({"en": "Hong Kong Tramways plain green livery (with the smiling bumper)", "ja": "香港トラムの緑一色の塗装（笑顔のバンパー）"}, "Q15902782"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -416,6 +421,7 @@ MODELS = {
     "indianpacific": ("Q6955219", "indian-pacific", None),
     "sm3": ("Q935909", "vr-sm3", None),
     "flytoget": ("Q57469448", "flytoget-grey", None),
+    "hktram": ("tb-hktram", "hktramways-green", None),
 }
 
 

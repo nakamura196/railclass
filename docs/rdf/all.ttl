@@ -264741,6 +264741,70 @@ mdl:haramain a schema:3DModel ;
         <https://w3id.org/railclass/model/haramain#color8> ;
     tb:liveryOf wd:Q843548 .
 
+mdl:hktram a schema:3DModel ;
+    schema:about cls:tb-hktram ;
+    schema:contentUrl <https://railclass.ldas.jp/models/hktram.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 129.6 ] ;
+    schema:description "香港島を走る2階建ての路面電車。2011年からの第7世代の車体、緑一色と「笑顔」のバンパー。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 46.4 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "香港の路面電車（叮叮）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/hktram/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/hktram.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#hktram> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/hktram#livery> .
+
+<https://w3id.org/railclass/model/hktram#color1> a tb:ColorSample ;
+    rdfs:label "green" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#2F5E52" ;
+    tb:areaShare 0.7727 .
+
+<https://w3id.org/railclass/model/hktram#color2> a tb:ColorSample ;
+    rdfs:label "roof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#45484C" ;
+    tb:areaShare 0.1303 .
+
+<https://w3id.org/railclass/model/hktram#color3> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#22443B" ;
+    tb:areaShare 0.0505 .
+
+<https://w3id.org/railclass/model/hktram#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#1C1C1E" ;
+    tb:areaShare 0.0216 .
+
+<https://w3id.org/railclass/model/hktram#color5> a tb:ColorSample ;
+    rdfs:label "roofbox" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B9BDBE" ;
+    tb:areaShare 0.0212 .
+
+<https://w3id.org/railclass/model/hktram#livery> a tb:Livery ;
+    rdfs:label "Hong Kong Tramways plain green livery (with the smiling bumper)"@en,
+        "香港トラムの緑一色の塗装（笑顔のバンパー）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/hktram/hktramways_hktram.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3133 ;
+    tb:colorSample <https://w3id.org/railclass/model/hktram#color1>,
+        <https://w3id.org/railclass/model/hktram#color2>,
+        <https://w3id.org/railclass/model/hktram#color3>,
+        <https://w3id.org/railclass/model/hktram#color4>,
+        <https://w3id.org/railclass/model/hktram#color5> ;
+    tb:liveryOf wd:Q15902782 .
+
 mdl:ic125 a schema:3DModel ;
     schema:about cls:Q1080162 ;
     schema:contentUrl <https://railclass.ldas.jp/models/ic125.glb> ;
@@ -269261,6 +269325,34 @@ cls:tb-gautrain a skos:Concept,
     tb:sourceSection "Wikidata (the system)" ;
     tb:useStatus "current" .
 
+cls:tb-hktram a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Hong Kong Tramways double-deck tram (7th generation)"@en,
+        "香港の路面電車（第 7 世代、2 階建て）"@ja ;
+    dcterms:source "Country and operator from Wikidata Q385245 (Hong Kong Tramways, the system) and Q15902782 (the company); the 7th-generation body (2011-) from en.wikipedia 'Hong Kong Tramways' via the skytrain lab note docs/notes/hktram.md (2026-10-13)."@en ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Hong Kong Tramways double-deck tram (7th generation)"@en,
+        "香港の路面電車（第 7 世代、2 階建て）"@ja ;
+    wdt:P137 wd:Q15902782 ;
+    wdt:P17 wd:Q8646 ;
+    wdt:P279 wd:Q3407658 ;
+    wdt:P729 "2011"^^xsd:gYear ;
+    schema:subjectOf mdl:hktram ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P279,
+        wdt:P729 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/tb-hktram#line1> ;
+    tb:usedOn wd:Q385245 .
+
+<https://w3id.org/railclass/tb-hktram#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q385245> ;
+    skos:note "the Hong Kong Tramways system itself; Wikidata has no item for its 7th-generation cars"@en ;
+    tb:line wd:Q385245 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
 cls:tb-insurgente a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "El Insurgente CAF EMU"@en,
@@ -271729,6 +271821,8 @@ wd:Q3836539 rdfs:label "Lombardia Express"@en .
 wd:Q3849462 rdfs:label "China CNR Corporation"@en,
         "中国北車"@ja .
 
+wd:Q385245 rdfs:label "Hong Kong Tramways"@en .
+
 wd:Q385653 rdfs:label "rubber-tyred tram"@en,
         "ゴムタイヤトラム"@ja .
 
@@ -273059,9 +273153,6 @@ wd:Q85886652 rdfs:label "Jakarta-Bandung high-speed railway"@en .
 wd:Q859243 rdfs:label "Cegléd–Szeged railway"@en .
 
 wd:Q862929 rdfs:label "Zhujiang New Town Automated People Mover System"@en .
-
-wd:Q8646 rdfs:label "Hong Kong"@en,
-        "香港"@ja .
 
 wd:Q86752660 rdfs:label "Silver Line"@en .
 
@@ -274553,6 +274644,9 @@ wd:Q856434 rdfs:label "China Railway CRH3"@en,
 
 wd:Q85847966 rdfs:label "Vivarail D-Train"@en,
         "D-Train"@ja .
+
+wd:Q8646 rdfs:label "Hong Kong"@en,
+        "香港"@ja .
 
 wd:Q8700 rdfs:label "Transports en commun lyonnais"@en,
         "リヨン公共交通"@ja .
@@ -279107,9 +279201,6 @@ wd:Q5955751 rdfs:label "Nasmyth, Wilson and Company"@en,
 
 wd:Q26234694 rdfs:label "0-4-2T"@en .
 
-wd:Q3133 rdfs:label "green"@en,
-        "緑"@ja .
-
 wd:Q336717 rdfs:label "ČD Cargo"@en .
 
 wd:Q429282 rdfs:label "Novocherkassk Electric Locomotive Plant"@en,
@@ -279188,6 +279279,9 @@ wd:Q928 rdfs:label "Philippines"@en,
 
 wd:Q10399603 rdfs:label "battery electric locomotive"@en,
         "蓄電池機関車"@ja .
+
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
 
 wd:Q378181 rdfs:label "Chemins de fer du Midi"@en,
         "ミディ鉄道"@ja .
@@ -279817,14 +279911,14 @@ wd:Q393557 rdfs:label "Železničná spoločnosť Slovensko"@en,
 
 wd:Q7061278 rdfs:label "Norges Statsbaner"@en .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q476988 rdfs:label "Sharp, Stewart and Company"@en,
         "シャープ・スチュアート"@ja .
 
 wd:Q120319 rdfs:label "Mallet locomotive"@en,
         "マレー式機関車"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q171043 rdfs:label "steam locomotive"@en,
         "蒸気機関車"@ja .
@@ -280130,11 +280224,11 @@ wd:Q804868 rdfs:label "Baldwin Locomotive Works"@en,
 wd:Q258 rdfs:label "South Africa"@en,
         "南アフリカ共和国"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q31 rdfs:label "Belgium"@en,
         "ベルギー"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q2037045 rdfs:label "4-4-0"@en,
         "車軸配置 4-4-0"@ja .
