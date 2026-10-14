@@ -145,6 +145,7 @@ CLASSES = {
     "Q681896": ("Q681896", None, None),                       # British Rail Class 390 Pendolino (Avanti West Coast)
     "Q17051139": ("Q17051139", None, None),                   # Kawasaki / CRRC Sifang T251 (Thomson-East Coast Line)
     "Q50318679": ("Q50318679", None, None),                   # China Railway CR400AF Fuxing
+    "Q134207119": ("Q134207119", None, None),                 # BART Fleet of the Future (D car)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -205,7 +206,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q55614147": "カナダ・ライン（現代ロテム製）",
             "Q134533452": "ブライトライン SCB-40",
             "Q96407257": "シドニーメトロ（アルストム メトロポリス）",
-            "Q125350160": "レールジェット（第1世代）"}
+            "Q125350160": "レールジェット（第1世代）",
+            "Q134207119": "BART フリート・オブ・ザ・フューチャー"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -270,6 +272,7 @@ LIVERIES = {
     "avanti-teal": ({"en": "Avanti West Coast livery (teal with a yellow nose, 2019-)", "ja": "アヴァンティ・ウェスト・コーストの塗装（青緑に黄色の鼻、2019 年から）"}, "Q68441695"),
     "smrt-tel": ({"en": "Thomson-East Coast Line livery (white body, black face, orange-brown and gold stripe)", "ja": "トムソン・イーストコースト線の塗装（白い車体、黒い顔、橙茶と金の帯）"}, "Q3243209"),
     "cr-fuxing": ({"en": "China Railway Fuxing standard livery (silver with the red sweep)", "ja": "復興号の標準の塗装（銀に赤い流線）"}, "Q1073489"),
+    "bart-fotf": ({"en": "BART Fleet of the Future livery (white front cap, blue band on aluminium)", "ja": "BART の新型車の塗装（白い顔、アルミに青い帯）"}, "Q610120"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -342,6 +345,7 @@ MODELS = {
     "avanti390": ("Q681896", "avanti-teal", None),
     "sg-tel": ("Q17051139", "smrt-tel", None),
     "cr400af": ("Q50318679", "cr-fuxing", None),
+    "bart": ("Q134207119", "bart-fotf", None),
 }
 
 

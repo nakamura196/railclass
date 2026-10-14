@@ -49711,25 +49711,6 @@ cls:Q1341339 a skos:Concept,
     tb:operatingCountry wd:Q1206012,
         wd:Q36 .
 
-cls:Q134207119 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Fleet of the Future"@en ;
-    skos:exactMatch wd:Q134207119 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Fleet of the Future"@en ;
-    prov:wasDerivedFrom wd:Q134207119 ;
-    wdt:P1064 wd:Q1493335 ;
-    wdt:P137 wd:Q610120 ;
-    wdt:P17 wd:Q30 ;
-    wdt:P176 wd:Q309084,
-        wd:Q688893 ;
-    wdt:P279 wd:Q4102249,
-        wd:Q483373 ;
-    wdt:P729 "2018"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/BART%20train%20from%20Farallones%20Street%20footbridge%20%281%29%2C%20July%202023.JPG> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q30 .
-
 cls:Q134207129 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "A car"@en ;
@@ -245388,6 +245369,28 @@ cls:Q125350160 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q134207119 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Fleet of the Future"@en,
+        "BART フリート・オブ・ザ・フューチャー"@ja ;
+    skos:exactMatch wd:Q134207119 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Fleet of the Future"@en,
+        "BART フリート・オブ・ザ・フューチャー"@ja ;
+    prov:wasDerivedFrom wd:Q134207119 ;
+    wdt:P1064 wd:Q1493335 ;
+    wdt:P137 wd:Q610120 ;
+    wdt:P17 wd:Q30 ;
+    wdt:P176 wd:Q309084,
+        wd:Q688893 ;
+    wdt:P279 wd:Q4102249,
+        wd:Q483373 ;
+    wdt:P729 "2018"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/BART%20train%20from%20Farallones%20Street%20footbridge%20%281%29%2C%20July%202023.JPG> ;
+    schema:subjectOf mdl:bart ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q30 .
+
 <https://w3id.org/railclass/Q134269562#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q628289#P3438> ;
     skos:note "wikidata"@en ;
@@ -262337,6 +262340,86 @@ mdl:ave102 a schema:3DModel ;
         <https://w3id.org/railclass/model/ave102#color6> ;
     tb:liveryOf wd:Q2476154 .
 
+mdl:bart a schema:3DModel ;
+    schema:about cls:Q134207119 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/bart.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "サンフランシスコ湾岸の BART の新型車（D 車）。2018年から。白い顔と青い帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "BART フリート・オブ・ザ・フューチャー"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/bart/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/bart.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#bart> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/bart#livery> .
+
+<https://w3id.org/railclass/model/bart#color1> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#F0F1EF" ;
+    tb:areaShare 0.7212 .
+
+<https://w3id.org/railclass/model/bart#color2> a tb:ColorSample ;
+    rdfs:label "silver2" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#AEB3B8" ;
+    tb:areaShare 0.0853 .
+
+<https://w3id.org/railclass/model/bart#color3> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B6BBC0" ;
+    tb:areaShare 0.0644 .
+
+<https://w3id.org/railclass/model/bart#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0449 .
+
+<https://w3id.org/railclass/model/bart#color5> a tb:ColorSample ;
+    rdfs:label "door" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C2C6CA" ;
+    tb:areaShare 0.0433 .
+
+<https://w3id.org/railclass/model/bart#color6> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2E3A46" ;
+    tb:areaShare 0.0130 .
+
+<https://w3id.org/railclass/model/bart#color7> a tb:ColorSample ;
+    rdfs:label "blue" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#2493D8" ;
+    tb:areaShare 0.0127 .
+
+<https://w3id.org/railclass/model/bart#livery> a tb:Livery ;
+    rdfs:label "BART Fleet of the Future livery (white front cap, blue band on aluminium)"@en,
+        "BART の新型車の塗装（白い顔、アルミに青い帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/bart/bart_bart.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q42519 ;
+    tb:colorSample <https://w3id.org/railclass/model/bart#color1>,
+        <https://w3id.org/railclass/model/bart#color2>,
+        <https://w3id.org/railclass/model/bart#color3>,
+        <https://w3id.org/railclass/model/bart#color4>,
+        <https://w3id.org/railclass/model/bart#color5>,
+        <https://w3id.org/railclass/model/bart#color6>,
+        <https://w3id.org/railclass/model/bart#color7> ;
+    tb:liveryOf wd:Q610120 .
+
 mdl:bluetrain a schema:3DModel ;
     schema:about cls:tb-bluetrain ;
     schema:contentUrl <https://railclass.ldas.jp/models/bluetrain.glb> ;
@@ -273556,9 +273639,6 @@ wd:Q60325071 rdfs:label "Bo′2′2′Bo′"@en .
 
 wd:Q60995871 rdfs:label "rail transport in Georgia"@en .
 
-wd:Q610120 rdfs:label "Bay Area Rapid Transit"@en,
-        "バート"@ja .
-
 wd:Q6133879 rdfs:label "Sengkang LRT line"@en .
 
 wd:Q614819 rdfs:label "De Lijn"@en,
@@ -274268,6 +274348,9 @@ wd:Q5731817 rdfs:label "Concarril"@en,
         "コンカリル"@ja .
 
 wd:Q5779787 rdfs:label "Compañía del Ferrocarril Central de Aragón"@en .
+
+wd:Q610120 rdfs:label "Bay Area Rapid Transit"@en,
+        "バート"@ja .
 
 wd:Q6451428 rdfs:label "M62 locomotive"@en,
         "M62形ディーゼル機関車"@ja .
@@ -277635,9 +277718,6 @@ wd:Q1550653 rdfs:label "Soviet Railways"@en .
 wd:Q1817331 rdfs:label "Pesa"@en,
         "PESA"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q503585 rdfs:label "Korea under Japanese rule"@en,
         "日本統治時代の朝鮮"@ja .
 
@@ -277651,6 +277731,9 @@ wd:Q1162114 rdfs:label "Victorian Railways"@en,
 wd:Q1473764 rdfs:label "Southern Pacific Transportation Company"@en,
         "サザン・パシフィック鉄道"@ja .
 
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
 wd:Q1034433 rdfs:label "Cape Government Railways"@en,
         "ケープ植民地鉄道"@ja .
 
@@ -277660,14 +277743,14 @@ wd:Q219 rdfs:label "Bulgaria"@en,
 wd:Q881184 rdfs:label "Imperial Railways in Alsace-Lorraine"@en,
         "帝国アルザス＝ロレーヌ鉄道総局"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q422111 rdfs:label "Hohenzollern Locomotive Works"@en,
         "ホーエンツォレルン機関車製造"@ja .
 
 wd:Q188161 rdfs:label "Dutch East Indies"@en,
         "オランダ領東インド"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q4037739 rdfs:label "Dübs and Company"@en,
         "ダブス"@ja .
@@ -277778,9 +277861,6 @@ wd:Q36704 rdfs:label "Yugoslavia"@en,
 wd:Q752392 rdfs:label "railcar"@en,
         "自走客車"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q2814117 rdfs:label "Robert Stephenson and Company"@en,
         "ロバート・スチーブンソン・アンド・カンパニー"@ja .
 
@@ -277792,6 +277872,9 @@ wd:Q379439 rdfs:label "Queensland Rail"@en,
 
 wd:Q432790 rdfs:label "Linke-Hofmann"@en,
         "リンケ・ホフマン・ブッシュ"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q2756040 rdfs:label "Société Alsacienne de Constructions Mécaniques"@en,
         "アルザス機械工業協会"@ja .
@@ -278064,14 +278147,14 @@ wd:Q28 rdfs:label "Hungary"@en,
 wd:Q669606 rdfs:label "Swiss Locomotive and Machine Works"@en,
         "スイス・ロコモティブ・アンド・マシン・ワークス"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q2036617 rdfs:label "2-4-0"@en,
         "車輪配置 2-4-0"@ja .
 
 wd:Q27 rdfs:label "Ireland"@en,
         "アイルランド"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q383589 rdfs:label "American Locomotive Company"@en,
         "アメリカン・ロコモティブ"@ja .

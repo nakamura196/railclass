@@ -1,7 +1,9 @@
 @prefix cls: <https://w3id.org/railclass/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -10,10 +12,12 @@
 
 cls:Q134207119 a skos:Concept,
         tb:VehicleClass ;
-    rdfs:label "Fleet of the Future"@en ;
+    rdfs:label "Fleet of the Future"@en,
+        "BART フリート・オブ・ザ・フューチャー"@ja ;
     skos:exactMatch wd:Q134207119 ;
     skos:inScheme cls: ;
-    skos:prefLabel "Fleet of the Future"@en ;
+    skos:prefLabel "Fleet of the Future"@en,
+        "BART フリート・オブ・ザ・フューチャー"@ja ;
     prov:wasDerivedFrom wd:Q134207119 ;
     wdt:P1064 wd:Q1493335 ;
     wdt:P137 wd:Q610120 ;
@@ -24,6 +28,7 @@ cls:Q134207119 a skos:Concept,
         wd:Q483373 ;
     wdt:P729 "2018"^^xsd:gYear ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/BART%20train%20from%20Farallones%20Street%20footbridge%20%281%29%2C%20July%202023.JPG> ;
-    tb:has3DModel false ;
+    schema:subjectOf mdl:bart ;
+    tb:has3DModel true ;
     tb:operatingCountry wd:Q30 .
 
