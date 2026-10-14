@@ -96741,51 +96741,6 @@ cls:Q20986825 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q55 .
 
-cls:Q20988527 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "TCDD HT80000"@en,
-        "トルコ国鉄 HT80000系電車"@ja ;
-    skos:exactMatch wd:Q20988527 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "TCDD HT80000"@en,
-        "トルコ国鉄 HT80000系電車"@ja ;
-    prov:wasDerivedFrom wd:Q20988527 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q28220824 ;
-    wdt:P17 wd:Q43 ;
-    wdt:P176 wd:Q81230 ;
-    wdt:P2052 300.0 ;
-    wdt:P279 wd:Q392909 ;
-    wdt:P729 "2015"^^xsd:gYear ;
-    wdt:P930 wd:Q106530439 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/HT80113%20treni%20Ankara%20Y%C3%BCksek%20H%C4%B1zl%C4%B1%20Tren%20Gar%C4%B1%E2%80%98nda%202025.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q20988527#line1>,
-        <https://w3id.org/railclass/Q20988527#line10>,
-        <https://w3id.org/railclass/Q20988527#line11>,
-        <https://w3id.org/railclass/Q20988527#line12>,
-        <https://w3id.org/railclass/Q20988527#line2>,
-        <https://w3id.org/railclass/Q20988527#line3>,
-        <https://w3id.org/railclass/Q20988527#line4>,
-        <https://w3id.org/railclass/Q20988527#line5>,
-        <https://w3id.org/railclass/Q20988527#line6>,
-        <https://w3id.org/railclass/Q20988527#line7>,
-        <https://w3id.org/railclass/Q20988527#line8>,
-        <https://w3id.org/railclass/Q20988527#line9> ;
-    tb:operatingCountry wd:Q43 ;
-    tb:usedOn wd:Q1070179,
-        wd:Q110554636,
-        wd:Q110554638,
-        wd:Q114314010,
-        wd:Q117866288,
-        wd:Q1331307,
-        wd:Q136094057,
-        wd:Q20471809,
-        wd:Q513146,
-        wd:Q5994107,
-        wd:Q5997215,
-        wd:Q6019516 .
-
 cls:Q20991285 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "SNCB R"@en ;
@@ -247709,6 +247664,52 @@ cls:Q20926238 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q20988527 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "TCDD HT80000"@en,
+        "トルコ国鉄 HT80000系電車"@ja ;
+    skos:exactMatch wd:Q20988527 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "TCDD HT80000"@en,
+        "トルコ国鉄 HT80000系電車"@ja ;
+    prov:wasDerivedFrom wd:Q20988527 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q28220824 ;
+    wdt:P17 wd:Q43 ;
+    wdt:P176 wd:Q81230 ;
+    wdt:P2052 300.0 ;
+    wdt:P279 wd:Q392909 ;
+    wdt:P729 "2015"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/HT80113%20treni%20Ankara%20Y%C3%BCksek%20H%C4%B1zl%C4%B1%20Tren%20Gar%C4%B1%E2%80%98nda%202025.jpg> ;
+    schema:subjectOf mdl:yht ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q20988527#line1>,
+        <https://w3id.org/railclass/Q20988527#line10>,
+        <https://w3id.org/railclass/Q20988527#line11>,
+        <https://w3id.org/railclass/Q20988527#line12>,
+        <https://w3id.org/railclass/Q20988527#line2>,
+        <https://w3id.org/railclass/Q20988527#line3>,
+        <https://w3id.org/railclass/Q20988527#line4>,
+        <https://w3id.org/railclass/Q20988527#line5>,
+        <https://w3id.org/railclass/Q20988527#line6>,
+        <https://w3id.org/railclass/Q20988527#line7>,
+        <https://w3id.org/railclass/Q20988527#line8>,
+        <https://w3id.org/railclass/Q20988527#line9> ;
+    tb:operatingCountry wd:Q43 ;
+    tb:usedOn wd:Q1070179,
+        wd:Q110554636,
+        wd:Q110554638,
+        wd:Q114314010,
+        wd:Q117866288,
+        wd:Q1331307,
+        wd:Q136094057,
+        wd:Q20471809,
+        wd:Q513146,
+        wd:Q5994107,
+        wd:Q5997215,
+        wd:Q6019516 .
+
 <https://w3id.org/railclass/Q20988527#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1070179#P3438> ;
     skos:note "wikidata"@en ;
@@ -267350,6 +267351,78 @@ mdl:x2000 a schema:3DModel ;
         <https://w3id.org/railclass/model/x2000#color9> ;
     tb:liveryOf wd:Q8301325 .
 
+mdl:yht a schema:3DModel ;
+    schema:about cls:Q20988527 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/yht.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.9 ] ;
+    schema:description "トルコの高速電車。白にターコイズの帯の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "YHT（ヴェラロ TR）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/yht/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/yht.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#yht> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/yht#livery> .
+
+<https://w3id.org/railclass/model/yht#color1> a tb:ColorSample ;
+    rdfs:label "pearl" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#ECEEEC" ;
+    tb:areaShare 0.6177 .
+
+<https://w3id.org/railclass/model/yht#color2> a tb:ColorSample ;
+    rdfs:label "teal" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#2BA3B5" ;
+    tb:areaShare 0.2268 .
+
+<https://w3id.org/railclass/model/yht#color3> a tb:ColorSample ;
+    rdfs:label "pale" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#A2C8CE" ;
+    tb:areaShare 0.0956 .
+
+<https://w3id.org/railclass/model/yht#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0249 .
+
+<https://w3id.org/railclass/model/yht#color5> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#4E6470" ;
+    tb:areaShare 0.0149 .
+
+<https://w3id.org/railclass/model/yht#color6> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#2B3A8C" ;
+    tb:areaShare 0.0071 .
+
+<https://w3id.org/railclass/model/yht#livery> a tb:Livery ;
+    rdfs:label "TCDD YHT livery (white with turquoise roof and bands)"@en,
+        "TCDD の YHT の塗装（白にターコイズの屋根と帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/yht/tcdd_yht.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444 ;
+    tb:colorSample <https://w3id.org/railclass/model/yht#color1>,
+        <https://w3id.org/railclass/model/yht#color2>,
+        <https://w3id.org/railclass/model/yht#color3>,
+        <https://w3id.org/railclass/model/yht#color4>,
+        <https://w3id.org/railclass/model/yht#color5>,
+        <https://w3id.org/railclass/model/yht#color6> ;
+    tb:liveryOf wd:Q28220824 .
+
 cls:tb-addis a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Addis Ababa Light Rail tram (CNR Changchun)"@en,
@@ -276152,8 +276225,6 @@ wd:Q254483 rdfs:label "Waggonfabrik Fuchs"@en,
 wd:Q2675204 rdfs:label "Scandia AS"@en,
         "スカンディヤ社"@ja .
 
-wd:Q28220824 rdfs:label "TCDD Taşımacılık"@en .
-
 wd:Q2901670 rdfs:label "4-2-2"@en .
 
 wd:Q30116186 rdfs:label "Broadstone Works"@en .
@@ -276266,6 +276337,8 @@ wd:Q25927504 rdfs:label "1′Do1′"@en .
 wd:Q26197032 rdfs:label "4-8-4T"@en .
 
 wd:Q26197695 rdfs:label "2-8-4T"@en .
+
+wd:Q28220824 rdfs:label "TCDD Taşımacılık"@en .
 
 wd:Q3055404 rdfs:label "St. Louis Southwestern Railway"@en,
         "セントルイス・サウスウェスタン鉄道"@ja .
@@ -277951,9 +278024,6 @@ wd:Q819425 rdfs:label "Indian Railways"@en,
 wd:Q822381 rdfs:label "DÜWAG"@en,
         "DUEWAG"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q764728 rdfs:label "2-10-0"@en,
         "車輪配置 2-10-0"@ja .
 
@@ -277963,9 +278033,6 @@ wd:Q1342845 rdfs:label "English Electric"@en,
 wd:Q224 rdfs:label "Croatia"@en,
         "クロアチア"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q5136910 rdfs:label "Clyde Engineering"@en,
         "クライド・エンジニアリング"@ja .
 
@@ -277974,6 +278041,12 @@ wd:Q904589 rdfs:label "Breda"@en,
 
 wd:Q9322 rdfs:label "Deutsche Bahn"@en,
         "ドイツ鉄道"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q26251835 rdfs:label "diesel-mechanical locomotive"@en .
 
@@ -278075,9 +278148,6 @@ wd:Q423 rdfs:label "North Korea"@en,
 wd:Q393557 rdfs:label "Železničná spoločnosť Slovensko"@en,
         "鉄道企業体スロバキア"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q7061278 rdfs:label "Norges Statsbaner"@en .
 
 wd:Q476988 rdfs:label "Sharp, Stewart and Company"@en,
@@ -278099,6 +278169,9 @@ wd:Q3959904 rdfs:label "multiple unit"@en,
         "動力分散方式の列車編成"@ja .
 
 wd:Q52912 rdfs:label "Statens Järnvägar"@en .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q1399767 rdfs:label "Sächsische Maschinenfabrik"@en,
         "ザクセン機械工場"@ja .

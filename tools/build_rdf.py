@@ -148,6 +148,7 @@ CLASSES = {
     "Q134207119": ("Q134207119", None, None),                 # BART Fleet of the Future (D car)
     "tb-insurgente": (None, None, {"en": "El Insurgente CAF EMU", "ja": "エル・インスルヘンテの電車（CAF 製）"}),  # El Insurgente CAF EMU (no Wikidata item for the trains; the line Q16642463 is linked in tools/class_lines.tsv)
     "Q4970771": ("Q4970771", None, None),                     # British Rail Class 345 (Elizabeth line Aventra)
+    "Q20988527": ("Q20988527", None, None),                   # TCDD HT80000 (Siemens Velaro TR)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -280,6 +281,7 @@ LIVERIES = {
     "bart-fotf": ({"en": "BART Fleet of the Future livery (white front cap, blue band on aluminium)", "ja": "BART の新型車の塗装（白い顔、アルミに青い帯）"}, "Q610120"),
     "insurgente-flag": ({"en": "El Insurgente livery (white with a red nose and stripes in the Mexican flag colours)", "ja": "エル・インスルヘンテの塗装（白地に赤い先頭と国旗の三色の帯）"}, "Q139837508"),
     "tfl-elizabeth": ({"en": "Elizabeth line livery (white, black window band, purple stripes)", "ja": "エリザベス線の塗装（白、黒い窓帯、紫の帯）"}, "Q113577377"),
+    "tcdd-yht": ({"en": "TCDD YHT livery (white with turquoise roof and bands)", "ja": "TCDD の YHT の塗装（白にターコイズの屋根と帯）"}, "Q28220824"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -355,6 +357,7 @@ MODELS = {
     "bart": ("Q134207119", "bart-fotf", None),
     "insurgente": ("tb-insurgente", "insurgente-flag", None),
     "elizabeth": ("Q4970771", "tfl-elizabeth", None),
+    "yht": ("Q20988527", "tcdd-yht", None),
 }
 
 

@@ -1,8 +1,10 @@
 @prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -27,7 +29,8 @@ cls:Q20988527 a skos:Concept,
     wdt:P729 "2015"^^xsd:gYear ;
     wdt:P930 wd:Q106530439 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/HT80113%20treni%20Ankara%20Y%C3%BCksek%20H%C4%B1zl%C4%B1%20Tren%20Gar%C4%B1%E2%80%98nda%202025.jpg> ;
-    tb:has3DModel false ;
+    schema:subjectOf mdl:yht ;
+    tb:has3DModel true ;
     tb:lineUse <https://w3id.org/railclass/Q20988527#line1>,
         <https://w3id.org/railclass/Q20988527#line10>,
         <https://w3id.org/railclass/Q20988527#line11>,
