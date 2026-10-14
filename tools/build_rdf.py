@@ -171,6 +171,7 @@ CLASSES = {
     "Q95613096": ("Q95613096", None, None),                   # LRTA 13000 class (Manila LRT Line 1, CAF/Mitsubishi)
     "tb-delhimetro": (None, None, {"en": "Delhi Metro Magenta Line car (Hyundai Rotem)", "ja": "デリーメトロ マゼンタ線の電車（現代ロテム製）"}),  # Delhi Metro Magenta Line Hyundai Rotem car (no Wikidata item for the cars; the line Q19893471 is linked in tools/class_lines.tsv)
     "Q18632551": ("Q18632551", None, None),                   # Wuppertal Schwebebahn GTW Generation 15
+    "Q22344403": ("Q22344403", None, None),                   # DB Classes 483 and 484 (Berlin S-Bahn)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -247,7 +248,8 @@ LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q807890
             "Q7585955": "スリランカ鉄道 S12 形",
             "Q6955219": "NR 形",
             "Q57469448": "フリートーゲ 78 形",
-            "Q18632551": "ヴッパータール空中鉄道 GTW 15"}
+            "Q18632551": "ヴッパータール空中鉄道 GTW 15",
+            "Q22344403": "ベルリン S バーン 483/484 形"}
 
 # Liveries: id -> (labels, operator Q id whose livery it is)
 LIVERIES = {
@@ -337,6 +339,7 @@ LIVERIES = {
     "lrmc-13000": ({"en": "LRT Line 1 13000 class livery (red and stainless with a black forehead)", "ja": "LRT 1 号線 13000 形の塗装（赤とステンレスに黒い額）"}, "Q65087474"),
     "dmrc-magenta": ({"en": "Delhi Metro Magenta Line livery (stainless with magenta bands, black helmet nose)", "ja": "デリーメトロ マゼンタ線の塗装（ステンレスにマゼンタの帯、黒いヘルメットの鼻）"}, "Q1029339"),
     "wsw-gtw15": ({"en": "WSW Schwebebahn livery (pale sky blue)", "ja": "ヴッパータール空中鉄道の塗装（淡い空色）"}, "Q2537722"),
+    "sbahn-berlin": ({"en": "Berlin S-Bahn livery (traditional red and ochre)", "ja": "ベルリン S バーンの塗装（伝統の赤と黄土色）"}, "Q12374454"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -435,6 +438,7 @@ MODELS = {
     "manila-lrt1": ("Q95613096", "lrmc-13000", None),
     "delhimetro": ("tb-delhimetro", "dmrc-magenta", None),
     "schwebebahn": ("Q18632551", "wsw-gtw15", None),
+    "sbahn483": ("Q22344403", "sbahn-berlin", None),
 }
 
 

@@ -1,8 +1,10 @@
 @prefix cls: <https://w3id.org/railclass/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tb: <https://w3id.org/railclass/vocab#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -11,10 +13,12 @@
 
 cls:Q22344403 a skos:Concept,
         tb:VehicleClass ;
-    rdfs:label "DB Classes 483 and 484"@en ;
+    rdfs:label "DB Classes 483 and 484"@en,
+        "ベルリン S バーン 483/484 形"@ja ;
     skos:exactMatch wd:Q22344403 ;
     skos:inScheme cls: ;
-    skos:prefLabel "DB Classes 483 and 484"@en ;
+    skos:prefLabel "DB Classes 483 and 484"@en,
+        "ベルリン S バーン 483/484 形"@ja ;
     prov:wasDerivedFrom wd:Q22344403 ;
     wdt:P1064 wd:Q1999572 ;
     wdt:P137 wd:Q12374454 ;
@@ -23,7 +27,8 @@ cls:Q22344403 a skos:Concept,
     wdt:P2052 100.0 ;
     wdt:P279 wd:Q483373 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Baureihe%20483-484%20der%20S-Bahn%20Berlin.jpg> ;
-    tb:has3DModel false ;
+    schema:subjectOf mdl:sbahn483 ;
+    tb:has3DModel true ;
     tb:lineUse <https://w3id.org/railclass/Q22344403#line1>,
         <https://w3id.org/railclass/Q22344403#line2>,
         <https://w3id.org/railclass/Q22344403#line3>,

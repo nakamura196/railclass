@@ -101597,35 +101597,6 @@ cls:Q22341190 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q30 .
 
-cls:Q22344403 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "DB Classes 483 and 484"@en ;
-    skos:exactMatch wd:Q22344403 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "DB Classes 483 and 484"@en ;
-    prov:wasDerivedFrom wd:Q22344403 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q12374454 ;
-    wdt:P176 wd:Q666703,
-        wd:Q81230 ;
-    wdt:P2052 100.0 ;
-    wdt:P279 wd:Q483373 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Baureihe%20483-484%20der%20S-Bahn%20Berlin.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q22344403#line1>,
-        <https://w3id.org/railclass/Q22344403#line2>,
-        <https://w3id.org/railclass/Q22344403#line3>,
-        <https://w3id.org/railclass/Q22344403#line4>,
-        <https://w3id.org/railclass/Q22344403#line5>,
-        <https://w3id.org/railclass/Q22344403#line6> ;
-    tb:operatingCountry wd:Q183 ;
-    tb:usedOn wd:Q100985389,
-        wd:Q2090939,
-        wd:Q3737194,
-        wd:Q3742025,
-        wd:Q4048678,
-        wd:Q99654 .
-
 cls:Q2234591 a skos:Concept,
         tb:VehicleClass ;
     skos:exactMatch wd:Q2234591 ;
@@ -247872,6 +247843,38 @@ cls:Q21017008 a skos:Concept,
     tb:useStatus "historical" ;
     tb:usedUntil "2011"^^xsd:gYear .
 
+cls:Q22344403 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "DB Classes 483 and 484"@en,
+        "ベルリン S バーン 483/484 形"@ja ;
+    skos:exactMatch wd:Q22344403 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "DB Classes 483 and 484"@en,
+        "ベルリン S バーン 483/484 形"@ja ;
+    prov:wasDerivedFrom wd:Q22344403 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q12374454 ;
+    wdt:P176 wd:Q666703,
+        wd:Q81230 ;
+    wdt:P2052 100.0 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Baureihe%20483-484%20der%20S-Bahn%20Berlin.jpg> ;
+    schema:subjectOf mdl:sbahn483 ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q22344403#line1>,
+        <https://w3id.org/railclass/Q22344403#line2>,
+        <https://w3id.org/railclass/Q22344403#line3>,
+        <https://w3id.org/railclass/Q22344403#line4>,
+        <https://w3id.org/railclass/Q22344403#line5>,
+        <https://w3id.org/railclass/Q22344403#line6> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q100985389,
+        wd:Q2090939,
+        wd:Q3737194,
+        wd:Q3742025,
+        wd:Q4048678,
+        wd:Q99654 .
+
 <https://w3id.org/railclass/Q22344403#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q100985389#P3438> ;
     skos:note "wikidata"@en ;
@@ -267625,6 +267628,78 @@ mdl:santiago-chillan a schema:3DModel ;
         <https://w3id.org/railclass/model/santiago-chillan#color8> ;
     tb:liveryOf wd:Q679910 .
 
+mdl:sbahn483 a schema:3DModel ;
+    schema:about cls:Q22344403 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/sbahn483.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 149.5 ] ;
+    schema:description "ベルリンの近郊電車。2021年からの新形式で、伝統の赤と黄土色の塗装。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "ベルリン S バーン 483/484 形"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/sbahn483/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/sbahn483.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#sbahn483> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/sbahn483#livery> .
+
+<https://w3id.org/railclass/model/sbahn483#color1> a tb:ColorSample ;
+    rdfs:label "ochre" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#ECD392" ;
+    tb:areaShare 0.8032 .
+
+<https://w3id.org/railclass/model/sbahn483#color2> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#121316" ;
+    tb:areaShare 0.0862 .
+
+<https://w3id.org/railclass/model/sbahn483#color3> a tb:ColorSample ;
+    rdfs:label "sred" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#C01F2C" ;
+    tb:areaShare 0.0707 .
+
+<https://w3id.org/railclass/model/sbahn483#color4> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2C343E" ;
+    tb:areaShare 0.0140 .
+
+<https://w3id.org/railclass/model/sbahn483#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0062 .
+
+<https://w3id.org/railclass/model/sbahn483#color6> a tb:ColorSample ;
+    rdfs:label "ledge" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#7E141C" ;
+    tb:areaShare 0.0061 .
+
+<https://w3id.org/railclass/model/sbahn483#livery> a tb:Livery ;
+    rdfs:label "Berlin S-Bahn livery (traditional red and ochre)"@en,
+        "ベルリン S バーンの塗装（伝統の赤と黄土色）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/sbahn483/sbahn_sbahn483.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q3142,
+        wd:Q39338 ;
+    tb:colorSample <https://w3id.org/railclass/model/sbahn483#color1>,
+        <https://w3id.org/railclass/model/sbahn483#color2>,
+        <https://w3id.org/railclass/model/sbahn483#color3>,
+        <https://w3id.org/railclass/model/sbahn483#color4>,
+        <https://w3id.org/railclass/model/sbahn483#color5>,
+        <https://w3id.org/railclass/model/sbahn483#color6> ;
+    tb:liveryOf wd:Q12374454 .
+
 mdl:schwebebahn a schema:3DModel ;
     schema:about cls:Q18632551 ;
     schema:contentUrl <https://railclass.ldas.jp/models/schwebebahn.glb> ;
@@ -276818,9 +276893,6 @@ wd:Q1213618 rdfs:label "NE 81"@en .
 
 wd:Q123179018 rdfs:label "RE 3"@en .
 
-wd:Q12374454 rdfs:label "S-Bahn Berlin GmbH"@en,
-        "Sバーンベルリン"@ja .
-
 wd:Q124126039 rdfs:label "Ouigo Train Classique"@en .
 
 wd:Q1244599 rdfs:label "Nizam's Guaranteed State Railway"@en .
@@ -277311,6 +277383,9 @@ wd:Q11886832 rdfs:label "VR Pasila machine shop"@en .
 wd:Q11992325 rdfs:label "Norwegian Trunk Railway"@en .
 
 wd:Q12296848 rdfs:label "Tramkar"@en .
+
+wd:Q12374454 rdfs:label "S-Bahn Berlin GmbH"@en,
+        "Sバーンベルリン"@ja .
 
 wd:Q1311582 rdfs:label "Railways of the Saarland"@en,
         "ザールラント鉄道"@ja .
@@ -279669,9 +279744,6 @@ wd:Q2738829 rdfs:label "Fiat Ferroviaria"@en,
 wd:Q2806492 rdfs:label "0-4-2"@en,
         "車輪配置 0-4-2"@ja .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q403 rdfs:label "Serbia"@en,
         "セルビア"@ja .
 
@@ -279719,6 +279791,9 @@ wd:Q1932006 rdfs:label "Midland Railway"@en,
         "ミッドランド鉄道"@ja .
 
 wd:Q26185325 rdfs:label "0-10-0T"@en .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q4931035 rdfs:label "Bo′Bo′Bo′"@en .
 
@@ -279858,9 +279933,6 @@ wd:Q5013176 rdfs:label "CRRC Dalian Co., Ltd."@en,
 wd:Q692083 rdfs:label "SIG Group"@en,
         "シグ"@ja .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q499967 rdfs:label "Turkish State Railways"@en,
         "トルコ国鉄"@ja .
 
@@ -279903,6 +279975,9 @@ wd:Q13402959 rdfs:label "high-speed train"@en,
 
 wd:Q2449525 rdfs:label "Transnet Freight Rail"@en,
         "スポールネット"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q5261524 rdfs:label "Derby Works"@en,
         "ダービー鉄道製作所"@ja .
@@ -280209,11 +280284,11 @@ wd:Q1399767 rdfs:label "Sächsische Maschinenfabrik"@en,
 wd:Q41 rdfs:label "Greece"@en,
         "ギリシャ"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q1092174 rdfs:label "Neilson and Company"@en,
         "ニールソン"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q26208746 rdfs:label "0-6-2T"@en .
 
