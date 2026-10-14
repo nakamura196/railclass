@@ -147866,24 +147866,6 @@ cls:Q4032931 a skos:Concept,
     tb:has3DModel false ;
     tb:operatingCountry wd:Q30 .
 
-cls:Q4033502 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "Afrosiyob Series"@en ;
-    skos:exactMatch wd:Q4033502 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "Afrosiyob Series"@en ;
-    prov:wasDerivedFrom wd:Q4033502 ;
-    wdt:P1064 wd:Q1197451 ;
-    wdt:P137 wd:Q2093569 ;
-    wdt:P17 wd:Q265 ;
-    wdt:P176 wd:Q1100969,
-        wd:Q9008479 ;
-    wdt:P279 wd:Q12816984,
-        wd:Q483373 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Afrosiyob%20Express%20Train%20in%20Station%20-%20Samarkand%20-%20Uzbekistan%20%287502824436%29%20%283%29.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q265 .
-
 cls:Q4034593 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "Hunslet Austerity 0-6-0ST"@en,
@@ -252120,6 +252102,27 @@ cls:Q370895 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q4033502 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Afrosiyob Series"@en,
+        "アフロシヨブ（Talgo 250）"@ja ;
+    skos:exactMatch wd:Q4033502 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Afrosiyob Series"@en,
+        "アフロシヨブ（Talgo 250）"@ja ;
+    prov:wasDerivedFrom wd:Q4033502 ;
+    wdt:P1064 wd:Q1197451 ;
+    wdt:P137 wd:Q2093569 ;
+    wdt:P17 wd:Q265 ;
+    wdt:P176 wd:Q1100969,
+        wd:Q9008479 ;
+    wdt:P279 wd:Q12816984,
+        wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Afrosiyob%20Express%20Train%20in%20Station%20-%20Samarkand%20-%20Uzbekistan%20%287502824436%29%20%283%29.jpg> ;
+    schema:subjectOf mdl:afrosiyob ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q265 .
+
 <https://w3id.org/railclass/Q4036910#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q80872#P3438> ;
     skos:note "wikidata"@en ;
@@ -261945,6 +261948,93 @@ mdl:addis a schema:3DModel ;
         <https://w3id.org/railclass/model/addis#color2>,
         <https://w3id.org/railclass/model/addis#color3> ;
     tb:liveryOf wd:Q55639671 .
+
+mdl:afrosiyob a schema:3DModel ;
+    schema:about cls:Q4033502 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/afrosiyob.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "ウズベキスタンの高速列車（Talgo 250）の動力車。空色の屋根と国旗の帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "アフロシヨブ"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/afrosiyob/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/afrosiyob.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#afrosiyob> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/afrosiyob#livery> .
+
+<https://w3id.org/railclass/model/afrosiyob#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#E6E9EC" ;
+    tb:areaShare 0.7349 .
+
+<https://w3id.org/railclass/model/afrosiyob#color2> a tb:ColorSample ;
+    rdfs:label "azure" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#1A8CDC" ;
+    tb:areaShare 0.1489 .
+
+<https://w3id.org/railclass/model/afrosiyob#color3> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2E3C4C" ;
+    tb:areaShare 0.0406 .
+
+<https://w3id.org/railclass/model/afrosiyob#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0185 .
+
+<https://w3id.org/railclass/model/afrosiyob#color5> a tb:ColorSample ;
+    rdfs:label "sgreen" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#1E844C" ;
+    tb:areaShare 0.0150 .
+
+<https://w3id.org/railclass/model/afrosiyob#color6> a tb:ColorSample ;
+    rdfs:label "sblue" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#2A509C" ;
+    tb:areaShare 0.0148 .
+
+<https://w3id.org/railclass/model/afrosiyob#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0087 .
+
+<https://w3id.org/railclass/model/afrosiyob#color8> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#1E2848" ;
+    tb:areaShare 0.0084 .
+
+<https://w3id.org/railclass/model/afrosiyob#livery> a tb:Livery ;
+    rdfs:label "Afrosiyob livery (white with an azure roof and flag-colour stripes)"@en,
+        "アフロシヨブの塗装（白地に空色の屋根と国旗の色の帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/afrosiyob/uty_afrosiyob.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://w3id.org/railclass/model/afrosiyob#color1>,
+        <https://w3id.org/railclass/model/afrosiyob#color2>,
+        <https://w3id.org/railclass/model/afrosiyob#color3>,
+        <https://w3id.org/railclass/model/afrosiyob#color4>,
+        <https://w3id.org/railclass/model/afrosiyob#color5>,
+        <https://w3id.org/railclass/model/afrosiyob#color6>,
+        <https://w3id.org/railclass/model/afrosiyob#color7>,
+        <https://w3id.org/railclass/model/afrosiyob#color8> ;
+    tb:liveryOf wd:Q2093569 .
 
 mdl:airo a schema:3DModel ;
     schema:about cls:Q140611223 ;
@@ -276059,9 +276149,6 @@ wd:Q1937213 rdfs:label "New Zealand Ministry of Works"@en,
 wd:Q20394 rdfs:label "Seoul Metro Corporation"@en,
         "ソウルメトロ"@ja .
 
-wd:Q2093569 rdfs:label "Uzbek Railways"@en,
-        "ウズベキスタン鉄道"@ja .
-
 wd:Q2129877 rdfs:label "Pesa Elf"@en,
         "Elf (鉄道車両)"@ja .
 
@@ -276348,6 +276435,9 @@ wd:Q1967136 rdfs:label "National Express East Anglia"@en,
         "ナショナル・エクスプレス・イースト・アングリア"@ja .
 
 wd:Q200906 rdfs:label "RER C"@en .
+
+wd:Q2093569 rdfs:label "Uzbek Railways"@en,
+        "ウズベキスタン鉄道"@ja .
 
 wd:Q211265 rdfs:label "District line"@en .
 
@@ -278043,9 +278133,6 @@ wd:Q93090957 rdfs:label "SNCF Voyageurs"@en .
 
 wd:Q3112900 rdfs:label "Goša FOM"@en .
 
-wd:Q3133 rdfs:label "green"@en,
-        "緑"@ja .
-
 wd:Q766616 rdfs:label "Slovenske železnice"@en,
         "スロベニア鉄道"@ja .
 
@@ -278094,6 +278181,9 @@ wd:Q184 rdfs:label "Belarus"@en,
         "ベラルーシ"@ja .
 
 wd:Q26233074 rdfs:label "4-4-2T"@en .
+
+wd:Q3133 rdfs:label "green"@en,
+        "緑"@ja .
 
 wd:Q573094 rdfs:label "Schichau-Werke"@en,
         "シーヒャウ・ヴェルケ"@ja .
@@ -278821,19 +278911,19 @@ wd:Q154195 rdfs:label "Kingdom of Bavaria"@en,
 wd:Q5184831 rdfs:label "Crewe Works"@en,
         "クルー鉄道製作所"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q26208367 rdfs:label "2-6-0T"@en .
 
 wd:Q652491 rdfs:label "Orenstein & Koppel"@en,
         "オーレンシュタイン・ウント・コッペル"@ja .
 
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
-
 wd:Q682656 rdfs:label "760 mm track gauge"@en,
         "ボスニアゲージ"@ja .
+
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q664420 rdfs:label "Brown, Boveri & Cie"@en,
         "ブラウン・ボベリ"@ja .
@@ -278915,9 +279005,6 @@ wd:Q336811 rdfs:label "ČKD社"@ja .
 wd:Q34336 rdfs:label "diesel locomotive"@en,
         "ディーゼル機関車"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q26000795 rdfs:label "2-6-2T"@en .
 
 wd:Q538101 rdfs:label "New Zealand Railways Department"@en,
@@ -278928,6 +279015,9 @@ wd:Q7988225 rdfs:label "Western Region of British Railways"@en,
 
 wd:Q1493335 rdfs:label "1676 mm track gauge"@en,
         "インディアンゲージ"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q10915943 rdfs:label "diesel railcar"@en .
 

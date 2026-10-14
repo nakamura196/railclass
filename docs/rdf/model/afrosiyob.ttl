@@ -1,0 +1,97 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:afrosiyob a schema:3DModel ;
+    schema:about cls:Q4033502 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/afrosiyob.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "ウズベキスタンの高速列車（Talgo 250）の動力車。空色の屋根と国旗の帯。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 37.6 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "アフロシヨブ"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/afrosiyob/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/afrosiyob.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#afrosiyob> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/afrosiyob#livery> .
+
+<https://w3id.org/railclass/model/afrosiyob#color1> a tb:ColorSample ;
+    rdfs:label "body" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#E6E9EC" ;
+    tb:areaShare 0.7349 .
+
+<https://w3id.org/railclass/model/afrosiyob#color2> a tb:ColorSample ;
+    rdfs:label "azure" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#1A8CDC" ;
+    tb:areaShare 0.1489 .
+
+<https://w3id.org/railclass/model/afrosiyob#color3> a tb:ColorSample ;
+    rdfs:label "screen" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2E3C4C" ;
+    tb:areaShare 0.0406 .
+
+<https://w3id.org/railclass/model/afrosiyob#color4> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0185 .
+
+<https://w3id.org/railclass/model/afrosiyob#color5> a tb:ColorSample ;
+    rdfs:label "sgreen" ;
+    wdt:P462 wd:Q3133 ;
+    schema:color "#1E844C" ;
+    tb:areaShare 0.0150 .
+
+<https://w3id.org/railclass/model/afrosiyob#color6> a tb:ColorSample ;
+    rdfs:label "sblue" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#2A509C" ;
+    tb:areaShare 0.0148 .
+
+<https://w3id.org/railclass/model/afrosiyob#color7> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#5A6066" ;
+    tb:areaShare 0.0087 .
+
+<https://w3id.org/railclass/model/afrosiyob#color8> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#1E2848" ;
+    tb:areaShare 0.0084 .
+
+<https://w3id.org/railclass/model/afrosiyob#livery> a tb:Livery ;
+    rdfs:label "Afrosiyob livery (white with an azure roof and flag-colour stripes)"@en,
+        "アフロシヨブの塗装（白地に空色の屋根と国旗の色の帯）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/afrosiyob/uty_afrosiyob.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q23444,
+        wd:Q3133 ;
+    tb:colorSample <https://w3id.org/railclass/model/afrosiyob#color1>,
+        <https://w3id.org/railclass/model/afrosiyob#color2>,
+        <https://w3id.org/railclass/model/afrosiyob#color3>,
+        <https://w3id.org/railclass/model/afrosiyob#color4>,
+        <https://w3id.org/railclass/model/afrosiyob#color5>,
+        <https://w3id.org/railclass/model/afrosiyob#color6>,
+        <https://w3id.org/railclass/model/afrosiyob#color7>,
+        <https://w3id.org/railclass/model/afrosiyob#color8> ;
+    tb:liveryOf wd:Q2093569 .
+
