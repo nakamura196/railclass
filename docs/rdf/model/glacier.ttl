@@ -1,0 +1,82 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdl: <https://w3id.org/railclass/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdl:glacier a schema:3DModel ;
+    schema:about cls:Q2805042 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/glacier.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "スイスの観光列車の2等パノラマ客車（Stadler製 Bp）。赤い端に白いかけら、屋根まで回り込む窓。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "氷河特急 パノラマ客車"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/glacier/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/glacier.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#glacier> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/glacier#livery> .
+
+<https://w3id.org/railclass/model/glacier#color1> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#D2232A" ;
+    tb:areaShare 0.6632 .
+
+<https://w3id.org/railclass/model/glacier#color2> a tb:ColorSample ;
+    rdfs:label "pale" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#B4DDF0" ;
+    tb:areaShare 0.2021 .
+
+<https://w3id.org/railclass/model/glacier#color3> a tb:ColorSample ;
+    rdfs:label "skylight" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A8B6C2" ;
+    tb:areaShare 0.0517 .
+
+<https://w3id.org/railclass/model/glacier#color4> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#262B33" ;
+    tb:areaShare 0.0405 .
+
+<https://w3id.org/railclass/model/glacier#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8A8D90" ;
+    tb:areaShare 0.0079 .
+
+<https://w3id.org/railclass/model/glacier#color6> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B4B6BA" ;
+    tb:areaShare 0.0065 .
+
+<https://w3id.org/railclass/model/glacier#livery> a tb:Livery ;
+    rdfs:label "Glacier Express livery (red ends with white Swiss-cross pieces)"@en,
+        "氷河特急の塗装（赤い端に白い十字のかけら）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/glacier/gex_glacier.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q3142 ;
+    tb:colorSample <https://w3id.org/railclass/model/glacier#color1>,
+        <https://w3id.org/railclass/model/glacier#color2>,
+        <https://w3id.org/railclass/model/glacier#color3>,
+        <https://w3id.org/railclass/model/glacier#color4>,
+        <https://w3id.org/railclass/model/glacier#color5>,
+        <https://w3id.org/railclass/model/glacier#color6> ;
+    tb:liveryOf wd:Q666922 .
+

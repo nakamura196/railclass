@@ -117718,21 +117718,6 @@ cls:Q2804247 a skos:Concept,
         wd:Q3040891,
         wd:Q3040919 .
 
-cls:Q2805042 a skos:Concept,
-        tb:VehicleClass ;
-    skos:exactMatch wd:Q2805042 ;
-    skos:inScheme cls: ;
-    prov:wasDerivedFrom wd:Q2805042 ;
-    wdt:P1064 wd:Q24609 ;
-    wdt:P17 wd:Q39 ;
-    wdt:P279 wd:Q2049755,
-        wd:Q3959904 ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Matterhorn%20Gotthard%20Bahn%20panoramic%20coach%20Bp%204066%20and%204064%2C%20built%20by%20Stadler%20at%20Randa%20VS.jpg> ;
-    tb:has3DModel false ;
-    tb:lineUse <https://w3id.org/railclass/Q2805042#line1> ;
-    tb:operatingCountry wd:Q39 ;
-    tb:usedOn wd:Q661561 .
-
 cls:Q28053139 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "CZ Class 998"@en ;
@@ -249440,6 +249425,26 @@ cls:Q26724167 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q2805042 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Glacier Express panoramic coach (Stadler)"@en,
+        "氷河特急のパノラマ客車（シュタッドラー製）"@ja ;
+    skos:exactMatch wd:Q2805042 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Glacier Express panoramic coach (Stadler)"@en,
+        "氷河特急のパノラマ客車（シュタッドラー製）"@ja ;
+    prov:wasDerivedFrom wd:Q2805042 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P17 wd:Q39 ;
+    wdt:P279 wd:Q2049755,
+        wd:Q3959904 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Matterhorn%20Gotthard%20Bahn%20panoramic%20coach%20Bp%204066%20and%204064%2C%20built%20by%20Stadler%20at%20Randa%20VS.jpg> ;
+    schema:subjectOf mdl:glacier ;
+    tb:has3DModel true ;
+    tb:lineUse <https://w3id.org/railclass/Q2805042#line1> ;
+    tb:operatingCountry wd:Q39 ;
+    tb:usedOn wd:Q661561 .
+
 <https://w3id.org/railclass/Q2805042#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q661561#P3438> ;
     skos:note "wikidata"@en ;
@@ -264196,6 +264201,78 @@ mdl:giruno a schema:3DModel ;
         <https://w3id.org/railclass/model/giruno#color7> ;
     tb:liveryOf wd:Q83835 .
 
+mdl:glacier a schema:3DModel ;
+    schema:about cls:Q2805042 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/glacier.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "スイスの観光列車の2等パノラマ客車（Stadler製 Bp）。赤い端に白いかけら、屋根まで回り込む窓。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "氷河特急 パノラマ客車"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/glacier/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/glacier.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#glacier> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/glacier#livery> .
+
+<https://w3id.org/railclass/model/glacier#color1> a tb:ColorSample ;
+    rdfs:label "red" ;
+    wdt:P462 wd:Q3142 ;
+    schema:color "#D2232A" ;
+    tb:areaShare 0.6632 .
+
+<https://w3id.org/railclass/model/glacier#color2> a tb:ColorSample ;
+    rdfs:label "pale" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#B4DDF0" ;
+    tb:areaShare 0.2021 .
+
+<https://w3id.org/railclass/model/glacier#color3> a tb:ColorSample ;
+    rdfs:label "skylight" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#A8B6C2" ;
+    tb:areaShare 0.0517 .
+
+<https://w3id.org/railclass/model/glacier#color4> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#262B33" ;
+    tb:areaShare 0.0405 .
+
+<https://w3id.org/railclass/model/glacier#color5> a tb:ColorSample ;
+    rdfs:label "grey" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#8A8D90" ;
+    tb:areaShare 0.0079 .
+
+<https://w3id.org/railclass/model/glacier#color6> a tb:ColorSample ;
+    rdfs:label "silver" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#B4B6BA" ;
+    tb:areaShare 0.0065 .
+
+<https://w3id.org/railclass/model/glacier#livery> a tb:Livery ;
+    rdfs:label "Glacier Express livery (red ends with white Swiss-cross pieces)"@en,
+        "氷河特急の塗装（赤い端に白い十字のかけら）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/glacier/gex_glacier.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q3142 ;
+    tb:colorSample <https://w3id.org/railclass/model/glacier#color1>,
+        <https://w3id.org/railclass/model/glacier#color2>,
+        <https://w3id.org/railclass/model/glacier#color3>,
+        <https://w3id.org/railclass/model/glacier#color4>,
+        <https://w3id.org/railclass/model/glacier#color5>,
+        <https://w3id.org/railclass/model/glacier#color6> ;
+    tb:liveryOf wd:Q666922 .
+
 mdl:haramain a schema:3DModel ;
     schema:about cls:Q6138251 ;
     schema:contentUrl <https://railclass.ldas.jp/models/haramain.glb> ;
@@ -277033,9 +277110,6 @@ wd:Q60606502 rdfs:label "Ateliers de Graffenstaden"@en .
 wd:Q644961 rdfs:label "Norris Locomotive Works"@en,
         "ノリス・ロコモティブ・ワークス"@ja .
 
-wd:Q666922 rdfs:label "Matterhorn Gotthard Bahn"@en,
-        "マッターホルン・ゴッタルド鉄道"@ja .
-
 wd:Q7054842 rdfs:label "North Clyde Line"@en .
 
 wd:Q780451 rdfs:label "dome car"@en,
@@ -277142,6 +277216,9 @@ wd:Q5572075 rdfs:label "Gloucester Railway Carriage and Wagon Company"@en,
 
 wd:Q6394304 rdfs:label "Kerr, Stuart and Company"@en,
         "カー・ステュアート・アンド・カンパニー"@ja .
+
+wd:Q666922 rdfs:label "Matterhorn Gotthard Bahn"@en,
+        "マッターホルン・ゴッタルド鉄道"@ja .
 
 wd:Q6686 rdfs:label "Renault"@en,
         "ルノー"@ja .
@@ -278404,9 +278481,6 @@ wd:Q13622547 rdfs:label "road switcher"@en,
 
 wd:Q1951373 rdfs:label "Chemin de fer de Paris à Orléans et du Midi"@en .
 
-wd:Q3142 rdfs:label "red"@en,
-        "赤"@ja .
-
 wd:Q369524 rdfs:label "Ganz Works"@en,
         "ガンツ"@ja .
 
@@ -278429,6 +278503,9 @@ wd:Q900778 rdfs:label "Yugoslav Railways"@en,
 
 wd:Q917028 rdfs:label "dining car"@en,
         "食堂車"@ja .
+
+wd:Q3142 rdfs:label "red"@en,
+        "赤"@ja .
 
 wd:Q333498 rdfs:label "Bombardier"@en,
         "ボンバルディア"@ja .
@@ -278833,13 +278910,13 @@ wd:Q1092174 rdfs:label "Neilson and Company"@en,
 
 wd:Q26208746 rdfs:label "0-6-2T"@en .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q336811 rdfs:label "ČKD社"@ja .
 
 wd:Q34336 rdfs:label "diesel locomotive"@en,
         "ディーゼル機関車"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q26000795 rdfs:label "2-6-2T"@en .
 
@@ -279086,14 +279163,14 @@ wd:Q483711 rdfs:label "4-6-0"@en,
 wd:Q41304 rdfs:label "Weimar Republic"@en,
         "ヴァイマル共和政"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q1197451 rdfs:label "1520 mm track gauge"@en,
         "5フィート軌間"@ja .
 
 wd:Q33946 rdfs:label "Czechoslovakia"@en,
         "チェコスロバキア"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q753779 rdfs:label "passenger railroad car"@en,
         "客車"@ja .
