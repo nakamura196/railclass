@@ -199398,25 +199398,6 @@ cls:Q6955130 a skos:Concept,
     wdt:P2978 wd:Q1022125 ;
     tb:has3DModel false .
 
-cls:Q6955219 a skos:Concept,
-        tb:VehicleClass ;
-    rdfs:label "NR class"@en ;
-    skos:exactMatch wd:Q6955219 ;
-    skos:inScheme cls: ;
-    skos:prefLabel "NR class"@en ;
-    prov:wasDerivedFrom wd:Q6955219 ;
-    wdt:P1064 wd:Q1999572 ;
-    wdt:P137 wd:Q12062420,
-        wd:Q2045552 ;
-    wdt:P17 wd:Q408 ;
-    wdt:P176 wd:Q7864623 ;
-    wdt:P279 wd:Q19842071 ;
-    wdt:P2978 wd:Q1022125 ;
-    wdt:P729 "1996"^^xsd:gYear ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/NR29%20in%20Pacific%20National%20Livery.jpg> ;
-    tb:has3DModel false ;
-    tb:operatingCountry wd:Q408 .
-
 cls:Q6955252 a skos:Concept,
         tb:VehicleClass ;
     rdfs:label "NSB type 30"@en ;
@@ -240286,6 +240267,9 @@ wd:Q1542555 rdfs:label "Grand Central Railway"@en,
 wd:Q1542899 rdfs:label "sandbox"@en,
         "砂撒き装置"@ja .
 
+wd:Q1544385 rdfs:label "Journey Beyond"@en,
+        "ジャーニービヨンドレール"@ja .
+
 wd:Q1544412 rdfs:label "Greater Cleveland Regional Transit Authority"@en,
         "大クリーブランド地域交通局"@ja .
 
@@ -258076,6 +258060,28 @@ cls:Q681896 a skos:Concept,
     tb:sourceSection "P3438" ;
     tb:useStatus "current" .
 
+cls:Q6955219 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "NR class"@en,
+        "NR 形"@ja ;
+    skos:exactMatch wd:Q6955219 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "NR class"@en,
+        "NR 形"@ja ;
+    prov:wasDerivedFrom wd:Q6955219 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q12062420,
+        wd:Q2045552 ;
+    wdt:P17 wd:Q408 ;
+    wdt:P176 wd:Q7864623 ;
+    wdt:P279 wd:Q19842071 ;
+    wdt:P2978 wd:Q1022125 ;
+    wdt:P729 "1996"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/NR29%20in%20Pacific%20National%20Livery.jpg> ;
+    schema:subjectOf mdl:indianpacific ;
+    tb:has3DModel true ;
+    tb:operatingCountry wd:Q408 .
+
 <https://w3id.org/railclass/Q6955257#line1> a tb:LineUse ;
     dcterms:source <https://www.wikidata.org/wiki/Q1769317#P3438> ;
     skos:note "wikidata"@en ;
@@ -265384,6 +265390,113 @@ mdl:icng a schema:3DModel ;
         <https://w3id.org/railclass/model/icng#color6>,
         <https://w3id.org/railclass/model/icng#color7> ;
     tb:liveryOf wd:Q23076 .
+
+mdl:indianpacific a schema:3DModel ;
+    schema:about cls:Q6955219 ;
+    schema:contentUrl <https://railclass.ldas.jp/models/indianpacific.glb> ;
+    schema:depth [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 150.0 ] ;
+    schema:description "オーストラリア大陸を横断する寝台列車の機関車。黄色の運転台と青い車体にオナガイヌワシの印。"@ja ;
+    schema:encodingFormat "model/gltf-binary" ;
+    schema:height [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 38.0 ] ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:name "NR 形（インディアン・パシフィック）"@ja ;
+    schema:subjectOf <https://railclass.ldas.jp/iiif/indianpacific/manifest.json> ;
+    schema:thumbnailUrl <https://railclass.ldas.jp/thumbs/indianpacific.jpg> ;
+    schema:url <https://railclass.ldas.jp/view.html#indianpacific> ;
+    schema:width [ a schema:QuantitativeValue ;
+            schema:unitCode "MMT" ;
+            schema:value 40.0 ] ;
+    tb:galleryGroup "world" ;
+    tb:livery <https://w3id.org/railclass/model/indianpacific#livery> .
+
+<https://w3id.org/railclass/model/indianpacific#color1> a tb:ColorSample ;
+    rdfs:label "ipyellow" ;
+    wdt:P462 wd:Q39338 ;
+    schema:color "#F2B21E" ;
+    tb:areaShare 0.6338 .
+
+<https://w3id.org/railclass/model/indianpacific#color10> a tb:ColorSample ;
+    rdfs:label "navy" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#1F2F7A" ;
+    tb:areaShare 0.0074 .
+
+<https://w3id.org/railclass/model/indianpacific#color11> a tb:ColorSample ;
+    rdfs:label "black" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#14161A" ;
+    tb:areaShare 0.0052 .
+
+<https://w3id.org/railclass/model/indianpacific#color2> a tb:ColorSample ;
+    rdfs:label "ipblue" ;
+    wdt:P462 wd:Q1088 ;
+    schema:color "#2E46A0" ;
+    tb:areaShare 0.1302 .
+
+<https://w3id.org/railclass/model/indianpacific#color3> a tb:ColorSample ;
+    rdfs:label "hoodroof" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#2A2C30" ;
+    tb:areaShare 0.0926 .
+
+<https://w3id.org/railclass/model/indianpacific#color4> a tb:ColorSample ;
+    rdfs:label "uf" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#3A3C40" ;
+    tb:areaShare 0.0422 .
+
+<https://w3id.org/railclass/model/indianpacific#color5> a tb:ColorSample ;
+    rdfs:label "frame" ;
+    wdt:P462 wd:Q23445 ;
+    schema:color "#1E2024" ;
+    tb:areaShare 0.0223 .
+
+<https://w3id.org/railclass/model/indianpacific#color6> a tb:ColorSample ;
+    rdfs:label "rail" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#C8CBCF" ;
+    tb:areaShare 0.0205 .
+
+<https://w3id.org/railclass/model/indianpacific#color7> a tb:ColorSample ;
+    rdfs:label "white" ;
+    wdt:P462 wd:Q23444 ;
+    schema:color "#F2F2EE" ;
+    tb:areaShare 0.0176 .
+
+<https://w3id.org/railclass/model/indianpacific#color8> a tb:ColorSample ;
+    rdfs:label "intake" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#6E6A62" ;
+    tb:areaShare 0.0141 .
+
+<https://w3id.org/railclass/model/indianpacific#color9> a tb:ColorSample ;
+    rdfs:label "deck" ;
+    wdt:P462 wd:Q42519 ;
+    schema:color "#55585C" ;
+    tb:areaShare 0.0134 .
+
+<https://w3id.org/railclass/model/indianpacific#livery> a tb:Livery ;
+    rdfs:label "Indian Pacific livery (yellow cab, blue hood, wedge-tailed eagle)"@en,
+        "インディアン・パシフィックの塗装（黄色の運転台、青い車体、オナガイヌワシ）"@ja ;
+    dcterms:source "Colours taken automatically from the face materials of skytrain/out/indianpacific/ip_indianpacific.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"@en ;
+    wdt:P462 wd:Q1088,
+        wd:Q39338 ;
+    tb:colorSample <https://w3id.org/railclass/model/indianpacific#color1>,
+        <https://w3id.org/railclass/model/indianpacific#color10>,
+        <https://w3id.org/railclass/model/indianpacific#color11>,
+        <https://w3id.org/railclass/model/indianpacific#color2>,
+        <https://w3id.org/railclass/model/indianpacific#color3>,
+        <https://w3id.org/railclass/model/indianpacific#color4>,
+        <https://w3id.org/railclass/model/indianpacific#color5>,
+        <https://w3id.org/railclass/model/indianpacific#color6>,
+        <https://w3id.org/railclass/model/indianpacific#color7>,
+        <https://w3id.org/railclass/model/indianpacific#color8>,
+        <https://w3id.org/railclass/model/indianpacific#color9> ;
+    tb:liveryOf wd:Q1544385 .
 
 mdl:insurgente a schema:3DModel ;
     schema:about cls:tb-insurgente ;
@@ -278922,9 +279035,6 @@ wd:Q725793 rdfs:label "Union Pacific Railroad"@en,
 wd:Q10676739 rdfs:label "600 mm track gauge"@en,
         "600mm軌間"@ja .
 
-wd:Q39338 rdfs:label "orange"@en,
-        "オレンジ色"@ja .
-
 wd:Q610143 rdfs:label "Bulgarian State Railways"@en,
         "ブルガリア国鉄"@ja .
 
@@ -278953,6 +279063,9 @@ wd:Q18853 rdfs:label "DB Regio"@en,
 
 wd:Q2105117 rdfs:label "Hollandsche IJzeren Spoorweg-Maatschappij"@en,
         "ホラント鉄道"@ja .
+
+wd:Q39338 rdfs:label "orange"@en,
+        "オレンジ色"@ja .
 
 wd:Q4736953 rdfs:label "Altoona Works"@en,
         "アルトゥーナ工場"@ja .
@@ -279479,20 +279592,17 @@ wd:Q1548721 rdfs:label "open coach"@en,
 wd:Q7987516 rdfs:label "Western Australian Government Railways"@en,
         "西豪州国営鉄道"@ja .
 
-wd:Q23444 rdfs:label "white"@en,
-        "白"@ja .
-
 wd:Q36704 rdfs:label "Yugoslavia"@en,
         "ユーゴスラビア"@ja .
 
 wd:Q752392 rdfs:label "railcar"@en,
         "自走客車"@ja .
 
+wd:Q23444 rdfs:label "white"@en,
+        "白"@ja .
+
 wd:Q2814117 rdfs:label "Robert Stephenson and Company"@en,
         "ロバート・スチーブンソン・アンド・カンパニー"@ja .
-
-wd:Q23445 rdfs:label "black"@en,
-        "黒"@ja .
 
 wd:Q252 rdfs:label "Indonesia"@en,
         "インドネシア"@ja .
@@ -279508,6 +279618,9 @@ wd:Q2756040 rdfs:label "Société Alsacienne de Constructions Mécaniques"@en,
 
 wd:Q423 rdfs:label "North Korea"@en,
         "朝鮮民主主義人民共和国"@ja .
+
+wd:Q23445 rdfs:label "black"@en,
+        "黒"@ja .
 
 wd:Q393557 rdfs:label "Železničná spoločnosť Slovensko"@en,
         "鉄道企業体スロバキア"@ja .
@@ -279579,11 +279692,11 @@ wd:Q838212 rdfs:label "CAF"@ja .
 wd:Q188712 rdfs:label "Empire of Japan"@en,
         "大日本帝国"@ja .
 
-wd:Q1088 rdfs:label "blue"@en,
-        "青"@ja .
-
 wd:Q741266 rdfs:label "Southern Railway"@en,
         "サザン鉄道"@ja .
+
+wd:Q1088 rdfs:label "blue"@en,
+        "青"@ja .
 
 wd:Q2011495 rdfs:label "Vulcan Foundry"@en,
         "バルカン・ファウンドリー"@ja .
@@ -279818,11 +279931,11 @@ wd:Q21251675 rdfs:label "3000 V DC railway electrification"@en,
 
 wd:Q309084 rdfs:label "アルストム"@ja .
 
-wd:Q42519 rdfs:label "grey"@en,
-        "灰色"@ja .
-
 wd:Q804868 rdfs:label "Baldwin Locomotive Works"@en,
         "ボールドウィン・ロコモティブ・ワークス"@ja .
+
+wd:Q42519 rdfs:label "grey"@en,
+        "灰色"@ja .
 
 wd:Q258 rdfs:label "South Africa"@en,
         "南アフリカ共和国"@ja .
