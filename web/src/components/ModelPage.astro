@@ -13,6 +13,7 @@ import { ldBrowser } from "../lib/ldbrowser";
 const { lang, id } = Astro.props as { lang: Lang; id: string };
 const ui = t(lang);
 const T = ui.model;
+const A = ui.auth;
 const M = models(lang);
 const m = M.items.find(x => x.id === id)!;
 const cid = modelClasses()[id];
@@ -52,8 +53,8 @@ const dl = downloads(id, lang);
       <section class="card" id="download">
         <h2>{T.download}</h2>
         <ul class="dl">
-          <li><a href={file(`models/${id}.${M.ext}`)} download>{T.glb}</a> <span>{fmtBytes(docsBytes(`models/${id}.${M.ext}`))}</span></li>
-          {dl.map(d => <li><a href={d.href} download>{d.label}</a> <span>{fmtBytes(d.bytes)}</span></li>)}
+          <li><a href={here} data-auth-path={`${id}.${M.ext}`} data-denied={A.denied}>{T.glb}</a> <span>{fmtBytes(docsBytes(`models/${id}.${M.ext}`))}</span></li>
+          {dl.map(d => <li><a href={here} data-auth-path={d.path} data-denied={A.denied}>{d.label}</a> <span>{fmtBytes(d.bytes)}</span></li>)}
         </ul>
         {dl.some(d => d.key === "mtl") && <p class="note">{T.objNote}</p>}
         <p class="note">{T.meshNote}</p>
@@ -62,3 +63,8 @@ const dl = downloads(id, lang);
   </div>
 </div>
 </Base>
+
+<script>
+  import { wireDownloads } from "../lib/auth3d";
+  wireDownloads();
+</script>

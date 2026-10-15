@@ -60,7 +60,7 @@ for (const lang of ["ja", "en"]) {
     const mv = h.includes("<model-viewer");
     if (ms.length && !mv) fail(p, `no 3D viewer (models: ${ms.join(" ")})`);
     if (!ms.length && mv) fail(p, "3D viewer without a model");
-    for (const m of ms) if (!h.includes(`/models/${m}.glb`)) fail(p, `model ${m} not on the page`);
+    for (const m of ms) if (!h.includes(`data-auth-path="${m}.glb"`)) fail(p, `model ${m} not on the page`);   // behind the login (lib/auth3d.ts)
     // Lines: one list item per line; a map when at least one line has a shape, with each shape linked
     const ls = linesOf(c);
     const items = (h.match(/<li[^>]*data-line="/g) ?? []).length;
@@ -86,13 +86,14 @@ for (const pre of ["", "en/"]) for (const m of models) {
   const h = read(dist + p);
   const c = classes.find(c => modelsOf(c).includes(m));
   if (c && !h.includes(`rdf/class/${c}.html#${m}`)) fail(p, `no link to its class page ${c}`);
-  for (const f of [`rdf/model/${m}.ttl`, `rdf/model/${m}.jsonld`, `models/${m}.glb`]) if (!h.includes(`/${f}"`)) fail(p, `no link to ${f}`);
-  // ... and its download files, one per format, linked on the GitHub release (tools/upload_downloads.py puts them there)
+  for (const f of [`rdf/model/${m}.ttl`, `rdf/model/${m}.jsonld`]) if (!h.includes(`/${f}"`)) fail(p, `no link to ${f}`);
+  if (!h.includes(`data-auth-path="${m}.glb"`)) fail(p, `no link to ${m}.glb`);
+  // ... and its download files, one per format, behind the login (paths as on the auth Worker)
   const fj = `${docs}downloads/${m}/formats.json`;
   if (!existsSync(fj)) fail(p, `no docs/downloads/${m}/formats.json (run export_formats.py)`);
   else for (const x of JSON.parse(readFileSync(fj, "utf8")).files) {
-    const f = `https://github.com/nakamura196/railclass/releases/download/downloads/${x.file}`;
-    if (!h.includes(`"${f}"`)) fail(p, `no link to ${f}`);
+    const f = `downloads/${m}/${x.file}`;
+    if (!h.includes(`data-auth-path="${f}"`)) fail(p, `no link to ${f}`);
   }
   if (/<pre>/.test(h)) fail(p, "still the page build_rdf.py wrote");
 }

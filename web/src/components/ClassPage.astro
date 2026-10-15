@@ -9,6 +9,7 @@ import { file, page, t, type Lang } from "../i18n";
 import { classPage } from "../lib/classes";
 import iiifLogo from "../assets/iiif-logo.svg";   // the IIIF logo, as on the IIIF Consortium's site
 import { models, modelParts, fmtSize, hasManifest, classLines, downloads } from "../lib/data";
+import { LOGOUT_URL } from "../lib/auth3d";
 import { ldBrowser } from "../lib/ldbrowser";
 
 const { lang, id } = Astro.props as { lang: Lang; id: string };
@@ -20,6 +21,7 @@ const c = classPage(id, lang, n => nf.format(n), y => fmt(T.year, { y }));
 const M = models(lang);
 const mods = c.models.map(m => M.items.find(it => it.id === m)).filter(Boolean) as ReturnType<typeof models>["items"];
 const V = ui.view;
+const A = ui.auth;
 const ORBITS: [keyof typeof V.orbits, string][] = [["quarter", "-55deg 70deg auto"], ["side", "0deg 90deg auto"], ["front", "-90deg 85deg auto"], ["top", "0deg 0deg auto"]];
 // The surface normal at a part: build_iiif.py puts each part's camera at hit + normal * 55 + up * 12, so the normal is
 // recovered from the camera. The script fades the markers whose surface faces away from the camera, as Sketchfab does.
@@ -30,7 +32,7 @@ const normal = (c: { pos: number[]; look: number[] } | null) => {
   return d.map(x => +(x / n).toFixed(3));
 };
 const parts = Object.fromEntries(mods.map(m => [m.id, modelParts(m.id, lang)]));
-const mdata = mods.map(m => ({ id: m.id, src: file(`models/${m.id}.${M.ext}`), poster: file(`thumbs/${m.id}.jpg`),
+const mdata = mods.map(m => ({ id: m.id, src: `${m.id}.${M.ext}`, poster: file(`thumbs/${m.id}.jpg`),
   tag: `${fmtSize(m.size)} mm`, cams: parts[m.id].map(p => p.cam), marks: parts[m.id].map(p => ({ at: p.at, n: normal(p.cam) })) }));
 const pos = (v: number[]) => v.map(x => `${x}m`).join(" ");
 
@@ -64,13 +66,19 @@ const mapped = lines.filter(l => l.map);
       <div class="stage">
         <h2 id="h-models">{T.models}</h2>
         <div class="mat">
-          <model-viewer id="mv" src={mdata[0].src} poster={mdata[0].poster} camera-controls touch-action="pan-y" shadow-intensity="0.8"
+          <model-viewer id="mv" poster={mdata[0].poster} camera-controls touch-action="pan-y" shadow-intensity="0.8"
             tone-mapping="neutral" interaction-prompt="none" camera-orbit={ORBITS[0][1]} alt={V.alt}>
             {mods.map((m, mi) => parts[m.id].map((p, k) => (
               <button type="button" class="hs" slot={`hotspot-${m.id}-${k}`} data-model={m.id} data-part={k} data-position={pos(p.at)}
                 hidden={mi > 0} aria-label={p.label}>{k + 1}</button>
             )))}
           </model-viewer>
+          <div class="gate" id="gate" hidden>
+            <p class="ask">{A.needLogin}</p>
+            <p class="deny" hidden>{A.denied}</p>
+            <button type="button" id="gate-login">{A.login}</button>
+            <p class="who">{A.approvedOnly}</p>
+          </div>
           <span class="tag" id="tag">{mdata[0].tag}</span>
           <span class="hint">{V.hint}</span>
         </div>
@@ -91,6 +99,7 @@ const mapped = lines.filter(l => l.map);
           </div>
         ))}
         <div class="note">{V.note.map(p => <p>{p}</p>)}</div>
+        <p class="note" id="logout" hidden><a href={LOGOUT_URL} target="_blank" rel="noopener">{A.logout}</a></p>
       </div>
       <div class="parts">
         {mods.map((m, mi) => parts[m.id].length > 0 && (
@@ -188,10 +197,10 @@ const mapped = lines.filter(l => l.map);
             <a class="iiif" href={file(`iiif/${m.id}/manifest.json`)}><img src={iiifLogo.src} alt="" width="20" height="18">{mods.length > 1 ? `${T.manifest} (${m.title})` : T.manifest}</a>
           ))}
           {mods.map(m => (
-            <a href={file(`models/${m.id}.${M.ext}`)} download>{mods.length > 1 ? `${T.glb} (${m.title})` : T.glb}</a>
+            <a href={here} data-auth-path={`${m.id}.${M.ext}`} data-denied={A.denied}>{mods.length > 1 ? `${T.glb} (${m.title})` : T.glb}</a>
           ))}
           {mods.flatMap(m => downloads(m.id, lang).map(d => (
-            <a href={d.href} download title={d.label}>{mods.length > 1 ? `${d.key.toUpperCase()} (${m.title})` : d.key.toUpperCase()}</a>
+            <a href={here} data-auth-path={d.path} data-denied={A.denied} title={d.label}>{mods.length > 1 ? `${d.key.toUpperCase()} (${m.title})` : d.key.toUpperCase()}</a>
           )))}
         </div>
         {mods.some(m => downloads(m.id, lang).length) && <p class="dlnote">{ui.model.objNote} {ui.model.meshNote}</p>}
@@ -218,8 +227,10 @@ const mapped = lines.filter(l => l.map);
 </Base>
 
 <script>
+  import { getToken, login, resolve, forget, wireDownloads } from "../lib/auth3d";
   import { lineMap } from "../scripts/line-map";
   lineMap();
+  wireDownloads();
 
   // Copy the citation
   const cc = document.getElementById("cite-copy");
@@ -266,9 +277,28 @@ const mapped = lines.filter(l => l.map);
     const go = (d: number) => { const n = count(); if (n) focus(at < 0 ? (d > 0 ? 0 : n - 1) : (at + d + n) % n); };
     for (const b of all(".step .prev")) b.addEventListener("click", () => go(-1));
     for (const b of all(".step .next")) b.addEventListener("click", () => go(1));
+    // The model is behind a login: poster until the signed URL is known; the gate asks for the login, or says the visitor is not on the list
+    const gate = document.getElementById("gate")!, logout = document.getElementById("logout")!;
+    let loaded = "";
+    async function load() {
+      const want = cur;
+      if (loaded === want.id) return;
+      const url = await resolve(want.src);
+      if (cur !== want) return;
+      const signedIn = !!url || !!(await getToken());
+      if (url) { mv.src = url; loaded = want.id; }
+      gate.hidden = !!url;
+      gate.querySelector<HTMLElement>(".ask")!.hidden = signedIn;
+      gate.querySelector<HTMLElement>(".who")!.hidden = signedIn;
+      gate.querySelector<HTMLElement>("#gate-login")!.hidden = signedIn;
+      gate.querySelector<HTMLElement>(".deny")!.hidden = !signedIn || !!url;
+      logout.hidden = !signedIn;
+    }
+    document.getElementById("gate-login")!.addEventListener("click", async () => { await login(); load(); });
+    logout.addEventListener("click", () => { forget(); loaded = ""; mv.removeAttribute("src"); setTimeout(load, 1500); });
     function show(id: string) {
       cur = D.models.find(m => m.id === id) ?? D.models[0];
-      if (mv.getAttribute("src") !== cur.src) { mv.src = cur.src; mv.poster = cur.poster; }
+      mv.poster = cur.poster; load();
       document.getElementById("tag")!.textContent = cur.tag;
       for (const x of all("[data-model]:not(button)")) x.hidden = x.dataset.model !== cur.id;
       for (const h of all(".hs")) h.hidden = h.dataset.model !== cur.id;
@@ -307,5 +337,6 @@ const mapped = lines.filter(l => l.map);
     const spin = document.getElementById("spin")!;
     spin.addEventListener("click", () => { const on = !mv.autoRotate; mv.autoRotate = on; spin.setAttribute("aria-pressed", String(on)); });
     if (location.hash && D.models.some(m => m.id === location.hash.slice(1))) show(location.hash.slice(1));
+    else load();
   }
 </script>

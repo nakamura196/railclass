@@ -12,6 +12,7 @@ const T = ui.top;
 const M = models(lang);
 const items = newest(M.items);
 const hero = items.find(it => it.group !== "bus") ?? items[0];   // the hero shows a train: this is a railway site first
+const heroPath = hero ? `${hero.id}.${M.ext}` : "";
 const S = stats();
 const num = (k: string) => (typeof S?.[k] === "number" ? S[k].toLocaleString(ui.numberLocale) : "—");
 const F = T.features;
@@ -37,11 +38,12 @@ const D = T.dataItems;
         </form>
       </div>
       {hero && (
-        <figure class="mat" id="hero-mat">
-          <model-viewer id="hero-mv" src={file(`models/${hero.id}.${M.ext}`)} poster={file(`thumbs/${hero.id}.jpg`)}
+        <figure class="mat" id="hero-mat" data-path={heroPath}>
+          <model-viewer id="hero-mv" poster={file(`thumbs/${hero.id}.jpg`)}
             auto-rotate rotation-per-second="18deg" auto-rotate-delay="0" camera-controls touch-action="pan-y"
             shadow-intensity="0.8" exposure="1.05" tone-mapping="neutral" interaction-prompt="none" camera-orbit="-55deg 70deg auto"
             alt={T.heroAlt}></model-viewer>
+          <p class="herolock" id="hero-lock" hidden><a href={modelPage(hero.id)}>{ui.auth.heroLogin}</a></p>
           <figcaption><a href={modelPage(hero.id)}>{hero.groupLabel} · {hero.title} →</a></figcaption>
         </figure>
       )}
@@ -120,3 +122,13 @@ const D = T.dataItems;
 (() => { const h = location.hash.slice(1); if (h && !document.getElementById(h)) location.replace("view.html" + location.hash); })();
 </script>
 </Base>
+
+<script>
+  import { resolve } from "../lib/auth3d";
+  // The hero model is behind a login: the poster stays unless the visitor is already logged in (asked silently)
+  const mat = document.getElementById("hero-mat");
+  if (mat) resolve(mat.dataset.path!).then(url => {
+    if (url) (document.getElementById("hero-mv") as any).src = url;
+    else document.getElementById("hero-lock")!.hidden = false;
+  });
+</script>
