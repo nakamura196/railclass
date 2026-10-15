@@ -37,7 +37,7 @@ CLS = Namespace(BASE)
 MDL = Namespace(BASE + "model/")
 SCHEME = URIRef(BASE)
 CC0 = URIRef("https://creativecommons.org/publicdomain/zero/1.0/")
-CC_BY = URIRef("https://creativecommons.org/licenses/by/4.0/")
+IN_COPYRIGHT = URIRef("http://rightsstatements.org/vocab/InC/1.0/")   # 3D models: individual permission (decided 2026-10-14; CC BY 4.0 before)
 UA = "railclass-build/1.0 (https://github.com/nakamura196/railclass)"
 
 FACETS = json.load(open(os.path.join(DOCS, "facets.json"), encoding="utf-8"))["facets"]
@@ -692,7 +692,9 @@ def add_model(g, mid, item):
     g.add((s, SDO.name, Literal(item["title"], lang="ja")))
     g.add((s, SDO.description, Literal(item["line"], lang="ja")))
     g.add((s, SDO.about, CLS[cid]))
-    g.add((s, SDO.contentUrl, URIRef(f"{SITE}models/{mid}.glb")))
+    # Not public: served by the Cloudflare Access + IIIF Auth 2.0 bridge; a client gets a signed URL from its probe
+    # (see the Model body in the IIIF manifest). The URL alone answers 403.
+    g.add((s, SDO.contentUrl, URIRef(f"https://railclass-models.ldas.jp/files/railclass/{mid}.glb")))
     g.add((s, SDO.encodingFormat, Literal("model/gltf-binary")))
     g.add((s, SDO.thumbnailUrl, URIRef(f"{SITE}thumbs/{mid}.jpg")))
     g.add((s, SDO.subjectOf, URIRef(f"{SITE}iiif/{mid}/manifest.json")))   # IIIF Manifest (担当 B)
@@ -724,7 +726,7 @@ def add_model(g, mid, item):
         for lang, l in part.items():
             g.add((s, TB.part, Literal(l, lang=lang)))
     g.add((s, TB.galleryGroup, Literal(item["group"])))
-    g.add((s, SDO.license, CC_BY))
+    g.add((s, SDO.license, IN_COPYRIGHT))
 
 
 CONTEXT = {

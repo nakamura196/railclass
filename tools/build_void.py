@@ -5,7 +5,7 @@ Usage: python3 tools/build_void.py        (after tools/build_rdf.py, build_eratv
   Every number is counted from the published files, not written by hand: docs/rdf/all.ttl (triples, entities, classes,
   properties, links to Wikidata and Commons), docs/data/eratv-wikidata.tsv, docs/lines/*.geojson, docs/iiif/collection.json.
   The description says there is no SPARQL endpoint (GitHub Pages serves files only) and where the dumps are.
-Terms are the ones decided 2026-10-10 (data CC0, 3D models CC BY 4.0); the files outside the RDF keep their own terms
+Terms are the ones decided 2026-10-10 (data CC0, 3D models CC BY 4.0; models changed to individual permission 2026-10-14); the files outside the RDF keep their own terms
 (line shapes ODbL from OpenStreetMap, ERATV type IDs and names reproduced with acknowledgement, photos per Commons file).
 """
 import csv, datetime, json, os, sys
@@ -14,7 +14,8 @@ from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCAT, DCTERMS, FOAF, RDF, RDFS, SKOS, XSD
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_rdf import BASE, SITE, CC0, CC_BY, CLS, DOCS as RDF_DIR, MDL, SCHEME, SDO, TB, WD, WDT
+from build_rdf import BASE, SITE, CC0, CLS, DOCS as RDF_DIR, MDL, SCHEME, SDO, TB, WD, WDT
+CC_BY = URIRef("https://creativecommons.org/licenses/by/4.0/")   # the IIIF Collection and the model list (descriptions, not the 3D files)
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(HERE, "docs")
@@ -95,7 +96,7 @@ def build(n, modified):
         "SPARQL エンドポイントは無い。資源はすべて静的なファイル（Turtle と JSON-LD）で、全体は一括ファイル 1 つにまとめてある。", lang="ja")))
     g.add((DS, DCTERMS.license, CC0))
     g.add((DS, DCTERMS.rights, Literal(
-        "Class data CC0. 3D models (schema:3DModel and their files) CC BY 4.0, stated on each model with schema:license. "
+        "Class data CC0. 3D models (schema:3DModel and their files): individual permission required (In Copyright), stated on each model with schema:license; the files are behind a login. "
         "Photos: the licence of each Wikimedia Commons file.", lang="en")))
     me = BNode(); g.add((DS, DCTERMS.creator, me)); g.add((DS, DCTERMS.publisher, me))
     g.add((me, RDF.type, FOAF.Person)); g.add((me, FOAF.name, Literal("中村 覚", lang="ja"))); g.add((me, FOAF.name, Literal("Satoru Nakamura", lang="en")))

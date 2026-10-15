@@ -14,6 +14,77 @@
   },
   "@graph": [
     {
+      "@id": "https://w3id.org/railclass/model/darjeeling",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/darjeeling#livery"
+      },
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/Q18349836"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass-models.ldas.jp/files/railclass/darjeeling.glb"
+      },
+      "schema:depth": {
+        "@id": "_:darjeeling-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "世界遺産「トイ・トレイン」の小さな蒸気機関車。青に白線の塗装（782号機）。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:darjeeling-height"
+      },
+      "schema:license": {
+        "@id": "http://rightsstatements.org/vocab/InC/1.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "ダージリン・ヒマラヤ鉄道 B形"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/darjeeling/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/darjeeling.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#darjeeling"
+      },
+      "schema:width": {
+        "@id": "_:darjeeling-width"
+      }
+    },
+    {
+      "@id": "_:darjeeling-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "150.0"
+      }
+    },
+    {
+      "@id": "_:darjeeling-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:darjeeling-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "46.3"
+      }
+    },
+    {
       "@id": "https://w3id.org/railclass/model/darjeeling#color1",
       "@type": "ColorSample",
       "areaShare": {
@@ -22,6 +93,45 @@
       },
       "rdfs:label": "iron",
       "schema:color": "#2C2E32",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/darjeeling#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1325"
+      },
+      "rdfs:label": "blue",
+      "schema:color": "#1E559A",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/darjeeling#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0423"
+      },
+      "rdfs:label": "red",
+      "schema:color": "#A82A2A",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/darjeeling#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0088"
+      },
+      "rdfs:label": "steel",
+      "schema:color": "#A8ADB2",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }
@@ -92,103 +202,6 @@
       ]
     },
     {
-      "@id": "https://w3id.org/railclass/model/darjeeling#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0423"
-      },
-      "rdfs:label": "red",
-      "schema:color": "#A82A2A",
-      "wdt:P462": {
-        "@id": "wd:Q3142"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/darjeeling#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0088"
-      },
-      "rdfs:label": "steel",
-      "schema:color": "#A8ADB2",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/darjeeling",
-      "@type": "schema:3DModel",
-      "galleryGroup": "world",
-      "livery": {
-        "@id": "https://w3id.org/railclass/model/darjeeling#livery"
-      },
-      "schema:about": {
-        "@id": "https://w3id.org/railclass/Q18349836"
-      },
-      "schema:contentUrl": {
-        "@id": "https://railclass.ldas.jp/models/darjeeling.glb"
-      },
-      "schema:depth": {
-        "@id": "_:darjeeling-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "世界遺産「トイ・トレイン」の小さな蒸気機関車。青に白線の塗装（782号機）。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:darjeeling-height"
-      },
-      "schema:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "ダージリン・ヒマラヤ鉄道 B形"
-      },
-      "schema:subjectOf": {
-        "@id": "https://railclass.ldas.jp/iiif/darjeeling/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://railclass.ldas.jp/thumbs/darjeeling.jpg"
-      },
-      "schema:url": {
-        "@id": "https://railclass.ldas.jp/view.html#darjeeling"
-      },
-      "schema:width": {
-        "@id": "_:darjeeling-width"
-      }
-    },
-    {
-      "@id": "_:darjeeling-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "150.0"
-      }
-    },
-    {
-      "@id": "_:darjeeling-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "_:darjeeling-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "46.3"
-      }
-    },
-    {
       "@id": "https://w3id.org/railclass/model/darjeeling#color4",
       "@type": "ColorSample",
       "areaShare": {
@@ -199,19 +212,6 @@
       "schema:color": "#0E0F12",
       "wdt:P462": {
         "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/darjeeling#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1325"
-      },
-      "rdfs:label": "blue",
-      "schema:color": "#1E559A",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
       }
     }
   ]

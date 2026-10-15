@@ -14,52 +14,6 @@
   },
   "@graph": [
     {
-      "@id": "https://w3id.org/railclass/model/dubaimetro#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://w3id.org/railclass/model/dubaimetro#color1"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/dubaimetro#color2"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/dubaimetro#color3"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/dubaimetro#color4"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/dubaimetro#color5"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/dubaimetro/rta_dubaimetro.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q22101985"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Dubai Metro livery (silver and light blue)"
-        },
-        {
-          "@language": "ja",
-          "@value": "ドバイメトロの塗装（銀と水色）"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q1088"
-        }
-      ]
-    },
-    {
       "@id": "https://w3id.org/railclass/model/dubaimetro",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
@@ -70,7 +24,7 @@
         "@id": "https://w3id.org/railclass/tb-dubaimetro"
       },
       "schema:contentUrl": {
-        "@id": "https://railclass.ldas.jp/models/dubaimetro.glb"
+        "@id": "https://railclass-models.ldas.jp/files/railclass/dubaimetro.glb"
       },
       "schema:depth": {
         "@id": "_:dubaimetro-depth"
@@ -84,7 +38,7 @@
         "@id": "_:dubaimetro-height"
       },
       "schema:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
+        "@id": "http://rightsstatements.org/vocab/InC/1.0/"
       },
       "schema:name": {
         "@language": "ja",
@@ -131,6 +85,32 @@
       }
     },
     {
+      "@id": "https://w3id.org/railclass/model/dubaimetro#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1476"
+      },
+      "rdfs:label": "sky",
+      "schema:color": "#4F9FD6",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/dubaimetro#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0464"
+      },
+      "rdfs:label": "mask",
+      "schema:color": "#1B222A",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
       "@id": "https://w3id.org/railclass/model/dubaimetro#color5",
       "@type": "ColorSample",
       "areaShare": {
@@ -157,19 +137,6 @@
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/dubaimetro#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0464"
-      },
-      "rdfs:label": "mask",
-      "schema:color": "#1B222A",
-      "wdt:P462": {
-        "@id": "wd:Q23445"
-      }
-    },
-    {
       "@id": "https://w3id.org/railclass/model/dubaimetro#color1",
       "@type": "ColorSample",
       "areaShare": {
@@ -183,17 +150,50 @@
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/dubaimetro#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1476"
+      "@id": "https://w3id.org/railclass/model/dubaimetro#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/dubaimetro#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/dubaimetro#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/dubaimetro#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/dubaimetro#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/dubaimetro#color5"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/dubaimetro/rta_dubaimetro.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
       },
-      "rdfs:label": "sky",
-      "schema:color": "#4F9FD6",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
-      }
+      "liveryOf": {
+        "@id": "wd:Q22101985"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Dubai Metro livery (silver and light blue)"
+        },
+        {
+          "@language": "ja",
+          "@value": "ドバイメトロの塗装（銀と水色）"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
     }
   ]
 }

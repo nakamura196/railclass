@@ -14,52 +14,6 @@
   },
   "@graph": [
     {
-      "@id": "https://w3id.org/railclass/model/mk3#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://w3id.org/railclass/model/mk3#color1"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/mk3#color2"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/mk3#color3"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/mk3#color4"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/mk3#color5"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/mk3/skytrain_mk3.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q1142140"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "TransLink livery"
-        },
-        {
-          "@language": "ja",
-          "@value": "TransLink の塗装"
-        }
-      ],
-      "wdt:P462": [
-        {
-          "@id": "wd:Q42519"
-        },
-        {
-          "@id": "wd:Q1088"
-        }
-      ]
-    },
-    {
       "@id": "https://w3id.org/railclass/model/mk3",
       "@type": "schema:3DModel",
       "galleryGroup": "skytrain",
@@ -70,7 +24,7 @@
         "@id": "https://w3id.org/railclass/tb-skytrain-mk3"
       },
       "schema:contentUrl": {
-        "@id": "https://railclass.ldas.jp/models/mk3.glb"
+        "@id": "https://railclass-models.ldas.jp/files/railclass/mk3.glb"
       },
       "schema:depth": {
         "@id": "_:mk3-depth"
@@ -84,7 +38,7 @@
         "@id": "_:mk3-height"
       },
       "schema:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
+        "@id": "http://rightsstatements.org/vocab/InC/1.0/"
       },
       "schema:name": {
         "@language": "ja",
@@ -131,6 +85,19 @@
       }
     },
     {
+      "@id": "https://w3id.org/railclass/model/mk3#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0933"
+      },
+      "rdfs:label": "roof",
+      "schema:color": "#A6ABB2",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
       "@id": "https://w3id.org/railclass/model/mk3#color2",
       "@type": "ColorSample",
       "areaShare": {
@@ -144,16 +111,16 @@
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/mk3#color4",
+      "@id": "https://w3id.org/railclass/model/mk3#color5",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0756"
+        "@value": "0.0073"
       },
-      "rdfs:label": "black",
-      "schema:color": "#14161A",
+      "rdfs:label": "silver",
+      "schema:color": "#BCC1C8",
       "wdt:P462": {
-        "@id": "wd:Q23445"
+        "@id": "wd:Q42519"
       }
     },
     {
@@ -170,29 +137,62 @@
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/mk3#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0933"
+      "@id": "https://w3id.org/railclass/model/mk3#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/mk3#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/mk3#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/mk3#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/mk3#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/mk3#color5"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/mk3/skytrain_mk3.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
       },
-      "rdfs:label": "roof",
-      "schema:color": "#A6ABB2",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
+      "liveryOf": {
+        "@id": "wd:Q1142140"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "TransLink livery"
+        },
+        {
+          "@language": "ja",
+          "@value": "TransLink の塗装"
+        }
+      ],
+      "wdt:P462": [
+        {
+          "@id": "wd:Q42519"
+        },
+        {
+          "@id": "wd:Q1088"
+        }
+      ]
     },
     {
-      "@id": "https://w3id.org/railclass/model/mk3#color5",
+      "@id": "https://w3id.org/railclass/model/mk3#color4",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0073"
+        "@value": "0.0756"
       },
-      "rdfs:label": "silver",
-      "schema:color": "#BCC1C8",
+      "rdfs:label": "black",
+      "schema:color": "#14161A",
       "wdt:P462": {
-        "@id": "wd:Q42519"
+        "@id": "wd:Q23445"
       }
     }
   ]

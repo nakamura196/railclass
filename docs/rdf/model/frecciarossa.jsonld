@@ -14,6 +14,58 @@
   },
   "@graph": [
     {
+      "@id": "https://w3id.org/railclass/model/frecciarossa#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1062"
+      },
+      "rdfs:label": "silver",
+      "schema:color": "#C8CCD0",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/frecciarossa#color5",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0300"
+      },
+      "rdfs:label": "screen",
+      "schema:color": "#263048",
+      "wdt:P462": {
+        "@id": "wd:Q1088"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/frecciarossa#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7786"
+      },
+      "rdfs:label": "body",
+      "schema:color": "#D41E2A",
+      "wdt:P462": {
+        "@id": "wd:Q3142"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/frecciarossa#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0328"
+      },
+      "rdfs:label": "band",
+      "schema:color": "#2C3038",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
       "@id": "https://w3id.org/railclass/model/frecciarossa#color6",
       "@type": "ColorSample",
       "areaShare": {
@@ -37,77 +89,6 @@
       "schema:color": "#14161A",
       "wdt:P462": {
         "@id": "wd:Q23445"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/frecciarossa",
-      "@type": "schema:3DModel",
-      "galleryGroup": "world",
-      "livery": {
-        "@id": "https://w3id.org/railclass/model/frecciarossa#livery"
-      },
-      "schema:about": {
-        "@id": "https://w3id.org/railclass/Q370895"
-      },
-      "schema:contentUrl": {
-        "@id": "https://railclass.ldas.jp/models/frecciarossa.glb"
-      },
-      "schema:depth": {
-        "@id": "_:frecciarossa-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "イタリアの高速列車 ETR 400。2022年からの、下まで赤い塗装。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:frecciarossa-height"
-      },
-      "schema:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "フレッチャロッサ 1000"
-      },
-      "schema:subjectOf": {
-        "@id": "https://railclass.ldas.jp/iiif/frecciarossa/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://railclass.ldas.jp/thumbs/frecciarossa.jpg"
-      },
-      "schema:url": {
-        "@id": "https://railclass.ldas.jp/view.html#frecciarossa"
-      },
-      "schema:width": {
-        "@id": "_:frecciarossa-width"
-      }
-    },
-    {
-      "@id": "_:frecciarossa-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "149.9"
-      }
-    },
-    {
-      "@id": "_:frecciarossa-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "_:frecciarossa-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "38.0"
       }
     },
     {
@@ -160,55 +141,74 @@
       ]
     },
     {
-      "@id": "https://w3id.org/railclass/model/frecciarossa#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1062"
+      "@id": "https://w3id.org/railclass/model/frecciarossa",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/frecciarossa#livery"
       },
-      "rdfs:label": "silver",
-      "schema:color": "#C8CCD0",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/Q370895"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass-models.ldas.jp/files/railclass/frecciarossa.glb"
+      },
+      "schema:depth": {
+        "@id": "_:frecciarossa-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "イタリアの高速列車 ETR 400。2022年からの、下まで赤い塗装。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:frecciarossa-height"
+      },
+      "schema:license": {
+        "@id": "http://rightsstatements.org/vocab/InC/1.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "フレッチャロッサ 1000"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/frecciarossa/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/frecciarossa.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#frecciarossa"
+      },
+      "schema:width": {
+        "@id": "_:frecciarossa-width"
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/frecciarossa#color4",
-      "@type": "ColorSample",
-      "areaShare": {
+      "@id": "_:frecciarossa-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
         "@type": "xsd:decimal",
-        "@value": "0.0328"
-      },
-      "rdfs:label": "band",
-      "schema:color": "#2C3038",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
+        "@value": "149.9"
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/frecciarossa#color1",
-      "@type": "ColorSample",
-      "areaShare": {
+      "@id": "_:frecciarossa-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
         "@type": "xsd:decimal",
-        "@value": "0.7786"
-      },
-      "rdfs:label": "body",
-      "schema:color": "#D41E2A",
-      "wdt:P462": {
-        "@id": "wd:Q3142"
+        "@value": "40.0"
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/frecciarossa#color5",
-      "@type": "ColorSample",
-      "areaShare": {
+      "@id": "_:frecciarossa-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
         "@type": "xsd:decimal",
-        "@value": "0.0300"
-      },
-      "rdfs:label": "screen",
-      "schema:color": "#263048",
-      "wdt:P462": {
-        "@id": "wd:Q1088"
+        "@value": "38.0"
       }
     }
   ]

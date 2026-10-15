@@ -14,14 +14,27 @@
   },
   "@graph": [
     {
-      "@id": "https://w3id.org/railclass/model/giruno#color4",
+      "@id": "https://w3id.org/railclass/model/giruno#color7",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.0415"
+        "@value": "0.0054"
       },
-      "rdfs:label": "band",
-      "schema:color": "#181A1E",
+      "rdfs:label": "grey",
+      "schema:color": "#5A6066",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/giruno#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1763"
+      },
+      "rdfs:label": "cap",
+      "schema:color": "#1E2126",
       "wdt:P462": {
         "@id": "wd:Q23445"
       }
@@ -40,16 +53,100 @@
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/giruno#color2",
+      "@id": "https://w3id.org/railclass/model/giruno#color6",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.1763"
+        "@value": "0.0170"
       },
-      "rdfs:label": "cap",
-      "schema:color": "#1E2126",
+      "rdfs:label": "screen",
+      "schema:color": "#2C3642",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/giruno#color4",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0415"
+      },
+      "rdfs:label": "band",
+      "schema:color": "#181A1E",
       "wdt:P462": {
         "@id": "wd:Q23445"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/giruno",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/giruno#livery"
+      },
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/Q16798908"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass-models.ldas.jp/files/railclass/giruno.glb"
+      },
+      "schema:depth": {
+        "@id": "_:giruno-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "スイス国鉄 RABe 501 形。アルプスを越えてミラノへ行く高速電車で、白い車体に赤い鼻と黒い屋根。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:giruno-height"
+      },
+      "schema:license": {
+        "@id": "http://rightsstatements.org/vocab/InC/1.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "ギルノ"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/giruno/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/giruno.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#giruno"
+      },
+      "schema:width": {
+        "@id": "_:giruno-width"
+      }
+    },
+    {
+      "@id": "_:giruno-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.9"
+      }
+    },
+    {
+      "@id": "_:giruno-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:giruno-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "37.5"
       }
     },
     {
@@ -131,103 +228,6 @@
       "schema:color": "#D81616",
       "wdt:P462": {
         "@id": "wd:Q3142"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/giruno#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0170"
-      },
-      "rdfs:label": "screen",
-      "schema:color": "#2C3642",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/giruno",
-      "@type": "schema:3DModel",
-      "galleryGroup": "world",
-      "livery": {
-        "@id": "https://w3id.org/railclass/model/giruno#livery"
-      },
-      "schema:about": {
-        "@id": "https://w3id.org/railclass/Q16798908"
-      },
-      "schema:contentUrl": {
-        "@id": "https://railclass.ldas.jp/models/giruno.glb"
-      },
-      "schema:depth": {
-        "@id": "_:giruno-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "スイス国鉄 RABe 501 形。アルプスを越えてミラノへ行く高速電車で、白い車体に赤い鼻と黒い屋根。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:giruno-height"
-      },
-      "schema:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "ギルノ"
-      },
-      "schema:subjectOf": {
-        "@id": "https://railclass.ldas.jp/iiif/giruno/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://railclass.ldas.jp/thumbs/giruno.jpg"
-      },
-      "schema:url": {
-        "@id": "https://railclass.ldas.jp/view.html#giruno"
-      },
-      "schema:width": {
-        "@id": "_:giruno-width"
-      }
-    },
-    {
-      "@id": "_:giruno-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "149.9"
-      }
-    },
-    {
-      "@id": "_:giruno-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "_:giruno-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "37.5"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/giruno#color7",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0054"
-      },
-      "rdfs:label": "grey",
-      "schema:color": "#5A6066",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
       }
     }
   ]

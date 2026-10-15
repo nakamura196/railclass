@@ -20,7 +20,19 @@ import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://railclass.ldas.jp/"
-DL_BASE = "https://github.com/nakamura196/railclass/releases/download/downloads/"   # same as tools/upload_downloads.py
+# The 3D files are not public: they sit behind a Cloudflare Access + IIIF Auth 2.0 bridge
+# (nakamura196/iiif-auth-cf-access, deployed with its deploy/railclass.jsonc). A viewer asks the probe service,
+# which answers with a signed URL once the user has logged in. The body ids below are placeholders for that.
+AUTH_BASE = "https://railclass-models.ldas.jp"
+AUTH_COLLECTION = "railclass"
+# Texts shown by the viewer before login; keep them the same as COLLECTIONS.railclass in deploy/railclass.jsonc.
+AUTH_TEXT = {
+    "label": {"en": ["Log in to RailClass"], "ja": ["RailClass にログイン"]},
+    "heading": {"en": ["Please log in"], "ja": ["ログインしてください"]},
+    "note": {"en": ["These 3D models are available only to approved users. Log in with your registered email address."],
+             "ja": ["この3Dモデルは許可された方のみ利用できます。登録済みのメールアドレスでログインしてください。"]},
+    "confirmLabel": {"en": ["Log in"], "ja": ["ログイン"]},
+}
 CONTEXT = "http://iiif.io/api/presentation/4/context.json"
 PROVIDER = {"id": "https://github.com/nakamura196", "type": "Agent",
             "label": {"ja": ["中村 覚"], "en": ["Satoru Nakamura"]}}
@@ -121,6 +133,22 @@ def camera(cid, scene_id, label, pos, look, hidden):
     return a
 
 
+def protected(path, **res):
+    """A content resource served by the auth bridge, with its IIIF Auth 2.0 services (probe → login → token)."""
+    c = AUTH_COLLECTION
+    return {"id": f"{AUTH_BASE}/files/{c}/{path}", **res, "service": [{
+        "id": f"{AUTH_BASE}/probe/{c}/{path}", "type": "AuthProbeService2",
+        "service": [{
+            "id": f"{AUTH_BASE}/auth/login/{c}", "type": "AuthAccessService2", "profile": "active", **AUTH_TEXT,
+            "service": [
+                {"id": f"{AUTH_BASE}/auth/token/{c}", "type": "AuthAccessTokenService2"},
+                {"id": f"{AUTH_BASE}/auth/logout/{c}", "type": "AuthLogoutService2",
+                 "label": {"en": ["Log out"], "ja": ["ログアウト"]}},
+            ],
+        }],
+    }]}
+
+
 def build(model):
     src = json.load(open(os.path.join(ROOT, "annotations", model + ".json")))
     tris, mats = load_glb(os.path.join(ROOT, "docs", "models", model + ".glb"))
@@ -172,13 +200,13 @@ def build(model):
     if bad:
         sys.exit("parts off target:\n  " + "\n  ".join(bad))
 
-    rendering = [{"id": f"{BASE}models/{model}.glb", "type": "Model", "format": "model/gltf-binary",
-                  "label": {"ja": ["glTF（色つき）"], "en": ["glTF binary (colour)"]},
-                  "fileSize": os.path.getsize(os.path.join(ROOT, "docs", "models", model + ".glb"))}]
+    rendering = [protected(f"{model}.glb", type="Model", format="model/gltf-binary",
+                           label={"ja": ["glTF（色つき）"], "en": ["glTF binary (colour)"]},
+                           fileSize=os.path.getsize(os.path.join(ROOT, "docs", "models", model + ".glb")))]
     for f in formats["files"]:
-        rendering.append({"id": DL_BASE + f["file"],   # a GitHub release asset, not on Pages (tools/upload_downloads.py)
-                          "type": "Dataset" if f["key"] == "mtl" else "Model",   # the mtl holds only the colours of the obj
-                          "format": f["format"], "label": f["label"], "fileSize": f["bytes"]})
+        rendering.append(protected(f"downloads/{model}/{f['file']}",   # laid out as in the bridge's assets
+                                   type="Dataset" if f["key"] == "mtl" else "Model",   # the mtl holds only the colours of the obj
+                                   format=f["format"], label=f["label"], fileSize=f["bytes"]))
 
     see_also = []
     for kind, key, ja, en in (("model", model, "このモデルの記述", "Description of this model"),
@@ -201,7 +229,11 @@ def build(model):
         "id": mid, "type": "Manifest",
         "label": src["label"], "summary": src["summary"], "metadata": src["metadata"],
         "provider": [PROVIDER],
-        "rights": "http://creativecommons.org/licenses/by/4.0/",   # the 3D models: CC BY 4.0 (decided 2026-10-10); IIIF wants the http form
+        # The 3D models are used only with individual permission (decided 2026-10-14; was CC BY 4.0 from 2026-10-10).
+        "rights": "http://rightsstatements.org/vocab/InC/1.0/",
+        "requiredStatement": {"label": {"ja": ["利用条件"], "en": ["Terms of use"]},
+                              "value": {"ja": ["この3Dモデルの利用には個別の許諾が必要です。"],
+                                        "en": ["Use of these 3D models requires individual permission."]}},
         "homepage": [{"id": f"{BASE}view.html#{model}", "type": "Text", "format": "text/html",    # view.html sends it to the class page
                       "label": {"ja": ["形式のページで見る"], "en": ["Open on the class page"]}}],
         "thumbnail": [{"id": f"{BASE}thumbs/{model}.jpg", "type": "Image", "format": "image/jpeg"}],
@@ -212,7 +244,7 @@ def build(model):
             "spatialScale": {"type": "Quantity", "quantityValue": 0.001, "unit": "m"},
             "items": [{"id": f"{scene}/page/1", "type": "AnnotationPage", "items": [
                 {"id": f"{scene}/painting/model", "type": "Annotation", "motivation": ["painting"],
-                 "body": {"id": f"{BASE}models/{model}.glb", "type": "Model", "format": "model/gltf-binary"},
+                 "body": protected(f"{model}.glb", type="Model", format="model/gltf-binary"),
                  "target": {"id": scene, "type": "Scene"}},
                 *cams]}],
             "annotations": [{"id": f"{BASE}iiif/{model}/annotations/parts", "type": "AnnotationPage",

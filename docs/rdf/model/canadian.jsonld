@@ -14,6 +14,76 @@
   },
   "@graph": [
     {
+      "@id": "https://w3id.org/railclass/model/canadian#color1",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.7668"
+      },
+      "rdfs:label": "steel",
+      "schema:color": "#B4B9BE",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/canadian#color6",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0053"
+      },
+      "rdfs:label": "plate",
+      "schema:color": "#CACED2",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/canadian#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/canadian#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/canadian#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/canadian#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/canadian#color4"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/canadian#color5"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/canadian#color6"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/canadian/via_canadian.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      },
+      "liveryOf": {
+        "@id": "wd:Q876720"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "VIA Rail livery (bare stainless steel, unstriped)"
+        },
+        {
+          "@language": "ja",
+          "@value": "VIA鉄道の塗装（帯なしのステンレス）"
+        }
+      ],
+      "wdt:P462": {
+        "@id": "wd:Q42519"
+      }
+    },
+    {
       "@id": "https://w3id.org/railclass/model/canadian",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
@@ -24,7 +94,7 @@
         "@id": "https://w3id.org/railclass/Q19877282"
       },
       "schema:contentUrl": {
-        "@id": "https://railclass.ldas.jp/models/canadian.glb"
+        "@id": "https://railclass-models.ldas.jp/files/railclass/canadian.glb"
       },
       "schema:depth": {
         "@id": "_:canadian-depth"
@@ -38,7 +108,7 @@
         "@id": "_:canadian-height"
       },
       "schema:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
+        "@id": "http://rightsstatements.org/vocab/InC/1.0/"
       },
       "schema:name": {
         "@language": "ja",
@@ -111,63 +181,6 @@
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/canadian#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://w3id.org/railclass/model/canadian#color1"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/canadian#color2"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/canadian#color3"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/canadian#color4"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/canadian#color5"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/canadian#color6"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/canadian/via_canadian.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
-      },
-      "liveryOf": {
-        "@id": "wd:Q876720"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "VIA Rail livery (bare stainless steel, unstriped)"
-        },
-        {
-          "@language": "ja",
-          "@value": "VIA鉄道の塗装（帯なしのステンレス）"
-        }
-      ],
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/canadian#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0053"
-      },
-      "rdfs:label": "plate",
-      "schema:color": "#CACED2",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
       "@id": "https://w3id.org/railclass/model/canadian#color3",
       "@type": "ColorSample",
       "areaShare": {
@@ -176,19 +189,6 @@
       },
       "rdfs:label": "dome",
       "schema:color": "#1E2830",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/canadian#color1",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.7668"
-      },
-      "rdfs:label": "steel",
-      "schema:color": "#B4B9BE",
       "wdt:P462": {
         "@id": "wd:Q42519"
       }

@@ -14,19 +14,6 @@
   },
   "@graph": [
     {
-      "@id": "https://w3id.org/railclass/model/emu3000#color3",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0834"
-      },
-      "rdfs:label": "roof",
-      "schema:color": "#C4C7C9",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
       "@id": "https://w3id.org/railclass/model/emu3000#color1",
       "@type": "ColorSample",
       "areaShare": {
@@ -40,16 +27,41 @@
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/emu3000#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.1343"
+      "@id": "https://w3id.org/railclass/model/emu3000#livery",
+      "@type": "Livery",
+      "colorSample": [
+        {
+          "@id": "https://w3id.org/railclass/model/emu3000#color1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/emu3000#color2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/emu3000#color3"
+        },
+        {
+          "@id": "https://w3id.org/railclass/model/emu3000#color4"
+        }
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Colours taken automatically from the face materials of skytrain/out/emu3000/tr_emu3000.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
       },
-      "rdfs:label": "mask",
-      "schema:color": "#17191C",
+      "liveryOf": {
+        "@id": "wd:Q697926"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Taiwan Railway EMU3000 livery (white with a black nose, red stripe at the coupled end)"
+        },
+        {
+          "@language": "ja",
+          "@value": "台湾鉄路 EMU3000型の塗装（白い車体に黒い先頭部、連結側に赤い帯）"
+        }
+      ],
       "wdt:P462": {
-        "@id": "wd:Q23445"
+        "@id": "wd:Q23444"
       }
     },
     {
@@ -66,6 +78,19 @@
       }
     },
     {
+      "@id": "https://w3id.org/railclass/model/emu3000#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.1343"
+      },
+      "rdfs:label": "mask",
+      "schema:color": "#17191C",
+      "wdt:P462": {
+        "@id": "wd:Q23445"
+      }
+    },
+    {
       "@id": "https://w3id.org/railclass/model/emu3000",
       "@type": "schema:3DModel",
       "galleryGroup": "world",
@@ -76,7 +101,7 @@
         "@id": "https://w3id.org/railclass/Q65054413"
       },
       "schema:contentUrl": {
-        "@id": "https://railclass.ldas.jp/models/emu3000.glb"
+        "@id": "https://railclass-models.ldas.jp/files/railclass/emu3000.glb"
       },
       "schema:depth": {
         "@id": "_:emu3000-depth"
@@ -90,7 +115,7 @@
         "@id": "_:emu3000-height"
       },
       "schema:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
+        "@id": "http://rightsstatements.org/vocab/InC/1.0/"
       },
       "schema:name": {
         "@language": "ja",
@@ -137,41 +162,16 @@
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/emu3000#livery",
-      "@type": "Livery",
-      "colorSample": [
-        {
-          "@id": "https://w3id.org/railclass/model/emu3000#color1"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/emu3000#color2"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/emu3000#color3"
-        },
-        {
-          "@id": "https://w3id.org/railclass/model/emu3000#color4"
-        }
-      ],
-      "dcterms:source": {
-        "@language": "en",
-        "@value": "Colours taken automatically from the face materials of skytrain/out/emu3000/tr_emu3000.obj (area share of the painted surface, kept when >= 1.5%, white/grey/black when >= 20%; the colour samples keep them all; tools/extract_colors.py)"
+      "@id": "https://w3id.org/railclass/model/emu3000#color3",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0834"
       },
-      "liveryOf": {
-        "@id": "wd:Q697926"
-      },
-      "rdfs:label": [
-        {
-          "@language": "en",
-          "@value": "Taiwan Railway EMU3000 livery (white with a black nose, red stripe at the coupled end)"
-        },
-        {
-          "@language": "ja",
-          "@value": "台湾鉄路 EMU3000型の塗装（白い車体に黒い先頭部、連結側に赤い帯）"
-        }
-      ],
+      "rdfs:label": "roof",
+      "schema:color": "#C4C7C9",
       "wdt:P462": {
-        "@id": "wd:Q23444"
+        "@id": "wd:Q42519"
       }
     }
   ]

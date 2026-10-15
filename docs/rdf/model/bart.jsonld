@@ -14,32 +14,6 @@
   },
   "@graph": [
     {
-      "@id": "https://w3id.org/railclass/model/bart#color6",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0130"
-      },
-      "rdfs:label": "screen",
-      "schema:color": "#2E3A46",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/bart#color2",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0853"
-      },
-      "rdfs:label": "silver2",
-      "schema:color": "#AEB3B8",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
-      }
-    },
-    {
       "@id": "https://w3id.org/railclass/model/bart#color3",
       "@type": "ColorSample",
       "areaShare": {
@@ -53,16 +27,87 @@
       }
     },
     {
-      "@id": "https://w3id.org/railclass/model/bart#color1",
+      "@id": "https://w3id.org/railclass/model/bart",
+      "@type": "schema:3DModel",
+      "galleryGroup": "world",
+      "livery": {
+        "@id": "https://w3id.org/railclass/model/bart#livery"
+      },
+      "schema:about": {
+        "@id": "https://w3id.org/railclass/Q134207119"
+      },
+      "schema:contentUrl": {
+        "@id": "https://railclass-models.ldas.jp/files/railclass/bart.glb"
+      },
+      "schema:depth": {
+        "@id": "_:bart-depth"
+      },
+      "schema:description": {
+        "@language": "ja",
+        "@value": "サンフランシスコ湾岸の BART の新型車（D 車）。2018年から。白い顔と青い帯。"
+      },
+      "schema:encodingFormat": "model/gltf-binary",
+      "schema:height": {
+        "@id": "_:bart-height"
+      },
+      "schema:license": {
+        "@id": "http://rightsstatements.org/vocab/InC/1.0/"
+      },
+      "schema:name": {
+        "@language": "ja",
+        "@value": "BART フリート・オブ・ザ・フューチャー"
+      },
+      "schema:subjectOf": {
+        "@id": "https://railclass.ldas.jp/iiif/bart/manifest.json"
+      },
+      "schema:thumbnailUrl": {
+        "@id": "https://railclass.ldas.jp/thumbs/bart.jpg"
+      },
+      "schema:url": {
+        "@id": "https://railclass.ldas.jp/view.html#bart"
+      },
+      "schema:width": {
+        "@id": "_:bart-width"
+      }
+    },
+    {
+      "@id": "_:bart-depth",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "149.5"
+      }
+    },
+    {
+      "@id": "_:bart-width",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "40.0"
+      }
+    },
+    {
+      "@id": "_:bart-height",
+      "@type": "schema:QuantitativeValue",
+      "schema:unitCode": "MMT",
+      "schema:value": {
+        "@type": "xsd:decimal",
+        "@value": "38.0"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/model/bart#color6",
       "@type": "ColorSample",
       "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "0.7212"
+        "@value": "0.0130"
       },
-      "rdfs:label": "white",
-      "schema:color": "#F0F1EF",
+      "rdfs:label": "screen",
+      "schema:color": "#2E3A46",
       "wdt:P462": {
-        "@id": "wd:Q23444"
+        "@id": "wd:Q42519"
       }
     },
     {
@@ -121,74 +166,42 @@
       ]
     },
     {
-      "@id": "https://w3id.org/railclass/model/bart",
-      "@type": "schema:3DModel",
-      "galleryGroup": "world",
-      "livery": {
-        "@id": "https://w3id.org/railclass/model/bart#livery"
+      "@id": "https://w3id.org/railclass/model/bart#color2",
+      "@type": "ColorSample",
+      "areaShare": {
+        "@type": "xsd:decimal",
+        "@value": "0.0853"
       },
-      "schema:about": {
-        "@id": "https://w3id.org/railclass/Q134207119"
-      },
-      "schema:contentUrl": {
-        "@id": "https://railclass.ldas.jp/models/bart.glb"
-      },
-      "schema:depth": {
-        "@id": "_:bart-depth"
-      },
-      "schema:description": {
-        "@language": "ja",
-        "@value": "サンフランシスコ湾岸の BART の新型車（D 車）。2018年から。白い顔と青い帯。"
-      },
-      "schema:encodingFormat": "model/gltf-binary",
-      "schema:height": {
-        "@id": "_:bart-height"
-      },
-      "schema:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      "schema:name": {
-        "@language": "ja",
-        "@value": "BART フリート・オブ・ザ・フューチャー"
-      },
-      "schema:subjectOf": {
-        "@id": "https://railclass.ldas.jp/iiif/bart/manifest.json"
-      },
-      "schema:thumbnailUrl": {
-        "@id": "https://railclass.ldas.jp/thumbs/bart.jpg"
-      },
-      "schema:url": {
-        "@id": "https://railclass.ldas.jp/view.html#bart"
-      },
-      "schema:width": {
-        "@id": "_:bart-width"
+      "rdfs:label": "silver2",
+      "schema:color": "#AEB3B8",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
       }
     },
     {
-      "@id": "_:bart-depth",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
+      "@id": "https://w3id.org/railclass/model/bart#color5",
+      "@type": "ColorSample",
+      "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "149.5"
+        "@value": "0.0433"
+      },
+      "rdfs:label": "door",
+      "schema:color": "#C2C6CA",
+      "wdt:P462": {
+        "@id": "wd:Q42519"
       }
     },
     {
-      "@id": "_:bart-width",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
+      "@id": "https://w3id.org/railclass/model/bart#color1",
+      "@type": "ColorSample",
+      "areaShare": {
         "@type": "xsd:decimal",
-        "@value": "40.0"
-      }
-    },
-    {
-      "@id": "_:bart-height",
-      "@type": "schema:QuantitativeValue",
-      "schema:unitCode": "MMT",
-      "schema:value": {
-        "@type": "xsd:decimal",
-        "@value": "38.0"
+        "@value": "0.7212"
+      },
+      "rdfs:label": "white",
+      "schema:color": "#F0F1EF",
+      "wdt:P462": {
+        "@id": "wd:Q23444"
       }
     },
     {
@@ -215,19 +228,6 @@
       "schema:color": "#2493D8",
       "wdt:P462": {
         "@id": "wd:Q1088"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/model/bart#color5",
-      "@type": "ColorSample",
-      "areaShare": {
-        "@type": "xsd:decimal",
-        "@value": "0.0433"
-      },
-      "rdfs:label": "door",
-      "schema:color": "#C2C6CA",
-      "wdt:P462": {
-        "@id": "wd:Q42519"
       }
     }
   ]
