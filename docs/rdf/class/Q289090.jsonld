@@ -14,35 +14,11 @@
   },
   "@graph": [
     {
-      "@id": "wd:Q769591",
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Shanghai maglev train"
-      }
-    },
-    {
-      "@id": "https://w3id.org/railclass/Q289090#line1",
-      "@type": "LineUse",
-      "dcterms:source": {
-        "@id": "https://en.wikipedia.org/wiki/Transrapid"
-      },
-      "line": {
-        "@id": "wd:Q769591"
-      },
-      "skos:note": {
-        "@language": "en",
-        "@value": "only commercial Transrapid line, since 2004"
-      },
-      "sourceSection": "Implementations > China",
-      "useStatus": "current"
-    },
-    {
       "@id": "https://w3id.org/railclass/Q289090",
       "@type": [
         "VehicleClass",
         "skos:Concept"
       ],
-      "has3DModel": true,
       "lineUse": {
         "@id": "https://w3id.org/railclass/Q289090#line1"
       },
@@ -62,9 +38,6 @@
           "@value": "トランスラピッド 08"
         }
       ],
-      "schema:subjectOf": {
-        "@id": "https://w3id.org/railclass/model/maglev"
-      },
       "skos:exactMatch": {
         "@id": "wd:Q289090"
       },
@@ -90,6 +63,29 @@
       "wdt:P2052": {
         "@type": "xsd:decimal",
         "@value": "501"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q289090#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://en.wikipedia.org/wiki/Transrapid"
+      },
+      "line": {
+        "@id": "wd:Q769591"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "only commercial Transrapid line, since 2004"
+      },
+      "sourceSection": "Implementations > China",
+      "useStatus": "current"
+    },
+    {
+      "@id": "wd:Q769591",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Shanghai maglev train"
       }
     }
   ]
