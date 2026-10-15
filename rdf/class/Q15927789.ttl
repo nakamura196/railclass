@@ -1,0 +1,35 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q15927789 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Chongqing Hitachi Monorail QKZ2"@en,
+        "重慶軌道交通QKZ2型電動車組"@ja ;
+    skos:exactMatch wd:Q15927789 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Chongqing Hitachi Monorail QKZ2"@en,
+        "重慶軌道交通QKZ2型電動車組"@ja ;
+    prov:wasDerivedFrom wd:Q15927789 ;
+    wdt:P279 wd:Q125920856,
+        wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Chongqing%20Metro%20Line%202%20-%20Hitachi%20Original%20Monorail%20Train%20-%20Overview.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q15927789#line1> ;
+    tb:operatingCountry wd:Q148 ;
+    tb:usedOn wd:Q836612 .
+
+<https://w3id.org/railclass/Q15927789#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q836612#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q836612 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q836612 rdfs:label "Line 2"@en .
+

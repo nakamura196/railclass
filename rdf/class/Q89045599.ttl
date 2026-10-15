@@ -1,0 +1,42 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q89045599 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Düwag M"@en,
+        "フランクフルト市電M形電車"@ja ;
+    skos:exactMatch wd:Q89045599 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Düwag M"@en,
+        "フランクフルト市電M形電車"@ja ;
+    prov:wasDerivedFrom wd:Q89045599 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1754870,
+        wd:Q3997541,
+        wd:Q53430 ;
+    wdt:P17 wd:Q36 ;
+    wdt:P176 wd:Q822381 ;
+    wdt:P930 wd:Q21855034 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TdVG%20Harthweg%20M%2Bm.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q89045599#line1> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q218,
+        wd:Q36 ;
+    tb:usedOn wd:Q875843 .
+
+<https://w3id.org/railclass/Q89045599#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q875843#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q875843 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q875843 rdfs:label "Trams in Mainz"@en .
+

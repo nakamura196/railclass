@@ -1,0 +1,59 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q2326684 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Düwag N8C"@en,
+        "ドゥヴァグM8C"@ja ;
+    skos:exactMatch wd:Q2326684 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Düwag N8C"@en,
+        "ドゥヴァグM8C"@ja ;
+    prov:wasDerivedFrom wd:Q2326684 ;
+    wdt:P176 wd:Q822381 ;
+    wdt:P2052 70.0 ;
+    wdt:P279 wd:Q233063 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Dsw151heinrichstrasse151005.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q2326684#line1>,
+        <https://w3id.org/railclass/Q2326684#line2>,
+        <https://w3id.org/railclass/Q2326684#line3> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q126808,
+        wd:Q474954,
+        wd:Q574488 .
+
+<https://w3id.org/railclass/Q2326684#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q126808#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q126808 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q2326684#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q474954#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q474954 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q2326684#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q574488#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q574488 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q126808 rdfs:label "trams in Kassel"@en .
+
+wd:Q474954 rdfs:label "Dortmund Stadtbahn"@en .
+
+wd:Q574488 rdfs:label "Bielefeld Stadtbahn"@en .
+

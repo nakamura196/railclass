@@ -1,0 +1,47 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q12056024 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "DBAG Classes 145 and 146"@en,
+        "ドイツ鉄道145型・146型電気機関車"@ja ;
+    skos:exactMatch wd:Q12056024 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "DBAG Classes 145 and 146"@en,
+        "ドイツ鉄道145型・146型電気機関車"@ja ;
+    prov:wasDerivedFrom wd:Q12056024 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q18853,
+        wd:Q376511,
+        wd:Q44353,
+        wd:Q690953 ;
+    wdt:P17 wd:Q183 ;
+    wdt:P176 wd:Q378767,
+        wd:Q688893 ;
+    wdt:P279 wd:Q625151 ;
+    wdt:P2978 wd:Q1014107 ;
+    wdt:P729 "1997"^^xsd:gYear ;
+    wdt:P930 wd:Q1415234 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Baureihe%20145%20067-5.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q12056024#line1> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q39 ;
+    tb:usedOn wd:Q56378877 .
+
+<https://w3id.org/railclass/Q12056024#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q56378877#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q56378877 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q56378877 rdfs:label "S 1 (Dresden)"@en .
+

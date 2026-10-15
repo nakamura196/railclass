@@ -1,0 +1,36 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q633840 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SJ X14"@en ;
+    skos:exactMatch wd:Q633840 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SJ X14"@en ;
+    prov:wasDerivedFrom wd:Q633840 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q52912 ;
+    wdt:P176 wd:Q52825 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P930 wd:Q1415234 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SJ%20x14-3240.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q633840#line1> ;
+    tb:operatingCountry wd:Q34 ;
+    tb:usedOn wd:Q10549741 .
+
+<https://w3id.org/railclass/Q633840#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q10549741#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q10549741 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q10549741 rdfs:label "Krösatågen"@en .
+

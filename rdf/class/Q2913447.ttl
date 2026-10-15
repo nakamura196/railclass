@@ -1,0 +1,37 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q2913447 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SNCF Class Z 20900"@en,
+        "フランス国鉄Z20900形電車"@ja ;
+    skos:exactMatch wd:Q2913447 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SNCF Class Z 20900"@en,
+        "フランス国鉄Z20900形電車"@ja ;
+    prov:wasDerivedFrom wd:Q2913447 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q13646 ;
+    wdt:P17 wd:Q142 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Z20900mona%20gennevilliers.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q2913447#line1> ;
+    tb:operatingCountry wd:Q142 ;
+    tb:usedOn wd:Q200906 .
+
+<https://w3id.org/railclass/Q2913447#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q200906#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q200906 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q200906 rdfs:label "RER C"@en .
+

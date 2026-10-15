@@ -1,0 +1,173 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "wd:Q214793",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Northern line"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q1825115#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q19892#P3438"
+      },
+      "line": {
+        "@id": "wd:Q19892"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1989"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q1825115#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q207689#P3438"
+      },
+      "line": {
+        "@id": "wd:Q207689"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1979"
+      }
+    },
+    {
+      "@id": "wd:Q19892",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bakerloo line"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q1825115",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/Braye%20Road%20Stn.JPG"
+      },
+      "lineUse": [
+        {
+          "@id": "https://w3id.org/railclass/Q1825115#line1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/Q1825115#line2"
+        },
+        {
+          "@id": "https://w3id.org/railclass/Q1825115#line3"
+        }
+      ],
+      "operatingCountry": {
+        "@id": "wd:Q145"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q1825115"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "London Underground 1959 Stock"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロンドン地下鉄1959形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q1825115"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/railclass/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "London Underground 1959 Stock"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロンドン地下鉄1959形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q19892"
+        },
+        {
+          "@id": "wd:Q207689"
+        },
+        {
+          "@id": "wd:Q214793"
+        }
+      ],
+      "wdt:P176": {
+        "@id": "wd:Q3112198"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q208502"
+        },
+        {
+          "@id": "wd:Q483373"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q1825115#line3",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q214793#P3438"
+      },
+      "line": {
+        "@id": "wd:Q214793"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2000"
+      }
+    },
+    {
+      "@id": "wd:Q207689",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Piccadilly line"
+      }
+    }
+  ]
+}

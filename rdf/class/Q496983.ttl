@@ -1,0 +1,53 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q496983 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Korail 8200 class"@en,
+        "韓国鉄道8200形電気機関車"@ja ;
+    skos:exactMatch wd:Q496983 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Korail 8200 class"@en,
+        "韓国鉄道8200形電気機関車"@ja ;
+    prov:wasDerivedFrom wd:Q496983 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q18169 ;
+    wdt:P17 wd:Q884 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q3357379 ;
+    wdt:P2978 wd:Q1014107 ;
+    wdt:P729 "2003"^^xsd:gYear ;
+    wdt:P930 wd:Q106530472 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Korail%208243.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q496983#line1>,
+        <https://w3id.org/railclass/Q496983#line2> ;
+    tb:operatingCountry wd:Q884 ;
+    tb:usedOn wd:Q125403903,
+        wd:Q134342427 .
+
+<https://w3id.org/railclass/Q496983#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q125403903#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q125403903 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q496983#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q134342427#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q134342427 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q125403903 rdfs:label "Gyeongbu Line (Mugunghwa)"@en .
+
+wd:Q134342427 rdfs:label "Honam Line (Mugunghwa)"@en .
+

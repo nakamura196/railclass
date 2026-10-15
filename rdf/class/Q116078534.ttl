@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q116078534 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SBB RABe 512"@en,
+        "スイス国鉄RABe512形電車"@ja ;
+    skos:exactMatch wd:Q116078534 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SBB RABe 512"@en,
+        "スイス国鉄RABe512形電車"@ja ;
+    prov:wasDerivedFrom wd:Q116078534 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q83835 ;
+    wdt:P17 wd:Q39 ;
+    wdt:P176 wd:Q666703 ;
+    wdt:P279 wd:Q672992 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/RABe%20512%20IR-Dosto%20EMU%20%2854948662392%29.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q116078534#line1> ;
+    tb:operatingCountry wd:Q39 ;
+    tb:usedOn wd:Q137407349 .
+
+<https://w3id.org/railclass/Q116078534#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q137407349#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q137407349 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q137407349 rdfs:label "IR 55"@en .
+

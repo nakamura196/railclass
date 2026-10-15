@@ -1,0 +1,45 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q18902 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "MVG Series A"@en,
+        "ミュンヘン地下鉄A型電車"@ja ;
+    skos:exactMatch wd:Q18902 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "MVG Series A"@en,
+        "ミュンヘン地下鉄A型電車"@ja ;
+    prov:wasDerivedFrom wd:Q18902 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q456402 ;
+    wdt:P176 wd:Q1724325,
+        wd:Q35953,
+        wd:Q378767,
+        wd:Q652491 ;
+    wdt:P2052 80.0 ;
+    wdt:P279 wd:Q4102249,
+        wd:Q483373 ;
+    wdt:P729 "1971"^^xsd:gYear ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/U-Bahn%20Muenchen%20Freimann%20Zugtyp%20A.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q18902#line1> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q164054 .
+
+<https://w3id.org/railclass/Q18902#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q164054#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q164054 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q164054 rdfs:label "Munich U-Bahn"@en .
+

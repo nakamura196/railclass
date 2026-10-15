@@ -1,0 +1,48 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q28224263 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "High Capacity Metro Trains"@en ;
+    skos:exactMatch wd:Q28224263 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "High Capacity Metro Trains"@en ;
+    prov:wasDerivedFrom wd:Q28224263 ;
+    wdt:P1064 wd:Q6071527 ;
+    wdt:P137 wd:Q10931299 ;
+    wdt:P176 wd:Q5303118,
+        wd:Q848225 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P930 wd:Q21253457 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/319A2344.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q28224263#line1>,
+        <https://w3id.org/railclass/Q28224263#line2> ;
+    tb:operatingCountry wd:Q408 ;
+    tb:usedOn wd:Q4787948,
+        wd:Q7257648 .
+
+<https://w3id.org/railclass/Q28224263#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4787948#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4787948 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q28224263#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7257648#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7257648 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4787948 rdfs:label "Metro Tunnel"@en .
+
+wd:Q7257648 rdfs:label "Transport Victoria"@en .
+

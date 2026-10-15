@@ -1,0 +1,64 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q844094 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 319"@en,
+        "イギリス国鉄319形電車"@ja ;
+    skos:exactMatch wd:Q844094 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "British Rail Class 319"@en,
+        "イギリス国鉄319形電車"@ja ;
+    prov:wasDerivedFrom wd:Q844094 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1258373,
+        wd:Q12859175,
+        wd:Q14500773,
+        wd:Q18737011,
+        wd:Q2001085,
+        wd:Q22079702,
+        wd:Q39052868,
+        wd:Q5161794,
+        wd:Q523068,
+        wd:Q737478,
+        wd:Q85789775 ;
+    wdt:P17 wd:Q145 ;
+    wdt:P176 wd:Q18160582 ;
+    wdt:P2052 161.0 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "1988"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439,
+        wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/319367%20at%20LIV%202023.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q844094#line1>,
+        <https://w3id.org/railclass/Q844094#line2> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q19883,
+        wd:Q7057626 .
+
+<https://w3id.org/railclass/Q844094#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19883#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19883 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q844094#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7057626#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7057626 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q19883 rdfs:label "Abbey Line"@en .
+
+wd:Q7057626 rdfs:label "Northampton Loop Line"@en .
+

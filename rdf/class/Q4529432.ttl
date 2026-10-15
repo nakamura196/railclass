@@ -1,0 +1,56 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q4529432 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ED4"@en,
+        "ロシア鉄道ED4形電車"@ja ;
+    skos:exactMatch wd:Q4529432 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ED4"@en,
+        "ロシア鉄道ED4形電車"@ja ;
+    prov:wasDerivedFrom wd:Q4529432 ;
+    wdt:P1064 wd:Q1197451 ;
+    wdt:P137 wd:Q25927159,
+        wd:Q4504137,
+        wd:Q660770,
+        wd:Q923337 ;
+    wdt:P17 wd:Q159 ;
+    wdt:P176 wd:Q1519572,
+        wd:Q4157597 ;
+    wdt:P2052 130.0 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/ED4M-0137.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q4529432#line1>,
+        <https://w3id.org/railclass/Q4529432#line2> ;
+    tb:operatingCountry wd:Q159,
+        wd:Q212 ;
+    tb:usedOn wd:Q4073726,
+        wd:Q4207854 .
+
+<https://w3id.org/railclass/Q4529432#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4073726#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4073726 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q4529432#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4207854#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4207854 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4073726 rdfs:label "Aeroexpress"@en .
+
+wd:Q4207854 rdfs:label "Kazanskoye line (Moscow Railway)"@en .
+

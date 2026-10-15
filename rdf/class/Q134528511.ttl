@@ -1,0 +1,31 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q134528511 a skos:Concept,
+        tb:VehicleClass ;
+    skos:exactMatch wd:Q134528511 ;
+    skos:inScheme cls: ;
+    prov:wasDerivedFrom wd:Q134528511 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q133284972 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P279 wd:Q572856 ;
+    tb:lineUse <https://w3id.org/railclass/Q134528511#line1> ;
+    tb:operatingCountry wd:Q142 ;
+    tb:usedOn wd:Q122667947 .
+
+<https://w3id.org/railclass/Q134528511#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q122667947#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q122667947 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q122667947 rdfs:label "ligne 6"@en .
+

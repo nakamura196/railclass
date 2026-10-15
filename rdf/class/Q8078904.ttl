@@ -1,0 +1,81 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q8078904 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ÖBB 4011"@en,
+        "ÖBB 4011形"@ja ;
+    skos:broader cls:Q696668 ;
+    skos:exactMatch wd:Q8078904 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ÖBB 4011"@en,
+        "ÖBB 4011形"@ja ;
+    prov:wasDerivedFrom wd:Q8078904 ;
+    wdt:P137 wd:Q83822 ;
+    wdt:P17 wd:Q40 ;
+    wdt:P176 wd:Q391895 ;
+    wdt:P279 wd:Q3959904 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/J37%20143%20Hp%20Sellerhausen%2C%204011%20092.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q8078904#line1>,
+        <https://w3id.org/railclass/Q8078904#line2>,
+        <https://w3id.org/railclass/Q8078904#line3>,
+        <https://w3id.org/railclass/Q8078904#line4> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q40 ;
+    tb:usedOn wd:Q5873973,
+        wd:Q620564,
+        wd:Q669665,
+        wd:Q694717 .
+
+<https://w3id.org/railclass/Q8078904#line1> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Wien–Salzburg–München and Wien–Bregenz; sets handed back Dec 2020"@en ;
+    tb:inferred true ;
+    tb:line wd:Q694717 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://w3id.org/railclass/Q8078904#line2> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Wien–Bregenz"@en ;
+    tb:inferred true ;
+    tb:line wd:Q620564 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://w3id.org/railclass/Q8078904#line3> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Innsbruck services"@en ;
+    tb:inferred true ;
+    tb:line wd:Q669665 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+<https://w3id.org/railclass/Q8078904#line4> a tb:LineUse ;
+    dcterms:source <https://de.wikipedia.org/wiki/ICE_T> ;
+    skos:note "INFERRED from Wien–München"@en ;
+    tb:inferred true ;
+    tb:line wd:Q5873973 ;
+    tb:sourceSection "Baureihe 411 > ÖBB 4011 > Einsatz nach Österreich" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2020"^^xsd:gYear .
+
+wd:Q5873973 rdfs:label "Rosenheim–Salzburg railway"@en .
+
+wd:Q620564 rdfs:label "Arlberg railway"@en .
+
+wd:Q669665 rdfs:label "Lower Inn Valley Railway"@en .
+
+wd:Q694717 rdfs:label "Western Railway (Wien–Salzburg)"@en .
+

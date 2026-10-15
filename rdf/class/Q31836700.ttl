@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q31836700 a skos:Concept,
+        tb:VehicleClass ;
+    skos:exactMatch wd:Q31836700 ;
+    skos:inScheme cls: ;
+    prov:wasDerivedFrom wd:Q31836700 ;
+    wdt:P1064 wd:Q682656 ;
+    wdt:P137 wd:Q1130135 ;
+    wdt:P17 wd:Q28 ;
+    wdt:P176 wd:Q1008067 ;
+    wdt:P2052 30.0 ;
+    wdt:P279 wd:Q752392 ;
+    wdt:P2978 wd:Q2037045 ;
+    wdt:P729 "1929"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/H%C5%B1v%C3%B6sv%C3%B6lgy%2C%20vontat%C3%A1si%20telep%2C%20ABamot.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q31836700#line1> ;
+    tb:operatingCountry wd:Q28 ;
+    tb:usedOn wd:Q1130135 .
+
+<https://w3id.org/railclass/Q31836700#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1130135#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1130135 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1130135 rdfs:label "Lillafüred Forest Train"@en .
+

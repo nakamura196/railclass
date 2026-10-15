@@ -1,0 +1,53 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q432718 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ALP-46"@en,
+        "ALP-46電気機関車"@ja ;
+    skos:exactMatch wd:Q432718 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ALP-46"@en,
+        "ALP-46電気機関車"@ja ;
+    prov:wasDerivedFrom wd:Q432718 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q498553 ;
+    wdt:P17 wd:Q30 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P279 wd:Q625151 ;
+    wdt:P2978 wd:Q1014107 ;
+    wdt:P930 wd:Q106530472,
+        wd:Q94989734,
+        wd:Q94990124 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/NEC%20train%203967%20passing%20through%20Rahway%20station%2C%20June%202007.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q432718#line1>,
+        <https://w3id.org/railclass/Q432718#line2> ;
+    tb:operatingCountry wd:Q30 ;
+    tb:usedOn wd:Q5566325,
+        wd:Q7057868 .
+
+<https://w3id.org/railclass/Q432718#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5566325#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5566325 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q432718#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7057868#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7057868 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5566325 rdfs:label "Gladstone Branch"@en .
+
+wd:Q7057868 rdfs:label "Northeast Corridor Line"@en .
+

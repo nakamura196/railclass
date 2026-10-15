@@ -1,0 +1,40 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q30951043 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Taipei Metro C610"@en,
+        "台北捷運環状線電車"@ja ;
+    skos:exactMatch wd:Q30951043 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Taipei Metro C610"@en,
+        "台北捷運環状線電車"@ja ;
+    prov:wasDerivedFrom wd:Q30951043 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q11411921 ;
+    wdt:P176 wd:Q28668498 ;
+    wdt:P279 wd:Q2408053,
+        wd:Q4102249,
+        wd:Q483373 ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TRTC%20Circular%20Line%20EMU%20train%20by%20ntpcdorts.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q30951043#line1> ;
+    tb:operatingCountry wd:Q865 ;
+    tb:usedOn wd:Q5971413 .
+
+<https://w3id.org/railclass/Q30951043#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5971413#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5971413 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5971413 rdfs:label "Circular line"@en .
+

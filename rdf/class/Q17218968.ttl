@@ -1,0 +1,62 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q17218968 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Taipei Metro C371"@en,
+        "台北捷運371型電車"@ja ;
+    skos:exactMatch wd:Q17218968 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Taipei Metro C371"@en,
+        "台北捷運371型電車"@ja ;
+    prov:wasDerivedFrom wd:Q17218968 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q714810 ;
+    wdt:P176 wd:Q11412031,
+        wd:Q6379763,
+        wd:Q682174 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Taipei%20MRT%20Train%20C371%203CarSet%20No%203398.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q17218968#line1>,
+        <https://w3id.org/railclass/Q17218968#line2>,
+        <https://w3id.org/railclass/Q17218968#line3> ;
+    tb:operatingCountry wd:Q865 ;
+    tb:usedOn wd:Q6141590,
+        wd:Q697192,
+        wd:Q8044505 .
+
+<https://w3id.org/railclass/Q17218968#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6141590#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6141590 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q17218968#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q697192#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q697192 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q17218968#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q8044505#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q8044505 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q6141590 rdfs:label "Zhonghe–Xinlu line"@en .
+
+wd:Q697192 rdfs:label "Songshan–Xindian line"@en .
+
+wd:Q8044505 rdfs:label "Xinbeitou line"@en .
+

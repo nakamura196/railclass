@@ -1,0 +1,147 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/Q900768#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q211265#P3438"
+      },
+      "line": {
+        "@id": "wd:Q211265"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "2017"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q900768#line2",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q831794#P3438"
+      },
+      "line": {
+        "@id": "wd:Q831794"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "wikidata"
+      },
+      "sourceSection": "P3438",
+      "useStatus": "historical",
+      "usedUntil": {
+        "@type": "xsd:gYear",
+        "@value": "1987"
+      }
+    },
+    {
+      "@id": "wd:Q831794",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "East London Line"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/Q900768",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "foaf:depiction": {
+        "@id": "http://commons.wikimedia.org/wiki/Special:FilePath/D78%20Stock%20at%20Upton%20Park%201.jpg"
+      },
+      "lineUse": [
+        {
+          "@id": "https://w3id.org/railclass/Q900768#line1"
+        },
+        {
+          "@id": "https://w3id.org/railclass/Q900768#line2"
+        }
+      ],
+      "operatingCountry": {
+        "@id": "wd:Q145"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "wd:Q900768"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "London Underground D78 Stock"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロンドン地下鉄D78形電車"
+        }
+      ],
+      "skos:exactMatch": {
+        "@id": "wd:Q900768"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/railclass/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "London Underground D78 Stock"
+        },
+        {
+          "@language": "ja",
+          "@value": "ロンドン地下鉄D78形電車"
+        }
+      ],
+      "usedOn": [
+        {
+          "@id": "wd:Q211265"
+        },
+        {
+          "@id": "wd:Q831794"
+        }
+      ],
+      "wdt:P137": {
+        "@id": "wd:Q682520"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q3112198"
+      },
+      "wdt:P279": [
+        {
+          "@id": "wd:Q483373"
+        },
+        {
+          "@id": "wd:Q269061"
+        }
+      ],
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1980"
+      }
+    },
+    {
+      "@id": "wd:Q211265",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "District line"
+      }
+    }
+  ]
+}

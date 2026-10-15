@@ -1,0 +1,39 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:tb-srtred a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SRT Red Lines Hitachi AT100"@en,
+        "SRTレッドラインの電車（日立 AT100）"@ja ;
+    dcterms:source "Country from Wikidata Q2542280 (SRT Red Lines, the system); operator (State Railway of Thailand, through its subsidiary SRT Electrified Train), manufacturer and type (Hitachi AT100 EMU) and opening year (2021) from en.wikipedia and ja.wikipedia (read 2026-10-12) via the skytrain lab note docs/notes/srtred.md."@en ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SRT Red Lines Hitachi AT100"@en,
+        "SRTレッドラインの電車（日立 AT100）"@ja ;
+    wdt:P137 wd:Q2165702 ;
+    wdt:P17 wd:Q869 ;
+    wdt:P176 wd:Q53238 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2021"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:lineUse <https://w3id.org/railclass/tb-srtred#line1> ;
+    tb:usedOn wd:Q2542280 .
+
+<https://w3id.org/railclass/tb-srtred#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2542280> ;
+    skos:note "the SRT Red Lines system itself; Wikidata has no item for its Hitachi AT100 rolling stock"@en ;
+    tb:line wd:Q2542280 ;
+    tb:sourceSection "Wikidata (the system)" ;
+    tb:useStatus "current" .
+
+wd:Q2542280 rdfs:label "SRT Red Lines"@en .
+

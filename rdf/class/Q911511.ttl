@@ -1,0 +1,41 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q911511 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "JKOY Class Sm5"@en,
+        "ヘルシンキ近郊列車Sm5形"@ja ;
+    skos:exactMatch wd:Q911511 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "JKOY Class Sm5"@en,
+        "ヘルシンキ近郊列車Sm5形"@ja ;
+    prov:wasDerivedFrom wd:Q911511 ;
+    wdt:P1064 wd:Q19750814 ;
+    wdt:P137 wd:Q913248 ;
+    wdt:P17 wd:Q33 ;
+    wdt:P176 wd:Q666703 ;
+    wdt:P2052 160.0 ;
+    wdt:P279 wd:Q483373,
+        wd:Q668935 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/JKOY%20Sm5%20at%20Tuomarila%20Station%202019.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q911511#line1> ;
+    tb:operatingCountry wd:Q33 ;
+    tb:usedOn wd:Q1754672 .
+
+<https://w3id.org/railclass/Q911511#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1754672#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1754672 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1754672 rdfs:label "Helsinki commuter rail"@en .
+

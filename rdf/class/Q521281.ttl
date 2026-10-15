@@ -1,0 +1,40 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q521281 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SNCF Class B 82500"@en,
+        "フランス国鉄B82500形車両"@ja ;
+    skos:exactMatch wd:Q521281 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SNCF Class B 82500"@en,
+        "フランス国鉄B82500形車両"@ja ;
+    prov:wasDerivedFrom wd:Q521281 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q13646 ;
+    wdt:P176 wd:Q333498 ;
+    wdt:P279 wd:Q28455463,
+        wd:Q788471 ;
+    wdt:P930 wd:Q106530439,
+        wd:Q21253457 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/B82500%20Provins5.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q521281#line1> ;
+    tb:operatingCountry wd:Q142 ;
+    tb:usedOn wd:Q93874 .
+
+<https://w3id.org/railclass/Q521281#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q93874#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q93874 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q93874 rdfs:label "Line P"@en .
+

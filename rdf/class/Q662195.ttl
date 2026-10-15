@@ -1,0 +1,82 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q662195 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "メトロポリス (鉄道車両)"@ja ;
+    skos:exactMatch wd:Q662195 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "メトロポリス (鉄道車両)"@ja ;
+    prov:wasDerivedFrom wd:Q662195 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q4102249,
+        wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Alstom%20Metropolis%20%289478367458%29.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q662195#line1>,
+        <https://w3id.org/railclass/Q662195#line2>,
+        <https://w3id.org/railclass/Q662195#line3>,
+        <https://w3id.org/railclass/Q662195#line4>,
+        <https://w3id.org/railclass/Q662195#line5> ;
+    tb:operatingCountry wd:Q155,
+        wd:Q16,
+        wd:Q408,
+        wd:Q419,
+        wd:Q804 ;
+    tb:usedOn wd:Q139738,
+        wd:Q14774571,
+        wd:Q19582331,
+        wd:Q25420888,
+        wd:Q3293620 .
+
+<https://w3id.org/railclass/Q662195#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q139738#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q139738 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q662195#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q14774571#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q14774571 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q662195#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q19582331#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q19582331 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q662195#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q25420888#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q25420888 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q662195#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3293620#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3293620 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q139738 rdfs:label "Lima and Callao Subway"@en .
+
+wd:Q14774571 rdfs:label "Sydney Metro"@en .
+
+wd:Q19582331 rdfs:label "Réseau express métropolitain"@en .
+
+wd:Q25420888 rdfs:label "Panama Metro Line 1"@en .
+
+wd:Q3293620 rdfs:label "Line 6"@en .
+

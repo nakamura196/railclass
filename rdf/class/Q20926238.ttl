@@ -1,0 +1,63 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q20926238 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "TCDD E32000"@en,
+        "TCDD E32000形"@ja ;
+    skos:exactMatch wd:Q20926238 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "TCDD E32000"@en,
+        "TCDD E32000形"@ja ;
+    prov:wasDerivedFrom wd:Q20926238 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q28220824 ;
+    wdt:P17 wd:Q43 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2012"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/MarmarayAyr%C4%B1l%C4%B1k%C3%87e%C5%9FmesiStation.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q20926238#line1>,
+        <https://w3id.org/railclass/Q20926238#line2>,
+        <https://w3id.org/railclass/Q20926238#line3> ;
+    tb:operatingCountry wd:Q43 ;
+    tb:usedOn wd:Q111263037,
+        wd:Q112118212,
+        wd:Q497844 .
+
+<https://w3id.org/railclass/Q20926238#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q111263037#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q111263037 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q20926238#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q112118212#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q112118212 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q20926238#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q497844#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q497844 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q111263037 rdfs:label "Sirkeci-Kazlıçeşme Rail System"@en .
+
+wd:Q112118212 rdfs:label "Halkalı-Bahçeşehir Rail System"@en .
+
+wd:Q497844 rdfs:label "Marmaray"@en .
+

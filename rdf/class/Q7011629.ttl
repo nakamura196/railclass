@@ -1,0 +1,35 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q7011629 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "New South Wales 600/700 class railcar"@en ;
+    skos:exactMatch wd:Q7011629 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "New South Wales 600/700 class railcar"@en ;
+    prov:wasDerivedFrom wd:Q7011629 ;
+    wdt:P137 wd:Q1982888,
+        wd:Q42954977 ;
+    wdt:P176 wd:Q1982888 ;
+    wdt:P279 wd:Q1567915 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Railmotor%20726-661%20stands%20at%20Byron%20Beach%20Platform%2C%20Byron%20Bay.%203-11-17.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q7011629#line1> ;
+    tb:operatingCountry wd:Q408 ;
+    tb:usedOn wd:Q42954977 .
+
+<https://w3id.org/railclass/Q7011629#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q42954977#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q42954977 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q42954977 rdfs:label "Byron Bay Railroad Company"@en .
+

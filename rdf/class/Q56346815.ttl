@@ -1,0 +1,36 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q56346815 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "São Paulo Metro P stock"@en ;
+    skos:exactMatch wd:Q56346815 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "São Paulo Metro P stock"@en ;
+    prov:wasDerivedFrom wd:Q56346815 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q38182538,
+        wd:Q55962686 ;
+    wdt:P17 wd:Q155 ;
+    wdt:P176 wd:Q838212 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Trem%20Linha%20Lil%C3%A1s.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q56346815#line1> ;
+    tb:operatingCountry wd:Q155 ;
+    tb:usedOn wd:Q3308465 .
+
+<https://w3id.org/railclass/Q56346815#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3308465#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3308465 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3308465 rdfs:label "Line 5"@en .
+

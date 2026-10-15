@@ -1,0 +1,53 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q856438 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "China Railway CRH5"@en,
+        "中国高速鉄道CRH5型電車"@ja ;
+    skos:exactMatch wd:Q856438 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "China Railway CRH5"@en,
+        "中国高速鉄道CRH5型電車"@ja ;
+    prov:wasDerivedFrom wd:Q856438 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1038182 ;
+    wdt:P17 wd:Q148 ;
+    wdt:P176 wd:Q15914660,
+        wd:Q309084 ;
+    wdt:P2052 250.0 ;
+    wdt:P279 wd:Q20795192,
+        wd:Q29523365 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/CRH5A-5036%20at%20Shahe%20Beidaqiao%20%2820220106140557%29.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q856438#line1>,
+        <https://w3id.org/railclass/Q856438#line2> ;
+    tb:operatingCountry wd:Q148 ;
+    tb:usedOn wd:Q10877282,
+        wd:Q873605 .
+
+<https://w3id.org/railclass/Q856438#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q10877282#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q10877282 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q856438#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q873605#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q873605 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q10877282 rdfs:label "Dandong–Dalian intercity railway"@en .
+
+wd:Q873605 rdfs:label "Qinhuangdao–Shenyang high-speed railway"@en .
+

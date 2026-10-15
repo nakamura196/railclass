@@ -1,0 +1,44 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q7108794 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Otis Hovair"@en,
+        "オーチス・ホバー"@ja ;
+    skos:exactMatch wd:Q7108794 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Otis Hovair"@en,
+        "オーチス・ホバー"@ja ;
+    prov:wasDerivedFrom wd:Q7108794 ;
+    wdt:P176 wd:Q1134069 ;
+    wdt:P279 wd:Q1573358 ;
+    tb:lineUse <https://w3id.org/railclass/Q7108794#line1>,
+        <https://w3id.org/railclass/Q7108794#line2> ;
+    tb:operatingCountry wd:Q30 ;
+    tb:usedOn wd:Q5421647,
+        wd:Q6868054 .
+
+<https://w3id.org/railclass/Q7108794#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5421647#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5421647 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q7108794#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6868054#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6868054 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5421647 rdfs:label "ExpressTram"@en .
+
+wd:Q6868054 rdfs:label "Minneapolis–St. Paul Airport Trams"@en .
+

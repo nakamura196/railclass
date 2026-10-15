@@ -1,0 +1,42 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q3734179 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Em subway trains"@en,
+        "地下鉄Ем型電車"@ja ;
+    skos:exactMatch wd:Q3734179 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Em subway trains"@en,
+        "地下鉄Ем型電車"@ja ;
+    prov:wasDerivedFrom wd:Q3734179 ;
+    wdt:P1064 wd:Q1197451 ;
+    wdt:P137 wd:Q215871,
+        wd:Q250225,
+        wd:Q5499 ;
+    wdt:P176 wd:Q4102254 ;
+    wdt:P279 wd:Q2376563,
+        wd:Q4102249,
+        wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Vagon%20metro%20tip%20Em%20depo%20Nevskoye.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q3734179#line1> ;
+    tb:operatingCountry wd:Q159,
+        wd:Q212 ;
+    tb:usedOn wd:Q519861 .
+
+<https://w3id.org/railclass/Q3734179#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q519861#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q519861 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q519861 rdfs:label "Line 1"@en .
+

@@ -1,0 +1,83 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q961538 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Translohr"@en,
+        "トランスロール"@ja ;
+    skos:exactMatch wd:Q961538 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Translohr"@en,
+        "トランスロール"@ja ;
+    prov:wasDerivedFrom wd:Q961538 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q114663741,
+        wd:Q385653,
+        wd:Q836547 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Clermont-Ferrand%20Translohr%202011%20centrum.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q961538#line1>,
+        <https://w3id.org/railclass/Q961538#line2>,
+        <https://w3id.org/railclass/Q961538#line3>,
+        <https://w3id.org/railclass/Q961538#line4>,
+        <https://w3id.org/railclass/Q961538#line5> ;
+    tb:operatingCountry wd:Q142,
+        wd:Q148,
+        wd:Q739 ;
+    tb:usedOn wd:Q1393602,
+        wd:Q1419423,
+        wd:Q18327073,
+        wd:Q3238968,
+        wd:Q3238993 .
+
+<https://w3id.org/railclass/Q961538#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1393602#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1393602 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q961538#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1419423#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1419423 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q961538#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q18327073#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q18327073 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q961538#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3238968#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3238968 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q961538#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3238993#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3238993 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1393602 rdfs:label "Zhangjiang Tram"@en .
+
+wd:Q1419423 rdfs:label "Clermont-Ferrand tramway"@en .
+
+wd:Q18327073 rdfs:label "Ayacucho Tram"@en .
+
+wd:Q3238968 rdfs:label "Île-de-France tramway Line 5"@en .
+
+wd:Q3238993 rdfs:label "Île-de-France tramway Line 6"@en .
+

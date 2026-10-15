@@ -1,0 +1,37 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q7245663 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "LVS-2009"@en,
+        "LVS-2009"@ja ;
+    skos:exactMatch wd:Q7245663 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "LVS-2009"@en,
+        "LVS-2009"@ja ;
+    prov:wasDerivedFrom wd:Q7245663 ;
+    wdt:P137 wd:Q1925923 ;
+    wdt:P17 wd:Q159 ;
+    wdt:P176 wd:Q918156 ;
+    wdt:P279 wd:Q3407658 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/May2015%20Volgograd%20img09%20MamaevKurgan%20metrotram%20station.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q7245663#line1> ;
+    tb:operatingCountry wd:Q159 ;
+    tb:usedOn wd:Q1925923 .
+
+<https://w3id.org/railclass/Q7245663#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1925923#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1925923 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1925923 rdfs:label "Volgograd Metrotram"@en .
+

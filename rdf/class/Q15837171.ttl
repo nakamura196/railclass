@@ -1,0 +1,39 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q15837171 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "NÖVOG ET1–ET9"@en,
+        "低地オーストリア交通機関会社ET1形電車"@ja ;
+    skos:exactMatch wd:Q15837171 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "NÖVOG ET1–ET9"@en,
+        "低地オーストリア交通機関会社ET1形電車"@ja ;
+    prov:wasDerivedFrom wd:Q15837171 ;
+    wdt:P137 wd:Q1281018,
+        wd:Q131409427 ;
+    wdt:P176 wd:Q666703 ;
+    wdt:P2052 80.0 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/N%C3%B6vog%20ET1%20Himmelstreppe%20Winterbach.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q15837171#line1> ;
+    tb:operatingCountry wd:Q40 ;
+    tb:usedOn wd:Q875251 .
+
+<https://w3id.org/railclass/Q15837171#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q875251#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q875251 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q875251 rdfs:label "Mariazell Railway"@en .
+

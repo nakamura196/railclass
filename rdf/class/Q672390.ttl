@@ -1,0 +1,46 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q672390 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SBB-CFF-FFS Re 420"@en,
+        "スイス国鉄Re420形電気機関車"@ja ;
+    skos:exactMatch wd:Q672390 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SBB-CFF-FFS Re 420"@en,
+        "スイス国鉄Re420形電気機関車"@ja ;
+    prov:wasDerivedFrom wd:Q672390 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q376511,
+        wd:Q83835 ;
+    wdt:P176 wd:Q1906878,
+        wd:Q664420,
+        wd:Q669606,
+        wd:Q671488 ;
+    wdt:P2052 140.0 ;
+    wdt:P279 wd:Q625151 ;
+    wdt:P2978 wd:Q1014107 ;
+    wdt:P729 "1964"^^xsd:gYear ;
+    wdt:P930 wd:Q1415234 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/20060731-204905.Re%20420%20in%20Z%C3%BCrich.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q672390#line1> ;
+    tb:operatingCountry wd:Q39 ;
+    tb:usedOn wd:Q111523342 .
+
+<https://w3id.org/railclass/Q672390#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q111523342#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q111523342 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q111523342 rdfs:label "S20 (Zurich)"@en .
+

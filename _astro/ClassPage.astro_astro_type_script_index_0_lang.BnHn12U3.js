@@ -1,0 +1,1 @@
+import{t as e}from"./line-map.DJYn05J1.js";e();var t=document.getElementById(`cite-copy`);t?.addEventListener(`click`,async()=>{try{await navigator.clipboard.writeText(document.getElementById(`cite-text`).textContent);let e=t.title;t.title=t.dataset.done,t.classList.add(`done`),setTimeout(()=>{t.title=e,t.classList.remove(`done`)},2e3)}catch{}});

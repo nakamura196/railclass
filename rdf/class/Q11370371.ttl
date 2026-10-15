@@ -1,0 +1,80 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q11370371 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Phase III LRV"@en,
+        "九広軽鉄Goninan電車"@ja ;
+    skos:exactMatch wd:Q11370371 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Phase III LRV"@en,
+        "九広軽鉄Goninan電車"@ja ;
+    prov:wasDerivedFrom wd:Q11370371 ;
+    wdt:P279 wd:Q15825863,
+        wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Light%20Rail%20Goninan.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q11370371#line1>,
+        <https://w3id.org/railclass/Q11370371#line2>,
+        <https://w3id.org/railclass/Q11370371#line3>,
+        <https://w3id.org/railclass/Q11370371#line4>,
+        <https://w3id.org/railclass/Q11370371#line5> ;
+    tb:operatingCountry wd:Q1054923,
+        wd:Q148 ;
+    tb:usedOn wd:Q113960973,
+        wd:Q126678444,
+        wd:Q129804196,
+        wd:Q130217159,
+        wd:Q15917019 .
+
+<https://w3id.org/railclass/Q11370371#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q113960973#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q113960973 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q11370371#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q126678444#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q126678444 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q11370371#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q129804196#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q129804196 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q11370371#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q130217159#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q130217159 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q11370371#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q15917019#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q15917019 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q113960973 rdfs:label "Light Rail Route 507P"@en .
+
+wd:Q126678444 rdfs:label "Light Rail Route 720"@en .
+
+wd:Q129804196 rdfs:label "Light Rail Route 701"@en .
+
+wd:Q130217159 rdfs:label "Light Rail Route 720"@en .
+
+wd:Q15917019 rdfs:label "Light Rail Route 507"@en .
+

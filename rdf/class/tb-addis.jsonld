@@ -1,0 +1,113 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/tb-addis#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q16250141"
+      },
+      "line": {
+        "@id": "wd:Q16250141"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "the Addis Ababa Light Rail system itself; Wikidata has no item for its CNR Changchun trams"
+      },
+      "sourceSection": "Wikidata (the system)",
+      "useStatus": "current"
+    },
+    {
+      "@id": "https://w3id.org/railclass/tb-addis",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Country and opening date (2015-09-21) from Wikidata Q16250141 (Addis Ababa Light Rail, the system); operator (Ethiopian Railway Corporation), manufacturer (CNR Changchun, now CRRC Changchun) and type (three-section 70 % low-floor tram) from the skytrain lab note docs/notes/addis.md (2026-10-12)."
+      },
+      "handEntered": [
+        {
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P137"
+        },
+        {
+          "@id": "wdt:P176"
+        },
+        {
+          "@id": "wdt:P279"
+        },
+        {
+          "@id": "wdt:P729"
+        }
+      ],
+      "lineUse": {
+        "@id": "https://w3id.org/railclass/tb-addis#line1"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Addis Ababa Light Rail tram (CNR Changchun)"
+        },
+        {
+          "@language": "ja",
+          "@value": "アディスアベバ・ライトレールの路面電車（CNR 長春）"
+        }
+      ],
+      "skos:inScheme": {
+        "@id": "https://w3id.org/railclass/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Addis Ababa Light Rail tram (CNR Changchun)"
+        },
+        {
+          "@language": "ja",
+          "@value": "アディスアベバ・ライトレールの路面電車（CNR 長春）"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q16250141"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q55639671"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q115"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q848225"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3407658"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2015"
+      }
+    },
+    {
+      "@id": "wd:Q16250141",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Addis Ababa Light Rail"
+      }
+    }
+  ]
+}

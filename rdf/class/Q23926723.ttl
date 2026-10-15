@@ -1,0 +1,51 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q23926723 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Siemens P2000"@en,
+        "ロサンゼルス郡都市圏交通局P2000形電車"@ja ;
+    skos:exactMatch wd:Q23926723 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Siemens P2000"@en,
+        "ロサンゼルス郡都市圏交通局P2000形電車"@ja ;
+    prov:wasDerivedFrom wd:Q23926723 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q3259702 ;
+    wdt:P176 wd:Q81230 ;
+    wdt:P279 wd:Q15825863 ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Metrorail-go1.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q23926723#line1>,
+        <https://w3id.org/railclass/Q23926723#line2> ;
+    tb:operatingCountry wd:Q30 ;
+    tb:usedOn wd:Q2482571,
+        wd:Q3267759 .
+
+<https://w3id.org/railclass/Q23926723#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2482571#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2482571 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2024"^^xsd:gYear .
+
+<https://w3id.org/railclass/Q23926723#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3267759#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3267759 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2482571 rdfs:label "C Line"@en .
+
+wd:Q3267759 rdfs:label "A Line"@en .
+

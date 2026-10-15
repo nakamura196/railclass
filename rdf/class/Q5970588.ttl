@@ -1,0 +1,64 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q5970588 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "IÉ 201 class"@en,
+        "イルンロード・エールン201型ディーゼル機関車"@ja ;
+    skos:exactMatch wd:Q5970588 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "IÉ 201 class"@en,
+        "イルンロード・エールン201型ディーゼル機関車"@ja ;
+    prov:wasDerivedFrom wd:Q5970588 ;
+    wdt:P137 wd:Q1937120,
+        wd:Q73043 ;
+    wdt:P17 wd:Q26,
+        wd:Q27 ;
+    wdt:P2052 161.0 ;
+    wdt:P279 wd:Q19842071 ;
+    wdt:P2978 wd:Q1022125 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Balmoral%20railway%20station%20in%202007.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q5970588#line1>,
+        <https://w3id.org/railclass/Q5970588#line2>,
+        <https://w3id.org/railclass/Q5970588#line3> ;
+    tb:operatingCountry wd:Q145,
+        wd:Q27 ;
+    tb:usedOn wd:Q4882365,
+        wd:Q488724,
+        wd:Q6044834 .
+
+<https://w3id.org/railclass/Q5970588#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4882365#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4882365 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q5970588#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q488724#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q488724 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q5970588#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6044834#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6044834 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4882365 rdfs:label "Belfast–Newry line"@en .
+
+wd:Q488724 rdfs:label "Enterprise (train service)"@en .
+
+wd:Q6044834 rdfs:label "InterCity"@en .
+

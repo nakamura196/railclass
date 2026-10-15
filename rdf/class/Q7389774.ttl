@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q7389774 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SEPTA PCC II"@en,
+        "PCCカー (南東ペンシルベニア交通局)"@ja ;
+    skos:exactMatch wd:Q7389774 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SEPTA PCC II"@en,
+        "PCCカー (南東ペンシルベニア交通局)"@ja ;
+    prov:wasDerivedFrom wd:Q7389774 ;
+    wdt:P1064 wd:Q19750832 ;
+    wdt:P137 wd:Q2037863 ;
+    wdt:P17 wd:Q30 ;
+    wdt:P176 wd:Q7589579 ;
+    wdt:P279 wd:Q3407658 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Route%2015%20PCC.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q7389774#line1> ;
+    tb:operatingCountry wd:Q30 ;
+    tb:usedOn wd:Q3444107 .
+
+<https://w3id.org/railclass/Q7389774#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3444107#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3444107 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3444107 rdfs:label "G (SEPTA Metro)"@en .
+

@@ -1,0 +1,47 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q7928804 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Viewliner"@en,
+        "ビューライナー"@ja ;
+    skos:exactMatch wd:Q7928804 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Viewliner"@en,
+        "ビューライナー"@ja ;
+    prov:wasDerivedFrom wd:Q7928804 ;
+    wdt:P137 wd:Q23239 ;
+    wdt:P176 wd:Q960308 ;
+    wdt:P279 wd:Q753779 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Viewliner%20on%20Lake%20Shore%20Limited%20at%20Yawkey.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q7928804#line1>,
+        <https://w3id.org/railclass/Q7928804#line2> ;
+    tb:operatingCountry wd:Q30 ;
+    tb:usedOn wd:Q130354885,
+        wd:Q23239 .
+
+<https://w3id.org/railclass/Q7928804#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q130354885#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q130354885 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q7928804#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q23239#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q23239 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q130354885 rdfs:label "Floridian"@en .
+
+wd:Q23239 rdfs:label "Amtrak"@en .
+

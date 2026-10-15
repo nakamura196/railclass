@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q4036910 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Pyongyang Metro DK4"@en,
+        "平壌地下鉄DK4型電車"@ja ;
+    skos:exactMatch wd:Q4036910 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Pyongyang Metro DK4"@en,
+        "平壌地下鉄DK4型電車"@ja ;
+    prov:wasDerivedFrom wd:Q4036910 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P176 wd:Q848225 ;
+    wdt:P2052 90.0 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Ex%20pyongyang%20metro.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q4036910#line1> ;
+    tb:usedOn wd:Q80872 .
+
+<https://w3id.org/railclass/Q4036910#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q80872#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q80872 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2007"^^xsd:gYear .
+
+wd:Q80872 rdfs:label "Pyŏngyang Metro"@en .
+

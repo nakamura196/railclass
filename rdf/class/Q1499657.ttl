@@ -1,0 +1,39 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q1499657 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "NGT D12DD"@en,
+        "ドレスデン市電NGTD12DD形電車"@ja ;
+    skos:exactMatch wd:Q1499657 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "NGT D12DD"@en,
+        "ドレスデン市電NGTD12DD形電車"@ja ;
+    prov:wasDerivedFrom wd:Q1499657 ;
+    wdt:P137 wd:Q446491 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P2052 70.0 ;
+    wdt:P279 wd:Q5063597,
+        wd:Q891788 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Dresden%20Stra%C3%9Fenbahnwagen%202808%20-%20Stadt%20Dresden.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q1499657#line1> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q315614 .
+
+<https://w3id.org/railclass/Q1499657#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q315614#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q315614 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q315614 rdfs:label "trams in Dresden"@en .
+

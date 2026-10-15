@@ -1,0 +1,35 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q30944511 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Taoyuan Metro 1000 series"@en,
+        "桃園捷運1000型電車"@ja ;
+    skos:exactMatch wd:Q30944511 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Taoyuan Metro 1000 series"@en,
+        "桃園捷運1000型電車"@ja ;
+    prov:wasDerivedFrom wd:Q30944511 ;
+    wdt:P137 wd:Q11111997 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Taoyuan%20Metro%20Commuter%20Train%202017-02-25.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q30944511#line1> ;
+    tb:operatingCountry wd:Q865 ;
+    tb:usedOn wd:Q141252869 .
+
+<https://w3id.org/railclass/Q30944511#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q141252869#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q141252869 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q141252869 rdfs:label "Commuter Train (Taoyuan Airport MRT)"@en .
+

@@ -1,0 +1,76 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q432769 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Alstom Coradia Polyvalent"@en,
+        "レジョリス"@ja ;
+    skos:exactMatch wd:Q432769 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Alstom Coradia Polyvalent"@en,
+        "レジョリス"@ja ;
+    prov:wasDerivedFrom wd:Q432769 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q13646 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q28455463,
+        wd:Q7468057 ;
+    wdt:P930 wd:Q106530439,
+        wd:Q1415234,
+        wd:Q21253457 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/B84549%20%C3%A0%20Montreuil-Bellay%20%282%29%20par%20Cramos.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q432769#line1>,
+        <https://w3id.org/railclass/Q432769#line2>,
+        <https://w3id.org/railclass/Q432769#line3>,
+        <https://w3id.org/railclass/Q432769#line4> ;
+    tb:operatingCountry wd:Q142,
+        wd:Q183,
+        wd:Q39 ;
+    tb:usedOn wd:Q1023113,
+        wd:Q133798419,
+        wd:Q3239085,
+        wd:Q7885274 .
+
+<https://w3id.org/railclass/Q432769#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1023113#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1023113 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q432769#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q133798419#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q133798419 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q432769#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3239085#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3239085 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q432769#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7885274#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7885274 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1023113 rdfs:label "CDG Express"@en .
+
+wd:Q133798419 rdfs:label "RS 4"@en .
+
+wd:Q3239085 rdfs:label "C linea"@en .
+
+wd:Q7885274 rdfs:label "Léman Express"@en .
+

@@ -1,0 +1,36 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q110896359 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Renfe Class 801"@en ;
+    skos:exactMatch wd:Q110896359 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Renfe Class 801"@en ;
+    prov:wasDerivedFrom wd:Q110896359 ;
+    wdt:P1064 wd:Q3319112 ;
+    wdt:P137 wd:Q2476154 ;
+    wdt:P176 wd:Q838212 ;
+    wdt:P279 wd:Q483373,
+        wd:Q844054 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Trambah%C3%ADa%20C%C3%A1diz%202025%2010.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q110896359#line1> ;
+    tb:operatingCountry wd:Q29 ;
+    tb:usedOn wd:Q6151804 .
+
+<https://w3id.org/railclass/Q110896359#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6151804#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6151804 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q6151804 rdfs:label "Cádiz Bay tram-train"@en .
+

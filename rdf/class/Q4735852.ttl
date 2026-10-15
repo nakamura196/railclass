@@ -1,0 +1,40 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q4735852 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Alstom Metropolis C830"@en,
+        "シンガポール地下鉄C830形電車"@ja ;
+    skos:exactMatch wd:Q4735852 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Alstom Metropolis C830"@en,
+        "シンガポール地下鉄C830形電車"@ja ;
+    prov:wasDerivedFrom wd:Q4735852 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q3267863 ;
+    wdt:P17 wd:Q334 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q483373,
+        wd:Q662195 ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/2%20C830%20in%20KCD.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q4735852#line1> ;
+    tb:operatingCountry wd:Q334 ;
+    tb:usedOn wd:Q2154003 .
+
+<https://w3id.org/railclass/Q4735852#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2154003#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2154003 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2154003 rdfs:label "Circle Line"@en .
+

@@ -1,0 +1,62 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q671805 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Rhaetian Railway ABe 8/12"@en,
+        "レーティッシュ鉄道ABe8/12 3501-3515形電車"@ja ;
+    skos:exactMatch wd:Q671805 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Rhaetian Railway ABe 8/12"@en,
+        "レーティッシュ鉄道ABe8/12 3501-3515形電車"@ja ;
+    prov:wasDerivedFrom wd:Q671805 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P137 wd:Q177598 ;
+    wdt:P176 wd:Q666703 ;
+    wdt:P2052 100.0 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/RhB%20ABe%208-12%20Allegra%20in%20Pontresina.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q671805#line1>,
+        <https://w3id.org/railclass/Q671805#line2>,
+        <https://w3id.org/railclass/Q671805#line3> ;
+    tb:operatingCountry wd:Q38,
+        wd:Q39 ;
+    tb:usedOn wd:Q277177,
+        wd:Q693867,
+        wd:Q802606 .
+
+<https://w3id.org/railclass/Q671805#line1> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Rhaetian_Railway_ABe_8/12> ;
+    skos:note "dual-voltage for 1000 V DC"@en ;
+    tb:line wd:Q277177 ;
+    tb:sourceSection "Technical details" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q671805#line2> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Rhaetian_Railway_ABe_8/12> ;
+    skos:note "Arosa line"@en ;
+    tb:line wd:Q693867 ;
+    tb:sourceSection "Technical details" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q671805#line3> a tb:LineUse ;
+    dcterms:source <https://en.wikipedia.org/wiki/Rhaetian_Railway_ABe_8/12> ;
+    skos:note "Landquart to Davos"@en ;
+    tb:line wd:Q802606 ;
+    tb:sourceSection "Technical details" ;
+    tb:useStatus "current" .
+
+wd:Q277177 rdfs:label "Bernina railway"@en .
+
+wd:Q693867 rdfs:label "Chur–Arosa railway"@en .
+
+wd:Q802606 rdfs:label "Landquart–Davos Platz railway"@en .
+

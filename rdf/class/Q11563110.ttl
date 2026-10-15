@@ -1,0 +1,59 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q11563110 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Phase IV LRV"@en,
+        "港鉄軽鉄南京浦鎮電車"@ja ;
+    skos:exactMatch wd:Q11563110 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Phase IV LRV"@en,
+        "港鉄軽鉄南京浦鎮電車"@ja ;
+    prov:wasDerivedFrom wd:Q11563110 ;
+    wdt:P137 wd:Q1479375 ;
+    wdt:P176 wd:Q6963679 ;
+    wdt:P279 wd:Q15825863,
+        wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/1115%20plus%201114%20MTR%20Light%20Rail%20761P%2009-07-2020.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q11563110#line1>,
+        <https://w3id.org/railclass/Q11563110#line2>,
+        <https://w3id.org/railclass/Q11563110#line3> ;
+    tb:operatingCountry wd:Q148 ;
+    tb:usedOn wd:Q113960973,
+        wd:Q130217159,
+        wd:Q15917019 .
+
+<https://w3id.org/railclass/Q11563110#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q113960973#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q113960973 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q11563110#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q130217159#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q130217159 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q11563110#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q15917019#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q15917019 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q113960973 rdfs:label "Light Rail Route 507P"@en .
+
+wd:Q130217159 rdfs:label "Light Rail Route 720"@en .
+
+wd:Q15917019 rdfs:label "Light Rail Route 507"@en .
+

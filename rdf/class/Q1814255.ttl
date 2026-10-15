@@ -1,0 +1,37 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q1814255 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "London Underground 1973 Stock"@en,
+        "ロンドン地下鉄1973形電車"@ja ;
+    skos:exactMatch wd:Q1814255 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "London Underground 1973 Stock"@en,
+        "ロンドン地下鉄1973形電車"@ja ;
+    prov:wasDerivedFrom wd:Q1814255 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q682520 ;
+    wdt:P176 wd:Q3112198 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/1973%20Stock%20at%20Ickenham%201.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q1814255#line1> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q207689 .
+
+<https://w3id.org/railclass/Q1814255#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q207689#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q207689 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q207689 rdfs:label "Piccadilly line"@en .
+

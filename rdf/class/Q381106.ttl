@@ -1,0 +1,68 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q381106 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Cityrunner"@en,
+        "シティーランナー"@ja ;
+    skos:exactMatch wd:Q381106 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Cityrunner"@en,
+        "シティーランナー"@ja ;
+    prov:wasDerivedFrom wd:Q381106 ;
+    wdt:P137 wd:Q11780295,
+        wd:Q1631655,
+        wd:Q1664245,
+        wd:Q17978,
+        wd:Q2208780,
+        wd:Q3454986,
+        wd:Q3601014,
+        wd:Q402899,
+        wd:Q49842804,
+        wd:Q677004,
+        wd:Q750832,
+        wd:Q760573,
+        wd:Q876786 ;
+    wdt:P176 wd:Q333498 ;
+    wdt:P279 wd:Q260254 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Tramway%20graz23.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q381106#line1>,
+        <https://w3id.org/railclass/Q381106#line2> ;
+    tb:operatingCountry wd:Q142,
+        wd:Q16,
+        wd:Q183,
+        wd:Q29,
+        wd:Q31,
+        wd:Q36,
+        wd:Q38,
+        wd:Q39,
+        wd:Q40,
+        wd:Q43 ;
+    tb:usedOn wd:Q676266,
+        wd:Q9395021 .
+
+<https://w3id.org/railclass/Q381106#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q676266#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q676266 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q381106#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q9395021#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q9395021 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q676266 rdfs:label "trams in Geneva"@en .
+
+wd:Q9395021 rdfs:label "Łódź Regional Tram"@en .
+

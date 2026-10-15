@@ -1,0 +1,89 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q1903006 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Martens miniature locomotives"@en ;
+    skos:exactMatch wd:Q1903006 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Martens miniature locomotives"@en ;
+    prov:wasDerivedFrom wd:Q1903006 ;
+    wdt:P1064 wd:Q18980233 ;
+    wdt:P137 wd:Q1575453,
+        wd:Q1741371,
+        wd:Q2090360,
+        wd:Q2133644,
+        wd:Q267008,
+        wd:Q4961884,
+        wd:Q872275 ;
+    wdt:P17 wd:Q145,
+        wd:Q16957,
+        wd:Q183,
+        wd:Q29,
+        wd:Q40,
+        wd:Q41304,
+        wd:Q668,
+        wd:Q7318 ;
+    wdt:P176 wd:Q16283636,
+        wd:Q1868564,
+        wd:Q819150 ;
+    wdt:P2052 30.0 ;
+    wdt:P279 wd:Q20650761 ;
+    wdt:P2978 wd:Q1043481 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Parkeisenbahn%20Dresden%20Dampflokomotive%20Moritz%20-%20Bf%20Am%20Strassburger%20Platz%202008-08-31.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q1903006#line1>,
+        <https://w3id.org/railclass/Q1903006#line2>,
+        <https://w3id.org/railclass/Q1903006#line3>,
+        <https://w3id.org/railclass/Q1903006#line4> ;
+    tb:operatingCountry wd:Q145,
+        wd:Q183,
+        wd:Q40 ;
+    tb:usedOn wd:Q1575453,
+        wd:Q1741371,
+        wd:Q267008,
+        wd:Q872275 .
+
+<https://w3id.org/railclass/Q1903006#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1575453#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1575453 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q1903006#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1741371#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1741371 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q1903006#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q267008#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q267008 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q1903006#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q872275#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q872275 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1575453 rdfs:label "Leipziger Parkeisenbahn"@en .
+
+wd:Q1741371 rdfs:label "Killesberg Railway"@en .
+
+wd:Q267008 rdfs:label "Dresden park railway"@en .
+
+wd:Q872275 rdfs:label "Prater Liliputbahn"@en .
+

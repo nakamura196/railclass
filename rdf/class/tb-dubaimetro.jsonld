@@ -1,0 +1,113 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "wd:Q83787",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dubai Metro"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/tb-dubaimetro",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Country, operator and opening date (2009-09-09) from Wikidata Q83787 (Dubai Metro, the system); manufacturer (Kinki Sharyo, cars 5001-5079) from en.wikipedia 'Dubai Metro' (rolling stock, read 2026-10-11) via the skytrain lab note docs/notes/dubaimetro.md."
+      },
+      "handEntered": [
+        {
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P137"
+        },
+        {
+          "@id": "wdt:P176"
+        },
+        {
+          "@id": "wdt:P279"
+        },
+        {
+          "@id": "wdt:P729"
+        }
+      ],
+      "lineUse": {
+        "@id": "https://w3id.org/railclass/tb-dubaimetro#line1"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Dubai Metro Kinki Sharyo train"
+        },
+        {
+          "@language": "ja",
+          "@value": "ドバイメトロの電車（近畿車輛）"
+        }
+      ],
+      "skos:inScheme": {
+        "@id": "https://w3id.org/railclass/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Dubai Metro Kinki Sharyo train"
+        },
+        {
+          "@language": "ja",
+          "@value": "ドバイメトロの電車（近畿車輛）"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q83787"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q499104"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q878"
+      },
+      "wdt:P176": {
+        "@id": "wd:Q1592306"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q483373"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "2009"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/tb-dubaimetro#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q83787"
+      },
+      "line": {
+        "@id": "wd:Q83787"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "the Dubai Metro system itself; Wikidata has no item for its Kinki Sharyo rolling stock"
+      },
+      "sourceSection": "Wikidata (the system)",
+      "useStatus": "current"
+    }
+  ]
+}

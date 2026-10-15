@@ -1,0 +1,47 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q30693490 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Citadis Spirit"@en,
+        "シタディス・スピリット"@ja ;
+    skos:exactMatch wd:Q30693490 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Citadis Spirit"@en,
+        "シタディス・スピリット"@ja ;
+    prov:wasDerivedFrom wd:Q30693490 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q2371310,
+        wd:Q432757 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/OC%20Transpo%20O%20Train%20LRV%201107.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q30693490#line1>,
+        <https://w3id.org/railclass/Q30693490#line2> ;
+    tb:operatingCountry wd:Q16 ;
+    tb:usedOn wd:Q17019227,
+        wd:Q5159786 .
+
+<https://w3id.org/railclass/Q30693490#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q17019227#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q17019227 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q30693490#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5159786#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5159786 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q17019227 rdfs:label "Line 6 Finch West"@en .
+
+wd:Q5159786 rdfs:label "Confederation Line"@en .
+

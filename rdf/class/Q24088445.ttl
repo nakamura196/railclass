@@ -1,0 +1,54 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q24088445 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 717"@en,
+        "イギリス鉄道717形電車"@ja ;
+    skos:exactMatch wd:Q24088445 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "British Rail Class 717"@en,
+        "イギリス鉄道717形電車"@ja ;
+    prov:wasDerivedFrom wd:Q24088445 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q18737011 ;
+    wdt:P17 wd:Q145 ;
+    wdt:P176 wd:Q391895 ;
+    wdt:P2052 137.0 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2018"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439,
+        wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Great%20Northern%20Class%20717%20Desiro%20City%20at%20Palmers%20Green%20June%202019%20cropped.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q24088445#line1>,
+        <https://w3id.org/railclass/Q24088445#line2> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q1933886,
+        wd:Q2203044 .
+
+<https://w3id.org/railclass/Q24088445#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1933886#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1933886 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q24088445#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2203044#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2203044 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1933886 rdfs:label "Northern City Line"@en .
+
+wd:Q2203044 rdfs:label "Hertford North railway station"@en .
+

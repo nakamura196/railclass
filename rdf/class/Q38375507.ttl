@@ -1,0 +1,49 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q38375507 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Euskotren Class 950"@en ;
+    skos:exactMatch wd:Q38375507 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Euskotren Class 950"@en ;
+    prov:wasDerivedFrom wd:Q38375507 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P137 wd:Q3061020 ;
+    wdt:P17 wd:Q29 ;
+    wdt:P176 wd:Q838212 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2015"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Estaci%C3%B3n%20de%20Uribarri%2010.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q38375507#line1>,
+        <https://w3id.org/railclass/Q38375507#line2> ;
+    tb:operatingCountry wd:Q29 ;
+    tb:usedOn wd:Q43224027,
+        wd:Q43263877 .
+
+<https://w3id.org/railclass/Q38375507#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q43224027#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q43224027 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q38375507#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q43263877#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q43263877 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q43224027 rdfs:label "E4 line (Euskotren Trena)"@en .
+
+wd:Q43263877 rdfs:label "Line E1 (Euskotren)"@en .
+

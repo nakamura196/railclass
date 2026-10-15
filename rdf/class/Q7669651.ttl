@@ -1,0 +1,57 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q7669651 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "TCDD DM15000"@en ;
+    skos:exactMatch wd:Q7669651 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "TCDD DM15000"@en ;
+    prov:wasDerivedFrom wd:Q7669651 ;
+    wdt:P137 wd:Q499967 ;
+    wdt:P17 wd:Q43 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q1567915 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Denizli%20railway%20station%2015.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q7669651#line1>,
+        <https://w3id.org/railclass/Q7669651#line2>,
+        <https://w3id.org/railclass/Q7669651#line3> ;
+    tb:operatingCountry wd:Q43 ;
+    tb:usedOn wd:Q140610574,
+        wd:Q20949781,
+        wd:Q48789868 .
+
+<https://w3id.org/railclass/Q7669651#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q140610574#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q140610574 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q7669651#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q20949781#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q20949781 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q7669651#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q48789868#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q48789868 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q140610574 rdfs:label "AYBAN"@en .
+
+wd:Q20949781 rdfs:label "Zonguldak-Filyos Regional"@en .
+
+wd:Q48789868 rdfs:label "Konya-Karaman Regional"@en .
+

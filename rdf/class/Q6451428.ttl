@@ -1,0 +1,65 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q6451428 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "M62 locomotive"@en,
+        "M62形ディーゼル機関車"@ja ;
+    skos:exactMatch wd:Q6451428 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "M62 locomotive"@en,
+        "M62形ディーゼル機関車"@ja ;
+    prov:wasDerivedFrom wd:Q6451428 ;
+    wdt:P1064 wd:Q1197451,
+        wd:Q1999572 ;
+    wdt:P137 wd:Q1069105,
+        wd:Q15835510,
+        wd:Q164914,
+        wd:Q168082,
+        wd:Q181697,
+        wd:Q249591,
+        wd:Q304944,
+        wd:Q660770,
+        wd:Q700563,
+        wd:Q76987,
+        wd:Q864803,
+        wd:Q923337,
+        wd:Q9322 ;
+    wdt:P176 wd:Q289728 ;
+    wdt:P2052 120.0 ;
+    wdt:P279 wd:Q19842071 ;
+    wdt:P2978 wd:Q1022125 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C62-1257%2C%20%D0%9C%D0%BE%D0%BB%D0%B4%D0%BE%D0%B2%D0%B0%2C%20%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F%20%D0%9A%D0%B8%D1%88%D0%B8%D0%BD%D1%8D%D1%83%20%28Trainpix%2068892%29.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q6451428#line1> ;
+    tb:operatingCountry wd:Q159,
+        wd:Q16957,
+        wd:Q183,
+        wd:Q184,
+        wd:Q212,
+        wd:Q213,
+        wd:Q232,
+        wd:Q28,
+        wd:Q28513,
+        wd:Q36,
+        wd:Q37,
+        wd:Q423,
+        wd:Q711 ;
+    tb:usedOn wd:Q22117593 .
+
+<https://w3id.org/railclass/Q6451428#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q22117593#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q22117593 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q22117593 rdfs:label "Moscow Central Ring Railway"@en .
+

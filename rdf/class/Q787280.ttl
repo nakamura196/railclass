@@ -1,0 +1,37 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q787280 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "MÁV 414"@en ;
+    skos:exactMatch wd:Q787280 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "MÁV 414"@en ;
+    prov:wasDerivedFrom wd:Q787280 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1180332 ;
+    wdt:P17 wd:Q28 ;
+    wdt:P176 wd:Q25657 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/414006%20Mez%C5%91k%C3%B6vesd.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q787280#line1> ;
+    tb:operatingCountry wd:Q28 ;
+    tb:usedOn wd:Q141176164 .
+
+<https://w3id.org/railclass/Q787280#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q141176164#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q141176164 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q141176164 rdfs:label "S889"@en .
+

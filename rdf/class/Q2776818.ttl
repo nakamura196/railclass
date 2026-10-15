@@ -1,0 +1,47 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q2776818 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SNCF Class Z 8800"@en,
+        "フランス国鉄Z8800形電車"@ja ;
+    skos:exactMatch wd:Q2776818 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SNCF Class Z 8800"@en,
+        "フランス国鉄Z8800形電車"@ja ;
+    prov:wasDerivedFrom wd:Q2776818 ;
+    wdt:P137 wd:Q13646 ;
+    wdt:P279 wd:Q1243337,
+        wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Sncf%20veri2%20stcloud.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q2776818#line1>,
+        <https://w3id.org/railclass/Q2776818#line2> ;
+    tb:operatingCountry wd:Q142 ;
+    tb:usedOn wd:Q200906,
+        wd:Q93559 .
+
+<https://w3id.org/railclass/Q2776818#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q200906#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q200906 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q2776818#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q93559#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q93559 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q200906 rdfs:label "RER C"@en .
+
+wd:Q93559 rdfs:label "Line U"@en .
+

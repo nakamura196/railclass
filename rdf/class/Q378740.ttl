@@ -1,0 +1,52 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q378740 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Incentro"@en,
+        "インチェントロ"@ja ;
+    skos:exactMatch wd:Q378740 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Incentro"@en,
+        "インチェントロ"@ja ;
+    prov:wasDerivedFrom wd:Q378740 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q86693245 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P279 wd:Q5063597 ;
+    wdt:P2978 wd:Q30398528 ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Tram-de-Nantes.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q378740#line1>,
+        <https://w3id.org/railclass/Q378740#line2> ;
+    tb:operatingCountry wd:Q142,
+        wd:Q145 ;
+    tb:usedOn wd:Q2117983,
+        wd:Q64138 .
+
+<https://w3id.org/railclass/Q378740#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2117983#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2117983 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q378740#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q64138#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q64138 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2117983 rdfs:label "Nantes tramway"@en .
+
+wd:Q64138 rdfs:label "Nottingham Express Transit"@en .
+

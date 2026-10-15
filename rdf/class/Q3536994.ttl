@@ -1,0 +1,70 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q3536994 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ブリュッセル首都圏交通T4000形電車"@ja ;
+    skos:exactMatch wd:Q3536994 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ブリュッセル首都圏交通T4000形電車"@ja ;
+    prov:wasDerivedFrom wd:Q3536994 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1631655 ;
+    wdt:P17 wd:Q31 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P279 wd:Q381106 ;
+    wdt:P930 wd:Q21855034 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/STIB%20T4000%20Essais%20Ma%20Campagne.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q3536994#line1>,
+        <https://w3id.org/railclass/Q3536994#line2>,
+        <https://w3id.org/railclass/Q3536994#line3>,
+        <https://w3id.org/railclass/Q3536994#line4> ;
+    tb:operatingCountry wd:Q31 ;
+    tb:usedOn wd:Q111210270,
+        wd:Q1888831,
+        wd:Q2527775,
+        wd:Q3239018 .
+
+<https://w3id.org/railclass/Q3536994#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q111210270#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q111210270 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q3536994#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1888831#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1888831 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q3536994#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2527775#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2527775 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q3536994#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3239018#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3239018 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q111210270 rdfs:label "Brussels tram route 10"@en .
+
+wd:Q1888831 rdfs:label "Brussels tram route 3"@en .
+
+wd:Q2527775 rdfs:label "Brussels tram route 4"@en .
+
+wd:Q3239018 rdfs:label "Brussels tram route 7"@en .
+

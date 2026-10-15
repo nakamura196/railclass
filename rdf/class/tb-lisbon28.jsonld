@@ -1,0 +1,107 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/railclass/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "tb": "https://w3id.org/railclass/vocab#",
+    "wd": "http://www.wikidata.org/entity/",
+    "wdt": "http://www.wikidata.org/prop/direct/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/railclass/tb-lisbon28",
+      "@type": [
+        "VehicleClass",
+        "skos:Concept"
+      ],
+      "dcterms:source": {
+        "@language": "en",
+        "@value": "Country and operator (Carris) from Wikidata Q149629 (trams in Lisbon); type and the 1995-96 rebuild of the 1930s standard bodies (cars 541-585) from the skytrain lab note docs/notes/lisbon28.md."
+      },
+      "handEntered": [
+        {
+          "@id": "wdt:P17"
+        },
+        {
+          "@id": "wdt:P137"
+        },
+        {
+          "@id": "wdt:P279"
+        },
+        {
+          "@id": "wdt:P729"
+        }
+      ],
+      "lineUse": {
+        "@id": "https://w3id.org/railclass/tb-lisbon28#line1"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Lisbon Remodelado tram (Carris 541-585)"
+        },
+        {
+          "@language": "ja",
+          "@value": "リスボン市電の Remodelado（Carris 541〜585）"
+        }
+      ],
+      "skos:inScheme": {
+        "@id": "https://w3id.org/railclass/"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Lisbon Remodelado tram (Carris 541-585)"
+        },
+        {
+          "@language": "ja",
+          "@value": "リスボン市電の Remodelado（Carris 541〜585）"
+        }
+      ],
+      "usedOn": {
+        "@id": "wd:Q149629"
+      },
+      "wdt:P137": {
+        "@id": "wd:Q1045108"
+      },
+      "wdt:P17": {
+        "@id": "wd:Q45"
+      },
+      "wdt:P279": {
+        "@id": "wd:Q3407658"
+      },
+      "wdt:P729": {
+        "@type": "xsd:gYear",
+        "@value": "1995"
+      }
+    },
+    {
+      "@id": "wd:Q149629",
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "trams in Lisbon"
+      }
+    },
+    {
+      "@id": "https://w3id.org/railclass/tb-lisbon28#line1",
+      "@type": "LineUse",
+      "dcterms:source": {
+        "@id": "https://www.wikidata.org/wiki/Q149629"
+      },
+      "line": {
+        "@id": "wd:Q149629"
+      },
+      "skos:note": {
+        "@language": "en",
+        "@value": "the Lisbon tram system itself (the cars run on route 28); Wikidata has no item for the Remodelado trams"
+      },
+      "sourceSection": "Wikidata (the system)",
+      "useStatus": "current"
+    }
+  ]
+}

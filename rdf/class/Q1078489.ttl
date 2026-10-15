@@ -1,0 +1,75 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q1078489 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "NSB Class 72"@en ;
+    skos:exactMatch wd:Q1078489 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "NSB Class 72"@en ;
+    prov:wasDerivedFrom wd:Q1078489 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q58041853,
+        wd:Q83825 ;
+    wdt:P17 wd:Q20 ;
+    wdt:P176 wd:Q28668498 ;
+    wdt:P2052 160.0 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P2978 wd:Q62625402 ;
+    wdt:P729 "2002"^^xsd:gYear ;
+    wdt:P930 wd:Q1415234 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/NSB%2072006.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q1078489#line1>,
+        <https://w3id.org/railclass/Q1078489#line2>,
+        <https://w3id.org/railclass/Q1078489#line3>,
+        <https://w3id.org/railclass/Q1078489#line4> ;
+    tb:operatingCountry wd:Q20 ;
+    tb:usedOn wd:Q115217962,
+        wd:Q115408725,
+        wd:Q1790279,
+        wd:Q2038354 .
+
+<https://w3id.org/railclass/Q1078489#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q115217962#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q115217962 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q1078489#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q115408725#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q115408725 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q1078489#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1790279#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1790279 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q1078489#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2038354#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2038354 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q115217962 rdfs:label "L1 Spikkestad–Lillestrøm"@en .
+
+wd:Q115408725 rdfs:label "L5 Stavanger–Egersund"@en .
+
+wd:Q1790279 rdfs:label "Oslo Commuter Rail"@en .
+
+wd:Q2038354 rdfs:label "Spikkestad Line"@en .
+

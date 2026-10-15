@@ -1,0 +1,51 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q2284285 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "HSB 187 201 to 187 203"@en,
+        "コンビーノ・デュオ"@ja ;
+    skos:exactMatch wd:Q2284285 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "HSB 187 201 to 187 203"@en,
+        "コンビーノ・デュオ"@ja ;
+    prov:wasDerivedFrom wd:Q2284285 ;
+    wdt:P176 wd:Q391895 ;
+    wdt:P2052 70.0 ;
+    wdt:P279 wd:Q1567915,
+        wd:Q232962,
+        wd:Q3407658,
+        wd:Q392615 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/187%20202%20Ilfeld%20Neanderklinik%2023.04.12.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q2284285#line1>,
+        <https://w3id.org/railclass/Q2284285#line2> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q116487045,
+        wd:Q318073 .
+
+<https://w3id.org/railclass/Q2284285#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q116487045#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q116487045 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q2284285#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q318073#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q318073 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q116487045 rdfs:label "Nordhausen tram line 10"@en .
+
+wd:Q318073 rdfs:label "Nordhausen tramway"@en .
+

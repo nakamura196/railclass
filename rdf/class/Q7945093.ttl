@@ -1,0 +1,35 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q7945093 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "W-class Melbourne tram"@en,
+        "メルボルントラムW形電車"@ja ;
+    skos:exactMatch wd:Q7945093 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "W-class Melbourne tram"@en,
+        "メルボルントラムW形電車"@ja ;
+    prov:wasDerivedFrom wd:Q7945093 ;
+    wdt:P176 wd:Q6811935 ;
+    wdt:P279 wd:Q3407658 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/W6%20Melbourne%20tram%2C%20Nicholson%20Street.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q7945093#line1> ;
+    tb:operatingCountry wd:Q408 ;
+    tb:usedOn wd:Q5123100 .
+
+<https://w3id.org/railclass/Q7945093#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5123100#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5123100 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5123100 rdfs:label "City Circle"@en .
+

@@ -1,0 +1,60 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q1023756 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ETR.610"@en,
+        "チザルピーノETR610電車"@ja ;
+    skos:exactMatch wd:Q1023756 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ETR.610"@en,
+        "チザルピーノETR610電車"@ja ;
+    prov:wasDerivedFrom wd:Q1023756 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q371478,
+        wd:Q83823,
+        wd:Q83835 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P2052 250.0 ;
+    wdt:P279 wd:Q29523365 ;
+    wdt:P729 "2008"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439,
+        wd:Q1415234,
+        wd:Q21251675,
+        wd:Q21253457 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/ETR%20610%20006%20Domodossola%2030-10-2010%20EC50.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q1023756#line1>,
+        <https://w3id.org/railclass/Q1023756#line2> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q38,
+        wd:Q39,
+        wd:Q40 ;
+    tb:usedOn wd:Q105916542,
+        wd:Q46048144 .
+
+<https://w3id.org/railclass/Q1023756#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q105916542#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q105916542 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q1023756#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q46048144#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q46048144 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q105916542 rdfs:label "ECE 88"@en .
+
+wd:Q46048144 rdfs:label "EuroCity-Express"@en .
+

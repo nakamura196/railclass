@@ -1,0 +1,42 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q336585 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ČD Class 471"@en,
+        "シュコダ 1EV"@ja ;
+    skos:exactMatch wd:Q336585 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ČD Class 471"@en,
+        "シュコダ 1EV"@ja ;
+    prov:wasDerivedFrom wd:Q336585 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q304944 ;
+    wdt:P17 wd:Q213 ;
+    wdt:P176 wd:Q933787 ;
+    wdt:P2052 140.0 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2000"^^xsd:gYear ;
+    wdt:P930 wd:Q21251675 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/471%20035%20CD%20Ostrava.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q336585#line1> ;
+    tb:operatingCountry wd:Q213 ;
+    tb:usedOn wd:Q168331 .
+
+<https://w3id.org/railclass/Q336585#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q168331#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q168331 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q168331 rdfs:label "Esko Prague"@en .
+

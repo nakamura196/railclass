@@ -1,0 +1,35 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q58037019 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Alstom Citadis 305 (Kaohsiung)"@en,
+        "高雄環状軽軌シタディス305電車"@ja ;
+    skos:exactMatch wd:Q58037019 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Alstom Citadis 305 (Kaohsiung)"@en,
+        "高雄環状軽軌シタディス305電車"@ja ;
+    prov:wasDerivedFrom wd:Q58037019 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q432757 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/KMRT%20Citadis%20305%20at%20Depot%202018-09-05%2001.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q58037019#line1> ;
+    tb:operatingCountry wd:Q865 ;
+    tb:usedOn wd:Q4121246 .
+
+<https://w3id.org/railclass/Q58037019#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4121246#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4121246 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4121246 rdfs:label "Circular light rail"@en .
+

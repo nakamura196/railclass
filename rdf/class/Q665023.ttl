@@ -1,0 +1,61 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q665023 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 317"@en,
+        "イギリス国鉄クラス317電車"@ja ;
+    skos:exactMatch wd:Q665023 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "British Rail Class 317"@en,
+        "イギリス国鉄クラス317電車"@ja ;
+    prov:wasDerivedFrom wd:Q665023 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q12859175,
+        wd:Q14500773,
+        wd:Q18737011,
+        wd:Q1967136,
+        wd:Q2510370,
+        wd:Q2707736,
+        wd:Q286262,
+        wd:Q6670591,
+        wd:Q737478 ;
+    wdt:P17 wd:Q145 ;
+    wdt:P176 wd:Q18160582 ;
+    wdt:P2052 161.0 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "1983"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/317505%201%20ARR%20LDN%20LVS.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q665023#line1>,
+        <https://w3id.org/railclass/Q665023#line2> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q5442954,
+        wd:Q746021 .
+
+<https://w3id.org/railclass/Q665023#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5442954#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5442954 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q665023#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q746021#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q746021 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5442954 rdfs:label "Fen line"@en .
+
+wd:Q746021 rdfs:label "London Overground"@en .
+

@@ -1,0 +1,34 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q2659651 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Tram class B in Munich"@en ;
+    skos:exactMatch wd:Q2659651 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Tram class B in Munich"@en ;
+    prov:wasDerivedFrom wd:Q2659651 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P176 wd:Q1724325 ;
+    wdt:P930 <http://www.wikidata.org/entity/http://www.wikidata.org/.well-known/genid/ac68ffe3dc2e67a8c34cb704b1addf5b> ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Isartor.%20Fortepan%2023043.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q2659651#line1> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q526596 .
+
+<https://w3id.org/railclass/Q2659651#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q526596#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q526596 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q526596 rdfs:label "Munich Tramway"@en .
+

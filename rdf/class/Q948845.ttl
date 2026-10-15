@@ -1,0 +1,40 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q948845 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "InterCity 125"@en,
+        "インターシティー125"@ja ;
+    skos:exactMatch wd:Q948845 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "InterCity 125"@en,
+        "インターシティー125"@ja ;
+    prov:wasDerivedFrom wd:Q948845 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q107980329 ;
+    wdt:P2052 200.0 ;
+    wdt:P279 wd:Q13402959,
+        wd:Q1567915 ;
+    wdt:P2978 wd:Q1014107 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/British%20Rail%20Class%2043%20at%20Chesterfield.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q948845#line1> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q7073894 .
+
+<https://w3id.org/railclass/Q948845#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7073894#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7073894 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q7073894 rdfs:label "Oakham–Kettering line"@en .
+

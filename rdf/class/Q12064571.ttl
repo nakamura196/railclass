@@ -1,0 +1,58 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q12064571 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "New Zealand FP class electric multiple unit"@en,
+        "ニュージーランド鉄道FP形電車"@ja ;
+    skos:exactMatch wd:Q12064571 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "New Zealand FP class electric multiple unit"@en,
+        "ニュージーランド鉄道FP形電車"@ja ;
+    prov:wasDerivedFrom wd:Q12064571 ;
+    wdt:P137 wd:Q24088909 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/NZR%20FP%20class%2001.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q12064571#line1>,
+        <https://w3id.org/railclass/Q12064571#line2>,
+        <https://w3id.org/railclass/Q12064571#line3> ;
+    tb:operatingCountry wd:Q664 ;
+    tb:usedOn wd:Q16926948,
+        wd:Q16926970,
+        wd:Q6813114 .
+
+<https://w3id.org/railclass/Q12064571#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16926948#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q16926948 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q12064571#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16926970#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q16926970 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q12064571#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6813114#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6813114 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q16926948 rdfs:label "Johnsonville Line"@en .
+
+wd:Q16926970 rdfs:label "Kapiti Line"@en .
+
+wd:Q6813114 rdfs:label "Melling Branch"@en .
+

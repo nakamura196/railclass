@@ -1,0 +1,43 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q1244473 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "VL11"@en,
+        "ソ連運輸省VL11形電気機関車"@ja ;
+    skos:exactMatch wd:Q1244473 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "VL11"@en,
+        "ソ連運輸省VL11形電気機関車"@ja ;
+    prov:wasDerivedFrom wd:Q1244473 ;
+    wdt:P1064 wd:Q1197451 ;
+    wdt:P137 wd:Q115880,
+        wd:Q660770,
+        wd:Q923337 ;
+    wdt:P176 wd:Q4453143 ;
+    wdt:P279 wd:Q625151 ;
+    wdt:P2978 wd:Q24730842 ;
+    wdt:P930 wd:Q21251675 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/VL11%20227%20BMO.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q1244473#line1> ;
+    tb:operatingCountry wd:Q159,
+        wd:Q212,
+        wd:Q230 ;
+    tb:usedOn wd:Q60995871 .
+
+<https://w3id.org/railclass/Q1244473#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q60995871#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q60995871 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q60995871 rdfs:label "rail transport in Georgia"@en .
+

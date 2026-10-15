@@ -1,0 +1,40 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q4970721 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 120"@en,
+        "イギリス国鉄120形気動車"@ja ;
+    skos:exactMatch wd:Q4970721 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "British Rail Class 120"@en,
+        "イギリス国鉄120形気動車"@ja ;
+    prov:wasDerivedFrom wd:Q4970721 ;
+    wdt:P137 wd:Q7437933,
+        wd:Q7988225 ;
+    wdt:P176 wd:Q922964 ;
+    wdt:P279 wd:Q1567915 ;
+    wdt:P729 "1958"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/The%20BR%20%28Swindon%29%20Cross%20Country%20dmu%20Sc51788%2C%20Sc51790%2C%20Sc59679%2C%20Sc51783%20%288391978719%29.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q4970721#line1> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q1903208 .
+
+<https://w3id.org/railclass/Q4970721#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1903208#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1903208 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1980"^^xsd:gYear .
+
+wd:Q1903208 rdfs:label "Aberdeen-Inverness line"@en .
+

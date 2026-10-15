@@ -1,0 +1,43 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q780281 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Solaris Tramino"@en,
+        "トラミーノ"@ja ;
+    skos:exactMatch wd:Q780281 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Solaris Tramino"@en,
+        "トラミーノ"@ja ;
+    prov:wasDerivedFrom wd:Q780281 ;
+    wdt:P137 wd:Q11780305,
+        wd:Q1686811,
+        wd:Q53430,
+        wd:Q884166,
+        wd:Q901999 ;
+    wdt:P176 wd:Q23826657,
+        wd:Q838369 ;
+    wdt:P279 wd:Q2371310,
+        wd:Q3407658 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/27%20Grudnia%2C%20Tramino%2C%20Poznan.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q780281#line1> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q36 ;
+    tb:usedOn wd:Q3537081 .
+
+<https://w3id.org/railclass/Q780281#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3537081#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3537081 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3537081 rdfs:label "Trams in Braunschweig"@en .
+

@@ -1,0 +1,33 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q7581315 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Sprinter"@en ;
+    skos:exactMatch wd:Q7581315 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Sprinter"@en ;
+    prov:wasDerivedFrom wd:Q7581315 ;
+    wdt:P137 wd:Q7906335 ;
+    wdt:P176 wd:Q7864623 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/7007%20southern%20cross%2012%20sep%2007.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q7581315#line1> ;
+    tb:operatingCountry wd:Q408 ;
+    tb:usedOn wd:Q7619599 .
+
+<https://w3id.org/railclass/Q7581315#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7619599#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7619599 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q7619599 rdfs:label "Stony Point"@en .
+

@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q134533452 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Siemens SCB-40"@en,
+        "ブライトライン SCB-40"@ja ;
+    skos:exactMatch wd:Q134533452 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Siemens SCB-40"@en,
+        "ブライトライン SCB-40"@ja ;
+    prov:wasDerivedFrom wd:Q134533452 ;
+    wdt:P137 wd:Q27012668 ;
+    wdt:P176 wd:Q391895 ;
+    wdt:P279 wd:Q18148915 ;
+    wdt:P729 "2018"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/BrightLine%20train%20test.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q134533452#line1> ;
+    tb:operatingCountry wd:Q30 ;
+    tb:usedOn wd:Q27012668 .
+
+<https://w3id.org/railclass/Q134533452#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q27012668#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q27012668 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q27012668 rdfs:label "Brightline"@en .
+

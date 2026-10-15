@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q951972 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Renfe class 730"@en ;
+    skos:exactMatch wd:Q951972 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Renfe class 730"@en ;
+    prov:wasDerivedFrom wd:Q951972 ;
+    wdt:P1064 wd:Q1999572,
+        wd:Q3319112 ;
+    wdt:P137 wd:Q2476154 ;
+    wdt:P17 wd:Q29 ;
+    wdt:P176 wd:Q1100969 ;
+    wdt:P279 wd:Q12816984,
+        wd:Q28455463 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Station%20Santiago%20de%20Compostella%202015%20%281%29.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q951972#line1> ;
+    tb:operatingCountry wd:Q29 ;
+    tb:usedOn wd:Q448931 .
+
+<https://w3id.org/railclass/Q951972#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q448931#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q448931 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q448931 rdfs:label "Alvia"@en .
+

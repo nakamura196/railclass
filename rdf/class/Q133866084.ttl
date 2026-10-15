@@ -1,0 +1,39 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q133866084 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "TCDD E 39000"@en ;
+    skos:exactMatch wd:Q133866084 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "TCDD E 39000"@en ;
+    prov:wasDerivedFrom wd:Q133866084 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q28220824 ;
+    wdt:P17 wd:Q43 ;
+    wdt:P176 wd:Q97219287 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2025"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/E39000%20at%20Mithatpa%C5%9Fa%20Train%20Station.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q133866084#line1> ;
+    tb:operatingCountry wd:Q43 ;
+    tb:usedOn wd:Q55074880 .
+
+<https://w3id.org/railclass/Q133866084#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q55074880#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q55074880 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q55074880 rdfs:label "Gaziray"@en .
+

@@ -1,0 +1,37 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q6087163 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Israel Railways JT42CW"@en ;
+    skos:exactMatch wd:Q6087163 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Israel Railways JT42CW"@en ;
+    prov:wasDerivedFrom wd:Q6087163 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q846655 ;
+    wdt:P17 wd:Q801 ;
+    wdt:P176 wd:Q568501 ;
+    wdt:P279 wd:Q4735854 ;
+    wdt:P2978 wd:Q1022125 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Traincrossing823.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q6087163#line1> ;
+    tb:operatingCountry wd:Q801 ;
+    tb:usedOn wd:Q846655 .
+
+<https://w3id.org/railclass/Q6087163#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q846655#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q846655 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q846655 rdfs:label "Israel Railways"@en .
+
