@@ -22,6 +22,9 @@ import csv, json, os, sys, time, urllib.parse, urllib.request
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, FOAF, OWL, PROV, RDF, RDFS, SKOS, XSD
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from site_config import SHOW3D   # site.config.json: with show3d false the RDF has no 3D models, liveries or has3DModel
+
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(HERE, "docs", "rdf")
 CACHE = os.path.join(HERE, "data", "wikidata", "rdf-cache.json")
@@ -594,7 +597,8 @@ def add_tsv_class(g, cid, rec):
     add_depiction(g, s, cid)
     for k, r in enumerate((r for r in LINES if r["class"] == cid), 1):
         add_line(g, s, k, r)
-    g.add((s, TB.has3DModel, Literal(False)))
+    if SHOW3D:
+        g.add((s, TB.has3DModel, Literal(False)))
 
 
 IMAGES = {}   # Wikidata item -> Commons file IRI (P18), filled in main()
@@ -656,9 +660,10 @@ def add_class(g, cid, wd, models):
         add_depiction(g, s, wq)
     for k, r in enumerate((r for r in LINES if r["class"] == cid), 1):
         add_line(g, s, k, r)
-    g.add((s, TB.has3DModel, Literal(bool(models))))
-    for m in models:
-        g.add((s, SDO.subjectOf, MDL[m]))
+    if SHOW3D:
+        g.add((s, TB.has3DModel, Literal(bool(models))))
+        for m in models:
+            g.add((s, SDO.subjectOf, MDL[m]))
 
 
 def add_line(g, s, k, r):
@@ -741,6 +746,9 @@ def write(g, path, title, uri):
     g.serialize(path + ".jsonld", format="json-ld", context=CONTEXT, indent=1, auto_compact=True)
 
 
+MODEL_TERMS = {TB.Livery, TB.has3DModel, TB.livery, TB.liveryOf, TB.ColorSample, TB.colorSample, TB.areaShare, TB.part, TB.galleryGroup}
+
+
 def vocab():
     g = new_graph()
     terms = [
@@ -765,6 +773,8 @@ def vocab():
         (TB.inferred, RDF.Property, "inferred", "推定", "True when the source names a service (e.g. a city pair) and the line was inferred from it."),
         (TB.galleryGroup, RDF.Property, "gallery group", "ギャラリーの区分", "Group id used on the gallery page."),
     ]
+    if not SHOW3D:
+        terms = [x for x in terms if x[0] not in MODEL_TERMS]
     for t, typ, en, ja, c in terms:
         g.add((t, RDF.type, typ)); g.add((t, RDFS.label, Literal(en, lang="en"))); g.add((t, RDFS.label, Literal(ja, lang="ja")))
         g.add((t, RDFS.comment, Literal(c, lang="en"))); g.add((t, RDFS.isDefinedBy, URIRef(BASE + "vocab")))
@@ -795,13 +805,14 @@ def add_derived(wd):
 def main():
     wd = fetch("--refresh" in sys.argv)
     add_derived(wd)
-    add_labels(wd, COLORS["basic"].values())
+    if SHOW3D:
+        add_labels(wd, COLORS["basic"].values())
     # hand-entered values and livery operators: a class without a Wikidata item (tb-) triggers no fetch, so its labels
     # would be missing otherwise
     add_labels(wd, [v for h in HAND.values() for vs in h.values() for v in vs if isinstance(v, str)]
-               + [op for _, op in LIVERIES.values()])
+               + ([op for _, op in LIVERIES.values()] if SHOW3D else []))
     IMAGES.update((r["item"], r["image"]) for r in read_tsv("wikidata/facets/_image.tsv") if r["image"])
-    items = gallery_items()
+    items = gallery_items() if SHOW3D else {}   # show3d false: no model resources, so no model links on the classes
     by_class = {}
     for mid, (cid, _, _) in MODELS.items():
         if mid in items:
@@ -810,6 +821,8 @@ def main():
         d = os.path.join(DOCS, sub); os.makedirs(d, exist_ok=True)
         for f in os.listdir(d):
             os.remove(os.path.join(d, f))
+    if not SHOW3D:
+        os.rmdir(os.path.join(DOCS, "model"))
     allg = new_graph()
     allg += vocab()
     for cid in CLASSES:
@@ -823,7 +836,7 @@ def main():
     for cid, rec in more.items():
         g = new_graph(); add_tsv_class(g, cid, rec)
         write(g, os.path.join(DOCS, "class", cid), rec["label"].get("ja") or rec["label"].get("en") or cid, str(CLS[cid])); allg += g
-    for mid in MODELS:
+    for mid in (MODELS if SHOW3D else []):
         if mid not in items:
             print("skip (not in gallery):", mid); continue
         g = new_graph(); add_model(g, mid, items[mid])

@@ -4,6 +4,7 @@ import "../styles/site.css";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { LANGS, page, t, type Lang } from "../i18n";
+import { SHOW3D } from "../lib/site";
 
 interface Props {
   lang: Lang;
@@ -18,9 +19,11 @@ const ui = t(lang);
 const canonical = new URL(page(lang, path), Astro.site).href;
 // Icon and share image are made by ~/git/tools/og-image from og-image.json into docs/site/ (copied by sync-public).
 const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+// The site-wide share image (docs/site/og-<lang>.jpg) is a screenshot of the top page with the 3D models, so with show3d false
+// (site.config.json) it is not published and a page without its own image (a class photo) has no share image.
 const og = image
   ? { url: new URL(base + image.src, Astro.site).href, size: image.size, alt: image.alt, type: image.type }
-  : { url: new URL(`${base}site/og-${lang}.jpg`, Astro.site).href, size: [1200, 630], alt: `${ui.site.name} — ${ui.site.description}`, type: "image/jpeg" };
+  : SHOW3D ? { url: new URL(`${base}site/og-${lang}.jpg`, Astro.site).href, size: [1200, 630], alt: `${ui.site.name} — ${ui.site.description}`, type: "image/jpeg" } : null;
 ---
 <!doctype html>
 <html lang={lang}>
@@ -36,12 +39,12 @@ const og = image
 <meta property="og:type" content="website">
 <meta property="og:url" content={canonical}>
 <meta property="og:locale" content={lang === "en" ? "en_US" : "ja_JP"}>
-<meta property="og:image" content={og.url}>
-<meta property="og:image:type" content={og.type}>
-{og.size && <meta property="og:image:width" content={String(og.size[0])}>}
-{og.size && <meta property="og:image:height" content={String(og.size[1])}>}
-<meta property="og:image:alt" content={og.alt}>
-<meta name="twitter:card" content="summary_large_image">
+{og && <meta property="og:image" content={og.url}>}
+{og && <meta property="og:image:type" content={og.type}>}
+{og && og.size && <meta property="og:image:width" content={String(og.size[0])}>}
+{og && og.size && <meta property="og:image:height" content={String(og.size[1])}>}
+{og && <meta property="og:image:alt" content={og.alt}>}
+<meta name="twitter:card" content={og ? "summary_large_image" : "summary"}>
 <link rel="icon" href={`${base}site/favicon.ico`} sizes="32x32">
 <link rel="icon" href={`${base}site/icon.svg`} type="image/svg+xml">
 <link rel="apple-touch-icon" href={`${base}site/apple-touch-icon.png`}>

@@ -1,0 +1,31 @@
+---
+// The model turning on the mat in the top page's hero (a train from the newest models). Rendered only when show3d is true (site.config.json).
+import css from "../styles/top3d.css?raw";   // inlined, not imported as CSS: Astro would link an imported stylesheet from every page that imports the component
+import { page, file, t, type Lang } from "../i18n";
+import { modelClasses } from "../lib/classes";
+
+const { lang, hero, path } = Astro.props as { lang: Lang; hero: { id: string; groupLabel: string; title: string }; path: string };
+const ui = t(lang);
+const T = ui.top;
+const where = modelClasses();
+const modelPage = (id: string) => where[id] ? page(lang, `rdf/class/${where[id]}.html#${id}`) : page(lang, `view.html#${id}`);
+---
+<style is:inline set:html={css}></style>
+<figure class="mat" id="hero-mat" data-path={path}>
+  <model-viewer id="hero-mv" poster={file(`thumbs/${hero.id}.jpg`)}
+    auto-rotate rotation-per-second="18deg" auto-rotate-delay="0" camera-controls touch-action="pan-y"
+    shadow-intensity="0.8" exposure="1.05" tone-mapping="neutral" interaction-prompt="none" camera-orbit="-55deg 70deg auto"
+    alt={T.heroAlt}></model-viewer>
+  <p class="herolock" id="hero-lock" hidden><a href={modelPage(hero.id)}>{ui.auth.heroLogin}</a></p>
+  <figcaption><a href={modelPage(hero.id)}>{hero.groupLabel} · {hero.title} →</a></figcaption>
+</figure>
+
+<script>
+  import { resolve } from "../lib/auth3d";
+  // The hero model is behind a login: the poster stays unless the visitor is already logged in (asked silently)
+  const mat = document.getElementById("hero-mat");
+  if (mat) resolve(mat.dataset.path!).then(url => {
+    if (url) (document.getElementById("hero-mv") as any).src = url;
+    else document.getElementById("hero-lock")!.hidden = false;
+  });
+</script>

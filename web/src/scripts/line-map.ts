@@ -58,9 +58,9 @@ export function lineMap() {
   const labels = new Map<string, string>();
   let current: string | null = null;
   let ready = false;
-  const has3d: string[] = lines ? [] : data.has3d ?? [];
-  let only3d = false;    // map/: only the lines a class with a 3D model runs on
-  const keep = (f: any[]) => only3d ? ["all", f, ["in", ["get", "lid"], ["literal", has3d]]] : f;    // the shapes are in; a line chosen before that is shown once they are
+  const pick: string[] = lines ? [] : data.pick ?? [];
+  let onlyPick = false;    // map/: only the lines of the picked classes (the box is there when show3d is true)
+  const keep = (f: any[]) => onlyPick ? ["all", f, ["in", ["get", "lid"], ["literal", pick]]] : f;    // the shapes are in; a line chosen before that is shown once they are
   const hl = (id: string | null) => ["==", ["get", "lid"], id ?? ""];
   const fade = (id: string | null) => ({ "lines-case": id ? 0.25 : 0.9, "lines-cur": id ? 0.25 : 0.95, "lines-old": id ? 0.15 : 0.6 });    // the others step back while one is chosen
   const draw = () => {
@@ -143,7 +143,7 @@ export function lineMap() {
   if (world) map.on("moveend", () => {
     if (!ready || map.getZoom() < DETAIL_ZOOM) return;
     const b = map.getBounds(); const v: Box = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
-    detail([...boxes].filter(([id, bx]) => meets(bx, v) && (!only3d || has3d.includes(id))).map(([id]) => id));
+    detail([...boxes].filter(([id, bx]) => meets(bx, v) && (!onlyPick || pick.includes(id))).map(([id]) => id));
   });
 
   const restyle = () => (proj = map.getProjection()?.type ?? proj, map.setStyle(STYLE[dark() ? "dark" : "light"], { diff: false }));
@@ -153,11 +153,11 @@ export function lineMap() {
   for (const b of document.querySelectorAll<HTMLElement>(".lines button[data-line]"))
     b.addEventListener("click", () => choose(b.hasAttribute("aria-current") ? null : b.dataset.line!));
   document.querySelector(".lines .all-lines")?.addEventListener("click", () => choose(null));
-  document.getElementById("only3d")?.addEventListener("change", e => {
-    only3d = (e.target as HTMLInputElement).checked;
-    document.querySelector(".lines ul.scroll")?.classList.toggle("f3d", only3d);
+  document.getElementById("pickbox")?.addEventListener("change", e => {
+    onlyPick = (e.target as HTMLInputElement).checked;
+    document.querySelector(".lines ul.scroll")?.classList.toggle("picked", onlyPick);
     for (const k of ["lines-case", "lines-cur"]) if (map.getLayer(k)) map.setFilter(k, keep(["!=", ["get", "old"], 1]));
     if (map.getLayer("lines-old")) map.setFilter("lines-old", keep(["==", ["get", "old"], 1]));
-    if (only3d && current && !has3d.includes(current)) choose(null);
+    if (onlyPick && current && !pick.includes(current)) choose(null);
   });
 }

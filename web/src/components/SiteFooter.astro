@@ -1,10 +1,11 @@
 ---
 import { page, file, t, type Lang } from "../i18n";
+import { SHOW3D } from "../lib/site";
 const { lang } = Astro.props as { lang: Lang };
 const ui = t(lang);
 const f = ui.footer;
-const siteLinks = [[ui.nav.search, page(lang, "search/")], [ui.nav.view, page(lang, "search/") + "?has3d=1"], [f.news, page(lang, "#news")], [ui.nav.about, page(lang, "#about")]];
-const dataLinks = [[f.dataset, page(lang, "dataset.html")], [f.modelsJson, file("data/models.json")], [f.allTtl, file("rdf/all.ttl")], [f.eratvTsv, file("data/eratv-wikidata.tsv")],
+const siteLinks = [[ui.nav.search, page(lang, "search/")], ...(SHOW3D ? [[ui.nav.view, page(lang, "search/") + "?has3d=1"]] : []), [f.news, page(lang, "#news")], [ui.nav.about, page(lang, "#about")]];
+const dataLinks = [[f.dataset, page(lang, "dataset.html")], ...(SHOW3D ? [[f.modelsJson, file("data/models.json")]] : []), [f.allTtl, file("rdf/all.ttl")], [f.eratvTsv, file("data/eratv-wikidata.tsv")],
                    [f.newsJson, file("data/news.json")], [f.source, "https://github.com/nakamura196/railclass"]];
 const [licA, licB] = f.licence.split("{cc}");   // images of the models: CC BY 4.0; the models themselves need individual permission (decided 2026-10-14)
 ---
@@ -17,7 +18,7 @@ const [licA, licB] = f.licence.split("{cc}");   // images of the models: CC BY 4
     <div><h2>{f.data}</h2><ul>{dataLinks.map(([l, h]) => <li><a href={h}>{l}</a></li>)}</ul></div>
     <div class="legal">
       <p>{f.unofficial}</p>
-      <p>{licA}<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>{licB}</p>
+      {SHOW3D ? <p>{licA}<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>{licB}</p> : <p>{f.licence}</p>}
       <p>{f.copyright}</p>
     </div>
   </div>

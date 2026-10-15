@@ -114,6 +114,8 @@
     "note": "The list of classes and their values come from Wikidata (CC0). Japanese classes are not included. Photos are from Wikimedia Commons; click one to open its Wikidata item.",
     "js": {
       "unit": " ({u})",
+      "badge": "3D",
+      "badgeN": "3D ×{n}",
       "sortRec": "Recommended (3D and photos first)",
       "sortName": "Name",
       "sortDesc": "{f} (high to low)",
@@ -321,5 +323,112 @@
     "citeTitle": "How to cite",
     "cite": "Nakamura, Satoru ({year}). RailClass: railway vehicle classes of the world [dataset]. {site}"
   },
-  "numberLocale": "en-GB"
+  "numberLocale": "en-GB",
+  "no3d": {
+    "_note": "Texts used instead of the ones above when show3d is false in site.config.json (merged over them by i18n/index.ts; null removes a key).",
+    "site": {
+      "tagline": "World railway vehicle classes",
+      "description": "A database of the world's railway vehicle classes, linked to Wikidata."
+    },
+    "nav": {
+      "view": null
+    },
+    "footer": {
+      "lead": " — a database of the world's railway vehicle classes, linked to Wikidata.",
+      "modelsJson": null,
+      "licence": "Class data (RDF) is CC0. Class photos come from Wikimedia Commons, each under the terms shown with it. The type IDs and names in the ERATV table come from ERATV, European Union Agency for Railways (ERA)."
+    },
+    "top": {
+      "lead": "A database of the world's railway vehicle classes, linked to Wikidata.",
+      "heroAlt": null,
+      "newTitle": null,
+      "seeAll": null,
+      "stats": {
+        "models": null
+      },
+      "features": {
+        "view": null,
+        "download": null,
+        "data": [
+          "Use as data",
+          "Class data as RDF."
+        ]
+      },
+      "about": [
+        "We collect railway vehicle classes (groups of vehicles built to the same design) from Wikidata and other authorities. Japanese classes are not included."
+      ],
+      "dataItems": {
+        "models": null,
+        "iiif": null,
+        "download": null
+      }
+    },
+    "auth": null,
+    "view": null,
+    "model": null,
+    "search": {
+      "js": {
+        "badge": null,
+        "badgeN": null,
+        "sortRec": "Recommended (photos first)"
+      }
+    },
+    "class": {
+      "models": null,
+      "view": null,
+      "manifest": null,
+      "glb": null,
+      "parts": null,
+      "partsHint": null,
+      "overview": null,
+      "prev": null,
+      "next": null,
+      "marks": null,
+      "stage": null
+    },
+    "map": {
+      "only3d": null,
+      "has3d": null
+    },
+    "dataset": {
+      "counts": {
+        "models": null
+      },
+      "filesLead": "The dump holds every class and our own terms. Start with all.ttl.",
+      "files": {
+        "allTtl": "All classes (Turtle)",
+        "allJsonld": "All classes (JSON-LD)",
+        "iiif": null,
+        "models": null
+      },
+      "uri": [
+        "A class is {cls}<ID>. <ID> is the Wikidata Q id (e.g. Q696668), or an ID of our own starting with tb- for the few classes Wikidata has no item for.",
+        "The URIs are persistent w3id.org URIs: they stay the same if the site moves. Opening one in a browser shows a page for people; asking with Accept: text/turtle or application/ld+json gives the RDF (w3id.org sends the request on to the file).",
+        "The files are also at {site}: the URI's page with .ttl or .jsonld in place of .html (for example {site}rdf/class/Q696668.ttl)."
+      ],
+      "licence": [
+        [
+          "Class data (RDF)",
+          "CC0 1.0. Most values come from Wikidata (CC0)."
+        ],
+        [
+          "Class photos",
+          "The terms of each Wikimedia Commons file. The RDF holds only the photo IRIs."
+        ],
+        [
+          "Line tracks (GeoJSON)",
+          "© OpenStreetMap contributors, ODbL. The RDF holds only the Wikidata IDs of the lines."
+        ],
+        [
+          "ERATV type IDs and names",
+          "From ERATV, European Union Agency for Railways (ERA), reproduced with acknowledgement as ERA's copyright notice allows."
+        ]
+      ],
+      "sources": [
+        "Classes and their values: Wikidata. The items that are railway vehicle classes were collected with SPARQL; Japanese classes are left out.",
+        "Lines: Wikidata P3438 (vehicle normally used), and a hand-filled table with sources. The tracks were cut out of OpenStreetMap.",
+        "ERATV mapping: the ERATV type list matched to Wikidata classes by name, automatically. Not checked by hand."
+      ]
+    }
+  }
 }

@@ -1,0 +1,8 @@
+---
+// view.html: the old address of the 3D viewer, kept so old links work (it forwards to the class page). Written as a dynamic route
+// so that it is not built at all when show3d is false in site.config.json (a plain view.astro cannot be skipped).
+import ViewPage from "../components/ViewPage.astro";
+import { SHOW3D } from "../lib/site";
+export const getStaticPaths = () => SHOW3D ? [{ params: { old: "view" } }] : [];
+---
+<ViewPage lang="ja" />

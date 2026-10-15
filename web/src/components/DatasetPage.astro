@@ -18,8 +18,8 @@ const fileOf = (k: string) => [...D.files, ...D.void].find((f: any) => f.key ===
 const fill = (s: string) => s.replace(/\{(\w+)\}/g, (m, k) =>
   k === "allTtlSize" ? bytes(fileOf("allTtl").bytes) : typeof D[k] === "number" ? fmt(D[k]) : m);
 const cls = D.classUri, mdl = D.modelUri;
-const uriText = (s: string) => s.replace("{cls}", cls).replace("{mdl}", mdl).replaceAll("{site}", D.site);
-const examples = [cls + "Q696668", cls + "tb-skytrain-mk2", mdl + "icet_411"];
+const uriText = (s: string) => s.replace("{cls}", cls).replace("{mdl}", mdl ?? "").replaceAll("{site}", D.site);
+const examples = [cls + "Q696668", cls + "tb-skytrain-mk2", ...(mdl ? [mdl + "icet_411"] : [])];   // no model URI in dataset.json when show3d is false
 // The examples link to the URIs themselves: w3id.org sends a browser on to the page.
 const vocab = D.vocab;
 const query = `PREFIX tb:   <${vocab}>

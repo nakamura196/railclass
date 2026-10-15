@@ -1,0 +1,7 @@
+---
+// en/view.html: see ../[old].astro
+import ViewPage from "../../components/ViewPage.astro";
+import { SHOW3D } from "../../lib/site";
+export const getStaticPaths = () => SHOW3D ? [{ params: { old: "view" } }] : [];
+---
+<ViewPage lang="en" />

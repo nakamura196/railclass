@@ -2,6 +2,7 @@
 // rdf/model/<id>.html — one page per 3D model (docs/data/models.json; the model RDF is written for each).
 import ModelPage from "../../../components/ModelPage.astro";
 import { models } from "../../../lib/data";
-export const getStaticPaths = () => models("ja").items.map(m => ({ params: { id: m.id } }));
+import { SHOW3D } from "../../../lib/site";
+export const getStaticPaths = () => !SHOW3D ? [] : models("ja").items.map(m => ({ params: { id: m.id } }));
 ---
 <ModelPage lang="ja" id={Astro.params.id!} />

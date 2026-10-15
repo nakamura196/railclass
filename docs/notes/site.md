@@ -269,3 +269,49 @@ site と iiif が main に入る前なので、検索・形式の詳細・IIIF �
 - 大きさ: 18 モデルで 92 MB（OBJ を圧縮しなくなったので 52 → 92 MB）。いちばん大きいファイルは 3.7 MB（icet_green.usdz）。公開物全体は 380 MB
 - 置いた場所: 形式のページの「書き出し」に STL・OBJ・MTL・USDZ のボタンを GLB の隣に並べ、モデルのページには「ダウンロード」の欄（形式の説明と大きさ）を作った。トップの「準備中」は外した
 - 限界: main から clone しただけではダウンロードのファイルは無い（skytrain の `tools/export_formats.py --no-mount` で作る）。skytrain は push しないので、作れるのはこの端末だけ
+
+## 2026-10-15
+
+### 3D モデルに関することを、1 つの設定で出す・隠す
+
+公開サイトから 3D モデルの話を全部なくせるようにした。いまは **隠す（false）** にしてある。あとで戻せるよう、コードもデータも消していない。
+
+- **設定の場所:** リポジトリ直下の `site.config.json` の `show3d`（`false` = 隠す、`true` = 出す）。
+  Astro（`web/src/lib/site.ts`）、公開前のコピーと検査（`web/scripts/site-config.mjs`）、Python（`tools/site_config.py`）が同じファイルを読む。
+  一時的に変えたいときは環境変数 `RAILCLASS_SHOW3D=1`（出す）か `0`（隠す）が優先される。
+- **false のときに起きること:**
+  - ページ: 3D ビューア、ログインの案内、モデルの一覧、ダウンロード・IIIF・引用のうちモデルの行、ヘッダとフッタの「3D で見る」、トップの 3D 画像・「3D モデル」の件数・新着モデル、検索の「3D あり」の絞り込みと印、地図の「3D のある形式だけ」、データセットのページのモデルの項目、フッタのモデルの利用条件の文、をすべて出さない。
+    見出しや説明文は `web/src/i18n/ja.json` と `en.json` の `no3d` ブロックにある別の文に入れ替わる（`null` はその項目を消す）。
+  - ページを作らない: `rdf/model/<id>.html` と `view.html`（英語版も）。`view.html` は、`[old].astro` という動的なルートにして、`show3d` が false のとき 0 件を返すようにした（普通のページは作らない指定ができないため）。
+  - 公開しないファイル（`web/scripts/sync-public.mjs`）: `models/` `thumbs/` `iiif/` `downloads/` `data/models.json` `rdf/model/` `site/og-*.jpg`。
+    `rdf/facets.json` は、3D と色の絞り込みの項目と注記を除いて写す。`data/news.json` は、モデルのお知らせを除き、他の項目は `off` に書いた別の文に替えて写す。
+    ビルドの最後（`web/scripts/prune-dist.mjs`）に、3D の部品が `dist/_astro/` に残したスクリプトと CSS を消す。
+  - Python: `build_rdf.py` はモデルの資源・塗装・`tb:has3DModel`・`schema:subjectOf` を書かず、`vocab.ttl` からもモデル用の語を外す。
+    `build_void.py` は IIIF とモデル一覧の配布・件数・説明文の「3D」を書かない。
+    `build_search.py` は `bodies` 列（形式ごとのモデルの ID。以前は `models` だったが、名前を替えた）と `has3d`、塗装から来る「色」の絞り込み、`stats.json` の `models` を出さない。
+    `search.js` は `bodies` が無い索引でも動く。
+  - 共有用の画像 `docs/site/og-ja.jpg` と `og-en.jpg` は、3D のモデルを並べたトップページの画面写真なので、公開しない。
+    サイト共通の共有画像は無くなる（形式ページは、写真があればその写真が共有画像になる）。
+- **検査:** `npm test`（`check-dist.mjs`）は、false のとき「モデルや IIIF のページ・ファイルが dist に無い」「ページと配布データに 3D の語（3D・GLB・IIIF・モデル・ビューアなど）が無い」ことを調べる。
+  形式の名前や Wikidata のラベルは「HXD3D」「Model T Ford」のように 3D やモデルを含むので、形式ページと索引と RDF では、構造に関わる語（ビューア、`has3DModel`、IIIF のパスなど）だけを見る。
+  true のときは、これまでの検査のまま。
+
+**あとで戻すとき（この順）:**
+
+```
+（1）site.config.json の show3d を true にする
+（2）python3 tools/build_rdf.py
+（3）python3 tools/build_void.py
+（4）python3 tools/build_search.py
+（5）cd web && npm run build && npm test
+（6）cd .. && zsh scripts/deploy-pages.zsh
+```
+
+（2）〜（4）は 3 つとも要る。`docs/rdf/` と `docs/search/` と `docs/data/dataset.json` が、false のあいだ 3D なしの内容に書き換わっているため。`docs/models/` `docs/iiif/` `docs/thumbs/` は消していないので、そのまま使われる。
+隠すときも同じ手順で、false にして（2）〜（6）を走らせる。確かめたこと: true で作り直すと、形式ページ・データセット・検索の画面は、変更前の画面と同じになった（ビューアあり、検査も通る）。
+
+**隠せていないもの・注意:**
+- 形式の名前や Wikidata のラベル、Commons の写真のファイル名に、3D・model・モデルという語を含むものがある（例: HXD3D、Model T Ford）。これは 3D モデルの話ではないので、そのまま。
+- `docs/` の中のノート（`docs/notes/`）やリポジトリの README は公開サイトに載らないので触っていない。GitHub のリポジトリ（ソース）を開けば、3D の仕組みは見える。
+- 3D だけのために加えた形式（`tb-skytrain-mk1` など、Wikidata に項目が無く手で立てたもの）は、形式として残る。名前に「SkyTrain」「Airo」などが出る。
+- 戻したあと、`og-ja.jpg` と `og-en.jpg` はまた使われる（作り直してはいない）。

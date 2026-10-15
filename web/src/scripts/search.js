@@ -28,7 +28,7 @@ const FILEPAGE = "https://commons.wikimedia.org/wiki/File:";
 const NUM = new Set(["decimal", "integer", "gYear"]);
 const fmtN = n => n.toLocaleString(C.locale);
 
-let D, F, text, state;
+let D, F, text, state, BODIES;   // BODIES: per class, the ids of its 3D bodies; not in the index when the site shows none
 
 // Text in the page's language, the other language when there is none.
 function L(lbl) { return (JA ? lbl.ja || lbl.en : lbl.en || lbl.ja) || ""; }
@@ -127,12 +127,12 @@ function sort(hits) {
     const col = D[m[1]], dir = m[2] === "asc" ? 1 : -1;
     return hits.sort((a, b) => (col[a] == null) - (col[b] == null) || dir * (col[a] - col[b]));
   }
-  const score = i => (D.models[i].length ? 2 : 0) + (D.img[i] ? 1 : 0);
+  const score = i => (BODIES[i]?.length ? 2 : 0) + (D.img[i] ? 1 : 0);
   return hits.sort((a, b) => score(b) - score(a) || coll.compare(name(a), name(b)));
 }
 
 // ---- facets panel
-const openFacets = new Set(["kind", "country", "has3d"]);
+const openFacets = new Set(["kind", "country"]);   // the yes/no facets (when the index has any) are opened in init()
 const showAll = new Set();
 const findText = {};
 function renderFacets(counts) {
@@ -230,7 +230,7 @@ function photo(i) {
 }
 // Credit line under a Commons photo: author (links to the file page, which has the full terms) and licence (links to it).
 function credit(i) {
-  const f = D.img[i]; if (!f || D.models[i].length) return null;
+  const f = D.img[i]; if (!f || BODIES[i]?.length) return null;
   const c = D.credit ? D.credit[i] : 0;
   const page = FILEPAGE + encodeURIComponent(f.replace(/ /g, "_"));
   if (!c) return el("p", { class: "credit" }, el("a", { href: page, text: S.photoCommons }));
@@ -240,11 +240,11 @@ function credit(i) {
 }
 
 function card(i) {
-  const m = D.models[i];
-  const ph = el("div", { class: "ph" + (m.length ? " model" : "") });
+  const m = BODIES[i] || [];
+  const ph = el("div", { class: "ph" + (m.length ? " mdl" : "") });
   const src = m.length ? `${C.thumbs}${m[0]}.jpg` : photo(i);
   ph.append(src ? el("img", { src, alt: "", loading: "lazy", decoding: "async" }) : el("span", { class: "none", text: S.noPhoto }));
-  if (m.length) ph.append(el("span", { class: "badge", text: m.length > 1 ? `3D ×${m.length}` : "3D" }));
+  if (m.length) ph.append(el("span", { class: "badge", text: m.length > 1 ? fmt(S.badgeN, { n: m.length }) : S.badge }));
   const meta = [...iriFacets().slice(1).map(f => vals(f, i)), ...numFacets().map(f => numText(f, i))].filter(Boolean).join(" · ");
   return el("div", { class: "card" }, el("a", { class: "main", href: href(i) }, ph,
     el("div", { class: "tx" }, el("b", { text: name(i) }), other(i) ? el("span", { class: "sub", text: other(i) }) : null,
@@ -256,7 +256,7 @@ function table(rows) {
   const head = el("tr", {}, el("th", { text: S.name }), ...ff.map((f, k) => el("th", { class: k ? "" : "hide-s", text: L(f.label) })),
     ...nf.map(f => el("th", { class: "num hide-s", text: L(f.label) })));
   const body = rows.map(i => el("tr", {},
-    el("td", {}, el("a", { href: href(i), text: name(i) }), D.models[i].length ? el("span", { class: "tag3d", text: "3D" }) : null,
+    el("td", {}, el("a", { href: href(i), text: name(i) }), BODIES[i]?.length ? el("span", { class: "tagx", text: S.badge }) : null,
       other(i) ? el("span", { class: "sub", text: other(i) }) : null),
     ...ff.map((f, k) => el("td", { class: k ? "" : "hide-s", text: vals(f, i, 3) })),
     ...nf.map(f => el("td", { class: "num hide-s", text: numText(f, i) }))));
@@ -298,6 +298,8 @@ async function init() {
     $("count").textContent = S.loadError; return;
   }
   F = D.facets;
+  BODIES = D.bodies || [];
+  for (const f of F) if (f.datatype === "boolean") openFacets.add(f.id);
   text = D.id.map((q, i) => `${words(D.en[i])}${words(D.ja[i])} ${norm(D.en[i])} ${norm(D.ja[i])} ${q.toLowerCase()}`);
   $("sort").replaceChildren(...sorters().map(([v, t]) => el("option", { value: v, text: t })));
   state = readURL();

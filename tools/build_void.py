@@ -14,6 +14,7 @@ from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCAT, DCTERMS, FOAF, RDF, RDFS, SKOS, XSD
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from site_config import SHOW3D   # site.config.json: false = no word about 3D models in the description, no IIIF / model files
 from build_rdf import BASE, SITE, CC0, CLS, DOCS as RDF_DIR, MDL, SCHEME, SDO, TB, WD, WDT
 CC_BY = URIRef("https://creativecommons.org/licenses/by/4.0/")   # the IIIF Collection and the model list (descriptions, not the 3D files)
 
@@ -39,13 +40,12 @@ def count():
         "properties": len(preds),
         "vocabularies": sorted({str(p).rsplit("#", 1)[0] + "#" if "#" in str(p) else str(p).rsplit("/", 1)[0] + "/" for p in preds}),
         "classes": types[TB.VehicleClass],
-        "models": types[SDO["3DModel"]],
-        "liveries": types[TB.Livery],
+        **({"models": types[SDO["3DModel"]], "liveries": types[TB.Livery]} if SHOW3D else {}),
         "lineUses": types[TB.LineUse],
         "withPhoto": len(set(g.subjects(FOAF.depiction, None))),
         "withLines": len(set(g.subjects(TB.usedOn, None))),
         "lines": len(set(g.objects(None, TB.usedOn))),
-        "withModel": len(set(g.subjects(TB.has3DModel, Literal(True)))),
+        **({"withModel": len(set(g.subjects(TB.has3DModel, Literal(True))))} if SHOW3D else {}),
         "exactMatch": sum(1 for _, _, o in g.triples((None, SKOS.exactMatch, None)) if str(o).startswith(str(WD))),
         "depiction": sum(1 for _, _, o in g.triples((None, FOAF.depiction, None)) if str(o).startswith(COMMONS)),
         "wikidataValues": sum(c for p, c in preds.items() if str(p).startswith(str(WDT))),
@@ -60,7 +60,8 @@ def count():
     shapes = {f[:-8] for f in os.listdir(os.path.join(DOCS, "lines")) if f.startswith("Q") and f.endswith(".geojson")}
     n["lineShapes"] = len(shapes)
     n["withLineShape"] = len({s for s, o in g.subject_objects(TB.usedOn) if str(o).removeprefix(str(WD)) in shapes})   # on the map
-    n["iiifManifests"] = len(json.load(open(os.path.join(DOCS, "iiif", "collection.json"), encoding="utf-8"))["items"])
+    if SHOW3D:
+        n["iiifManifests"] = len(json.load(open(os.path.join(DOCS, "iiif", "collection.json"), encoding="utf-8"))["items"])
     return n
 
 
@@ -74,6 +75,9 @@ FILES = [
     ("iiif", "iiif/collection.json", "application/ld+json", CC_BY, "IIIF Presentation 4.0 Collection of the 3D models", "3D モデルの IIIF Collection（Presentation 4.0）"),
     ("models", "data/models.json", "application/json", CC_BY, "List of the 3D models (JSON)", "3D モデルの一覧（JSON）"),
 ]
+if not SHOW3D:
+    FILES = [f for f in FILES if f[0] not in ("iiif", "models")]
+    FILES = [(k, rel, mt, lic, en.replace("All classes and models", "All classes"), ja.replace("全形式と 3D モデル", "全形式")) for k, rel, mt, lic, en, ja in FILES]
 
 
 def build(n, modified):
@@ -87,16 +91,16 @@ def build(n, modified):
     g.add((DS, DCTERMS.description, Literal(
         f"{n['classes']:,} railway vehicle classes outside Japan, taken from Wikidata and linked to it (skos:exactMatch), "
         f"with operator, manufacturer and other values as Wikidata IRIs, photos for {n['withPhoto']:,} classes (Wikimedia Commons), "
-        f"the lines {n['withLines']:,} classes run on, and {n['models']} 3D-printed vehicle bodies with their liveries. "
+        f"the lines {n['withLines']:,} classes run on" + (f", and {n['models']} 3D-printed vehicle bodies with their liveries. " if SHOW3D else ". ") +
         "No SPARQL endpoint: every resource is a static file (Turtle and JSON-LD), and the whole dataset is in one dump file.", lang="en")))
     g.add((DS, DCTERMS.description, Literal(
         f"日本を除く世界の鉄道車両の形式 {n['classes']:,} 件。Wikidata から取り出し、skos:exactMatch で結んでいる。"
         f"運行者・製造者などの値は Wikidata の IRI のまま持つ。写真 {n['withPhoto']:,} 形式（Wikimedia Commons）、"
-        f"走る路線 {n['withLines']:,} 形式、3D プリントで作った車体 {n['models']} 件とその塗装を含む。"
+        f"走る路線 {n['withLines']:,} 形式" + (f"、3D プリントで作った車体 {n['models']} 件とその塗装を含む。" if SHOW3D else "を含む。") +
         "SPARQL エンドポイントは無い。資源はすべて静的なファイル（Turtle と JSON-LD）で、全体は一括ファイル 1 つにまとめてある。", lang="ja")))
     g.add((DS, DCTERMS.license, CC0))
     g.add((DS, DCTERMS.rights, Literal(
-        "Class data CC0. 3D models (schema:3DModel and their files): individual permission required (In Copyright), stated on each model with schema:license; the files are behind a login. "
+        "Class data CC0. " + ("3D models (schema:3DModel and their files): individual permission required (In Copyright), stated on each model with schema:license; the files are behind a login. " if SHOW3D else "") +
         "Photos: the licence of each Wikimedia Commons file.", lang="en")))
     me = BNode(); g.add((DS, DCTERMS.creator, me)); g.add((DS, DCTERMS.publisher, me))
     g.add((me, RDF.type, FOAF.Person)); g.add((me, FOAF.name, Literal("中村 覚", lang="ja"))); g.add((me, FOAF.name, Literal("Satoru Nakamura", lang="en")))
@@ -105,18 +109,18 @@ def build(n, modified):
     g.add((DS, FOAF.homepage, URIRef(SITE)))
     g.add((DS, DCAT.landingPage, URIRef(SITE + "dataset.html")))
     g.add((DS, DCTERMS.isReferencedBy, URIRef("https://github.com/nakamura196/railclass")))
-    for kw in ("railway", "rolling stock", "vehicle class", "Wikidata", "3D model", "鉄道車両", "形式"):
+    for kw in ("railway", "rolling stock", "vehicle class", "Wikidata", *(["3D model"] if SHOW3D else []), "鉄道車両", "形式"):
         g.add((DS, DCAT.keyword, Literal(kw)))
     # VoID: what is in the RDF, and how to get it
     g.add((DS, VOID.uriSpace, Literal(BASE)))
     g.add((DS, VOID.rootResource, SCHEME))
-    for r in (CLS.Q696668, CLS.Q115612330, CLS["tb-skytrain-mk2"], MDL.icet_411):
+    for r in (CLS.Q696668, CLS.Q115612330, CLS["tb-skytrain-mk2"], *([MDL.icet_411] if SHOW3D else [])):
         g.add((DS, VOID.exampleResource, r))
     for k in ("allTtl", "allJsonld"):
         g.add((DS, VOID.dataDump, URIRef(SITE + next(f[1] for f in FILES if f[0] == k))))
     g.add((DS, RDFS.comment, Literal(
         "There is no SPARQL endpoint. Load the dump (void:dataDump) into a triple store, or read single resources: "
-        "each URI (a class <https://w3id.org/railclass/{id}>, a model <https://w3id.org/railclass/model/{id}>) is sent by "
+        "each URI (a class <https://w3id.org/railclass/{id}>" + (", a model <https://w3id.org/railclass/model/{id}>" if SHOW3D else "") + ") is sent by "
         "w3id.org to its Turtle file, JSON-LD file or human page by the Accept header (text/turtle, application/ld+json, "
         "anything else).", lang="en")))
     g.add((DS, VOID.feature, URIRef("http://www.w3.org/ns/formats/Turtle")))
@@ -164,7 +168,7 @@ def main():
                 context={"void": str(VOID), "dcat": str(DCAT), "dcterms": str(DCTERMS), "foaf": str(FOAF), "skos": str(SKOS), "xsd": str(XSD)})
     files = [{"key": k, "path": rel, "type": mt, "bytes": size(rel)} for k, rel, mt, *_ in FILES]
     out = {k: v for k, v in n.items() if k not in ("topProperties", "typeCounts", "vocabularies")}
-    out.update(modified=modified, uriSpace=BASE, classUri=str(CLS), modelUri=str(MDL), vocab=str(TB), dataset=str(DS), site=SITE, files=files,
+    out.update(modified=modified, uriSpace=BASE, classUri=str(CLS), **({"modelUri": str(MDL)} if SHOW3D else {}), vocab=str(TB), dataset=str(DS), site=SITE, files=files,
                void=[{"key": "voidTtl", "path": "rdf/void.ttl", "bytes": os.path.getsize(os.path.join(RDF_DIR, "void.ttl"))},
                      {"key": "voidJsonld", "path": "rdf/void.jsonld", "bytes": os.path.getsize(os.path.join(RDF_DIR, "void.jsonld"))}])
     with open(os.path.join(DOCS, "data", "dataset.json"), "w", encoding="utf-8") as f:

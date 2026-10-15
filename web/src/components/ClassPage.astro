@@ -1,15 +1,17 @@
 ---
 // One class (rdf/class/<id>.html): name, the values (as in the search), links to Wikidata and the broader / narrower
-// classes, the 3D models made for it (viewer with the part annotations of the IIIF Manifest) and the RDF itself.
-// Written at build time; the script only moves the camera to a part and switches between the class's models.
-// rdf/class/<id>.html#<model-id> opens that model.
+// classes and the RDF itself. With show3d true (site.config.json) it also shows the 3D models made for the class
+// (components/Class3D.astro: viewer with the part annotations of the IIIF Manifest; rdf/class/<id>.html#<model-id> opens that model)
+// and their links in the export box (components/Class3DExports.astro). With show3d false nothing of that is rendered.
 import "../styles/class.css";
 import Base from "../layouts/Base.astro";
 import { file, page, t, type Lang } from "../i18n";
 import { classPage } from "../lib/classes";
-import iiifLogo from "../assets/iiif-logo.svg";   // the IIIF logo, as on the IIIF Consortium's site
-import { models, modelParts, fmtSize, hasManifest, classLines, downloads } from "../lib/data";
-import { LOGOUT_URL } from "../lib/auth3d";
+import { classLines, downloads } from "../lib/data";
+import { SHOW3D } from "../lib/site";
+// Imported only when show3d is true: Astro puts the CSS and scripts of every statically imported component into the page, rendered or not
+const Class3D = SHOW3D ? (await import("./Class3D.astro")).default : null;
+const Class3DExports = SHOW3D ? (await import("./Class3DExports.astro")).default : null;
 import { ldBrowser } from "../lib/ldbrowser";
 
 const { lang, id } = Astro.props as { lang: Lang; id: string };
@@ -18,24 +20,6 @@ const T = ui.class;
 const fmt = (s: string, o: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (_, k) => String(o[k]));
 const nf = new Intl.NumberFormat(ui.numberLocale);
 const c = classPage(id, lang, n => nf.format(n), y => fmt(T.year, { y }));
-const M = models(lang);
-const mods = c.models.map(m => M.items.find(it => it.id === m)).filter(Boolean) as ReturnType<typeof models>["items"];
-const V = ui.view;
-const A = ui.auth;
-const ORBITS: [keyof typeof V.orbits, string][] = [["quarter", "-55deg 70deg auto"], ["side", "0deg 90deg auto"], ["front", "-90deg 85deg auto"], ["top", "0deg 0deg auto"]];
-// The surface normal at a part: build_iiif.py puts each part's camera at hit + normal * 55 + up * 12, so the normal is
-// recovered from the camera. The script fades the markers whose surface faces away from the camera, as Sketchfab does.
-const normal = (c: { pos: number[]; look: number[] } | null) => {
-  if (!c) return null;
-  const d = [c.pos[0] - c.look[0], c.pos[1] - c.look[1] - 12, c.pos[2] - c.look[2]];
-  const n = Math.hypot(...d) || 1;
-  return d.map(x => +(x / n).toFixed(3));
-};
-const parts = Object.fromEntries(mods.map(m => [m.id, modelParts(m.id, lang)]));
-const mdata = mods.map(m => ({ id: m.id, src: `${m.id}.${M.ext}`, poster: file(`thumbs/${m.id}.jpg`),
-  tag: `${fmtSize(m.size)} mm`, cams: parts[m.id].map(p => p.cam), marks: parts[m.id].map(p => ({ at: p.at, n: normal(p.cam) })) }));
-const pos = (v: number[]) => v.map(x => `${x}m`).join(" ");
-
 const uri = `https://w3id.org/railclass/${id}`;
 const here = `rdf/class/${id}.html`;
 const cite = `${c.name}. ${ui.site.name}. ${uri}`;
@@ -48,7 +32,7 @@ const mapped = lines.filter(l => l.map);
 ---
 <Base lang={lang} path={here} current="search" title={`${c.name} — ${ui.site.name}`} description={`${T.kicker}: ${c.name}${c.other ? ` (${c.other})` : ""}`}
   image={share}>
-{mods.length > 0 && <script slot="head" type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>}
+{SHOW3D && c.models.length > 0 && <script slot="head" type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>}
 {mapped.length > 0 && <link slot="head" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.css">}
 {mapped.length > 0 && <script slot="head" is:inline src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>}
 <link slot="head" rel="alternate" type="text/turtle" href={file(`rdf/class/${id}.ttl`)}>
@@ -61,70 +45,7 @@ const mapped = lines.filter(l => l.map);
     <p class="uri"><code>{uri}</code> · <a href={ldBrowser(lang, uri)}>{ui.site.ldBrowser}</a></p>
   </div>
 
-  {mods.length > 0 && (
-    <section class:list={["m3d", { solo: mods.every(m => !parts[m.id].length) }]} aria-labelledby="h-models">
-      <div class="stage">
-        <h2 id="h-models">{T.models}</h2>
-        <div class="mat">
-          <model-viewer id="mv" poster={mdata[0].poster} camera-controls touch-action="pan-y" shadow-intensity="0.8"
-            tone-mapping="neutral" interaction-prompt="none" camera-orbit={ORBITS[0][1]} alt={V.alt}>
-            {mods.map((m, mi) => parts[m.id].map((p, k) => (
-              <button type="button" class="hs" slot={`hotspot-${m.id}-${k}`} data-model={m.id} data-part={k} data-position={pos(p.at)}
-                hidden={mi > 0} aria-label={p.label}>{k + 1}</button>
-            )))}
-          </model-viewer>
-          <div class="gate" id="gate" hidden>
-            <p class="ask">{A.needLogin}</p>
-            <p class="deny" hidden>{A.denied}</p>
-            <button type="button" id="gate-login">{A.login}</button>
-            <p class="who">{A.approvedOnly}</p>
-          </div>
-          <span class="tag" id="tag">{mdata[0].tag}</span>
-          <span class="hint">{V.hint}</span>
-        </div>
-        {mods.length > 1 && (
-          <div class="views pick" role="group" aria-label={T.models}>
-            {mods.map((m, i) => <button type="button" data-model={m.id} aria-pressed={i === 0 ? "true" : "false"}>{m.title}</button>)}
-          </div>
-        )}
-        <div class="views orbits" role="group" aria-label={V.orient}>
-          {ORBITS.map(([k, orbit], i) => <button type="button" data-orbit={orbit} aria-pressed={i === 0 ? "true" : "false"}>{V.orbits[k]}</button>)}
-          <button type="button" id="spin" aria-pressed="false">{V.orbits.spin}</button>
-          {mods.some(m => parts[m.id].length) && <button type="button" id="marks" aria-pressed="true">{T.marks}</button>}
-        </div>
-        {mods.map((m, i) => (
-          <div class="about" data-model={m.id} hidden={i > 0}>
-            <b>{m.title}</b>
-            {m.line && <p>{m.line}</p>}
-          </div>
-        ))}
-        <div class="note">{V.note.map(p => <p>{p}</p>)}</div>
-        <p class="note" id="logout" hidden><a href={LOGOUT_URL} target="_blank" rel="noopener">{A.logout}</a></p>
-      </div>
-      <div class="parts">
-        {mods.map((m, mi) => parts[m.id].length > 0 && (
-          <div data-model={m.id} hidden={mi > 0}>
-            <h2>{T.parts}</h2>
-            <p class="hint">{T.partsHint}</p>
-            <ol>
-              {parts[m.id].map((p, k) => (
-                <li data-kind={p.kindKey}>
-                  <button type="button" data-model={m.id} data-part={k}><span class="n">{k + 1}</span><b>{p.label}</b>{p.kind && <span class="kind">{p.kind}</span>}</button>
-                  <p>{p.text}</p>
-                </li>
-              ))}
-            </ol>
-            <div class="step">
-              <button type="button" class="prev" aria-label={T.prev}>‹ {T.prev}</button>
-              <span class="at" aria-live="polite">– / {parts[m.id].length}</span>
-              <button type="button" class="next" aria-label={T.next}>{T.next} ›</button>
-              <button type="button" class="overview">{T.overview}</button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  )}
+  {Class3D && c.models.length > 0 && <Class3D lang={lang} ids={c.models} />}
 
   <div class="body">
     <section class="props" aria-labelledby="h-values">
@@ -193,17 +114,9 @@ const mapped = lines.filter(l => l.map);
         <div class="exports">
           <a href={file(`rdf/class/${id}.ttl`)} download>Turtle</a>
           <a href={file(`rdf/class/${id}.jsonld`)} download>JSON-LD</a>
-          {mods.map(m => hasManifest(m.id) && (
-            <a class="iiif" href={file(`iiif/${m.id}/manifest.json`)}><img src={iiifLogo.src} alt="" width="20" height="18">{mods.length > 1 ? `${T.manifest} (${m.title})` : T.manifest}</a>
-          ))}
-          {mods.map(m => (
-            <a href={here} data-auth-path={`${m.id}.${M.ext}`} data-denied={A.denied}>{mods.length > 1 ? `${T.glb} (${m.title})` : T.glb}</a>
-          ))}
-          {mods.flatMap(m => downloads(m.id, lang).map(d => (
-            <a href={here} data-auth-path={d.path} data-denied={A.denied} title={d.label}>{mods.length > 1 ? `${d.key.toUpperCase()} (${m.title})` : d.key.toUpperCase()}</a>
-          )))}
+          {Class3DExports && c.models.length > 0 && <Class3DExports lang={lang} ids={c.models} here={here} />}
         </div>
-        {mods.some(m => downloads(m.id, lang).length) && <p class="dlnote">{ui.model.objNote} {ui.model.meshNote}</p>}
+        {SHOW3D && c.models.some(m => downloads(m, lang).length) && <p class="dlnote">{ui.model.objNote} {ui.model.meshNote}</p>}
       </section>
       {c.photo && (
         <figure class="photo">
@@ -223,14 +136,11 @@ const mapped = lines.filter(l => l.map);
   </details>
 </div>
 {mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify(mapped.map(l => ({ id: l.id, label: l.label, old: l.status !== "current", color: l.color, src: file(`lines/${l.id}.geojson`) })))} />}
-{mods.length > 0 && <script type="application/json" id="m3d-data" set:html={JSON.stringify({ models: mdata, orbit: ORBITS[0][1] })} />}
 </Base>
 
 <script>
-  import { getToken, login, resolve, forget, wireDownloads } from "../lib/auth3d";
   import { lineMap } from "../scripts/line-map";
   lineMap();
-  wireDownloads();
 
   // Copy the citation
   const cc = document.getElementById("cite-copy");
@@ -241,102 +151,4 @@ const mapped = lines.filter(l => l.map);
       setTimeout(() => { cc.title = t; cc.classList.remove("done"); }, 2000);
     } catch (e) {}
   });
-
-  // Only on pages with a model: switch models, move the camera to a part (its IIIF camera: position and lookAt), orbits.
-  const el = document.getElementById("m3d-data");
-  if (el) {
-    type Cam = { pos: number[]; look: number[] } | null;
-    type M = { id: string; src: string; poster: string; tag: string; cams: Cam[]; marks: { at: number[]; n: number[] | null }[] };
-    const D: { models: M[]; orbit: string } = JSON.parse(el.textContent!);
-    const mv = document.getElementById("mv") as any;
-    const all = (sel: string) => [...document.querySelectorAll<HTMLElement>(sel)];
-    let cur = D.models[0];
-
-    const orbitOf = (c: NonNullable<Cam>) => {
-      const [dx, dy, dz] = c.pos.map((v, i) => v - c.look[i]);
-      const r = Math.hypot(dx, dy, dz);
-      return `${(Math.atan2(dx, dz) * 180 / Math.PI).toFixed(1)}deg ${(Math.acos(dy / r) * 180 / Math.PI).toFixed(1)}deg ${r.toFixed(1)}m`;
-    };
-    let at = -1;    // the part shown, -1 = the whole body
-    const count = () => all(`.parts li button[data-model="${cur.id}"]`).length;
-    const step = () => { for (const s of all(`.parts [data-model="${cur.id}"] .step .at`)) s.textContent = `${at < 0 ? "–" : at + 1} / ${count()}`; };
-    function overview(orbit = D.orbit) {
-      mv.cameraTarget = "auto auto auto"; mv.cameraOrbit = orbit; mv.fieldOfView = "auto";
-      for (const b of all("[data-part]")) b.removeAttribute("aria-current");
-      at = -1; step();
-    }
-    function focus(k: number) {
-      const c = cur.cams[k];
-      if (c) { mv.cameraTarget = c.look.map(v => `${v}m`).join(" "); mv.cameraOrbit = orbitOf(c); mv.fieldOfView = "30deg"; }
-      for (const b of all("[data-part]")) b.toggleAttribute("aria-current", b.dataset.model === cur.id && +b.dataset.part! === k);
-      document.querySelector<HTMLElement>(`.parts li button[data-model="${cur.id}"][data-part="${k}"]`)?.scrollIntoView({ block: "nearest", behavior: "smooth" });
-      for (const o of all(".orbits [data-orbit]")) o.setAttribute("aria-pressed", "false");
-      at = k; step();
-    }
-    // Previous / next part, in the list's order, going round (as Sketchfab's annotation arrows)
-    const go = (d: number) => { const n = count(); if (n) focus(at < 0 ? (d > 0 ? 0 : n - 1) : (at + d + n) % n); };
-    for (const b of all(".step .prev")) b.addEventListener("click", () => go(-1));
-    for (const b of all(".step .next")) b.addEventListener("click", () => go(1));
-    // The model is behind a login: poster until the signed URL is known; the gate asks for the login, or says the visitor is not on the list
-    const gate = document.getElementById("gate")!, logout = document.getElementById("logout")!;
-    let loaded = "";
-    async function load() {
-      const want = cur;
-      if (loaded === want.id) return;
-      const url = await resolve(want.src);
-      if (cur !== want) return;
-      const signedIn = !!url || !!(await getToken());
-      if (url) { mv.src = url; loaded = want.id; }
-      gate.hidden = !!url;
-      gate.querySelector<HTMLElement>(".ask")!.hidden = signedIn;
-      gate.querySelector<HTMLElement>(".who")!.hidden = signedIn;
-      gate.querySelector<HTMLElement>("#gate-login")!.hidden = signedIn;
-      gate.querySelector<HTMLElement>(".deny")!.hidden = !signedIn || !!url;
-      logout.hidden = !signedIn;
-    }
-    document.getElementById("gate-login")!.addEventListener("click", async () => { await login(); load(); });
-    logout.addEventListener("click", () => { forget(); loaded = ""; mv.removeAttribute("src"); setTimeout(load, 1500); });
-    function show(id: string) {
-      cur = D.models.find(m => m.id === id) ?? D.models[0];
-      mv.poster = cur.poster; load();
-      document.getElementById("tag")!.textContent = cur.tag;
-      for (const x of all("[data-model]:not(button)")) x.hidden = x.dataset.model !== cur.id;
-      for (const h of all(".hs")) h.hidden = h.dataset.model !== cur.id;
-      for (const b of all(".pick [data-model]")) b.setAttribute("aria-pressed", String(b.dataset.model === cur.id));
-      overview();
-    }
-    for (const b of all(".pick [data-model]")) b.addEventListener("click", () => {
-      show(b.dataset.model!);
-      try { history.replaceState(null, "", "#" + cur.id); } catch (e) {}
-    });
-    for (const b of all("[data-part]")) b.addEventListener("click", () => focus(+b.dataset.part!));
-    for (const b of all(".overview")) b.addEventListener("click", () => overview());
-    const orbits = all(".orbits [data-orbit]");
-    for (const b of orbits) b.addEventListener("click", () => {
-      overview(b.dataset.orbit);
-      for (const o of orbits) o.setAttribute("aria-pressed", String(o === b));
-    });
-    // Fade the markers on the far side: the camera position from its orbit around the target, then normal · (camera - point)
-    function faces() {
-      const o = mv.getCameraOrbit?.(), t = mv.getCameraTarget?.();
-      if (!o || !t) return;
-      const cam = [t.x + o.radius * Math.sin(o.phi) * Math.sin(o.theta), t.y + o.radius * Math.cos(o.phi), t.z + o.radius * Math.sin(o.phi) * Math.cos(o.theta)];
-      for (const h of all(`.hs[data-model="${cur.id}"]`)) {
-        const m = cur.marks[+h.dataset.part!];
-        h.classList.toggle("back", !!m?.n && m.n.reduce((s, v, i) => s + v * (cam[i] - m.at[i]), 0) < 0);
-      }
-    }
-    mv.addEventListener("camera-change", faces);
-    mv.addEventListener("load", faces);
-    const marks = document.getElementById("marks");
-    marks?.addEventListener("click", () => {
-      const on = marks.getAttribute("aria-pressed") !== "true";
-      marks.setAttribute("aria-pressed", String(on));
-      mv.classList.toggle("nomarks", !on);
-    });
-    const spin = document.getElementById("spin")!;
-    spin.addEventListener("click", () => { const on = !mv.autoRotate; mv.autoRotate = on; spin.setAttribute("aria-pressed", String(on)); });
-    if (location.hash && D.models.some(m => m.id === location.hash.slice(1))) show(location.hash.slice(1));
-    else load();
-  }
 </script>

@@ -2,11 +2,13 @@
 // map/ — every line of the class-line tables (hand-filled + Wikidata P3438) on one world map (the OSM shapes in docs/lines, ODbL, as on the class
 // pages) with the classes that run on it. A box narrows map and list to the lines a class with a 3D model runs on. The map and its list work as on a class page (scripts/line-map.ts).
 import "../styles/class.css";
+import { SHOW3D } from "../lib/site";
 import Base from "../layouts/Base.astro";
 import { file, page, t, type Lang } from "../i18n";
 import { classIds, classPage, modelClasses } from "../lib/classes";
 import { allLines } from "../lib/data";
 
+const Map3DFilter = SHOW3D ? (await import("./Map3DFilter.astro")).default : null;   // dynamic: see TopPage.astro
 const { lang } = Astro.props as { lang: Lang };
 const ui = t(lang);
 const T = ui.map;
@@ -15,7 +17,7 @@ const pages = new Set(classIds());
 const lines = allLines();
 const mapped = lines.filter(l => l.map);
 const ids = [...new Set(lines.flatMap(l => l.classes))].filter(c => pages.has(c));
-const with3d = new Set(Object.values(modelClasses()));
+const with3d = new Set(SHOW3D ? Object.values(modelClasses()) : []);
 const has3d = (l: { classes: string[] }) => l.classes.some(c => with3d.has(c));
 const names = Object.fromEntries(ids.map(c => [c, classPage(c, lang, n => String(n), y => String(y)).name]));
 ---
@@ -33,11 +35,11 @@ const names = Object.fromEntries(ids.map(c => [c, classPage(c, lang, n => String
     <div class="side">
       <div class="tools">
         <button type="button" class="all-lines">{T.all}</button>
-        <label class="only3d"><input type="checkbox" id="only3d"> {fmt(T.only3d, { n: lines.filter(has3d).length })}</label>
+        {Map3DFilter && <Map3DFilter label={fmt(T.only3d, { n: lines.filter(has3d).length })} />}
       </div>
       <ul class="scroll">
         {lines.map(l => (
-          <li data-line={l.id} data-has3d={has3d(l) ? "" : undefined} class:list={{ old: !l.current }}>
+          <li data-line={l.id} data-pick={SHOW3D && has3d(l) ? "" : undefined} class:list={{ old: !l.current }}>
             {l.map ? <button type="button" data-line={l.id}><span class="sw" style={`--c: ${l.color}`} aria-hidden="true"></span>{l.label}</button>
                    : <span class="name"><span class="sw none" aria-hidden="true"></span>{l.label}</span>}
             <span class="meta">
@@ -45,14 +47,14 @@ const names = Object.fromEntries(ids.map(c => [c, classPage(c, lang, n => String
               {!l.map && <span>{T.noMap}</span>}
               <a href={`https://www.wikidata.org/wiki/${l.id}`}>{l.id}</a>
             </span>
-            <span class="on">{T.classes}: {l.classes.filter(c => names[c]).map((c, k) => <>{k > 0 && ", "}<a href={page(lang, `rdf/class/${c}.html`)}>{names[c]}</a>{with3d.has(c) && <span class="b3d" title={T.has3d}>3D</span>}</>)}</span>
+            <span class="on">{T.classes}: {l.classes.filter(c => names[c]).map((c, k) => <>{k > 0 && ", "}<a href={page(lang, `rdf/class/${c}.html`)}>{names[c]}</a>{SHOW3D && with3d.has(c) && <span class="bdg" title={T.has3d}>3D</span>}</>)}</span>
           </li>
         ))}
       </ul>
     </div>
   </section>
 </div>
-{mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify({ all: file("lines/_all.geojson"), old: lines.filter(l => !l.current).map(l => l.id), colors: Object.fromEntries(mapped.map(l => [l.id, l.color])), has3d: lines.filter(has3d).map(l => l.id) })} />}
+{mapped.length > 0 && <script type="application/json" id="lines-data" set:html={JSON.stringify({ all: file("lines/_all.geojson"), old: lines.filter(l => !l.current).map(l => l.id), colors: Object.fromEntries(mapped.map(l => [l.id, l.color])), ...(SHOW3D ? { pick: lines.filter(has3d).map(l => l.id) } : {}) })} />}
 </Base>
 
 <script>

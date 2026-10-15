@@ -1,6 +1,7 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
 import { page, t, type Lang } from "../i18n";
+import { SHOW3D } from "../lib/site";
 
 interface Props { lang: Lang; path: string; current?: string }
 const { lang, path, current } = Astro.props;
@@ -8,7 +9,7 @@ const ui = t(lang);
 const other: Lang = lang === "ja" ? "en" : "ja";
 const NAV = [
   { key: "search", label: ui.nav.search, href: page(lang, "search/") },
-  { key: "view", label: ui.nav.view, href: page(lang, "search/") + "?has3d=1" },
+  ...(SHOW3D ? [{ key: "view", label: ui.nav.view, href: page(lang, "search/") + "?has3d=1" }] : []),
   { key: "map", label: ui.nav.map, href: page(lang, "map/") },
   { key: "data", label: ui.nav.data, href: page(lang, "dataset.html") },
   { key: "about", label: ui.nav.about, href: page(lang, "#about") },

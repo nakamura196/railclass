@@ -1,6 +1,7 @@
 // Reads the JSON in docs/ at build time (written by the Python tools / by hand) and picks the text for a language.
 import { readFileSync, existsSync, statSync } from "node:fs";
 import type { Lang } from "../i18n";
+import { SHOW3D } from "./site";
 
 import { resolve } from "node:path";
 
@@ -29,8 +30,15 @@ export function models(lang: Lang) {
 export const newest = (items: Model[]) =>
   items.map((it, i) => ({ it, i })).sort((a, b) => b.it.added.localeCompare(a.it.added) || b.i - a.i).map(x => x.it);
 
+/** The news items for the site as it is now: with show3d false (site.config.json), an item with "hide_if_off" is dropped and "off" is merged over the others.
+ *  Same rule as web/scripts/sync-public.mjs applies to the published data/news.json. */
+export function newsItems(items: any[], show3d: boolean) {
+  if (show3d) return items;
+  return items.filter(n => !n.hide_if_off).map(({ off, ...n }) => !off ? n : { ...n, ...off, en: { ...n.en, ...off.en } });
+}
+
 export function news(lang: Lang) {
-  return readJSON("data/news.json").items.map((n: any) => ({
+  return newsItems(readJSON("data/news.json").items, SHOW3D).map((n: any) => ({
     date: n.date, url: n.url,
     title: (lang !== "ja" && n[lang]?.title) || n.title,
     body: (lang !== "ja" && n[lang]?.body) || n.body,

@@ -1,0 +1,7 @@
+---
+// map/: the box that narrows the map and list to the lines of classes with a 3D model. Rendered only when show3d is true (site.config.json).
+import css from "../styles/class3d.css?raw";   // inlined, not imported as CSS: Astro would link an imported stylesheet from every page that imports the component
+const { label } = Astro.props as { label: string };
+---
+<style is:inline set:html={css}></style>
+<label class="pickbox"><input type="checkbox" id="pickbox"> {label}</label>

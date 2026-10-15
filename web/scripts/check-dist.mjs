@@ -5,6 +5,7 @@
 // Usage (after npm run build): npm test        Exit 1 with the list of failures.
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import { SHOW3D } from "./site-config.mjs";   // site.config.json: show3d false = the site must say nothing about 3D models
 
 const root = fileURLToPath(new URL("../../", import.meta.url));
 const dist = root + "web/dist/";
@@ -40,6 +41,11 @@ for (const f of ["class_lines.tsv", "class_lines_wd.tsv"]) {
 const linesOf = c => [...new Set(rows.filter(r => r.class === c && r.line).map(r => r.line))];
 const shape = q => existsSync(`${docs}lines/${q}.geojson`);
 
+// show3d false: a page or file must have no trace of 3D models (the words, the viewer, the model / IIIF links)
+const TRACE = /3D|３Ｄ|GLB|STL|USDZ|IIIF|models\.json|モデル|model-viewer|has3d|Has 3D|railclass-models/;
+// Class names and the data files carry Wikidata labels ("HXD3D", "Model T Ford", "モデル" ...), so on those only the structural traces count.
+const TRACE_DATA = /model-viewer|data-auth-path|m3d|railclass-models|has3d|has3DModel|3DModel|iiif\/|models\.json|\/thumbs\/|3D モデル|3D model|Has 3D|tb:livery|tb:Livery/;
+const off3d = (where, text, loose = false) => { const m = text.match(loose ? TRACE_DATA : TRACE); if (m) fail(where, `show3d is false but the text has "${m[0]}"`); };
 const strip = s => s.replace(/<[^>]+>/g, "").trim();
 for (const lang of ["ja", "en"]) {
   const pre = lang === "ja" ? "" : "en/";
@@ -56,11 +62,12 @@ for (const lang of ["ja", "en"]) {
     const q = exact(c);
     if (q && !h.includes(`https://www.wikidata.org/wiki/${q}"`)) fail(p, `no Wikidata link to ${q}`);
     // 3D models: a viewer exactly when the class has models, and every model's GLB on it
-    const ms = modelsOf(c);
+    const ms = SHOW3D ? modelsOf(c) : [];
     const mv = h.includes("<model-viewer");
     if (ms.length && !mv) fail(p, `no 3D viewer (models: ${ms.join(" ")})`);
     if (!ms.length && mv) fail(p, "3D viewer without a model");
     for (const m of ms) if (!h.includes(`data-auth-path="${m}.glb"`)) fail(p, `model ${m} not on the page`);   // behind the login (lib/auth3d.ts)
+    if (!SHOW3D) off3d(p, h, true);
     // Lines: one list item per line; a map when at least one line has a shape, with each shape linked
     const ls = linesOf(c);
     const items = (h.match(/<li[^>]*data-line="/g) ?? []).length;
@@ -76,7 +83,7 @@ for (const lang of ["ja", "en"]) {
 }
 
 // Every model has a class page that shows it, and view.html#<model> sends it there
-const models = readdirSync(docs + "rdf/model").filter(f => f.endsWith(".ttl")).map(f => f.slice(0, -4));
+const models = SHOW3D ? readdirSync(docs + "rdf/model").filter(f => f.endsWith(".ttl")).map(f => f.slice(0, -4)) : [];
 const shown = new Set(classes.flatMap(modelsOf));
 for (const m of models) if (!shown.has(m)) fail(`model ${m}`, "on no class page");
 // Each model has its own page (rdf/model/<id>.html, Astro) linking its class page, its RDF and its GLB
@@ -97,9 +104,11 @@ for (const pre of ["", "en/"]) for (const m of models) {
   }
   if (/<pre>/.test(h)) fail(p, "still the page build_rdf.py wrote");
 }
-const view = existsSync(dist + "view.html") ? read(dist + "view.html") : "";
-if (!view) fail("view.html", "missing");
-for (const m of models) if (view && !view.includes(`"${m}":"`)) fail("view.html", `no redirect for ${m}`);
+if (SHOW3D) {
+  const view = existsSync(dist + "view.html") ? read(dist + "view.html") : "";
+  if (!view) fail("view.html", "missing");
+  for (const m of models) if (view && !view.includes(`"${m}":"`)) fail("view.html", `no redirect for ${m}`);
+}
 
 // Line shapes: published, valid, with the ODbL notice
 for (const f of existsSync(docs + "lines") ? readdirSync(docs + "lines").filter(f => f.endsWith(".geojson")) : []) {
@@ -132,7 +141,7 @@ for (const pre of ["", "en/"]) {
 for (const p of ["index.html", "en/index.html"]) {
   const h = existsSync(dist + p) ? read(dist + p) : "";
   if (!h.includes('/map/"')) fail(p, "no link to map/");
-  for (const f of ["rdf/all.ttl", "rdf/all.jsonld", "iiif/collection.json"]) {
+  for (const f of SHOW3D ? ["rdf/all.ttl", "rdf/all.jsonld", "iiif/collection.json"] : ["rdf/all.ttl", "rdf/all.jsonld"]) {
     if (!h.includes(`/${f}"`)) fail(p, `no link to ${f}`);
     if (!existsSync(dist + f)) fail(f, "not in dist");
   }
@@ -161,8 +170,29 @@ for (const p of ["dataset.html", "en/dataset.html"]) {
   if (/東京大学|University of Tokyo/.test(h)) fail(p, "names the university");
 }
 
+// show3d false: no model / IIIF pages or files in dist, and none of the built pages and data files mentions 3D models
+if (!SHOW3D) {
+  for (const p of ["models", "thumbs", "iiif", "downloads", "rdf/model", "view.html", "en/view.html", "en/rdf/model", "data/models.json", "site/og-models.jpg", "site/og-ja.jpg", "site/og-en.jpg"])
+    if (existsSync(dist + p)) fail(p, "in dist although show3d is false");
+  for (const p of ["index.html", "en/index.html", "search/index.html", "en/search/index.html", "map/index.html", "en/map/index.html",
+                   "dataset.html", "en/dataset.html", "search/stats.json", "search/index.json", "scripts", "rdf/all.ttl", "rdf/all.jsonld", "rdf/vocab.ttl",
+                   "rdf/void.ttl", "rdf/void.jsonld", "rdf/facets.json", "data/dataset.json", "data/news.json"]) {
+    if (p === "scripts") continue;
+    if (!existsSync(dist + p)) { fail(p, "missing"); continue; }
+    off3d(p, read(dist + p), /^(map|en\/map)\/|^search\/index\.json$|^rdf\//.test(p));   // the map lists class names; the index and the RDF hold Wikidata labels
+  }
+  const sj = JSON.parse(read(dist + "search/index.json"));
+  if ("bodies" in sj || "models" in sj || sj.facets.some(f => f.id === "has3d" || f.id === "color")) fail("search/index.json", "model column or facet");
+  // the scripts and styles the pages load
+  const walk = d => readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(d + e.name + "/") : [d + e.name]);
+  // every _astro file that the top page and a class page link is there (prune-dist.mjs removed only the unlinked 3D ones)
+  for (const p of ["index.html", "en/index.html", "map/index.html", "rdf/class/Q696668.html"])
+    for (const m of read(dist + p).matchAll(/\/_astro\/([\w.-]+)/g)) if (!existsSync(dist + "_astro/" + m[1])) fail(p, `links a missing file _astro/${m[1]}`);
+  if (existsSync(dist + "_astro")) for (const f of walk(dist + "_astro/")) if (/\.(js|css)$/.test(f)) off3d(f.slice(dist.length), read(f));
+}
+
 if (bad.length) {
   console.error(`check: ${bad.length} failure(s)\n  ` + bad.join("\n  "));
   process.exit(1);
 }
-console.log(`check: ok (${checked} class pages, ${models.length} models, ${rows.length} line rows)`);
+console.log(`check: ok (${checked} class pages, ${SHOW3D ? models.length + " models" : "show3d off, no models"}, ${rows.length} line rows)`);

@@ -1,6 +1,7 @@
 ---
 import ModelPage from "../../../../components/ModelPage.astro";
 import { models } from "../../../../lib/data";
-export const getStaticPaths = () => models("en").items.map(m => ({ params: { id: m.id } }));
+import { SHOW3D } from "../../../../lib/site";
+export const getStaticPaths = () => !SHOW3D ? [] : models("en").items.map(m => ({ params: { id: m.id } }));
 ---
 <ModelPage lang="en" id={Astro.params.id!} />

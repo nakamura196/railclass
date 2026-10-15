@@ -1,0 +1,27 @@
+---
+// The "new models" list of the top page. Rendered only when show3d is true (site.config.json).
+import css from "../styles/top3d.css?raw";   // inlined, not imported as CSS: Astro would link an imported stylesheet from every page that imports the component
+import { page, file, t, type Lang } from "../i18n";
+import { modelClasses } from "../lib/classes";
+
+const { lang, items } = Astro.props as { lang: Lang; items: { id: string; groupLabel: string; title: string; added: string }[] };
+const ui = t(lang);
+const T = ui.top;
+const where = modelClasses();
+const modelPage = (id: string) => where[id] ? page(lang, `rdf/class/${where[id]}.html#${id}`) : page(lang, `view.html#${id}`);
+const list3d = page(lang, "search/") + "?has3d=1";
+---
+<style is:inline set:html={css}></style>
+<section class="block" id="new" aria-labelledby="new-h">
+  <div class="wrap">
+    <div class="h-row"><h2 id="new-h">{T.newTitle}</h2><a href={list3d}>{T.seeAll}</a></div>
+    <ul class="models">
+      {items.map(it => (
+        <li><a href={modelPage(it.id)}>
+          <img src={file(`thumbs/${it.id}.jpg`)} alt="" loading="lazy">
+          <span class="grp">{it.groupLabel}</span><b>{it.title}</b><time datetime={it.added}>{it.added}</time>
+        </a></li>
+      ))}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+// The model links in the export box of a class page (IIIF Manifest, GLB, download files). Rendered only when show3d is true.
+import { file, t, type Lang } from "../i18n";
+import { models, hasManifest, downloads } from "../lib/data";
+import iiifLogo from "../assets/iiif-logo.svg";   // the IIIF logo, as on the IIIF Consortium's site
+
+const { lang, ids, here } = Astro.props as { lang: Lang; ids: string[]; here: string };
+const ui = t(lang);
+const T = ui.class;
+const A = ui.auth;
+const M = models(lang);
+const mods = ids.map(m => M.items.find(it => it.id === m)).filter(Boolean) as ReturnType<typeof models>["items"];
+---
+{mods.map(m => hasManifest(m.id) && (
+  <a class="iiif" href={file(`iiif/${m.id}/manifest.json`)}><img src={iiifLogo.src} alt="" width="20" height="18">{mods.length > 1 ? `${T.manifest} (${m.title})` : T.manifest}</a>
+))}
+{mods.map(m => (
+  <a href={here} data-auth-path={`${m.id}.${M.ext}`} data-denied={A.denied}>{mods.length > 1 ? `${T.glb} (${m.title})` : T.glb}</a>
+))}
+{mods.flatMap(m => downloads(m.id, lang).map(d => (
+  <a href={here} data-auth-path={d.path} data-denied={A.denied} title={d.label}>{mods.length > 1 ? `${d.key.toUpperCase()} (${m.title})` : d.key.toUpperCase()}</a>
+)))}
+<script>
+  import { wireDownloads } from "../lib/auth3d";
+  wireDownloads();
+</script>

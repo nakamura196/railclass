@@ -13,17 +13,20 @@ Inputs:
   docs/rdf/all.jsonld                   the class and model RDF (made by the RDF work), if present. For the classes in it:
                                         its values replace the Wikidata ones (facets with on=livery take the values of the
                                         liveries of its models), facets marked "inherit" take the value of the
-                                        skos:broader class when the class has none, the 3D models come from schema:subjectOf,
+                                        skos:broader class when the class has none, the 3D models (column "bodies", only when show3d is true in site.config.json) come from schema:subjectOf,
                                         and classes outside the Wikidata list (SkyTrain Mark I, Airo, XD60...) are added
 index.json is column-wise to stay small:
   {"facets":[{id,label,datatype,unit,values:[[id,en,ja],...]}], "n":N, "id":[...], "en":[...], "ja":[...],
    "img":[file name or ""], "photo":[local copy key (photos/<key>.webp) | ""],
    "thumb":[hash dir "f/f3" | full thumbnail URL | "" (use Special:FilePath)] (only used when there is no local copy),
    "credit":[[artist index, licence index] | 0], "artists":[text], "licenses":[[short name, url]],
-   a group facet {id:"<facet id>Group", of:"<facet id>", ...} just before each facet listed in GROUPS, "models":[[model id,...]], "page":[1 if the class has an RDF file (and so a page) else 0], "<facet id>":[[value index,...] | number | null]}
+   a group facet {id:"<facet id>Group", of:"<facet id>", ...} just before each facet listed in GROUPS, "bodies":[[3D model id,...]] (only when show3d is true in site.config.json), "page":[1 if the class has an RDF file (and so a page) else 0], "<facet id>":[[value index,...] | number | null]}
 Usage: python3 tools/build_search.py [--data data] [--facets docs/rdf/facets.json] [--out docs/search]
 """
 import csv, collections, json, os, sys, urllib.parse
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from site_config import SHOW3D   # site.config.json: false = no "models" column, no has3d facet, no facet that comes from the models' liveries (colour), no models count
 
 ARGS = sys.argv[1:]
 def opt(k, d):
@@ -168,10 +171,12 @@ def main():
                en=[rdf["classes"].get(q, {}).get("en") or en.get(q, "") for q in ids],
                ja=[rdf["classes"].get(q, {}).get("ja") or ja.get(q, "") for q in ids],
                img=[img.get(q, "") for q in ids],
-               models=[rdf["classes"].get(q, {}).get("models", []) for q in ids],
+               **({"bodies": [rdf["classes"].get(q, {}).get("models", []) for q in ids]} if SHOW3D else {}),
                page=[1 if q in rdf["classes"] else 0 for q in ids])
     credits(idx, fdir)
     for f in json.load(open(FACETS))["facets"]:
+        if not SHOW3D and (f["id"] == "has3d" or f.get("on") == "livery"):
+            continue                                 # these exist only because of the 3D models
         d = dict(id=f["id"], label=f["label"], datatype=f["datatype"])
         if f.get("unit"): d["unit"] = f["unit"]
         p = os.path.join(fdir, f["id"] + ".tsv")
@@ -217,7 +222,9 @@ def main():
     countries = set()
     if "country" in idx:
         countries = {v for c in idx["country"] for v in c}
-    stats = dict(classes=len(ids), models=sum(len(v) for v in idx["models"]), countries=len(countries))
+    stats = dict(classes=len(ids), countries=len(countries))
+    if SHOW3D:
+        stats["models"] = sum(len(v) for v in idx["bodies"])
     json.dump(stats, open(os.path.join(OUT, "stats.json"), "w"))
     print(stats, round(os.path.getsize(os.path.join(OUT, "index.json")) / 1024), "KB")
 
