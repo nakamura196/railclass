@@ -180,6 +180,7 @@ CLASSES = {
     "Q11680376": ("Q11680376", None, None),                   # CP 4000 Series (Alfa Pendular)
     "tb-alishan": (None, None, {"en": "Alishan Forest Railway DL-45 class diesel locomotive", "ja": "阿里山林業鉄路 DL-45 形ディーゼル機関車"}),  # Alishan Forest Railway DL-45 class (no Wikidata item; the system Q708937 is linked in tools/class_lines.tsv)
     "Q130240621": ("Q130240621", None, None),                 # Stadler KISS of Caltrain
+    "Q933916": ("Q933916", None, None),                       # Union Pacific 4000 class Big Boy (No. 4014 is Q14512137)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -357,6 +358,7 @@ LIVERIES = {
     "cp-alfa": ({"en": "CP Alfa Pendular livery (silver and slate with a lime line, 2017-)", "ja": "CP のアルファ・ペンドゥラールの塗装（銀とスレート、黄緑の線、2017 年から）"}, "Q81123"),
     "afr-red": ({"en": "Alishan Forest Railway livery (red with a white band and white V chevrons)", "ja": "阿里山林業鉄路の塗装（赤い車体に白い帯と V 字）"}, "Q55695198"),
     "caltrain-kiss": ({"en": "Caltrain electric livery (red and white, 2024-)", "ja": "カルトレインの電化の塗装（赤と白、2024 年から）"}, "Q107126073"),
+    "up-4014": ({"en": "Union Pacific steam livery of No. 4014 as restored (gloss black with a graphite smokebox, 2019-)", "ja": "ユニオン・パシフィック鉄道 4014 号機の復元後の塗装（艶のある黒、煙室は黒鉛色、2019 年から）"}, "Q725793"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -461,6 +463,7 @@ MODELS = {
     "alfapendular": ("Q11680376", "cp-alfa", None),
     "alishan": ("tb-alishan", "afr-red", None),
     "caltrain": ("Q130240621", "caltrain-kiss", None),
+    "bigboy": ("Q933916", "up-4014", None),
 }
 
 
