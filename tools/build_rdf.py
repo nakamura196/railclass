@@ -464,6 +464,7 @@ MODELS = {
     "alishan": ("tb-alishan", "afr-red", None),
     "caltrain": ("Q130240621", "caltrain-kiss", None),
     "bigboy": ("Q933916", "up-4014", None),
+    "bigboy_tender": ("Q933916", "up-4014", {"en": "tender of No. 4014", "ja": "4014 号機の炭水車"}),
 }
 
 
