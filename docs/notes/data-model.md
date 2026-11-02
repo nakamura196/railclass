@@ -789,3 +789,7 @@ ERATV の型名には、製品名の後ろに版・編成・保安装置が付�
 - コミット: sg-tel の追加（0814dcc。`build_rdf.py` は sg-tel の 3 行だけを先に入れた）→ URI の差し替えと RDF・検索の作り直し（c66ab5c）→ IIIF のコレクションに sg-tel（1f6add4）。
   sg-tel のダウンロード用ファイルは `skytrain/tools/export_formats.py sg-tel … --no-mount` で作った（公開前の検査に要る）
 - 応募の下書きの RailClass の概要に「URI は https://w3id.org/railclass/ で…」の 1 文を入れた。残る【条件】はパートナーリソースだけ
+
+### 2026-11-01 置き場所を移した
+
+- リポジトリを `~/git/3d` から `~/git/private/3d` に移した。この日より前の記述にある `~/git/3d/…` は、今は `~/git/private/3d/…` にある。

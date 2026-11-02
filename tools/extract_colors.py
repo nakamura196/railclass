@@ -1,6 +1,6 @@
-"""Take the livery colours of each 3D model from its build in ~/git/3d/skytrain and name them (red, blue, ...).
+"""Take the livery colours of each 3D model from its build in ~/git/private/3d/skytrain and name them (red, blue, ...).
 
-Usage: python3 tools/extract_colors.py [--skytrain <path, default ~/git/3d/skytrain>]
+Usage: python3 tools/extract_colors.py [--skytrain <path, default ~/git/private/3d/skytrain>]
   Reads skytrain/out/<model-id>/*.obj and its .mtl: every face carries the material (= named colour) of the cut
   that made it, so the area of each material is the area of that colour on the body.
   Materials that are not paint (glass, lamps, door seams, tyres, bellows) are left out; the rest is the painted area.
@@ -74,7 +74,7 @@ def measure(obj):
 
 
 def main():
-    sky = sys.argv[sys.argv.index("--skytrain") + 1] if "--skytrain" in sys.argv else os.path.expanduser("~/git/3d/skytrain")
+    sky = sys.argv[sys.argv.index("--skytrain") + 1] if "--skytrain" in sys.argv else os.path.expanduser("~/git/private/3d/skytrain")
     sys.path.insert(0, os.path.join(HERE, "tools"))
     from build_rdf import MODELS
     out = {"note": __doc__.strip().splitlines()[0], "minShare": MIN_SHARE, "minShareNeutral": MIN_SHARE_NEUTRAL,

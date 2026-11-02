@@ -5,7 +5,7 @@ Run:
   python3 tools/build_iiif.py --collection    -> docs/iiif/collection.json (every docs/iiif/<model>/manifest.json)
 
 Input: annotations/<model>.json (parts and their text), docs/models/<model>.glb,
-docs/downloads/<model>/formats.json (written by ~/git/3d/skytrain/tools/export_formats.py).
+docs/downloads/<model>/formats.json (written by ~/git/private/3d/skytrain/tools/export_formats.py).
 
 Each part is aimed at in the model's own drawing coordinates (mm, x from the nose tip, z up from the rim,
 as in skytrain/models/icet_base.py), on one face: side / farside / front / rear / roof. A ray is cast at the glb mesh

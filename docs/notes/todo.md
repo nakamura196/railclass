@@ -339,3 +339,7 @@ B は `docs/iiif/` の 14 本と `annotations/*.json`（yaml でなく json に�
 - [ ] 色の判定の外れ（tools/extract_colors.py）: 黄が「橙」（class800・indianpacific・regiojet・sbahn483・wce）、紫が「青」（elizabeth・wce）、小さい差し色が落ちる（canadaline の緑・haramain の金・afrosiyob の赤・alfapendular の黄緑）、20% 未満の白黒が落ちる（sydneymetro・glacier・alishan・manila-lrt1・avril）、upexpress のオリーブが「黄」、mp14 は内側の面まで数えて黒 57.6%
 - [ ] 地図に出ない路線: Railjet Q327051・阿里山 Q708937・ブルートレイン Q885923 は OSM のリレーションが無い
 - [ ] 本人の判断待ち: 台北 C381 を残すか（台湾で文湖線のプラレールが出ている。外すときは c92747b803 を手で戻す。後の車両が共通のファイルを書き換えたので git revert はぶつかる）／emu3000（第 3 弾）を外すか（台湾の Toys"R"Us で 台鐵新自強號EMU3000 が出ている）／italo に旧塗装（ボルドー）版を足すか／hktram の長さ 130 mm でよいか／flytoget の日本語名「フリートーゲ 78 形（オスロ空港特急）」でよいか
+
+### 2026-11-01 置き場所を移した
+
+- リポジトリを `~/git/3d` から `~/git/private/3d` に移した。この日より前の記述にある `~/git/3d/…` は、今は `~/git/private/3d/…` にある。

@@ -152,3 +152,7 @@
   根拠: 上の先行例はいずれも 1 点ものの資料（標本・美術品）。形式の RDF への seeAlso は iiif/<モデル>/manifest.json にある。
 - 限界: MorphoSource の Manifest の中身を見ていない。点の注釈とカメラの組み合わせがそこにあるかは未確認。次に確かめるなら、MorphoSource の公開データ 1 件の Manifest を取って読む。
 
+
+### 2026-11-01 置き場所を移した
+
+- リポジトリを `~/git/3d` から `~/git/private/3d` に移した。この日より前の記述にある `~/git/3d/…` は、今は `~/git/private/3d/…` にある。

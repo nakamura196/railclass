@@ -19,7 +19,7 @@
 - 手で書く: `data/news.json`（お知らせ）、`notes/`（実験ノート）
 - 書き出す（手で編集しない）:
   - `models/`・`thumbs/`・`data/models.json` — 別の作業用リポジトリで、モデルを Blender のスクリプトで作り、
-    `python3 ~/git/3d/skytrain/tools/gallery.py --out <this repo>/docs` で書き出す
+    `python3 ~/git/private/3d/skytrain/tools/gallery.py --out <this repo>/docs` で書き出す
   - `search/` の索引 — `tools/build_search.py`
   - `rdf/` — `tools/build_rdf.py`
   - `rdf/void.ttl`・`void.jsonld` と `data/dataset.json`（データセットの説明と件数） — `tools/build_void.py`。

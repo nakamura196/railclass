@@ -85,7 +85,7 @@ export function modelParts(id: string, lang: Lang): Part[] {
 
 export const hasManifest = (id: string) => existsSync(docsPath(`iiif/${id}/manifest.json`));
 
-// The download files of a model, one per format (docs/downloads/<id>/formats.json, by ~/git/3d/skytrain/tools/export_formats.py).
+// The download files of a model, one per format (docs/downloads/<id>/formats.json, by ~/git/private/3d/skytrain/tools/export_formats.py).
 // The GLB is not among them: it is <id>.glb on the models Worker, linked on its own.
 // The files are not public: path is the Worker's path (downloads/<id>/<file>), turned into a signed URL by lib/auth3d.ts.
 export type Download = { key: string; label: string; path: string; bytes: number };
