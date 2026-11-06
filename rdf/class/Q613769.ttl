@@ -1,0 +1,55 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q613769 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "MP 59"@en,
+        "MP 59"@ja ;
+    skos:exactMatch wd:Q613769 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "MP 59"@en,
+        "MP 59"@ja ;
+    prov:wasDerivedFrom wd:Q613769 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q643290 ;
+    wdt:P176 wd:Q2990201,
+        wd:Q2990265,
+        wd:Q309084,
+        wd:Q3177971 ;
+    wdt:P2052 70.0 ;
+    wdt:P279 wd:Q108875699 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/MP%2059%20n%C2%B06080%20Place%20des%20F%C3%AAtes.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q613769#line1>,
+        <https://w3id.org/railclass/Q613769#line2> ;
+    tb:operatingCountry wd:Q142 ;
+    tb:usedOn wd:Q13224,
+        wd:Q50743 .
+
+<https://w3id.org/railclass/Q613769#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q13224#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q13224 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2000"^^xsd:gYear .
+
+<https://w3id.org/railclass/Q613769#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q50743#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q50743 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2012"^^xsd:gYear .
+
+wd:Q13224 rdfs:label "Paris Métro Line 1"@en .
+
+wd:Q50743 rdfs:label "Paris Métro Line 4"@en .
+

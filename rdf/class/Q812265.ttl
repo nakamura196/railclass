@@ -1,0 +1,39 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q812265 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Bavarian Pts 3/4"@en ;
+    skos:exactMatch wd:Q812265 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Bavarian Pts 3/4"@en ;
+    prov:wasDerivedFrom wd:Q812265 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P137 wd:Q564937,
+        wd:Q698082 ;
+    wdt:P176 wd:Q16283636 ;
+    wdt:P2052 30.0 ;
+    wdt:P279 wd:Q785745 ;
+    wdt:P2978 wd:Q26208367 ;
+    wdt:P729 "1906"^^xsd:gYear ;
+    tb:lineUse <https://w3id.org/railclass/Q812265#line1> ;
+    tb:operatingCountry wd:Q1206012,
+        wd:Q154195 ;
+    tb:usedOn wd:Q1158878 .
+
+<https://w3id.org/railclass/Q812265#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1158878#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1158878 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1158878 rdfs:label "Neuötting–Altötting steam tramway"@en .
+

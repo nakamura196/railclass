@@ -1,0 +1,40 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q130240621 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Stadler KISS of Caltrain"@en,
+        "KISS"@ja ;
+    skos:exactMatch wd:Q130240621 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Stadler KISS of Caltrain"@en,
+        "KISS"@ja ;
+    prov:wasDerivedFrom wd:Q130240621 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q166817 ;
+    wdt:P17 wd:Q30 ;
+    wdt:P176 wd:Q666703 ;
+    wdt:P279 wd:Q672992 ;
+    wdt:P729 "2024"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Caltrain%20306%20at%20Caltrain%20Electric%20Train%20Tour%2C%20San%20Jose%2C%20California.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q130240621#line1> ;
+    tb:operatingCountry wd:Q30 ;
+    tb:usedOn wd:Q166817 .
+
+<https://w3id.org/railclass/Q130240621#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q166817#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q166817 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q166817 rdfs:label "Caltrain"@en .
+

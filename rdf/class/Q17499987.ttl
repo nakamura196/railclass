@@ -1,0 +1,69 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q17499987 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "MTR CRRC Changchun EMU"@en,
+        "屯馬線中国製電車"@ja ;
+    skos:exactMatch wd:Q17499987 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "MTR CRRC Changchun EMU"@en,
+        "屯馬線中国製電車"@ja ;
+    prov:wasDerivedFrom wd:Q17499987 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P176 wd:Q848225 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Tuen%20Ma%20Line%20C-Train%20202103.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q17499987#line1>,
+        <https://w3id.org/railclass/Q17499987#line2>,
+        <https://w3id.org/railclass/Q17499987#line3>,
+        <https://w3id.org/railclass/Q17499987#line4> ;
+    tb:operatingCountry wd:Q148 ;
+    tb:usedOn wd:Q5329661,
+        wd:Q835376,
+        wd:Q989335,
+        wd:Q989369 .
+
+<https://w3id.org/railclass/Q17499987#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5329661#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5329661 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q17499987#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q835376#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q835376 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q17499987#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q989335#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q989335 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q17499987#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q989369#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q989369 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5329661 rdfs:label "Tuen Ma line"@en .
+
+wd:Q835376 rdfs:label "Sha Tin to Central Link"@en .
+
+wd:Q989335 rdfs:label "Ma On Shan line"@en .
+
+wd:Q989369 rdfs:label "West Rail line"@en .
+

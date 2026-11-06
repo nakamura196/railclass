@@ -1,0 +1,37 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q336703 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ČD Series 854"@en ;
+    skos:exactMatch wd:Q336703 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ČD Series 854"@en ;
+    prov:wasDerivedFrom wd:Q336703 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q304944 ;
+    wdt:P176 wd:Q392082 ;
+    wdt:P2052 120.0 ;
+    wdt:P279 wd:Q1567915 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/V%C5%A1etaty%2C%20motorov%C3%BD%20v%C5%AFz%20854.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q336703#line1> ;
+    tb:operatingCountry wd:Q213 ;
+    tb:usedOn wd:Q168331 .
+
+<https://w3id.org/railclass/Q336703#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q168331#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q168331 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q168331 rdfs:label "Esko Prague"@en .
+

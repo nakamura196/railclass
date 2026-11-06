@@ -1,0 +1,58 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q1472045 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ÖBB 1116"@en ;
+    skos:exactMatch wd:Q1472045 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ÖBB 1116"@en ;
+    prov:wasDerivedFrom wd:Q1472045 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q83822 ;
+    wdt:P17 wd:Q40 ;
+    wdt:P176 wd:Q391895 ;
+    wdt:P279 wd:Q248035 ;
+    wdt:P2978 wd:Q1014107 ;
+    wdt:P729 "1999"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439,
+        wd:Q1415234 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/1116%20275%20Gaimersheim.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q1472045#line1>,
+        <https://w3id.org/railclass/Q1472045#line2> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q213,
+        wd:Q214,
+        wd:Q28,
+        wd:Q38,
+        wd:Q39,
+        wd:Q40 ;
+    tb:usedOn wd:Q125350160,
+        wd:Q2448871 .
+
+<https://w3id.org/railclass/Q1472045#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q125350160#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q125350160 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q1472045#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2448871#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2448871 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q125350160 rdfs:label "Railjet 1"@en .
+
+wd:Q2448871 rdfs:label "Transalpin"@en .
+

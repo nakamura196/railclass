@@ -1,0 +1,53 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q521241 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Uerdingen railbus"@en,
+        "ウアーディンゲン・シーネンオムニバス"@ja ;
+    skos:exactMatch wd:Q521241 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Uerdingen railbus"@en,
+        "ウアーディンゲン・シーネンオムニバス"@ja ;
+    prov:wasDerivedFrom wd:Q521241 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q687175 ;
+    wdt:P17 wd:Q183 ;
+    wdt:P176 wd:Q822381 ;
+    wdt:P2052 90.0 ;
+    wdt:P279 wd:Q3707399 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/795-3.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q521241#line1>,
+        <https://w3id.org/railclass/Q521241#line2> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q713750,
+        wd:Q822 ;
+    tb:usedOn wd:Q1129832,
+        wd:Q116505002 .
+
+<https://w3id.org/railclass/Q521241#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1129832#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1129832 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q521241#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q116505002#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q116505002 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1129832 rdfs:label "rail transport in Lebanon"@en .
+
+wd:Q116505002 rdfs:label "Ulmer Spatz"@en .
+

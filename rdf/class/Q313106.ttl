@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q313106 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Talgo Train"@en,
+        "タルゴ"@ja ;
+    skos:exactMatch wd:Q313106 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Talgo Train"@en,
+        "タルゴ"@ja ;
+    prov:wasDerivedFrom wd:Q313106 ;
+    wdt:P17 wd:Q29 ;
+    wdt:P176 wd:Q1100969 ;
+    wdt:P279 wd:Q3418429,
+        wd:Q915775 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/J29%20560%20Talgo%206%2C%20Maschinenendwagen.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q313106#line1> ;
+    tb:operatingCountry wd:Q29,
+        wd:Q45 ;
+    tb:usedOn wd:Q10377948 .
+
+<https://w3id.org/railclass/Q313106#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q10377948#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q10377948 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q10377948 rdfs:label "Talgo Luís de Camões"@en .
+

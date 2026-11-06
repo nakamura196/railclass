@@ -1,0 +1,72 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q30687942 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "X'Trapolis Mega"@en,
+        "エクストラポリス・メガ"@ja ;
+    skos:exactMatch wd:Q30687942 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "X'Trapolis Mega"@en,
+        "エクストラポリス・メガ"@ja ;
+    prov:wasDerivedFrom wd:Q30687942 ;
+    wdt:P1064 wd:Q1193463 ;
+    wdt:P137 wd:Q1434734 ;
+    wdt:P17 wd:Q258 ;
+    wdt:P176 wd:Q30687943,
+        wd:Q309084 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/PRASA%20X%27trapolis%20Mega.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q30687942#line1>,
+        <https://w3id.org/railclass/Q30687942#line2>,
+        <https://w3id.org/railclass/Q30687942#line3>,
+        <https://w3id.org/railclass/Q30687942#line4> ;
+    tb:operatingCountry wd:Q258 ;
+    tb:usedOn wd:Q5034802,
+        wd:Q5061363,
+        wd:Q7058663,
+        wd:Q7570093 .
+
+<https://w3id.org/railclass/Q30687942#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5034802#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5034802 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q30687942#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5061363#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5061363 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q30687942#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7058663#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7058663 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q30687942#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7570093#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7570093 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5034802 rdfs:label "Cape Flats Line"@en .
+
+wd:Q5061363 rdfs:label "Central Line"@en .
+
+wd:Q7058663 rdfs:label "Northern Line"@en .
+
+wd:Q7570093 rdfs:label "Southern Line"@en .
+

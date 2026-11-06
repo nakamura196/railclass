@@ -1,0 +1,77 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q24856459 a skos:Concept,
+        tb:VehicleClass ;
+    skos:exactMatch wd:Q24856459 ;
+    skos:inScheme cls: ;
+    prov:wasDerivedFrom wd:Q24856459 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P2052 70.0 ;
+    wdt:P279 wd:Q233063 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Hyundai%20Rotem%20Tram.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q24856459#line1>,
+        <https://w3id.org/railclass/Q24856459#line2>,
+        <https://w3id.org/railclass/Q24856459#line3>,
+        <https://w3id.org/railclass/Q24856459#line4>,
+        <https://w3id.org/railclass/Q24856459#line5> ;
+    tb:operatingCountry wd:Q884 ;
+    tb:usedOn wd:Q22974248,
+        wd:Q94650003,
+        wd:Q94650117,
+        wd:Q94650147,
+        wd:Q97165177 .
+
+<https://w3id.org/railclass/Q24856459#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q22974248#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q22974248 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q24856459#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q94650003#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q94650003 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q24856459#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q94650117#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q94650117 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q24856459#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q94650147#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q94650147 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q24856459#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q97165177#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q97165177 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q22974248 rdfs:label "Suwon Urban Rail"@en .
+
+wd:Q94650003 rdfs:label "Busan Urban Rail"@en .
+
+wd:Q94650117 rdfs:label "Ulsan Urban Rail"@en .
+
+wd:Q94650147 rdfs:label "Hwaseong Urban Rail"@en .
+
+wd:Q97165177 rdfs:label "Bucheon Urban Rail"@en .
+

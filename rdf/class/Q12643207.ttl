@@ -1,0 +1,51 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q12643207 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Crotram TMK 2300"@en ;
+    skos:exactMatch wd:Q12643207 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Crotram TMK 2300"@en ;
+    prov:wasDerivedFrom wd:Q12643207 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P137 wd:Q136060,
+        wd:Q1788139 ;
+    wdt:P17 wd:Q224 ;
+    wdt:P176 wd:Q869972 ;
+    wdt:P2052 70.0 ;
+    wdt:P930 wd:Q21855034 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TMK%202301%20Zagreb.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q12643207#line1>,
+        <https://w3id.org/railclass/Q12643207#line2> ;
+    tb:operatingCountry wd:Q211,
+        wd:Q224 ;
+    tb:usedOn wd:Q17440798,
+        wd:Q17440801 .
+
+<https://w3id.org/railclass/Q12643207#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q17440798#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q17440798 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q12643207#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q17440801#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q17440801 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q17440798 rdfs:label "Tram line 9 (Zagreb)"@en .
+
+wd:Q17440801 rdfs:label "Tram line no. 15 in Zagreb"@en .
+

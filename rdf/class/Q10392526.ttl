@@ -1,0 +1,42 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q10392526 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Vossloh Tramlink"@en,
+        "トラムリンク"@ja ;
+    skos:exactMatch wd:Q10392526 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Vossloh Tramlink"@en,
+        "トラムリンク"@ja ;
+    prov:wasDerivedFrom wd:Q10392526 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P137 wd:Q2345645,
+        wd:Q353936 ;
+    wdt:P176 wd:Q7942066 ;
+    wdt:P2052 80.0 ;
+    wdt:P279 wd:Q3407658 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Stern%26Hafferl%20Gmunden%20Vorchdorf%20Tramlink%20121.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q10392526#line1> ;
+    tb:operatingCountry wd:Q155,
+        wd:Q39,
+        wd:Q40 ;
+    tb:usedOn wd:Q29960068 .
+
+<https://w3id.org/railclass/Q10392526#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q29960068#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q29960068 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q29960068 rdfs:label "Baixada Santista Light Rail"@en .
+

@@ -1,0 +1,59 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q383263 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SBB-CFF-FFS RAm and NS DE4"@en,
+        "RAm TEEI (気動車)"@ja ;
+    skos:exactMatch wd:Q383263 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SBB-CFF-FFS RAm and NS DE4"@en,
+        "RAm TEEI (気動車)"@ja ;
+    prov:wasDerivedFrom wd:Q383263 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q23076,
+        wd:Q3352823,
+        wd:Q83835 ;
+    wdt:P17 wd:Q16,
+        wd:Q39,
+        wd:Q55 ;
+    wdt:P176 wd:Q2373726,
+        wd:Q692083 ;
+    wdt:P2052 140.0 ;
+    wdt:P279 wd:Q1567915 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/NS-TEE.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q383263#line1>,
+        <https://w3id.org/railclass/Q383263#line2> ;
+    tb:operatingCountry wd:Q16,
+        wd:Q183,
+        wd:Q39,
+        wd:Q55 ;
+    tb:usedOn wd:Q139261828,
+        wd:Q2691511 .
+
+<https://w3id.org/railclass/Q383263#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q139261828#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q139261828 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q383263#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2691511#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2691511 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q139261828 rdfs:label "Northlander"@en .
+
+wd:Q2691511 rdfs:label "Aitrang rail accident"@en .
+

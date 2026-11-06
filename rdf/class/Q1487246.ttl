@@ -1,0 +1,51 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q1487246 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "GT8-100C/2S"@en,
+        "カールスルーエ・シュタットバーンGT8-100C/2S形電車"@ja ;
+    skos:exactMatch wd:Q1487246 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "GT8-100C/2S"@en,
+        "カールスルーエ・シュタットバーンGT8-100C/2S形電車"@ja ;
+    prov:wasDerivedFrom wd:Q1487246 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q896547 ;
+    wdt:P17 wd:Q183 ;
+    wdt:P176 wd:Q822381 ;
+    wdt:P2052 90.0 ;
+    wdt:P279 wd:Q3407658 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Gaggenau-2.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q1487246#line1>,
+        <https://w3id.org/railclass/Q1487246#line2> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q106450415,
+        wd:Q874436 .
+
+<https://w3id.org/railclass/Q1487246#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q106450415#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q106450415 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q1487246#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q874436#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q874436 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q106450415 rdfs:label "S 31"@en .
+
+wd:Q874436 rdfs:label "Karlsruhe Stadtbahn"@en .
+

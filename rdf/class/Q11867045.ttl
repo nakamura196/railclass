@@ -1,0 +1,37 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q11867045 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "EVO2"@en,
+        "EVO2 (路面電車車両)"@ja ;
+    skos:exactMatch wd:Q11867045 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "EVO2"@en,
+        "EVO2 (路面電車車両)"@ja ;
+    prov:wasDerivedFrom wd:Q11867045 ;
+    wdt:P17 wd:Q213 ;
+    wdt:P2052 65.0 ;
+    wdt:P279 wd:Q131697394 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/EVO2%20v%20Plzni%2020190910.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q11867045#line1> ;
+    tb:operatingCountry wd:Q213 ;
+    tb:usedOn wd:Q1421032 .
+
+<https://w3id.org/railclass/Q11867045#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1421032#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1421032 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1421032 rdfs:label "Liberec tramway"@en .
+

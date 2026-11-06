@@ -1,0 +1,58 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q727577 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SNCF TGV 2N2"@en,
+        "フランス国鉄TGV 2N2"@ja ;
+    skos:exactMatch wd:Q727577 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SNCF TGV 2N2"@en,
+        "フランス国鉄TGV 2N2"@ja ;
+    prov:wasDerivedFrom wd:Q727577 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q13646,
+        wd:Q93090957,
+        wd:Q97172588 ;
+    wdt:P17 wd:Q142 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q1917599,
+        wd:Q483373,
+        wd:Q99965194 ;
+    wdt:P930 wd:Q106530439,
+        wd:Q1415234,
+        wd:Q21251675,
+        wd:Q21253457 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Duplex%20in%20Karlsruhe%20III.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q727577#line1>,
+        <https://w3id.org/railclass/Q727577#line2> ;
+    tb:operatingCountry wd:Q142,
+        wd:Q29 ;
+    tb:usedOn wd:Q129337,
+        wd:Q97172588 .
+
+<https://w3id.org/railclass/Q727577#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q129337#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q129337 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q727577#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q97172588#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q97172588 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q129337 rdfs:label "TGV"@en .
+
+wd:Q97172588 rdfs:label "Ouigo España"@en .
+

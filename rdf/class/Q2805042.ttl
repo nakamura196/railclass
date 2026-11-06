@@ -1,0 +1,37 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q2805042 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Glacier Express panoramic coach (Stadler)"@en,
+        "氷河特急のパノラマ客車（シュタッドラー製）"@ja ;
+    skos:exactMatch wd:Q2805042 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Glacier Express panoramic coach (Stadler)"@en,
+        "氷河特急のパノラマ客車（シュタッドラー製）"@ja ;
+    prov:wasDerivedFrom wd:Q2805042 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P17 wd:Q39 ;
+    wdt:P279 wd:Q2049755,
+        wd:Q3959904 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Matterhorn%20Gotthard%20Bahn%20panoramic%20coach%20Bp%204066%20and%204064%2C%20built%20by%20Stadler%20at%20Randa%20VS.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q2805042#line1> ;
+    tb:operatingCountry wd:Q39 ;
+    tb:usedOn wd:Q661561 .
+
+<https://w3id.org/railclass/Q2805042#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q661561#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q661561 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q661561 rdfs:label "Glacier Express"@en .
+

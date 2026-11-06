@@ -1,0 +1,48 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q797123 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "BVG Class G"@en ;
+    skos:exactMatch wd:Q797123 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "BVG Class G"@en ;
+    prov:wasDerivedFrom wd:Q797123 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q99633 ;
+    wdt:P176 wd:Q466615 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/1083%20Hennigsdorf%20%28Werk%29%2019.09.10.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q797123#line1>,
+        <https://w3id.org/railclass/Q797123#line2> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q80872,
+        wd:Q99697 .
+
+<https://w3id.org/railclass/Q797123#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q80872#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q80872 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2001"^^xsd:gYear .
+
+<https://w3id.org/railclass/Q797123#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q99697#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q99697 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q80872 rdfs:label "Pyŏngyang Metro"@en .
+
+wd:Q99697 rdfs:label "U2"@en .
+

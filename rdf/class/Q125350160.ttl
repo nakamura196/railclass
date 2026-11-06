@@ -1,0 +1,43 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q125350160 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Railjet 1"@en,
+        "レールジェット（第1世代）"@ja ;
+    skos:exactMatch wd:Q125350160 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Railjet 1"@en,
+        "レールジェット（第1世代）"@ja ;
+    prov:wasDerivedFrom wd:Q125350160 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q304944,
+        wd:Q83822 ;
+    wdt:P17 wd:Q183,
+        wd:Q213,
+        wd:Q214,
+        wd:Q28,
+        wd:Q38,
+        wd:Q40 ;
+    wdt:P176 wd:Q81230 ;
+    wdt:P2052 230.0 ;
+    wdt:P279 wd:Q13402959 ;
+    tb:lineUse <https://w3id.org/railclass/Q125350160#line1> ;
+    tb:usedOn wd:Q327051 .
+
+<https://w3id.org/railclass/Q125350160#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q327051#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q327051 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q327051 rdfs:label "Railjet"@en .
+

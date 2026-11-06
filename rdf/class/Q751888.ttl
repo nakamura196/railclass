@@ -1,0 +1,70 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q751888 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 315"@en,
+        "イギリス国鉄クラス315電車"@ja ;
+    skos:exactMatch wd:Q751888 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "British Rail Class 315"@en,
+        "イギリス国鉄クラス315電車"@ja ;
+    prov:wasDerivedFrom wd:Q751888 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q18160926,
+        wd:Q1967136,
+        wd:Q2707736,
+        wd:Q318679,
+        wd:Q5330408,
+        wd:Q5453058,
+        wd:Q746021 ;
+    wdt:P17 wd:Q145 ;
+    wdt:P176 wd:Q3303533 ;
+    wdt:P2052 121.0 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "1980"^^xsd:gYear ;
+    wdt:P930 wd:Q106530439 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/315844%20Forest%20Gate%202015-09-13%20XAM-E1.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q751888#line1>,
+        <https://w3id.org/railclass/Q751888#line2>,
+        <https://w3id.org/railclass/Q751888#line3> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q17986446,
+        wd:Q18160926,
+        wd:Q746021 .
+
+<https://w3id.org/railclass/Q751888#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q17986446#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q17986446 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q751888#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q18160926#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q18160926 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q751888#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q746021#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q746021 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q17986446 rdfs:label "Chingford branch line"@en .
+
+wd:Q18160926 rdfs:label "TfL Rail"@en .
+
+wd:Q746021 rdfs:label "London Overground"@en .
+

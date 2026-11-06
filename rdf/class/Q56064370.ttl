@@ -1,0 +1,36 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q56064370 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Alstom Movia R151"@en,
+        "シンガポール地下鉄R151形電車"@ja ;
+    skos:exactMatch wd:Q56064370 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Alstom Movia R151"@en,
+        "シンガポール地下鉄R151形電車"@ja ;
+    prov:wasDerivedFrom wd:Q56064370 ;
+    wdt:P137 wd:Q3243209 ;
+    wdt:P176 wd:Q15914660 ;
+    wdt:P279 wd:Q2913359 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/R151%20train%20at%20Tuas%20Depot.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q56064370#line1> ;
+    tb:operatingCountry wd:Q334 ;
+    tb:usedOn wd:Q759229 .
+
+<https://w3id.org/railclass/Q56064370#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q759229#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q759229 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q759229 rdfs:label "North–South Line"@en .
+

@@ -1,0 +1,40 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q898685 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SNCF BB 67400"@en,
+        "フランス国鉄BB67400形ディーゼル機関車"@ja ;
+    skos:exactMatch wd:Q898685 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SNCF BB 67400"@en,
+        "フランス国鉄BB67400形ディーゼル機関車"@ja ;
+    prov:wasDerivedFrom wd:Q898685 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q13646 ;
+    wdt:P176 wd:Q282395 ;
+    wdt:P2052 140.0 ;
+    wdt:P279 wd:Q19842071 ;
+    wdt:P2978 wd:Q24686956 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/BB67596-Amiens.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q898685#line1> ;
+    tb:operatingCountry wd:Q142 ;
+    tb:usedOn wd:Q93874 .
+
+<https://w3id.org/railclass/Q898685#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q93874#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q93874 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q93874 rdfs:label "Line P"@en .
+

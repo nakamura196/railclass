@@ -1,0 +1,37 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q49183799 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "EA203 series"@en,
+        "インドネシア鉄道EA203系電車"@ja ;
+    skos:exactMatch wd:Q49183799 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "EA203 series"@en,
+        "インドネシア鉄道EA203系電車"@ja ;
+    prov:wasDerivedFrom wd:Q49183799 ;
+    wdt:P1064 wd:Q1193463 ;
+    wdt:P176 wd:Q688893,
+        wd:Q7121061 ;
+    wdt:P930 wd:Q21253457 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Railink%20EA203%20passing%20Sudirman%20Station.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q49183799#line1> ;
+    tb:operatingCountry wd:Q252 ;
+    tb:usedOn wd:Q28725675 .
+
+<https://w3id.org/railclass/Q49183799#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q28725675#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q28725675 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q28725675 rdfs:label "Soekarno-Hatta International Airport Commuter Line"@en .
+

@@ -1,0 +1,36 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q81376668 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Stadler M110"@en ;
+    skos:exactMatch wd:Q81376668 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Stadler M110"@en ;
+    prov:wasDerivedFrom wd:Q81376668 ;
+    wdt:P137 wd:Q232164 ;
+    wdt:P17 wd:Q184 ;
+    wdt:P176 wd:Q666703 ;
+    wdt:P279 wd:Q4102249,
+        wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Stadler%20M110-M111%20in%20Minsk%20%28July%202020%29%202.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q81376668#line1> ;
+    tb:operatingCountry wd:Q184 ;
+    tb:usedOn wd:Q232164 .
+
+<https://w3id.org/railclass/Q81376668#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q232164#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q232164 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q232164 rdfs:label "Minsk Metro"@en .
+

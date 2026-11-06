@@ -1,0 +1,34 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q6044844 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "InterCity Express"@en ;
+    skos:exactMatch wd:Q6044844 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "InterCity Express"@en ;
+    prov:wasDerivedFrom wd:Q6044844 ;
+    wdt:P137 wd:Q379439 ;
+    wdt:P176 wd:Q13551978 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/ICE%20155%20south%20of%20North%20Gympie%20-%202%20May%202010.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q6044844#line1> ;
+    tb:operatingCountry wd:Q408 ;
+    tb:usedOn wd:Q16927337 .
+
+<https://w3id.org/railclass/Q6044844#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16927337#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q16927337 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q16927337 rdfs:label "Sunshine Coast railway line"@en .
+

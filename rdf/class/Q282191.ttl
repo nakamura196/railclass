@@ -1,0 +1,81 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q282191 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "TW 6000"@en,
+        "ハノーファー・シュタットバーンTW6000形電車"@ja ;
+    skos:exactMatch wd:Q282191 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "TW 6000"@en,
+        "ハノーファー・シュタットバーンTW6000形電車"@ja ;
+    prov:wasDerivedFrom wd:Q282191 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P17 wd:Q183,
+        wd:Q28,
+        wd:Q55 ;
+    wdt:P176 wd:Q158276,
+        wd:Q432790,
+        wd:Q81230,
+        wd:Q822381 ;
+    wdt:P2052 80.0 ;
+    wdt:P279 wd:Q3407658 ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TW%206016%20Houten.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q282191#line1>,
+        <https://w3id.org/railclass/Q282191#line2>,
+        <https://w3id.org/railclass/Q282191#line3>,
+        <https://w3id.org/railclass/Q282191#line4> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q55,
+        wd:Q948 ;
+    tb:usedOn wd:Q1339376,
+        wd:Q1425645,
+        wd:Q63349759,
+        wd:Q637855 .
+
+<https://w3id.org/railclass/Q282191#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1339376#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1339376 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q282191#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1425645#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1425645 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q282191#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q63349759#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q63349759 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q282191#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q637855#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q637855 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2021"^^xsd:gYear .
+
+wd:Q1339376 rdfs:label "Trams in Houten"@en .
+
+wd:Q1425645 rdfs:label "Métro léger de Tunis"@en .
+
+wd:Q63349759 rdfs:label "9"@en .
+
+wd:Q637855 rdfs:label "Hanover Stadtbahn"@en .
+

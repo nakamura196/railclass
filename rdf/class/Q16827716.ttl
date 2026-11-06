@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q16827716 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "AM5-M2 and AM4-M4"@en,
+        "ブダペスト地下鉄AM電車"@ja ;
+    skos:exactMatch wd:Q16827716 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "AM5-M2 and AM4-M4"@en,
+        "ブダペスト地下鉄AM電車"@ja ;
+    prov:wasDerivedFrom wd:Q16827716 ;
+    wdt:P137 wd:Q745664 ;
+    wdt:P17 wd:Q28 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q4102249,
+        wd:Q662195 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/BudapestAlstom.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q16827716#line1> ;
+    tb:operatingCountry wd:Q28 ;
+    tb:usedOn wd:Q1071156 .
+
+<https://w3id.org/railclass/Q16827716#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1071156#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1071156 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1071156 rdfs:label "Budapest Metro Line 2"@en .
+

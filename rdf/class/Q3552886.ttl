@@ -1,0 +1,53 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q3552886 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Taipei Metro VAL 256"@en,
+        "台北捷運VAL256型電車"@ja ;
+    skos:exactMatch wd:Q3552886 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Taipei Metro VAL 256"@en,
+        "台北捷運VAL256型電車"@ja ;
+    prov:wasDerivedFrom wd:Q3552886 ;
+    wdt:P1064 wd:Q906942 ;
+    wdt:P137 wd:Q714810 ;
+    wdt:P176 wd:Q309084,
+        wd:Q35982 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P930 wd:Q25857994 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Matra%20VAL256%2C%20Taipei%20Metro%2020210509.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q3552886#line1>,
+        <https://w3id.org/railclass/Q3552886#line2> ;
+    tb:operatingCountry wd:Q30,
+        wd:Q865 ;
+    tb:usedOn wd:Q2627597,
+        wd:Q707644 .
+
+<https://w3id.org/railclass/Q3552886#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2627597#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2627597 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1996"^^xsd:gYear .
+
+<https://w3id.org/railclass/Q3552886#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q707644#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q707644 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2627597 rdfs:label "Jacksonville Skyway"@en .
+
+wd:Q707644 rdfs:label "Wenhu line"@en .
+

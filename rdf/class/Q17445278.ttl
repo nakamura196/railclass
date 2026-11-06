@@ -1,0 +1,86 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q17445278 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ÖBB 4746"@en,
+        "デジロML"@ja ;
+    skos:exactMatch wd:Q17445278 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ÖBB 4746"@en,
+        "デジロML"@ja ;
+    prov:wasDerivedFrom wd:Q17445278 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q83822 ;
+    wdt:P17 wd:Q40 ;
+    wdt:P176 wd:Q391895 ;
+    wdt:P2052 160.0 ;
+    wdt:P279 wd:Q124657243,
+        wd:Q443874 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/4746%20511%20S2%20Kapellerfeld.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q17445278#line1>,
+        <https://w3id.org/railclass/Q17445278#line2>,
+        <https://w3id.org/railclass/Q17445278#line3>,
+        <https://w3id.org/railclass/Q17445278#line4>,
+        <https://w3id.org/railclass/Q17445278#line5> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q40 ;
+    tb:usedOn wd:Q2204418,
+        wd:Q27186048,
+        wd:Q459508,
+        wd:Q46973401,
+        wd:Q61863762 .
+
+<https://w3id.org/railclass/Q17445278#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2204418#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2204418 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q17445278#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q27186048#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q27186048 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q17445278#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q459508#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q459508 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q17445278#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q46973401#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q46973401 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q17445278#line5> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q61863762#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q61863762 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2204418 rdfs:label "Carinthia S-Bahn"@en .
+
+wd:Q27186048 rdfs:label "Upper Austria S-Bahn"@en .
+
+wd:Q459508 rdfs:label "Salzburg S-Bahn"@en .
+
+wd:Q46973401 rdfs:label "RE 9 (Mecklenburg-Vorpommern)"@en .
+
+wd:Q61863762 rdfs:label "RE 10"@en .
+

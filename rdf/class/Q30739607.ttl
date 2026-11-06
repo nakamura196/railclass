@@ -1,0 +1,44 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q30739607 a skos:Concept,
+        tb:VehicleClass ;
+    skos:exactMatch wd:Q30739607 ;
+    skos:inScheme cls: ;
+    prov:wasDerivedFrom wd:Q30739607 ;
+    wdt:P137 wd:Q13646 ;
+    wdt:P279 wd:Q28455463,
+        wd:Q3959904 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Coradia%20Liner%20Intercit%C3%A9s%201.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q30739607#line1>,
+        <https://w3id.org/railclass/Q30739607#line2> ;
+    tb:operatingCountry wd:Q142,
+        wd:Q183 ;
+    tb:usedOn wd:Q123754027,
+        wd:Q123754045 .
+
+<https://w3id.org/railclass/Q30739607#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q123754027#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q123754027 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q30739607#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q123754045#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q123754045 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q123754027 rdfs:label "A09 Strasbourg Lauterbourg Wörth"@en .
+
+wd:Q123754045 rdfs:label "A34 Strasbourg Wissembourg (Neustadt)"@en .
+

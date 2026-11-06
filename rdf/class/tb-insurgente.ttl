@@ -1,0 +1,39 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:tb-insurgente a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "El Insurgente CAF EMU"@en,
+        "エル・インスルヘンテの電車（CAF 製）"@ja ;
+    dcterms:source "Country and operator from Wikidata Q16642463 (El Insurgente, the line); manufacturer and type (CAF EMU) and the opening of the first section (2023-09-15) from en.wikipedia 'El Insurgente' via the skytrain lab note docs/notes/insurgente.md (2026-10-12)."@en ;
+    skos:inScheme cls: ;
+    skos:prefLabel "El Insurgente CAF EMU"@en,
+        "エル・インスルヘンテの電車（CAF 製）"@ja ;
+    wdt:P137 wd:Q139837508 ;
+    wdt:P17 wd:Q96 ;
+    wdt:P176 wd:Q838212 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2023"^^xsd:gYear ;
+    tb:handEntered wdt:P137,
+        wdt:P17,
+        wdt:P176,
+        wdt:P279,
+        wdt:P729 ;
+    tb:lineUse <https://w3id.org/railclass/tb-insurgente#line1> ;
+    tb:usedOn wd:Q16642463 .
+
+<https://w3id.org/railclass/tb-insurgente#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16642463> ;
+    skos:note "the Mexico City–Toluca interurban line itself; Wikidata has no item for its CAF trains"@en ;
+    tb:line wd:Q16642463 ;
+    tb:sourceSection "Wikidata (the line)" ;
+    tb:useStatus "current" .
+
+wd:Q16642463 rdfs:label "El Insurgente"@en .
+

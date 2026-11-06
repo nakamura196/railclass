@@ -1,0 +1,40 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q2633939 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Achenseebahn 1 to 4"@en ;
+    skos:exactMatch wd:Q2633939 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Achenseebahn 1 to 4"@en ;
+    prov:wasDerivedFrom wd:Q2633939 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P137 wd:Q163504 ;
+    wdt:P17 wd:Q40 ;
+    wdt:P176 wd:Q477493 ;
+    wdt:P279 wd:Q143872,
+        wd:Q785745 ;
+    wdt:P2978 wd:Q26234727 ;
+    wdt:P729 "1889"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Achenseebahn%20Lok%203.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q2633939#line1> ;
+    tb:operatingCountry wd:Q40 ;
+    tb:usedOn wd:Q163504 .
+
+<https://w3id.org/railclass/Q2633939#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q163504#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q163504 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q163504 rdfs:label "Achensee railway line"@en .
+

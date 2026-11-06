@@ -1,0 +1,41 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q845342 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "China Railway DF11"@en,
+        "中国国鉄東風11型ディーゼル機関車"@ja ;
+    skos:exactMatch wd:Q845342 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "China Railway DF11"@en,
+        "中国国鉄東風11型ディーゼル機関車"@ja ;
+    prov:wasDerivedFrom wd:Q845342 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1073489 ;
+    wdt:P17 wd:Q148 ;
+    wdt:P176 wd:Q7267923 ;
+    wdt:P2052 170.0 ;
+    wdt:P279 wd:Q8376307 ;
+    wdt:P2978 wd:Q1022125 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/DF11-0419%2020110319.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q845342#line1> ;
+    tb:operatingCountry wd:Q148 ;
+    tb:usedOn wd:Q16688781 .
+
+<https://w3id.org/railclass/Q845342#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16688781#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q16688781 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q16688781 rdfs:label "T236/237 & T238/235 Kunshan-Chongqing Express Train"@en .
+

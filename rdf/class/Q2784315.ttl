@@ -1,0 +1,73 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q2784315 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SNCF X 73500"@en ;
+    skos:exactMatch wd:Q2784315 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SNCF X 73500"@en ;
+    prov:wasDerivedFrom wd:Q2784315 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q13646 ;
+    wdt:P17 wd:Q142 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q1567915,
+        wd:Q445916 ;
+    wdt:P729 "1999"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Doublette%20d%27X%2073500%20Gare%20de%20Lisieux.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q2784315#line1>,
+        <https://w3id.org/railclass/Q2784315#line2>,
+        <https://w3id.org/railclass/Q2784315#line3>,
+        <https://w3id.org/railclass/Q2784315#line4> ;
+    tb:operatingCountry wd:Q142 ;
+    tb:usedOn wd:Q1983246,
+        wd:Q3239085,
+        wd:Q3239097,
+        wd:Q90149254 .
+
+<https://w3id.org/railclass/Q2784315#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1983246#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1983246 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2016"^^xsd:gYear .
+
+<https://w3id.org/railclass/Q2784315#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3239085#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3239085 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q2784315#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3239097#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3239097 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q2784315#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q90149254#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q90149254 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1983246 rdfs:label "TER Alsace"@en .
+
+wd:Q3239085 rdfs:label "C linea"@en .
+
+wd:Q3239097 rdfs:label "D linea"@en .
+
+wd:Q90149254 rdfs:label "Line 54"@en .
+

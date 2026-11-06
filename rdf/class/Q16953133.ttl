@@ -1,0 +1,70 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q16953133 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "İZBAN E22000"@en ;
+    skos:exactMatch wd:Q16953133 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "İZBAN E22000"@en ;
+    prov:wasDerivedFrom wd:Q16953133 ;
+    wdt:P137 wd:Q16850711 ;
+    wdt:P17 wd:Q43 ;
+    wdt:P176 wd:Q838212 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "2010"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/S-Bahn%20Izmir%20%28IZBAN%29%20Baureihe%20E22000%20%28CAF%29.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q16953133#line1>,
+        <https://w3id.org/railclass/Q16953133#line2>,
+        <https://w3id.org/railclass/Q16953133#line3>,
+        <https://w3id.org/railclass/Q16953133#line4> ;
+    tb:operatingCountry wd:Q43 ;
+    tb:usedOn wd:Q5347760,
+        wd:Q55105894,
+        wd:Q7058666,
+        wd:Q7570092 .
+
+<https://w3id.org/railclass/Q16953133#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5347760#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5347760 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q16953133#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q55105894#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q55105894 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q16953133#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7058666#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7058666 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q16953133#line4> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7570092#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7570092 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5347760 rdfs:label "İZBAN"@en .
+
+wd:Q55105894 rdfs:label "Central Line"@en .
+
+wd:Q7058666 rdfs:label "Northern Line"@en .
+
+wd:Q7570092 rdfs:label "Southern Line"@en .
+

@@ -1,0 +1,42 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q1155205 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "DR Class 99.77–79"@en ;
+    skos:exactMatch wd:Q1155205 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "DR Class 99.77–79"@en ;
+    prov:wasDerivedFrom wd:Q1155205 ;
+    wdt:P1064 wd:Q4032352 ;
+    wdt:P137 wd:Q700563 ;
+    wdt:P17 wd:Q16957 ;
+    wdt:P176 wd:Q880716 ;
+    wdt:P2052 30.0 ;
+    wdt:P279 wd:Q785745 ;
+    wdt:P2978 wd:Q26196936 ;
+    wdt:P729 "1952"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Steam%20locomotive%2099%20782%20a.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q1155205#line1> ;
+    tb:operatingCountry wd:Q16957,
+        wd:Q183 ;
+    tb:usedOn wd:Q883462 .
+
+<https://w3id.org/railclass/Q1155205#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q883462#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q883462 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1940"^^xsd:gYear .
+
+wd:Q883462 rdfs:label "Rügensche Kleinbahn"@en .
+

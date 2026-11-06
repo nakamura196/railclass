@@ -1,0 +1,46 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q777398 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Toronto Rocket"@en ;
+    skos:exactMatch wd:Q777398 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Toronto Rocket"@en ;
+    prov:wasDerivedFrom wd:Q777398 ;
+    wdt:P137 wd:Q17978 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P279 wd:Q2913359 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Toronto%20Rocket%20Train%20at%20St%20Andrew%20Station%2C%20March%2025%202026.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q777398#line1>,
+        <https://w3id.org/railclass/Q777398#line2> ;
+    tb:operatingCountry wd:Q16 ;
+    tb:usedOn wd:Q54369,
+        wd:Q54373 .
+
+<https://w3id.org/railclass/Q777398#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q54369#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q54369 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q777398#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q54373#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q54373 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q54369 rdfs:label "Line 1 Yonge–University"@en .
+
+wd:Q54373 rdfs:label "Line 4 Sheppard"@en .
+

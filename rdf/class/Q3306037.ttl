@@ -1,0 +1,53 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q3306037 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 37"@en,
+        "イギリス国鉄37形ディーゼル機関車"@ja ;
+    skos:exactMatch wd:Q3306037 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "British Rail Class 37"@en,
+        "イギリス国鉄37形ディーゼル機関車"@ja ;
+    prov:wasDerivedFrom wd:Q3306037 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q2982351,
+        wd:Q456226,
+        wd:Q5330408,
+        wd:Q6670591,
+        wd:Q7055281,
+        wd:Q7437933,
+        wd:Q7984828,
+        wd:Q7988225 ;
+    wdt:P17 wd:Q145 ;
+    wdt:P176 wd:Q1342845,
+        wd:Q2011495,
+        wd:Q7350044 ;
+    wdt:P2052 145.0 ;
+    wdt:P279 wd:Q19842071,
+        wd:Q27908860 ;
+    wdt:P2978 wd:Q1022125 ;
+    wdt:P729 "1960"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/19890714a%20Strathcarron.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q3306037#line1> ;
+    tb:operatingCountry wd:Q142,
+        wd:Q145 ;
+    tb:usedOn wd:Q7608228 .
+
+<https://w3id.org/railclass/Q3306037#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7608228#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7608228 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q7608228 rdfs:label "Wherry Lines"@en .
+

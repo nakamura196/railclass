@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q11153011 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Bombardier MOVIA 456 (Shenzhen Metro)"@en,
+        "深圳地下鉄MOVIA電車"@ja ;
+    skos:exactMatch wd:Q11153011 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Bombardier MOVIA 456 (Shenzhen Metro)"@en,
+        "深圳地下鉄MOVIA電車"@ja ;
+    prov:wasDerivedFrom wd:Q11153011 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q11153052 ;
+    wdt:P176 wd:Q15914660,
+        wd:Q688893 ;
+    wdt:P279 wd:Q2913359,
+        wd:Q483373 ;
+    wdt:P930 wd:Q21253457 ;
+    tb:lineUse <https://w3id.org/railclass/Q11153011#line1> ;
+    tb:operatingCountry wd:Q148 ;
+    tb:usedOn wd:Q842103 .
+
+<https://w3id.org/railclass/Q11153011#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q842103#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q842103 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q842103 rdfs:label "Line 1"@en .
+

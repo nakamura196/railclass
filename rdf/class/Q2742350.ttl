@@ -1,0 +1,55 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q2742350 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ODEG ET 445"@en ;
+    skos:exactMatch wd:Q2742350 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ODEG ET 445"@en ;
+    prov:wasDerivedFrom wd:Q2742350 ;
+    wdt:P137 wd:Q145188 ;
+    wdt:P279 wd:Q672992 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/ODEG%20Stadler%20KISS%20Berlin%20Hbf.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q2742350#line1>,
+        <https://w3id.org/railclass/Q2742350#line2>,
+        <https://w3id.org/railclass/Q2742350#line3> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q112992594,
+        wd:Q138313400,
+        wd:Q15119419 .
+
+<https://w3id.org/railclass/Q2742350#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q112992594#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q112992594 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q2742350#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q138313400#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q138313400 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q2742350#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q15119419#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q15119419 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q112992594 rdfs:label "RE 8 (Berlin/Brandenburg)"@en .
+
+wd:Q138313400 rdfs:label "RE 20 (Berlin/Brandenburg)"@en .
+
+wd:Q15119419 rdfs:label "RE 2 (Berlin/Brandenburg)"@en .
+

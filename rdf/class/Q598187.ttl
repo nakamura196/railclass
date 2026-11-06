@@ -1,0 +1,60 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q598187 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "China Railway CRH2"@en,
+        "中国高速鉄道CRH2型電車"@ja ;
+    skos:exactMatch wd:Q598187 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "China Railway CRH2"@en,
+        "中国高速鉄道CRH2型電車"@ja ;
+    prov:wasDerivedFrom wd:Q598187 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1073489 ;
+    wdt:P176 wd:Q5014252,
+        wd:Q748148 ;
+    wdt:P279 wd:Q20795192 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/CRH2A--%E4%BA%AC%E6%B2%AA%E6%99%AE%E9%80%9F%E7%BA%BF.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q598187#line1>,
+        <https://w3id.org/railclass/Q598187#line2>,
+        <https://w3id.org/railclass/Q598187#line3> ;
+    tb:operatingCountry wd:Q148 ;
+    tb:usedOn wd:Q11123914,
+        wd:Q3338133,
+        wd:Q853876 .
+
+<https://w3id.org/railclass/Q598187#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q11123914#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q11123914 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q598187#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3338133#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3338133 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q598187#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q853876#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q853876 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q11123914 rdfs:label "Wuhan–Xianning Intercity Railway"@en .
+
+wd:Q3338133 rdfs:label "Jinshan railway"@en .
+
+wd:Q853876 rdfs:label "Wuhan–Guangzhou high-speed railway"@en .
+

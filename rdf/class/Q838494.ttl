@@ -1,0 +1,64 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q838494 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 455"@en,
+        "イギリス国鉄455形電車"@ja ;
+    skos:exactMatch wd:Q838494 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "British Rail Class 455"@en,
+        "イギリス国鉄455形電車"@ja ;
+    prov:wasDerivedFrom wd:Q838494 ;
+    wdt:P137 wd:Q1258373,
+        wd:Q30602320,
+        wd:Q5161794,
+        wd:Q938861 ;
+    wdt:P176 wd:Q18160582 ;
+    wdt:P2052 121.0 ;
+    wdt:P279 wd:Q483373 ;
+    wdt:P729 "1983"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Southern%20455%20836%20at%20Epsom%20Downs%20up%20front%202021.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q838494#line1>,
+        <https://w3id.org/railclass/Q838494#line2>,
+        <https://w3id.org/railclass/Q838494#line3> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q5093361,
+        wd:Q7007887,
+        wd:Q7494558 .
+
+<https://w3id.org/railclass/Q838494#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5093361#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5093361 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q838494#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7007887#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7007887 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q838494#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q7494558#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q7494558 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q5093361 rdfs:label "Chessington branch line"@en .
+
+wd:Q7007887 rdfs:label "New Guildford Line"@en .
+
+wd:Q7494558 rdfs:label "New Malden to Shepperton Branch, Fulwell Junction to Shepperton"@en .
+

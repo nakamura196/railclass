@@ -1,0 +1,36 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q5323413 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "EMD G22C Series"@en,
+        "EMD G22CW・G22CW-2形ディーゼル機関車"@ja ;
+    skos:exactMatch wd:Q5323413 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "EMD G22C Series"@en,
+        "EMD G22CW・G22CW-2形ディーゼル機関車"@ja ;
+    prov:wasDerivedFrom wd:Q5323413 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P176 wd:Q4810564 ;
+    wdt:P279 wd:Q19842071 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TRA%20R171%20at%20Sincheng%20Taroko%20Station%2020080917.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q5323413#line1> ;
+    tb:operatingCountry wd:Q414 ;
+    tb:usedOn wd:Q139551166 .
+
+<https://w3id.org/railclass/Q5323413#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q139551166#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q139551166 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q139551166 rdfs:label "El Gran Capitán"@en .
+

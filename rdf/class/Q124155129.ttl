@@ -1,0 +1,40 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q124155129 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Frankfurt M-class tram"@en ;
+    skos:exactMatch wd:Q124155129 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Frankfurt M-class tram"@en ;
+    prov:wasDerivedFrom wd:Q124155129 ;
+    wdt:P137 wd:Q124061628,
+        wd:Q1754870,
+        wd:Q2328481 ;
+    wdt:P176 wd:Q822381 ;
+    wdt:P279 wd:Q1230042,
+        wd:Q1263947 ;
+    wdt:P729 "1959"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/TdVG%20Harthweg%20M%2Bm.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q124155129#line1> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q3040891 .
+
+<https://w3id.org/railclass/Q124155129#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3040891#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3040891 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1978"^^xsd:gYear .
+
+wd:Q3040891 rdfs:label "U2"@en .
+

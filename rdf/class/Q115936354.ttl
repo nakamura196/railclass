@@ -1,0 +1,32 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q115936354 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Prosper VLT"@en ;
+    skos:exactMatch wd:Q115936354 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Prosper VLT"@en ;
+    prov:wasDerivedFrom wd:Q115936354 ;
+    wdt:P176 wd:Q115935889 ;
+    wdt:P279 wd:Q1567915,
+        wd:Q15825863 ;
+    tb:lineUse <https://w3id.org/railclass/Q115936354#line1> ;
+    tb:operatingCountry wd:Q298 ;
+    tb:usedOn wd:Q6103954 .
+
+<https://w3id.org/railclass/Q115936354#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q6103954#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q6103954 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q6103954 rdfs:label "Tren Talca-Constitución"@en .
+

@@ -1,0 +1,36 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q5958359 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Korail Class 361000"@en,
+        "韓国鉄道公社361000系電車"@ja ;
+    skos:exactMatch wd:Q5958359 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Korail Class 361000"@en,
+        "韓国鉄道公社361000系電車"@ja ;
+    prov:wasDerivedFrom wd:Q5958359 ;
+    wdt:P137 wd:Q18169 ;
+    wdt:P176 wd:Q152517 ;
+    wdt:P279 wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Korail%20Class%20361000%20EMU.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q5958359#line1> ;
+    tb:operatingCountry wd:Q884 ;
+    tb:usedOn wd:Q27863268 .
+
+<https://w3id.org/railclass/Q5958359#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q27863268#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q27863268 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q27863268 rdfs:label "Metro Gyeongchun Line"@en .
+

@@ -1,0 +1,53 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q388564 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "DB Class 103"@en,
+        "西ドイツ国鉄103型電気機関車"@ja ;
+    skos:exactMatch wd:Q388564 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "DB Class 103"@en,
+        "西ドイツ国鉄103型電気機関車"@ja ;
+    prov:wasDerivedFrom wd:Q388564 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q687175 ;
+    wdt:P17 wd:Q183 ;
+    wdt:P176 wd:Q158276,
+        wd:Q163580,
+        wd:Q1868564,
+        wd:Q466871,
+        wd:Q664420,
+        wd:Q81230,
+        wd:Q819150 ;
+    wdt:P2052 200.0 ;
+    wdt:P279 wd:Q625151 ;
+    wdt:P2978 wd:Q1022125 ;
+    wdt:P729 "1965"^^xsd:gYear ;
+    wdt:P930 wd:Q1415234 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/103%20184%20DB%20nahe%20Osterm%C3%BCnchen%20-%20Bayern%20%281%29.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q388564#line1> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q39,
+        wd:Q55,
+        wd:Q713750 ;
+    tb:usedOn wd:Q2559822 .
+
+<https://w3id.org/railclass/Q388564#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2559822#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2559822 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2002"^^xsd:gYear .
+
+wd:Q2559822 rdfs:label "Rembrandt"@en .
+

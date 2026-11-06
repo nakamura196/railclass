@@ -1,0 +1,32 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q134269562 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "CAF Urbos 100 (Liège)"@en ;
+    skos:exactMatch wd:Q134269562 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "CAF Urbos 100 (Liège)"@en ;
+    prov:wasDerivedFrom wd:Q134269562 ;
+    wdt:P279 wd:Q1022747 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Vue%20d%27un%20tram%20sur%20le%20place%20du%20March%C3%A9%20en%20centre-ville%20de%20Li%C3%A8ge.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q134269562#line1> ;
+    tb:operatingCountry wd:Q31 ;
+    tb:usedOn wd:Q628289 .
+
+<https://w3id.org/railclass/Q134269562#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q628289#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q628289 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q628289 rdfs:label "Liège tramway"@en .
+

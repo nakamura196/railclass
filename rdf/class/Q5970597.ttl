@@ -1,0 +1,49 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q5970597 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "IE 29000 Class"@en ;
+    skos:exactMatch wd:Q5970597 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "IE 29000 Class"@en ;
+    prov:wasDerivedFrom wd:Q5970597 ;
+    wdt:P1064 wd:Q6071527 ;
+    wdt:P137 wd:Q73043 ;
+    wdt:P17 wd:Q27 ;
+    wdt:P176 wd:Q838212 ;
+    wdt:P279 wd:Q5197274 ;
+    wdt:P729 "2002"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Dublin%201.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q5970597#line1>,
+        <https://w3id.org/railclass/Q5970597#line2> ;
+    tb:operatingCountry wd:Q27 ;
+    tb:usedOn wd:Q3743407,
+        wd:Q5311032 .
+
+<https://w3id.org/railclass/Q5970597#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3743407#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3743407 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q5970597#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5311032#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q5311032 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3743407 rdfs:label "Dublin–Sligo railway line"@en .
+
+wd:Q5311032 rdfs:label "Dublin–Navan railway line"@en .
+

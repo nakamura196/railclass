@@ -1,0 +1,41 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q23926732 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "YDM-4"@en,
+        "インド鉄道YDM-4形ディーゼル機関車"@ja ;
+    skos:exactMatch wd:Q23926732 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "YDM-4"@en,
+        "インド鉄道YDM-4形ディーゼル機関車"@ja ;
+    prov:wasDerivedFrom wd:Q23926732 ;
+    wdt:P1064 wd:Q24609 ;
+    wdt:P137 wd:Q819425 ;
+    wdt:P17 wd:Q668 ;
+    wdt:P176 wd:Q2076679,
+        wd:Q3322605,
+        wd:Q383589 ;
+    wdt:P279 wd:Q19842071 ;
+    wdt:P2978 wd:Q1022125 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/YDM4-6669%20Jaipur%20Junction%2C%202008%20%283%29.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q23926732#line1> ;
+    tb:operatingCountry wd:Q668 ;
+    tb:usedOn wd:Q29026060 .
+
+<https://w3id.org/railclass/Q23926732#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q29026060#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q29026060 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q29026060 rdfs:label "Akola–Ratlam rail line"@en .
+

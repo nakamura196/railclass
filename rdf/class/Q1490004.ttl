@@ -1,0 +1,43 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q1490004 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "China Railway 25T"@en,
+        "中国国鉄25T系客車"@ja ;
+    skos:exactMatch wd:Q1490004 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "China Railway 25T"@en,
+        "中国国鉄25T系客車"@ja ;
+    prov:wasDerivedFrom wd:Q1490004 ;
+    wdt:P137 wd:Q1038182,
+        wd:Q1073489 ;
+    wdt:P176 wd:Q15900874,
+        wd:Q5014252,
+        wd:Q6141856,
+        wd:Q6963679,
+        wd:Q848225 ;
+    wdt:P279 wd:Q6857344 ;
+    wdt:P729 "2003"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/YW25T%20676969%40Shoupakou%20%2820150611163832%29.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q1490004#line1> ;
+    tb:operatingCountry wd:Q148 ;
+    tb:usedOn wd:Q873605 .
+
+<https://w3id.org/railclass/Q1490004#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q873605#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q873605 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q873605 rdfs:label "Qinhuangdao–Shenyang high-speed railway"@en .
+

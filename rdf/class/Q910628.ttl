@@ -1,0 +1,43 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q910628 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SNCB Class 18"@en,
+        "クラス18電気機関車 (ジーメンス)"@ja ;
+    skos:exactMatch wd:Q910628 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SNCB Class 18"@en,
+        "クラス18電気機関車 (ジーメンス)"@ja ;
+    prov:wasDerivedFrom wd:Q910628 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q524255 ;
+    wdt:P17 wd:Q31 ;
+    wdt:P176 wd:Q81230 ;
+    wdt:P279 wd:Q124498749 ;
+    wdt:P2978 wd:Q1014107 ;
+    wdt:P930 wd:Q106530439,
+        wd:Q21251675,
+        wd:Q21253457 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SNCB%20NMBS%201803.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q910628#line1> ;
+    tb:operatingCountry wd:Q183,
+        wd:Q31 ;
+    tb:usedOn wd:Q1374322 .
+
+<https://w3id.org/railclass/Q910628#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1374322#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1374322 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1374322 rdfs:label "S41"@en .
+

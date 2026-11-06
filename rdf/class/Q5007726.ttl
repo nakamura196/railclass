@@ -1,0 +1,36 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q5007726 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "C2-class tram"@en,
+        "C2形"@ja ;
+    skos:exactMatch wd:Q5007726 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "C2-class tram"@en,
+        "C2形"@ja ;
+    prov:wasDerivedFrom wd:Q5007726 ;
+    wdt:P137 wd:Q2060470 ;
+    wdt:P176 wd:Q309084 ;
+    wdt:P279 wd:Q45856843 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/C2.5123%20bourke%2C%202014.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q5007726#line1> ;
+    tb:operatingCountry wd:Q408 ;
+    tb:usedOn wd:Q12061652 .
+
+<https://w3id.org/railclass/Q5007726#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q12061652#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q12061652 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q12061652 rdfs:label "route 96"@en .
+

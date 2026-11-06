@@ -1,0 +1,65 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q11990748 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "NSB B5"@en ;
+    skos:exactMatch wd:Q11990748 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "NSB B5"@en ;
+    prov:wasDerivedFrom wd:Q11990748 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q50291920,
+        wd:Q58041853,
+        wd:Q7061278,
+        wd:Q83825 ;
+    wdt:P17 wd:Q20 ;
+    wdt:P176 wd:Q920625 ;
+    wdt:P2052 160.0 ;
+    wdt:P279 wd:Q16814621 ;
+    wdt:P2978 wd:Q29638944 ;
+    wdt:P729 "1977"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/NSB%20%28Norske%20tog%29%20B5-3%2026060%20in%20Drammen.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q11990748#line1>,
+        <https://w3id.org/railclass/Q11990748#line2>,
+        <https://w3id.org/railclass/Q11990748#line3> ;
+    tb:operatingCountry wd:Q20 ;
+    tb:usedOn wd:Q115325765,
+        wd:Q115328989,
+        wd:Q115328990 .
+
+<https://w3id.org/railclass/Q11990748#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q115325765#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q115325765 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q11990748#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q115328989#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q115328989 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q11990748#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q115328990#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q115328990 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q115325765 rdfs:label "F5 Stavanger–Oslo S"@en .
+
+wd:Q115328989 rdfs:label "F6 Oslo S–Trondheim S"@en .
+
+wd:Q115328990 rdfs:label "F7 Trondheim S–Bodø"@en .
+

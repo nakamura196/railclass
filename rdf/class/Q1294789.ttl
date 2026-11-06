@@ -1,0 +1,42 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q1294789 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Sapsan"@en,
+        "サプサン"@ja ;
+    skos:exactMatch wd:Q1294789 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Sapsan"@en,
+        "サプサン"@ja ;
+    prov:wasDerivedFrom wd:Q1294789 ;
+    wdt:P1064 wd:Q1197451 ;
+    wdt:P137 wd:Q660770 ;
+    wdt:P17 wd:Q159 ;
+    wdt:P176 wd:Q391895 ;
+    wdt:P279 wd:Q13402959,
+        wd:Q392909,
+        wd:Q483373 ;
+    wdt:P930 wd:Q106530439,
+        wd:Q21251675 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/%D0%AD%D0%92%D0%A12-02.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q1294789#line1> ;
+    tb:operatingCountry wd:Q159 ;
+    tb:usedOn wd:Q4178843 .
+
+<https://w3id.org/railclass/Q1294789#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4178843#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4178843 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4178843 rdfs:label "Moscow-Saint Petersburg Railway"@en .
+

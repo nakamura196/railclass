@@ -1,0 +1,47 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q6125796 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "RENFE Class 448"@en,
+        "レンフェ448系電車"@ja ;
+    skos:exactMatch wd:Q6125796 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "RENFE Class 448"@en,
+        "レンフェ448系電車"@ja ;
+    prov:wasDerivedFrom wd:Q6125796 ;
+    wdt:P137 wd:Q2476154 ;
+    wdt:P17 wd:Q29 ;
+    wdt:P176 wd:Q838212 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Bf%20Madrid%20Atocha%2C%208%20448%20002.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q6125796#line1>,
+        <https://w3id.org/railclass/Q6125796#line2> ;
+    tb:operatingCountry wd:Q29 ;
+    tb:usedOn wd:Q2842994,
+        wd:Q3109506 .
+
+<https://w3id.org/railclass/Q6125796#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2842994#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q2842994 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q6125796#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3109506#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3109506 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q2842994 rdfs:label "Renfe Regionales"@en .
+
+wd:Q3109506 rdfs:label "Media Distancia Renfe"@en .
+

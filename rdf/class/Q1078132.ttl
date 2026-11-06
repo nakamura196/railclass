@@ -1,0 +1,50 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q1078132 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Tatra T6A2"@en,
+        "タトラT6A2D"@ja ;
+    skos:exactMatch wd:Q1078132 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Tatra T6A2"@en,
+        "タトラT6A2D"@ja ;
+    prov:wasDerivedFrom wd:Q1078132 ;
+    wdt:P176 wd:Q336811 ;
+    wdt:P2052 55.0 ;
+    wdt:P279 wd:Q8352111 ;
+    wdt:P930 wd:Q21855034 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Tatra%20T6A2D%201201%2B1202%2C%20tram%20line%2011%2C%20Szczecin%2C%202010.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q1078132#line1>,
+        <https://w3id.org/railclass/Q1078132#line2> ;
+    tb:operatingCountry wd:Q212,
+        wd:Q28 ;
+    tb:usedOn wd:Q219347,
+        wd:Q833824 .
+
+<https://w3id.org/railclass/Q1078132#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q219347#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q219347 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q1078132#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q833824#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q833824 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q219347 rdfs:label "Trams in Dnipro"@en .
+
+wd:Q833824 rdfs:label "trams in Szeged"@en .
+

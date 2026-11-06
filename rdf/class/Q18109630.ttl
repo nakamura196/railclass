@@ -1,0 +1,36 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q18109630 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "CAF Urbos 3 in Kaohsiung"@en,
+        "高雄捷運Urbos電車"@ja ;
+    skos:exactMatch wd:Q18109630 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "CAF Urbos 3 in Kaohsiung"@en,
+        "高雄捷運Urbos電車"@ja ;
+    prov:wasDerivedFrom wd:Q18109630 ;
+    wdt:P176 wd:Q838212 ;
+    wdt:P279 wd:Q1022747,
+        wd:Q483373 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/KMRT%20CAF%20train%20at%20C7%202016-08-27.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q18109630#line1> ;
+    tb:operatingCountry wd:Q865 ;
+    tb:usedOn wd:Q4121246 .
+
+<https://w3id.org/railclass/Q18109630#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4121246#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4121246 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q4121246 rdfs:label "Circular light rail"@en .
+

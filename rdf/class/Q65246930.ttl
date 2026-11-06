@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q65246930 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Škoda push-pull trainset"@en,
+        "シュコダ・プッシュプル・トレインセット"@ja ;
+    skos:exactMatch wd:Q65246930 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Škoda push-pull trainset"@en,
+        "シュコダ・プッシュプル・トレインセット"@ja ;
+    prov:wasDerivedFrom wd:Q65246930 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q1152076 ;
+    wdt:P2052 190.0 ;
+    wdt:P279 wd:Q935330 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/J33%20747%20DABpbzf%20%C5%A0koda.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q65246930#line1> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q322058 .
+
+<https://w3id.org/railclass/Q65246930#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q322058#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q322058 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q322058 rdfs:label "RE 1 (Bavaria)"@en .
+

@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q575495 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "ÖBB bilevel rail car"@en ;
+    skos:exactMatch wd:Q575495 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "ÖBB bilevel rail car"@en ;
+    prov:wasDerivedFrom wd:Q575495 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q113816797,
+        wd:Q83822 ;
+    wdt:P17 wd:Q40 ;
+    wdt:P176 wd:Q668355 ;
+    wdt:P279 wd:Q1243337,
+        wd:Q935330 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Zwei%20Doppelstock-Wendez%C3%BCge%20in%20Handelskai.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q575495#line1> ;
+    tb:operatingCountry wd:Q40 ;
+    tb:usedOn wd:Q694029 .
+
+<https://w3id.org/railclass/Q575495#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q694029#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q694029 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q694029 rdfs:label "City Airport Train"@en .
+

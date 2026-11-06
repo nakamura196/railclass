@@ -1,0 +1,38 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q34155 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "GE U20C"@en,
+        "インドネシア鉄道CC203形ディーゼル機関車"@ja ;
+    skos:exactMatch wd:Q34155 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "GE U20C"@en,
+        "インドネシア鉄道CC203形ディーゼル機関車"@ja ;
+    prov:wasDerivedFrom wd:Q34155 ;
+    wdt:P1064 wd:Q24609,
+        wd:Q6071527 ;
+    wdt:P176 wd:Q54173 ;
+    wdt:P279 wd:Q19842071 ;
+    wdt:P2978 wd:Q1022125 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Loco-Novoeste.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q34155#line1> ;
+    tb:operatingCountry wd:Q252 ;
+    tb:usedOn wd:Q12488261 .
+
+<https://w3id.org/railclass/Q34155#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q12488261#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q12488261 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q12488261 rdfs:label "Jatiluhur and Walahar Commuter Line"@en .
+

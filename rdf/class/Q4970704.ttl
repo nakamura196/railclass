@@ -1,0 +1,39 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q4970704 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 107"@en,
+        "イギリス国鉄107形気動車"@ja ;
+    skos:exactMatch wd:Q4970704 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "British Rail Class 107"@en,
+        "イギリス国鉄107形気動車"@ja ;
+    prov:wasDerivedFrom wd:Q4970704 ;
+    wdt:P137 wd:Q7437933 ;
+    wdt:P176 wd:Q5261424 ;
+    wdt:P279 wd:Q1567915 ;
+    wdt:P729 "1960"^^xsd:gYear ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Class%20107%20approaches%20Gailes%20level%20crossing.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q4970704#line1> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q4831682 .
+
+<https://w3id.org/railclass/Q4970704#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q4831682#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q4831682 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "1987"^^xsd:gYear .
+
+wd:Q4831682 rdfs:label "Ayrshire Coast Line"@en .
+

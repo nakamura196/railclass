@@ -1,0 +1,34 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q23926698 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Bombardier Innovia APM 100 C801"@en ;
+    skos:exactMatch wd:Q23926698 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Bombardier Innovia APM 100 C801"@en ;
+    prov:wasDerivedFrom wd:Q23926698 ;
+    wdt:P137 wd:Q3243209 ;
+    wdt:P176 wd:Q378767 ;
+    wdt:P279 wd:Q891791 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Bukit%20Panjang%20LRT%20Bombardier%20CX-100.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q23926698#line1> ;
+    tb:operatingCountry wd:Q334 ;
+    tb:usedOn wd:Q778271 .
+
+<https://w3id.org/railclass/Q23926698#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q778271#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q778271 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q778271 rdfs:label "Bukit Panjang LRT line"@en .
+

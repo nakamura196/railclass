@@ -1,0 +1,48 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q1648680 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Bombardier Guided Light Transit"@en ;
+    skos:exactMatch wd:Q1648680 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Bombardier Guided Light Transit"@en ;
+    prov:wasDerivedFrom wd:Q1648680 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P279 wd:Q385653,
+        wd:Q836547 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Bombardier%20TVR%20n%C2%B011%20STAN%20Essey%20Roosevelt.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q1648680#line1>,
+        <https://w3id.org/railclass/Q1648680#line2> ;
+    tb:operatingCountry wd:Q142 ;
+    tb:usedOn wd:Q1807910,
+        wd:Q3540255 .
+
+<https://w3id.org/railclass/Q1648680#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1807910#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1807910 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2023"^^xsd:gYear .
+
+<https://w3id.org/railclass/Q1648680#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3540255#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3540255 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1807910 rdfs:label "Nancy Guided Light Transit"@en .
+
+wd:Q3540255 rdfs:label "Trolleybus de Nancy"@en .
+

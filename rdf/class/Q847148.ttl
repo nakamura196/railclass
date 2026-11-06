@@ -1,0 +1,42 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q847148 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "SNCF Class B 81500"@en,
+        "B81500電車"@ja ;
+    skos:exactMatch wd:Q847148 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "SNCF Class B 81500"@en,
+        "B81500電車"@ja ;
+    prov:wasDerivedFrom wd:Q847148 ;
+    wdt:P1064 wd:Q1999572 ;
+    wdt:P137 wd:Q13646 ;
+    wdt:P17 wd:Q142 ;
+    wdt:P176 wd:Q333498 ;
+    wdt:P2052 160.0 ;
+    wdt:P279 wd:Q28455463,
+        wd:Q788471 ;
+    wdt:P930 wd:Q21253457 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/La%20Redonne-Ensues%20gare-b.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q847148#line1> ;
+    tb:operatingCountry wd:Q142 ;
+    tb:usedOn wd:Q3239085 .
+
+<https://w3id.org/railclass/Q847148#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3239085#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3239085 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q3239085 rdfs:label "C linea"@en .
+

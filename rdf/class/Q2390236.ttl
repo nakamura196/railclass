@@ -1,0 +1,36 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q2390236 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "Deutsche Bahn Talgo coaches"@en,
+        "タルゴ"@ja ;
+    skos:exactMatch wd:Q2390236 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "Deutsche Bahn Talgo coaches"@en,
+        "タルゴ"@ja ;
+    prov:wasDerivedFrom wd:Q2390236 ;
+    wdt:P137 wd:Q9322 ;
+    wdt:P17 wd:Q183 ;
+    wdt:P176 wd:Q1100969 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/1994-07-17%20Talgo-Nachtzug.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q2390236#line1> ;
+    tb:operatingCountry wd:Q183 ;
+    tb:usedOn wd:Q80682296 .
+
+<https://w3id.org/railclass/Q2390236#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q80682296#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q80682296 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q80682296 rdfs:label "InterCityNight"@en .
+

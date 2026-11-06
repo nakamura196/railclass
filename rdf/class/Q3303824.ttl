@@ -1,0 +1,59 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+cls:Q3303824 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "British Rail Class 171"@en,
+        "イギリス国鉄171形気動車"@ja ;
+    skos:exactMatch wd:Q3303824 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "British Rail Class 171"@en,
+        "イギリス国鉄171形気動車"@ja ;
+    prov:wasDerivedFrom wd:Q3303824 ;
+    wdt:P137 wd:Q1258373 ;
+    wdt:P17 wd:Q16 ;
+    wdt:P176 wd:Q688893 ;
+    wdt:P279 wd:Q3303940 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/171727%20Southern.JPG> ;
+    tb:lineUse <https://w3id.org/railclass/Q3303824#line1>,
+        <https://w3id.org/railclass/Q3303824#line2>,
+        <https://w3id.org/railclass/Q3303824#line3> ;
+    tb:operatingCountry wd:Q145 ;
+    tb:usedOn wd:Q1277792,
+        wd:Q14953694,
+        wd:Q1902800 .
+
+<https://w3id.org/railclass/Q3303824#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1277792#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1277792 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q3303824#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q14953694#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q14953694 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q3303824#line3> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q1902800#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q1902800 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+wd:Q1277792 rdfs:label "East Coastway Line"@en .
+
+wd:Q14953694 rdfs:label "Oxted Line"@en .
+
+wd:Q1902800 rdfs:label "Marshlink Line"@en .
+

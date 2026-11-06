@@ -1,0 +1,50 @@
+@prefix cls: <https://w3id.org/railclass/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tb: <https://w3id.org/railclass/vocab#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cls:Q262252 a skos:Concept,
+        tb:VehicleClass ;
+    rdfs:label "71-608"@en,
+        "KTM-8"@ja ;
+    skos:exactMatch wd:Q262252 ;
+    skos:inScheme cls: ;
+    skos:prefLabel "71-608"@en,
+        "KTM-8"@ja ;
+    prov:wasDerivedFrom wd:Q262252 ;
+    wdt:P176 wd:Q844336 ;
+    wdt:P2052 75.0 ;
+    wdt:P279 wd:Q3407658 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/71-608K%204060%20tram%20on%20Proletarskaya.jpg> ;
+    tb:lineUse <https://w3id.org/railclass/Q262252#line1>,
+        <https://w3id.org/railclass/Q262252#line2> ;
+    tb:operatingCountry wd:Q159,
+        wd:Q212 ;
+    tb:usedOn wd:Q219347,
+        wd:Q3509082 .
+
+<https://w3id.org/railclass/Q262252#line1> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q219347#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q219347 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "current" .
+
+<https://w3id.org/railclass/Q262252#line2> a tb:LineUse ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3509082#P3438> ;
+    skos:note "wikidata"@en ;
+    tb:line wd:Q3509082 ;
+    tb:sourceSection "P3438" ;
+    tb:useStatus "historical" ;
+    tb:usedUntil "2010"^^xsd:gYear .
+
+wd:Q219347 rdfs:label "Trams in Dnipro"@en .
+
+wd:Q3509082 rdfs:label "Trams in Ryazan"@en .
+
