@@ -181,6 +181,7 @@ CLASSES = {
     "tb-alishan": (None, None, {"en": "Alishan Forest Railway DL-45 class diesel locomotive", "ja": "阿里山林業鉄路 DL-45 形ディーゼル機関車"}),  # Alishan Forest Railway DL-45 class (no Wikidata item; the system Q708937 is linked in tools/class_lines.tsv)
     "Q130240621": ("Q130240621", None, None),                 # Stadler KISS of Caltrain
     "Q933916": ("Q933916", None, None),                       # Union Pacific 4000 class Big Boy (No. 4014 is Q14512137)
+    "Q62279498": ("Q62279498", None, None),                   # Union Pacific heritage fleet (a fleet, P31 Q47311934; Wikidata has no item for the coach or observation-car types)
 }
 
 # Hand-entered values: cid -> {facet id: [values]}, with the source in HAND_SOURCE. Values are Wikidata Q ids or years.
@@ -240,7 +241,7 @@ for k in ("tb-skytrain-mk2", "tb-skytrain-mk3", "tb-skytrain-mk5"):
     HAND_SOURCE[k] = HAND_SOURCE["tb-skytrain-mk1"]
 
 # Japanese labels for Wikidata classes that have none (hand-entered; Wikidata's own labels win when they exist)
-LABEL_JA = {"Q115612330": "ICE T 411形", "Q137972762": "ICE T 415形", "Q8078904": "ÖBB 4011形",
+LABEL_JA = {"Q115612330": "ICE T 411形", "Q62279498": "ユニオン・パシフィック鉄道の保存車両群", "Q137972762": "ICE T 415形", "Q8078904": "ÖBB 4011形",
             "Q140611223": "Amtrak Airo", "Q137921671": "New Flyer XD60",
             "Q289090": "トランスラピッド 08", "Q18331751": "ED250 ペンドリーノ",
             "Q26158722": "ICNG（新世代インターシティ）",
@@ -359,6 +360,7 @@ LIVERIES = {
     "afr-red": ({"en": "Alishan Forest Railway livery (red with a white band and white V chevrons)", "ja": "阿里山林業鉄路の塗装（赤い車体に白い帯と V 字）"}, "Q55695198"),
     "caltrain-kiss": ({"en": "Caltrain electric livery (red and white, 2024-)", "ja": "カルトレインの電化の塗装（赤と白、2024 年から）"}, "Q107126073"),
     "up-4014": ({"en": "Union Pacific steam livery of No. 4014 as restored (gloss black with a graphite smokebox, 2019-)", "ja": "ユニオン・パシフィック鉄道 4014 号機の復元後の塗装（艶のある黒、煙室は黒鉛色、2019 年から）"}, "Q725793"),
+    "up-heritage": ({"en": "Union Pacific heritage passenger livery (Armour Yellow with red pinstripes, Harbor Mist Gray roof and skirt)", "ja": "ユニオン・パシフィック鉄道の保存客車の塗装（アーマー・イエローに赤の細帯、屋根と裾はハーバー・ミスト・グレー）"}, "Q725793"),
 }
 
 # model id (gallery) -> (class cid, livery id, part note or None). Titles and sizes come from docs/data/models.json.
@@ -465,6 +467,8 @@ MODELS = {
     "caltrain": ("Q130240621", "caltrain-kiss", None),
     "bigboy": ("Q933916", "up-4014", None),
     "bigboy_tender": ("Q933916", "up-4014", {"en": "tender of No. 4014", "ja": "4014 号機の炭水車"}),
+    "bigboy_coach": ("Q62279498", "up-heritage", {"en": "coach", "ja": "客車"}),
+    "bigboy_obs": ("Q62279498", "up-heritage", {"en": "observation car", "ja": "展望車"}),
 }
 
 
